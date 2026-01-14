@@ -25,8 +25,7 @@ if not GEMINI_API_KEY:
 if not RENDER_API_KEY:
     log("⚠️ WARNING: RENDER_API_KEY is missing. Production checks will be skipped.")
 
-# 🎯 SNIPER LIST: ONLY High-IQ Experimental Models. 
-# We removed the "dumber" stable models.
+# 🎯 SNIPER LIST: High-IQ Models Only
 MODELS_TO_TRY = [
     "gemini-2.0-flash-exp"
 ]
@@ -54,36 +53,41 @@ def extract_code_block(response_text):
 
 def ask_gemini_stubborn(prompt):
     """
-    Siege Mode: Keeps hitting the High-IQ model until it answers.
-    No downgrading to dumber models.
+    Siege Mode with MAX OUTPUT TOKENS to prevent 'Code too short' errors.
     """
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key={GEMINI_API_KEY}"
     headers = {'Content-Type': 'application/json'}
-    data = {"contents": [{"parts": [{"text": prompt}]}]}
-    model = "gemini-2.0-flash-exp"
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_API_KEY}"
+    
+    # ⚡ FORCE MAX TOKENS: Telling the AI to write the whole file
+    data = {
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {
+            "maxOutputTokens": 8192,  # Maximum allowed for this model
+            "temperature": 0.2        # Lower creativity to ensure stability
+        }
+    }
 
-    wait_time = 5 # Start with 5 seconds wait
-    max_retries = 10 # Try 10 times (approx 5 mins of fighting)
+    wait_time = 5 
+    max_retries = 10 
 
     for attempt in range(max_retries):
         try:
-            log(f"🔄 Connecting to {model} (Attempt {attempt+1}/{max_retries})...")
+            log(f"🔄 Connecting to Gemini 2.0 (Attempt {attempt+1}/{max_retries})...")
             resp = requests.post(url, headers=headers, data=json.dumps(data))
             
             if resp.status_code == 200:
-                log(f"✅ Success! {model} answered.")
+                log(f"✅ Success! Gemini answered.")
                 return resp.json()['candidates'][0]['content']['parts'][0]['text']
             
             elif resp.status_code == 429:
-                log(f"⚠️ {model} is busy (Rate Limit). Waiting {wait_time}s...")
+                log(f"⚠️ Rate Limit (429). Waiting {wait_time}s...")
                 time.sleep(wait_time)
-                wait_time *= 1.5 # Exponential Backoff: Wait longer next time (5s -> 7.5s -> 11s...)
+                wait_time *= 1.5 
             elif resp.status_code == 503:
-                log(f"⚠️ {model} Overloaded (503). Cooling down for 20s...")
+                log(f"⚠️ Overloaded (503). Cooling down for 20s...")
                 time.sleep(20)
             else:
-                log(f"❌ Critical Error {resp.status_code}: {resp.text}")
-                # Don't give up immediately on 500s, retry once or twice
+                log(f"❌ Error {resp.status_code}: {resp.text}")
                 time.sleep(5)
                 
         except Exception as e:
@@ -126,17 +130,35 @@ def process_single_task():
     current_code = read_file("index.html")
     agents_doc = read_file("AGENTS.md")
     
-    prompt = f"{agents_doc}\nCURRENT CODE LENGTH: {len(current_code)}\nTASK: {task}\nOUTPUT: Full index.html only."
+    # 🔍 UPDATED PROMPT: Explicitly demanding full code
+    prompt = f"""
+    {agents_doc}
+    TASK: {task}
+    CURRENT CODE LENGTH: {len(current_code)} characters
     
-    log(f"💡 Asking Gemini 2.0 Flash Exp (Stubborn Mode)...")
+    CRITICAL INSTRUCTION:
+    You must rewrite the ENTIRE index.html file to implement the task.
+    DO NOT summarize. DO NOT skip sections. DO NOT use placeholders like ''.
+    If the code is cut off, the system will reject it.
+    
+    OUTPUT: Full index.html only.
+    """
+    
+    log(f"💡 Asking Gemini (Max Capacity Mode)...")
     raw_response = ask_gemini_stubborn(prompt)
     if not raw_response: 
         log("❌ No response from AI.")
         return True
 
     new_code = extract_code_block(raw_response)
-    if not new_code or len(new_code.splitlines()) < 2000:
-        log("❌ Safety Check Failed: Code too short.")
+    
+    # Validation
+    if not new_code:
+        log("❌ Error: Valid HTML block not found in response.")
+        return True
+        
+    if len(new_code.splitlines()) < 2000:
+        log(f"❌ Safety Check Failed: Code is too short ({len(new_code.splitlines())} lines). Retrying next loop...")
         return True
 
     log("💾 Saving to index.html...")
@@ -162,7 +184,7 @@ def process_single_task():
     return True
 
 def run_loop():
-    log("🤖 Jules (HIGH-IQ ONLY) Started...")
+    log("🤖 Jules (ANTI-LAZINESS MODE) Started...")
     while True:
         if (time.time() - START_TIME) / 60 > (MAX_RUNTIME_MINUTES - 5): 
             log("⏰ Time limit reached.")
