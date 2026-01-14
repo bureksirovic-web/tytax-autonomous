@@ -16,7 +16,7 @@ The agent picks the first unchecked box.
    - Ensure the Plate Calculator uses this global setting instead of a hardcoded value.
    - Default to 20kg / 45lbs if not set.
 
-- [ ] **Implement History Editor**
+- [x] **Implement History Editor**
    - Add an "Edit" button to logs in the Vault/History view.
    - Allow users to modify sets, reps, and weight of past workouts.
    - Ensure changes persist to local storage.
