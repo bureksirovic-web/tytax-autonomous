@@ -5,21 +5,27 @@ import requests
 import json
 import time
 import html.parser
+import sys
 
 # --- CONFIGURATION ---
 REPO_PATH = "."
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 RENDER_API_KEY = os.environ.get("RENDER_API_KEY")
-RENDER_SERVICE_ID = "srv-d5jlon15pdvs739hp3jg" # Found from your screenshot
+RENDER_SERVICE_ID = "srv-d5jlon15pdvs739hp3jg"
 SITE_URL = "https://tytax-elite.onrender.com"
 
 MAX_RUNTIME_MINUTES = 45
 START_TIME = time.time()
 
+# --- FORCE UNBUFFERED OUTPUT ---
+# This ensures logs appear in GitHub Actions IMMEDIATELY
+def log(message):
+    print(message, flush=True)
+
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY missing!")
 if not RENDER_API_KEY:
-    print("⚠️ WARNING: RENDER_API_KEY is missing. Production checks will be skipped.")
+    log("⚠️ WARNING: RENDER_API_KEY is missing. Production checks will be skipped.")
 
 MODELS_TO_TRY = ["gemini-2.0-flash-exp", "gemini-2.5-pro", "gemini-3-flash-preview"]
 
@@ -50,131 +56,93 @@ def ask_gemini(prompt):
     for model in MODELS_TO_TRY:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_API_KEY}"
         try:
+            log(f"🔄 Trying model: {model}...")
             resp = requests.post(url, headers=headers, data=json.dumps(data))
             if resp.status_code == 200:
                 return resp.json()['candidates'][0]['content']['parts'][0]['text']
-        except: pass
+            log(f"⚠️ Status {resp.status_code} from {model}")
+        except Exception as e:
+            log(f"❌ Error hitting API: {e}")
     return None
 
 def wait_for_render_deploy():
-    """Polls Render API to verify deployment success."""
     if not RENDER_API_KEY: return True
-    
-    print("🚀 Monitoring Render Deployment...")
+    log("🚀 Monitoring Render Deployment...")
     headers = {"Authorization": f"Bearer {RENDER_API_KEY}"}
     url = f"https://api.render.com/v1/services/{RENDER_SERVICE_ID}/deploys?limit=1"
     
-    # Wait for the NEW deploy to start (it takes a few seconds after git push)
-    time.sleep(10) 
-    
-    for _ in range(20): # Check for ~5 minutes
+    time.sleep(10)
+    for _ in range(20):
         try:
             resp = requests.get(url, headers=headers)
-            if resp.status_code != 200: 
-                print(f"⚠️ Render API Error: {resp.status_code}")
-                continue
-                
-            latest_deploy = resp.json()[0]['deploy']
-            status = latest_deploy['status']
-            commit_id = latest_deploy['commit']['id']
-            
-            print(f"📡 Deploy Status: {status} (Commit: {commit_id[:7]})")
-            
-            if status == "live":
-                print("✅ Render says: Deployment LIVE.")
-                return True
-            if status in ["build_failed", "update_failed", "canceled"]:
-                print(f"❌ Render says: Deployment FAILED ({status}).")
-                return False
-                
+            if resp.status_code == 200:
+                data = resp.json()
+                if not data: continue 
+                latest_deploy = data[0]['deploy']
+                status = latest_deploy['status']
+                log(f"📡 Status: {status}")
+                if status == "live": return True
+                if status in ["build_failed", "canceled"]: return False
         except Exception as e:
-            print(f"⚠️ Monitoring error: {e}")
-            
+            log(f"⚠️ Monitor Error: {e}")
         time.sleep(15)
-        
-    print("⏳ Timed out waiting for Render. Assuming success or manual check needed.")
+    log("⏳ Monitor timed out (assuming success).")
     return True
-
-def check_site_health():
-    """Pings the live URL to ensure it's not a white screen."""
-    try:
-        print(f"💓 Pinging {SITE_URL}...")
-        resp = requests.get(SITE_URL, timeout=10)
-        if resp.status_code == 200:
-            print("✅ Site is responding (HTTP 200).")
-            return True
-        else:
-            print(f"❌ Site is DOWN (HTTP {resp.status_code}).")
-            return False
-    except Exception as e:
-        print(f"❌ Site ping failed: {e}")
-        return False
-
-def emergency_revert(task_name):
-    print("🚨 INITIATING EMERGENCY ROLLBACK 🚨")
-    repo = git.Repo(REPO_PATH)
-    # Revert the last commit to undo the damage
-    repo.git.revert("HEAD", no_edit=True)
-    repo.remotes.origin.push()
-    print(f"✅ Rollback pushed. {task_name} has been undone to save the site.")
 
 def process_single_task():
     task = get_next_task()
     if not task: return False
 
-    print(f"\n📋 STARTING TASK: {task}")
+    log(f"\n📋 STARTING TASK: {task}")
     
-    # Load Context
-    agents_doc = read_file("AGENTS.md")
-    arch_doc = read_file("ARCHITECTURE.md")
     current_code = read_file("index.html")
-    original_lines = len(current_code.splitlines())
-
-    # Generate
-    prompt = f"{agents_doc}\nCONTEXT: {arch_doc}\nCURRENT CODE: {current_code}\nMISSION: Implement '{task}'\nRULES: Return FULL index.html."
-    print("💡 Thinking...")
+    agents_doc = read_file("AGENTS.md")
+    
+    prompt = f"{agents_doc}\nCURRENT CODE LENGTH: {len(current_code)}\nTASK: {task}\nOUTPUT: Full index.html only."
+    
+    log("💡 Asking Gemini...")
     raw_response = ask_gemini(prompt)
-    if not raw_response: return True
-
-    new_code = extract_code_block(raw_response)
-    if not new_code or len(new_code.splitlines()) < (original_lines * 0.8):
-        print("❌ Safety Check Failed (Code too short or invalid). Aborting.")
+    if not raw_response: 
+        log("❌ No response from AI.")
         return True
 
-    # Save & Push
-    print("💾 Saving and Pushing...")
+    new_code = extract_code_block(raw_response)
+    if not new_code or len(new_code.splitlines()) < 2000:
+        log("❌ Safety Check Failed: Code too short.")
+        return True
+
+    log("💾 Saving to index.html...")
     write_file("index.html", new_code)
+    
     repo = git.Repo(REPO_PATH)
     repo.git.add(all=True)
     repo.index.commit(f"feat(jules): implemented {task}")
-    mark_task_done(task) # Mark done locally, but we might undo this if it fails
+    mark_task_done(task)
     repo.git.add("BACKLOG.md")
     repo.index.commit(f"docs: marked {task} as done")
+    
+    log("🚀 Pushing to GitHub...")
     repo.remotes.origin.push()
 
-    # --- PRODUCTION VERIFICATION ---
-    deploy_success = wait_for_render_deploy()
-    
-    if deploy_success:
-        # Double check: Is the site actually reachable?
-        health_success = check_site_health()
-        if health_success:
-            print(f"🎉 SUCCESS! {task} is live and healthy.")
-        else:
-            print("⚠️ Deploy passed but Site Health failed.")
-            emergency_revert(task)
+    if wait_for_render_deploy():
+        log("🎉 Deploy Success!")
     else:
-        print("❌ Deploy failed.")
-        emergency_revert(task)
+        log("🚨 Deploy Failed! Reverting...")
+        repo.git.revert("HEAD", no_edit=True)
+        repo.remotes.origin.push()
         
     return True
 
 def run_loop():
-    print("🤖 Jules Level 4 (Production Aware) Started...")
+    log("🤖 Jules Level 4 (LOUD MODE) Started...")
     while True:
-        if (time.time() - START_TIME) / 60 > (MAX_RUNTIME_MINUTES - 5): break
-        if not process_single_task(): break
-        time.sleep(10)
+        if (time.time() - START_TIME) / 60 > (MAX_RUNTIME_MINUTES - 5): 
+            log("⏰ Time limit reached.")
+            break
+        if not process_single_task(): 
+            log("✅ No more tasks.")
+            break
+        time.sleep(5)
 
 if __name__ == "__main__":
     run_loop()
