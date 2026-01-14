@@ -3,6 +3,7 @@ import re
 import git
 import requests
 import json
+import time
 
 # --- CONFIGURATION ---
 REPO_PATH = "."
@@ -11,14 +12,10 @@ API_KEY = os.environ.get("GEMINI_API_KEY")
 if not API_KEY:
     raise ValueError("GEMINI_API_KEY environment variable not set!")
 
-# PRIORITY LIST: Tries Gemini 3 first. Falls back if access is denied.
 MODELS_TO_TRY = [
-    "gemini-3-pro-preview",    # The "Smartest" Brain (Paid/Preview)
-    "gemini-3-flash-preview",  # Fast & New
-    "gemini-2.5-pro",          # Reliable Previous Gen
-    "gemini-2.0-flash-exp",    # Standard Flash
-    "gemini-1.5-pro",          # Legacy Backup
-    "gemini-1.5-flash"         # Ultimate Safety Net
+    "gemini-2.0-flash-exp",
+    "gemini-2.5-pro",
+    "gemini-3-flash-preview"
 ]
 
 def read_file(filename):
@@ -51,33 +48,32 @@ def extract_code_block(response_text):
 
 def ask_gemini(prompt):
     headers = {'Content-Type': 'application/json'}
-    data = {
-        "contents": [{"parts": [{"text": prompt}]}]
-    }
+    data = {"contents": [{"parts": [{"text": prompt}]}]}
     
-    # "The Handshake": Try each model until one says "Hello"
     for model_name in MODELS_TO_TRY:
-        print(f"🔄 Attempting connection to brain: {model_name}...")
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={API_KEY}"
-        
-        try:
-            response = requests.post(url, headers=headers, data=json.dumps(data))
-            
-            if response.status_code == 200:
-                print(f"✅ CONNECTED! Using {model_name}.")
-                return response.json()['candidates'][0]['content']['parts'][0]['text']
-            elif response.status_code == 404:
-                 print(f"⚠️ {model_name} not found (might be paid-only). Trying next...")
-            else:
-                print(f"⚠️ {model_name} error ({response.status_code}). Trying next...")
-        except Exception as e:
-            print(f"⚠️ Connection error with {model_name}: {e}")
-
-    print("❌ All models failed. Please check your API Key.")
+        max_retries = 3
+        for attempt in range(max_retries):
+            print(f"🔄 Connecting to {model_name} (Attempt {attempt+1}/{max_retries})...")
+            try:
+                response = requests.post(url, headers=headers, data=json.dumps(data))
+                if response.status_code == 200:
+                    print(f"✅ CONNECTED! Using {model_name}.")
+                    return response.json()['candidates'][0]['content']['parts'][0]['text']
+                elif response.status_code in [429, 503]:
+                    wait_time = 20 * (attempt + 1)
+                    print(f"⚠️ Rate Limit. Cooling down for {wait_time}s...")
+                    time.sleep(wait_time)
+                else:
+                    print(f"❌ Error {response.status_code}")
+                    break
+            except Exception as e:
+                print(f"⚠️ Connection error: {e}")
+                time.sleep(5)
     return None
 
 def run_agent():
-    print("🤖 Jules is waking up (Gemini 3 Upgrade)...")
+    print("🤖 Jules is waking up (Safe Mode)...")
     task = get_next_task()
     if not task:
         print("✅ No pending tasks.")
@@ -87,6 +83,11 @@ def run_agent():
     agents_doc = read_file("AGENTS.md")
     arch_doc = read_file("ARCHITECTURE.md")
     current_code = read_file("index.html")
+    
+    # 📏 Measure current size for safety check
+    original_lines = len(current_code.splitlines())
+    print(f"📏 Current File Size: {original_lines} lines")
+
     try:
         library = read_file("tytax_library.json")
     except:
@@ -102,12 +103,13 @@ def run_agent():
     {current_code}
     YOUR MISSION:
     Implement: "{task}"
-    OUTPUT RULES:
-    1. Return ONLY the full, updated index.html code.
-    2. Ensure the code is complete.
+    CRITICAL OUTPUT RULES:
+    1. Return the FULL index.html code. Do not summarize.
+    2. Do not remove existing features.
+    3. If the code is too long, stop and output nothing.
     """
 
-    print("💡 Thinking... (Connecting to Google Cloud)")
+    print("💡 Thinking...")
     raw_response = ask_gemini(prompt)
     
     if not raw_response:
@@ -115,10 +117,19 @@ def run_agent():
 
     new_code = extract_code_block(raw_response)
     if not new_code:
-        print("❌ Error: Valid HTML not found in response.")
+        print("❌ Error: Valid HTML not found.")
         return
 
-    print("💾 Saving...")
+    # 🛡️ SAFETY VALVE: Check if file shrank suspiciously
+    new_lines = len(new_code.splitlines())
+    print(f"📏 New File Size: {new_lines} lines")
+    
+    if new_lines < (original_lines * 0.8): # If new file is < 80% of old file
+        print(f"🚨 SAFETY TRIGGERED: New code is too short ({new_lines} vs {original_lines}). Aborting save.")
+        print("⚠️ Jules tried to delete code or failed to generate the full file.")
+        return
+
+    print("💾 Saving (Safety Check Passed)...")
     write_file("index.html", new_code)
 
     print("📦 Committing...")
