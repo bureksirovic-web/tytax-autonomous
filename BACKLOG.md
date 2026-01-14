@@ -32,3 +32,15 @@
 - [ ] **Task 007: Update Lagging Muscle Logic**
     * **Context:** The current 7-day lookback is too short for a 6/1 split, causing false alarms.
     * **Requirement:** Update \getLaggingMuscle\ to use a **14-day** lookback window.
+
+
+- [ ] **Task 002: Fix Live Kinetic Chart (Re-do)**
+   - The 'Live Kinetic Load' chart stopped working after the reset.
+   - Ensure the chart re-renders immediately when the user types weight/reps.
+   - It must update in real-time (onKeyUp or onChange).
+
+- [ ] **Task 003: Fix Input Focus UX**
+   - Current Behavior: After clicking the checkmark to log a set, the cursor jumps to 'Reps'.
+   - Required Behavior: The cursor MUST jump back to the 'Weight' (kg) input field automatically.
+   - Reason: This allows users to rapidly log multiple sets without clicking.
+
