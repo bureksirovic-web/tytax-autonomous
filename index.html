@@ -208,10 +208,12 @@
         const calculateImpactDistribution = (exercises, countSets = false) => {
             const impact = {};
             exercises.forEach(ex => {
-                const multiplier = countSets 
+                let multiplier = countSets 
                     ? (ex.sets ? ex.sets.filter(s => s.done || (s.kg && s.reps)).length : 1)
                     : 1;
-                    
+                
+                if (ex.unilateral) multiplier *= 2;
+
                 if (multiplier > 0) {
                     const parsed = getImpact(ex);
                     parsed.forEach(p => {
