@@ -6,7 +6,7 @@ The agent picks the first unchecked box.
    - Ensure the chart re-renders immediately when the user types weight/reps.
    - Use proper React state (onKeyUp or onChange) to trigger updates.
 
-- [ ] **Fix Input Focus UX**
+- [x] **Fix Input Focus UX**
    - Current Behavior: After clicking the checkmark to log a set, the cursor jumps to "Reps".
    - Required Behavior: The cursor MUST jump back to the "Weight" (kg) input field automatically.
    - Reason: This allows users to rapidly log multiple sets without clicking.
