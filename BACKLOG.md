@@ -11,7 +11,7 @@ The agent picks the first unchecked box.
    - Required Behavior: The cursor MUST jump back to the "Weight" (kg) input field automatically.
    - Reason: This allows users to rapidly log multiple sets without clicking.
 
-- [ ] **Implement Global Bar Weight**
+- [x] **Implement Global Bar Weight**
    - Add a "Bar Weight" input in the Settings tab.
    - Ensure the Plate Calculator uses this global setting instead of a hardcoded value.
    - Default to 20kg / 45lbs if not set.
