@@ -2,7 +2,7 @@
 
 ## 🔴 High Priority (Immediate Fixes)
 
-- [ ] **Fix Auto-Focus Logic (Reps -> KG)**
+- [x] **Fix Auto-Focus Logic (Reps -> KG)**
     - *Context:* Currently, when finishing a set, the cursor jumps to the *Reps* field of the next set.
     - *Task:* Update the `onClick` handler for the "Check" button. Change the `setTimeout` target ID logic to target `input-kg-${exIdx}-${sIdx+1}` (the KG field) instead of the Reps field.
 
@@ -25,7 +25,7 @@
 
 ## 🔴 High Priority (Functionality Bugs)
 
-- [ ] **Fix Auto-Focus Logic (Reps -> KG)**
+- [x] **Fix Auto-Focus Logic (Reps -> KG)**
     - *Context:* Cursor jumps to "Reps" instead of "KG" after finishing a set.
     - *Task:* Update the `onClick` handler for the "Check" button. Change the `setTimeout` target ID logic to target `input-kg-${exIdx}-${sIdx+1}` instead of `input-reps`.
 
