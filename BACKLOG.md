@@ -6,7 +6,7 @@
     - *Context:* Currently, when finishing a set, the cursor jumps to the *Reps* field of the next set.
     - *Task:* Update the `onClick` handler for the "Check" button. Change the `setTimeout` target ID logic to target `input-kg-${exIdx}-${sIdx+1}` (the KG field) instead of the Reps field.
 
-- [ ] **Debug Live Kinetic Impact Chart**
+- [x] **Debug Live Kinetic Impact Chart**
     - *Context:* The "Live Kinetic Impact" chart in the active session is not updating or showing data correctly.
     - *Task:* Review the `currentWorkout` state dependencies. Ensure `calculateImpactDistribution` is called with `currentWorkout.exercises` and `countSets=true`. Force a re-render of the chart when `sets` change.
 
@@ -29,7 +29,7 @@
     - *Context:* Cursor jumps to "Reps" instead of "KG" after finishing a set.
     - *Task:* Update the `onClick` handler for the "Check" button. Change the `setTimeout` target ID logic to target `input-kg-${exIdx}-${sIdx+1}` instead of `input-reps`.
 
-- [ ] **Debug Live Kinetic Impact Chart**
+- [x] **Debug Live Kinetic Impact Chart**
     - *Context:* The chart in the active session is flat/empty.
     - *Task:* In `App` component, ensure `currentVolume` and `projectedImpact` recalculate when `logs` or `currentWorkout` changes. Verify `calculateImpactDistribution` is called with `countSets=true` for the active session.
 
