@@ -26,7 +26,7 @@ The agent picks the first unchecked box.
    - Allow users to swap the current exercise for a similar one (e.g., Bench Press -> Dumbbell Press).
    - This requires a simple lookup logic or list of equivalents.
 
-- [ ] **Add Tech Cues Field**
+- [x] **Add Tech Cues Field**
    - Add a text input field for "Technique Cues" in the exercise logger.
    - This allows users to save notes like "Keep elbows in" for specific exercises.
 
