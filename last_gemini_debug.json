@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "content": {},
+      "finishReason": "MAX_TOKENS",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 64230,
+    "totalTokenCount": 72419,
+    "cachedContentTokenCount": 61418,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 64230
+      }
+    ],
+    "cacheTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 61418
+      }
+    ],
+    "thoughtsTokenCount": 8189
+  },
+  "modelVersion": "gemini-3-pro-preview",
+  "responseId": "59ZnaZbtIor3jrEPgJaCqAo"
+}

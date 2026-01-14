@@ -5015,8 +5015,8 @@
                                                                             setTimeout(() => {
                                                                                 const nextSet = document.getElementById(`input-reps-${exIdx}-${sIdx+1}`);
                                                                                 const nextEx = document.getElementById(`input-kg-${exIdx+1}-0`);
-                                                                                if (nextSet) nextSet.focus();
-                                                                                else if (nextEx) nextEx.focus();
+                                                                                if (nextSet) { nextSet.focus(); nextSet.select(); }
+                                                                                else if (nextEx) { nextEx.focus(); nextEx.select(); }
                                                                             }, 100);
                                                                         }} className={`col-span-3 p-4 rounded-2xl flex items-center justify-center transition-all ${set.done ? 'bg-emerald-500 text-white shadow-lg' : 'bg-slate-800 text-slate-600 active:scale-90 disabled:opacity-20'}`}><Icon name="check" className="w-5 h-5" /></button> 
                                                                     </div> 
