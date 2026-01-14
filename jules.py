@@ -1,20 +1,17 @@
 ﻿import os
 import re
 import git
-import google.generativeai as genai
+import requests
+import json
 
 # --- CONFIGURATION ---
 REPO_PATH = "."
 API_KEY = os.environ.get("GEMINI_API_KEY")
+# We use the direct API URL to bypass library version issues
+API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={API_KEY}"
 
 if not API_KEY:
     raise ValueError("GEMINI_API_KEY environment variable not set!")
-
-genai.configure(api_key=API_KEY)
-
-# FIXED: Switched to 'gemini-1.5-flash' (Stable & Fast)
-# 'gemini-1.5-pro-latest' is deprecated and causes 404 errors.
-model = genai.GenerativeModel('gemini-1.5-flash')
 
 def read_file(filename):
     with open(filename, 'r', encoding='utf-8') as f:
@@ -26,6 +23,7 @@ def write_file(filename, content):
 
 def get_next_task():
     content = read_file("BACKLOG.md")
+    # Matches: - [ ] **Task 001: Title**
     match = re.search(r'- \[ \] \*\*(Task \d+:.*?)\*\*', content)
     if match:
         return match.group(1)
@@ -44,8 +42,27 @@ def extract_code_block(response_text):
         return response_text
     return None
 
+def ask_gemini(prompt):
+    headers = {'Content-Type': 'application/json'}
+    data = {
+        "contents": [{
+            "parts": [{"text": prompt}]
+        }]
+    }
+    response = requests.post(API_URL, headers=headers, data=json.dumps(data))
+    
+    if response.status_code != 200:
+        print(f"❌ API Error {response.status_code}: {response.text}")
+        return None
+        
+    try:
+        return response.json()['candidates'][0]['content']['parts'][0]['text']
+    except (KeyError, IndexError):
+        print(f"❌ Unexpected Response Format: {response.text}")
+        return None
+
 def run_agent():
-    print("🤖 Jules is waking up...")
+    print("🤖 Jules is waking up (Direct Mode)...")
     task = get_next_task()
     if not task:
         print("✅ No pending tasks.")
@@ -73,18 +90,19 @@ def run_agent():
     OUTPUT RULES:
     1. Return ONLY the full, updated index.html code.
     2. No explanations.
+    3. Ensure the code is complete.
     """
 
-    print("💡 Thinking... (Asking Gemini)")
-    try:
-        response = model.generate_content(prompt)
-        new_code = extract_code_block(response.text)
-    except Exception as e:
-        print(f"❌ Gemini API Error: {e}")
+    print("💡 Thinking... (Sending Request)")
+    raw_response = ask_gemini(prompt)
+    
+    if not raw_response:
         return
 
+    new_code = extract_code_block(raw_response)
+
     if not new_code:
-        print("❌ Error: No code generated.")
+        print("❌ Error: Valid HTML not found in response.")
         return
 
     print("💾 Saving...")
