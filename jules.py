@@ -25,13 +25,12 @@ if not GEMINI_API_KEY:
 if not RENDER_API_KEY:
     log("⚠️ WARNING: RENDER_API_KEY is missing. Production checks will be skipped.")
 
-# 🔄 NEW STRATEGY: Try the best (Preview) models first. 
-# If they are overloaded (429), fall back to the Stable Paid model (1.5 Pro) so the job finishes.
+# 🔄 FIXED MODEL LIST: Corrected names to prevent 404 errors
 MODELS_TO_TRY = [
-    "gemini-3-pro-preview",    # <--- 1. The Best (Coding Powerhouse)
-    "gemini-3-flash-preview",  # <--- 2. The Fast Backup
-    "gemini-2.0-flash-exp",    # <--- 3. The Experimental Flash
-    "gemini-1.5-pro-latest"    # <--- 4. The "Safety Net" (Stable, High Limits)
+    "gemini-2.0-flash-exp",    # 1. Experimental (Fast & Smart)
+    "gemini-1.5-pro",          # 2. Stable Pro (The Reliability King) - FIXED NAME
+    "gemini-1.5-flash",        # 3. Stable Flash (The "Emergency" Backup)
+    "gemini-1.0-pro"           # 4. Legacy (Last Resort)
 ]
 
 def read_file(filename):
@@ -60,7 +59,7 @@ def ask_gemini(prompt):
     data = {"contents": [{"parts": [{"text": prompt}]}]}
     
     for model in MODELS_TO_TRY:
-        # Use v1beta to access Preview/Pro models correctly
+        # Using standard v1beta endpoint
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_API_KEY}"
         try:
             log(f"🔄 Connecting to {model}...")
@@ -71,8 +70,10 @@ def ask_gemini(prompt):
                 return resp.json()['candidates'][0]['content']['parts'][0]['text']
             
             elif resp.status_code == 429:
-                log(f"⚠️ {model} is busy (Rate Limit). Trying next model...")
-                time.sleep(2) # Short pause before switching
+                log(f"⚠️ {model} is busy (Rate Limit). Switching...")
+                time.sleep(1) 
+            elif resp.status_code == 404:
+                log(f"❌ {model} not found (404). Check spelling.")
             else:
                 log(f"⚠️ Status {resp.status_code} from {model}")
                 
@@ -150,7 +151,7 @@ def process_single_task():
     return True
 
 def run_loop():
-    log("🤖 Jules Level 4 (GEMINI 3 PRIORITY) Started...")
+    log("🤖 Jules Level 4 (FINAL FIX) Started...")
     while True:
         if (time.time() - START_TIME) / 60 > (MAX_RUNTIME_MINUTES - 5): 
             log("⏰ Time limit reached.")
