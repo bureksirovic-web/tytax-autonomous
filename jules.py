@@ -18,6 +18,7 @@ MAX_QA_RETRIES = 3
 MAX_RUNTIME_MINUTES = 45
 START_TIME = time.time()
 
+# --- FORCE UNBUFFERED OUTPUT ---
 def log(message):
     print(message, flush=True)
 
@@ -84,13 +85,14 @@ def ask_gemini_v6_style(prompt, model_hint="coder"):
                     text = extract_text_from_response(resp.json())
                     if text: return text
                 elif resp.status_code == 429:
-                    log(f"⏳ Busy. Waiting {wait_time}s...")
+                    log(f"⏳ Busy (429). Waiting {wait_time}s...")
                     time.sleep(wait_time)
                     wait_time *= 1.5
                 else:
+                    log(f"⚠️ Status {resp.status_code} from {model}")
                     break 
             except Exception as e:
-                log(f"❌ Error: {e}")
+                log(f"❌ Error hitting API: {e}")
                 time.sleep(2)
     return None
 
@@ -111,19 +113,14 @@ def apply_patch(original_code, patch_text):
     return new_code, f"Applied {success_count} patches."
 
 def verify_fix(task, original_code, new_code):
-    """
-    Surgical Critic: Instead of the whole file, send a DIFF.
-    This prevents truncation and helps the AI focus on the change.
-    """
     if original_code == new_code: return False, "No change detected."
     
-    # Generate a unified diff
     diff = list(difflib.unified_diff(
         original_code.splitlines(keepends=True),
         new_code.splitlines(keepends=True),
         fromfile='original',
         tofile='patched',
-        n=5 # Show 5 lines of context around changes
+        n=5 
     ))
     diff_text = "".join(diff)
 
@@ -149,42 +146,61 @@ def process_single_task():
     task = get_next_task()
     if not task: return False
     log(f"\n📋 TARGET: {task}")
+    
     current_code = read_file("index.html")
     critique_history = ""
+    
     for attempt in range(MAX_QA_RETRIES):
         log(f"💡 Coder Attempt {attempt + 1}/{MAX_QA_RETRIES}...")
         prompt = f"Expert React Engineer. TASK: {task}\n{critique_history}\nFORMAT: <<<<<<< SEARCH\n(old)\n=======\n(new)\n>>>>>>> REPLACE\n\nCODE:\n{current_code}"
+        
         response = ask_gemini_v6_style(prompt, model_hint="coder")
-        if not response: continue
+        if not response: 
+            log("❌ No response from AI.")
+            continue
+            
         new_code, message = apply_patch(current_code, response)
         if not new_code:
             log(f"❌ Patch Error: {message}")
             critique_history = "PREVIOUS ATTEMPT FAILED: The SEARCH block was incorrect. Use EXACT code from the file."
             continue
+            
+        log(f"✅ Patch success: {message}")
         log("🕵️ Verifying Fix (Surgical Diff)...")
         is_valid, feedback = verify_fix(task, current_code, new_code)
+        
         if is_valid:
-            log(f"✅ QA Passed.")
+            log(f"✅ QA Passed: {feedback}")
+            log("💾 Saving to index.html...")
             write_file("index.html", new_code)
+            
             repo = git.Repo(REPO_PATH)
             repo.git.add(all=True)
             repo.index.commit(f"feat(jules): {task}")
+            
             mark_task_done(task)
             repo.git.add("BACKLOG.md")
             repo.index.commit(f"docs: marked {task} as done")
+            
+            log("🚀 Pushing to GitHub...")
             repo.remotes.origin.push()
-            log("🚀 Pushed.")
+            log(f"🎉 SUCCESS! {task} is live.")
             return True
         else:
             log(f"❌ QA Failed: {feedback}")
             critique_history = f"QA REJECTED PREVIOUS FIX: {feedback}"
+            
     return True 
 
 def run_loop():
-    log("🤖 Jules SURGICAL (Diff-Mode) Started...")
+    log("🤖 Jules SURGICAL (LOUD MODE) Started...")
     while True:
-        if (time.time() - START_TIME) / 60 > (MAX_RUNTIME_MINUTES - 5): break
-        if not process_single_task(): break
+        if (time.time() - START_TIME) / 60 > (MAX_RUNTIME_MINUTES - 5): 
+            log("⏰ Time limit reached.")
+            break
+        if not process_single_task(): 
+            log("✅ No more tasks.")
+            break
         time.sleep(5)
 
 if __name__ == "__main__":
