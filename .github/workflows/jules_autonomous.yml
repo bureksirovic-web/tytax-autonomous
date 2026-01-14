@@ -1,22 +1,20 @@
 ﻿name: Jules Autonomous Agent
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:      # Manual trigger button
   schedule:
-    - cron: '0 */6 * * *'
-
-permissions:
-  contents: write
+    - cron: '0 */6 * * *' # Runs every 6 hours
 
 jobs:
   jules-work:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     
     steps:
     - name: Checkout Code
       uses: actions/checkout@v3
 
-    # FIXED: Upgraded from 3.9 to 3.11 to silence deprecation warnings
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
@@ -24,15 +22,16 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        pip install -r requirements.txt
+        python -m pip install --upgrade pip
+        pip install requests gitpython
 
     - name: Configure Git
       run: |
-        git config --global user.name "Jules (AI Agent)"
-        git config --global user.email "jules-bot@users.noreply.github.com"
+        git config --global user.name "jules-bot"
+        git config --global user.email "jules@tytax-elite.ai"
 
     - name: Run Agent Jules
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      run: |
-        python jules.py
+        RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}  # <--- WE ADDED THIS LINE
+      run: python jules.py
