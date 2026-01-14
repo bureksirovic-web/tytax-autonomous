@@ -11,24 +11,19 @@ REPO_PATH = "."
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 RENDER_API_KEY = os.environ.get("RENDER_API_KEY")
 RENDER_SERVICE_ID = "srv-d5jlon15pdvs739hp3jg"
-SITE_URL = "https://tytax-elite.onrender.com"
 
 MAX_RUNTIME_MINUTES = 45
 START_TIME = time.time()
 
-# --- FORCE UNBUFFERED OUTPUT ---
 def log(message):
     print(message, flush=True)
 
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY missing!")
-if not RENDER_API_KEY:
-    log("⚠️ WARNING: RENDER_API_KEY is missing. Production checks will be skipped.")
 
-# 🎯 SNIPER LIST: High-IQ Models Only
-MODELS_TO_TRY = [
-    "gemini-2.0-flash-exp"
-]
+# 🎯 SNIPER LIST: Surgical Mode works even on "dumber" models if needed, 
+# but we keep High-IQ for accuracy.
+MODELS_TO_TRY = ["gemini-2.0-flash-exp", "gemini-1.5-pro"]
 
 def read_file(filename):
     with open(filename, 'r', encoding='utf-8') as f: return f.read()
@@ -46,56 +41,54 @@ def mark_task_done(task_name):
     updated = content.replace(f"- [ ] **{task_name}**", f"- [x] **{task_name}**")
     write_file("BACKLOG.md", updated)
 
-def extract_code_block(response_text):
-    match = re.search(r'```html(.*?)```', response_text, re.DOTALL)
-    if match: return match.group(1).strip()
-    return response_text if "<!DOCTYPE html>" in response_text else None
-
-def ask_gemini_stubborn(prompt):
-    """
-    Siege Mode with MAX OUTPUT TOKENS to prevent 'Code too short' errors.
-    """
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key={GEMINI_API_KEY}"
+def ask_gemini(prompt):
     headers = {'Content-Type': 'application/json'}
-    
-    # ⚡ FORCE MAX TOKENS: Telling the AI to write the whole file
     data = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {
-            "maxOutputTokens": 8192,  # Maximum allowed for this model
-            "temperature": 0.2        # Lower creativity to ensure stability
-        }
+        "generationConfig": {"maxOutputTokens": 8192} # Plenty for a patch
     }
-
-    wait_time = 5 
-    max_retries = 10 
-
-    for attempt in range(max_retries):
+    
+    for model in MODELS_TO_TRY:
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_API_KEY}"
         try:
-            log(f"🔄 Connecting to Gemini 2.0 (Attempt {attempt+1}/{max_retries})...")
+            log(f"🔄 Connecting to {model}...")
             resp = requests.post(url, headers=headers, data=json.dumps(data))
-            
             if resp.status_code == 200:
-                log(f"✅ Success! Gemini answered.")
+                log(f"✅ Success! {model} answered.")
                 return resp.json()['candidates'][0]['content']['parts'][0]['text']
-            
             elif resp.status_code == 429:
-                log(f"⚠️ Rate Limit (429). Waiting {wait_time}s...")
-                time.sleep(wait_time)
-                wait_time *= 1.5 
-            elif resp.status_code == 503:
-                log(f"⚠️ Overloaded (503). Cooling down for 20s...")
-                time.sleep(20)
-            else:
-                log(f"❌ Error {resp.status_code}: {resp.text}")
+                log(f"⚠️ {model} Busy. Waiting 5s...")
                 time.sleep(5)
-                
+            else:
+                log(f"⚠️ Error {resp.status_code}")
         except Exception as e:
-            log(f"❌ Connection Error: {e}")
-            time.sleep(5)
-            
-    log("❌ Failed to get code after maximum retries.")
+            log(f"❌ API Error: {e}")
     return None
+
+def apply_patch(original_code, patch_text):
+    """
+    Parses a SEARCH/REPLACE block and applies it to the code.
+    """
+    # Regex to find the blocks
+    pattern = r"<<<<<<< SEARCH\n(.*?)\n=======\n(.*?)\n>>>>>>> REPLACE"
+    matches = re.findall(pattern, patch_text, re.DOTALL)
+    
+    if not matches:
+        return None, "No valid SEARCH/REPLACE blocks found."
+
+    new_code = original_code
+    for search_block, replace_block in matches:
+        if search_block in new_code:
+            new_code = new_code.replace(search_block, replace_block)
+        else:
+            # Fallback: Try stripping whitespace
+            if search_block.strip() in new_code:
+                log("⚠️ Exact match failed, trying loose match...")
+                new_code = new_code.replace(search_block.strip(), replace_block)
+            else:
+                return None, f"Could not find code block:\n{search_block[:50]}..."
+                
+    return new_code, "Success"
 
 def wait_for_render_deploy():
     if not RENDER_API_KEY: return True
@@ -115,63 +108,65 @@ def wait_for_render_deploy():
                 log(f"📡 Status: {status}")
                 if status == "live": return True
                 if status in ["build_failed", "canceled"]: return False
-        except Exception as e:
-            log(f"⚠️ Monitor Error: {e}")
+        except: pass
         time.sleep(15)
-    log("⏳ Monitor timed out (assuming success).")
     return True
 
 def process_single_task():
     task = get_next_task()
     if not task: return False
 
-    log(f"\n📋 STARTING TASK: {task}")
-    
+    log(f"\n📋 SURGICAL TASK: {task}")
     current_code = read_file("index.html")
-    agents_doc = read_file("AGENTS.md")
     
-    # 🔍 UPDATED PROMPT: Explicitly demanding full code
+    # 🔍 SURGICAL PROMPT
     prompt = f"""
-    {agents_doc}
+    CONTEXT: You are a surgical coding agent. The file is too large to rewrite.
     TASK: {task}
-    CURRENT CODE LENGTH: {len(current_code)} characters
     
-    CRITICAL INSTRUCTION:
-    You must rewrite the ENTIRE index.html file to implement the task.
-    DO NOT summarize. DO NOT skip sections. DO NOT use placeholders like ''.
-    If the code is cut off, the system will reject it.
+    INSTRUCTIONS:
+    1. Identify the SPECIFIC code block in `index.html` that needs changing.
+    2. Output a SEARCH/REPLACE block.
+    3. The SEARCH block must be an EXACT COPY of the existing code (including whitespace) so I can find it.
+    4. The REPLACE block is your fixed version.
     
-    OUTPUT: Full index.html only.
+    FORMAT:
+    <<<<<<< SEARCH
+    (Paste exact existing code here)
+    =======
+    (Paste new code here)
+    >>>>>>> REPLACE
+    
+    CURRENT CODE:
+    {current_code}
     """
     
-    log(f"💡 Asking Gemini (Max Capacity Mode)...")
-    raw_response = ask_gemini_stubborn(prompt)
-    if not raw_response: 
-        log("❌ No response from AI.")
-        return True
+    log("💡 Asking Gemini for a Patch...")
+    response = ask_gemini(prompt)
+    if not response: return True
 
-    new_code = extract_code_block(raw_response)
+    log("💉 Applying Patch...")
+    new_code, message = apply_patch(current_code, response)
     
-    # Validation
     if not new_code:
-        log("❌ Error: Valid HTML block not found in response.")
-        return True
-        
-    if len(new_code.splitlines()) < 2000:
-        log(f"❌ Safety Check Failed: Code is too short ({len(new_code.splitlines())} lines). Retrying next loop...")
+        log(f"❌ Patch Failed: {message}")
+        # Retry logic could go here, but for now we skip to save infinite loops
         return True
 
-    log("💾 Saving to index.html...")
+    # Validate size didn't drop catastrophically
+    if len(new_code) < len(current_code) * 0.9:
+        log("❌ Safety: Patch deleted too much code.")
+        return True
+
+    log("💾 Saving Patched index.html...")
     write_file("index.html", new_code)
     
     repo = git.Repo(REPO_PATH)
     repo.git.add(all=True)
-    repo.index.commit(f"feat(jules): implemented {task}")
+    repo.index.commit(f"feat(jules): surgical fix for {task}")
     mark_task_done(task)
     repo.git.add("BACKLOG.md")
     repo.index.commit(f"docs: marked {task} as done")
-    
-    log("🚀 Pushing to GitHub...")
     repo.remotes.origin.push()
 
     if wait_for_render_deploy():
@@ -184,14 +179,10 @@ def process_single_task():
     return True
 
 def run_loop():
-    log("🤖 Jules (ANTI-LAZINESS MODE) Started...")
+    log("🤖 Jules Level 5 (SURGICAL MODE) Started...")
     while True:
-        if (time.time() - START_TIME) / 60 > (MAX_RUNTIME_MINUTES - 5): 
-            log("⏰ Time limit reached.")
-            break
-        if not process_single_task(): 
-            log("✅ No more tasks.")
-            break
+        if (time.time() - START_TIME) / 60 > (MAX_RUNTIME_MINUTES - 5): break
+        if not process_single_task(): break
         time.sleep(5)
 
 if __name__ == "__main__":
