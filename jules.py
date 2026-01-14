@@ -7,11 +7,19 @@ import json
 # --- CONFIGURATION ---
 REPO_PATH = "."
 API_KEY = os.environ.get("GEMINI_API_KEY")
-# We use the direct API URL to bypass library version issues
-API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={API_KEY}"
 
 if not API_KEY:
     raise ValueError("GEMINI_API_KEY environment variable not set!")
+
+# PRIORITY LIST: Tries Gemini 3 first. Falls back if access is denied.
+MODELS_TO_TRY = [
+    "gemini-3-pro-preview",    # The "Smartest" Brain (Paid/Preview)
+    "gemini-3-flash-preview",  # Fast & New
+    "gemini-2.5-pro",          # Reliable Previous Gen
+    "gemini-2.0-flash-exp",    # Standard Flash
+    "gemini-1.5-pro",          # Legacy Backup
+    "gemini-1.5-flash"         # Ultimate Safety Net
+]
 
 def read_file(filename):
     with open(filename, 'r', encoding='utf-8') as f:
@@ -23,7 +31,6 @@ def write_file(filename, content):
 
 def get_next_task():
     content = read_file("BACKLOG.md")
-    # Matches: - [ ] **Task 001: Title**
     match = re.search(r'- \[ \] \*\*(Task \d+:.*?)\*\*', content)
     if match:
         return match.group(1)
@@ -45,24 +52,32 @@ def extract_code_block(response_text):
 def ask_gemini(prompt):
     headers = {'Content-Type': 'application/json'}
     data = {
-        "contents": [{
-            "parts": [{"text": prompt}]
-        }]
+        "contents": [{"parts": [{"text": prompt}]}]
     }
-    response = requests.post(API_URL, headers=headers, data=json.dumps(data))
     
-    if response.status_code != 200:
-        print(f"❌ API Error {response.status_code}: {response.text}")
-        return None
+    # "The Handshake": Try each model until one says "Hello"
+    for model_name in MODELS_TO_TRY:
+        print(f"🔄 Attempting connection to brain: {model_name}...")
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={API_KEY}"
         
-    try:
-        return response.json()['candidates'][0]['content']['parts'][0]['text']
-    except (KeyError, IndexError):
-        print(f"❌ Unexpected Response Format: {response.text}")
-        return None
+        try:
+            response = requests.post(url, headers=headers, data=json.dumps(data))
+            
+            if response.status_code == 200:
+                print(f"✅ CONNECTED! Using {model_name}.")
+                return response.json()['candidates'][0]['content']['parts'][0]['text']
+            elif response.status_code == 404:
+                 print(f"⚠️ {model_name} not found (might be paid-only). Trying next...")
+            else:
+                print(f"⚠️ {model_name} error ({response.status_code}). Trying next...")
+        except Exception as e:
+            print(f"⚠️ Connection error with {model_name}: {e}")
+
+    print("❌ All models failed. Please check your API Key.")
+    return None
 
 def run_agent():
-    print("🤖 Jules is waking up (Direct Mode)...")
+    print("🤖 Jules is waking up (Gemini 3 Upgrade)...")
     task = get_next_task()
     if not task:
         print("✅ No pending tasks.")
@@ -89,18 +104,16 @@ def run_agent():
     Implement: "{task}"
     OUTPUT RULES:
     1. Return ONLY the full, updated index.html code.
-    2. No explanations.
-    3. Ensure the code is complete.
+    2. Ensure the code is complete.
     """
 
-    print("💡 Thinking... (Sending Request)")
+    print("💡 Thinking... (Connecting to Google Cloud)")
     raw_response = ask_gemini(prompt)
     
     if not raw_response:
         return
 
     new_code = extract_code_block(raw_response)
-
     if not new_code:
         print("❌ Error: Valid HTML not found in response.")
         return
