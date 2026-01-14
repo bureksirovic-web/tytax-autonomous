@@ -59,3 +59,13 @@
     - *Issue:* Keyboard hides input fields.
     - *Fix:* Add `onFocus={(e) => e.target.scrollIntoView({block: "center"})}` to inputs.
 
+
+## 🔴 High Priority (React Logic Fixes)
+
+- [ ] **Fix Live Kinetic Impact Chart Reactivity**
+    - *Context:* The Live Impact chart updates after Set 1 but freezes for Set 2 & 3, even though load increases.
+    - *Root Cause:* The `useMemo` calculating `currentVolume` or `impactDistribution` is likely failing to detect deep changes within the `sets` array because the state update might be mutating the object directly or React's shallow comparison ignores deep nested updates.
+    - *Task:* 1. Review the `onChange` handlers for the Set Inputs. Ensure they use strict immutable patterns (e.g., `const newWorkout = JSON.parse(JSON.stringify(currentWorkout))`).
+        2. Alternatively, add a `forceUpdate` state or a `version` key to `currentWorkout` that increments on every edit to force `useMemo` to recalculate.
+        3. Ensure the chart component receives `sets` data explicitly in its dependency array, not just the parent object.
+
