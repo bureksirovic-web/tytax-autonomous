@@ -5,6 +5,7 @@ import requests
 import json
 import time
 import sys
+import random
 
 # --- CONFIGURATION ---
 REPO_PATH = "."
@@ -21,14 +22,16 @@ def log(message):
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY missing!")
 
-# 🎯 THE HIERARCHY
-# 1. Try the Best (Gemini 3).
-# 2. If jammed, try the Fast Genius (Gemini 2.0).
-# 3. No Gemini 1.5.
+# 🎯 MODEL HIERARCHY (Priority Order)
+# Fallback strategy: Try Best -> Fast -> Legacy
 MODELS_TO_TRY = [
     "gemini-3-pro-preview",
     "gemini-3-flash-preview",
-    "gemini-2.0-flash-exp"
+    "gemini-2.5-pro",
+    "gemini-2.5-flash",
+    "gemini-2.5-flash-lite",
+    "gemini-2.0-flash-001",       # Legacy (Retires March 2026)
+    "gemini-2.0-flash-lite-001"   # Legacy (Retires March 2026)
 ]
 
 def read_file(filename):
@@ -38,52 +41,131 @@ def write_file(filename, content):
     with open(filename, 'w', encoding='utf-8') as f: f.write(content)
 
 def get_next_task():
-    content = read_file("BACKLOG.md")
-    match = re.search(r'- \[ \] \*\*(.*?)\*\*', content)
-    return match.group(1).strip() if match else None
+    try:
+        content = read_file("BACKLOG.md")
+        match = re.search(r'- \[ \] \*\*(.*?)\*\*', content)
+        return match.group(1).strip() if match else None
+    except FileNotFoundError:
+        return None
 
 def mark_task_done(task_name):
     content = read_file("BACKLOG.md")
     updated = content.replace(f"- [ ] **{task_name}**", f"- [x] **{task_name}**")
     write_file("BACKLOG.md", updated)
 
-def ask_gemini_smart_fallback(prompt):
+# 1) ROBUSTNO VAĐENJE TEKSTA
+def extract_text_from_response(response_json):
+    """
+    Safely extracts text from the deep JSON structure.
+    Returns None if structure is missing or empty, avoiding KeyErrors.
+    """
+    try:
+        if not response_json: return None
+        candidates = response_json.get("candidates", [])
+        if not candidates: return None
+        
+        candidate = candidates[0]
+        content = candidate.get("content", {})
+        parts = content.get("parts", [])
+        
+        # Combine all text parts (ignoring non-text parts if any)
+        full_text = "".join([p.get("text", "") for p in parts if "text" in p])
+        
+        return full_text if full_text.strip() else None
+    except Exception as e:
+        log(f"⚠️ Extraction Logic Error: {e}")
+        return None
+
+# 2, 3, 4) ROBUST REQUEST & FALLBACK LOGIC
+def ask_gemini_robust(prompt):
+    url_base = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
     headers = {'Content-Type': 'application/json'}
-    # Surgical Max Tokens
+    
+    # Disable Safety Filters to minimize "False Success" (200 OK but blocked content)
     data = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"maxOutputTokens": 8192} 
+        "generationConfig": {"maxOutputTokens": 8192},
+        "safetySettings": [
+            {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
+            {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
+            {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
+            {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"}
+        ]
     }
     
     for model in MODELS_TO_TRY:
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_API_KEY}"
+        url = url_base.format(model=model)
+        full_url = f"{url}?key={GEMINI_API_KEY}"
         
-        # Give each model 3 chances (approx 30s of effort)
-        # If it's truly jammed, move to the next smart one.
-        for attempt in range(3):
+        # Retry loop for a single model
+        max_retries_per_model = 3
+        base_delay = 5 # seconds
+        
+        for attempt in range(max_retries_per_model):
             try:
-                log(f"🔄 Connecting to {model} (Attempt {attempt+1}/3)...")
-                resp = requests.post(url, headers=headers, data=json.dumps(data))
+                log(f"🔄 Connecting to {model} (Attempt {attempt+1}/{max_retries_per_model})...")
+                resp = requests.post(full_url, headers=headers, data=json.dumps(data))
                 
+                # --- CASE: HTTP 200 (Success... or is it?) ---
                 if resp.status_code == 200:
-                    log(f"✅ Success! {model} answered.")
-                    return resp.json()['candidates'][0]['content']['parts'][0]['text']
-                
+                    try:
+                        resp_json = resp.json()
+                        text = extract_text_from_response(resp_json)
+                        
+                        if text:
+                            log(f"✅ Success! {model} answered.")
+                            return text
+                        else:
+                            # 2) DETEKCIJA LAŽNOG SUCCESSA
+                            finish_reason = resp_json.get("candidates", [{}])[0].get("finishReason", "UNKNOWN")
+                            log(f"⚠️ Warning: 200 OK but NO CONTENT from {model}. Reason: {finish_reason}")
+                            
+                            # Dump JSON for debugging
+                            with open("last_gemini_debug.json", "w", encoding="utf-8") as f:
+                                json.dump(resp_json, f, indent=2)
+                            log("💾 Saved debug info to last_gemini_debug.json")
+                            
+                            # Treat as a failure, trigger retry
+                            time.sleep(2) 
+                            continue
+
+                    except json.JSONDecodeError:
+                        log(f"❌ Parse Error: Invalid JSON from {model}. Raw: {resp.text[:100]}")
+                        continue
+
+                # --- CASE: RATE LIMIT (429) ---
                 elif resp.status_code == 429:
-                    log(f"⚠️ {model} Busy. Waiting 5s...")
-                    time.sleep(5)
-                elif resp.status_code == 404:
-                    log(f"❌ {model} Not Found. Skipping.")
-                    break
-                else:
-                    log(f"⚠️ Status {resp.status_code}. Retrying...")
-                    time.sleep(2)
-            except Exception as e:
-                log(f"❌ Network Error: {e}")
-                time.sleep(2)
-        
-        log(f"⏭️ {model} timed out. Falling back to next best model...")
+                    # 4) PAMETNI BACKOFF
+                    retry_after = int(resp.headers.get("Retry-After", 0))
+                    # Exponential backoff + Jitter
+                    sleep_time = (base_delay * (2 ** attempt)) + random.uniform(0, 3)
+                    wait_time = max(retry_after, sleep_time)
+                    
+                    log(f"⏳ {model} Rate Limited (429). Cooling down for {wait_time:.1f}s...")
+                    time.sleep(wait_time)
                 
+                # --- CASE: OVERLOADED (503) ---
+                elif resp.status_code == 503:
+                    log(f"⚠️ {model} Overloaded (503). Waiting 20s...")
+                    time.sleep(20)
+                
+                # --- CASE: CLIENT ERRORS (400, 404, 403) ---
+                elif 400 <= resp.status_code < 500:
+                    log(f"❌ Client Error {resp.status_code} from {model}: {resp.text}")
+                    break # Don't retry client errors (wrong model name, invalid key), move to next model
+                
+                # --- CASE: SERVER ERRORS (500, 502, 504) ---
+                else:
+                    log(f"⚠️ Server Error {resp.status_code} from {model}. Retrying...")
+                    time.sleep(5)
+
+            except Exception as e:
+                log(f"❌ Network/API Error: {e}")
+                time.sleep(5)
+        
+        log(f"⏭️ {model} exhausted retries. Falling back to next model in list...")
+
+    log("❌ All models failed to generate code.")
     return None
 
 def apply_patch(original_code, patch_text):
@@ -159,10 +241,10 @@ def process_single_task():
     {current_code}
     """
     
-    log(f"💡 Asking Smart Models (3.0 -> 2.0)...")
-    response = ask_gemini_smart_fallback(prompt)
+    log(f"💡 Asking Gemini (Smart Fallback Mode)...")
+    response = ask_gemini_robust(prompt)
     if not response: 
-        log("❌ Failed to get response from any High-IQ model.")
+        log("❌ Failed to get response from any model.")
         return True
 
     log("💉 Applying Patch...")
@@ -179,28 +261,39 @@ def process_single_task():
     log("💾 Saving Patched index.html...")
     write_file("index.html", new_code)
     
-    repo = git.Repo(REPO_PATH)
-    repo.git.add(all=True)
-    repo.index.commit(f"feat(jules): {task}")
-    mark_task_done(task)
-    repo.git.add("BACKLOG.md")
-    repo.index.commit(f"docs: marked {task} as done")
-    repo.remotes.origin.push()
+    try:
+        repo = git.Repo(REPO_PATH)
+        repo.git.add(all=True)
+        repo.index.commit(f"feat(jules): {task}")
+        mark_task_done(task)
+        repo.git.add("BACKLOG.md")
+        repo.index.commit(f"docs: marked {task} as done")
+        repo.remotes.origin.push()
+        log("🚀 Pushed to GitHub.")
+    except Exception as e:
+        log(f"❌ Git Error: {e}")
+        return True
 
     if wait_for_render_deploy():
         log("🎉 Deploy Success!")
     else:
         log("🚨 Deploy Failed! Reverting...")
-        repo.git.revert("HEAD", no_edit=True)
-        repo.remotes.origin.push()
+        try:
+            repo.git.revert("HEAD", no_edit=True)
+            repo.remotes.origin.push()
+        except: pass
         
     return True
 
 def run_loop():
-    log("🤖 Jules (SMART FALLBACK) Started...")
+    log("🤖 Jules (ROBUST V6) Started...")
     while True:
-        if (time.time() - START_TIME) / 60 > (MAX_RUNTIME_MINUTES - 5): break
-        if not process_single_task(): break
+        if (time.time() - START_TIME) / 60 > (MAX_RUNTIME_MINUTES - 5): 
+            log("⏰ Time limit reached.")
+            break
+        if not process_single_task(): 
+            log("✅ No more tasks.")
+            break
         time.sleep(5)
 
 if __name__ == "__main__":
