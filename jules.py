@@ -24,11 +24,12 @@ def log(message):
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY missing!")
 
-# 🎯 MODEL HIERARCHY
-# We use the smartest models for both Coding AND Verification
+# 🎯 MODEL HIERARCHY (RESTORED GEMINI 3)
+# We need Gemini 3's reasoning to get the PATCH format right.
 MODELS_TO_TRY = [
-    "gemini-2.0-flash-exp",    # Best Balance (Smart + Fast)
-    "gemini-1.5-pro",          # Reliable Backup
+    "gemini-3-pro-preview",    # 1. The Mastermind (Best at coding)
+    "gemini-3-flash-preview",  # 2. The Fast Mastermind
+    "gemini-2.0-flash-exp",    # 3. The Fallback
 ]
 
 def read_file(filename):
@@ -60,15 +61,11 @@ def extract_text_from_response(response_json):
     except: return None
 
 def ask_gemini_robust(prompt, model_hint="coder"):
-    """
-    Generic API wrapper. 
-    model_hint: 'coder' or 'critic' (could use different temps in future)
-    """
     url_base = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
     headers = {'Content-Type': 'application/json'}
     data = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"maxOutputTokens": 8192, "temperature": 0.2}, # Low temp for precision
+        "generationConfig": {"maxOutputTokens": 8192, "temperature": 0.2}, 
         "safetySettings": [
             {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
             {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
@@ -79,31 +76,27 @@ def ask_gemini_robust(prompt, model_hint="coder"):
     
     for model in MODELS_TO_TRY:
         url = url_base.format(model=model) + f"?key={GEMINI_API_KEY}"
-        for attempt in range(3):
-            try:
-                log(f"🔄 [{model_hint.upper()}] Connecting to {model}...")
-                resp = requests.post(url, headers=headers, data=json.dumps(data))
-                
-                if resp.status_code == 200:
-                    text = extract_text_from_response(resp.json())
-                    if text: return text
-                    else: 
-                        log(f"⚠️ Empty response. Retrying...")
-                        time.sleep(2)
-                elif resp.status_code == 429:
-                    log(f"⏳ Rate Limit. Waiting 5s...")
-                    time.sleep(5 + attempt)
-                else:
-                    break # Client error, try next model
-            except Exception as e:
-                log(f"❌ Net Error: {e}")
+        # Only try once per model to avoid wasting time on broken models
+        try:
+            log(f"🔄 [{model_hint.upper()}] Connecting to {model}...")
+            resp = requests.post(url, headers=headers, data=json.dumps(data))
+            
+            if resp.status_code == 200:
+                text = extract_text_from_response(resp.json())
+                if text: return text
+                else: log(f"⚠️ {model} returned empty content.")
+            elif resp.status_code == 429:
+                log(f"⏳ {model} Rate Limited. Switching...")
                 time.sleep(2)
+            else:
+                log(f"❌ {model} Error {resp.status_code}.")
+        except Exception as e:
+            log(f"❌ Network Error: {e}")
+            time.sleep(1)
+            
     return None
 
 def apply_patch(original_code, patch_text):
-    """
-    Applies the patch using Fuzzy Matching logic.
-    """
     pattern = r"<<<<<<< SEARCH\n(.*?)\n=======\n(.*?)\n>>>>>>> REPLACE"
     matches = re.findall(pattern, patch_text, re.DOTALL)
     
@@ -114,25 +107,15 @@ def apply_patch(original_code, patch_text):
     success_count = 0
     
     for search_block, replace_block in matches:
-        # 1. Exact Match
         if search_block in new_code:
             new_code = new_code.replace(search_block, replace_block)
             success_count += 1
             continue
-            
-        # 2. Loose Match (Strip whitespace)
+        
+        # Loose match
         if search_block.strip() in new_code:
             new_code = new_code.replace(search_block.strip(), replace_block.strip())
             success_count += 1
-            continue
-            
-        # 3. Aggressive Strip Match (Remove all whitespace)
-        # This is risky but effective for simple JS edits
-        def clean(s): return "".join(s.split())
-        if clean(search_block) in clean(new_code):
-            # We can't use replace() on the cleaned string directly.
-            # We skip this for now to avoid corruption, trusting the AI will retry.
-            log(f"⚠️ Fuzzy match found but skipped for safety (whitespace mismatch).")
             continue
     
     if success_count == 0:
@@ -141,10 +124,6 @@ def apply_patch(original_code, patch_text):
     return new_code, f"Applied {success_count} patches."
 
 def verify_fix(task, original_code, new_code):
-    """
-    The Critic: Analyzes the NEW code to see if the logic actually holds up.
-    Returns: (bool is_passed, str feedback)
-    """
     if original_code == new_code:
         return False, "The code did not change at all."
 
@@ -157,30 +136,26 @@ def verify_fix(task, original_code, new_code):
     
     CHECKLIST:
     1. Did the specific logic requested in the TASK actually change?
-    2. Are there any obvious React errors (e.g., missing dependencies in useEffect, mutating state directly)?
-    3. If the task was "Fix Chart", does the chart data prop actually update?
+    2. Are there any obvious React errors?
     
     NEW CODE SNAPSHOT (relevant parts):
     {new_code[:10000]} 
-    ... (truncated for length) ...
+    ... (truncated) ...
     {new_code[-5000:]}
     
     OUTPUT FORMAT:
     If the fix looks correct:
     PASS
     
-    If the fix is broken or incomplete:
-    FAIL: [Reason why it is broken]
+    If the fix is broken:
+    FAIL: [Reason]
     """
     
     response = ask_gemini_robust(prompt, model_hint="critic")
-    if not response: return True, "Critic failed to respond, assuming pass." # Fail open to avoid deadlocks
+    if not response: return True, "Critic failed to respond."
     
-    if "PASS" in response:
-        return True, "Verified."
-    else:
-        # Extract the failure reason
-        return False, response.replace("FAIL:", "").strip()
+    if "PASS" in response: return True, "Verified."
+    else: return False, response.replace("FAIL:", "").strip()
 
 def wait_for_render_deploy():
     if not RENDER_API_KEY: return True
@@ -210,7 +185,6 @@ def process_single_task():
     log(f"\n📋 STARTING TASK: {task}")
     current_code = read_file("index.html")
     
-    # --- THE SELF-CORRECTION LOOP ---
     critique_history = ""
     
     for attempt in range(MAX_QA_RETRIES):
@@ -226,6 +200,7 @@ def process_single_task():
         INSTRUCTIONS:
         1. Find the exact code to fix.
         2. Output a SEARCH/REPLACE block.
+        3. Make sure the SEARCH block matches EXACTLY.
         
         FORMAT:
         <<<<<<< SEARCH
@@ -241,22 +216,19 @@ def process_single_task():
         response = ask_gemini_robust(prompt, model_hint="coder")
         if not response: continue
 
-        # 1. Try to Apply Patch
         log("💉 Applying Patch...")
         new_code, message = apply_patch(current_code, response)
         
         if not new_code:
             log(f"❌ Patch Failed: {message}")
-            critique_history = f"PREVIOUS ATTEMPT FAILED: The SEARCH block didn't match the file exactly. Be more precise."
+            critique_history = f"PREVIOUS ATTEMPT FAILED: The SEARCH block didn't match. Be precise."
             continue
 
-        # 2. Verify with The Critic (QA Step)
         log("🕵️ Running QA Verification...")
         is_valid, feedback = verify_fix(task, current_code, new_code)
         
         if is_valid:
             log(f"✅ QA Passed: {feedback}")
-            # SAVE AND COMMIT
             write_file("index.html", new_code)
             try:
                 repo = git.Repo(REPO_PATH)
@@ -268,20 +240,18 @@ def process_single_task():
                 repo.remotes.origin.push()
                 log("🚀 Pushed to GitHub.")
                 if wait_for_render_deploy(): log("🎉 Deploy Success!")
-                else: log("🚨 Deploy Failed (Render Check).")
             except Exception as e:
                 log(f"❌ Git Error: {e}")
             return True
         else:
             log(f"❌ QA Failed: {feedback}")
-            critique_history = f"PREVIOUS FIX REJECTED BY QA: {feedback}\nPlease fix the logic error and try again."
-            # Loop continues to next attempt...
+            critique_history = f"QA REJECTED: {feedback}"
 
     log("❌ Task Failed after max retries.")
-    return True # Return True to move to next loop/exit, prevents infinite hanging
+    return True 
 
 def run_loop():
-    log("🤖 Jules Level 7 (SELF-HEALING) Started...")
+    log("🤖 Jules Level 8 (GEMINI 3 RETURN) Started...")
     while True:
         if (time.time() - START_TIME) / 60 > (MAX_RUNTIME_MINUTES - 5): break
         if not process_single_task(): break
