@@ -7,13 +7,13 @@
     }
   ],
   "usageMetadata": {
-    "promptTokenCount": 64230,
-    "totalTokenCount": 72419,
+    "promptTokenCount": 64244,
+    "totalTokenCount": 72433,
     "cachedContentTokenCount": 61418,
     "promptTokensDetails": [
       {
         "modality": "TEXT",
-        "tokenCount": 64230
+        "tokenCount": 64244
       }
     ],
     "cacheTokensDetails": [
@@ -25,5 +25,5 @@
     "thoughtsTokenCount": 8189
   },
   "modelVersion": "gemini-3-pro-preview",
-  "responseId": "59ZnaZbtIor3jrEPgJaCqAo"
+  "responseId": "YdhnabyyAtn3jrEP_rLymAk"
 }
