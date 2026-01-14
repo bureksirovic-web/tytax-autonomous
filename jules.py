@@ -4,7 +4,6 @@ import git
 import requests
 import json
 import time
-import html.parser
 import sys
 
 # --- CONFIGURATION ---
@@ -17,6 +16,7 @@ SITE_URL = "https://tytax-elite.onrender.com"
 MAX_RUNTIME_MINUTES = 45
 START_TIME = time.time()
 
+# --- FORCE UNBUFFERED OUTPUT ---
 def log(message):
     print(message, flush=True)
 
@@ -25,12 +25,10 @@ if not GEMINI_API_KEY:
 if not RENDER_API_KEY:
     log("⚠️ WARNING: RENDER_API_KEY is missing. Production checks will be skipped.")
 
-# 🔄 FIXED MODEL LIST: Corrected names to prevent 404 errors
+# 🎯 SNIPER LIST: ONLY High-IQ Experimental Models. 
+# We removed the "dumber" stable models.
 MODELS_TO_TRY = [
-    "gemini-2.0-flash-exp",    # 1. Experimental (Fast & Smart)
-    "gemini-1.5-pro",          # 2. Stable Pro (The Reliability King) - FIXED NAME
-    "gemini-1.5-flash",        # 3. Stable Flash (The "Emergency" Backup)
-    "gemini-1.0-pro"           # 4. Legacy (Last Resort)
+    "gemini-2.0-flash-exp"
 ]
 
 def read_file(filename):
@@ -54,32 +52,45 @@ def extract_code_block(response_text):
     if match: return match.group(1).strip()
     return response_text if "<!DOCTYPE html>" in response_text else None
 
-def ask_gemini(prompt):
+def ask_gemini_stubborn(prompt):
+    """
+    Siege Mode: Keeps hitting the High-IQ model until it answers.
+    No downgrading to dumber models.
+    """
     headers = {'Content-Type': 'application/json'}
     data = {"contents": [{"parts": [{"text": prompt}]}]}
-    
-    for model in MODELS_TO_TRY:
-        # Using standard v1beta endpoint
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_API_KEY}"
+    model = "gemini-2.0-flash-exp"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_API_KEY}"
+
+    wait_time = 5 # Start with 5 seconds wait
+    max_retries = 10 # Try 10 times (approx 5 mins of fighting)
+
+    for attempt in range(max_retries):
         try:
-            log(f"🔄 Connecting to {model}...")
+            log(f"🔄 Connecting to {model} (Attempt {attempt+1}/{max_retries})...")
             resp = requests.post(url, headers=headers, data=json.dumps(data))
             
             if resp.status_code == 200:
-                log(f"✅ Success! Connected to {model}.")
+                log(f"✅ Success! {model} answered.")
                 return resp.json()['candidates'][0]['content']['parts'][0]['text']
             
             elif resp.status_code == 429:
-                log(f"⚠️ {model} is busy (Rate Limit). Switching...")
-                time.sleep(1) 
-            elif resp.status_code == 404:
-                log(f"❌ {model} not found (404). Check spelling.")
+                log(f"⚠️ {model} is busy (Rate Limit). Waiting {wait_time}s...")
+                time.sleep(wait_time)
+                wait_time *= 1.5 # Exponential Backoff: Wait longer next time (5s -> 7.5s -> 11s...)
+            elif resp.status_code == 503:
+                log(f"⚠️ {model} Overloaded (503). Cooling down for 20s...")
+                time.sleep(20)
             else:
-                log(f"⚠️ Status {resp.status_code} from {model}")
+                log(f"❌ Critical Error {resp.status_code}: {resp.text}")
+                # Don't give up immediately on 500s, retry once or twice
+                time.sleep(5)
                 
         except Exception as e:
-            log(f"❌ Error hitting API: {e}")
+            log(f"❌ Connection Error: {e}")
+            time.sleep(5)
             
+    log("❌ Failed to get code after maximum retries.")
     return None
 
 def wait_for_render_deploy():
@@ -117,10 +128,10 @@ def process_single_task():
     
     prompt = f"{agents_doc}\nCURRENT CODE LENGTH: {len(current_code)}\nTASK: {task}\nOUTPUT: Full index.html only."
     
-    log("💡 Asking Gemini...")
-    raw_response = ask_gemini(prompt)
+    log(f"💡 Asking Gemini 2.0 Flash Exp (Stubborn Mode)...")
+    raw_response = ask_gemini_stubborn(prompt)
     if not raw_response: 
-        log("❌ No response from AI (All models failed).")
+        log("❌ No response from AI.")
         return True
 
     new_code = extract_code_block(raw_response)
@@ -151,7 +162,7 @@ def process_single_task():
     return True
 
 def run_loop():
-    log("🤖 Jules Level 4 (FINAL FIX) Started...")
+    log("🤖 Jules (HIGH-IQ ONLY) Started...")
     while True:
         if (time.time() - START_TIME) / 60 > (MAX_RUNTIME_MINUTES - 5): 
             log("⏰ Time limit reached.")
