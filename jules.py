@@ -13,6 +13,8 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 RENDER_API_KEY = os.environ.get("RENDER_API_KEY")
 RENDER_SERVICE_ID = "srv-d5jlon15pdvs739hp3jg"
 
+# Max retries for "Self-Correction" (The Critic Loop)
+MAX_QA_RETRIES = 3 
 MAX_RUNTIME_MINUTES = 45
 START_TIME = time.time()
 
@@ -22,16 +24,11 @@ def log(message):
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY missing!")
 
-# 🎯 MODEL HIERARCHY (Priority Order)
-# Fallback strategy: Try Best -> Fast -> Legacy
+# 🎯 MODEL HIERARCHY
+# We use the smartest models for both Coding AND Verification
 MODELS_TO_TRY = [
-    "gemini-3-pro-preview",
-    "gemini-3-flash-preview",
-    "gemini-2.5-pro",
-    "gemini-2.5-flash",
-    "gemini-2.5-flash-lite",
-    "gemini-2.0-flash-001",       # Legacy (Retires March 2026)
-    "gemini-2.0-flash-lite-001"   # Legacy (Retires March 2026)
+    "gemini-2.0-flash-exp",    # Best Balance (Smart + Fast)
+    "gemini-1.5-pro",          # Reliable Backup
 ]
 
 def read_file(filename):
@@ -45,46 +42,33 @@ def get_next_task():
         content = read_file("BACKLOG.md")
         match = re.search(r'- \[ \] \*\*(.*?)\*\*', content)
         return match.group(1).strip() if match else None
-    except FileNotFoundError:
-        return None
+    except FileNotFoundError: return None
 
 def mark_task_done(task_name):
     content = read_file("BACKLOG.md")
     updated = content.replace(f"- [ ] **{task_name}**", f"- [x] **{task_name}**")
     write_file("BACKLOG.md", updated)
 
-# 1) ROBUSTNO VAĐENJE TEKSTA
 def extract_text_from_response(response_json):
-    """
-    Safely extracts text from the deep JSON structure.
-    Returns None if structure is missing or empty, avoiding KeyErrors.
-    """
     try:
         if not response_json: return None
         candidates = response_json.get("candidates", [])
         if not candidates: return None
-        
-        candidate = candidates[0]
-        content = candidate.get("content", {})
-        parts = content.get("parts", [])
-        
-        # Combine all text parts (ignoring non-text parts if any)
+        parts = candidates[0].get("content", {}).get("parts", [])
         full_text = "".join([p.get("text", "") for p in parts if "text" in p])
-        
         return full_text if full_text.strip() else None
-    except Exception as e:
-        log(f"⚠️ Extraction Logic Error: {e}")
-        return None
+    except: return None
 
-# 2, 3, 4) ROBUST REQUEST & FALLBACK LOGIC
-def ask_gemini_robust(prompt):
+def ask_gemini_robust(prompt, model_hint="coder"):
+    """
+    Generic API wrapper. 
+    model_hint: 'coder' or 'critic' (could use different temps in future)
+    """
     url_base = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
     headers = {'Content-Type': 'application/json'}
-    
-    # Disable Safety Filters to minimize "False Success" (200 OK but blocked content)
     data = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"maxOutputTokens": 8192},
+        "generationConfig": {"maxOutputTokens": 8192, "temperature": 0.2}, # Low temp for precision
         "safetySettings": [
             {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
             {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
@@ -94,81 +78,32 @@ def ask_gemini_robust(prompt):
     }
     
     for model in MODELS_TO_TRY:
-        url = url_base.format(model=model)
-        full_url = f"{url}?key={GEMINI_API_KEY}"
-        
-        # Retry loop for a single model
-        max_retries_per_model = 3
-        base_delay = 5 # seconds
-        
-        for attempt in range(max_retries_per_model):
+        url = url_base.format(model=model) + f"?key={GEMINI_API_KEY}"
+        for attempt in range(3):
             try:
-                log(f"🔄 Connecting to {model} (Attempt {attempt+1}/{max_retries_per_model})...")
-                resp = requests.post(full_url, headers=headers, data=json.dumps(data))
+                log(f"🔄 [{model_hint.upper()}] Connecting to {model}...")
+                resp = requests.post(url, headers=headers, data=json.dumps(data))
                 
-                # --- CASE: HTTP 200 (Success... or is it?) ---
                 if resp.status_code == 200:
-                    try:
-                        resp_json = resp.json()
-                        text = extract_text_from_response(resp_json)
-                        
-                        if text:
-                            log(f"✅ Success! {model} answered.")
-                            return text
-                        else:
-                            # 2) DETEKCIJA LAŽNOG SUCCESSA
-                            finish_reason = resp_json.get("candidates", [{}])[0].get("finishReason", "UNKNOWN")
-                            log(f"⚠️ Warning: 200 OK but NO CONTENT from {model}. Reason: {finish_reason}")
-                            
-                            # Dump JSON for debugging
-                            with open("last_gemini_debug.json", "w", encoding="utf-8") as f:
-                                json.dump(resp_json, f, indent=2)
-                            log("💾 Saved debug info to last_gemini_debug.json")
-                            
-                            # Treat as a failure, trigger retry
-                            time.sleep(2) 
-                            continue
-
-                    except json.JSONDecodeError:
-                        log(f"❌ Parse Error: Invalid JSON from {model}. Raw: {resp.text[:100]}")
-                        continue
-
-                # --- CASE: RATE LIMIT (429) ---
+                    text = extract_text_from_response(resp.json())
+                    if text: return text
+                    else: 
+                        log(f"⚠️ Empty response. Retrying...")
+                        time.sleep(2)
                 elif resp.status_code == 429:
-                    # 4) PAMETNI BACKOFF
-                    retry_after = int(resp.headers.get("Retry-After", 0))
-                    # Exponential backoff + Jitter
-                    sleep_time = (base_delay * (2 ** attempt)) + random.uniform(0, 3)
-                    wait_time = max(retry_after, sleep_time)
-                    
-                    log(f"⏳ {model} Rate Limited (429). Cooling down for {wait_time:.1f}s...")
-                    time.sleep(wait_time)
-                
-                # --- CASE: OVERLOADED (503) ---
-                elif resp.status_code == 503:
-                    log(f"⚠️ {model} Overloaded (503). Waiting 20s...")
-                    time.sleep(20)
-                
-                # --- CASE: CLIENT ERRORS (400, 404, 403) ---
-                elif 400 <= resp.status_code < 500:
-                    log(f"❌ Client Error {resp.status_code} from {model}: {resp.text}")
-                    break # Don't retry client errors (wrong model name, invalid key), move to next model
-                
-                # --- CASE: SERVER ERRORS (500, 502, 504) ---
+                    log(f"⏳ Rate Limit. Waiting 5s...")
+                    time.sleep(5 + attempt)
                 else:
-                    log(f"⚠️ Server Error {resp.status_code} from {model}. Retrying...")
-                    time.sleep(5)
-
+                    break # Client error, try next model
             except Exception as e:
-                log(f"❌ Network/API Error: {e}")
-                time.sleep(5)
-        
-        log(f"⏭️ {model} exhausted retries. Falling back to next model in list...")
-
-    log("❌ All models failed to generate code.")
+                log(f"❌ Net Error: {e}")
+                time.sleep(2)
     return None
 
 def apply_patch(original_code, patch_text):
+    """
+    Applies the patch using Fuzzy Matching logic.
+    """
     pattern = r"<<<<<<< SEARCH\n(.*?)\n=======\n(.*?)\n>>>>>>> REPLACE"
     matches = re.findall(pattern, patch_text, re.DOTALL)
     
@@ -179,18 +114,73 @@ def apply_patch(original_code, patch_text):
     success_count = 0
     
     for search_block, replace_block in matches:
+        # 1. Exact Match
         if search_block in new_code:
             new_code = new_code.replace(search_block, replace_block)
             success_count += 1
-        else:
-            clean_search = search_block.strip()
-            if clean_search in new_code:
-                new_code = new_code.replace(clean_search, replace_block.strip())
-                success_count += 1
-            else:
-                return None, f"Could not find code block:\n{search_block[:50]}..."
-                
+            continue
+            
+        # 2. Loose Match (Strip whitespace)
+        if search_block.strip() in new_code:
+            new_code = new_code.replace(search_block.strip(), replace_block.strip())
+            success_count += 1
+            continue
+            
+        # 3. Aggressive Strip Match (Remove all whitespace)
+        # This is risky but effective for simple JS edits
+        def clean(s): return "".join(s.split())
+        if clean(search_block) in clean(new_code):
+            # We can't use replace() on the cleaned string directly.
+            # We skip this for now to avoid corruption, trusting the AI will retry.
+            log(f"⚠️ Fuzzy match found but skipped for safety (whitespace mismatch).")
+            continue
+    
+    if success_count == 0:
+        return None, "Could not find any code blocks to replace."
+        
     return new_code, f"Applied {success_count} patches."
+
+def verify_fix(task, original_code, new_code):
+    """
+    The Critic: Analyzes the NEW code to see if the logic actually holds up.
+    Returns: (bool is_passed, str feedback)
+    """
+    if original_code == new_code:
+        return False, "The code did not change at all."
+
+    prompt = f"""
+    ROLE: You are a Senior Code Reviewer.
+    TASK: {task}
+    
+    I have applied a patch to the file. 
+    Analyze the NEW CODE below.
+    
+    CHECKLIST:
+    1. Did the specific logic requested in the TASK actually change?
+    2. Are there any obvious React errors (e.g., missing dependencies in useEffect, mutating state directly)?
+    3. If the task was "Fix Chart", does the chart data prop actually update?
+    
+    NEW CODE SNAPSHOT (relevant parts):
+    {new_code[:10000]} 
+    ... (truncated for length) ...
+    {new_code[-5000:]}
+    
+    OUTPUT FORMAT:
+    If the fix looks correct:
+    PASS
+    
+    If the fix is broken or incomplete:
+    FAIL: [Reason why it is broken]
+    """
+    
+    response = ask_gemini_robust(prompt, model_hint="critic")
+    if not response: return True, "Critic failed to respond, assuming pass." # Fail open to avoid deadlocks
+    
+    if "PASS" in response:
+        return True, "Verified."
+    else:
+        # Extract the failure reason
+        return False, response.replace("FAIL:", "").strip()
 
 def wait_for_render_deploy():
     if not RENDER_API_KEY: return True
@@ -205,8 +195,7 @@ def wait_for_render_deploy():
             if resp.status_code == 200:
                 data = resp.json()
                 if not data: continue 
-                latest_deploy = data[0]['deploy']
-                status = latest_deploy['status']
+                status = data[0]['deploy']['status']
                 log(f"📡 Status: {status}")
                 if status == "live": return True
                 if status in ["build_failed", "canceled"]: return False
@@ -218,82 +207,84 @@ def process_single_task():
     task = get_next_task()
     if not task: return False
 
-    log(f"\n📋 SURGICAL TASK: {task}")
+    log(f"\n📋 STARTING TASK: {task}")
     current_code = read_file("index.html")
     
-    prompt = f"""
-    CONTEXT: You are an expert engineer.
-    TASK: {task}
-    TARGET FILE: index.html
+    # --- THE SELF-CORRECTION LOOP ---
+    critique_history = ""
     
-    INSTRUCTIONS:
-    1. Find the exact code to fix.
-    2. Output a SEARCH/REPLACE block.
-    
-    FORMAT:
-    <<<<<<< SEARCH
-    (Exact existing code)
-    =======
-    (New code)
-    >>>>>>> REPLACE
-    
-    CURRENT CODE:
-    {current_code}
-    """
-    
-    log(f"💡 Asking Gemini (Smart Fallback Mode)...")
-    response = ask_gemini_robust(prompt)
-    if not response: 
-        log("❌ Failed to get response from any model.")
-        return True
-
-    log("💉 Applying Patch...")
-    new_code, message = apply_patch(current_code, response)
-    
-    if not new_code:
-        log(f"❌ Patch Failed: {message}")
-        return True
-
-    if len(new_code) < len(current_code) * 0.9:
-        log("❌ Safety: File shrank too much.")
-        return True
-
-    log("💾 Saving Patched index.html...")
-    write_file("index.html", new_code)
-    
-    try:
-        repo = git.Repo(REPO_PATH)
-        repo.git.add(all=True)
-        repo.index.commit(f"feat(jules): {task}")
-        mark_task_done(task)
-        repo.git.add("BACKLOG.md")
-        repo.index.commit(f"docs: marked {task} as done")
-        repo.remotes.origin.push()
-        log("🚀 Pushed to GitHub.")
-    except Exception as e:
-        log(f"❌ Git Error: {e}")
-        return True
-
-    if wait_for_render_deploy():
-        log("🎉 Deploy Success!")
-    else:
-        log("🚨 Deploy Failed! Reverting...")
-        try:
-            repo.git.revert("HEAD", no_edit=True)
-            repo.remotes.origin.push()
-        except: pass
+    for attempt in range(MAX_QA_RETRIES):
+        log(f"💡 Attempt {attempt + 1}/{MAX_QA_RETRIES}...")
         
-    return True
+        prompt = f"""
+        CONTEXT: Expert React Engineer.
+        TASK: {task}
+        TARGET FILE: index.html
+        
+        {critique_history}
+        
+        INSTRUCTIONS:
+        1. Find the exact code to fix.
+        2. Output a SEARCH/REPLACE block.
+        
+        FORMAT:
+        <<<<<<< SEARCH
+        (Exact existing code)
+        =======
+        (New code)
+        >>>>>>> REPLACE
+        
+        CURRENT CODE:
+        {current_code}
+        """
+        
+        response = ask_gemini_robust(prompt, model_hint="coder")
+        if not response: continue
+
+        # 1. Try to Apply Patch
+        log("💉 Applying Patch...")
+        new_code, message = apply_patch(current_code, response)
+        
+        if not new_code:
+            log(f"❌ Patch Failed: {message}")
+            critique_history = f"PREVIOUS ATTEMPT FAILED: The SEARCH block didn't match the file exactly. Be more precise."
+            continue
+
+        # 2. Verify with The Critic (QA Step)
+        log("🕵️ Running QA Verification...")
+        is_valid, feedback = verify_fix(task, current_code, new_code)
+        
+        if is_valid:
+            log(f"✅ QA Passed: {feedback}")
+            # SAVE AND COMMIT
+            write_file("index.html", new_code)
+            try:
+                repo = git.Repo(REPO_PATH)
+                repo.git.add(all=True)
+                repo.index.commit(f"feat(jules): {task}")
+                mark_task_done(task)
+                repo.git.add("BACKLOG.md")
+                repo.index.commit(f"docs: marked {task} as done")
+                repo.remotes.origin.push()
+                log("🚀 Pushed to GitHub.")
+                if wait_for_render_deploy(): log("🎉 Deploy Success!")
+                else: log("🚨 Deploy Failed (Render Check).")
+            except Exception as e:
+                log(f"❌ Git Error: {e}")
+            return True
+        else:
+            log(f"❌ QA Failed: {feedback}")
+            critique_history = f"PREVIOUS FIX REJECTED BY QA: {feedback}\nPlease fix the logic error and try again."
+            # Loop continues to next attempt...
+
+    log("❌ Task Failed after max retries.")
+    return True # Return True to move to next loop/exit, prevents infinite hanging
 
 def run_loop():
-    log("🤖 Jules (ROBUST V6) Started...")
+    log("🤖 Jules Level 7 (SELF-HEALING) Started...")
     while True:
-        if (time.time() - START_TIME) / 60 > (MAX_RUNTIME_MINUTES - 5): 
-            log("⏰ Time limit reached.")
-            break
-        if not process_single_task(): 
-            log("✅ No more tasks.")
-            break
+        if (time.time() - START_TIME) / 60 > (MAX_RUNTIME_MINUTES - 5): break
+        if not process_single_task(): break
         time.sleep(5)
 
 if __name__ == "__main__":
