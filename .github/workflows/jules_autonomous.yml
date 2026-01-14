@@ -1,8 +1,9 @@
 ﻿name: Jules Autonomous Agent
+
 on:
-  workflow_dispatch:  # Allows manual button click
+  workflow_dispatch:
   schedule:
-    - cron: '0 */6 * * *' # Runs every 6 hours automatically
+    - cron: '0 */6 * * *'
 
 permissions:
   contents: write
@@ -15,10 +16,11 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v3
 
+    # FIXED: Upgraded from 3.9 to 3.11 to silence deprecation warnings
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.9'
+        python-version: '3.11'
 
     - name: Install Dependencies
       run: |

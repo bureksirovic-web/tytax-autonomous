@@ -2,6 +2,7 @@
 import re
 import git
 import google.generativeai as genai
+
 # --- CONFIGURATION ---
 REPO_PATH = "."
 API_KEY = os.environ.get("GEMINI_API_KEY")
@@ -10,7 +11,10 @@ if not API_KEY:
     raise ValueError("GEMINI_API_KEY environment variable not set!")
 
 genai.configure(api_key=API_KEY)
-model = genai.GenerativeModel('gemini-1.5-pro-latest')
+
+# FIXED: Switched to 'gemini-1.5-flash' (Stable & Fast)
+# 'gemini-1.5-pro-latest' is deprecated and causes 404 errors.
+model = genai.GenerativeModel('gemini-1.5-flash')
 
 def read_file(filename):
     with open(filename, 'r', encoding='utf-8') as f:
@@ -33,7 +37,7 @@ def mark_task_done(task_name):
     write_file("BACKLOG.md", updated)
 
 def extract_code_block(response_text):
-    match = re.search(r'`html(.*?)`', response_text, re.DOTALL)
+    match = re.search(r'```html(.*?)```', response_text, re.DOTALL)
     if match:
         return match.group(1).strip()
     if "<!DOCTYPE html>" in response_text:
@@ -51,7 +55,6 @@ def run_agent():
     agents_doc = read_file("AGENTS.md")
     arch_doc = read_file("ARCHITECTURE.md")
     current_code = read_file("index.html")
-    # Try reading library, defaulting to empty if missing
     try:
         library = read_file("tytax_library.json")
     except:
@@ -72,9 +75,13 @@ def run_agent():
     2. No explanations.
     """
 
-    print("💡 Thinking...")
-    response = model.generate_content(prompt)
-    new_code = extract_code_block(response.text)
+    print("💡 Thinking... (Asking Gemini)")
+    try:
+        response = model.generate_content(prompt)
+        new_code = extract_code_block(response.text)
+    except Exception as e:
+        print(f"❌ Gemini API Error: {e}")
+        return
 
     if not new_code:
         print("❌ Error: No code generated.")
