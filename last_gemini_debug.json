@@ -7,23 +7,23 @@
     }
   ],
   "usageMetadata": {
-    "promptTokenCount": 64284,
-    "totalTokenCount": 72473,
-    "cachedContentTokenCount": 61418,
+    "promptTokenCount": 65508,
+    "totalTokenCount": 73697,
+    "cachedContentTokenCount": 61419,
     "promptTokensDetails": [
       {
         "modality": "TEXT",
-        "tokenCount": 64284
+        "tokenCount": 65508
       }
     ],
     "cacheTokensDetails": [
       {
         "modality": "TEXT",
-        "tokenCount": 61418
+        "tokenCount": 61419
       }
     ],
     "thoughtsTokenCount": 8189
   },
   "modelVersion": "gemini-3-pro-preview",
-  "responseId": "OttnacSjIeaPjrEPzMSB6Aw"
+  "responseId": "Qt1nacv3NubjjMcPubWVuAs"
 }

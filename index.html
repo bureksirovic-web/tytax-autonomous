@@ -4995,35 +4995,45 @@
                                                                         <div className="flex items-center gap-2 flex-grow">
                                                                             <Icon name="tool" className="w-3.5 h-3.5 text-slate-500 group-hover:text-indigo-400 transition-colors" /> 
                                                                             
-                                                                            {/* STRUCTURED SELECTOR */}
-                                                                            <div className="flex gap-1 w-full">
-                                                                                <select 
-                                                                                    value={ex.setup?.split('|')[0]?.trim() || ''} 
-                                                                                    onChange={e => {
-                                                                                        const currentLever = ex.setup?.split('|')[1]?.trim() || '-';
-                                                                                        const newVal = `${e.target.value} | ${currentLever}`;
-                                                                                        setSetupNotes({...setupNotes, [ex.name]: newVal}); 
-                                                                                        const up = {...currentWorkout}; up.exercises[exIdx].setup = newVal; setCurrentWorkout(up);
-                                                                                    }}
-                                                                                    className="bg-transparent text-[10px] font-bold text-indigo-300 border-none p-0 focus:ring-0 w-1/2 cursor-pointer"
-                                                                                >
-                                                                                    <option value="">Seat</option>
-                                                                                    {[1,2,3,4,5,6,7,8].map(n => <option key={n} value={`Seat ${n}`}>Seat {n}</option>)}
-                                                                                </select>
-                                                                                <span className="text-slate-600">|</span>
-                                                                                <select 
-                                                                                    value={ex.setup?.split('|')[1]?.trim() || ''} 
-                                                                                    onChange={e => {
-                                                                                        const currentSeat = ex.setup?.split('|')[0]?.trim() || 'Seat -';
-                                                                                        const newVal = `${currentSeat} | ${e.target.value}`;
-                                                                                        setSetupNotes({...setupNotes, [ex.name]: newVal}); 
-                                                                                        const up = {...currentWorkout}; up.exercises[exIdx].setup = newVal; setCurrentWorkout(up);
-                                                                                    }}
-                                                                                    className="bg-transparent text-[10px] font-bold text-indigo-300 border-none p-0 focus:ring-0 w-1/2 cursor-pointer"
-                                                                                >
-                                                                                    <option value="">Lever</option>
-                                                                                    {['A','B','C','D','E'].map(l => <option key={l} value={`Lever ${l}`}>Lever {l}</option>)}
-                                                                                </select>
+                                                                            <div className="flex flex-col flex-grow">
+                                                                                {/* STRUCTURED SELECTOR */}
+                                                                                <div className="flex gap-1 w-full">
+                                                                                    <select 
+                                                                                        value={ex.setup?.split('|')[0]?.trim() || ''} 
+                                                                                        onChange={e => {
+                                                                                            const currentLever = ex.setup?.split('|')[1]?.trim() || '-';
+                                                                                            const newVal = `${e.target.value} | ${currentLever}`;
+                                                                                            setSetupNotes({...setupNotes, [ex.name]: newVal}); 
+                                                                                            const up = {...currentWorkout}; up.exercises[exIdx].setup = newVal; setCurrentWorkout(up);
+                                                                                        }}
+                                                                                        className="bg-transparent text-[10px] font-bold text-indigo-300 border-none p-0 focus:ring-0 w-1/2 cursor-pointer"
+                                                                                    >
+                                                                                        <option value="">Seat</option>
+                                                                                        {[1,2,3,4,5,6,7,8].map(n => <option key={n} value={`Seat ${n}`}>Seat {n}</option>)}
+                                                                                    </select>
+                                                                                    <span className="text-slate-600">|</span>
+                                                                                    <select 
+                                                                                        value={ex.setup?.split('|')[1]?.trim() || ''} 
+                                                                                        onChange={e => {
+                                                                                            const currentSeat = ex.setup?.split('|')[0]?.trim() || 'Seat -';
+                                                                                            const newVal = `${currentSeat} | ${e.target.value}`;
+                                                                                            setSetupNotes({...setupNotes, [ex.name]: newVal}); 
+                                                                                            const up = {...currentWorkout}; up.exercises[exIdx].setup = newVal; setCurrentWorkout(up);
+                                                                                        }}
+                                                                                        className="bg-transparent text-[10px] font-bold text-indigo-300 border-none p-0 focus:ring-0 w-1/2 cursor-pointer"
+                                                                                    >
+                                                                                        <option value="">Lever</option>
+                                                                                        {['A','B','C','D','E'].map(l => <option key={l} value={`Lever ${l}`}>Lever {l}</option>)}
+                                                                                    </select>
+                                                                                </div>
+                                                                                {/* TECH CUES FIELD */}
+                                                                                <input 
+                                                                                    type="text"
+                                                                                    placeholder="Tech Cues (e.g. Chest up, slow eccentric)"
+                                                                                    value={setupNotes[ex.name + "_cues"] || ""}
+                                                                                    onChange={e => setSetupNotes({...setupNotes, [ex.name + "_cues"]: e.target.value})}
+                                                                                    className="bg-transparent text-[9px] font-bold text-slate-500 border-none p-0 focus:ring-0 w-full placeholder:text-slate-700 italic"
+                                                                                />
                                                                             </div>
                                                                         </div>
                                                                         <div className="flex gap-2">
