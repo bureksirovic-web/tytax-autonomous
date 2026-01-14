@@ -4273,6 +4273,7 @@
             const [prCelebration, setPrCelebration] = useState(null); // Array of PRs or null
             const [focusMode, setFocusMode] = useState(false);
             const [debriefData, setDebriefData] = useState(null);
+            const [swappingIdx, setSwappingIdx] = useState(null);
  
             useEffect(() => { 
                 localStorage.setItem('tytax_logs', JSON.stringify(logs)); 
