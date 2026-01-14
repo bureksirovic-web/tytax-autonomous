@@ -1,0 +1,36 @@
+﻿name: Jules Autonomous Agent
+on:
+  workflow_dispatch:  # Allows manual button click
+  schedule:
+    - cron: '0 */6 * * *' # Runs every 6 hours automatically
+
+permissions:
+  contents: write
+
+jobs:
+  jules-work:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install Dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Configure Git
+      run: |
+        git config --global user.name "Jules (AI Agent)"
+        git config --global user.email "jules-bot@users.noreply.github.com"
+
+    - name: Run Agent Jules
+      env:
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      run: |
+        python jules.py
