@@ -1,7 +1,7 @@
 ﻿# AGENT BACKLOG
 The agent picks the first unchecked box.
 
-- [ ] **Fix Live Kinetic Chart**
+- [x] **Fix Live Kinetic Chart**
    - The "Live Kinetic Load" chart stopped working.
    - Ensure the chart re-renders immediately when the user types weight/reps.
    - Use proper React state (onKeyUp or onChange) to trigger updates.
