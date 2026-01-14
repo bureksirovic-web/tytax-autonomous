@@ -21,9 +21,15 @@ def log(message):
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY missing!")
 
-# 🎯 SNIPER LIST: Surgical Mode works even on "dumber" models if needed, 
-# but we keep High-IQ for accuracy.
-MODELS_TO_TRY = ["gemini-2.0-flash-exp", "gemini-1.5-pro"]
+# 🎯 THE HIERARCHY
+# 1. Try the Best (Gemini 3).
+# 2. If jammed, try the Fast Genius (Gemini 2.0).
+# 3. No Gemini 1.5.
+MODELS_TO_TRY = [
+    "gemini-3-pro-preview",
+    "gemini-3-flash-preview",
+    "gemini-2.0-flash-exp"
+]
 
 def read_file(filename):
     with open(filename, 'r', encoding='utf-8') as f: return f.read()
@@ -41,35 +47,46 @@ def mark_task_done(task_name):
     updated = content.replace(f"- [ ] **{task_name}**", f"- [x] **{task_name}**")
     write_file("BACKLOG.md", updated)
 
-def ask_gemini(prompt):
+def ask_gemini_smart_fallback(prompt):
     headers = {'Content-Type': 'application/json'}
+    # Surgical Max Tokens
     data = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"maxOutputTokens": 8192} # Plenty for a patch
+        "generationConfig": {"maxOutputTokens": 8192} 
     }
     
     for model in MODELS_TO_TRY:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_API_KEY}"
-        try:
-            log(f"🔄 Connecting to {model}...")
-            resp = requests.post(url, headers=headers, data=json.dumps(data))
-            if resp.status_code == 200:
-                log(f"✅ Success! {model} answered.")
-                return resp.json()['candidates'][0]['content']['parts'][0]['text']
-            elif resp.status_code == 429:
-                log(f"⚠️ {model} Busy. Waiting 5s...")
-                time.sleep(5)
-            else:
-                log(f"⚠️ Error {resp.status_code}")
-        except Exception as e:
-            log(f"❌ API Error: {e}")
+        
+        # Give each model 3 chances (approx 30s of effort)
+        # If it's truly jammed, move to the next smart one.
+        for attempt in range(3):
+            try:
+                log(f"🔄 Connecting to {model} (Attempt {attempt+1}/3)...")
+                resp = requests.post(url, headers=headers, data=json.dumps(data))
+                
+                if resp.status_code == 200:
+                    log(f"✅ Success! {model} answered.")
+                    return resp.json()['candidates'][0]['content']['parts'][0]['text']
+                
+                elif resp.status_code == 429:
+                    log(f"⚠️ {model} Busy. Waiting 5s...")
+                    time.sleep(5)
+                elif resp.status_code == 404:
+                    log(f"❌ {model} Not Found. Skipping.")
+                    break
+                else:
+                    log(f"⚠️ Status {resp.status_code}. Retrying...")
+                    time.sleep(2)
+            except Exception as e:
+                log(f"❌ Network Error: {e}")
+                time.sleep(2)
+        
+        log(f"⏭️ {model} timed out. Falling back to next best model...")
+                
     return None
 
 def apply_patch(original_code, patch_text):
-    """
-    Parses a SEARCH/REPLACE block and applies it to the code.
-    """
-    # Regex to find the blocks
     pattern = r"<<<<<<< SEARCH\n(.*?)\n=======\n(.*?)\n>>>>>>> REPLACE"
     matches = re.findall(pattern, patch_text, re.DOTALL)
     
@@ -77,18 +94,21 @@ def apply_patch(original_code, patch_text):
         return None, "No valid SEARCH/REPLACE blocks found."
 
     new_code = original_code
+    success_count = 0
+    
     for search_block, replace_block in matches:
         if search_block in new_code:
             new_code = new_code.replace(search_block, replace_block)
+            success_count += 1
         else:
-            # Fallback: Try stripping whitespace
-            if search_block.strip() in new_code:
-                log("⚠️ Exact match failed, trying loose match...")
-                new_code = new_code.replace(search_block.strip(), replace_block)
+            clean_search = search_block.strip()
+            if clean_search in new_code:
+                new_code = new_code.replace(clean_search, replace_block.strip())
+                success_count += 1
             else:
                 return None, f"Could not find code block:\n{search_block[:50]}..."
                 
-    return new_code, "Success"
+    return new_code, f"Applied {success_count} patches."
 
 def wait_for_render_deploy():
     if not RENDER_API_KEY: return True
@@ -119,43 +139,41 @@ def process_single_task():
     log(f"\n📋 SURGICAL TASK: {task}")
     current_code = read_file("index.html")
     
-    # 🔍 SURGICAL PROMPT
     prompt = f"""
-    CONTEXT: You are a surgical coding agent. The file is too large to rewrite.
+    CONTEXT: You are an expert engineer.
     TASK: {task}
+    TARGET FILE: index.html
     
     INSTRUCTIONS:
-    1. Identify the SPECIFIC code block in `index.html` that needs changing.
+    1. Find the exact code to fix.
     2. Output a SEARCH/REPLACE block.
-    3. The SEARCH block must be an EXACT COPY of the existing code (including whitespace) so I can find it.
-    4. The REPLACE block is your fixed version.
     
     FORMAT:
     <<<<<<< SEARCH
-    (Paste exact existing code here)
+    (Exact existing code)
     =======
-    (Paste new code here)
+    (New code)
     >>>>>>> REPLACE
     
     CURRENT CODE:
     {current_code}
     """
     
-    log("💡 Asking Gemini for a Patch...")
-    response = ask_gemini(prompt)
-    if not response: return True
+    log(f"💡 Asking Smart Models (3.0 -> 2.0)...")
+    response = ask_gemini_smart_fallback(prompt)
+    if not response: 
+        log("❌ Failed to get response from any High-IQ model.")
+        return True
 
     log("💉 Applying Patch...")
     new_code, message = apply_patch(current_code, response)
     
     if not new_code:
         log(f"❌ Patch Failed: {message}")
-        # Retry logic could go here, but for now we skip to save infinite loops
         return True
 
-    # Validate size didn't drop catastrophically
     if len(new_code) < len(current_code) * 0.9:
-        log("❌ Safety: Patch deleted too much code.")
+        log("❌ Safety: File shrank too much.")
         return True
 
     log("💾 Saving Patched index.html...")
@@ -163,7 +181,7 @@ def process_single_task():
     
     repo = git.Repo(REPO_PATH)
     repo.git.add(all=True)
-    repo.index.commit(f"feat(jules): surgical fix for {task}")
+    repo.index.commit(f"feat(jules): {task}")
     mark_task_done(task)
     repo.git.add("BACKLOG.md")
     repo.index.commit(f"docs: marked {task} as done")
@@ -179,7 +197,7 @@ def process_single_task():
     return True
 
 def run_loop():
-    log("🤖 Jules Level 5 (SURGICAL MODE) Started...")
+    log("🤖 Jules (SMART FALLBACK) Started...")
     while True:
         if (time.time() - START_TIME) / 60 > (MAX_RUNTIME_MINUTES - 5): break
         if not process_single_task(): break
