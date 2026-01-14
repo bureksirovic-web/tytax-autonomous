@@ -28,13 +28,16 @@ def write_file(filename, content):
 
 def get_next_task():
     content = read_file("BACKLOG.md")
-    match = re.search(r'- \[ \] \*\*(Task \d+:.*?)\*\*', content)
+    # OLD REGEX: r'- \[ \] \*\*(Task \d+:.*?)\*\*'
+    # NEW REGEX: Matches ANY bold text after an unchecked box
+    match = re.search(r'- \[ \] \*\*(.*?)\*\*', content)
     if match:
-        return match.group(1)
+        return match.group(1).strip()
     return None
 
 def mark_task_done(task_name):
     content = read_file("BACKLOG.md")
+    # Matches the specific task title we found and checks the box
     updated = content.replace(f"- [ ] **{task_name}**", f"- [x] **{task_name}**")
     write_file("BACKLOG.md", updated)
 
@@ -73,7 +76,7 @@ def ask_gemini(prompt):
     return None
 
 def run_agent():
-    print("🤖 Jules is waking up (Safe Mode)...")
+    print("🤖 Jules is waking up (Flexible Mode)...")
     task = get_next_task()
     if not task:
         print("✅ No pending tasks.")
