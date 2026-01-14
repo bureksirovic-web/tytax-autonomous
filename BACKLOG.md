@@ -10,7 +10,7 @@
     - *Context:* The "Live Kinetic Impact" chart in the active session is not updating or showing data correctly.
     - *Task:* Review the `currentWorkout` state dependencies. Ensure `calculateImpactDistribution` is called with `currentWorkout.exercises` and `countSets=true`. Force a re-render of the chart when `sets` change.
 
-- [ ] **Implement Exercise Swapping (Active Session)**
+- [x] **Implement Exercise Swapping (Active Session)**
     - *Context:* The user cannot swap exercises during a workout.
     - *Task:* Add a "Swap" button (icon: `shuffle`) to the exercise header in the Active Workout view. When clicked, show a modal (reuse `BuilderTab` logic or simple list) to replace the current exercise with another from `masterExercises` that matches the same `muscle_group`.
 
