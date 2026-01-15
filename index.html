@@ -4374,11 +4374,11 @@
                     // Context Filter
                     if (search.length > 2) return ex.name.toLowerCase().includes(search.toLowerCase());
 
-                    const targetMuscle = targetEx?.muscle_group || getImpact(targetEx)[0]?.muscle;
+                    const targetMuscle = targetEx ? (targetEx.muscle_group || getImpact(targetEx)[0]?.muscle) : null;
                     const exMuscle = ex.muscle_group || getImpact(ex)[0]?.muscle;
                     
                     const muscleMatch = targetMuscle && exMuscle && normalizeMuscleName(targetMuscle) === normalizeMuscleName(exMuscle);
-                    const patternMatch = targetEx?.pattern && ex.pattern && targetEx.pattern === ex.pattern;
+                    const patternMatch = targetEx ? (targetEx.pattern && ex.pattern && targetEx.pattern === ex.pattern) : false;
                     
                     return muscleMatch || patternMatch;
                 }).sort((a, b) => a.name.localeCompare(b.name));
