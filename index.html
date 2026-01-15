@@ -8,6 +8,7 @@
     <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script> 
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script> 
     <script src="https://unpkg.com/@babel/standalone@7.23.10/babel.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style> 
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap'); 
         body { font-family: 'Inter', sans-serif; background-color: #020617; color: #f1f5f9; overflow-x: hidden; -webkit-tap-highlight-color: transparent; } 
@@ -3424,27 +3425,94 @@
             } 
         ]; 
  
-        const TrendChart = ({ data, color = "#818cf8" }) => { 
-            if (!data || data.length < 2) return <div className="h-24 flex items-center justify-center text-[8px] uppercase font-black text-slate-700 italic tracking-widest opacity-20">Gathering Strength Data</div>; 
-            const points = data.map(d => d.value); 
-            const min = Math.min(...points) * 0.98; 
-            const max = Math.max(...points) * 1.02; 
-            const range = max - min; 
-            const width = 300, height = 100, step = width / (data.length - 1); 
-            const pathData = data.map((d, i) => `${i === 0 ? 'M' : 'L'} ${i * step} ${height - ((d.value - min) / range) * height}`).join(' '); 
-            return ( 
-                <div className="w-full bg-slate-900/40 p-5 rounded-3xl border border-white/5"> 
-                    <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-24 overflow-visible"> 
-                        <path d={pathData} fill="none" stroke={color} strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" /> 
-                    </svg> 
-                    <div className="flex justify-between mt-3 text-[7px] font-black text-slate-600 uppercase tracking-[0.2em]"> 
-                        <span>{data[0].date}</span> 
-                        <span>Latest Best: {data[data.length-1].value}</span> 
-                        <span>{data[data.length-1].date}</span> 
-                    </div> 
-                </div> 
-            ); 
-        }; 
+        const ProgressGraph = ({ data, color = "#818cf8", label = "Value" }) => {
+            const canvasRef = useRef(null);
+            const chartRef = useRef(null);
+
+            useEffect(() => {
+                if (!canvasRef.current || !data || data.length < 2) return;
+                
+                if (chartRef.current) chartRef.current.destroy();
+
+                const ctx = canvasRef.current.getContext('2d');
+                const gradient = ctx.createLinearGradient(0, 0, 0, 300);
+                gradient.addColorStop(0, color + '40'); 
+                gradient.addColorStop(1, color + '00'); 
+
+                chartRef.current = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: data.map(d => d.date),
+                        datasets: [{
+                            label: label,
+                            data: data.map(d => d.value),
+                            borderColor: color,
+                            backgroundColor: gradient,
+                            borderWidth: 3,
+                            pointRadius: 0,
+                            pointHoverRadius: 6,
+                            pointHoverBackgroundColor: color,
+                            pointHoverBorderColor: '#fff',
+                            pointHoverBorderWidth: 2,
+                            fill: true,
+                            tension: 0.4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: {
+                                mode: 'index',
+                                intersect: false,
+                                backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                                titleColor: '#f8fafc',
+                                bodyColor: '#94a3b8',
+                                borderColor: 'rgba(255,255,255,0.1)',
+                                borderWidth: 1,
+                                padding: 12,
+                                titleFont: { family: "'Inter', sans-serif", size: 10, weight: '900' },
+                                bodyFont: { family: "'Inter', sans-serif", size: 12, weight: 'bold' },
+                                displayColors: false,
+                                callbacks: { label: (c) => `${c.parsed.y}` }
+                            }
+                        },
+                        scales: {
+                            x: { display: false },
+                            y: {
+                                display: true,
+                                position: 'right',
+                                grid: { color: 'rgba(255, 255, 255, 0.05)', drawBorder: false },
+                                ticks: { color: '#475569', font: { size: 9, family: "'Inter', sans-serif", weight: '700' }, maxTicksLimit: 5 },
+                                border: { display: false }
+                            }
+                        },
+                        interaction: { mode: 'nearest', axis: 'x', intersect: false },
+                        animation: { duration: 1000, easing: 'easeOutQuart' }
+                    }
+                });
+
+                return () => { if (chartRef.current) chartRef.current.destroy(); };
+            }, [data, color, label]);
+
+            if (!data || data.length < 2) return (
+                <div className="h-48 flex flex-col items-center justify-center text-slate-700 space-y-2 border border-white/5 rounded-3xl bg-slate-900/20">
+                    <Icon name="trends" className="w-6 h-6 opacity-20" />
+                    <span className="text-[8px] uppercase font-black italic tracking-widest opacity-40">Gathering Data</span>
+                </div>
+            );
+
+            return (
+                <div className="w-full h-56 bg-slate-900/40 p-4 rounded-[2rem] border border-white/5 relative">
+                    <canvas ref={canvasRef} />
+                    <div className="absolute top-4 left-6 pointer-events-none">
+                         <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Latest</p>
+                         <p className="text-2xl font-black text-white italic">{data[data.length-1].value}</p>
+                    </div>
+                </div>
+            );
+        };
 
         const OneRepMaxCalculator = ({ onClose }) => {
             const [weight, setWeight] = useState('');
@@ -5378,10 +5446,10 @@
                                             <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">Work Capacity</h3>
                                             <span className="text-[8px] font-black text-emerald-500 uppercase tracking-widest">Density (KG/Min)</span>
                                         </div>
-                                        <TrendChart data={logs.slice().reverse().map(l => ({
+                                        <ProgressGraph data={logs.slice().reverse().map(l => ({
                                             date: new Date(l.date).toLocaleDateString(undefined, {month:'short', day:'numeric'}),
                                             value: Math.round((l.volume || 0) / Math.max(1, (l.duration || 60) / 60))
-                                        })).slice(-10)} color="#10b981" />
+                                        })).slice(-10)} color="#10b981" label="Density" />
                                     </div>
                                 )}
 
@@ -5394,7 +5462,7 @@
                                             if (w && !isNaN(w)) setBodyweightLog([...bodyweightLog, { date: new Date().toISOString().split('T')[0], value: parseFloat(w) }]);
                                         }} className="text-[8px] font-black bg-indigo-900/30 text-indigo-400 px-3 py-2 rounded-lg uppercase tracking-widest hover:bg-indigo-900/50">+ Log</button>
                                     </div>
-                                    <TrendChart data={bodyweightLog.length > 0 ? bodyweightLog : [{date: 'Now', value: userProfile?.bodyweight || 0}]} color="#f59e0b" />
+                                    <ProgressGraph data={bodyweightLog.length > 0 ? bodyweightLog : [{date: 'Now', value: userProfile?.bodyweight || 0}]} color="#f59e0b" label="KG" />
                                 </div>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -5412,7 +5480,7 @@
                                                 <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">{cleanName(ex.name)}</h3> 
                                                 <span className="text-[8px] font-black text-indigo-500 uppercase tracking-widest">{ex.station}</span> 
                                             </div> 
-                                            <TrendChart data={chartData} /> 
+                                            <ProgressGraph data={chartData} label="e1RM" /> 
                                         </div> 
                                     ); 
                                 })} 
