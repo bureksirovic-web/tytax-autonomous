@@ -4,7 +4,7 @@ on:
   workflow_dispatch:      # Manual trigger button
   push:
     paths:
-      - 'BACKLOG.md'      # This enables the recursive "loop"
+      - 'BACKLOG.md'      # The "Loop" trigger
   schedule:
     - cron: '0 */6 * * *' # Fallback trigger
 
@@ -18,8 +18,7 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v4
       with:
-        # Use a Personal Access Token secret to allow recursive pushes
-        token: ${{ secrets.MY_PAT_TOKEN }} 
+        token: ${{ secrets.MY_PAT_TOKEN }} # Required for recursive runs
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -37,7 +36,17 @@ jobs:
         git config --global user.email "jules@tytax-elite.ai"
 
     - name: Run Agent Jules
+      id: jules_run
+      continue-on-error: true  # <--- CRITICAL: Keeps the job alive even if Jules fails code
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
       run: python jules.py
+
+    - name: Finalize and Loop
+      if: always()             # <--- CRITICAL: Runs even if Jules crashed/failed
+      run: |
+        # This checks if Jules made any changes (like marking a task as failed or done)
+        # If there are changes, it pushes them, which triggers the NEXT run.
+        git add .
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Jules: Cycle complete (Success or Failure logged)" && git push origin main)
