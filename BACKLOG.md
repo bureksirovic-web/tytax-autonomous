@@ -1,4 +1,23 @@
 ﻿
+## 🚨 CRITICAL STABILITY FIXES
+
+- [ ] **Fix Error Boundary (Disable Auto-Wipe)**
+    - *Context:* The red 'System Failure' screen currently wipes all data.
+    - *Requirement:* Update the ErrorBoundary component.
+    - *Action:* Change the 'Emergency Reset' button to perform window.location.reload() instead of localStorage.clear().
+    - *Goal:* A crash should never destroy the user's history.
+
+- [ ] **Harden 'Swap Exercise' Logic (Handle Zero Alternatives)**
+    - *Context:* Swapping 'Lower Pulley Single-Arm Seated Cable Row' crashes the app.
+    - *Root Cause:* The code likely assumes lternatives always has items. If no other exercise matches the criteria, it crashes accessing index 0.
+    - *Fix:* In handleSwapExercise:
+        1. Wrap everything in a 	ry { ... } catch (err) { ... } block.
+        2. Calculate lternatives.
+        3. **CRITICAL CHECK:** if (!alternatives || alternatives.length === 0) { alert('No similar exercises found in library.'); return; }
+        4. Only proceed if alternatives exist.
+    - *Goal:* If the library has no swaps, just tell the user instead of showing the Red Screen.
+
+
 ## 📈 Trends 2.0 (Strategic Implementation)
 
 - [ ] **Inject Chart.js & Build 'ProgressGraph' Component**
@@ -230,6 +249,7 @@ pm install. Use CDN.
  (Retry: FAIL: Syntax Error. The variable `swappingIdx` is declared twice in the `App` component (lines 4376 and 4378 in the diff context). This will cause a "Identifier 'swappingIdx' has already been declared" error and crash the application (White Screen). Remove the duplicate declaration.)
 
 - [ ] **Enable Exercise Swapping for Pre-Loaded Programs** (Retry: No blocks matched.)
+
 
 
 
