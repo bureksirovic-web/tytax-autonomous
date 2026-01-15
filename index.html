@@ -184,7 +184,11 @@
 
         const calculateE1RM = (kg, reps) => {
             if (!kg || !reps) return 0;
-            return Math.round(parseFloat(kg) * (1 + parseFloat(reps) / 30));
+            const w = parseFloat(kg);
+            const r = parseFloat(reps);
+            // Brzycki Formula (Standard) - Fallback to Epley for high reps to prevent infinity/negative
+            if (r >= 37) return Math.round(w * (1 + r / 30));
+            return Math.round(w * (36 / (37 - r)));
         };
 
         const getLastMaxLoad = (exerciseName, logs) => {
@@ -3477,7 +3481,7 @@
                                 {[3, 5, 8, 10, 12, 15].map(r => (
                                     <div key={r} className="p-2 bg-slate-900 rounded-xl">
                                         <div className="text-[8px] font-bold text-slate-500 uppercase">{r}RM</div>
-                                        <div className="text-xs font-black text-white mt-1">{Math.round(e1rm / (1 + r/30))}</div>
+                                        <div className="text-xs font-black text-white mt-1">{Math.round(e1rm * (37 - r) / 36)}</div>
                                     </div>
                                 ))}
                             </div>
@@ -5382,7 +5386,7 @@
                                     const exLogs = logs.filter(l => l.exercises.some(e => e.name === ex.name)).reverse(); 
                                     const chartData = exLogs.map(l => { 
                                         const sessionEx = l.exercises.find(e => e.name === ex.name); 
-                                        const bestE1RM = Math.max(...sessionEx.sets.map(s => parseFloat(s.kg) * (1 + parseFloat(s.reps)/30))); 
+                                        const bestE1RM = Math.max(...sessionEx.sets.map(s => calculateE1RM(s.kg, s.reps))); 
                                         return { date: new Date(l.date).toLocaleDateString(undefined, {month:'short', day:'numeric'}), value: bestE1RM.toFixed(1) }; 
                                     }); 
                                     if (!chartData.length) return null; 
