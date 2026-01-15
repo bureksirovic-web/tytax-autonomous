@@ -1,20 +1,70 @@
 ﻿# BACKLOG
 
-## 🚨 UI RESCUE MISSION (Force Component Rewrites)
+## 🚨 PRIORITY 0: The "Nuclear" Fixes (Must Pass First)
 
+- [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components**
+    - *Goal:* Fix the broken collapse UI and missing Import/Export buttons.
+    - *Action:* REPLACE both components entirely with clean, proven code.
+    - *Vault Requirements:* Wrap 'Kinetic Impact' in a <details> tag. Hide it by default.
+    - *Settings Requirements:* Add 'Data Management' section with 'Export Backup' and 'Import Profile' buttons.
 
-    - *Problem:* The previous 'Kinetic Impact' section is not collapsing. It takes up too much space.
-    - *Action:* Find const VaultTab. REPLACE the entire return statement.
-    - *Requirement 1:* The 'Kinetic Impact' section MUST be wrapped in:
-        <details className='bg-slate-900/50 p-4 rounded-lg border border-slate-800 mb-6 group'>
-    - *Requirement 2:* The <summary> tag must say '💪 Workout Impact Analysis' and include a chevron icon.
-    - *Requirement 3:* The impact bars must be INSIDE the <details> tag (hidden by default).
+## 🏋️ PRIORITY 1: Content & Onboarding
 
-- [ ] **Force-Rewrite 'SettingsTab' Component (Import/Export)**
-    - *Problem:* Previous attempts failed to add Data Management buttons.
-    - *Action:* Find const SettingsTab. REPLACE the entire component.
-    - *Requirement:* Add a clear section 'DATA MANAGEMENT' with two distinct buttons:
-        1. [Export Backup] (Green): Triggers JSON download.
-        2. [Import Profile] (Blue): File Input to restore data.
+- [ ] **Implement 'Default Tytax Routines' Logic**
+    - *Goal:* Ensure new users don't see a blank screen.
+    - *Action:* Modify useEffect in main App.
+    - *Logic:* If saved_workouts is empty [], automatically inject 3 preset routines:
+        1. **"Tytax Full Body A"** (Squat, Bench, Row, Overhead Press).
+        2. **"Upper Body Sculpt"** (Chest, Back, Arms).
+        3. **"Lower Body Power"** (Legs, Calves, Core).
 
-- [ ] **Force-Rewrite 'VaultTab' Component (Collapsible Impact)** (Retry: No blocks matched.)
+- [ ] **Populate 'Manual Tab' with Maintenance Checklist**
+    - *Goal:* Turn the placeholder 'Manual' tab into a useful resource.
+    - *Action:* Add a list of standard Tytax maintenance tasks with checkboxes (non-saving is fine for now, just visual reference).
+    - *Content:*
+        - [ ] Lubricate Smith Machine Guide Rods (Monthly)
+        - [ ] Check Cable Tension (Weekly)
+        - [ ] Tighten Bench Bolts (Monthly)
+        - [ ] Inspect Pulley Bearings (Quarterly)
+
+## 🛠️ PRIORITY 2: New "Gym" Features (High Utility)
+
+- [ ] **Implement 'Plate Calculator' Modal**
+    - *Goal:* Help users load the bar quickly.
+    - *Action:* Add a small 'Calculator' icon next to the weight input in the Gym Tab.
+    - *Logic:* When clicked, open a modal showing how to reach the target weight using 20kg, 10kg, 5kg, 2.5kg, 1.25kg plates (assuming 20kg bar).
+    - *UI:* Simple text or visual representation: "Load per side: 1x20kg, 1x5kg".
+
+- [ ] **Implement 'Exercise Notes' Field**
+    - *Goal:* Users need to remember seat settings (e.g., "Seat Height: 4").
+    - *Action:* Add a small text input field inside the Active Exercise card (below the name, above the sets).
+    - *Storage:* Save this string to 	ytax_exercise_notes in localStorage (Key: Exercise Name, Value: Note).
+    - *Persistence:* When that exercise loads again next time, pre-fill the note.
+
+- [ ] **Smart Rest Timer Buttons**
+    - *Goal:* Typing numbers is slow.
+    - *Action:* In the Rest Timer overlay, add 'Quick Add' buttons.
+    - *UI:* Row of buttons: [+30s] [+1m] [+2m].
+    - *Logic:* Clicking adds to the current countdown.
+
+## ✨ PRIORITY 3: UX Polish (The "App" Feel)
+
+- [ ] **Implement 'Toast' Notification System**
+    - *Goal:* Feedback when actions happen.
+    - *Action:* Create a Toast component (fixed bottom-right).
+    - *Events:* Save Workout ("✅ Saved"), Export Data ("📦 Backup Ready"), Delete Log ("🗑️ Deleted").
+
+- [ ] **Design 'Empty States' for All Tabs**
+    - *Goal:* A blank screen looks broken.
+    - *Action:* If lists are empty, show centered text + icon.
+    - *Home:* "No routines. Import or Build one."
+    - *Vault:* "No history. Go lift!"
+    - *Trends:* "Complete 1 workout to see data."
+
+## 🛡️ PRIORITY 4: Infrastructure
+
+- [ ] **Implement 'The Gatekeeper' in jules.py**
+    - *Goal:* Prevent pushing broken files.
+    - *Action:* Modify jules.py to scan index.html before pushing.
+    - *Check:* Must contain <!DOCTYPE html> and unction App. If not, REVERT.
+
