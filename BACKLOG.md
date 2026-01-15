@@ -78,7 +78,7 @@
 
  (Retry: No valid SEARCH/REPLACE blocks found.)
 
-- [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components** (Retry: No valid SEARCH/REPLACE blocks found.)
+ (Retry: No valid SEARCH/REPLACE blocks found.)
 
 - [ ] **Implement 'Exercise Notes' Field** (Retry: No blocks matched.)
 
@@ -113,3 +113,5 @@ The code snippet itself looks reasonable. However, I have concerns about its per
 
 FAIL: Insufficient context to assess performance impact and correctness of inventory logic. Need to see where `hasRequiredEquipment` is called and how it affects rendering.
 )
+
+- [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components** (Retry: No valid SEARCH/REPLACE blocks found.)
