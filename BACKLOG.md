@@ -1,4 +1,32 @@
 ﻿
+## 🎨 Gym Tab UX Overhaul (Live Kinetic Impact)
+
+- [ ] **Implement Sticky 'Kinetic Impact' Header**
+    - *Goal:* User wants to see the 'Kinetic Impact' (Volume) update immediately after entering a set, without scrolling.
+    - *Action:* Create a sticky top-0 z-50 header bar.
+    - *Content:*
+        - Left: Session Timer.
+        - Right: **Live Kinetic Impact Leaders**.
+        - Logic: Reuse the existing calculateVolumeByMuscle(currentWorkout) function.
+        - Display: Show Top 3 muscles (e.g., "CHEST: 1240 | TRICEPS: 550").
+    - *Visual:* Use a semi-transparent dark background (g-slate-900/90 backdrop-blur) so it floats over the list.
+
+- [ ] **Auto-Collapse Completed Exercises (Minimize Clutter)**
+    - *Goal:* User wants finished exercises "out of the way" to focus on the active one.
+    - *Strategy:* **Do NOT re-order the list** (moving items confuses muscle memory). Instead, **Minimize** them.
+    - *Logic:*
+        - Check if exercise.sets.every(s => s.isCompleted).
+        - If TRUE: Render a 'Slim Card' (Height: 40px).
+        - Slim Content: ✔ {Exercise Name} - {Total Volume}kg.
+        - Interaction: Clicking the slim card expands it back to full size (in case of edits).
+    - *Result:* As you work, the page 'shrinks' upwards, keeping your current exercise right in the middle of the screen.
+
+- [ ] **Visual Feedback: 'Impact Pulse'**
+    - *Context:* Make the math feel 'alive'.
+    - *Action:* When a set is marked 'Done':
+        1. Update the numbers in the Sticky Header.
+        2. Briefly flash the text color of the updated muscle group (e.g., Green/Gold for 500ms).
+
 ## 🚨 CRITICAL STABILITY FIXES
 
 - [x] **Fix Error Boundary (Disable Auto-Wipe)**
