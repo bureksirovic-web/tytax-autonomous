@@ -1,7 +1,7 @@
 ﻿
 ## 🔴 Immediate Fixes (Correction)
 
-- [ ] **Implement 'Active Set' Deletion (Gym Tab)**
+- [x] **Implement 'Active Set' Deletion (Gym Tab)**
     - *Context:* The previous attempt added deletion to the History tab, but we need it in the Active Session.
     - *Task:* In the 'activeTab === workout' render loop, find the row where sets are mapped ({ex.sets.map...}).
     - *Action:* Add a small 'x' button next to the 'RIR' dropdown.
