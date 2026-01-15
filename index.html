@@ -5291,10 +5291,12 @@
                                                                             }, 100);
                                                                         }} className={`col-span-2 p-4 rounded-2xl flex items-center justify-center transition-all ${set.done ? 'bg-emerald-500 text-white shadow-lg' : 'bg-slate-800 text-slate-600 active:scale-90 disabled:opacity-20'}`}><Icon name="check" className="w-5 h-5" /></button>
                                                                         <button onClick={() => {
-                                                                            const newWorkout = structuredClone(currentWorkout);
-                                                                            newWorkout.exercises[exIdx].sets.splice(sIdx, 1);
-                                                                            setCurrentWorkout(newWorkout);
-                                                                        }} className="col-span-1 p-4 rounded-2xl flex items-center justify-center transition-all bg-red-500 text-white active:scale-90"><Icon name="trash" className="w-4 h-4" /></button>
+                                                                            if (confirm("Delete this set?")) {
+                                                                                const newWorkout = structuredClone(currentWorkout);
+                                                                                newWorkout.exercises[exIdx].sets.splice(sIdx, 1);
+                                                                                setCurrentWorkout(newWorkout);
+                                                                            }
+                                                                        }} className="col-span-1 h-12 rounded-2xl flex items-center justify-center transition-all bg-red-900/20 text-red-500 hover:bg-red-500 hover:text-white active:scale-90 border border-red-500/20"><Icon name="trash" className="w-4 h-4" /></button>
                                                                     </div>
                                                                 );
                                                                 })}
