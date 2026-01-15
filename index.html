@@ -5534,8 +5534,8 @@
  
                         {activeTab === 'trends' && ( 
                             <div className="tab-content space-y-10 pb-20"> 
-                                <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">Force<br/><span className="text-indigo-500">Output</span></h2> 
-                                
+                                <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">Force<br/><span className="text-indigo-500">Output</span></h2>
+
                                 {/* TROPHY CASE */}
                                 <div className="grid grid-cols-3 gap-3">
                                     {['Squat', 'Bench', 'Deadlift'].map(lift => {
@@ -5558,18 +5558,23 @@
                                         );
                                     })}
                                 </div>
-                                
+
                                 {/* Work Capacity / Density Chart */}
-                                {logs.length > 1 && (
+                                {logs.length > 1 ? (
                                     <div className="glass p-8 rounded-[3rem] space-y-6">
                                         <div className="flex justify-between items-center">
                                             <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">Work Capacity</h3>
                                             <span className="text-[8px] font-black text-emerald-500 uppercase tracking-widest">Density (KG/Min)</span>
                                         </div>
                                         <ProgressGraph data={logs.slice().reverse().map(l => ({
-                                            date: new Date(l.date).toLocaleDateString(undefined, {month:'short', day:'numeric'}),
+                                            date: new Date(l.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric' }),
                                             value: Math.round((l.volume || 0) / Math.max(1, (l.duration || 60) / 60))
                                         })).slice(-10)} color="#10b981" label="Density" />
+                                    </div>
+                                ) : (
+                                    <div className="py-40 text-center opacity-20">
+                                        <Icon name="trends" className="w-12 h-12 mx-auto" />
+                                        <p className="text-[10px] font-black uppercase mt-4 tracking-[0.3em]">No data records</p>
                                     </div>
                                 )}
 
@@ -5582,38 +5587,41 @@
                                             if (w && !isNaN(w)) setBodyweightLog([...bodyweightLog, { date: new Date().toISOString().split('T')[0], value: parseFloat(w) }]);
                                         }} className="text-[8px] font-black bg-indigo-900/30 text-indigo-400 px-3 py-2 rounded-lg uppercase tracking-widest hover:bg-indigo-900/50">+ Log</button>
                                     </div>
-                                    <ProgressGraph data={bodyweightLog.length > 0 ? bodyweightLog : [{date: 'Now', value: userProfile?.bodyweight || 0}]} color="#f59e0b" label="KG" />
+                                    <ProgressGraph data={bodyweightLog.length > 0 ? bodyweightLog : [{ date: 'Now', value: userProfile?.bodyweight || 0 }]} color="#f59e0b" label="KG" />
                                 </div>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {masterExercises.map(ex => { 
-                                    const exLogs = logs.filter(l => l.exercises.some(e => e.name === ex.name)).reverse(); 
-                                    const chartData = exLogs.map(l => { 
-                                        const sessionEx = l.exercises.find(e => e.name === ex.name); 
-                                        const bestE1RM = Math.max(...sessionEx.sets.map(s => calculateE1RM(s.kg, s.reps))); 
-                                        return { date: new Date(l.date).toLocaleDateString(undefined, {month:'short', day:'numeric'}), value: bestE1RM.toFixed(1) }; 
-                                    }); 
-                                    if (!chartData.length) return null; 
-                                    return ( 
-                                        <div key={ex.name} className="glass p-8 rounded-[3rem] space-y-6"> 
-                                            <div className="flex justify-between items-center"> 
-                                                <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">{cleanName(ex.name)}</h3> 
-                                                <span className="text-[8px] font-black text-indigo-500 uppercase tracking-widest">{ex.station}</span> 
-                                            </div> 
-                                            <ProgressGraph data={chartData} label="e1RM" /> 
-                                        </div> 
-                                    ); 
-                                })} 
+                                    {masterExercises.map(ex => {
+                                        const exLogs = logs.filter(l => l.exercises.some(e => e.name === ex.name)).reverse();
+                                        const chartData = exLogs.map(l => {
+                                            const sessionEx = l.exercises.find(e => e.name === ex.name);
+                                            const bestE1RM = Math.max(...sessionEx.sets.map(s => calculateE1RM(s.kg, s.reps)));
+                                            return { date: new Date(l.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric' }), value: bestE1RM.toFixed(1) };
+                                        });
+                                        if (!chartData.length) return null;
+                                        return (
+                                            <div key={ex.name} className="glass p-8 rounded-[3rem] space-y-6">
+                                                <div className="flex justify-between items-center">
+                                                    <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">{cleanName(ex.name)}</h3>
+                                                    <span className="text-[8px] font-black text-indigo-500 uppercase tracking-widest">{ex.station}</span>
+                                                </div>
+                                                <ProgressGraph data={chartData} label="e1RM" />
+                                            </div>
+                                        );
+                                    })}
                                 </div>
-                                {logs.length === 0 && <div className="py-40 text-center opacity-20"><Icon name="trends" className="w-12 h-12 mx-auto" /><p className="text-[10px] font-black uppercase mt-4 tracking-[0.3em]">No data records</p></div>} 
-                            </div> 
-                        )} 
- 
-                        {activeTab === 'history' && ( 
-                            <div className="tab-content space-y-6 pb-20"> 
+                                {logs.length === 0 && <div className="py-40 text-center opacity-20"><Icon name="trends" className="w-12 h-12 mx-auto" /><p className="text-[10px] font-black uppercase mt-4 tracking-[0.3em]">No data records</p></div>}
+                            </div>
+                        )}
+
+                        {activeTab === 'history' && (
+                            <div className="tab-content space-y-6 pb-20">
                                 <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">Archive<br/><span className="text-indigo-500">Vault</span></h2>
                                 {logs.length === 0 ? (
-                                    <div className="py-40 text-center opacity-20"><Icon name="history" className="w-12 h-12 mx-auto" /><p className="text-[10px] font-black uppercase mt-4 tracking-[0.3em]">Vault is empty</p></div>
+                                    <div className="py-40 text-center opacity-20">
+                                        <Icon name="history" className="w-12 h-12 mx-auto" />
+                                        <p className="text-[10px] font-black uppercase mt-4 tracking-[0.3em]">Vault is empty</p>
+                                    </div>
                                 ) : (
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         {logs.map(log => (
@@ -5648,7 +5656,7 @@
                                                             ));
                                                         })()}
                                                     </div>
-													<div className="h-px bg-white/5" />
+                                                    <div className="h-px bg-white/5" />
                                                     {log.exercises.map((ex, i) => (
                                                         <div key={i} className="flex justify-between items-center text-xs">
                                                             <span className="font-bold text-slate-500 uppercase text-[10px] tracking-tight">{cleanName(ex.name)}</span>
