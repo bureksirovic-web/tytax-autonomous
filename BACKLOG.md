@@ -73,3 +73,12 @@ FAIL: Potential layout issues on mobile (320px width) due to the added column in
 )
 
 - [ ] **Gym UX: Sticky Stats & Auto-Collapse** (Retry: No valid SEARCH/REPLACE blocks found.)
+## 🏁 FINAL TASK: Deployment Preparation
+
+- [ ] **Implement Profile Import/Export (JSON)**
+    - *Goal:* Enable "Master Clone" setup for family members and data backup.
+    - *UI:* Settings Tab -> New Section 'Data Management'.
+    - *Action 1 (Export Workouts):* Button that downloads saved_workouts as 	ytax_workouts.json.
+    - *Action 2 (Export Full Backup):* Button that downloads ALL data (logs + workouts) as 	ytax_backup.json.
+    - *Action 3 (Import):* File Input that reads a JSON file and restores it to localStorage.
+    - *Safety:* Show window.confirm before overwriting data.
