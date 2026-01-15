@@ -4337,8 +4337,11 @@
                         <div className="min-h-screen bg-black flex items-center justify-center p-10 text-center">
                             <div className="space-y-6">
                                 <h1 className="text-4xl font-black text-red-500 uppercase tracking-tighter italic">System Failure</h1>
-                                <p className="text-xs text-slate-500 font-mono">Critical error detected. Data integrity may be compromised.</p>
-                                <button onClick={() => { localStorage.clear(); window.location.reload(); }} className="px-8 py-4 bg-red-900/20 text-red-500 rounded-2xl font-black uppercase tracking-widest border border-red-500/20 hover:bg-red-900/40">Emergency Reset</button>
+                                <p className="text-xs text-slate-500 font-mono">Critical runtime error. Attempting recovery.</p>
+                                <div className="flex flex-col gap-4">
+                                    <button onClick={() => window.location.reload()} className="px-8 py-4 bg-indigo-600 text-white rounded-2xl font-black uppercase tracking-widest shadow-lg hover:bg-indigo-500">Reload System</button>
+                                    <button onClick={() => { if(confirm("WARNING: This will delete all logs and settings. Continue?")) { localStorage.clear(); window.location.reload(); } }} className="text-[10px] font-black text-red-500/50 uppercase tracking-widest hover:text-red-500 transition-colors">Factory Reset (Data Wipe)</button>
+                                </div>
                             </div>
                         </div>
                     );
