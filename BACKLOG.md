@@ -1,4 +1,11 @@
-﻿# Tytax Elite Companion - Remaining Backlog
+﻿
+## 🔴 Immediate Fixes (Correction)
+
+- [ ] **Implement 'Active Set' Deletion (Gym Tab)**
+    - *Context:* The previous attempt added deletion to the History tab, but we need it in the Active Session.
+    - *Task:* In the 'activeTab === workout' render loop, find the row where sets are mapped ({ex.sets.map...}).
+    - *Action:* Add a small 'x' button next to the 'RIR' dropdown.
+    - *Logic:* On click, remove that specific index from the 'currentWorkout.exercises[exIdx].sets' array and trigger 'setCurrentWorkout' with the update.# Tytax Elite Companion - Remaining Backlog
 
 ## 🔴 High Priority (Functionality & UX)
 
@@ -54,3 +61,4 @@
 
 - [ ] **Adaptive Recovery Logic (Cold Start Detection)**
     - *Task:* In the 'recoveryStatus' useMemo, add logic to detect if the gap between the last two logs is >10 days. If so, automatically trigger 'Deload' mode suggestions to protect the user from overtraining after a break.
+
