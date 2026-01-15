@@ -3690,7 +3690,7 @@
                                         <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Day {idx + 1}</span>
                                         <h3 className={`text-xl font-black italic uppercase tracking-tighter ${day.exercises.length > 0 ? 'text-white' : 'text-slate-600'}`}>{day.name}</h3>
                                         {day.exercises.length > 0 ? (
-                                            <p className="text-[10px] text-indigo-400 font-bold">{day.exercises.length} Exercises • {getProjectedImpact(day.exercises)[0]?.muscle} Focus</p>
+                                            <p className="text-[10px] text-indigo-400 font-bold">{day.exercises.length} Exercises • {getProjectedImpact(day.exercises)[0]?.muscle || 'Mixed'} Focus</p>
                                         ) : (
                                             <p className="text-[10px] text-slate-600 italic">Empty Slot - Tap to Design</p>
                                         )}
