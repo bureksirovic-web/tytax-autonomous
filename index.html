@@ -4959,7 +4959,7 @@
                                             const prev = currentWorkout.exercises[exIdx-1]; 
                                             const stationChange = prev && normalizeStationName(prev.station) !== normalizeStationName(ex.station); 
                                             return ( 
-                                                <div key={exIdx} className="space-y-4"> 
+                                                <div key={exIdx} id={`exercise-card-${exIdx}`} className="space-y-4 scroll-mt-32"> 
                                                     {stationChange && ( 
                                                         <div className="flex items-center gap-3 px-2 py-4"> 
                                                             <div className="h-0.5 flex-grow bg-indigo-500/50" />
@@ -5094,18 +5094,22 @@
                                                                             // Smart Focus Logic
                                                                             setTimeout(() => {
                                                                                 const nextSet = document.getElementById(`input-kg-${exIdx}-${sIdx+1}`);
-                                                                                const nextEx = document.getElementById(`input-kg-${exIdx+1}-0`);
+                                                                                const nextExInput = document.getElementById(`input-kg-${exIdx+1}-0`);
+                                                                                const nextExCard = document.getElementById(`exercise-card-${exIdx+1}`);
+
                                                                                 if (nextSet) {
                                                                                     nextSet.focus();
                                                                                     nextSet.select();
-                                                                                    // Scroll to the top of the input
-                                                                                    nextSet.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                                                                    nextSet.scrollIntoView({ behavior: 'smooth', block: 'center' });
                                                                                 }
-                                                                                else if (nextEx) {
-                                                                                    nextEx.focus();
-                                                                                    nextEx.select();
-                                                                                    // Scroll to the top of the input
-                                                                                    nextEx.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                                                                else if (nextExInput) {
+                                                                                    nextExInput.focus();
+                                                                                    nextExInput.select();
+                                                                                    if (nextExCard) {
+                                                                                        nextExCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                                                                    } else {
+                                                                                        nextExInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                                                                    }
                                                                                 }
                                                                             }, 100);
                                                                         }} className={`col-span-3 p-4 rounded-2xl flex items-center justify-center transition-all ${set.done ? 'bg-emerald-500 text-white shadow-lg' : 'bg-slate-800 text-slate-600 active:scale-90 disabled:opacity-20'}`}><Icon name="check" className="w-5 h-5" /></button>
