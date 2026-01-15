@@ -32,7 +32,7 @@
 
 ## 🟡 Maintenance & Fixes
 
-- [ ] **Fix 'Swap Exercise' Logic (Refinement)**
+- [x] **Fix 'Swap Exercise' Logic (Refinement)**
     - *Previous Fail:* "swappingIdx declared twice."
     - *Instruction:* Ensure you remove the old declaration before adding the new safety-checked version. Wrap the whole handler in try/catch.
 
