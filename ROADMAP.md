@@ -116,3 +116,16 @@ pm install or build pipelines to break.
     * If **FAIL**: Abort Push, print error, and auto-revert file.
 * **Risk:** High (Modifies agent brain). Do not execute until "Family Deployment" is 100% complete.
 
+
+### 2. Dynamic 'Critic' Personas (Quality Assurance 2.0)
+**Goal:** Specialized code review based on the type of task (CSS vs. Logic).
+**Priority:** **Low / Future**
+
+* **Concept:** jules.py detects keywords (e.g., "Style", "Database") and swaps the System Prompt.
+    * *CSS Prompt:* "You are a Designer. Check for responsiveness."
+    * *Logic Prompt:* "You are an Engineer. Check for infinite loops."
+* **Why Wait:**
+    * Currently, we need *objective* syntax checking (Crash Prevention).
+    * Specialized critics introduce *subjective* feedback which slows down development velocity.
+    * Increases token usage/complexity during the critical 'Family Deployment' phase.
+
