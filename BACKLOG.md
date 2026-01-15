@@ -30,3 +30,13 @@
 
 - [ ] **Comprehensive Manual Overhaul**
     - *Task:* Rewrite the eatures tab content. Include detailed sections for: Kinetic Impact (95/40 rule), Volume Parity logic, e1RM tracking, RIR (Reps in Reserve) guidance, and how to use the Plate Loader/1RM tools.
+
+## 🔵 Strategic Enhancements (Code Review Finds)
+
+- [ ] **Activate History Editor UI**
+    - *Context:* The HistoryEditor component exists but is unreachable.
+    - *Task:* In the 'Vault' tab, add an 'Edit' button (icon: tool) to each session card. When clicked, it should trigger the HistoryEditor modal for that specific log.
+
+- [ ] **Render Builder Filter Chips**
+    - *Context:* The 'categories' logic is calculated in BuilderTab but not displayed.
+    - *Task:* In the Builder EDITOR view, add a horizontal scrolling container above the search bar. Map the 'categories' array to clickable chips that update the 'filter' state.
