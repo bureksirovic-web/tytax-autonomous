@@ -49,7 +49,7 @@
 
 ## ✨ PRIORITY 3: UX Polish (The "App" Feel)
 
-- [ ] **Implement 'Toast' Notification System**
+
     - *Goal:* Feedback when actions happen.
     - *Action:* Create a Toast component (fixed bottom-right).
     - *Events:* Save Workout ("✅ Saved"), Export Data ("📦 Backup Ready"), Delete Log ("🗑️ Deleted").
@@ -71,3 +71,5 @@
 - [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components** (Retry: No valid SEARCH/REPLACE blocks found.)
 
 - [ ] **Implement 'Exercise Notes' Field** (Retry: No blocks matched.)
+
+- [ ] **Implement 'Toast' Notification System** (Retry: No valid SEARCH/REPLACE blocks found.)
