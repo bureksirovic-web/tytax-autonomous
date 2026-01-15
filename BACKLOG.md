@@ -1,4 +1,10 @@
-﻿
+﻿- [ ] **UI Polish: 'Active Set' Deletion (Trash Icon)**
+    - *Context:* The previous red button design was too aggressive.
+    - *Design Requirement:* Use a **Trash Icon** (Lucide/Heroicon style).
+    - *Styling:* 	ext-slate-500 hover:text-red-500 transition-colors. No background colors.
+    - *Placement:* Inline with the 'RIR' and 'Notes' fields, or at the far right of the set row.
+    - *Interaction:* Simple click to remove the set from currentWorkout state.
+
 ## 🔴 Priority Corrections (Functionality Fixes)
 
 - [x] **Fix Global Heatmap: Collapsible & Default Closed**
