@@ -1,4 +1,20 @@
 ﻿
+## 🎨 UI/UX Redesign (Vault Tab)
+
+- [ ] **Redesign Vault Log Cards (Collapsible Chart + Set Details)**
+    - *Problem:* The current Vault view is dominated by the 'Kinetic Impact' chart, and the exercise list does not show reps or sets.
+    - *Requirement 1 (Collapsible Impact):* - Wrap the entire "Kinetic Impact" bar chart section in a collapsible toggle.
+        - Default state: \isOpen = false\.
+        - Header: "📊 Kinetic Impact Analysis (Click to Expand)".
+    - *Requirement 2 (Detailed Sets):*
+        - Instead of just showing the max weight on the right, render the full set history.
+        - Loop through \exercise.sets\.
+        - Format: Pill or simple text line: "Set 1: 100kg × 10 (RPE 8)".
+    - *Requirement 3 (Visual Hierarchy):*
+        - Give each exercise a subtle background (\g-white/5\) and rounded corners to separate them.
+        - Make the Exercise Name \	ext-white font-bold\.
+        - Make the Set Details \	ext-slate-400 text-sm\.
+
 ## 🔴 Priority Correction (Attempt 4)
 
 - [ ] **Fix Smart Filters: Actually Hide Irrelevant Buttons**
@@ -177,5 +193,6 @@
  (Retry: FAIL: Syntax Error. The variable `swappingIdx` is declared twice in the `App` component (lines 4376 and 4378 in the diff context). This will cause a "Identifier 'swappingIdx' has already been declared" error and crash the application (White Screen). Remove the duplicate declaration.)
 
 - [ ] **Enable Exercise Swapping for Pre-Loaded Programs** (Retry: No blocks matched.)
+
 
 
