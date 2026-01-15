@@ -60,7 +60,7 @@
 
 ## 🔵 Strategic Enhancements (Code Review Finds)
 
-- [ ] **Activate History Editor UI**
+- [x] **Activate History Editor UI**
     - *Context:* The HistoryEditor component exists but is unreachable.
     - *Task:* In the 'Vault' tab, add an 'Edit' button (icon: tool) to each session card. When clicked, it should trigger the HistoryEditor modal for that specific log.
 
