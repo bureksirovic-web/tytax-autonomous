@@ -1,7 +1,7 @@
 ﻿
 ## 🎨 Gym Tab UX Overhaul (Live Kinetic Impact)
 
-- [ ] **Implement Sticky 'Kinetic Impact' Header**
+
     - *Goal:* User wants to see the 'Kinetic Impact' (Volume) update immediately after entering a set, without scrolling.
     - *Action:* Create a sticky top-0 z-50 header bar.
     - *Content:*
@@ -290,3 +290,5 @@ eps === 1, EstMax = weight.
 - [ ] **Redesign Vault Log Cards (Collapsible Chart + Set Details)** (Retry: No changes detected.)
 
 - [ ] **Enable Exercise Swapping for Pre-Loaded Programs** (Retry: No blocks matched.)
+
+- [ ] **Implement Sticky 'Kinetic Impact' Header** (Retry: No valid SEARCH/REPLACE blocks found.)
