@@ -16,7 +16,7 @@
 
 ## 🟡 Medium Priority (UI & Content)
 
-- [ ] **Reposition Rest Timer to Bottom**
+- [x] **Reposition Rest Timer to Bottom**
     - *Task:* Move the floating 	imerActive UI component from the top/middle of the screen to a fixed position at the bottom (above the navigation dock).
 
 - [ ] **Persistent Live Kinetic Impact Visibility**
