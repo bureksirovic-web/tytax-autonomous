@@ -10,7 +10,7 @@
     - *Issue:* Past session notes are hidden in the History/Vault.
     - *Task:* In the history tab render logic, ensure log.notes is displayed (e.g., in a styled blockquote or paragraph) within the session card.
 
-- [ ] **Auto-Scroll Active Input to Top**
+- [x] **Auto-Scroll Active Input to Top**
     - *Issue:* Keyboard hides input fields on mobile.
     - *Task:* When a user focuses a KG or Reps input, use window.scrollTo or element.scrollIntoView({ behavior: 'smooth', block: 'start' }) to position the active exercise at the top of the viewport.
 
