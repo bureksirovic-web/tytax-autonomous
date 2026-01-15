@@ -54,7 +54,7 @@
     - *Action:* Create a Toast component (fixed bottom-right).
     - *Events:* Save Workout ("✅ Saved"), Export Data ("📦 Backup Ready"), Delete Log ("🗑️ Deleted").
 
-- [ ] **Design 'Empty States' for All Tabs**
+
     - *Goal:* A blank screen looks broken.
     - *Action:* If lists are empty, show centered text + icon.
     - *Home:* "No routines. Import or Build one."
@@ -73,3 +73,5 @@
 - [ ] **Implement 'Exercise Notes' Field** (Retry: No blocks matched.)
 
 - [ ] **Implement 'Toast' Notification System** (Retry: No valid SEARCH/REPLACE blocks found.)
+
+- [ ] **Design 'Empty States' for All Tabs** (Retry: No valid SEARCH/REPLACE blocks found.)
