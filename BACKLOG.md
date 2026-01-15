@@ -14,7 +14,7 @@
     - *Fix:* In the 'Gym' tab render loop (activeTab === 'workout'), locate the Exercise Card header.
     - *Action:* Remove any conditional checks (like 'if (!isFixed)') preventing the Swap button from rendering. It should be available for ALL active exercises.
 
-- [ ] **Fix Builder Filter Logic (Context Aware)**
+- [x] **Fix Builder Filter Logic (Context Aware)**
     - *Problem:* When building an 'Upper Body' session, the filter bar defaults to showing 'Lower Body' tags or renders irrelevant muscles.
     - *Fix:* inside the Builder component:
         1. Detect the session name string (e.g., 'Upper A').
@@ -38,7 +38,7 @@
     - *Fix:* In the 'Gym' tab render loop (activeTab === 'workout'), locate the Exercise Card header.
     - *Action:* Remove any conditional checks (like 'if (!isFixed)') preventing the Swap button from rendering. It should be available for ALL active exercises.
 
-- [ ] **Fix Builder Filter Logic (Context Aware)**
+- [x] **Fix Builder Filter Logic (Context Aware)**
     - *Problem:* When building an 'Upper Body' session, the filter bar defaults to showing 'Lower Body' tags or renders irrelevant muscles.
     - *Fix:* inside the Builder component:
         1. Detect the session name string (e.g., 'Upper A').
