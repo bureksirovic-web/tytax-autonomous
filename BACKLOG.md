@@ -23,7 +23,7 @@
     - *Requirement 1 (Sticky Header):* Add sticky top-0 z-50 bg-slate-900 to the header container containing the timer. Add live volume stats there.
     - *Requirement 2 (Collapse):* inside the currentWorkout.exercises.map, check const isComplete = ex.sets.every(s => s.isCompleted). If true, render a <div className='h-12 flex...'> summary row instead of the full card.
 
-- [ ] **Debrief Screen: Stats & Tags**
+- [x] **Debrief Screen: Stats & Tags**
     - *Context:* New feature.
     - *Action:* Inside FinishTab:
         1. Calculate Total Volume and Duration. Show them in a Grid.
