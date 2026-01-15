@@ -31,3 +31,20 @@ If the app crashes after your changes:
 1.  Check the Console for "Minified React Error".
 2.  If you modified state logic, verify you used \structuredClone\ and did not mutate \currentWorkout\ directly.
 3.  Run the "Emergency Purge" button in Settings (if accessible) or manually clear \localStorage\ to rule out data corruption.
+
+## 🚀 Production Deployment Gates
+Beyond local behavior, verification extends to the live Render environment.
+
+### 1. The 'Black Screen' Check
+* **Context:** A syntax error in index.html often compiles fine but crashes the runtime.
+* **Protocol:** After deployment, if the Render Status is live but the URL renders a black/white screen, this is a **Critical Severity** failure.
+* **Response:** Immediate git revert HEAD is required.
+
+### 2. The '19-Second' Heuristic
+* **Warning:** Complex tasks (e.g., 'Implement Set Deletion') cannot be completed in < 20 seconds.
+* **Protocol:** If a run finishes instantly, assume the patch was rejected or skipped. Check logs for No valid SEARCH/REPLACE blocks found.
+
+### 3. Fail-Forward Strategy
+* If a task fails QA 3 times (MAX_QA_RETRIES), it is not deleted.
+* It is moved to the **bottom** of BACKLOG.md with a note (Retry: QA Failed).
+* The system then proceeds to the next independent task to prevent a deadlock.
