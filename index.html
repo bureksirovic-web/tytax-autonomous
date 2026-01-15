@@ -313,12 +313,21 @@
             return laggingMuscle;
         };
 
-        // --- PRESETS --- 
-        const PRESETS = [ 
-            { 
-                id: "kinetic_impact", 
-                name: "Tytax Elite v3.0 (Fixed 6/1 Split)", 
-                description: "Official 6/1 Kinetic Load protocol updated for v3.0 library.", 
+        // --- DEFAULT TYTAX ROUTINES ---
+        const DEFAULT_TYTAX_ROUTINES = [
+            {
+                id: "kinetic_impact",
+                name: "Tytax Elite v3.0 (Fixed 6/1 Split)",
+                description: "Official 6/1 Kinetic Load protocol updated for v3.0 library.",
+            }
+        ];
+
+        // --- PRESETS ---
+        const PRESETS = [
+            {
+                id: "kinetic_impact",
+                name: "Tytax Elite v3.0 (Fixed 6/1 Split)",
+                description: "Official 6/1 Kinetic Load protocol updated for v3.0 library.",
                 data: {
                   "MUSCLE_GROUPS": [
   {
@@ -5778,11 +5787,11 @@
                                                 const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "tytax_backup.json"; a.click(); 
                                             }} className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-slate-400 border border-white/5 hover:text-white transition-colors"><Icon name="history" /> Backup</button> 
                                             <label className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-indigo-400 border border-white/5 cursor-pointer hover:bg-indigo-900/10 transition-colors"> 
-                                                <Icon name="library" /> Import <input type="file" onChange={(e) => { 
-                                                    const f = e.target.files[0]; const r = new FileReader(); 
-                                                    r.onload = (ev) => { 
+                                                <Icon name="library" /> Import <input type="file" onChange={(e) => {
+                                                    const f = e.target.files[0]; const r = new FileReader();
+                                                    r.onload = (ev) => {
                                                         try {
-                                                            const d = JSON.parse(ev.target.result); 
+                                                            const d = JSON.parse(ev.target.result);
                                                             if (!d.logs && !d.sessionOrder) throw new Error("Invalid Format");
                                                             
                                                             setLogs(d.logs || []); 
