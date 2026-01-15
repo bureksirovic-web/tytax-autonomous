@@ -1,4 +1,17 @@
-﻿- [ ] **UI Polish: 'Active Set' Deletion (Trash Icon)**
+﻿
+## 🔴 Priority UX Improvement
+
+- [ ] **Implement Context-Aware 'Smart Filters' in Builder**
+    - *Context:* When building an 'Upper A' session, seeing 'Glutes' or 'Calves' filters is confusing and clutters the UI.
+    - *Requirement:* Update the BuilderTab component to read the sessionName prop.
+    - *Logic:* 1. Define constants:
+           CONST UPPER_MUSCLES = ['Chest', 'Back', 'Shoulders', 'Biceps', 'Triceps', 'Forearms', 'Core']
+           CONST LOWER_MUSCLES = ['Quads', 'Hamstrings', 'Glutes', 'Calves', 'Adductors', 'Core']
+        2. On mount (useEffect), check if sessionName contains "Upper" (case-insensitive). 
+           - If YES: Set the active filter state to ONLY UPPER_MUSCLES.
+           - If sessionName contains "Lower": Set active filter state to ONLY LOWER_MUSCLES.
+    - *UI:* When these smart filters are active, visually hide the irrelevant filter chips so the user can't accidentally select them unless they click a "Show All" override.
+- [ ] **UI Polish: 'Active Set' Deletion (Trash Icon)**
     - *Context:* The previous red button design was too aggressive.
     - *Design Requirement:* Use a **Trash Icon** (Lucide/Heroicon style).
     - *Styling:* 	ext-slate-500 hover:text-red-500 transition-colors. No background colors.
@@ -139,3 +152,4 @@
  (Retry: FAIL: Syntax Error. The variable `swappingIdx` is declared twice in the `App` component (lines 4376 and 4378 in the diff context). This will cause a "Identifier 'swappingIdx' has already been declared" error and crash the application (White Screen). Remove the duplicate declaration.)
 
 - [ ] **Enable Exercise Swapping for Pre-Loaded Programs** (Retry: No blocks matched.)
+
