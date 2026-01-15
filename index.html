@@ -5358,6 +5358,13 @@
                                                                         <button disabled={!set.kg || !set.reps || set.done} onClick={() => {
                                                                             const up = {...currentWorkout}; up.exercises[exIdx].sets[sIdx].done = true; setCurrentWorkout(up); setTimer(90); setTimerActive(true);
                                                                             if (window.navigator.vibrate) window.navigator.vibrate(50);
+                                                                            
+                                                                            // IMPACT PULSE
+                                                                            const card = document.getElementById(`exercise-card-${exIdx}`);
+                                                                            if (card) {
+                                                                                card.classList.add('glow-indigo');
+                                                                                setTimeout(() => card.classList.remove('glow-indigo'), 1000);
+                                                                            }
 
                                                                             // Smart Focus Logic
                                                                             setTimeout(() => {
