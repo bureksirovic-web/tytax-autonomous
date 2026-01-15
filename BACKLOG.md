@@ -21,7 +21,7 @@
         - Interaction: Clicking the slim card expands it back to full size (in case of edits).
     - *Result:* As you work, the page 'shrinks' upwards, keeping your current exercise right in the middle of the screen.
 
-- [ ] **Visual Feedback: 'Impact Pulse'**
+- [x] **Visual Feedback: 'Impact Pulse'**
     - *Context:* Make the math feel 'alive'.
     - *Action:* When a set is marked 'Done':
         1. Update the numbers in the Sticky Header.
