@@ -35,7 +35,7 @@
     - *Logic:* When clicked, open a modal showing how to reach the target weight using 20kg, 10kg, 5kg, 2.5kg, 1.25kg plates (assuming 20kg bar).
     - *UI:* Simple text or visual representation: "Load per side: 1x20kg, 1x5kg".
 
-- [ ] **Implement 'Exercise Notes' Field**
+
     - *Goal:* Users need to remember seat settings (e.g., "Seat Height: 4").
     - *Action:* Add a small text input field inside the Active Exercise card (below the name, above the sets).
     - *Storage:* Save this string to 	ytax_exercise_notes in localStorage (Key: Exercise Name, Value: Note).
@@ -69,3 +69,5 @@
     - *Check:* Must contain <!DOCTYPE html> and unction App. If not, REVERT.
 
 - [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components** (Retry: No valid SEARCH/REPLACE blocks found.)
+
+- [ ] **Implement 'Exercise Notes' Field** (Retry: No blocks matched.)
