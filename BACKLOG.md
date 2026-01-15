@@ -2,7 +2,7 @@
 
 ## 🚨 PRIORITY 0: The "Nuclear" Fixes (Must Pass First)
 
-- [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components**
+
     - *Goal:* Fix the broken collapse UI and missing Import/Export buttons.
     - *Action:* REPLACE both components entirely with clean, proven code.
     - *Vault Requirements:* Wrap 'Kinetic Impact' in a <details> tag. Hide it by default.
@@ -68,3 +68,4 @@
     - *Action:* Modify jules.py to scan index.html before pushing.
     - *Check:* Must contain <!DOCTYPE html> and unction App. If not, REVERT.
 
+- [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components** (Retry: No valid SEARCH/REPLACE blocks found.)
