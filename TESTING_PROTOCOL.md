@@ -18,13 +18,13 @@ Before marking a task as "Done," verify the following:
 ### 3. The Responsive Check
 * **Action:** Resize browser window to mobile width (375px).
 * **Verify:**
-    * Navigation bar moves to the bottom (\ixed bottom-0\).
+    * Navigation bar moves to the bottom (\fixed bottom-0\).
     * The "Workout Logger" cards stack vertically (1 column).
     * Input fields do not cause the page to zoom (Font size must be >= 16px).
 
 ### 4. Data Integrity Check
 * **Action:** Open Browser DevTools -> Application -> Local Storage.
-* **Verify:** \	ytax_logs\ should be a valid JSON array, not \[object Object]\.
+* **Verify:** \tytax_logs\ should be a valid JSON array, not \[object Object]\.
 
 ## 🚨 Emergency Recovery
 If the app crashes after your changes:
@@ -36,26 +36,15 @@ If the app crashes after your changes:
 Beyond local behavior, verification extends to the live Render environment.
 
 ### 1. The 'Black Screen' Check
-* **Context:** A syntax error in index.html often compiles fine but crashes the runtime.
-* **Protocol:** After deployment, if the Render Status is live but the URL renders a black/white screen, this is a **Critical Severity** failure.
-* **Response:** Immediate git revert HEAD is required.
-
-### 2. The '19-Second' Heuristic
-* **Warning:** Complex tasks (e.g., 'Implement Set Deletion') cannot be completed in < 20 seconds.
-* **Protocol:** If a run finishes instantly, assume the patch was rejected or skipped. Check logs for No valid SEARCH/REPLACE blocks found.
-
-### 3. Fail-Forward Strategy
-* If a task fails QA 3 times (MAX_QA_RETRIES), it is not deleted.
-* It is moved to the **bottom** of BACKLOG.md with a note (Retry: QA Failed).
-* The system then proceeds to the next independent task to prevent a deadlock.
-
-## 🚀 Production Deployment Gates
-Beyond local behavior, verification extends to the live Render environment.
-
-### 1. The 'Black Screen' Check
-* **Protocol:** After deployment, if the Render Status is live but the URL renders a black/white screen, this is a **Critical Failure**.
-* **Response:** Immediate git revert HEAD is required.
+* **Context:** A syntax error in \index.html\ often compiles fine but crashes the runtime.
+* **Protocol:** After deployment, if the \Render Status\ is \live\ but the URL renders a black/white screen, this is a **Critical Severity** failure.
+* **Response:** Immediate \git revert HEAD\ is required.
 
 ### 2. The '19-Second' Heuristic
 * **Warning:** Complex tasks (e.g., 'Implement Set Deletion') cannot be completed in < 20 seconds.
 * **Protocol:** If a run finishes instantly, assume the patch was rejected or skipped due to a Regex mismatch.
+
+### 3. Fail-Forward Strategy
+* If a task fails QA 3 times (\MAX_QA_RETRIES\), it is not deleted.
+* It is moved to the **bottom** of \BACKLOG.md\ with a note \(Retry: QA Failed)\.
+* The system then proceeds to the next independent task to prevent a deadlock.
