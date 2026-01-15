@@ -69,3 +69,26 @@ The application is maintained by an autonomous loop ("Jules") with specific envi
 ### 3. Aggressive Sync Strategy
 * To prevent "Push Rejected" errors in the recursive loop, the agent performs a git pull --rebase immediately before pushing.
 * **Rule:** All file writes (index.html) must happen *before* the final rebase to minimize conflict windows.
+
+## 🤖 Agent Interaction Protocol
+Since the system is autonomous, all code modifications must adhere to strict machine-readable standards to ensure the jules.py orchestrator can parse them.
+
+### 1. The Patching Standard (Search/Replace)
+Do **not** output full files. You must use the following block format to modify code. The orchestrator uses Regex to apply these patches.
+
+<<<<<<< SEARCH
+[Exact code to remove - must match whitespace exactly]
+=======
+[New code to insert]
+>>>>>>> REPLACE
+
+* **Rule:** The SEARCH block must be unique. If the code exists in multiple places, include more context lines.
+* **Rule:** Do not use diff or git patch formats. Use the custom block above.
+
+### 2. DevOps Architecture
+The application is maintained by an autonomous loop with specific environmental awareness.
+
+* **Orchestrator:** A Python script (jules.py) that manages the 'Think -> Code -> Deploy' loop.
+* **Context Injection (RAG):** The orchestrator reads AGENTS.md and ARCHITECTURE.md before every task. Updates to these files immediately change the agent's behavior.
+* **Aggressive Sync:** The system performs a git pull --rebase before every push to prevent conflict loops.
+* **Render Gate:** The loop pauses and polls the Render API. If a build fails, the agent halts to prevent compounding errors.
