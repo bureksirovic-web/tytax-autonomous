@@ -4324,8 +4324,8 @@
 
             return (
                 <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
-                    <button 
-                        onClick={() => setIsOpen(!isOpen)} 
+                    <button
+                        onClick={() => setIsOpen(!isOpen)}
                         className="w-full flex items-center justify-between group"
                     >
                         <div className="flex items-center gap-3">
@@ -4338,7 +4338,7 @@
                             </svg>
                         </div>
                     </button>
-                    
+
                     {isOpen && (
                         <div className="space-y-3 animate-fade-in">
                             {globalImpact.map((item, i) => (
@@ -4348,7 +4348,7 @@
                                         <span>{item.score}</span>
                                     </div>
                                     <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
-                                        <div className="h-full bg-indigo-500" style={{width: `${item.pct}%`}} />
+                                        <div className="h-full bg-indigo-500" style={{ width: `${item.pct}%` }} />
                                     </div>
                                 </div>
                             ))}
