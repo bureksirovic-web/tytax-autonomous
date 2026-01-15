@@ -2,7 +2,7 @@
 
 ## 🔴 High Priority (Functionality & UX)
 
-- [ ] **Implement Set Deletion**
+- [x] **Implement Set Deletion**
     - *Issue:* Users cannot remove an extra or accidental set.
     - *Task:* Add a small "x" or "trash" button next to each set row in the active workout. When clicked, filter out that set from the exercise's `sets` array.
 
