@@ -52,3 +52,20 @@ ame\, \station\ (Smith/Pulley), \muscle_group\, \impact\ (Score 0-100).
     * User logs sets -> State is updated via \structuredClone\ (Critical for React reactivity).
     * **CRITICAL:** No data is saved to \	ytax_logs\ until the "Terminate Session" button is clicked.
 3.  **Analysis:** The "Trends" tab reads \	ytax_logs\ (Read-Only) to generate charts.
+
+## ⚙️ DevOps & Automation Architecture (Jules Level 11)
+The application is maintained by an autonomous loop ("Jules") with specific environmental awareness.
+
+### 1. The Recursive Loop
+* **Trigger:** Push to BACKLOG.md -> GitHub Action.
+* **Execution:** jules.py runs -> Commits Code -> Pushes -> Triggers Self.
+* **Concurrency:** Only one agent runs at a time (concurrency: group: jules-agent-loop).
+
+### 2. The Deployment Gate (Render)
+* **Live Monitoring:** The system queries the Render API (/services/{id}/deploys).
+* **Stop Signal:** If a deploy fails (uild_failed), the agent **halts**. It will not attempt new tasks until the build is green.
+* **Latency:** Deployment typically takes 90-120 seconds. The agent sleeps/polls during this window.
+
+### 3. Aggressive Sync Strategy
+* To prevent "Push Rejected" errors in the recursive loop, the agent performs a git pull --rebase immediately before pushing.
+* **Rule:** All file writes (index.html) must happen *before* the final rebase to minimize conflict windows.
