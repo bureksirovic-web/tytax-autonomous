@@ -253,7 +253,7 @@ eps === 1, EstMax = weight.
 
  (Retry: No blocks matched.)
 
-- [ ] **Harden 'Swap Exercise' Logic (Handle Zero Alternatives)** (Retry: No valid SEARCH/REPLACE blocks found.)
+- [x] **Harden 'Swap Exercise' Logic (Handle Zero Alternatives)** (Retry: No valid SEARCH/REPLACE blocks found.)
 
 - [ ] **Inject Chart.js & Build 'ProgressGraph' Component** (Retry: FAIL: The task explicitly requires building the 'ProgressGraph' component, but the provided diff only injects the Chart.js library script. The React component implementation is completely missing.)
 
