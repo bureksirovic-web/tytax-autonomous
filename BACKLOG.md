@@ -11,7 +11,7 @@
            - If YES: Set the active filter state to ONLY UPPER_MUSCLES.
            - If sessionName contains "Lower": Set active filter state to ONLY LOWER_MUSCLES.
     - *UI:* When these smart filters are active, visually hide the irrelevant filter chips so the user can't accidentally select them unless they click a "Show All" override.
-- [ ] **UI Polish: 'Active Set' Deletion (Trash Icon)**
+- [x] **UI Polish: 'Active Set' Deletion (Trash Icon)**
     - *Context:* The previous red button design was too aggressive.
     - *Design Requirement:* Use a **Trash Icon** (Lucide/Heroicon style).
     - *Styling:* 	ext-slate-500 hover:text-red-500 transition-colors. No background colors.
