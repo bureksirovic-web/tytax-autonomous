@@ -1,7 +1,7 @@
 ﻿
 ## 🔴 Priority Fixes & Recovery
 
-- [ ] **Refine Auto-Scroll UX (Target Exercise Header)**
+- [x] **Refine Auto-Scroll UX (Target Exercise Header)**
     - *Context:* Currently, clicking an input scrolls that specific *cell* to the top of the viewport. This hides the Exercise Name context.
     - *Requirement:* Modify the focus handler. Instead of scrolling the input, find the closest parent container (e.g., .exercise-card or the div wrapping the exercise).
     - *Action:* Use element.closest(...) and scroll *that* element to the top (lock: 'start').
