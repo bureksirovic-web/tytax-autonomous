@@ -1,4 +1,5 @@
 ﻿# ARCHITECTURE.md
+
 ## 📂 Project Structure (Single-File React)
 Currently, the application uses a **Single-File Component** architecture for maximum portability (\index.html\).
 *Note: We are in the process of migrating to a standard Vite build (See Backlog), but current tasks must respect the \index.html\ structure.*
@@ -16,7 +17,7 @@ Currently, the application uses a **Single-File Component** architecture for max
 ## 💾 Data Schema (Local Storage)
 The app persists state in the browser's \localStorage\ using specific keys.
 
-### 1. \	ytax_logs\ (Array)
+### 1. \tytax_logs\ (Array)
 * **Purpose:** Stores completed workout sessions.
 * **Structure:**
     \\\json
@@ -34,13 +35,12 @@ The app persists state in the browser's \localStorage\ using specific keys.
     ]
     \\\
 
-### 2. \	ytax_master_exercises\ (Array)
+### 2. \tytax_master_exercises\ (Array)
 * **Purpose:** The active library of exercises available to the user.
-* **Source:** Injected from \	ytax_library.json\.
-* **Key Fields:** \
-ame\, \station\ (Smith/Pulley), \muscle_group\, \impact\ (Score 0-100).
+* **Source:** Injected from \tytax_library.json\.
+* **Key Fields:** \name\, \station\ (Smith/Pulley), \muscle_group\, \impact\ (Score 0-100).
 
-### 3. \	ytax_user_inventory\ (Array)
+### 3. \tytax_user_inventory\ (Array)
 * **Purpose:** List of equipment the user *actually owns*.
 * **Structure:** \["Triceps Rope", "D-Handles", "Lat Bar"]\
 * **Logic:** Used by the Builder to hide exercises requiring missing gear.
@@ -50,69 +50,32 @@ ame\, \station\ (Smith/Pulley), \muscle_group\, \impact\ (Score 0-100).
 2.  **Active Session:**
     * User selects a session -> \currentWorkout\ state is created (Deep Copy).
     * User logs sets -> State is updated via \structuredClone\ (Critical for React reactivity).
-    * **CRITICAL:** No data is saved to \	ytax_logs\ until the "Terminate Session" button is clicked.
-3.  **Analysis:** The "Trends" tab reads \	ytax_logs\ (Read-Only) to generate charts.
-
-## ⚙️ DevOps & Automation Architecture (Jules Level 11)
-The application is maintained by an autonomous loop ("Jules") with specific environmental awareness.
-
-### 1. The Recursive Loop
-* **Trigger:** Push to BACKLOG.md -> GitHub Action.
-* **Execution:** jules.py runs -> Commits Code -> Pushes -> Triggers Self.
-* **Concurrency:** Only one agent runs at a time (concurrency: group: jules-agent-loop).
-
-### 2. The Deployment Gate (Render)
-* **Live Monitoring:** The system queries the Render API (/services/{id}/deploys).
-* **Stop Signal:** If a deploy fails (uild_failed), the agent **halts**. It will not attempt new tasks until the build is green.
-* **Latency:** Deployment typically takes 90-120 seconds. The agent sleeps/polls during this window.
-
-### 3. Aggressive Sync Strategy
-* To prevent "Push Rejected" errors in the recursive loop, the agent performs a git pull --rebase immediately before pushing.
-* **Rule:** All file writes (index.html) must happen *before* the final rebase to minimize conflict windows.
-
-## 🤖 Agent Interaction Protocol
-Since the system is autonomous, all code modifications must adhere to strict machine-readable standards to ensure the jules.py orchestrator can parse them.
-
-### 1. The Patching Standard (Search/Replace)
-Do **not** output full files. You must use the following block format to modify code. The orchestrator uses Regex to apply these patches.
-
-<<<<<<< SEARCH
-[Exact code to remove - must match whitespace exactly]
-=======
-[New code to insert]
->>>>>>> REPLACE
-
-* **Rule:** The SEARCH block must be unique. If the code exists in multiple places, include more context lines.
-* **Rule:** Do not use diff or git patch formats. Use the custom block above.
-
-### 2. DevOps Architecture
-The application is maintained by an autonomous loop with specific environmental awareness.
-
-* **Orchestrator:** A Python script (jules.py) that manages the 'Think -> Code -> Deploy' loop.
-* **Context Injection (RAG):** The orchestrator reads AGENTS.md and ARCHITECTURE.md before every task. Updates to these files immediately change the agent's behavior.
-* **Aggressive Sync:** The system performs a git pull --rebase before every push to prevent conflict loops.
-* **Render Gate:** The loop pauses and polls the Render API. If a build fails, the agent halts to prevent compounding errors.
+    * **CRITICAL:** No data is saved to \tytax_logs\ until the "Terminate Session" button is clicked.
+3.  **Analysis:** The "Trends" tab reads \tytax_logs\ (Read-Only) to generate charts.
 
 ## ⚙️ DevOps & Automation Architecture (Level 11 Hybrid)
-The application is not just a React app; it is a self-sustaining ecosystem managed by the jules.py orchestrator.
+The application is a self-sustaining ecosystem managed by the \jules.py\ orchestrator.
 
-### 1. The "RAG" Brain (Retrieval Augmented Generation)
-* **Mechanism:** Before every task, the orchestrator reads AGENTS.md, ARCHITECTURE.md, and TESTING_PROTOCOL.md.
-* **Impact:** This means **changing these documents immediately changes the agent's behavior**. You are programming the agent via English text.
+### 1. The Recursive Loop & RAG Brain
+* **Trigger:** Push to \BACKLOG.md\ -> GitHub Action.
+* **Context Injection (RAG):** Before coding, the orchestrator reads \AGENTS.md\, \ARCHITECTURE.md\, and \TESTING_PROTOCOL.md\. **Changing these files immediately reprograms the agent.**
+* **Concurrency:** Only one agent runs at a time.
 
 ### 2. The Hybrid Model Hierarchy
-* **Primary (The Architect):** gemini-3-pro-preview. Used for complex reasoning and adhering to strict prompt instructions.
-* **Secondary (The Engineer):** gemini-2.0-flash-exp. Used as a high-speed fallback if the primary model times out or hits rate limits.
+* **Primary (The Architect):** \gemini-3-pro-preview\. Used for complex reasoning and adhering to strict prompt instructions.
+* **Secondary (The Engineer):** \gemini-2.0-flash-exp\. Used as a high-speed fallback if the primary model times out.
 
-### 3. The "Interaction Protocol" (Strict Output Standards)
-To apply code changes, the Agent MUST use the following Regex-compatible block format. **Diffs and Git Patches are ignored.**
+### 3. Agent Interaction Protocol (Patching Standard)
+All code modifications MUST use the following Regex-compatible block format. **Diffs and Git Patches are ignored.**
 
-<<<<<<< SEARCH
-[Exact code to remove - must match whitespace exactly]
-=======
-[New code to insert]
->>>>>>> REPLACE
+\<<<<<<< SEARCH\
+\[Exact code to remove - must match whitespace exactly]\
+\=======\
+\[New code to insert]\
+\>>>>>>> REPLACE\
 
-### 4. Aggressive Sync & Deployment Gates
-* **Sync:** The system runs git pull --rebase immediately before pushing to prevent "Rejected" errors in the autonomous loop.
-* **Render Gate:** The loop polls the Render API. If a build fails (uild_failed), the Agent **halts**. It will not stack new code on top of a broken build.
+* **Rule:** The \SEARCH\ block must be unique. If the code exists in multiple places, include more context lines.
+
+### 4. Safety Gates (Sync & Render)
+* **Aggressive Sync:** The system runs \git pull --rebase\ immediately before pushing to prevent "Rejected" errors.
+* **Render Circuit Breaker:** The loop polls the Render API. If a build fails (\build_failed\), the Agent **halts** to prevent compounding errors on a broken build.
