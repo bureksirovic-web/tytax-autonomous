@@ -75,7 +75,7 @@ FAIL: Potential layout issues on mobile (320px width) due to the added column in
  (Retry: No valid SEARCH/REPLACE blocks found.)
 ## 🏁 FINAL TASK: Deployment Preparation
 
-- [ ] **Implement Profile Import/Export (JSON)**
+
     - *Goal:* Enable "Master Clone" setup for family members and data backup.
     - *UI:* Settings Tab -> New Section 'Data Management'.
     - *Action 1 (Export Workouts):* Button that downloads saved_workouts as 	ytax_workouts.json.
@@ -86,3 +86,6 @@ FAIL: Potential layout issues on mobile (320px width) due to the added column in
 - [ ] **Vault Redesign: Collapsible Impact & Detailed Logs** (Retry: No blocks matched.)
 
 - [ ] **Gym UX: Sticky Stats & Auto-Collapse** (Retry: No valid SEARCH/REPLACE blocks found.)
+
+- [ ] **Implement Profile Import/Export (JSON)** (Retry: FAIL: Logic Gaps. The "Export Profile" button duplicates the backup functionality. The task was to implement *profile* import/export, meaning only user-specific settings (userProfile, userInventory, customProtocols, warmupStrategy) should be exported, not the entire log history. This is a critical distinction for privacy and data management.
+)
