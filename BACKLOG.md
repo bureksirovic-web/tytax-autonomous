@@ -1,7 +1,7 @@
 ﻿
 ## 🔴 Priority UX Improvement
 
-- [ ] **Implement Context-Aware 'Smart Filters' in Builder**
+- [x] **Implement Context-Aware 'Smart Filters' in Builder**
     - *Context:* When building an 'Upper A' session, seeing 'Glutes' or 'Calves' filters is confusing and clutters the UI.
     - *Requirement:* Update the BuilderTab component to read the sessionName prop.
     - *Logic:* 1. Define constants:
