@@ -201,3 +201,21 @@ pm install or build pipelines to break.
     * Requires multi-file writing logic in jules.py.
     * Consumes tokens needed for critical coding tasks during the 'Rate Limit' crisis.
 
+
+---
+
+## 🧠 Phase 6: The 'Gemini 3.0' Refactor (Optimization Candidates)
+**Goal:** Identify complex logic blocks that are 'too smart' for older models and act as candidates for a full rewrite by next-gen AI.
+
+### 1. The 'Swap Exercise' Logic (Current: Brittle)
+* **Status:** Hard-coded if/else chains. Vulnerable to 'undefined' crashes.
+* **Upgrade:** Use 3.0 to rewrite this into a fuzzy-matching scoring algorithm (e.g., "Find best match based on Muscle + Equipment + Movement Plane").
+
+### 2. The 'Import/Export' Parsers (Current: Basic)
+* **Status:** Simple JSON dumps.
+* **Upgrade:** Use 3.0 to build a 'Migration Agent' that can read Old Backup Formats and convert them to New Formats automatically, preventing data loss during upgrades.
+
+### 3. The '1RM' Brzycki Math (Current: Linear)
+* **Status:** Simple formula.
+* **Upgrade:** Use 3.0 to implement 'Fatigue Decay'—adjusting the estimated max based on how many sets you've already done in the session.
+
