@@ -1,4 +1,41 @@
 ﻿
+## 📈 Trends 2.0 (Strategic Implementation)
+
+- [ ] **Inject Chart.js & Build 'ProgressGraph' Component**
+    - *Strategic Goal:* Visualize Strength (Weight) vs Time.
+    - *Constraint:* Do NOT use 
+pm install. Use CDN.
+    - *Implementation Steps:*
+        1. **Injection:** Check if window.Chart exists. If not, append script: https://cdn.jsdelivr.net/npm/chart.js.
+        2. **Component:** Create const ProgressGraph = ({ selectedExercise, logs }) => { ... }.
+        3. **Lifecycle Management (CRITICAL):**
+           - Use useRef for the canvas element.
+           - Use useRef for the chartInstance.
+           - In useEffect: **Always call chartInstance.current.destroy()** before creating a new chart to prevent "Canvas is already in use" errors.
+    - *Data Mapping:*
+        - Filter logs for entries containing selectedExercise.
+        - X-Axis: log.date.
+        - Y-Axis: Math.max(...exercise.sets.map(s => s.weight)).
+    - *Styling:* Dark mode compatible (Grid lines gba(255,255,255,0.1)).
+
+- [ ] **Implement 'MuscleSplit' Donut Chart**
+    - *Strategic Goal:* Show if the user is skipping leg day.
+    - *Logic:*
+        1. **Aggregate:** Iterate through ALL 	ytax_logs.
+        2. **Count:** Create a frequency map: { 'CHEST': 45, 'LEGS': 12, ... }. Use exercise.muscle_group as key.
+        3. **Visualize:** Render a Doughnut Chart next to the main graph.
+        4. **Colors:** Use a predefined palette (e.g., ['#3b82f6', '#ef4444', '#10b981', '#f59e0b']) matching the Tailwind theme.
+
+- [ ] **Fix 1RM Logic (The Brzycki Standard)**
+    - *Strategic Goal:* Replace "Force Output" with scientifically accurate "Estimated 1RM".
+    - *Formula Constraint:* Use **Brzycki**: EstMax = weight / (1.0278 - (0.0278 * reps)).
+    - *Safety Checks:*
+        - If eps > 20, ignore the set (it's cardio, not strength).
+        - If eps === 1, EstMax = weight.
+    - *UI Update:* - Replace the 3 top cards (Squat/Bench/Deadlift) with dynamic cards.
+        - Iterate through logs to find the *highest calculated 1RM* ever recorded for these movements.
+        - Display "Est. 1RM" label clearly.
+
 ## 🎨 UI/UX Redesign (Vault Tab)
 
 - [ ] **Redesign Vault Log Cards (Collapsible Chart + Set Details)**
@@ -193,6 +230,7 @@
  (Retry: FAIL: Syntax Error. The variable `swappingIdx` is declared twice in the `App` component (lines 4376 and 4378 in the diff context). This will cause a "Identifier 'swappingIdx' has already been declared" error and crash the application (White Screen). Remove the duplicate declaration.)
 
 - [ ] **Enable Exercise Swapping for Pre-Loaded Programs** (Retry: No blocks matched.)
+
 
 
 
