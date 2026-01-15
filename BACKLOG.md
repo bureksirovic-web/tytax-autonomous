@@ -72,7 +72,7 @@ Based on the provided diff, I cannot definitively say whether this fix is perfec
 FAIL: Potential layout issues on mobile (320px width) due to the added column in the set display. Requires visual regression testing.
 )
 
-- [ ] **Gym UX: Sticky Stats & Auto-Collapse** (Retry: No valid SEARCH/REPLACE blocks found.)
+ (Retry: No valid SEARCH/REPLACE blocks found.)
 ## 🏁 FINAL TASK: Deployment Preparation
 
 - [ ] **Implement Profile Import/Export (JSON)**
@@ -84,3 +84,5 @@ FAIL: Potential layout issues on mobile (320px width) due to the added column in
     - *Safety:* Show window.confirm before overwriting data.
 
 - [ ] **Vault Redesign: Collapsible Impact & Detailed Logs** (Retry: No blocks matched.)
+
+- [ ] **Gym UX: Sticky Stats & Auto-Collapse** (Retry: No valid SEARCH/REPLACE blocks found.)
