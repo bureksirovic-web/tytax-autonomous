@@ -55,7 +55,7 @@
 - [x] **Clean up Home Page Footer**
     - *Task:* Remove the "Elite Manual" section from the bottom of the Home tab to reduce clutter.
 
-- [ ] **Comprehensive Manual Overhaul**
+- [x] **Comprehensive Manual Overhaul**
     - *Task:* Rewrite the eatures tab content. Include detailed sections for: Kinetic Impact (95/40 rule), Volume Parity logic, e1RM tracking, RIR (Reps in Reserve) guidance, and how to use the Plate Loader/1RM tools.
 
 ## 🔵 Strategic Enhancements (Code Review Finds)
