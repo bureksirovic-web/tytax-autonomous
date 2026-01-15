@@ -48,3 +48,14 @@ Beyond local behavior, verification extends to the live Render environment.
 * If a task fails QA 3 times (MAX_QA_RETRIES), it is not deleted.
 * It is moved to the **bottom** of BACKLOG.md with a note (Retry: QA Failed).
 * The system then proceeds to the next independent task to prevent a deadlock.
+
+## 🚀 Production Deployment Gates
+Beyond local behavior, verification extends to the live Render environment.
+
+### 1. The 'Black Screen' Check
+* **Protocol:** After deployment, if the Render Status is live but the URL renders a black/white screen, this is a **Critical Failure**.
+* **Response:** Immediate git revert HEAD is required.
+
+### 2. The '19-Second' Heuristic
+* **Warning:** Complex tasks (e.g., 'Implement Set Deletion') cannot be completed in < 20 seconds.
+* **Protocol:** If a run finishes instantly, assume the patch was rejected or skipped due to a Regex mismatch.

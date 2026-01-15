@@ -92,3 +92,27 @@ The application is maintained by an autonomous loop with specific environmental 
 * **Context Injection (RAG):** The orchestrator reads AGENTS.md and ARCHITECTURE.md before every task. Updates to these files immediately change the agent's behavior.
 * **Aggressive Sync:** The system performs a git pull --rebase before every push to prevent conflict loops.
 * **Render Gate:** The loop pauses and polls the Render API. If a build fails, the agent halts to prevent compounding errors.
+
+## ⚙️ DevOps & Automation Architecture (Level 11 Hybrid)
+The application is not just a React app; it is a self-sustaining ecosystem managed by the jules.py orchestrator.
+
+### 1. The "RAG" Brain (Retrieval Augmented Generation)
+* **Mechanism:** Before every task, the orchestrator reads AGENTS.md, ARCHITECTURE.md, and TESTING_PROTOCOL.md.
+* **Impact:** This means **changing these documents immediately changes the agent's behavior**. You are programming the agent via English text.
+
+### 2. The Hybrid Model Hierarchy
+* **Primary (The Architect):** gemini-3-pro-preview. Used for complex reasoning and adhering to strict prompt instructions.
+* **Secondary (The Engineer):** gemini-2.0-flash-exp. Used as a high-speed fallback if the primary model times out or hits rate limits.
+
+### 3. The "Interaction Protocol" (Strict Output Standards)
+To apply code changes, the Agent MUST use the following Regex-compatible block format. **Diffs and Git Patches are ignored.**
+
+<<<<<<< SEARCH
+[Exact code to remove - must match whitespace exactly]
+=======
+[New code to insert]
+>>>>>>> REPLACE
+
+### 4. Aggressive Sync & Deployment Gates
+* **Sync:** The system runs git pull --rebase immediately before pushing to prevent "Rejected" errors in the autonomous loop.
+* **Render Gate:** The loop polls the Render API. If a build fails (uild_failed), the Agent **halts**. It will not stack new code on top of a broken build.
