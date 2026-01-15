@@ -63,7 +63,7 @@
 
 ## 🛡️ PRIORITY 4: Infrastructure
 
-- [ ] **Implement 'The Gatekeeper' in jules.py**
+
     - *Goal:* Prevent pushing broken files.
     - *Action:* Modify jules.py to scan index.html before pushing.
     - *Check:* Must contain <!DOCTYPE html> and unction App. If not, REVERT.
@@ -75,3 +75,5 @@
 - [ ] **Implement 'Toast' Notification System** (Retry: No valid SEARCH/REPLACE blocks found.)
 
 - [ ] **Design 'Empty States' for All Tabs** (Retry: No valid SEARCH/REPLACE blocks found.)
+
+- [ ] **Implement 'The Gatekeeper' in jules.py** (Retry: No valid SEARCH/REPLACE blocks found.)
