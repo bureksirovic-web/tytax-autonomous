@@ -11,7 +11,7 @@
         - Display: Show Top 3 muscles (e.g., "CHEST: 1240 | TRICEPS: 550").
     - *Visual:* Use a semi-transparent dark background (g-slate-900/90 backdrop-blur) so it floats over the list.
 
-- [ ] **Auto-Collapse Completed Exercises (Minimize Clutter)**
+
     - *Goal:* User wants finished exercises "out of the way" to focus on the active one.
     - *Strategy:* **Do NOT re-order the list** (moving items confuses muscle memory). Instead, **Minimize** them.
     - *Logic:*
@@ -292,3 +292,5 @@ eps === 1, EstMax = weight.
 - [ ] **Enable Exercise Swapping for Pre-Loaded Programs** (Retry: No blocks matched.)
 
 - [ ] **Implement Sticky 'Kinetic Impact' Header** (Retry: No valid SEARCH/REPLACE blocks found.)
+
+- [ ] **Auto-Collapse Completed Exercises (Minimize Clutter)** (Retry: No valid SEARCH/REPLACE blocks found.)
