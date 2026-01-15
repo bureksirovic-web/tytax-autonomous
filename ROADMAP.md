@@ -97,3 +97,22 @@ pm install or build pipelines to break.
 * **Feature:** A specific URL parameter (e.g., 	ytax-mom.onrender.com/?reset=true) that forces a clean wipe of localStorage before the app even attempts to load React.
 * **Benefit:** A failsafe way to revive a "dead" app without needing physical access to the device.
 
+
+---
+
+## 🛡️ Phase 0: CRITICAL INFRASTRUCTURE (Top Priority for Next Sprint)
+
+### 1. The Gatekeeper (Pre-Flight Integrity Check)
+**Goal:** Prevent 'White Screen of Death' by stopping empty or broken files from ever leaving the local environment.
+**Priority:** **TOP / CRITICAL**
+
+* **Mechanism:** A script running inside jules.py before git push.
+* **Logic:** Scan index.html for mandatory life-signs:
+    * <!DOCTYPE html> (File is not empty)
+    * unction App (React root exists)
+    * localStorage.getItem (Data layer exists)
+* **Action:**
+    * If **PASS**: Allow Git Push.
+    * If **FAIL**: Abort Push, print error, and auto-revert file.
+* **Risk:** High (Modifies agent brain). Do not execute until "Family Deployment" is 100% complete.
+
