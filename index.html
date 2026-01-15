@@ -3756,7 +3756,7 @@
 
             // 3. SAVE SLOT -> RETURN TO MANAGER
             const saveCurrentSlot = () => {
-                const updated = [...programDraft];
+                const updated = structuredClone(programDraft);
                 updated[activeSlot].exercises = draft;
                 setProgramDraft(updated);
                 setView('MANAGER');
@@ -4148,7 +4148,7 @@
             const [editedLog, setEditedLog] = useState(JSON.parse(JSON.stringify(log)));
 
             const updateSet = (exIdx, sIdx, field, value) => {
-                const newLog = {...editedLog};
+                const newLog = structuredClone(editedLog);
                 newLog.exercises[exIdx].sets[sIdx][field] = value;
                 setEditedLog(newLog);
             };
@@ -5005,7 +5005,7 @@
                                                                                             const currentLever = ex.setup?.split('|')[1]?.trim() || '-';
                                                                                             const newVal = `${e.target.value} | ${currentLever}`;
                                                                                             setSetupNotes({...setupNotes, [ex.name]: newVal}); 
-                                                                                            const up = {...currentWorkout}; up.exercises[exIdx].setup = newVal; setCurrentWorkout(up);
+                                                                                            const up = structuredClone(currentWorkout); up.exercises[exIdx].setup = newVal; setCurrentWorkout(up);
                                                                                         }}
                                                                                         className="bg-transparent text-[10px] font-bold text-indigo-300 border-none p-0 focus:ring-0 w-1/2 cursor-pointer"
                                                                                     >
@@ -5019,7 +5019,7 @@
                                                                                             const currentSeat = ex.setup?.split('|')[0]?.trim() || 'Seat -';
                                                                                             const newVal = `${currentSeat} | ${e.target.value}`;
                                                                                             setSetupNotes({...setupNotes, [ex.name]: newVal}); 
-                                                                                            const up = {...currentWorkout}; up.exercises[exIdx].setup = newVal; setCurrentWorkout(up);
+                                                                                            const up = structuredClone(currentWorkout); up.exercises[exIdx].setup = newVal; setCurrentWorkout(up);
                                                                                         }}
                                                                                         className="bg-transparent text-[10px] font-bold text-indigo-300 border-none p-0 focus:ring-0 w-1/2 cursor-pointer"
                                                                                     >
