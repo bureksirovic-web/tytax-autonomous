@@ -4438,23 +4438,86 @@
             }
         }
 
-        const App = () => { 
-            // --- PERSISTENCE --- 
-            const [activeTab, setActiveTab] = useState('home'); 
-            const [logs, setLogs] = useState(() => JSON.parse(localStorage.getItem('tytax_logs') || '[]')); 
-            const [sessionOrder, setSessionOrder] = useState(() => JSON.parse(localStorage.getItem('tytax_session_order') || '[]')); 
-            const [trainingPlan, setTrainingPlan] = useState(() => JSON.parse(localStorage.getItem('tytax_training_plan') || '{}')); 
-            const [masterExercises, setMasterExercises] = useState(() => JSON.parse(localStorage.getItem('tytax_master_exercises') || '[]')); 
-            const [setupNotes, setSetupNotes] = useState(() => JSON.parse(localStorage.getItem('tytax_setup_notes') || '{}')); 
-            const [startDate, setStartDate] = useState(() => localStorage.getItem('tytax_start_date') || new Date().toISOString().split('T')[0]); 
+        const App = () => {
+            // --- PERSISTENCE ---
+            const [activeTab, setActiveTab] = useState('home');
+            const [logs, setLogs] = useState(() => {
+                try {
+                    return JSON.parse(localStorage.getItem('tytax_logs') || '[]');
+                } catch (e) {
+                    console.error("Error parsing tytax_logs from localStorage", e);
+                    return [];
+                }
+            });
+            const [sessionOrder, setSessionOrder] = useState(() => {
+                try {
+                    return JSON.parse(localStorage.getItem('tytax_session_order') || '[]');
+                } catch (e) {
+                    console.error("Error parsing tytax_session_order from localStorage", e);
+                    return [];
+                }
+            });
+            const [trainingPlan, setTrainingPlan] = useState(() => {
+                try {
+                    return JSON.parse(localStorage.getItem('tytax_training_plan') || '{}');
+                } catch (e) {
+                    console.error("Error parsing tytax_training_plan from localStorage", e);
+                    return {};
+                }
+            });
+            const [masterExercises, setMasterExercises] = useState(() => {
+                try {
+                    return JSON.parse(localStorage.getItem('tytax_master_exercises') || '[]');
+                } catch (e) {
+                    console.error("Error parsing tytax_master_exercises from localStorage", e);
+                    return [];
+                }
+            });
+            const [setupNotes, setSetupNotes] = useState(() => {
+                try {
+                    return JSON.parse(localStorage.getItem('tytax_setup_notes') || '{}');
+                } catch (e) {
+                    console.error("Error parsing tytax_setup_notes from localStorage", e);
+                    return {};
+                }
+            });
+            const [startDate, setStartDate] = useState(() => localStorage.getItem('tytax_start_date') || new Date().toISOString().split('T')[0]);
             const [oledMode, setOledMode] = useState(() => localStorage.getItem('tytax_oled_mode') === 'true');
             const [warmupStrategy, setWarmupStrategy] = useState(() => localStorage.getItem('tytax_warmup_strategy') || 'Standard');
-            const [userInventory, setUserInventory] = useState(() => JSON.parse(localStorage.getItem('tytax_inventory') || '[]'));
-            const [userProfile, setUserProfile] = useState(() => JSON.parse(localStorage.getItem('tytax_user_profile') || 'null'));
-            const [bodyweightLog, setBodyweightLog] = useState(() => JSON.parse(localStorage.getItem('tytax_bodyweight_log') || '[]'));
+            const [userInventory, setUserInventory] = useState(() => {
+                try {
+                    return JSON.parse(localStorage.getItem('tytax_inventory') || '[]');
+                } catch (e) {
+                    console.error("Error parsing tytax_inventory from localStorage", e);
+                    return [];
+                }
+            });
+            const [userProfile, setUserProfile] = useState(() => {
+                try {
+                    return JSON.parse(localStorage.getItem('tytax_user_profile') || 'null');
+                } catch (e) {
+                    console.error("Error parsing tytax_user_profile from localStorage", e);
+                    return null;
+                }
+            });
+            const [bodyweightLog, setBodyweightLog] = useState(() => {
+                try {
+                    return JSON.parse(localStorage.getItem('tytax_bodyweight_log') || '[]');
+                } catch (e) {
+                    console.error("Error parsing tytax_bodyweight_log from localStorage", e);
+                    return [];
+                }
+            });
 
             // --- CUSTOM PROTOCOLS ---
-            const [customProtocols, setCustomProtocols] = useState(() => JSON.parse(localStorage.getItem('tytax_custom_protocols') || '[]'));
+            const [customProtocols, setCustomProtocols] = useState(() => {
+                try {
+                    return JSON.parse(localStorage.getItem('tytax_custom_protocols') || '[]');
+                } catch (e) {
+                    console.error("Error parsing tytax_custom_protocols from localStorage", e);
+                    return [];
+                }
+            });
             const allPresets = [...PRESETS, ...customProtocols];
 
             const [library, setLibrary] = useState(() => {
@@ -4473,7 +4536,7 @@
                 const currentPreset = allPresets.find(p => p.id === 'kinetic_impact');
                 if (currentPreset && masterExercises.length > 0) {
                     const needsUpgrade = masterExercises.some(ex => !ex.note && currentPreset.data.MASTER_EXERCISES.some(nex => cleanName(nex.name) === cleanName(ex.name)));
-                    
+
                     if (needsUpgrade) {
                         if (confirm("New Kinetic Impact protocol available. Update your library? (Recommended)")) {
                             applyLibraryData(currentPreset.data);
@@ -4482,9 +4545,9 @@
                     }
                 }
             }, []);
-             
-            // --- UI STATES --- 
-            const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]); 
+
+            // --- UI STATES ---
+            const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
             const [selectedSession, setSelectedSession] = useState(null); 
             const [currentWorkout, setCurrentWorkout] = useState(null); 
             const [libraryInput, setLibraryInput] = useState(""); 
