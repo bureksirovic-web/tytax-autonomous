@@ -6,7 +6,7 @@
     - *Issue:* Users cannot remove an extra or accidental set.
     - *Task:* Add a small "x" or "trash" button next to each set row in the active workout. When clicked, filter out that set from the exercise's `sets` array.
 
-- [ ] **Fix Vault Notes Visibility**
+- [x] **Fix Vault Notes Visibility**
     - *Issue:* Past session notes are hidden in the History/Vault.
     - *Task:* In the history tab render logic, ensure log.notes is displayed (e.g., in a styled blockquote or paragraph) within the session card.
 
