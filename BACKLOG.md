@@ -1,4 +1,28 @@
 ﻿
+## 🔴 Priority Corrections (Functionality Fixes)
+
+- [ ] **Fix Global Heatmap: Collapsible & Default Closed**
+    - *Problem:* The Heatmap is currently always visible and cannot be toggled.
+    - *Requirement:*
+        1. Create state: const [isHeatmapOpen, setIsHeatmapOpen] = useState(false).
+        2. Render only a "Show/Hide Heatmap" button header initially.
+        3. Only render the grid/chart div when isHeatmapOpen is true.
+    - *Goal:* Clean UI by default; user clicks to see data.
+
+- [ ] **Enable Exercise Swapping for Pre-Loaded Programs**
+    - *Problem:* The 'Swap' (Refresh icon) button appears for manual workouts but is missing for 'Fixed/Library' programs.
+    - *Fix:* In the 'Gym' tab render loop (activeTab === 'workout'), locate the Exercise Card header.
+    - *Action:* Remove any conditional checks (like 'if (!isFixed)') preventing the Swap button from rendering. It should be available for ALL active exercises.
+
+- [ ] **Fix Builder Filter Logic (Context Aware)**
+    - *Problem:* When building an 'Upper Body' session, the filter bar defaults to showing 'Lower Body' tags or renders irrelevant muscles.
+    - *Fix:* inside the Builder component:
+        1. Detect the session name string (e.g., 'Upper A').
+        2. If name contains 'Upper', automatically select/highlight the 'Push' or 'Pull' filters.
+        3. If name contains 'Lower', automatically highlight 'Legs'.
+        4. Ensure the filter bar allows manual override.
+
+
 ## 🔴 Priority Fixes & Recovery
 
 - [x] **Refine Auto-Scroll UX (Target Exercise Header)**
@@ -81,5 +105,6 @@
 
 - [ ] **Adaptive Recovery Logic (Cold Start Detection)**
     - *Task:* In the 'recoveryStatus' useMemo, add logic to detect if the gap between the last two logs is >10 days. If so, automatically trigger 'Deload' mode suggestions to protect the user from overtraining after a break.
+
 
 
