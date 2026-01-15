@@ -68,7 +68,7 @@
     - *Action:* Modify jules.py to scan index.html before pushing.
     - *Check:* Must contain <!DOCTYPE html> and unction App. If not, REVERT.
 
-- [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components** (Retry: No valid SEARCH/REPLACE blocks found.)
+ (Retry: No valid SEARCH/REPLACE blocks found.)
 
 - [ ] **Implement 'Exercise Notes' Field** (Retry: No blocks matched.)
 
@@ -77,3 +77,5 @@
 - [ ] **Design 'Empty States' for All Tabs** (Retry: No valid SEARCH/REPLACE blocks found.)
 
 - [ ] **Implement 'The Gatekeeper' in jules.py** (Retry: No valid SEARCH/REPLACE blocks found.)
+
+- [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components** (Retry: No valid SEARCH/REPLACE blocks found.)
