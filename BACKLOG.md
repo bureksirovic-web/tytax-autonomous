@@ -19,7 +19,7 @@
 - [x] **Reposition Rest Timer to Bottom**
     - *Task:* Move the floating 	imerActive UI component from the top/middle of the screen to a fixed position at the bottom (above the navigation dock).
 
-- [ ] **Persistent Live Kinetic Impact Visibility**
+- [x] **Persistent Live Kinetic Impact Visibility**
     - *Task:* Reposition the "Live Kinetic Impact" bars. Instead of being tucked in a card, make them part of a sticky header or a side-dock (on tablet/desktop) so they stay visible while the user scrolls through exercises.
 
 - [ ] **Make Global Heatmap Collapsible**
