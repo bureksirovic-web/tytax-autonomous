@@ -25,11 +25,10 @@ def log(message):
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY missing!")
 
+# UPDATED HIERARCHY: Removed 1.5 models, focusing on 2.0 Flash and 3.0 Pro
 MODELS_TO_TRY = [
-    "gemini-3-pro-preview",
-    "gemini-3-flash-preview",
-    "gemini-2.0-flash-exp",
-    "gemini-1.5-pro"
+    "gemini-2.0-flash-exp",   # Primary: Fast & Reliable
+    "gemini-3-pro-preview"    # Secondary: Deep Reasoning
 ]
 
 def read_file(filename):
@@ -62,25 +61,36 @@ def ask_gemini_robust(prompt, model_hint="coder"):
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {"maxOutputTokens": 8192, "temperature": 0.1},
     }
+    
     for model in MODELS_TO_TRY:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_API_KEY}"
         for attempt in range(3):
             try:
                 log(f"🔄 [{model_hint.upper()}] {model} (Attempt {attempt+1}/3)...")
                 resp = requests.post(url, headers=headers, data=json.dumps(data))
+                
+                # --- ROBUST ERROR LOGGING (Preserved) ---
                 if resp.status_code == 200:
                     text = extract_text_from_response(resp.json())
-                    if text: return text
+                    if text: 
+                        log(f"📥 [200 OK] Response received: {len(text)} chars")
+                        return text
                 elif resp.status_code == 429:
-                    time.sleep(5)
+                    log(f"⏳ [429 Rate Limit] Waiting 10s...")
+                    time.sleep(10)
+                else:
+                    log(f"❌ [API Error {resp.status_code}] {resp.text[:200]}...")
+                    
             except Exception as e:
-                log(f"❌ Error: {e}")
+                log(f"❌ [Exception]: {e}")
+                
     return None
 
 def apply_patch(original_code, patch_text):
     pattern = r"<<<<<<< SEARCH\n(.*?)\n=======\n(.*?)\n>>>>>>> REPLACE"
     matches = re.findall(pattern, patch_text, re.DOTALL)
     if not matches: return None, "No valid SEARCH/REPLACE blocks found."
+
     new_code = original_code
     success_count = 0
     for search_block, replace_block in matches:
@@ -90,12 +100,14 @@ def apply_patch(original_code, patch_text):
         elif search_block.strip() in new_code:
             new_code = new_code.replace(search_block.strip(), replace_block.strip())
             success_count += 1
+            
     if success_count == 0: return None, "No blocks matched."
     return new_code, f"Applied {success_count} patches."
 
 def verify_fix(task, original_code, new_code):
-    if original_code == new_code: return False, "No changes."
+    if original_code == new_code: return False, "No changes detected."
     diff = "".join(difflib.unified_diff(original_code.splitlines(True), new_code.splitlines(True), n=3))
+    
     prompt = f"TASK: {task}\nDIFF:\n{diff}\nRespond 'PASS' or 'FAIL: [reason]'"
     response = ask_gemini_robust(prompt, model_hint="critic")
     return ("PASS" in (response or "").upper()), response
@@ -105,14 +117,17 @@ def wait_for_render_deploy():
     log("🚀 Monitoring Render Deployment...")
     headers = {"Authorization": f"Bearer {RENDER_API_KEY}"}
     url = f"https://api.render.com/v1/services/{RENDER_SERVICE_ID}/deploys?limit=1"
+    
     for _ in range(20): 
         try:
             resp = requests.get(url, headers=headers)
             if resp.status_code == 200:
-                status = resp.json()[0]['deploy']['status']
-                log(f"📡 Render Status: {status}")
-                if status == "live": return True
-                if status in ["build_failed", "canceled"]: return False
+                data = resp.json()
+                if data:
+                    status = data[0]['deploy']['status']
+                    log(f"📡 Render Status: {status}")
+                    if status == "live": return True
+                    if status in ["build_failed", "canceled"]: return False
         except: pass
         time.sleep(15)
     return True
@@ -123,17 +138,26 @@ def process_single_task():
     log(f"\n📋 TARGET: {task}")
     current_code = read_file("index.html")
     critique_history = ""
+
     for attempt in range(MAX_QA_RETRIES):
-        prompt = f"Expert React Dev. TASK: {task}\n{critique_history}\nCODE:\n{current_code}"
+        log(f"💡 Coder Attempt {attempt + 1}/{MAX_QA_RETRIES}...")
+        prompt = f"Expert React Dev. TASK: {task}\n{critique_history}\nFORMAT: <<<<<<< SEARCH\n(old)\n=======\n(new)\n>>>>>>> REPLACE\n\nCODE:\n{current_code}"
+        
         response = ask_gemini_robust(prompt)
         if not response: continue
+        
         new_code, message = apply_patch(current_code, response)
         if not new_code:
+            log(f"❌ Patch failed: {message}")
             critique_history = f"PREVIOUS FAIL: {message}"
             continue
+
+        log("🕵️ Verifying Logic...")
         is_valid, feedback = verify_fix(task, current_code, new_code)
         if is_valid:
+            log("✅ QA Passed. Saving...")
             write_file("index.html", new_code)
+            
             repo = git.Repo(REPO_PATH)
             repo.git.add(all=True)
             repo.index.commit(f"feat(jules): {task}")
@@ -141,25 +165,29 @@ def process_single_task():
             repo.git.add("BACKLOG.md")
             repo.index.commit(f"docs: marked {task} as done")
             
-            # --- CRITICAL FIX: AGGRESSIVE SYNC BEFORE PUSH ---
             try:
-                log("🔄 Pulling latest to clear race conditions...")
+                log("🔄 Pulling latest changes before push...")
                 repo.remotes.origin.pull(rebase=True)
                 repo.remotes.origin.push()
                 log("🚀 Pushed to GitHub.")
             except Exception as e:
-                log(f"⚠️ Sync failed: {e}")
+                log(f"⚠️ Push failed: {e}")
                 return False
             
             wait_for_render_deploy()
             return True
+        else:
+            log(f"❌ QA Failed: {feedback}")
+            critique_history = f"QA REJECTED: {feedback}"
     return True
 
 def run_loop():
-    log("🤖 Jules Level 9 (MASTER RESTORE) Started...")
+    log("🤖 Jules Level 10 (DEBUG MODE) Started...")
     while True:
         if (time.time() - START_TIME) / 60 > (MAX_RUNTIME_MINUTES - 5): break
-        if not process_single_task(): break
+        if not process_single_task(): 
+            log("✅ No more tasks or sync error.")
+            break
         time.sleep(10)
 
 if __name__ == "__main__":
