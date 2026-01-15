@@ -18,7 +18,7 @@
         2. **"Upper Body Sculpt"** (Chest, Back, Arms).
         3. **"Lower Body Power"** (Legs, Calves, Core).
 
-- [ ] **Populate 'Manual Tab' with Maintenance Checklist**
+- [x] **Populate 'Manual Tab' with Maintenance Checklist**
     - *Goal:* Turn the placeholder 'Manual' tab into a useful resource.
     - *Action:* Add a list of standard Tytax maintenance tasks with checkboxes (non-saving is fine for now, just visual reference).
     - *Content:*
