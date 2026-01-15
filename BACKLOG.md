@@ -9,7 +9,7 @@
         3. Only render the grid/chart div when isHeatmapOpen is true.
     - *Goal:* Clean UI by default; user clicks to see data.
 
-- [ ] **Enable Exercise Swapping for Pre-Loaded Programs**
+
     - *Problem:* The 'Swap' (Refresh icon) button appears for manual workouts but is missing for 'Fixed/Library' programs.
     - *Fix:* In the 'Gym' tab render loop (activeTab === 'workout'), locate the Exercise Card header.
     - *Action:* Remove any conditional checks (like 'if (!isFixed)') preventing the Swap button from rendering. It should be available for ALL active exercises.
@@ -33,7 +33,7 @@
         3. Only render the grid/chart div when isHeatmapOpen is true.
     - *Goal:* Clean UI by default; user clicks to see data.
 
-- [ ] **Enable Exercise Swapping for Pre-Loaded Programs**
+
     - *Problem:* The 'Swap' (Refresh icon) button appears for manual workouts but is missing for 'Fixed/Library' programs.
     - *Fix:* In the 'Gym' tab render loop (activeTab === 'workout'), locate the Exercise Card header.
     - *Action:* Remove any conditional checks (like 'if (!isFixed)') preventing the Swap button from rendering. It should be available for ALL active exercises.
@@ -130,6 +130,4 @@
 - [ ] **Adaptive Recovery Logic (Cold Start Detection)**
     - *Task:* In the 'recoveryStatus' useMemo, add logic to detect if the gap between the last two logs is >10 days. If so, automatically trigger 'Deload' mode suggestions to protect the user from overtraining after a break.
 
-
-
-
+- [ ] **Enable Exercise Swapping for Pre-Loaded Programs** (Retry: FAIL: Syntax Error. The variable `swappingIdx` is declared twice in the `App` component (lines 4376 and 4378 in the diff context). This will cause a "Identifier 'swappingIdx' has already been declared" error and crash the application (White Screen). Remove the duplicate declaration.)
