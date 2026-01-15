@@ -40,3 +40,17 @@
 - [ ] **Render Builder Filter Chips**
     - *Context:* The 'categories' logic is calculated in BuilderTab but not displayed.
     - *Task:* In the Builder EDITOR view, add a horizontal scrolling container above the search bar. Map the 'categories' array to clickable chips that update the 'filter' state.
+
+## ⚡ Architectural Optimizations (Strategic Push)
+
+- [ ] **Implement Strict Immutability for State Updates**
+    - *Task:* Refactor all state setters in 'App.js' (especially within 'setCurrentWorkout') to use deep cloning or functional mapping. This fixes the bug where the Kinetic Impact chart fails to detect nested 'set' updates.
+
+- [ ] **Smart Exercise Swapping (Context-Filtered)**
+    - *Task:* Update the 'Swap' modal logic. Instead of showing the full library, default the list to exercises that match the current exercise's 'pattern' (e.g., Vertical Pull) or 'station' to streamline mid-workout adjustments.
+
+- [ ] **Enhanced Rest Timer Audio/Haptic Loop**
+    - *Task:* Integrate a 'Last 5 Seconds' audio tick or haptic pulse into the 'timer' useEffect. Use SpeechSynthesis to announce 'Prepare for next set' when the timer hits 0.
+
+- [ ] **Adaptive Recovery Logic (Cold Start Detection)**
+    - *Task:* In the 'recoveryStatus' useMemo, add logic to detect if the gap between the last two logs is >10 days. If so, automatically trigger 'Deload' mode suggestions to protect the user from overtraining after a break.
