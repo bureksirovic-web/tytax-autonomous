@@ -82,7 +82,7 @@
 
  (Retry: No blocks matched.)
 
-- [ ] **Implement 'Toast' Notification System** (Retry: FAIL: Duplicate useState declaration for 'toast'. This will cause a runtime error.
+ (Retry: FAIL: Duplicate useState declaration for 'toast'. This will cause a runtime error.
 )
 
 - [ ] **Design 'Empty States' for All Tabs** (Retry: No valid SEARCH/REPLACE blocks found.)
@@ -118,3 +118,33 @@ FAIL: Insufficient context to assess performance impact and correctness of inven
 
 - [ ] **Implement 'Exercise Notes' Field** (Retry: FAIL: Potential Data Integrity Issue. The code adds a new input field for "Exercise Notes" and stores its value in the `setupNotes` state. However, the provided context doesn't show how this `setupNotes` state is initialized, persisted, or integrated with the existing data schema in `localStorage`. Without proper handling, this could lead to data loss or corruption when the user refreshes the page or closes the browser. The code also lacks validation or sanitization of the input, which could lead to security vulnerabilities.
 )
+
+- [ ] **Implement 'Toast' Notification System** (Retry: Let's analyze this diff carefully, playing the role of the Critic.
+
+**Observations:**
+
+1.  **Toast Logic:** The `showToast` function is modified to accept a `duration` parameter, defaulting to 3000ms. This is good for flexibility. The `setToast` now takes an object `{ message, duration }` instead of just a string.
+2.  **Toast Rendering:** The toast div is rendered conditionally based on the `toast` state. The CSS classes are mostly Tailwind, which is good. The `animate-pulse` class is replaced with `animate-fade-in animate-once` and a dynamic `animationDuration` style is added.
+3.  **State Management:** The code uses React's `useState` hook, which is correct. There's no direct state mutation apparent.
+4.  **Index.html Compliance:** The code doesn't introduce any new CSS files or `<style>` tags, adhering to the `index.html` constraint.
+5.  **Accessibility:** The toast message is visually prominent, but its accessibility could be improved with ARIA attributes (e.g., `aria-live="polite"`). However, this is beyond the scope of the current task.
+6.  **Mobile Responsiveness:** The toast is positioned using `fixed top-24 left-1/2 -translate-x-1/2`. This should be centered horizontally. We need to verify that it doesn't overlap with other elements on smaller screens (320px).
+
+**Potential Issues:**
+
+*   **Animation Duration:** The `animationDuration` is set dynamically using inline styles (`style={{ animationDuration: `${toast.duration}ms` }}`). While technically allowed, it's not ideal. It would be better to define the animation in CSS and control it with a class. However, given the constraints, this is acceptable.
+*   **Mobile Overlap:** The `top-24` positioning might cause the toast to overlap with the header on small screens. This needs to be verified.
+
+**Testing Protocol:**
+
+1.  **White Screen Test:** Not applicable, as the code changes are syntactically correct.
+2.  **Responsive Check:** Resize the browser to 320px width and check for overlap.
+3.  **Functionality:** Call `showToast` with different messages and durations. Verify that the toast appears and disappears correctly.
+
+**Verdict:**
+
+The code seems mostly correct, but the potential for mobile overlap is a concern. Since I cannot *directly* test the responsiveness, I will proceed with caution.
+
+```
+FAIL: Potential mobile overlap. Verify toast positioning on 320px screen.
+```)
