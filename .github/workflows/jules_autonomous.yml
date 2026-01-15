@@ -2,8 +2,11 @@
 
 on:
   workflow_dispatch:      # Manual trigger button
+  push:
+    paths:
+      - 'BACKLOG.md'      # This enables the recursive "loop"
   schedule:
-    - cron: '0 */6 * * *' # Runs every 6 hours
+    - cron: '0 */6 * * *' # Fallback trigger
 
 jobs:
   jules-work:
@@ -13,7 +16,10 @@ jobs:
     
     steps:
     - name: Checkout Code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
+      with:
+        # Use a Personal Access Token secret to allow recursive pushes
+        token: ${{ secrets.MY_PAT_TOKEN }} 
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -33,5 +39,5 @@ jobs:
     - name: Run Agent Jules
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}  # <--- WE ADDED THIS LINE
+        RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
       run: python jules.py
