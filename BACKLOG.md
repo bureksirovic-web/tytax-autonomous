@@ -17,7 +17,7 @@
     - *Action 1:* Wrap the bar chart logic in a standard <details> HTML tag: <details><summary className='...'>📊 Kinetic Impact Analysis (Click to Expand)</summary> ...chart... </details>.
     - *Action 2:* In the exercise list below, replace the simple weight display with a map of the sets: ex.sets.map((s, i) => <div key={i}>Set {i+1}: {s.weight}kg x {s.reps}</div>).
 
-- [ ] **Gym UX: Sticky Stats & Auto-Collapse**
+
     - *Previous Fail:* "No valid SEARCH/REPLACE blocks."
     - *Strategy:* Do not try to patch small lines. Replace the entire GymTab header section if needed.
     - *Requirement 1 (Sticky Header):* Add sticky top-0 z-50 bg-slate-900 to the header container containing the timer. Add live volume stats there.
@@ -71,3 +71,5 @@ Based on the provided diff, I cannot definitively say whether this fix is perfec
 
 FAIL: Potential layout issues on mobile (320px width) due to the added column in the set display. Requires visual regression testing.
 )
+
+- [ ] **Gym UX: Sticky Stats & Auto-Collapse** (Retry: No valid SEARCH/REPLACE blocks found.)
