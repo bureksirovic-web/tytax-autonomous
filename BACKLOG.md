@@ -121,7 +121,7 @@
 - [x] **Implement Strict Immutability for State Updates**
     - *Task:* Refactor all state setters in 'App.js' (especially within 'setCurrentWorkout') to use deep cloning or functional mapping. This fixes the bug where the Kinetic Impact chart fails to detect nested 'set' updates.
 
-- [ ] **Smart Exercise Swapping (Context-Filtered)**
+- [x] **Smart Exercise Swapping (Context-Filtered)**
     - *Task:* Update the 'Swap' modal logic. Instead of showing the full library, default the list to exercises that match the current exercise's 'pattern' (e.g., Vertical Pull) or 'station' to streamline mid-workout adjustments.
 
 - [ ] **Enhanced Rest Timer Audio/Haptic Loop**
