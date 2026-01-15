@@ -1,4 +1,28 @@
 ﻿
+## 🎨 UI/UX Polish: Mission Debrief (The Reward Screen)
+
+- [ ] **Implement 'Mission Summary' Stats Card**
+    - *Problem:* The current debrief screen is empty. It lacks the 'Reward' of seeing what was accomplished.
+    - *Action:* Insert a Stats Row above the RPE selector.
+    - *Metrics to Show:*
+        1. **Total Volume:** Sum of all (weight * reps). Display as "12.5k KG".
+        2. **Total Sets:** Count of completed sets.
+        3. **Intensity:** Calculate average weight lifted per set.
+    - *Design:* 3-column grid, big bold numbers (	ext-3xl), small labels (	ext-slate-400).
+
+- [ ] **Add 'Quick Tags' (One-Tap Context)**
+    - *Problem:* Typing notes ("Captain's Log") is hard with shaky hands after a workout.
+    - *Action:* Add a row of clickable 'Pills' above the text area.
+    - *Tags:* ['🔥 Strong', '🐢 Sluggish', '🤕 Pain', '⚡ Fast', '🎯 Focused'].
+    - *Logic:* Clicking a tag appends it to the 'notes' string automatically.
+
+- [ ] **Expand RPE Selector (1-10 Scale)**
+    - *Problem:* Current 6-10 scale ignores light days or deloads.
+    - *Action:* Change the selector to a full 1-10 range.
+    - *Layout:* Two rows of 5 buttons (1-5 on top, 6-10 on bottom) OR a draggable slider component.
+    - *Color Logic:* 1-4 (Green/Blue), 5-7 (Yellow), 8-9 (Orange), 10 (Red).
+
+
 ## 🎨 Gym Tab UX Overhaul (Live Kinetic Impact)
 
 
