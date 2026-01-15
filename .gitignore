@@ -1,0 +1,18 @@
+﻿# --- Secrets (NEVER UPLOAD) ---
+.env
+.env.local
+env/
+venv/
+secrets.json
+
+# --- Python Junk ---
+__pycache__/
+*.pyc
+
+# --- OS Junk ---
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+*.log
+STABLE_STATE_REPORT.txt
