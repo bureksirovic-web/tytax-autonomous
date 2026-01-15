@@ -4137,22 +4137,39 @@
             }
         };
 
-        const SessionDebrief = ({ duration, onComplete }) => {
+        const SessionDebrief = ({ duration, volume, onComplete }) => {
             const [rpe, setRpe] = useState(7);
             const [notes, setNotes] = useState("");
-            
+        
+            // Calculate total sets and exercises
+            const totalExercises = debriefData?.workout?.exercises?.length || 0;
+            const totalSets = debriefData?.workout?.exercises?.reduce((acc, ex) => acc + (ex?.sets?.length || 0), 0) || 0;
+        
             return (
-                 <div className="fixed inset-0 z-[200] bg-black/95 backdrop-blur-xl flex items-center justify-center p-6 animate-fade-in">
+                <div className="fixed inset-0 z-[200] bg-black/95 backdrop-blur-xl flex items-center justify-center p-6 animate-fade-in">
                     <div className="w-full max-w-sm space-y-8">
                         <div className="text-center space-y-2">
-                             <h2 className="text-3xl font-black italic uppercase tracking-tighter text-white">Mission<br/><span className="text-emerald-500">Debrief</span></h2>
-                             <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Session Complete • {Math.floor(duration/60)}m</p>
+                            <h2 className="text-3xl font-black italic uppercase tracking-tighter text-white">Mission<br/><span className="text-emerald-500">Debrief</span></h2>
+                            <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Session Complete • {Math.floor(duration / 60)}m</p>
                         </div>
-                        
+        
+                        <div className="space-y-4">
+                            <div className="flex justify-between items-center">
+                                <div>
+                                    <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Total Volume</p>
+                                    <p className="text-2xl font-black text-white italic">{volume} <span className="text-sm text-slate-500 not-italic ml-1">kg</span></p>
+                                </div>
+                                <div>
+                                    <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Total Work</p>
+                                    <p className="text-2xl font-black text-white italic">{totalExercises} <span className="text-sm text-slate-500 not-italic ml-1">EX</span> • {totalSets} <span className="text-sm text-slate-500 not-italic ml-1">SETS</span></p>
+                                </div>
+                            </div>
+                        </div>
+        
                         <div className="space-y-4">
                             <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Perceived Exertion (RPE)</label>
                             <div className="grid grid-cols-5 gap-2">
-                                {[6,7,8,9,10].map(r => (
+                                {[6, 7, 8, 9, 10].map(r => (
                                     <button key={r} onClick={() => setRpe(r)} className={`p-4 rounded-2xl font-black text-xl italic transition-all ${rpe === r ? 'bg-emerald-500 text-black scale-105 shadow-lg' : 'bg-slate-900 text-slate-600 border border-white/5'}`}>
                                         {r}
                                     </button>
@@ -4163,17 +4180,17 @@
                                 <span>Max Effort</span>
                             </div>
                         </div>
-
+        
                         <div className="space-y-4">
-                             <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Captain's Log</label>
-                             <textarea value={notes} onChange={e => setNotes(e.target.value)} className="w-full h-32 bg-slate-900 rounded-3xl p-5 text-xs text-white border-none focus:ring-2 focus:ring-emerald-500" placeholder="Session notes, injuries, or observations..." />
+                            <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Captain's Log</label>
+                            <textarea value={notes} onChange={e => setNotes(e.target.value)} className="w-full h-32 bg-slate-900 rounded-3xl p-5 text-xs text-white border-none focus:ring-2 focus:ring-emerald-500" placeholder="Session notes, injuries, or observations..." />
                         </div>
-
+        
                         <button onClick={() => onComplete({ rpe, notes })} className="w-full py-5 bg-emerald-500 text-black rounded-[2rem] font-black uppercase tracking-[0.2em] shadow-xl hover:scale-105 transition-transform">
                             Finalize Log
                         </button>
                     </div>
-                 </div>
+                </div>
             );
         };
 
