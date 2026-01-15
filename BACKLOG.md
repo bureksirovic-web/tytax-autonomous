@@ -251,7 +251,7 @@ eps === 1, EstMax = weight.
 
  (Retry: FAIL: Syntax Error. The variable `swappingIdx` is declared twice in the `App` component (lines 4376 and 4378 in the diff context). This will cause a "Identifier 'swappingIdx' has already been declared" error and crash the application (White Screen). Remove the duplicate declaration.)
 
-- [ ] **Enable Exercise Swapping for Pre-Loaded Programs** (Retry: No blocks matched.)
+ (Retry: No blocks matched.)
 
 - [ ] **Harden 'Swap Exercise' Logic (Handle Zero Alternatives)** (Retry: No valid SEARCH/REPLACE blocks found.)
 
@@ -260,3 +260,5 @@ eps === 1, EstMax = weight.
 - [ ] **Implement 'MuscleSplit' Donut Chart** (Retry: No valid SEARCH/REPLACE blocks found.)
 
 - [ ] **Redesign Vault Log Cards (Collapsible Chart + Set Details)** (Retry: No changes detected.)
+
+- [ ] **Enable Exercise Swapping for Pre-Loaded Programs** (Retry: No blocks matched.)
