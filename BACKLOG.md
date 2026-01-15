@@ -10,7 +10,7 @@
         2. **'Import Backup'**: File input that parses that JSON and restores localStorage.
     - *Safety:* Add window.confirm before restoring data.
 
-- [ ] **Vault Redesign (Visual Cleanup)**
+- [x] **Vault Redesign (Visual Cleanup)**
     - *Goal:* Make the log list readable without breaking mobile layout.
     - *Constraint:* **Do NOT use inline styles** for the progress bars (QA Reject). Use Tailwind utility classes (e.g., g-blue-500 h-2 rounded).
     - *Action:*
