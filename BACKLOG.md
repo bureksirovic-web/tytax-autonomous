@@ -41,7 +41,7 @@
     - *Storage:* Save this string to 	ytax_exercise_notes in localStorage (Key: Exercise Name, Value: Note).
     - *Persistence:* When that exercise loads again next time, pre-fill the note.
 
-- [ ] **Smart Rest Timer Buttons**
+- [x] **Smart Rest Timer Buttons**
     - *Goal:* Typing numbers is slow.
     - *Action:* In the Rest Timer overlay, add 'Quick Add' buttons.
     - *UI:* Row of buttons: [+30s] [+1m] [+2m].
