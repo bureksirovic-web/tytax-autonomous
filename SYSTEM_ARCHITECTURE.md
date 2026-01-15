@@ -2,32 +2,32 @@
 
 This document provides a comprehensive blueprint of the autonomous coding ecosystem ("Jules") built for the Tytax Elite Companion project. This system independently implements features, verifies logic, and manages production deployments.
 
-## 1. System Philosophy: The Recursive Loop
-The system is designed as a **self-triggering loop**. Unlike standard automation, Jules uses a Personal Access Token (PAT) to perform git operations, which GitHub interprets as an external user action, thereby allowing it to re-trigger the workflow for the next task automatically.
+## 1. System Philosophy: The Context-Aware Loop
+The system operates as a **self-triggering, retrieval-augmented loop**. Unlike standard automation, Jules uses a Personal Access Token (PAT) to perform git operations, which GitHub interprets as an external user action, thereby allowing it to re-trigger the workflow for the next task automatically.
 
 ### High-Level Execution Flow:
-1. **Backlog Entry:** A user appends a task to `BACKLOG.md` (e.g., `- [ ] **Task Name**`).
-2. **Trigger:** A push to the backlog triggers the GitHub Action workflow.
-3. **Task Selection:** `jules.py` scans for the first open checkbox `[ ]`.
-4. **AI Generation:** The "Coder" AI (Gemini 2.0 Flash / 3.0 Pro) reviews the current code and writes a patch using `SEARCH/REPLACE` blocks.
-5. **QA Review:** A "Critic" AI reviews the generated diff for syntax errors or logic breaks.
-6. **Aggressive Sync:** Before saving, Jules executes a `pull --rebase` to merge any manual edits made during the AI's 10-minute thinking window.
-7. **Recursive Push:** Jules pushes the completed task. This push triggers a *new* workflow run immediately.
-8. **Deployment Gate:** The system waits for Render to confirm the site is stable before clearing the task.
+1. **Trigger:** A push to `BACKLOG.md` triggers the GitHub Action workflow.
+2. **Context Retrieval (RAG):** Before coding, `jules.py` reads `AGENTS.md` (Persona), `ARCHITECTURE.md` (Rules), and `TESTING_PROTOCOL.md` (QA Specs) to load its "Brain".
+3. **Task Selection:** It scans for the first open checkbox `[ ]`.
+4. **AI Generation (Hybrid Model):** - **Primary:** `gemini-3-pro-preview` for complex reasoning and architectural compliance.
+   - **Fallback:** `gemini-2.0-flash-exp` for speed and reliability if the primary model times out.
+5. **QA Review:** A "Critic" AI reviews the generated diff against the loaded **System Context** to ensure no rules were broken.
+6. **Aggressive Sync:** Before saving, Jules executes a `pull --rebase` to merge any manual edits made during the AI's thinking window.
+7. **Recursive Push:** Jules pushes the completed task, triggering the next run immediately.
+8. **Deployment Gate:** The system waits for Render to confirm the site is `live` before clearing the task.
 
 ## 2. Production Stability (Render Monitor)
 A unique feature of the system is the **Render API Handshake**:
 - **Health Verification:** Jules polls the Render API (`/deploys`) using a secure API Key.
-- **Status Check:** It specifically monitors for the `live` status signal.
-- **Circuit Breaker:** If Render reports a `build_failed`, `canceled`, or any non-200 status, Jules halts the loop and reports the error in the GitHub Action log. This prevents the AI from implementation more code on top of a broken production build.
+- **Circuit Breaker:** If Render reports a `build_failed`, `canceled`, or any non-200 status, Jules halts the loop and reports the error in the GitHub Action log. This prevents the AI from implementing more code on top of a broken production build.
 
 ## 3. Core Component Requirements
 
 ### A. The Orchestrator (`jules.py`)
 This Python script manages the "Brain" of the operation.
-- **Model Hierarchy (Updated):** Prioritizes **Gemini 2.0 Flash** for speed and reliability, falling back to **Gemini 3 Pro** for complex reasoning. Legacy 1.5 models have been deprecated.
-- **Loud Error Logging:** The script explicitly captures and logs non-200 API status codes (e.g., 400, 500) to identify quota or model availability issues immediately.
-- **Safe Patching:** Uses regex-based SEARCH/REPLACE blocks. This is safer than overwriting files because it ensures the AI only touches the specific logic requested.
+- **Context Awareness (RAG):** It injects specific documentation files into the AI prompt to enforce coding standards (e.g., "Use Immutable State", "Mobile First").
+- **Loud Error Logging:** Explicitly captures and logs non-200 API status codes to identify quota or model availability issues immediately.
+- **Safe Patching:** Uses regex-based `SEARCH/REPLACE` blocks. This is safer than overwriting files because it ensures the AI only touches the specific logic requested.
 
 ### B. Security & Keys (GitHub Secrets)
 To recreate this, three secrets must be added to the GitHub repository:
@@ -47,4 +47,4 @@ To recreate this, three secrets must be added to the GitHub repository:
 4. **Activation:** Push your first task to the backlog. The system will now run autonomously until all checkboxes are marked `[x]`.
 
 ---
-*Documentation updated to reflect Gemini 2.0 Flash architecture.*
+*Documentation updated to reflect Level 11 Hybrid (RAG + Multi-Model) Architecture.*
