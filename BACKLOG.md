@@ -76,7 +76,7 @@ eps === 1, EstMax = weight.
 
 ## 🔴 Priority Correction (Attempt 4)
 
-- [ ] **Fix Smart Filters: Actually Hide Irrelevant Buttons**
+- [x] **Fix Smart Filters: Actually Hide Irrelevant Buttons**
     - *Root Cause:* The previous code calculated 'isUpper' but did NOT apply it to the filter bar. The buttons for 'Quads/Calves' still render on Upper days.
     - *Requirement:* Locate the ilters.map(...) or the loop that renders the top scrolling filter bar.
     - *Logic:* Wrap that map with a hard filter.
