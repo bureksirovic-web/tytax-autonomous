@@ -1,4 +1,29 @@
 ﻿
+## 🔴 Priority Correction (Attempt 4)
+
+- [ ] **Fix Smart Filters: Actually Hide Irrelevant Buttons**
+    - *Root Cause:* The previous code calculated 'isUpper' but did NOT apply it to the filter bar. The buttons for 'Quads/Calves' still render on Upper days.
+    - *Requirement:* Locate the ilters.map(...) or the loop that renders the top scrolling filter bar.
+    - *Logic:* Wrap that map with a hard filter.
+    - *Code Snippet:*
+      `javascript
+      // Define allow-lists
+      const UPPER_TAGS = ['CHEST', 'BACK', 'SHOULDERS', 'BICEPS', 'TRICEPS', 'FOREARMS', 'CORE', 'ALL'];
+      const LOWER_TAGS = ['QUADS', 'HAMSTRINGS', 'GLUTES', 'CALVES', 'ADDUCTORS', 'CORE', 'ALL'];
+      
+      // Inside the render return:
+      {availableFilters
+         .filter(tag => {
+             if (!isSmartActive) return true; // Show all if smart mode off
+             if (isUpper) return UPPER_TAGS.includes(tag);
+             if (isLower) return LOWER_TAGS.includes(tag);
+             return true; 
+         })
+         .map(tag => ( ...render button... ))
+      }
+      `
+    - *Goal:* On 'Upper A', the 'Calves' button must physically disappear from the DOM.
+
 ## 🔴 Priority UX Improvement
 
 - [x] **Implement Context-Aware 'Smart Filters' in Builder**
@@ -152,4 +177,5 @@
  (Retry: FAIL: Syntax Error. The variable `swappingIdx` is declared twice in the `App` component (lines 4376 and 4378 in the diff context). This will cause a "Identifier 'swappingIdx' has already been declared" error and crash the application (White Screen). Remove the duplicate declaration.)
 
 - [ ] **Enable Exercise Swapping for Pre-Loaded Programs** (Retry: No blocks matched.)
+
 
