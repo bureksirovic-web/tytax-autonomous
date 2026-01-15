@@ -4309,37 +4309,38 @@
                         <button onClick={onCancel} className="p-4 bg-slate-900 rounded-2xl text-slate-500"><Icon name="x" /></button>
                     </div>
 
-                    <input 
-                        value={search} 
-                        onChange={e => setSearch(e.target.value)} 
-                        placeholder="Search alternatives..." 
-                        className="w-full p-4 bg-slate-900 rounded-2xl font-bold text-xs text-white border-none focus:ring-2 focus:ring-indigo-500 mb-4" 
+                    <input
+                        value={search}
+                        onChange={e => setSearch(e.target.value)}
+                        placeholder="Search alternatives..."
+                        className="w-full p-4 bg-slate-900 rounded-2xl font-bold text-xs text-white border-none focus:ring-2 focus:ring-indigo-500 mb-4"
                         autoFocus
                     />
 
                     <div className="flex-1 overflow-y-auto space-y-3 no-scrollbar pb-10">
-                        {candidates.map(ex => (
-                            <button 
-                                key={ex.name} 
-                                onClick={() => onSwap(ex)}
-                                className="w-full p-5 bg-slate-900/50 border border-white/5 rounded-[2rem] text-left hover:bg-indigo-900/20 hover:border-indigo-500/50 transition-all group"
-                            >
-                                <div className="flex justify-between items-start">
-                                    <div>
-                                        <h4 className="font-black text-sm text-white italic group-hover:text-indigo-300">{cleanName(ex.name)}</h4>
-                                        <div className="flex gap-2 mt-2">
-                                            <span className="px-2 py-1 bg-slate-800 rounded-lg text-[8px] font-black text-slate-500 uppercase">{ex.station}</span>
-                                            <span className="px-2 py-1 bg-slate-800 rounded-lg text-[8px] font-black text-slate-500 uppercase">{ex.pattern || 'Isolation'}</span>
+                        {candidates.length > 0 ? (
+                            candidates.map(ex => (
+                                <button
+                                    key={ex.name}
+                                    onClick={() => onSwap(ex)}
+                                    className="w-full p-5 bg-slate-900/50 border border-white/5 rounded-[2rem] text-left hover:bg-indigo-900/20 hover:border-indigo-500/50 transition-all group"
+                                >
+                                    <div className="flex justify-between items-start">
+                                        <div>
+                                            <h4 className="font-black text-sm text-white italic group-hover:text-indigo-300">{cleanName(ex.name)}</h4>
+                                            <div className="flex gap-2 mt-2">
+                                                <span className="px-2 py-1 bg-slate-800 rounded-lg text-[8px] font-black text-slate-500 uppercase">{ex.station}</span>
+                                                <span className="px-2 py-1 bg-slate-800 rounded-lg text-[8px] font-black text-slate-500 uppercase">{ex.pattern || 'Isolation'}</span>
+                                            </div>
                                         </div>
+                                        {ex.unilateral && <span className="text-[8px] font-black text-purple-400 uppercase tracking-widest border border-purple-500/30 px-2 py-1 rounded-lg">Uni</span>}
                                     </div>
-                                    {ex.unilateral && <span className="text-[8px] font-black text-purple-400 uppercase tracking-widest border border-purple-500/30 px-2 py-1 rounded-lg">Uni</span>}
-                                </div>
-                            </button>
-                        ))}
-                        {candidates.length === 0 && (
+                                </button>
+                            ))
+                        ) : (
                             <div className="text-center py-10 opacity-50">
                                 <p className="text-[10px] font-black uppercase tracking-widest">No context matches found.</p>
-                                <p className="text-[9px] text-slate-500">Try searching by name.</p>
+                                <p className="text-[9px] text-slate-500">Try searching by name or broaden your inventory.</p>
                             </div>
                         )}
                     </div>
