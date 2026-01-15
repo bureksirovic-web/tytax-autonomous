@@ -46,7 +46,7 @@ gba(255,255,255,0.1)).
         3. **Visualize:** Render a Doughnut Chart next to the main graph.
         4. **Colors:** Use a predefined palette (e.g., ['#3b82f6', '#ef4444', '#10b981', '#f59e0b']) matching the Tailwind theme.
 
-- [ ] **Fix 1RM Logic (The Brzycki Standard)**
+- [x] **Fix 1RM Logic (The Brzycki Standard)**
     - *Strategic Goal:* Replace "Force Output" with scientifically accurate "Estimated 1RM".
     - *Formula Constraint:* Use **Brzycki**: EstMax = weight / (1.0278 - (0.0278 * reps)).
     - *Safety Checks:*
