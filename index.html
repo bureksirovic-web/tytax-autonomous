@@ -3721,6 +3721,7 @@
             const [search, setSearch] = useState('');
             const [draft, setDraft] = useState([]); // Exercises for current slot
             const [useInventoryFilter, setUseInventoryFilter] = useState(false);
+            const [useSmartFilter, setUseSmartFilter] = useState(true);
 
             // 1. WIZARD COMPLETION -> GENERATE SLOTS
             const handleWizardComplete = (config) => {
@@ -3822,11 +3823,11 @@
 
             // SMART FILTER LOGIC
             const filteredExercises = metaLibrary.filter(ex => {
-                // 1. SAFETY FILTER (Context Aware) - Only active when browsing ALL without search
+                // 1. SMART CONTEXT FILTER
                 const currentSlot = programDraft[activeSlot];
-                const isBrowsing = filter === 'ALL' && search === '';
+                const isSmartActive = useSmartFilter && filter === 'ALL' && search === '';
                 
-                if (currentSlot && isBrowsing) {
+                if (currentSlot && isSmartActive) {
                     const sessionName = currentSlot.name.toLowerCase();
                     const isUpper = sessionName.includes('upper') || sessionName.includes('push'); // Removed 'pull' to allow deadlifts
                     const isPull = sessionName.includes('pull');
