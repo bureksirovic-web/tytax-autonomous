@@ -285,7 +285,7 @@ eps === 1, EstMax = weight.
 
 - [x] **Inject Chart.js & Build 'ProgressGraph' Component** (Retry: FAIL: The task explicitly requires building the 'ProgressGraph' component, but the provided diff only injects the Chart.js library script. The React component implementation is completely missing.)
 
-- [ ] **Implement 'MuscleSplit' Donut Chart** (Retry: No valid SEARCH/REPLACE blocks found.)
+ (Retry: No valid SEARCH/REPLACE blocks found.)
 
 - [ ] **Redesign Vault Log Cards (Collapsible Chart + Set Details)** (Retry: No changes detected.)
 
@@ -294,3 +294,6 @@ eps === 1, EstMax = weight.
 - [ ] **Implement Sticky 'Kinetic Impact' Header** (Retry: No valid SEARCH/REPLACE blocks found.)
 
 - [ ] **Auto-Collapse Completed Exercises (Minimize Clutter)** (Retry: No valid SEARCH/REPLACE blocks found.)
+
+- [ ] **Implement 'MuscleSplit' Donut Chart** (Retry: FAIL: MuscleSplitChart component is not defined. The provided diff adds a reference to `<MuscleSplitChart logs={logs} />` without defining or importing this component. This will cause a runtime error.
+)
