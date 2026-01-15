@@ -1,4 +1,24 @@
 ﻿
+## 🔴 Priority Fixes & Recovery
+
+- [ ] **Refine Auto-Scroll UX (Target Exercise Header)**
+    - *Context:* Currently, clicking an input scrolls that specific *cell* to the top of the viewport. This hides the Exercise Name context.
+    - *Requirement:* Modify the focus handler. Instead of scrolling the input, find the closest parent container (e.g., .exercise-card or the div wrapping the exercise).
+    - *Action:* Use element.closest(...) and scroll *that* element to the top (lock: 'start').
+
+- [ ] **Implement 'Active Set' Deletion (Gym Tab)**
+    - *Context:* We need a way to delete a specific set row while the workout is active.
+    - *Instruction:* In the ctiveTab === 'workout' render loop:
+        1. Add a small 'X' or Trash icon button to the right of the RIR/Notes inputs for each set.
+        2. On click, filter out that specific set index from currentWorkout.exercises[exIdx].sets.
+        3. Ensure setCurrentWorkout is called with the updated deep copy.
+    - *Safety:* Do NOT modify the 'History' tab logic. Only the active session.
+
+- [ ] **Clean up Home Page Footer (Retry)**
+    - *Context:* The previous attempt caused a syntax error/blank screen.
+    - *Requirement:* Simplify the footer text/links.
+    - *QA:* Double-check that all <div> and <a> tags are properly closed to prevent a crash.
+
 ## 🔴 Immediate Fixes (Correction)
 
 - [x] **Implement 'Active Set' Deletion (Gym Tab)**
@@ -61,4 +81,5 @@
 
 - [ ] **Adaptive Recovery Logic (Cold Start Detection)**
     - *Task:* In the 'recoveryStatus' useMemo, add logic to detect if the gap between the last two logs is >10 days. If so, automatically trigger 'Deload' mode suggestions to protect the user from overtraining after a break.
+
 
