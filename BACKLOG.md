@@ -83,7 +83,7 @@ FAIL: Potential layout issues on mobile (320px width) due to the added column in
     - *Action 3 (Import):* File Input that reads a JSON file and restores it to localStorage.
     - *Safety:* Show window.confirm before overwriting data.
 
-- [ ] **Vault Redesign: Collapsible Impact & Detailed Logs** (Retry: No blocks matched.)
+- [x] **Vault Redesign: Collapsible Impact & Detailed Logs** (Retry: No blocks matched.)
 
 - [ ] **Gym UX: Sticky Stats & Auto-Collapse** (Retry: No valid SEARCH/REPLACE blocks found.)
 
