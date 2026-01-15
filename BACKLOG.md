@@ -124,7 +124,7 @@
 - [x] **Smart Exercise Swapping (Context-Filtered)**
     - *Task:* Update the 'Swap' modal logic. Instead of showing the full library, default the list to exercises that match the current exercise's 'pattern' (e.g., Vertical Pull) or 'station' to streamline mid-workout adjustments.
 
-- [ ] **Enhanced Rest Timer Audio/Haptic Loop**
+- [x] **Enhanced Rest Timer Audio/Haptic Loop**
     - *Task:* Integrate a 'Last 5 Seconds' audio tick or haptic pulse into the 'timer' useEffect. Use SpeechSynthesis to announce 'Prepare for next set' when the timer hits 0.
 
 - [ ] **Adaptive Recovery Logic (Cold Start Detection)**
