@@ -177,3 +177,15 @@ pm install or build pipelines to break.
     * Requires multi-file writing logic in jules.py.
     * Consumes tokens needed for critical coding tasks during the 'Rate Limit' crisis.
 
+
+### 3. Automated Self-Documentation (The 'Diary')
+**Goal:** Human-readable reporting of agent activity.
+**Priority:** **Medium / Post-Deployment**
+
+* **Concept:** After every successful commit, Jules appends a one-line summary to CHANGELOG.md.
+* **Format:** [2024-01-20] Fixed 1RM calculation bug and updated chart colors.
+* **Benefit:** Allows the non-technical Admin to review progress without reading Git Diffs.
+* **Why Wait:**
+    * Requires multi-file writing logic in jules.py.
+    * Consumes tokens needed for critical coding tasks during the 'Rate Limit' crisis.
+
