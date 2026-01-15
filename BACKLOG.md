@@ -2,7 +2,7 @@
 
 ## 🚨 UI RESCUE MISSION (Force Component Rewrites)
 
-- [ ] **Force-Rewrite 'VaultTab' Component (Collapsible Impact)**
+
     - *Problem:* The previous 'Kinetic Impact' section is not collapsing. It takes up too much space.
     - *Action:* Find const VaultTab. REPLACE the entire return statement.
     - *Requirement 1:* The 'Kinetic Impact' section MUST be wrapped in:
@@ -17,3 +17,4 @@
         1. [Export Backup] (Green): Triggers JSON download.
         2. [Import Profile] (Blue): File Input to restore data.
 
+- [ ] **Force-Rewrite 'VaultTab' Component (Collapsible Impact)** (Retry: No blocks matched.)
