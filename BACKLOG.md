@@ -130,4 +130,6 @@
 - [x] **Adaptive Recovery Logic (Cold Start Detection)**
     - *Task:* In the 'recoveryStatus' useMemo, add logic to detect if the gap between the last two logs is >10 days. If so, automatically trigger 'Deload' mode suggestions to protect the user from overtraining after a break.
 
-- [ ] **Enable Exercise Swapping for Pre-Loaded Programs** (Retry: FAIL: Syntax Error. The variable `swappingIdx` is declared twice in the `App` component (lines 4376 and 4378 in the diff context). This will cause a "Identifier 'swappingIdx' has already been declared" error and crash the application (White Screen). Remove the duplicate declaration.)
+ (Retry: FAIL: Syntax Error. The variable `swappingIdx` is declared twice in the `App` component (lines 4376 and 4378 in the diff context). This will cause a "Identifier 'swappingIdx' has already been declared" error and crash the application (White Screen). Remove the duplicate declaration.)
+
+- [ ] **Enable Exercise Swapping for Pre-Loaded Programs** (Retry: No blocks matched.)
