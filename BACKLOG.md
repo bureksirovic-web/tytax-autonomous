@@ -38,7 +38,7 @@ pm install. Use CDN.
     - *Styling:* Dark mode compatible (Grid lines 
 gba(255,255,255,0.1)).
 
-- [ ] **Implement 'MuscleSplit' Donut Chart**
+
     - *Strategic Goal:* Show if the user is skipping leg day.
     - *Logic:*
         1. **Aggregate:** Iterate through ALL 	ytax_logs.
@@ -256,3 +256,5 @@ eps === 1, EstMax = weight.
 - [ ] **Harden 'Swap Exercise' Logic (Handle Zero Alternatives)** (Retry: No valid SEARCH/REPLACE blocks found.)
 
 - [ ] **Inject Chart.js & Build 'ProgressGraph' Component** (Retry: FAIL: The task explicitly requires building the 'ProgressGraph' component, but the provided diff only injects the Chart.js library script. The React component implementation is completely missing.)
+
+- [ ] **Implement 'MuscleSplit' Donut Chart** (Retry: No valid SEARCH/REPLACE blocks found.)
