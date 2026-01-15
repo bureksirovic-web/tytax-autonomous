@@ -6,7 +6,7 @@
     - *Requirement:* Modify the focus handler. Instead of scrolling the input, find the closest parent container (e.g., .exercise-card or the div wrapping the exercise).
     - *Action:* Use element.closest(...) and scroll *that* element to the top (lock: 'start').
 
-- [ ] **Implement 'Active Set' Deletion (Gym Tab)**
+- [x] **Implement 'Active Set' Deletion (Gym Tab)**
     - *Context:* We need a way to delete a specific set row while the workout is active.
     - *Instruction:* In the ctiveTab === 'workout' render loop:
         1. Add a small 'X' or Trash icon button to the right of the RIR/Notes inputs for each set.
