@@ -1,7 +1,7 @@
 ﻿
 ## 🚨 CRITICAL STABILITY FIXES
 
-- [ ] **Fix Error Boundary (Disable Auto-Wipe)**
+- [x] **Fix Error Boundary (Disable Auto-Wipe)**
     - *Context:* The red 'System Failure' screen currently wipes all data.
     - *Requirement:* Update the ErrorBoundary component.
     - *Action:* Change the 'Emergency Reset' button to perform window.location.reload() instead of localStorage.clear().
@@ -35,7 +35,8 @@ pm install. Use CDN.
         - Filter logs for entries containing selectedExercise.
         - X-Axis: log.date.
         - Y-Axis: Math.max(...exercise.sets.map(s => s.weight)).
-    - *Styling:* Dark mode compatible (Grid lines gba(255,255,255,0.1)).
+    - *Styling:* Dark mode compatible (Grid lines 
+gba(255,255,255,0.1)).
 
 - [ ] **Implement 'MuscleSplit' Donut Chart**
     - *Strategic Goal:* Show if the user is skipping leg day.
@@ -49,8 +50,10 @@ pm install. Use CDN.
     - *Strategic Goal:* Replace "Force Output" with scientifically accurate "Estimated 1RM".
     - *Formula Constraint:* Use **Brzycki**: EstMax = weight / (1.0278 - (0.0278 * reps)).
     - *Safety Checks:*
-        - If eps > 20, ignore the set (it's cardio, not strength).
-        - If eps === 1, EstMax = weight.
+        - If 
+eps > 20, ignore the set (it's cardio, not strength).
+        - If 
+eps === 1, EstMax = weight.
     - *UI Update:* - Replace the 3 top cards (Squat/Bench/Deadlift) with dynamic cards.
         - Iterate through logs to find the *highest calculated 1RM* ever recorded for these movements.
         - Display "Est. 1RM" label clearly.
