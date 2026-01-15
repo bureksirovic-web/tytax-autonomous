@@ -3822,34 +3822,39 @@
 
             // SMART FILTER LOGIC
             const filteredExercises = metaLibrary.filter(ex => {
-                // 1. SAFETY FILTER (Context Aware)
+                // 1. SAFETY FILTER (Context Aware) - Only active when browsing ALL without search
                 const currentSlot = programDraft[activeSlot];
-                if (!currentSlot) return true; // Skip if no active slot
+                const isBrowsing = filter === 'ALL' && search === '';
                 
-                const sessionName = currentSlot.name.toLowerCase();
-                const isUpper = sessionName.includes('upper') || sessionName.includes('push') || sessionName.includes('pull');
-                const isLower = sessionName.includes('lower') || sessionName.includes('legs');
-                
-                // Get primary impact for safety check
-                const imp = getImpact(ex);
-                // Helper to check if muscle is in impact list
-                const hits = (mList) => imp.some(i => mList.some(m => i.muscle.toLowerCase().includes(m.toLowerCase()) && i.level === 'Primary'));
-                const isCore = hits(['Abs', 'Obliques', 'Core', 'Serratus']);
+                if (currentSlot && isBrowsing) {
+                    const sessionName = currentSlot.name.toLowerCase();
+                    const isUpper = sessionName.includes('upper') || sessionName.includes('push'); // Removed 'pull' to allow deadlifts
+                    const isPull = sessionName.includes('pull');
+                    const isLower = sessionName.includes('lower') || sessionName.includes('legs');
+                    
+                    const imp = getImpact(ex);
+                    const hits = (mList) => imp.some(i => mList.some(m => i.muscle.toLowerCase().includes(m.toLowerCase()) && i.level === 'Primary'));
+                    const isCore = hits(['Abs', 'Obliques', 'Core', 'Serratus']);
 
-                if (!isCore) { // Allow Core everywhere
-                    if (isUpper) {
-                        // Exclude Lower: Quads, Hams, Glutes, Calves
-                        if (hits(['Quad', 'Hamstring', 'Glute', 'Calf', 'Calves'])) return false;
-                    }
-                    if (isLower) {
-                        // Exclude Upper: Chest, Back, Shoulders, Arms (Biceps, Triceps, Forearm)
-                        if (hits(['Chest', 'Back', 'Lat', 'Trap', 'Rhomboid', 'Delt', 'Shoulder', 'Bicep', 'Tricep', 'Forearm', 'Grip', 'Brach'])) return false;
+                    if (!isCore) {
+                        if (isUpper) {
+                            // Strict Upper: No Legs
+                            if (hits(['Quad', 'Hamstring', 'Glute', 'Calf', 'Calves'])) return false;
+                        }
+                        if (isPull) {
+                            // Pull: Allow Back/Biceps/Rear Delt + Hamstrings/Glutes (Deadlifts). Exclude Quads/Push muscles.
+                            if (hits(['Quad', 'Chest', 'Tricep', 'Front Delt', 'Calf'])) return false;
+                        }
+                        if (isLower) {
+                            // Lower: No Upper Push/Pull (except maybe back for stability, but generally exclude)
+                            if (hits(['Chest', 'Back', 'Lat', 'Trap', 'Rhomboid', 'Delt', 'Shoulder', 'Bicep', 'Tricep', 'Forearm', 'Grip', 'Brach'])) return false;
+                        }
                     }
                 }
 
                 // 2. Inventory Filter
                 if (useInventoryFilter) {
-                    const att = getAttachment(ex.name, PRESETS); // Uses global PRESETS
+                    const att = getAttachment(ex.name, PRESETS);
                     if (att && !userInventory.includes(att.name) && att.priority !== 'Owned') return false;
                 }
 
