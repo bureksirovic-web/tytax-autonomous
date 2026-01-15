@@ -18,7 +18,7 @@
         2. Wrap the 'Kinetic Impact' chart in a <details className="group mb-6"> tag so it defaults to closed.
         3. In the log list, simply add a text line: Set {i+1}: {s.weight}kg x {s.reps}. Do not create complex grids yet.
 
-- [ ] **Gym UX: Sticky Stats Header**
+- [x] **Gym UX: Sticky Stats Header**
     - *Goal:* Show live volume while scrolling.
     - *Constraint:* The previous attempt failed to find the code block.
     - *Strategy:* Target the **Session Timer** component.
