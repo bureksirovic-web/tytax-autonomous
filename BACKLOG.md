@@ -29,7 +29,7 @@
 
 ## 🛠️ PRIORITY 2: New "Gym" Features (High Utility)
 
-- [ ] **Implement 'Plate Calculator' Modal**
+- [x] **Implement 'Plate Calculator' Modal**
     - *Goal:* Help users load the bar quickly.
     - *Action:* Add a small 'Calculator' icon next to the weight input in the Gym Tab.
     - *Logic:* When clicked, open a modal showing how to reach the target weight using 20kg, 10kg, 5kg, 2.5kg, 1.25kg plates (assuming 20kg bar).
