@@ -32,7 +32,7 @@
 - [x] **Make Global Heatmap Collapsible**
     - *Task:* On the Home tab, wrap the "Global Heatmap" in a disclosure/accordion component. Hide the bars by default; show them only when the user clicks the "Global Heatmap" header.
 
-- [ ] **Clean up Home Page Footer**
+- [x] **Clean up Home Page Footer**
     - *Task:* Remove the "Elite Manual" section from the bottom of the Home tab to reduce clutter.
 
 - [ ] **Comprehensive Manual Overhaul**
