@@ -29,7 +29,7 @@
 - [x] **Persistent Live Kinetic Impact Visibility**
     - *Task:* Reposition the "Live Kinetic Impact" bars. Instead of being tucked in a card, make them part of a sticky header or a side-dock (on tablet/desktop) so they stay visible while the user scrolls through exercises.
 
-- [ ] **Make Global Heatmap Collapsible**
+- [x] **Make Global Heatmap Collapsible**
     - *Task:* On the Home tab, wrap the "Global Heatmap" in a disclosure/accordion component. Hide the bars by default; show them only when the user clicks the "Global Heatmap" header.
 
 - [ ] **Clean up Home Page Footer**
