@@ -7,7 +7,7 @@
     - *Action:* Change the 'Emergency Reset' button to perform window.location.reload() instead of localStorage.clear().
     - *Goal:* A crash should never destroy the user's history.
 
-- [ ] **Harden 'Swap Exercise' Logic (Handle Zero Alternatives)**
+
     - *Context:* Swapping 'Lower Pulley Single-Arm Seated Cable Row' crashes the app.
     - *Root Cause:* The code likely assumes lternatives always has items. If no other exercise matches the criteria, it crashes accessing index 0.
     - *Fix:* In handleSwapExercise:
@@ -253,7 +253,4 @@ eps === 1, EstMax = weight.
 
 - [ ] **Enable Exercise Swapping for Pre-Loaded Programs** (Retry: No blocks matched.)
 
-
-
-
-
+- [ ] **Harden 'Swap Exercise' Logic (Handle Zero Alternatives)** (Retry: No valid SEARCH/REPLACE blocks found.)
