@@ -10,7 +10,7 @@
 
 ## 🏋️ PRIORITY 1: Content & Onboarding
 
-- [ ] **Implement 'Default Tytax Routines' Logic**
+- [x] **Implement 'Default Tytax Routines' Logic**
     - *Goal:* Ensure new users don't see a blank screen.
     - *Action:* Modify useEffect in main App.
     - *Logic:* If saved_workouts is empty [], automatically inject 3 preset routines:
