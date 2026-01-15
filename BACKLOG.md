@@ -2,7 +2,7 @@
 
 ## 🔨 Deployment Blockers (The Final Sprint)
 
-- [ ] **Implement Profile Data Management (Settings Tab)**
+
     - *Goal:* Create a specific 'Data Management' section in Settings for backup/restore.
     - *Critical Fix:* **REMOVE** the existing 'Backup Data' button first. Do not just add new ones (prevent duplicate button error).
     - *Action:* Add two clear buttons in a grid:
@@ -26,3 +26,5 @@
         <div className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800 p-4 flex justify-between items-center shadow-lg">
     - *Add:* A simple span next to the timer: <span>Vol: {currentVolume}kg</span>.
 
+- [ ] **Implement Profile Data Management (Settings Tab)** (Retry: FAIL: Missing localStorage persistence. The code implements the UI for profile data management, but it does not save the `userProfile` data to `localStorage`. This means the data will be lost on page refresh.
+)
