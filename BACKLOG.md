@@ -36,7 +36,7 @@
     - *Previous Fail:* "swappingIdx declared twice."
     - *Instruction:* Ensure you remove the old declaration before adding the new safety-checked version. Wrap the whole handler in try/catch.
 
-- [ ] **Vault Redesign: Collapsible Impact & Detailed Logs** (Retry: Okay, let's analyze this diff as the Critic.
+ (Retry: Okay, let's analyze this diff as the Critic.
 
 **Initial Assessment:** The code introduces a collapsible section for "Kinetic Impact" within the exercise logs and modifies the set display to include a set number. It seems to adhere to the single-file component structure and uses Tailwind classes. However, I need to verify a few things:
 
@@ -82,3 +82,5 @@ FAIL: Potential layout issues on mobile (320px width) due to the added column in
     - *Action 2 (Export Full Backup):* Button that downloads ALL data (logs + workouts) as 	ytax_backup.json.
     - *Action 3 (Import):* File Input that reads a JSON file and restores it to localStorage.
     - *Safety:* Show window.confirm before overwriting data.
+
+- [ ] **Vault Redesign: Collapsible Impact & Detailed Logs** (Retry: No blocks matched.)
