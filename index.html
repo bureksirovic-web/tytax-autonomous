@@ -4715,13 +4715,15 @@
 
                 // 3. Determine Status
                 // Check history depth for tightened first-week thresholds
-                const firstLogDate = new Date(Math.min(...logs.map(l => l.date)));
+                const firstLogDate = logs.length > 0 ? new Date(Math.min(...logs.map(l => l.date))) : new Date();
                 const daysHistory = (now - firstLogDate) / (1000 * 60 * 60 * 24);
-                const isNewUser = daysHistory < 7;
+
+                // If no logs, assume "Fresh" status
+                const isNewUser = logs.length === 0 || daysHistory < 7;
 
                 const limitRecovering = isNewUser ? 1.2 : 1.5;
                 const limitFried = isNewUser ? 1.7 : 2.0;
-                
+
                 let score = 100;
                 if (ratio > limitFried) score = 30;
                 else if (ratio > limitRecovering) score = 60;
