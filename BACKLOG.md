@@ -74,7 +74,7 @@
 
  (Retry: No valid SEARCH/REPLACE blocks found.)
 
-- [ ] **Design 'Empty States' for All Tabs** (Retry: No valid SEARCH/REPLACE blocks found.)
+ (Retry: No valid SEARCH/REPLACE blocks found.)
 
 - [ ] **Implement 'The Gatekeeper' in jules.py** (Retry: No valid SEARCH/REPLACE blocks found.)
 
@@ -84,3 +84,5 @@
 
 - [ ] **Implement 'Toast' Notification System** (Retry: FAIL: Duplicate useState declaration for 'toast'. This will cause a runtime error.
 )
+
+- [ ] **Design 'Empty States' for All Tabs** (Retry: No valid SEARCH/REPLACE blocks found.)
