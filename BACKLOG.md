@@ -2,7 +2,7 @@
 
 ## 🔴 Priority Feature Pack (Correction Mode)
 
-- [ ] **Trends 2.0: Interactive Charts (Retry)**
+- [x] **Trends 2.0: Interactive Charts (Retry)**
     - *Previous Fail:* Agent tried to render 'MuscleSplitChart' without defining it first.
     - *Requirement:*
         1. Inject Chart.js CDN in index.html head.
