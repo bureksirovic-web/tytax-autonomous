@@ -14,7 +14,7 @@
         3. Ensure setCurrentWorkout is called with the updated deep copy.
     - *Safety:* Do NOT modify the 'History' tab logic. Only the active session.
 
-- [ ] **Clean up Home Page Footer (Retry)**
+- [x] **Clean up Home Page Footer (Retry)**
     - *Context:* The previous attempt caused a syntax error/blank screen.
     - *Requirement:* Simplify the footer text/links.
     - *QA:* Double-check that all <div> and <a> tags are properly closed to prevent a crash.
