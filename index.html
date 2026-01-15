@@ -4667,7 +4667,7 @@
                         {toast && <div className="fixed top-24 left-1/2 -translate-x-1/2 z-[250] bg-indigo-500 text-white px-8 py-4 rounded-3xl shadow-2xl font-black text-[10px] uppercase tracking-widest animate-pulse">{toast}</div>} 
     
                         {timerActive && ( 
-                            <div className="fixed top-24 left-6 right-6 md:left-auto md:right-10 md:w-96 z-[60] bg-indigo-900/90 backdrop-blur-xl rounded-full p-2 shadow-2xl border border-indigo-500/30 flex items-center justify-between pl-4">
+                            <div className="fixed bottom-32 left-6 right-6 md:bottom-10 md:left-auto md:right-10 md:w-96 z-[60] bg-indigo-900/90 backdrop-blur-xl rounded-full p-2 shadow-2xl border border-indigo-500/30 flex items-center justify-between pl-4">
                                 <div className="flex items-center gap-3">
                                     <Icon name="timer" className="text-indigo-400 w-4 h-4" />
                                     <span className="font-black text-white font-mono text-lg">{Math.floor(timer/60)}:{(timer%60).toString().padStart(2,'0')}</span>
