@@ -3985,55 +3985,49 @@
                                 </div>
 
                                 {/* Live Bar Chart */}
-                                <ImpactBarChart exercises={draft} setFilter={setFilter} />
+                                <div className="grid grid-cols-10 gap-1 h-16 items-end">
+                                     {['Chest', 'Back', 'Shoulders', 'Biceps', 'Triceps', 'Quads', 'Hamstrings', 'Glutes', 'Calves', 'Core'].map(group => {
+                                         // Calculate Real-Time Score for this Group
+                                         const score = draft.reduce((acc, ex) => {
+                                             const impact = getImpact(ex);
+                                             // Map specific muscles to broad groups
+                                             const matchScore = impact.reduce((s, i) => {
+                                                 const m = i.muscle; 
+                                                 let match = false;
+                                                 if (group === 'Chest' && m.includes('Chest')) match = true;
+                                                 if (group === 'Back' && (m === 'Lats' || m === 'Mid Back' || m.includes('Trap') || m.includes('Rhomboids') || m.includes('Erector') || m.includes('Back'))) match = true;
+                                                 if (group === 'Shoulders' && (m.includes('Delt') || m.includes('Rotator') || m.includes('Supraspinatus'))) match = true;
+                                                 if (group === 'Biceps' && (m === 'Biceps' || m.includes('Brach'))) match = true;
+                                                 if (group === 'Triceps' && m === 'Triceps') match = true;
+                                                 if (group === 'Quads' && m === 'Quads') match = true;
+                                                 if (group === 'Hamstrings' && m === 'Hamstrings') match = true;
+                                                 if (group === 'Glutes' && m.includes('Glute')) match = true;
+                                                 if (group === 'Calves' && (m === 'Calves' || m === 'Gastrocnemius' || m === 'Soleus')) match = true;
+                                                 if (group === 'Core' && (m === 'Abs' || m === 'Obliques' || m === 'Core' || m === 'Lower Back' || m === 'Spinal Erectors' || m === 'Serratus')) match = true;
+                                                 return match ? s + i.score : s;
+                                             }, 0);
+                                             // Double volume for unilateral exercises
+                                             return acc + (matchScore * (ex.unilateral ? 2 : 1));
+                                         }, 0);
+
+                                         // Normalize (Cap visual at 300 points)
+                                         const pct = Math.min(100, (score / 300) * 100);
+                                         
+                                         return (
+                                             <div key={group} className="flex flex-col items-center gap-1 h-full justify-end group cursor-pointer" onClick={() => setFilter(group.toUpperCase())}>
+                                                 <div className="w-full bg-slate-800/50 rounded-t-md relative h-full overflow-hidden">
+                                                     <div className={`absolute bottom-0 left-0 right-0 transition-all duration-500 ${pct >= 100 ? 'bg-emerald-500' : 'bg-indigo-500'}`} style={{height: `${pct}%`}} />
+                                                 </div>
+                                                 <span className="text-[6px] font-black text-slate-500 uppercase tracking-tighter group-hover:text-white leading-tight -rotate-45 mb-2 origin-left whitespace-nowrap">{group}</span>
+                                             </div>
+                                         );
+                                     })}
+                                </div>
                             </div>
                         </div>
                     </div>
                 );
             }
-        };
-
-        const ImpactBarChart = ({ exercises, setFilter }) => {
-            const [impactData, setImpactData] = useState(() => calculateImpactDistribution(exercises, true));
-
-            useEffect(() => {
-                setImpactData(calculateImpactDistribution(exercises, true));
-            }, [exercises]);
-
-            return (
-                <div className="grid grid-cols-10 gap-1 h-16 items-end">
-                    {['Chest', 'Back', 'Shoulders', 'Biceps', 'Triceps', 'Quads', 'Hamstrings', 'Glutes', 'Calves', 'Core'].map(group => {
-                        // Find the score for this group
-                        const score = impactData.reduce((acc, item) => {
-                            const m = item.muscle;
-                            let match = false;
-                            if (group === 'Chest' && m.includes('Chest')) match = true;
-                            if (group === 'Back' && (m === 'Lats' || m === 'Mid Back' || m.includes('Trap') || m.includes('Rhomboids') || m.includes('Erector') || m.includes('Back'))) match = true;
-                            if (group === 'Shoulders' && (m.includes('Delt') || m.includes('Rotator') || m.includes('Supraspinatus'))) match = true;
-                            if (group === 'Biceps' && (m === 'Biceps' || m.includes('Brach'))) match = true;
-                            if (group === 'Triceps' && m === 'Triceps') match = true;
-                            if (group === 'Quads' && m === 'Quads') match = true;
-                            if (group === 'Hamstrings' && m === 'Hamstrings') match = true;
-                            if (group === 'Glutes' && m.includes('Glute')) match = true;
-                            if (group === 'Calves' && (m === 'Calves' || m === 'Gastrocnemius' || m === 'Soleus')) match = true;
-                            if (group === 'Core' && (m === 'Abs' || m === 'Obliques' || m === 'Core' || m === 'Lower Back' || m === 'Spinal Erectors' || m === 'Serratus')) match = true;
-                            return match ? acc + item.score : acc;
-                        }, 0);
-
-                        // Normalize (Cap visual at 300 points)
-                        const pct = Math.min(100, (score / 300) * 100);
-
-                        return (
-                            <div key={group} className="flex flex-col items-center gap-1 h-full justify-end group cursor-pointer" onClick={() => setFilter(group.toUpperCase())}>
-                                <div className="w-full bg-slate-800/50 rounded-t-md relative h-full overflow-hidden">
-                                    <div className={`absolute bottom-0 left-0 right-0 transition-all duration-500 ${pct >= 100 ? 'bg-emerald-500' : 'bg-indigo-500'}`} style={{ height: `${pct}%` }} />
-                                </div>
-                                <span className="text-[6px] font-black text-slate-500 uppercase tracking-tighter group-hover:text-white leading-tight -rotate-45 mb-2 origin-left whitespace-nowrap">{group}</span>
-                            </div>
-                        );
-                    })}
-                </div>
-            );
         };
 
         const SessionDebrief = ({ duration, onComplete }) => {
@@ -4801,40 +4795,27 @@
 
                                 {/* GLOBAL HEATMAP */}
                                 {sessionOrder.length > 0 && (
-                                    <CollapsibleHeatmap globalImpact={globalImpact} />
+                                    <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
+                                        <div className="flex items-center gap-3">
+                                            <Icon name="trends" className="text-indigo-500 w-6 h-6" />
+                                            <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Global Heatmap</h3>
+                                        </div>
+                                        <div className="space-y-3">
+                                            {globalImpact.map((item, i) => (
+                                                <div key={i} className="space-y-1">
+                                                    <div className="flex justify-between text-[9px] font-black uppercase tracking-widest text-slate-400">
+                                                        <span>{item.muscle}</span>
+                                                        <span>{item.score}</span>
+                                                    </div>
+                                                    <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                                        <div className="h-full bg-indigo-500" style={{width: `${item.pct}%`}} />
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                        <p className="text-[9px] text-slate-500 font-bold italic text-center">Protocol Target Load Distribution</p>
+                                    </div>
                                 )}
- 
-const CollapsibleHeatmap = ({ globalImpact }) => {
-    const [isOpen, setIsOpen] = useState(true);
-
-    return (
-        <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
-            <div className="flex items-center justify-between cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
-                <div className="flex items-center gap-3">
-                    <Icon name="trends" className="text-indigo-500 w-6 h-6" />
-                    <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Global Heatmap</h3>
-                </div>
-                <Icon name={isOpen ? 'x' : 'bolt'} className="w-4 h-4 text-slate-500" />
-            </div>
-            {isOpen && (
-                <div className="space-y-3">
-                    {globalImpact.map((item, i) => (
-                        <div key={i} className="space-y-1">
-                            <div className="flex justify-between text-[9px] font-black uppercase tracking-widest text-slate-400">
-                                <span>{item.muscle}</span>
-                                <span>{item.score}</span>
-                            </div>
-                            <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
-                                <div className="h-full bg-indigo-500" style={{ width: `${item.pct}%` }} />
-                            </div>
-                        </div>
-                    ))}
-                    <p className="text-[9px] text-slate-500 font-bold italic text-center">Protocol Target Load Distribution</p>
-                </div>
-            )}
-        </div>
-    );
-};
  
                                 {/* PROTOCOL SWITCHER (ONLY IF ONLINE) */} 
                                 {sessionOrder.length > 0 && ( 
