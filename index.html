@@ -3922,13 +3922,13 @@
             const filteredExercises = metaLibrary.filter(ex => {
                 // 1. SMART CONTEXT FILTER
                 const currentSlot = programDraft[activeSlot];
-                const isSmartActive = useSmartFilter && filter === 'ALL' && search === '';
+                const isSmartActive = useSmartFilter; // Strict filtering even during search
                 
                 if (currentSlot && isSmartActive) {
                     const sessionName = currentSlot.name.toLowerCase();
-                    const isUpper = sessionName.includes('upper') || sessionName.includes('push'); // Removed 'pull' to allow deadlifts
-                    const isPull = sessionName.includes('pull');
+                    const isUpper = sessionName.includes('upper') || sessionName.includes('push');
                     const isLower = sessionName.includes('lower') || sessionName.includes('legs');
+                    const isPull = sessionName.includes('pull');
                     
                     const imp = getImpact(ex);
                     const hits = (mList) => imp.some(i => mList.some(m => i.muscle.toLowerCase().includes(m.toLowerCase()) && i.level === 'Primary'));
@@ -3937,15 +3937,15 @@
                     if (!isCore) {
                         if (isUpper) {
                             // Strict Upper: No Legs
-                            if (hits(['Quad', 'Hamstring', 'Glute', 'Calf', 'Calves'])) return false;
+                            if (hits(['Quad', 'Hamstring', 'Glute', 'Calf', 'Soleus', 'Gastrocnemius'])) return false;
+                        }
+                        if (isLower) {
+                            // Strict Lower: No Upper Body
+                            if (hits(['Chest', 'Back', 'Lat', 'Trap', 'Rhomboid', 'Delt', 'Shoulder', 'Bicep', 'Tricep', 'Forearm', 'Grip', 'Brach', 'Rotator'])) return false;
                         }
                         if (isPull) {
                             // Pull: Allow Back/Biceps/Rear Delt + Hamstrings/Glutes (Deadlifts). Exclude Quads/Push muscles.
-                            if (hits(['Quad', 'Chest', 'Tricep', 'Front Delt', 'Calf'])) return false;
-                        }
-                        if (isLower) {
-                            // Lower: No Upper Push/Pull (except maybe back for stability, but generally exclude)
-                            if (hits(['Chest', 'Back', 'Lat', 'Trap', 'Rhomboid', 'Delt', 'Shoulder', 'Bicep', 'Tricep', 'Forearm', 'Grip', 'Brach'])) return false;
+                            if (hits(['Quad', 'Chest', 'Tricep', 'Front Delt', 'Calf', 'Soleus'])) return false;
                         }
                     }
                 }
@@ -5425,8 +5425,6 @@
 
                         {(!userProfile && logs.length === 0) && <WelcomeWizard onComplete={(p) => {
                             setUserProfile(p);
-                            const defaultProto = PRESETS[0];
-                            applyLibraryData(defaultProto.data);
                             showToast(`Welcome, Commander ${p.name}`);
                         }} />}
                         
