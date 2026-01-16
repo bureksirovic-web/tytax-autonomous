@@ -60,6 +60,29 @@
                 </svg> 
             ); 
         }; 
+
+        // --- TOAST CONTEXT ---
+        const ToastContext = React.createContext(null);
+
+        const ToastProvider = ({ children }) => {
+            const [toast, setToast] = useState(null);
+
+            const showToast = (message) => {
+                setToast(message);
+                setTimeout(() => setToast(null), 3000);
+            };
+
+            return (
+                <ToastContext.Provider value={{ showToast }}>
+                    {children}
+                    {toast && (
+                        <div className="fixed top-4 left-1/2 -translate-x-1/2 z-[250] bg-indigo-500 text-white px-8 py-4 rounded-3xl shadow-2xl font-black text-[10px] uppercase tracking-widest animate-pulse">
+                            {toast}
+                        </div>
+                    )}
+                </ToastContext.Provider>
+            );
+        };
  
         // --- HELPER FUNCTIONS ---
         const normalizeStationName = (name) => {
@@ -5916,22 +5939,17 @@
             ); 
         }; 
  
-        const [toast, setToast] = useState(null); 
-
-        const showToast = (m) => { setToast(m); setTimeout(() => setToast(null), 3000); }; 
+        // Removed global toast state and showToast function, now handled by ToastProvider
+        // const [toast, setToast] = useState(null); 
+        // const showToast = (m) => { setToast(m); setTimeout(() => setToast(null), 3000); }; 
 
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(
-            <>
-                {toast && (
-                    <div className="fixed top-4 left-1/2 -translate-x-1/2 z-[250] bg-indigo-500 text-white px-8 py-4 rounded-3xl shadow-2xl font-black text-[10px] uppercase tracking-widest animate-pulse">
-                        {toast}
-                    </div>
-                )}
+            <ToastProvider>
                 <ErrorBoundary>
-                    <App showToast={showToast} />
+                    <App /> {/* showToast prop removed */}
                 </ErrorBoundary>
-            </>
+            </ToastProvider>
         );
     </script>
 </body>
