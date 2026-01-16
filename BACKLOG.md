@@ -22,7 +22,6 @@
     - *Goal:* Confirm Jules finds valid models without crashing.
     - *Action:* Add a comment to the top of index.html saying: "".
 
-- [ ] **Test: Complex String Parsing**
     - *Goal:* Test the new 'Strict Patching' engine.
     - *Action:* Find the <footer> and replace the copyright text with: "© 2026 TyTax Autonomous | Built by Jules Level 31".
 
@@ -30,3 +29,4 @@
     - *Goal:* See if the Critic allows a 'bad' change or if the Coder handles it.
     - *Action:* Change the background color of the 'Start Workout' button to 'red' (Note: This might violate design rules, let's see if it just does it).
 - [ ] **Test: Verify Model Auto-Discovery** (SKIPPED)
+- [ ] **Test: Complex String Parsing** (SKIPPED)
