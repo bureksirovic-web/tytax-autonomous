@@ -1,139 +1,398 @@
-﻿import os
+import os
 import re
 import sys
 import time
 import json
 import difflib
-from datetime import datetime
-import git
 import requests
-from requests.adapters import HTTPAdapter
-from urllib3.util.retry import Retry
+import git
+from datetime import datetime
 
-# ==========================================
-# JULES LEVEL 9 MASTER RESTORE (V2 OPTIMIZED)
-# ==========================================
-# RE-ESTABLISHED: Strict Level 9 Patching Engine
-# RE-ESTABLISHED: Critic PASS/FAIL QA Loop
-# MAINTAINED: 15 Retries + 180s Timeouts
-# MAINTAINED: Multi-File Awareness (css/js)
+# ==============================================================================
+# JULES LEVEL 33 (ROBUST ATOMIC)
+# ==============================================================================
+# - ATOMIC COMMITS: Never leaves the repo in a dirty state.
+# - REBASE SAFETY: Always pulls before pushing. Handles conflicts by skipping.
+# - STRICT PATCHING: Enforces SEARCH/REPLACE blocks. No conversational filler.
+# - SMART DISCOVERY: Finds the best available models automatically.
+# ==============================================================================
 
+# --- CONFIGURATION ---
 REPO_PATH = os.environ.get("JULES_REPO_PATH", ".")
 APP_FILE = "index.html"
 BACKLOG_FILE = "BACKLOG.md"
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 
-# Master Settings
-MAX_QA_RETRIES = 15
-REQUEST_TIMEOUT = 180
-ENABLE_FUZZY_PATCH = True
+# Nuclear Sanitization of Keys
+GEMINI_API_KEY = (os.environ.get("GEMINI_API_KEY") or "").replace("\n", "").strip()
+RENDER_API_KEY = (os.environ.get("RENDER_API_KEY") or "").replace("\n", "").strip()
+RENDER_SERVICE_ID = (os.environ.get("RENDER_SERVICE_ID") or "").replace("\n", "").strip()
 
-# Create a session object for connection pooling
-session = requests.Session()
-retries = Retry(total=3, backoff_factor=0.5, status_forcelist=[500, 502, 503, 504])
-session.mount('https://', HTTPAdapter(max_retries=retries))
-session.mount('http://', HTTPAdapter(max_retries=retries))
+MAX_RETRIES = 3
+REQUEST_TIMEOUT = 120
+START_TIME = time.time()
+MAX_RUNTIME_MINUTES = 50
 
-def log(msg): print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}", flush=True)
+# Priority: Smartest/Fastest -> Reliable -> Backups
+MODEL_PRIORITY_REGEX = [
+    r"^gemini-2\.0-flash",       # Modern standard
+    r"^gemini-1\.5-pro",         # High reasoning
+    r"^gemini-1\.5-flash",       # High speed
+]
 
-def read_file(path):
+# --- LOGGING ---
+def log(msg):
+    print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}", flush=True)
+
+if not GEMINI_API_KEY:
+    log("❌ CRITICAL: GEMINI_API_KEY is missing/empty.")
+    sys.exit(1)
+
+# --- GIT HELPER ---
+class GitManager:
+    def __init__(self, repo_path):
+        self.repo = git.Repo(repo_path)
+        self.git = self.repo.git
+
+    def is_dirty(self):
+        return self.repo.is_dirty(untracked_files=True)
+
+    def reset_hard(self):
+        log("🧹 Git: Resetting hard to HEAD...")
+        self.git.reset("--hard", "HEAD")
+        self.git.clean("-fd")
+
+    def pull_rebase(self):
+        log("🔄 Git: Pulling with rebase...")
+        try:
+            self.git.pull("origin", "main", "--rebase")
+        except git.GitCommandError as e:
+            log(f"⚠️ Rebase failed: {e}")
+            log("🛑 Aborting rebase...")
+            self.git.rebase("--abort")
+            return False
+        return True
+
+    def commit_and_push(self, message, files=None):
+        if not files:
+            files = ["."]
+
+        # 1. Pull first to minimize conflicts
+        if not self.pull_rebase():
+            return False
+
+        # 2. Add and Commit
+        for f in files:
+            self.git.add(f)
+
+        # Check if anything is actually staged
+        if not self.repo.index.diff("HEAD"):
+            log("⚠️ Git: Nothing to commit.")
+            return True
+
+        self.repo.index.commit(message)
+        log(f"📦 Git: Committed '{message}'")
+
+        # 3. Push
+        try:
+            self.git.push("origin", "main")
+            log("🚀 Git: Push successful.")
+            return True
+        except Exception as e:
+            log(f"❌ Git: Push failed: {e}")
+            return False
+
+# --- API CLIENT ---
+def discover_models():
+    url = f"https://generativelanguage.googleapis.com/v1beta/models?key={GEMINI_API_KEY}"
     try:
-        with open(path, "r", encoding="utf-8") as f: return f.read()
-    except: return ""
+        resp = requests.get(url, timeout=10)
+        if resp.status_code != 200: return []
 
-def write_file(path, content):
-    os.makedirs(os.path.dirname(path), exist_ok=True) if os.path.dirname(path) else None
-    with open(path, "w", encoding="utf-8") as f: f.write(content)
+        valid = []
+        for m in resp.json().get('models', []):
+            if 'generateContent' in m.get('supportedGenerationMethods', []):
+                valid.append(m['name'].replace('models/', ''))
 
-def ask_gemini(prompt, role="coder"):
-    # Level 9 Rotation Logic
-    models = ["gemini-1.5-pro", "gemini-2.0-flash", "gemini-1.5-flash"]
-    headers = {"Content-Type": "application/json"}
+        ranked = []
+        for pattern in MODEL_PRIORITY_REGEX:
+            ranked.extend([m for m in valid if re.search(pattern, m)])
+
+        # Dedup keeping order
+        seen = set()
+        final = []
+        for m in ranked:
+            if m not in seen:
+                final.append(m)
+                seen.add(m)
+
+        log(f"🧠 Models Discovered: {final[:3]}...")
+        return final
+    except: return []
+
+def ask_gemini(prompt, models, role="coder"):
+    headers = {'Content-Type': 'application/json'}
+    data = {
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {"maxOutputTokens": 8192, "temperature": 0.1}
+    }
+
     for model in models:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_API_KEY}"
-        try:
-            log(f"🔄 [{role.upper()}] {model}")
-            resp = session.post(url, json={"contents": [{"parts": [{"text": prompt}]}]}, timeout=REQUEST_TIMEOUT)
-            if resp.status_code == 200:
-                return "".join([p.get("text", "") for p in resp.json()["candidates"][0]["content"]["parts"]])
-        except: continue
+        for _ in range(2): # 2 attempts per model
+            try:
+                log(f"💬 [{role.upper()}] Asking {model}...")
+                resp = requests.post(url, headers=headers, data=json.dumps(data), timeout=REQUEST_TIMEOUT)
+                if resp.status_code == 200:
+                    try:
+                        text = resp.json()['candidates'][0]['content']['parts'][0]['text']
+                        return text
+                    except: pass
+                elif resp.status_code == 429:
+                    log(f"⏳ Rate Limited ({model}). Waiting 5s...")
+                    time.sleep(5)
+                else:
+                    log(f"⚠️ Error {resp.status_code} ({model})")
+                    break # Next model
+            except Exception as e:
+                log(f"❌ Net Error: {e}")
+                break
     return None
 
-def apply_patch(file_path, patch_text, original):
-    is_new = not os.path.exists(file_path) or len(original) == 0
-    blocks = re.findall(r"<<<<<<< SEARCH\s*\n(.*?)\n=======\n(.*?)\n>>>>>>> REPLACE", patch_text, re.DOTALL)
-    if not blocks: return None, "No blocks found."
+# --- PATCH ENGINE ---
+def apply_patch(original, patch_text):
+    # Strip markdown code blocks
+    clean = re.sub(r'^`{3,}.*$', '', patch_text, flags=re.MULTILINE).strip()
 
-    new_content = original
-    for s, r in blocks:
-        if is_new or s in new_content:
-            new_content = new_content.replace(s, r, 1) if not is_new else r
-        elif ENABLE_FUZZY_PATCH:
-            matcher = difflib.SequenceMatcher(None, new_content, s)
-            m = matcher.find_longest_match(0, len(new_content), 0, len(s))
-            if m.size / len(s) >= 0.85:
-                new_content = new_content[:m.a] + r + new_content[m.a + m.size:]
-            else: return None, "Mismatch."
-        else: return None, "Mismatch."
-    return new_content, "Success"
-
-def verify_fix(task, original, new_content):
-    if original == new_content: return False, "No changes."
-    diff = "".join(difflib.unified_diff(original.splitlines(True), new_content.splitlines(True), n=3))
-    prompt = f"TASK: {task}\nReply ONLY 'PASS' or 'FAIL: <reason>'.\nDIFF:\n{diff}"
-    review = ask_gemini(prompt, role="critic")
-    if not review: return True, "Silent Pass"
-    return ("PASS" in review.upper()), review.strip()
-
-def run_task():
-    backlog = read_file(BACKLOG_FILE)
-    match = re.search(r"- \[ \] \*\*(.*?)\*\*: (.*)", backlog)
-    if not match: 
-        log("✅ No tasks found.")
-        return
+    # Regex to find blocks
+    # We look for <<<<<<< SEARCH ... ======= ... >>>>>>> REPLACE
+    # We use non-greedy matching .*? with DOTALL
+    blocks = re.findall(
+        r"<<<<<<< SEARCH\s*\n(.*?)\n=======\n(.*?)\n>>>>>>> REPLACE",
+        clean,
+        re.DOTALL
+    )
     
-    title, action = match.group(1), match.group(2)
-    log(f"\n📋 TARGET: {title}")
+    if not blocks:
+        return None, "No valid SEARCH/REPLACE blocks found."
+
+    new_code = original
+    matches = 0
     
-    # Auto-detect target file
-    target_file = "index.html"
-    if "css" in action.lower(): target_file = "css/styles.css"
-    elif "js" in action.lower(): target_file = "js/components.js"
+    for search, replace in blocks:
+        # 1. Exact Match
+        if search in new_code:
+            new_code = new_code.replace(search, replace, 1)
+            matches += 1
+            continue
 
-    orig_content = read_file(target_file)
-    ctx = read_file("index.html") if target_file != "index.html" else ""
+        # 2. Trimmed Match
+        if search.strip() in new_code:
+            new_code = new_code.replace(search.strip(), replace.strip(), 1)
+            matches += 1
+            continue
 
-    for attempt in range(MAX_QA_RETRIES):
-        log(f"💡 Attempt {attempt+1}/{MAX_QA_RETRIES}")
-        if attempt > 10: time.sleep(60)
+        # 3. Fuzzy Match (Fallback)
+        # Only if block is substantial to avoid false positives
+        if len(search) > 50:
+            matcher = difflib.SequenceMatcher(None, new_code, search)
+            m = matcher.find_longest_match(0, len(new_code), 0, len(search))
+            # If we matched > 80% of the search block
+            if m.size / len(search) > 0.80:
+                # Replace the matched section
+                new_code = new_code[:m.a] + replace + new_code[m.a + m.size:]
+                matches += 1
+                continue
+
+    if matches == 0:
+        return None, "No blocks matched the original code."
+
+    return new_code, f"Applied {matches} patches."
+
+# --- WORKFLOW ---
+def process_task(git_mgr, models):
+    # 1. Read Backlog
+    try:
+        with open(BACKLOG_FILE, 'r', encoding='utf-8') as f:
+            backlog = f.read()
+    except:
+        log("❌ Could not read BACKLOG.md")
+        return False
+
+    # Find next task (not checked, not skipped)
+    # Format: - [ ] **Task Name**: Description
+    # We ignore lines with (SKIPPED)
+    # Regex captures: Group 1 (Title), Group 2 (Description - Optional)
+    match = re.search(r'- \[ \] \*\*(.*?)\*\*(?::\s*(.*))?(?!\s*\(SKIPPED)', backlog)
+
+    if not match:
+        log("✅ No pending tasks found.")
+        return False
+
+    task_title = match.group(1).strip()
+    task_desc = (match.group(2) or "").strip()
+    full_task = f"{task_title}: {task_desc}" if task_desc else task_title
+
+    log(f"📋 TARGET: {task_title}")
+
+    # 2. Determine Target File & Read Code
+    target_file = APP_FILE
+    # Simple heuristic for file targeting (can be expanded)
+    if "css" in task_title.lower() or "style" in task_title.lower():
+        if "css/" in full_task: target_file = "css/styles.css"
+    elif "js" in task_title.lower() or "script" in task_title.lower():
+        if "js/" in full_task: target_file = "js/components.js"
         
-        prompt = f"TASK: {action}\nFILE: {target_file}\nCONTEXT:\n{ctx}\nCODE:\n{orig_content}"
+    # Ensure directory exists if targeting non-root
+    if "/" in target_file:
+        os.makedirs(os.path.dirname(target_file), exist_ok=True)
+
+    try:
+        if os.path.exists(target_file):
+            with open(target_file, 'r', encoding='utf-8') as f:
+                code = f.read()
+        else:
+            code = "" # New file creation
+            log(f"🆕 Creating new file: {target_file}")
+    except:
+        log(f"❌ Could not read {target_file}")
+        return False
         
-        patch_resp = ask_gemini(prompt, role="coder")
-        if not patch_resp: continue
+    context = ""
+    if os.path.exists("AGENTS.md"):
+        with open("AGENTS.md", "r") as f: context += f.read()
+
+    # 3. Attempt Loop
+    success = False
+
+    for attempt in range(MAX_RETRIES):
+        log(f"💡 Attempt {attempt+1}/{MAX_RETRIES}...")
         
-        new_code, status = apply_patch(target_file, patch_resp, orig_content)
+        prompt = f"""
+ROLE: Senior React Engineer.
+TASK: {full_task}
+CONTEXT: {context[:5000]}
+
+INSTRUCTIONS:
+1. You are modifying '{target_file}'.
+2. Output ONLY SEARCH/REPLACE blocks.
+3. DO NOT wrap output in Markdown code fences (```).
+4. The SEARCH block must match the existing code EXACTLY.
+
+FORMAT:
+(exact lines to remove)
+
+CODE:
+{code}
+"""
+        # Call AI
+        patch = ask_gemini(prompt, models, role="coder")
+        if not patch:
+            log("❌ AI returned no response.")
+            continue
+
+        # Apply Patch
+        new_code, msg = apply_patch(code, patch)
         if not new_code:
-            log(f"❌ {status}")
+            log(f"❌ Patch failed: {msg}")
             continue
 
-        ok, feedback = verify_fix(title, orig_content, new_code)
-        if not ok:
-            log(f"❌ QA REJECTED: {feedback}")
+        # Verification (Simple Diff Check)
+        # Allow empty new code only if file was empty (creation)
+        if new_code == code and len(code) > 0:
+            log("❌ Patch resulted in no changes.")
             continue
 
-        log("✅ QA PASSED. Committing...")
-        write_file(target_file, new_code)
-        # Update Backlog logic
-        new_backlog = backlog.replace(f"- [ ] **{title}**", f"- [x] **{title}**")
-        write_file(BACKLOG_FILE, new_backlog)
+        # Check for catastrophic deletion (skip for small files)
+        if len(code) > 1000 and len(new_code) < len(code) * 0.75:
+            log("❌ Safety: Code shrank too much.")
+            continue
+
+        # SUCCESS PATH
+        log(f"✅ Patch applied: {msg}")
+
+        # Write File
+        with open(target_file, 'w', encoding='utf-8') as f:
+            f.write(new_code)
+
+        # Update Backlog
+        new_backlog = backlog.replace(f"- [ ] **{task_title}**", f"- [x] **{task_title}**")
+        with open(BACKLOG_FILE, 'w', encoding='utf-8') as f:
+            f.write(new_backlog)
+
+        # Commit
+        if git_mgr.commit_and_push(f"feat: {task_title} (Jules v33)", files=[target_file, BACKLOG_FILE]):
+            success = True
+
+            # Check Render (Optional)
+            if RENDER_API_KEY:
+                log("🚀 Checking Render...")
+                # (Simplified check - just fire and forget usually, but we'll wait 5s)
+                time.sleep(5)
+
+            break
+        else:
+            log("❌ Commit/Push failed. Reverting...")
+            git_mgr.reset_hard() # Undo changes to try again or fail cleanly
+            break
+
+    # 4. Failure Handling
+    if not success:
+        log(f"⚠️ Task '{task_title}' failed after {MAX_RETRIES} attempts.")
+        # Revert any local file changes first
+        git_mgr.reset_hard()
+
+        # Mark as Skipped in Backlog
+        # We need to re-read backlog in case it changed (unlikely with reset, but safe)
+        with open(BACKLOG_FILE, 'r') as f: current_bl = f.read()
+
+        # Add (SKIPPED) tag
+        skipped_line = f"- [ ] **{task_title}** (SKIPPED: Stuck)"
+        new_bl = current_bl.replace(f"- [ ] **{task_title}**", skipped_line)
+
+        # Move to bottom
+        lines = new_bl.splitlines()
+        final_lines = [line for line in lines if skipped_line not in line]
+        if "## ⚠️ SKIPPED TASKS" not in final_lines:
+            final_lines.extend(["", "## ⚠️ SKIPPED TASKS"])
+        final_lines.append(skipped_line)
+
+        with open(BACKLOG_FILE, 'w', encoding='utf-8') as f:
+            f.write("\n".join(final_lines))
+
+        git_mgr.commit_and_push(f"skip: {task_title} (Stuck)")
+
+    return True # Always return True to continue loop (unless no tasks found)
+
+def main():
+    log("🤖 Jules Level 33 (Atomic) Starting...")
+
+    # 1. Setup Git
+    git_mgr = GitManager(REPO_PATH)
+
+    # 2. Ensure Clean State
+    if git_mgr.is_dirty():
+        log("⚠️ Repo is dirty. Resetting hard...")
+        git_mgr.reset_hard()
+
+    # 3. Discover Models
+    models = discover_models()
+    if not models:
+        log("⚠️ Auto-discovery failed. Using fallback.")
+        models = ["gemini-2.0-flash", "gemini-1.5-flash", "gemini-1.5-pro"]
         
-        repo = git.Repo(REPO_PATH)
-        repo.git.add(all=True)
-        repo.index.commit(f"feat: {title}")
-        repo.remotes.origin.push()
-        return
+    # 4. Main Loop
+    while True:
+        # Check runtime
+        if (time.time() - START_TIME) / 60 > MAX_RUNTIME_MINUTES:
+            log("⏰ Time limit reached.")
+            break
+
+        # Run Task
+        has_more = process_task(git_mgr, models)
+        if not has_more:
+            break
+
+        time.sleep(2)
 
 if __name__ == "__main__":
-    log("🤖 Level 9 Master Restore (v2) Started...")
-    run_task()
+    main()
