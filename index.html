@@ -72,30 +72,48 @@
             return 'OTHER';
         };
 
-        const normalizeMuscleName = (name) => {
-            if (!name) return 'Other';
-            const n = name.toUpperCase().trim();
-            
-            // MAP USER JSON KEYS -> SYSTEM KEYS
-            if (n.includes('CHEST') || n.includes('PECTORALIS')) return 'Chest';
-            if (n.includes('LATISSIMUS') || n.includes('LATS') || n.includes('BACK - VERTICAL')) return 'Lats';
-            if (n.includes('TRAPEZIUS') || n.includes('RHOMBOIDS') || n.includes('BACK - HORIZONTAL')) return 'Mid Back';
-            if (n.includes('ANTERIOR DELT') || n.includes('FRONT DELT')) return 'Front Delts';
-            if (n.includes('LATERAL DELT') || n.includes('SIDE DELT')) return 'Side Delts';
-            if (n.includes('POSTERIOR DELT') || n.includes('REAR DELT')) return 'Rear Delts';
-            if (n.includes('DELTOID') || n.includes('SHOULDER')) return 'Delts';
-            if (n.includes('BICEPS')) return 'Biceps';
-            if (n.includes('TRICEPS')) return 'Triceps';
-            if (n.includes('QUADRICEPS') || n.includes('QUADS')) return 'Quads';
-            if (n.includes('HAMSTRINGS')) return 'Hamstrings';
-            if (n.includes('GLUTE') || n.includes('GLUTEUS')) return 'Glutes';
-            if (n.includes('CALVES') || n.includes('GASTROCNEMIUS') || n.includes('SOLEUS')) return 'Calves';
-            if (n.includes('RECTUS ABDOMINIS') || n.includes('OBLIQUES') || n.includes('CORE')) return 'Core';
-            if (n.includes('FOREARM') || n.includes('GRIP')) return 'Forearms';
+        const normalizeMuscleName = (() => {
+            const cache = new Map();
+            const rules = [
+                { keys: ['CHEST', 'PECTORALIS'], result: 'Chest' },
+                { keys: ['LATISSIMUS', 'LATS', 'BACK - VERTICAL'], result: 'Lats' },
+                { keys: ['TRAPEZIUS', 'RHOMBOIDS', 'BACK - HORIZONTAL'], result: 'Mid Back' },
+                { keys: ['ANTERIOR DELT', 'FRONT DELT'], result: 'Front Delts' },
+                { keys: ['LATERAL DELT', 'SIDE DELT'], result: 'Side Delts' },
+                { keys: ['POSTERIOR DELT', 'REAR DELT'], result: 'Rear Delts' },
+                { keys: ['DELTOID', 'SHOULDER'], result: 'Delts' },
+                { keys: ['BICEPS'], result: 'Biceps' },
+                { keys: ['TRICEPS'], result: 'Triceps' },
+                { keys: ['QUADRICEPS', 'QUADS'], result: 'Quads' },
+                { keys: ['HAMSTRINGS'], result: 'Hamstrings' },
+                { keys: ['GLUTE', 'GLUTEUS'], result: 'Glutes' },
+                { keys: ['CALVES', 'GASTROCNEMIUS', 'SOLEUS'], result: 'Calves' },
+                { keys: ['RECTUS ABDOMINIS', 'OBLIQUES', 'CORE'], result: 'Core' },
+                { keys: ['FOREARM', 'GRIP'], result: 'Forearms' }
+            ];
 
-            // Fallback: Capitalize first letter
-            return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
-        };
+            return (name) => {
+                if (!name) return 'Other';
+                if (cache.has(name)) return cache.get(name);
+
+                const n = name.toUpperCase().trim();
+                let result = null;
+
+                for (const rule of rules) {
+                    if (rule.keys.some(k => n.includes(k))) {
+                        result = rule.result;
+                        break;
+                    }
+                }
+
+                if (!result) {
+                    result = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+                }
+
+                cache.set(name, result);
+                return result;
+            };
+        })();
 
         const getImpact = (exercise) => {
             // Check for v2.1 structured impact (Array)
