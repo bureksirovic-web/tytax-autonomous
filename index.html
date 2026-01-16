@@ -4599,7 +4599,6 @@
             const [selectedSession, setSelectedSession] = useState(null); 
             const [currentWorkout, setCurrentWorkout] = useState(null); 
             const [libraryInput, setLibraryInput] = useState(""); 
-            const [toast, setToast] = useState(null); 
             const [stopwatch, setStopwatch] = useState(0); 
             const [timer, setTimer] = useState(0); 
             const [timerActive, setTimerActive] = useState(false); 
@@ -4611,6 +4610,8 @@
             const [swappingIdx, setSwappingIdx] = useState(null);
             const [editingLog, setEditingLog] = useState(null);
  
+            const { showToast } = React.useContext(ToastContext); // Use ToastContext for showToast
+
             useEffect(() => { 
                 localStorage.setItem('tytax_logs', JSON.stringify(logs)); 
                 localStorage.setItem('tytax_session_order', JSON.stringify(sessionOrder)); 
@@ -4712,8 +4713,6 @@
                 };
             }, [activeTab, timerActive]);
  
-            const showToast = (m) => { setToast(m); setTimeout(() => setToast(null), 3000); }; 
-
             const exportCSV = () => {
                 const headers = ["Date,Session,Exercise,Set,KG,Reps,RIR,e1RM"];
                 const rows = logs.flatMap(l => l.exercises.flatMap(e => e.sets.filter(s => s.done).map((s, i) => `${new Date(l.date).toLocaleDateString()},${l.session},"${e.name}",${i+1},${s.kg},${s.reps},${s.rir},${calculateE1RM(s.kg, s.reps)}`)));
