@@ -279,11 +279,7 @@ INSTRUCTIONS:
 4. The SEARCH block must match the existing code EXACTLY.
 
 FORMAT:
-<<<<<<< SEARCH
 (exact lines to remove)
-=======
-(new lines to insert)
->>>>>>> REPLACE
 
 CODE:
 {code}
