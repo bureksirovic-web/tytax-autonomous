@@ -35,7 +35,7 @@ def read_file(filename):
 def write_file(filename, content):
     with open(filename, 'w', encoding='utf-8') as f: f.write(content)
 
-# --- AUTO-DISCOVERY ENGINE ---
+# --- AUTO-DISCOVERY ENGINE (The Fix) ---
 def discover_models():
     """Queries the API to find valid models instead of guessing."""
     log("🔍 Auto-Discovering available models...")
@@ -53,27 +53,18 @@ def discover_models():
         # 1. Filter for 'generateContent' support
         for m in data.get('models', []):
             if 'generateContent' in m.get('supportedGenerationMethods', []):
-                # Strip 'models/' prefix if present
+                # Strip 'models/' prefix
                 name = m['name'].replace('models/', '')
                 valid_models.append(name)
         
-        # 2. Priority Ranking (2.0 > 1.5 > Pro > Flash)
+        # 2. Priority Ranking (Smartest -> Fastest -> Fallback)
         ranked = []
-        
-        # Priority 1: Gemini 2.0 (Smartest/Fastest)
-        ranked.extend([m for m in valid_models if 'gemini-2.0' in m])
-        
-        # Priority 2: Gemini 1.5 Flash (Reliable)
-        ranked.extend([m for m in valid_models if 'gemini-1.5-flash' in m and m not in ranked])
-        
-        # Priority 3: Gemini 1.5 Pro (High Logic)
-        ranked.extend([m for m in valid_models if 'gemini-1.5-pro' in m and m not in ranked])
-        
-        # Priority 4: Anything else
-        ranked.extend([m for m in valid_models if m not in ranked])
+        ranked.extend([m for m in valid_models if 'gemini-2.0' in m])       # Bleeding Edge
+        ranked.extend([m for m in valid_models if 'gemini-1.5-pro' in m])   # High Logic
+        ranked.extend([m for m in valid_models if 'gemini-1.5-flash' in m]) # High Speed
         
         log(f"✅ Discovered {len(ranked)} usable models.")
-        log(f"📋 Priority Stack: {ranked[:5]}...")
+        log(f"📋 Priority Stack: {ranked[:3]}...")
         return ranked
 
     except Exception as e:
@@ -88,11 +79,11 @@ def ask_gemini(prompt, model_list, role="coder"):
         "generationConfig": {"maxOutputTokens": 8192, "temperature": 0.1}
     }
     
-    # Try the discovered models in order
+    # Rotate through discovered models
     for model in model_list:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_API_KEY}"
         
-        for attempt in range(1): # Single attempt per model to fail fast and rotate
+        for attempt in range(1): # Fail fast to rotate
             try:
                 log(f"🔄 [{role.upper()}] Asking {model}...")
                 resp = requests.post(url, headers=headers, data=json.dumps(data), timeout=REQUEST_TIMEOUT)
@@ -103,9 +94,9 @@ def ask_gemini(prompt, model_list, role="coder"):
                     except: return None
                 elif resp.status_code == 429:
                     log(f"⏳ {model} Rate Limit. Rotating...")
-                    break # Next model
+                    break 
                 elif resp.status_code == 404:
-                    log(f"🚫 {model} returned 404 (Unexpected). Rotating...")
+                    log(f"🚫 {model} Not Found. Rotating...")
                     break
                 else:
                     log(f"❌ Error {resp.status_code}: {resp.text[:100]}...")
