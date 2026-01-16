@@ -26,6 +26,9 @@ MAX_QA_RETRIES = 15
 REQUEST_TIMEOUT = 180
 ENABLE_FUZZY_PATCH = True
 
+# Create a session object for connection pooling
+session = requests.Session()
+
 def log(msg): print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}", flush=True)
 
 def read_file(path):
@@ -45,7 +48,7 @@ def ask_gemini(prompt, role="coder"):
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_API_KEY}"
         try:
             log(f"🔄 [{role.upper()}] {model}")
-            resp = requests.post(url, json={"contents": [{"parts": [{"text": prompt}]}]}, timeout=REQUEST_TIMEOUT)
+            resp = session.post(url, json={"contents": [{"parts": [{"text": prompt}]}]}, timeout=REQUEST_TIMEOUT)
             if resp.status_code == 200:
                 return "".join([p.get("text", "") for p in resp.json()["candidates"][0]["content"]["parts"]])
         except: continue
