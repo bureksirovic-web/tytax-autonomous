@@ -7,41 +7,60 @@ import time
 import sys
 import random
 import difflib
+from datetime import datetime
 
-# --- CONFIGURATION ---
+# --- CONFIGURATION & ENV ---
 REPO_PATH = "."
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 RENDER_API_KEY = os.environ.get("RENDER_API_KEY")
-RENDER_SERVICE_ID = "srv-d5jlon15pdvs739hp3jg"
-SITE_URL = "https://tytax-elite.onrender.com"
+RENDER_SERVICE_ID = os.environ.get("RENDER_SERVICE_ID")
+SITE_URL = os.environ.get("SITE_URL", "https://tytax-elite.onrender.com")
 
-# INCREASED RETRIES: We have more models, so we can try more times.
-MAX_QA_RETRIES = 4 
-MAX_RUNTIME_MINUTES = 60
+# DRY RUN: If set to '1', disables Git Push and Render checks
+DRY_RUN = os.environ.get("DRY_RUN", "0") == "1"
+
+# Timing & Retries
+MAX_QA_RETRIES = int(os.environ.get("MAX_QA_RETRIES", 4))
+MAX_RUNTIME_MINUTES = int(os.environ.get("MAX_RUNTIME_MINUTES", 60))
+REQUEST_TIMEOUT = 60  # seconds
+
+# Model Configuration
+def get_model_list(env_var, defaults):
+    val = os.environ.get(env_var)
+    if val:
+        return [m.strip() for m in val.split(",") if m.strip()]
+    return defaults
+
+# UPDATED: Use known working models first to save time, but keep 3.0 preview as first option if available.
+CODER_MODELS = get_model_list("JULES_CODER_MODELS", [
+    "gemini-2.0-flash",        # 1. The Speed Demon (Proven working)
+    "gemini-2.0-flash-exp",    # 2. Reliable Backup
+    "gemini-1.5-flash",        # 3. Old Reliable
+    "gemini-3-pro-preview"     # 4. Break Glass (Smarter but limited)
+])
+
+CRITIC_MODELS = get_model_list("JULES_CRITIC_MODELS", [
+    "gemini-1.5-pro",          # 1. High Intelligence Reviewer
+    "gemini-2.0-flash"         # 2. Fast Check
+])
+
+# Generation Configs
+CODER_CONFIG = {"maxOutputTokens": 8192, "temperature": 0.1}
+CRITIC_CONFIG = {"maxOutputTokens": 1024, "temperature": 0.0}
+
+# Global State
 START_TIME = time.time()
+UNAVAILABLE_MODELS = set() # Tracks models that returned 404
 
 def log(message):
-    print(message, flush=True)
+    timestamp = datetime.now().strftime("%H:%M:%S")
+    print(f"[{timestamp}] {message}", flush=True)
 
 if not GEMINI_API_KEY:
-    raise ValueError("GEMINI_API_KEY missing!")
+    log("❌ ERROR: GEMINI_API_KEY missing!")
+    sys.exit(1)
 
-# --- THE NEW MULTI-LANE BRAIN ---
-# Lane 1: The Architect (Complex Logic)
-# Lane 2: The Engineer (Fast Coding)
-# Lane 3: The Critic (Review Only)
-
-CODER_MODELS = [
-    "gemini-3-pro-preview",    # 1. Primary Genius
-    "gemini-3-flash",          # 2. Smart & Fast (New 3.0 Model)
-    "gemini-2.5-flash",        # 3. Backup Workhorse
-    "gemini-2.0-flash"         # 4. Last Resort
-]
-
-CRITIC_MODELS = [
-    "gemini-2.5-pro",          # 1. The Expert Reviewer (Unused Quota)
-    "gemini-2.0-flash"         # 2. Fast Check
-]
+# --- UTILS ---
 
 def read_file(filename):
     try:
@@ -52,23 +71,168 @@ def read_file(filename):
 def write_file(filename, content):
     with open(filename, 'w', encoding='utf-8') as f: f.write(content)
 
-# --- SYSTEM CONTEXT LOADER (RAG) ---
+def truncate_content(content, max_chars=12000):
+    """Truncates large context to save TPM, keeping head and tail."""
+    if len(content) <= max_chars:
+        return content
+    half = max_chars // 2
+    return content[:half] + "\n\n... [TRUNCATED SYSTEM CONTEXT] ...\n\n" + content[-half:]
+
 def get_system_context():
     context_buffer = ""
     doc_files = ["AGENTS.md", "ARCHITECTURE.md", "TESTING_PROTOCOL.md"]
+    
     for doc in doc_files:
         content = read_file(doc)
         if content:
+            content = truncate_content(content)
             context_buffer += f"\n\n=== SYSTEM CONTEXT: {doc} ===\n{content}\n"
-            log(f"🧠 Loaded context from {doc}")
+    
+    total_len = len(context_buffer)
+    log(f"🧠 Loaded System Context (~{total_len} chars)")
     return context_buffer
 
-def get_next_task():
+# --- GEMINI API ENGINE ---
+
+def extract_text_from_response(response_json):
     try:
-        content = read_file("BACKLOG.md")
-        match = re.search(r'- \[ \] \*\*(.*?)\*\*', content)
-        return match.group(1).strip() if match else None
-    except: return None
+        if 'candidates' in response_json and response_json['candidates']:
+            parts = response_json['candidates'][0]['content']['parts']
+            return "".join([p.get("text", "") for p in parts])
+    except (KeyError, IndexError, TypeError) as e:
+        log(f"⚠️ Failed to extract text from JSON: {e}")
+    return None
+
+def call_gemini_api(model, prompt, generation_config):
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_API_KEY}"
+    headers = {'Content-Type': 'application/json'}
+    data = {
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": generation_config
+    }
+
+    try:
+        response = requests.post(url, headers=headers, data=json.dumps(data), timeout=REQUEST_TIMEOUT)
+    except requests.exceptions.RequestException as e:
+        log(f"❌ Network Error ({model}): {e}")
+        return None, 0 
+
+    return response.json(), response.status_code
+
+def ask_gemini_swarm(prompt, role="coder"):
+    models = CODER_MODELS if role == "coder" else CRITIC_MODELS
+    config = CODER_CONFIG if role == "coder" else CRITIC_CONFIG
+    
+    for model in models:
+        if model in UNAVAILABLE_MODELS:
+            continue 
+
+        max_retries = 2
+        for attempt in range(max_retries + 1):
+            log(f"🔄 [{role.upper()}] {model} (Attempt {attempt+1})...")
+            
+            response_json, status_code = call_gemini_api(model, prompt, config)
+
+            if status_code == 200:
+                text = extract_text_from_response(response_json)
+                if text:
+                    return text
+                else:
+                    log(f"⚠️ Empty response from {model}")
+                    break 
+            
+            elif status_code == 429:
+                log(f"⏳ 429 Rate Limit on {model}")
+                sleep_time = 2 * (2 ** attempt) + random.uniform(0, 1)
+                if attempt < max_retries:
+                    log(f"   Sleeping {sleep_time:.2f}s...")
+                    time.sleep(sleep_time)
+                else:
+                    log(f"   Skipping {model} due to persistent 429.")
+            
+            elif status_code == 404:
+                log(f"🚫 Model Not Found: {model}. Marking unavailable.")
+                UNAVAILABLE_MODELS.add(model)
+                break 
+            
+            elif status_code >= 500:
+                log(f"💥 Server Error {status_code} on {model}")
+                if attempt < max_retries:
+                    time.sleep(2)
+                else:
+                    break
+            else:
+                log(f"❌ API Error {status_code}: {response_json}")
+                break 
+
+    log(f"❌ All models failed for role: {role}")
+    return None
+
+# --- PATCH ENGINE ---
+
+def robust_fuzzy_replace(original, search_block, replace_block):
+    # 1. Exact Match
+    if search_block in original:
+        log("✅ Patch Method: Exact Match")
+        return original.replace(search_block, replace_block), True
+
+    # 2. Strip Match
+    if search_block.strip() in original:
+        log("✅ Patch Method: Whitespace Strip Match")
+        return original.replace(search_block.strip(), replace_block), True
+
+    # 3. Fuzzy Match
+    log("⚠️ Exact match failed. Attempting Fuzzy Match...")
+    matcher = difflib.SequenceMatcher(None, original, search_block)
+    match = matcher.find_longest_match(0, len(original), 0, len(search_block))
+    
+    if match.size > 0:
+        found_block = original[match.a : match.a + match.size]
+        ratio = difflib.SequenceMatcher(None, found_block, search_block).ratio()
+        log(f"   Fuzzy Score: {ratio:.4f}")
+        
+        if ratio >= 0.88:
+            log("✅ Patch Method: Fuzzy Match Accepted")
+            new_code = original[:match.a] + replace_block + original[match.a + match.size:]
+            return new_code, True
+        else:
+            log(f"❌ Fuzzy match score too low ({ratio:.4f} < 0.88)")
+    
+    return original, False
+
+def apply_patches(original_code, response_text):
+    pattern = r"<<<<<<< SEARCH\s*\n(.*?)\n=======\n(.*?)\n>>>>>>> REPLACE"
+    matches = re.findall(pattern, response_text, re.DOTALL)
+    
+    if not matches:
+        return None, "No valid SEARCH/REPLACE blocks found in response."
+
+    current_code = original_code
+    applied_count = 0
+    
+    for search_block, replace_block in matches:
+        new_code, success = robust_fuzzy_replace(current_code, search_block, replace_block)
+        if success:
+            current_code = new_code
+            applied_count += 1
+        else:
+            return None, f"Failed to match block:\n{search_block[:50]}..."
+
+    if current_code == original_code:
+        return None, "Resulting code is identical to original."
+    
+    if "<!DOCTYPE html>" not in current_code and "<html" not in current_code:
+        return None, "CRITICAL: Patch removed root HTML tags. Reverting."
+
+    return current_code, f"Successfully applied {applied_count} patches."
+
+# --- GIT & TASK MANAGEMENT ---
+
+def get_next_task():
+    content = read_file("BACKLOG.md")
+    if not content: return None
+    match = re.search(r'- \[ \] \*\*(.*?)\*\*', content)
+    return match.group(1).strip() if match else None
 
 def mark_task_done(task_name):
     content = read_file("BACKLOG.md")
@@ -84,83 +248,41 @@ def mark_task_failed(task_name, reason):
         footer = f"\n\n- [ ] **{task_name}** (Retry: {reason})"
         write_file("BACKLOG.md", content + footer)
 
-def extract_text_from_response(response_json):
+def git_operations(task_name):
+    if DRY_RUN:
+        log("🐢 DRY RUN: Skipping Git Push & Render Check")
+        return True
+
     try:
-        parts = response_json['candidates'][0]['content']['parts']
-        return "".join([p.get("text", "") for p in parts])
-    except: return None
-
-def ask_gemini_robust(prompt, role="coder"):
-    headers = {'Content-Type': 'application/json'}
-    data = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"maxOutputTokens": 8192, "temperature": 0.1},
-    }
-    
-    # INTELLIGENT ROUTING: Pick the right list based on the job
-    models_to_use = CRITIC_MODELS if role == "critic" else CODER_MODELS
-    
-    for model in models_to_use:
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_API_KEY}"
-        # Only try each model twice to fail-over quickly
-        for attempt in range(2): 
-            try:
-                log(f"🔄 [{role.upper()}] {model} (Attempt {attempt+1})...")
-                resp = requests.post(url, headers=headers, data=json.dumps(data))
-                
-                if resp.status_code == 200:
-                    text = extract_text_from_response(resp.json())
-                    if text: 
-                        log(f"📥 [200 OK] Response received: {len(text)} chars")
-                        return text
-                elif resp.status_code == 429:
-                    log(f"⏳ [429 Rate Limit] Switching to next model...")
-                    time.sleep(2) 
-                    break # Break inner loop -> Go to next model in list
-                else:
-                    log(f"❌ [API Error {resp.status_code}] {resp.text[:200]}...")
-            except Exception as e:
-                log(f"❌ [Exception]: {e}")
-    return None
-
-def apply_patch(original_code, patch_text):
-    pattern = r"<<<<<<< SEARCH\s*\n(.*?)\n=======\n(.*?)\n>>>>>>> REPLACE"
-    matches = re.findall(pattern, patch_text, re.DOTALL)
-    if not matches: return None, "No valid SEARCH/REPLACE blocks found."
-
-    new_code = original_code
-    success_count = 0
-    for search_block, replace_block in matches:
-        if search_block in new_code:
-            new_code = new_code.replace(search_block, replace_block)
-            success_count += 1
-            log("✅ Found exact match.")
-        elif search_block.strip() in new_code:
-            new_code = new_code.replace(search_block.strip(), replace_block.strip())
-            success_count += 1
-            log("✅ Found whitespace-stripped match.")
+        repo = git.Repo(REPO_PATH)
+        repo.git.add(all=True)
+        if not repo.index.diff("HEAD"):
+            log("⚠️ No git changes to commit.")
+            return True
             
-    if success_count == 0: return None, "No blocks matched."
-    return new_code, f"Applied {success_count} patches."
+        repo.index.commit(f"feat(jules): {task_name}")
+        
+        log("🔄 Pulling latest changes...")
+        repo.remotes.origin.pull(rebase=True)
+        
+        log("🚀 Pushing to GitHub...")
+        repo.remotes.origin.push()
+        return True
+    except Exception as e:
+        log(f"❌ Git Error: {e}")
+        return False
 
-def verify_fix(task, original_code, new_code, context):
-    if original_code == new_code: return False, "No changes detected."
-    diff = "".join(difflib.unified_diff(original_code.splitlines(True), new_code.splitlines(True), n=3))
+def check_render_deploy():
+    if DRY_RUN or not RENDER_API_KEY or not RENDER_SERVICE_ID:
+        return True
     
-    prompt = f"{context}\n\nROLE: You are the Critic defined in AGENTS.md.\nTASK: {task}\nDIFF:\n{diff}\n\nDoes this fix the task without breaking React state immutability or the Index.html structure? Respond 'PASS' or 'FAIL: [reason]'"
-    # ROUTING: Explicitly ask the 'critic' models
-    response = ask_gemini_robust(prompt, role="critic")
-    return ("PASS" in (response or "").upper()), response
-
-def wait_for_render_deploy():
-    if not RENDER_API_KEY: return True
     log("🚀 Monitoring Render Deployment...")
-    headers = {"Authorization": f"Bearer {RENDER_API_KEY}"}
     url = f"https://api.render.com/v1/services/{RENDER_SERVICE_ID}/deploys?limit=1"
-    
+    headers = {"Authorization": f"Bearer {RENDER_API_KEY}"}
+
     for _ in range(20): 
         try:
-            resp = requests.get(url, headers=headers)
+            resp = requests.get(url, headers=headers, timeout=10)
             if resp.status_code == 200:
                 data = resp.json()
                 if data:
@@ -168,36 +290,44 @@ def wait_for_render_deploy():
                     log(f"📡 Render Status: {status}")
                     if status == "live": return True
                     if status in ["build_failed", "canceled"]: return False
-        except: pass
+        except Exception as e:
+            log(f"⚠️ Render API check failed: {e}")
         time.sleep(15)
+    
+    log("⚠️ Render timed out (assuming success to continue loop)")
     return True
+
+# --- MAIN LOOP ---
 
 def process_single_task():
     task = get_next_task()
-    if not task: return False
+    if not task:
+        log("✅ No pending tasks found in BACKLOG.md")
+        return False
+    
     log(f"\n📋 TARGET: {task}")
     
     system_context = get_system_context()
-    current_code = read_file("index.html")
+    original_code = read_file("index.html")
     critique_history = ""
-    last_error = "Unknown"
-
+    
     for attempt in range(MAX_QA_RETRIES):
-        log(f"💡 Coder Attempt {attempt + 1}/{MAX_QA_RETRIES}...")
-        
+        log(f"💡 Attempt {attempt + 1}/{MAX_QA_RETRIES}...")
+
         prompt = f"""
 {system_context}
-
 ---
-CURRENT MISSION:
-You are acting as the Agent 'Jules'. 
-Your goal is to implement the following task in 'index.html' while strictly adhering to the architectural rules above.
-
 TASK: {task}
 CRITIQUE HISTORY: {critique_history}
 
-RESPONSE FORMAT:
-Strictly use the SEARCH/REPLACE block format defined in ARCHITECTURE.md.
+INSTRUCTIONS:
+- You are the 'Jules' Coder Agent.
+- Modify 'index.html' to satisfy the task.
+- STRICTLY return code changes in SEARCH/REPLACE blocks.
+- Do NOT return the full file unless necessary.
+- NO conversational text outside the blocks.
+
+FORMAT:
 <<<<<<< SEARCH
 (exact code to remove)
 =======
@@ -205,63 +335,73 @@ Strictly use the SEARCH/REPLACE block format defined in ARCHITECTURE.md.
 >>>>>>> REPLACE
 
 CODE CONTEXT:
-{current_code}
+{original_code}
 """
-        # ROUTING: Explicitly ask the 'coder' models
-        response = ask_gemini_robust(prompt, role="coder")
-        if not response: continue
-        
-        new_code, message = apply_patch(current_code, response)
-        if not new_code:
-            log(f"❌ Patch failed: {message}")
-            last_error = message
-            critique_history = f"PREVIOUS FAIL: {message}. Ensure SEARCH block matches exact whitespace."
+        response_text = ask_gemini_swarm(prompt, role="coder")
+        if not response_text:
+            log("❌ Coder produced no output.")
             continue
 
-        log("🕵️ Verifying Logic...")
-        is_valid, feedback = verify_fix(task, current_code, new_code, system_context)
-        if is_valid:
-            log("✅ QA Passed. Saving...")
+        new_code, patch_msg = apply_patches(original_code, response_text)
+        if not new_code:
+            log(f"❌ Patch Failed: {patch_msg}")
+            critique_history = f"PATCH ERROR: {patch_msg}. Please ensure SEARCH block matches existing code EXACTLY."
+            continue
+        
+        log("🕵️ Critic Reviewing...")
+        diff = "".join(difflib.unified_diff(
+            original_code.splitlines(True), 
+            new_code.splitlines(True), 
+            n=3
+        ))
+        
+        critic_prompt = f"""
+{truncate_content(system_context, 4000)}
+---
+ROLE: Critic.
+TASK: {task}
+DIFF:
+{diff}
+
+INSTRUCTIONS:
+- Analyze the diff. Does it solve the task?
+- Check for syntax errors or architecture violations.
+- Reply STRICTLY with:
+  "PASS" 
+  OR 
+  "FAIL: <short reason>"
+"""
+        critic_response = ask_gemini_swarm(critic_prompt, role="critic")
+        
+        if critic_response and "PASS" in critic_response.upper() and "FAIL" not in critic_response.upper():
+            log("✅ Critic PASSED.")
             write_file("index.html", new_code)
             
-            repo = git.Repo(REPO_PATH)
-            repo.git.add(all=True)
-            repo.index.commit(f"feat(jules): {task}")
             mark_task_done(task)
-            repo.git.add("BACKLOG.md")
-            repo.index.commit(f"docs: marked {task} as done")
-            
-            try:
-                log("🔄 Pulling latest changes before push...")
-                repo.remotes.origin.pull(rebase=True)
-                repo.remotes.origin.push()
-                log("🚀 Pushed to GitHub.")
-            except Exception as e:
-                log(f"⚠️ Push failed: {e}")
-                return False
-            
-            wait_for_render_deploy()
+            if git_operations(task):
+                check_render_deploy()
             return True
         else:
-            log(f"❌ QA Failed: {feedback}")
-            last_error = feedback
-            critique_history = f"QA REJECTED: {feedback}"
-            
-    mark_task_failed(task, last_error)
-    repo = git.Repo(REPO_PATH)
-    repo.git.add("BACKLOG.md")
-    repo.index.commit(f"fix: skip stuck task {task}")
-    repo.remotes.origin.push()
+            reason = critic_response if critic_response else "No response from critic"
+            log(f"❌ Critic FAILED: {reason}")
+            critique_history = f"CRITIC REJECTED: {reason}"
+
+    mark_task_failed(task, "Max retries exhausted or Patch/Critic failed.")
+    git_operations(f"skip stuck task {task}")
     return True
 
-def run_loop():
-    log("🤖 Jules Level 12 (MULTI-MODEL SWARM) Started...")
+def run():
+    log("🤖 Jules 'Multi-Model Swarm' Level 14 Started...")
     while True:
-        if (time.time() - START_TIME) / 60 > (MAX_RUNTIME_MINUTES - 5): break
-        if not process_single_task(): 
-            log("✅ No more tasks or sync error.")
+        elapsed = (time.time() - START_TIME) / 60
+        if elapsed > MAX_RUNTIME_MINUTES:
+            log("⏰ Max runtime reached. Exiting.")
             break
+            
+        if not process_single_task():
+            break
+            
         time.sleep(5)
 
 if __name__ == "__main__":
-    run_loop()
+    run()
