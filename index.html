@@ -313,6 +313,31 @@
             return laggingMuscle;
         };
 
+        const getWeeklyVolume = (logs) => {
+            const weeks = {};
+            logs.forEach(l => {
+                const date = new Date(l.date);
+                // Simple Week grouping (approx)
+                const startOfYear = new Date(date.getFullYear(), 0, 1);
+                const pastDays = (date - startOfYear) / 86400000;
+                const weekNum = Math.ceil((pastDays + startOfYear.getDay() + 1) / 7);
+                const key = `${date.getFullYear()}-W${weekNum}`;
+
+                weeks[key] = (weeks[key] || 0) + (l.volume || 0);
+            });
+
+            return Object.entries(weeks)
+                .sort((a,b) => a[0].localeCompare(b[0]))
+                .slice(-8) // Last 8 weeks
+                .map(([week, vol]) => ({ date: week, value: vol }));
+        };
+
+        const getAvailableExercises = (logs) => {
+             const set = new Set();
+             logs.forEach(l => l.exercises.forEach(e => set.add(e.name)));
+             return Array.from(set).sort();
+        };
+
         // --- PRESETS --- 
         const PRESETS = [ 
             { 
@@ -4614,6 +4639,197 @@
             }
         }
 
+        const TrendsOverview = ({ logs, bodyweightLog, userProfile, onLogBodyweight }) => {
+            const weeklyVol = useMemo(() => getWeeklyVolume(logs), [logs]);
+
+            // Calculate Consistency Streak (Weeks active in last 12 weeks)
+            const activeWeeks = weeklyVol.filter(w => w.value > 0).length;
+            const fitnessScore = Math.min(100, Math.round((activeWeeks / 8) * 100)); // 8 weeks baseline
+
+            return (
+                <div className="space-y-6">
+                    <div className="grid grid-cols-2 gap-4">
+                        <div className="glass p-6 rounded-[2.5rem] flex flex-col justify-between h-40">
+                            <div className="flex justify-between items-start">
+                                <div className="p-3 bg-emerald-500/20 rounded-2xl text-emerald-500"><Icon name="shield" className="w-5 h-5" /></div>
+                                <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Score</span>
+                            </div>
+                            <div>
+                                <p className="text-3xl font-black text-white italic">{fitnessScore}</p>
+                                <p className="text-[9px] font-bold text-slate-600 uppercase tracking-widest">Consistency Index</p>
+                            </div>
+                        </div>
+                        <div className="glass p-6 rounded-[2.5rem] flex flex-col justify-between h-40 relative overflow-hidden">
+                            <div className="flex justify-between items-start z-10 relative">
+                                <div className="p-3 bg-indigo-500/20 rounded-2xl text-indigo-500"><Icon name="bolt" className="w-5 h-5" /></div>
+                                <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Volume</span>
+                            </div>
+                            <div className="z-10 relative">
+                                <p className="text-xl font-black text-white italic">{weeklyVol.length > 0 ? (weeklyVol[weeklyVol.length-1].value/1000).toFixed(1) + 'k' : '0'}</p>
+                                <p className="text-[9px] font-bold text-slate-600 uppercase tracking-widest">Last Week Load</p>
+                            </div>
+                            {/* Mini Chart Background */}
+                            <div className="absolute bottom-0 left-0 right-0 h-16 opacity-20">
+                                <div className="flex items-end h-full gap-1 px-4 pb-4">
+                                    {weeklyVol.map((w, i) => (
+                                        <div key={i} className="flex-1 bg-indigo-500 rounded-t-sm" style={{height: `${(w.value / Math.max(...weeklyVol.map(v=>v.value), 1)) * 100}%`}} />
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="glass p-8 rounded-[3rem] space-y-6">
+                        <div className="flex justify-between items-center">
+                            <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">Weekly Volume</h3>
+                            <span className="text-[8px] font-black text-indigo-500 uppercase tracking-widest">Global Load (KG)</span>
+                        </div>
+                        <ProgressGraph data={weeklyVol} color="#6366f1" label="Total Volume" />
+                    </div>
+
+                    <div className="glass p-8 rounded-[3rem] space-y-6">
+                        <div className="flex justify-between items-center">
+                            <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">Bodyweight</h3>
+                            <button onClick={onLogBodyweight} className="text-[8px] font-black bg-indigo-900/30 text-indigo-400 px-3 py-2 rounded-lg uppercase tracking-widest hover:bg-indigo-900/50">+ Log</button>
+                        </div>
+                        <ProgressGraph data={bodyweightLog.length > 0 ? bodyweightLog : [{date: 'Now', value: userProfile?.bodyweight || 0}]} color="#f59e0b" label="KG" />
+                    </div>
+                </div>
+            );
+        };
+
+        const MuscleDistribution = ({ logs }) => {
+            const distribution = useMemo(() => {
+                const recentExercises = logs.slice(0, 20).flatMap(l => l.exercises);
+                return calculateImpactDistribution(recentExercises, true).slice(0, 5); // Top 5
+            }, [logs]);
+
+            if (distribution.length === 0) return null;
+
+            return (
+                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
+                    <div className="flex items-center gap-3">
+                        <div className="p-3 bg-purple-900/20 rounded-2xl text-purple-400"><Icon name="trends" className="w-5 h-5" /></div>
+                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Growth Focus</h3>
+                    </div>
+
+                    <div className="space-y-4">
+                        {distribution.map((d, i) => (
+                            <div key={d.muscle} className="space-y-1">
+                                <div className="flex justify-between items-center">
+                                    <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest flex items-center gap-2">
+                                        <span className="w-4 text-slate-600">#{i+1}</span> {d.muscle}
+                                    </span>
+                                    <span className="text-[10px] font-bold text-slate-500">{Math.round(d.pct)}%</span>
+                                </div>
+                                <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                    <div className="h-full bg-purple-500" style={{width: `${d.pct}%`}} />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <p className="text-[9px] text-slate-500 font-bold italic text-center">Based on last 20 sessions</p>
+                </div>
+            );
+        };
+
+        const ExerciseInspector = ({ logs, availableExercises }) => {
+            const [selected, setSelected] = useState(availableExercises[0] || '');
+            const [data, setData] = useState([]);
+
+            useEffect(() => {
+                if (!selected) return;
+                const exLogs = logs.filter(l => l.exercises.some(e => e.name === selected)).reverse();
+                const chartData = exLogs.map(l => {
+                    const sessionEx = l.exercises.find(e => e.name === selected);
+                    const bestE1RM = Math.max(...sessionEx.sets.map(s => calculateE1RM(s.kg, s.reps)));
+                    return { date: new Date(l.date).toLocaleDateString(undefined, {month:'short', day:'numeric'}), value: bestE1RM.toFixed(1) };
+                });
+                setData(chartData);
+            }, [selected, logs]);
+
+            return (
+                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
+                    <div className="flex justify-between items-center">
+                        <div className="flex items-center gap-3">
+                            <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="library" className="w-5 h-5" /></div>
+                            <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Inspector</h3>
+                        </div>
+                    </div>
+
+                    <div className="relative">
+                        <select
+                            value={selected}
+                            onChange={e => setSelected(e.target.value)}
+                            className="w-full p-4 bg-slate-900 rounded-2xl font-bold text-xs text-white border border-white/5 focus:ring-2 focus:ring-indigo-500 appearance-none"
+                        >
+                            {availableExercises.map(ex => <option key={ex} value={ex}>{cleanName(ex)}</option>)}
+                        </select>
+                        <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                    </div>
+
+                    {data.length > 0 ? (
+                        <ProgressGraph data={data} label="e1RM" />
+                    ) : (
+                        <div className="h-48 flex items-center justify-center text-slate-700 text-xs font-black uppercase tracking-widest">No Data Available</div>
+                    )}
+                </div>
+            );
+        };
+
+        const PinnedMetrics = ({ logs, pinned, onEdit }) => {
+            return (
+                <div className="space-y-4">
+                    <div className="flex justify-between items-end px-2">
+                        <h2 className="text-2xl font-black tracking-tighter italic uppercase leading-none">Trophy<br/><span className="text-indigo-500">Case</span></h2>
+                        <button onClick={onEdit} className="px-4 py-2 bg-slate-900 rounded-xl border border-white/5 text-[8px] font-black uppercase tracking-widest text-slate-500 hover:text-white transition-colors">
+                            Edit Pinned
+                        </button>
+                    </div>
+                    <div className="grid grid-cols-1 gap-3">
+                        {pinned.map(lift => {
+                            let best = 0;
+                            let last = 0;
+
+                            // Find history
+                            const history = logs.filter(l => l.exercises.some(e => e.name.toLowerCase().includes(lift.toLowerCase()) || e.name === lift)).sort((a,b) => new Date(a.date) - new Date(b.date));
+
+                            if (history.length > 0) {
+                                history.forEach(l => {
+                                    const ex = l.exercises.find(e => e.name.toLowerCase().includes(lift.toLowerCase()) || e.name === lift);
+                                    if (ex) {
+                                        const maxE1RM = Math.max(...ex.sets.map(s => calculateE1RM(s.kg, s.reps)));
+                                        if (maxE1RM > best) best = maxE1RM;
+                                        last = maxE1RM;
+                                    }
+                                });
+                            }
+
+                            return (
+                                <div key={lift} className="glass p-6 rounded-[2.5rem] flex justify-between items-center group">
+                                    <div className="flex items-center gap-4">
+                                        <div className="p-3 bg-slate-900 rounded-2xl text-yellow-500 border border-white/5 group-hover:border-yellow-500/30 transition-colors">
+                                            <Icon name="bolt" className="w-5 h-5" />
+                                        </div>
+                                        <div>
+                                            <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">{cleanName(lift)}</p>
+                                            <p className="text-2xl font-black text-white italic">{best}<span className="text-[10px] text-slate-600 ml-1">KG PR</span></p>
+                                        </div>
+                                    </div>
+                                    <div className="text-right">
+                                        <p className="text-[8px] font-bold text-slate-600 uppercase tracking-widest">Latest</p>
+                                        <p className="text-sm font-black text-slate-400 italic">{last} kg</p>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            );
+        };
+
         const App = () => {
             // --- PERSISTENCE ---
             const [activeTab, setActiveTab] = useState('home');
@@ -4684,6 +4900,14 @@
                     return [];
                 }
             });
+            const [pinnedMetrics, setPinnedMetrics] = useState(() => {
+                try {
+                    return JSON.parse(localStorage.getItem('tytax_pinned_metrics') || '["Squat", "Bench", "Deadlift"]');
+                } catch (e) {
+                    console.error("Error parsing tytax_pinned_metrics", e);
+                    return ["Squat", "Bench", "Deadlift"];
+                }
+            });
 
             // --- CUSTOM PROTOCOLS ---
             const [customProtocols, setCustomProtocols] = useState(() => {
@@ -4752,7 +4976,8 @@
                 localStorage.setItem('tytax_inventory', JSON.stringify(userInventory));
                 localStorage.setItem('tytax_user_profile', JSON.stringify(userProfile));
                 localStorage.setItem('tytax_bodyweight_log', JSON.stringify(bodyweightLog));
-            }, [logs, sessionOrder, trainingPlan, masterExercises, setupNotes, startDate, oledMode, warmupStrategy, userInventory, userProfile, bodyweightLog]); 
+                localStorage.setItem('tytax_pinned_metrics', JSON.stringify(pinnedMetrics));
+            }, [logs, sessionOrder, trainingPlan, masterExercises, setupNotes, startDate, oledMode, warmupStrategy, userInventory, userProfile, bodyweightLog, pinnedMetrics]);
  
             useEffect(() => { 
                 let interval; 
@@ -5720,77 +5945,34 @@
  
                         {activeTab === 'trends' && ( 
                             <div className="tab-content space-y-10 pb-20"> 
-                                <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">Force<br/><span className="text-indigo-500">Output</span></h2> 
+                                <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">Force<br/><span className="text-indigo-500">Analytics</span></h2>
                                 
-                                {/* TROPHY CASE */}
-                                <div className="grid grid-cols-3 gap-3">
-                                    {['Squat', 'Bench', 'Deadlift'].map(lift => {
-                                        // Find best e1RM for any exercise matching the pattern
-                                        let best = 0;
-                                        logs.forEach(l => {
-                                            l.exercises.forEach(e => {
-                                                if (e.name.toLowerCase().includes(lift.toLowerCase())) {
-                                                    const maxE1RM = Math.max(...e.sets.map(s => calculateE1RM(s.kg, s.reps)));
-                                                    if (maxE1RM > best) best = maxE1RM;
-                                                }
-                                            })
-                                        });
-                                        return (
-                                            <div key={lift} className="glass p-6 rounded-[2rem] text-center space-y-2">
-                                                <Icon name="bolt" className="w-6 h-6 mx-auto text-yellow-500" />
-                                                <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">{lift}</p>
-                                                <p className="text-2xl font-black text-white italic">{best}<span className="text-[10px] text-slate-600 ml-1">KG</span></p>
-                                            </div>
-                                        );
-                                    })}
-                                </div>
-                                
-                                {/* Work Capacity / Density Chart */}
-                                {logs.length > 1 && (
-                                    <div className="glass p-8 rounded-[3rem] space-y-6">
-                                        <div className="flex justify-between items-center">
-                                            <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">Work Capacity</h3>
-                                            <span className="text-[8px] font-black text-emerald-500 uppercase tracking-widest">Density (KG/Min)</span>
-                                        </div>
-                                        <ProgressGraph data={logs.slice().reverse().map(l => ({
-                                            date: new Date(l.date).toLocaleDateString(undefined, {month:'short', day:'numeric'}),
-                                            value: Math.round((l.volume || 0) / Math.max(1, (l.duration || 60) / 60))
-                                        })).slice(-10)} color="#10b981" label="Density" />
-                                    </div>
-                                )}
+                                <TrendsOverview
+                                    logs={logs}
+                                    bodyweightLog={bodyweightLog}
+                                    userProfile={userProfile}
+                                    onLogBodyweight={() => {
+                                        const w = prompt("Log current bodyweight:");
+                                        if (w && !isNaN(w)) setBodyweightLog([...bodyweightLog, { date: new Date().toISOString().split('T')[0], value: parseFloat(w) }]);
+                                    }}
+                                />
 
-                                {/* Bodyweight Tracker */}
-                                <div className="glass p-8 rounded-[3rem] space-y-6">
-                                    <div className="flex justify-between items-center">
-                                        <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">Bodyweight</h3>
-                                        <button onClick={() => {
-                                            const w = prompt("Log current bodyweight:");
-                                            if (w && !isNaN(w)) setBodyweightLog([...bodyweightLog, { date: new Date().toISOString().split('T')[0], value: parseFloat(w) }]);
-                                        }} className="text-[8px] font-black bg-indigo-900/30 text-indigo-400 px-3 py-2 rounded-lg uppercase tracking-widest hover:bg-indigo-900/50">+ Log</button>
-                                    </div>
-                                    <ProgressGraph data={bodyweightLog.length > 0 ? bodyweightLog : [{date: 'Now', value: userProfile?.bodyweight || 0}]} color="#f59e0b" label="KG" />
-                                </div>
+                                <MuscleDistribution logs={logs} />
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {masterExercises.map(ex => { 
-                                    const exLogs = logs.filter(l => l.exercises.some(e => e.name === ex.name)).reverse(); 
-                                    const chartData = exLogs.map(l => { 
-                                        const sessionEx = l.exercises.find(e => e.name === ex.name); 
-                                        const bestE1RM = Math.max(...sessionEx.sets.map(s => calculateE1RM(s.kg, s.reps))); 
-                                        return { date: new Date(l.date).toLocaleDateString(undefined, {month:'short', day:'numeric'}), value: bestE1RM.toFixed(1) }; 
-                                    }); 
-                                    if (!chartData.length) return null; 
-                                    return ( 
-                                        <div key={ex.name} className="glass p-8 rounded-[3rem] space-y-6"> 
-                                            <div className="flex justify-between items-center"> 
-                                                <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">{cleanName(ex.name)}</h3> 
-                                                <span className="text-[8px] font-black text-indigo-500 uppercase tracking-widest">{ex.station}</span> 
-                                            </div> 
-                                            <ProgressGraph data={chartData} label="e1RM" /> 
-                                        </div> 
-                                    ); 
-                                })} 
-                                </div>
+                                <ExerciseInspector
+                                    logs={logs}
+                                    availableExercises={availableExercises}
+                                />
+
+                                <PinnedMetrics
+                                    logs={logs}
+                                    pinned={pinnedMetrics}
+                                    onEdit={() => {
+                                        const newPinned = prompt("Enter 3 exercises to pin (comma separated):", pinnedMetrics.join(','));
+                                        if (newPinned) setPinnedMetrics(newPinned.split(',').map(s => s.trim()).slice(0, 4));
+                                    }}
+                                />
+
                                 {logs.length === 0 && <div className="py-40 text-center opacity-20"><Icon name="trends" className="w-12 h-12 mx-auto" /><p className="text-[10px] font-black uppercase mt-4 tracking-[0.3em]">No data records</p></div>} 
                             </div> 
                         )} 
