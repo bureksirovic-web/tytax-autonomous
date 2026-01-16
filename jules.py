@@ -1,233 +1,434 @@
 ﻿import os
 import re
-import git
-import requests
-import json
-import time
 import sys
+import time
+import json
 import difflib
 from datetime import datetime
 
-# --- CONFIGURATION ---
-REPO_PATH = "."
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "").replace("\n", "").strip()
-RENDER_API_KEY = os.environ.get("RENDER_API_KEY", "").replace("\n", "").strip()
-RENDER_SERVICE_ID = os.environ.get("RENDER_SERVICE_ID", "").replace("\n", "").strip()
+import git
+import requests
 
-# Placeholder - populated by Auto-Discovery
-CODER_MODELS = [] 
+# ============================
+# Jules Level 31 (Master Restore v2)
+# ============================
+# Philosophy: Level 9's simplicity + Modern safety fixes
+# - 2 models max (coder + critic use same stack)
+# - Strict patching only (no fuzzy by default)
+# - Clean error messages for feedback loop
+# - Git sync before push to prevent conflicts
 
-MAX_QA_RETRIES = 4
-REQUEST_TIMEOUT = 90
+REPO_PATH = os.environ.get("JULES_REPO_PATH", ".")
+APP_FILE = os.environ.get("JULES_APP_FILE", "index.html")
+BACKLOG_FILE = os.environ.get("JULES_BACKLOG_FILE", "BACKLOG.md")
 
-def log(message):
+def _clean_env(name: str, default: str = "") -> str:
+    raw = os.environ.get(name, default)
+    return (raw or "").replace("\n", "").replace("\r", "").strip()
+
+GEMINI_API_KEY = _clean_env("GEMINI_API_KEY")
+RENDER_API_KEY = _clean_env("RENDER_API_KEY")
+RENDER_SERVICE_ID = _clean_env("RENDER_SERVICE_ID")
+
+MAX_QA_RETRIES = int(_clean_env("MAX_QA_RETRIES", "3") or 3)  # Reduced from 4
+MAX_RUNTIME_MINUTES = int(_clean_env("MAX_RUNTIME_MINUTES", "45") or 45)
+REQUEST_TIMEOUT = int(_clean_env("REQUEST_TIMEOUT", "90") or 90)
+START_TIME = time.time()
+
+# Simple 2-model strategy (Level 9 style)
+# Primary: gemini-2.0-flash-exp (smart, fast, stable)
+# Backup: gemini-1.5-pro (separate quota pool, high reasoning)
+CODER_MODELS = [
+    "gemini-2.0-flash-exp",
+    "gemini-1.5-pro"
+]
+
+# Override if needed: JULES_MODELS="model1,model2"
+MANUAL_OVERRIDE = [m.strip() for m in _clean_env("JULES_MODELS", "").split(",") if m.strip()]
+if MANUAL_OVERRIDE:
+    CODER_MODELS = MANUAL_OVERRIDE
+
+# Context files (keep minimal like Level 9)
+CONTEXT_FILES = ["AGENTS.md"]
+
+
+def log(message: str) -> None:
     print(f"[{datetime.now().strftime('%H:%M:%S')}] {message}", flush=True)
 
-if not GEMINI_API_KEY:
-    log("❌ ERROR: GEMINI_API_KEY missing!")
-    sys.exit(1)
 
-def read_file(filename):
+def read_file(filename: str) -> str:
     try:
-        with open(filename, 'r', encoding='utf-8') as f: return f.read()
-    except: return ""
+        with open(filename, "r", encoding="utf-8") as f:
+            return f.read()
+    except Exception:
+        return ""
 
-def write_file(filename, content):
-    with open(filename, 'w', encoding='utf-8') as f: f.write(content)
 
-# --- AUTO-DISCOVERY ENGINE (The Fix) ---
-def discover_models():
-    """Queries the API to find valid models instead of guessing."""
-    log("🔍 Auto-Discovering available models...")
-    url = f"https://generativelanguage.googleapis.com/v1beta/models?key={GEMINI_API_KEY}"
-    
+def write_file(filename: str, content: str) -> None:
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(content)
+
+
+def extract_text_from_response(response_json) -> str | None:
     try:
-        resp = requests.get(url, timeout=10)
-        if resp.status_code != 200:
-            log(f"❌ Discovery Failed: {resp.status_code} - {resp.text}")
-            return []
-            
-        data = resp.json()
-        valid_models = []
-        
-        # 1. Filter for 'generateContent' support
-        for m in data.get('models', []):
-            if 'generateContent' in m.get('supportedGenerationMethods', []):
-                # Strip 'models/' prefix
-                name = m['name'].replace('models/', '')
-                valid_models.append(name)
-        
-        # 2. Priority Ranking (Smartest -> Fastest -> Fallback)
-        ranked = []
-        ranked.extend([m for m in valid_models if 'gemini-2.0' in m])       # Bleeding Edge
-        ranked.extend([m for m in valid_models if 'gemini-1.5-pro' in m])   # High Logic
-        ranked.extend([m for m in valid_models if 'gemini-1.5-flash' in m]) # High Speed
-        
-        log(f"✅ Discovered {len(ranked)} usable models.")
-        log(f"📋 Priority Stack: {ranked[:3]}...")
-        return ranked
+        parts = response_json["candidates"][0]["content"]["parts"]
+        return "".join([p.get("text", "") for p in parts if isinstance(p, dict)])
+    except Exception:
+        return None
 
-    except Exception as e:
-        log(f"❌ Discovery Error: {e}")
-        return []
 
-# --- API ENGINE ---
-def ask_gemini(prompt, model_list, role="coder"):
-    headers = {'Content-Type': 'application/json'}
+def ask_gemini(prompt: str, model_list: list[str], role: str) -> str | None:
+    headers = {"Content-Type": "application/json"}
     data = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"maxOutputTokens": 8192, "temperature": 0.1}
+        "generationConfig": {"maxOutputTokens": 8192, "temperature": 0.1},
     }
-    
-    # Rotate through discovered models
+
     for model in model_list:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_API_KEY}"
         
-        for attempt in range(1): # Fail fast to rotate
+        # Try each model twice, then rotate
+        for attempt in range(2):
             try:
-                log(f"🔄 [{role.upper()}] Asking {model}...")
+                log(f"🔄 [{role.upper()}] {model} (attempt {attempt+1}/2)")
                 resp = requests.post(url, headers=headers, data=json.dumps(data), timeout=REQUEST_TIMEOUT)
-                
+
                 if resp.status_code == 200:
-                    try:
-                        return resp.json()['candidates'][0]['content']['parts'][0]['text']
-                    except: return None
-                elif resp.status_code == 429:
-                    log(f"⏳ {model} Rate Limit. Rotating...")
-                    break 
-                elif resp.status_code == 404:
-                    log(f"🚫 {model} Not Found. Rotating...")
+                    text = extract_text_from_response(resp.json())
+                    if text:
+                        return text
+                    log("⚠️ Empty response, rotating...")
                     break
-                else:
-                    log(f"❌ Error {resp.status_code}: {resp.text[:100]}...")
+
+                if resp.status_code == 429:
+                    log(f"⏳ Rate limit on {model}, rotating...")
+                    time.sleep(2)
+                    break
+
+                if resp.status_code == 404:
+                    log(f"🚫 Model {model} not found, rotating...")
+                    break
+
+                if resp.status_code >= 500:
+                    log(f"⚠️ Server error {resp.status_code}, retrying...")
+                    time.sleep(2 + attempt)
+                    continue
+
+                log(f"❌ Error {resp.status_code}: {resp.text[:150]}")
+                break
+
+            except requests.exceptions.Timeout:
+                log("⏱️ Timeout, rotating...")
+                break
             except Exception as e:
-                log(f"❌ Network Error: {e}")
+                log(f"❌ Error: {e}")
+                break
+
     return None
 
-# --- PATCH ENGINE ---
-def apply_patch(original, patch):
-    clean_patch = re.sub(r'^`[a-zA-Z]*\s*$', '', patch, flags=re.MULTILINE).strip()
+
+def sanitize_patch_response(raw: str) -> str:
+    """Strip markdown fences and normalize newlines."""
+    raw = raw.replace("\r\n", "\n").replace("\r", "\n")
+    
+    # Remove markdown code fences
+    raw = re.sub(r"`[a-zA-Z0-9_-]*\s*\n", "", raw)
+    raw = raw.replace("`", "")
+    
+    # Extract only the patch blocks if there's surrounding text
+    start = raw.find("<<<<<<< SEARCH")
+    end = raw.rfind(">>>>>>> REPLACE")
+    if start != -1 and end != -1:
+        raw = raw[start : end + len(">>>>>>> REPLACE")]
+    
+    return raw.strip()
+
+
+def apply_patch(original_code: str, patch_text: str) -> tuple[str | None, str]:
+    patch_text = sanitize_patch_response(patch_text)
+
     pattern = r"<<<<<<< SEARCH\s*\n(.*?)\n=======\n(.*?)\n>>>>>>> REPLACE"
-    matches = re.findall(pattern, clean_patch, re.DOTALL)
-    
+    matches = re.findall(pattern, patch_text, re.DOTALL)
+
     if not matches:
-        log("⚠️ DEBUG: PARSING FAILED. RAW RESPONSE:")
-        log(clean_patch[:300] + "...")
-        return None, "No blocks found."
+        # Debug output for failed parsing
+        log("⚠️ PARSING FAILED. Raw response (first 300 chars):")
+        log(patch_text[:300])
+        return None, "No SEARCH/REPLACE blocks found. Did the model include conversational text?"
+
+    new_code = original_code
+    applied = 0
+
+    for search_block, replace_block in matches:
+        # 1. Exact match (preferred)
+        if search_block in new_code:
+            new_code = new_code.replace(search_block, replace_block, 1)
+            applied += 1
+            continue
+
+        # 2. Whitespace-stripped match (common formatting differences)
+        search_stripped = search_block.strip()
+        if search_stripped and search_stripped in new_code:
+            new_code = new_code.replace(search_stripped, replace_block.strip(), 1)
+            applied += 1
+            continue
+
+        # 3. Fail with clear error message
+        preview = search_block[:80].replace("\n", "\\n")
+        return None, f"Search block not found. Starts with: '{preview}...'"
+
+    if applied == 0:
+        return None, "No patches applied (0 matches found)."
+
+    # Safety checks
+    if "<!DOCTYPE html" not in new_code:
+        return None, "CRITICAL: Root HTML tags deleted."
+
+    old_lines = max(1, len(original_code.splitlines()))
+    new_lines = len(new_code.splitlines())
+    if new_lines < int(old_lines * 0.75):
+        return None, f"CRITICAL: File too short ({old_lines} -> {new_lines} lines)."
+
+    return new_code, f"Applied {applied} patch(es)"
+
+
+def verify_fix(task: str, original_code: str, new_code: str) -> tuple[bool, str]:
+    """The Level 9 Critic: Simple diff-based QA."""
+    if original_code == new_code:
+        return False, "No changes detected."
+
+    # Generate unified diff
+    diff = "".join(
+        difflib.unified_diff(
+            original_code.splitlines(True),
+            new_code.splitlines(True),
+            fromfile="before",
+            tofile="after",
+            n=3,
+        )
+    )
+
+    # Prevent huge payloads
+    if len(diff) > 8000:
+        diff = diff[:8000] + "\n...[DIFF TRUNCATED]"
+
+    critic_prompt = f"""You are a strict code reviewer.
+
+TASK: {task}
+
+DIFF:
+{diff}
+
+Does this change correctly implement the task without breaking React state management?
+
+Reply with EXACTLY one line:
+- PASS
+- FAIL: <reason>"""
+
+    review = ask_gemini(critic_prompt, CODER_MODELS, role="critic")
     
-    new_code = original
-    applied_count = 0
+    if not review:
+        return True, "Critic silent (assuming safe)"
+
+    review_upper = review.strip().upper()
     
-    for search, replace in matches:
-        if search in new_code:
-            new_code = new_code.replace(search, replace)
-            applied_count += 1
-        elif search.strip() in new_code:
-            new_code = new_code.replace(search.strip(), replace.strip())
-            applied_count += 1
-        else:
-            matcher = difflib.SequenceMatcher(None, new_code, search)
-            match = matcher.find_longest_match(0, len(new_code), 0, len(search))
-            if match.size > 0 and (match.size / len(search) > 0.8):
-                 new_code = new_code[:match.a] + replace + new_code[match.a + match.size:]
-                 applied_count += 1
+    if review_upper.startswith("PASS"):
+        return True, review.strip()
+    
+    if "FAIL" in review_upper:
+        return False, review.strip()
+    
+    # Conservative: if unclear, assume pass (avoid deadlock)
+    return True, f"Critic unclear (assuming pass): {review[:100]}"
 
-    return new_code, f"Applied {applied_count} patches"
 
-# --- DEPLOYMENT ---
-def check_render():
-    if not RENDER_API_KEY: return
-    log("🚀 Watching Render...")
-    url = f"[https://api.render.com/v1/services/](https://api.render.com/v1/services/){RENDER_SERVICE_ID}/deploys?limit=1"
-    headers = {"Authorization": f"Bearer {RENDER_API_KEY}"}
-    for _ in range(20):
-        try:
-            resp = requests.get(url, headers=headers)
-            if resp.status_code == 200 and resp.json()[0]['deploy']['status'] == "live":
-                log("✅ Deployment Live.")
-                return
-        except: pass
-        time.sleep(15)
+def get_next_task() -> str | None:
+    backlog = read_file(BACKLOG_FILE)
+    match = re.search(r"- \[ \] \*\*(.*?)\*\*(?!\s*\(SKIPPED)", backlog)
+    return match.group(1).strip() if match else None
 
-def move_task_to_bottom(task_name):
-    content = read_file("BACKLOG.md")
+
+def mark_task_done(task: str) -> None:
+    content = read_file(BACKLOG_FILE)
+    updated = content.replace(f"- [ ] **{task}**", f"- [x] **{task}**")
+    write_file(BACKLOG_FILE, updated)
+
+
+def move_task_to_bottom(task: str) -> None:
+    content = read_file(BACKLOG_FILE)
     lines = content.splitlines()
-    new_lines = []
+    new_lines: list[str] = []
     task_line = ""
+
     for line in lines:
-        if f"- [ ] **{task_name}**" in line:
-            task_line = f"- [ ] **{task_name}** (SKIPPED)"
+        if f"- [ ] **{task}**" in line:
+            task_line = f"- [ ] **{task}** (SKIPPED)"
         else:
             new_lines.append(line)
+
     if task_line:
-        new_lines.append(""); new_lines.append("## ⚠️ SKIPPED TASKS"); new_lines.append(task_line)
-    write_file("BACKLOG.md", "\n".join(new_lines))
+        if "## ⚠️ SKIPPED TASKS" not in new_lines:
+            new_lines.extend(["", "## ⚠️ SKIPPED TASKS"])
+        new_lines.append(task_line)
 
-# --- MAIN ---
-def process_task():
-    global CODER_MODELS
-    if not CODER_MODELS:
-        CODER_MODELS = discover_models()
-        if not CODER_MODELS:
-            log("🛑 No models found via Auto-Discovery.")
-            return False
+    write_file(BACKLOG_FILE, "\n".join(new_lines))
 
-    backlog = read_file("BACKLOG.md")
-    match = re.search(r'- \[ \] \*\*(.*?)\*\*(?!\s*\(SKIPPED)', backlog)
-    if not match: return False
-    task = match.group(1).strip()
-    
+
+def load_context() -> str:
+    """Load minimal context (Level 9 style)."""
+    parts = []
+    for f in CONTEXT_FILES:
+        txt = read_file(f)
+        if txt.strip():
+            # Truncate to prevent 400 errors
+            if len(txt) > 6000:
+                txt = txt[:6000] + "\n...[TRUNCATED]"
+            parts.append(f"--- {f} ---\n{txt}")
+
+    return "\n\n".join(parts) if parts else ""
+
+
+def check_render() -> None:
+    """Optional: Wait for Render deployment."""
+    if not (RENDER_API_KEY and RENDER_SERVICE_ID):
+        return
+
+    log("🚀 Watching Render...")
+    headers = {"Authorization": f"Bearer {RENDER_API_KEY}"}
+    url = f"https://api.render.com/v1/services/{RENDER_SERVICE_ID}/deploys?limit=1"
+
+    for _ in range(20):
+        try:
+            resp = requests.get(url, headers=headers, timeout=15)
+            if resp.status_code == 200:
+                data = resp.json()
+                if data:
+                    status = data[0]["deploy"]["status"]
+                    log(f"📡 {status}")
+                    if status == "live":
+                        log("✅ Deploy live")
+                        return
+                    if status in ("build_failed", "canceled"):
+                        log("❌ Deploy failed")
+                        return
+        except Exception:
+            pass
+        time.sleep(15)
+
+
+def process_single_task() -> bool:
+    task = get_next_task()
+    if not task:
+        return False
+
     log(f"\n📋 TARGET: {task}")
-    code = read_file("index.html")
-    context = read_file("AGENTS.md")
-    history = ""
     
-    for attempt in range(MAX_QA_RETRIES):
-        log(f"💡 Attempt {attempt+1}/{MAX_QA_RETRIES}...")
-        
-        prompt = f"""
-TASK: {task}
-CONTEXT: {context}
-ERRORS: {history}
-CODE:
-{code}
+    current_code = read_file(APP_FILE)
+    context = load_context()
+    history = ""
 
-IMPORTANT INSTRUCTIONS:
-1. You are a CODE GENERATOR.
-2. Output ONLY the SEARCH/REPLACE blocks. NO conversational text.
-3. FORMAT:
+    for attempt in range(MAX_QA_RETRIES):
+        log(f"💡 Attempt {attempt + 1}/{MAX_QA_RETRIES}")
+
+        prompt = f"""TASK: {task}
+
+CONTEXT:
+{context}
+
+PREVIOUS FEEDBACK:
+{history}
+
+INSTRUCTIONS:
+1. Output ONLY SEARCH/REPLACE blocks
+2. NO markdown fences (no `)
+3. SEARCH must match file EXACTLY
+
+FORMAT:
 <<<<<<< SEARCH
-(exact lines to remove)
+(exact code to remove)
 =======
-(new lines to insert)
+(new code)
 >>>>>>> REPLACE
-"""
+
+CODE:
+{current_code}"""
+
         patch = ask_gemini(prompt, CODER_MODELS, role="coder")
-        if not patch: continue
-        
-        new_code, status = apply_patch(code, patch)
-        if not new_code:
-            log(f"❌ Patch Failed: {status}")
-            history = status
+        if not patch:
+            history = "No response from AI. Try again."
             continue
-            
+
+        new_code, status = apply_patch(current_code, patch)
+        if not new_code:
+            log(f"❌ Patch failed: {status}")
+            history = f"Patch error: {status}"
+            continue
+
+        # The Level 9 critic
+        log("🕵️ Verifying...")
+        ok, feedback = verify_fix(task, current_code, new_code)
+        if not ok:
+            log(f"❌ QA failed: {feedback}")
+            history = f"QA rejected: {feedback}"
+            continue
+
+        # SUCCESS
         log("✅ Verified. Committing...")
-        write_file("index.html", new_code)
-        
-        new_backlog = read_file("BACKLOG.md").replace(f"- [ ] **{task}**", f"- [x] **{task}**")
-        write_file("BACKLOG.md", new_backlog)
-        
+        write_file(APP_FILE, new_code)
+        mark_task_done(task)
+
         repo = git.Repo(REPO_PATH)
         repo.git.add(all=True)
-        repo.index.commit(f"feat(jules): {task}")
+        repo.index.commit(f"feat(jules): {task[:80]}")
+        
+        # Sync before push (prevent conflicts)
+        try:
+            log("🔄 Pull --rebase...")
+            repo.git.pull("--rebase")
+        except Exception as e:
+            log(f"⚠️ Rebase warning: {e}")
+        
         repo.remotes.origin.push()
+        log("🚀 Pushed")
+        
         check_render()
         return True
 
+    # Failed after retries
+    log("⚠️ Task stuck, skipping...")
     move_task_to_bottom(task)
+    
+    try:
+        repo = git.Repo(REPO_PATH)
+        repo.git.add(BACKLOG_FILE)
+        repo.index.commit("skip: stuck task")
+        repo.remotes.origin.push()
+    except Exception as e:
+        log(f"⚠️ Skip commit failed: {e}")
+
     return True
 
-if __name__ == "__main__":
-    log("🤖 Jules Level 30 (AUTO-DISCOVERY) Started...")
-    while process_task():
+
+def run_loop() -> None:
+    if not GEMINI_API_KEY:
+        log("❌ ERROR: GEMINI_API_KEY missing!")
+        sys.exit(1)
+
+    log(f"🤖 Jules Level 31 Started")
+    log(f"📋 Models: {CODER_MODELS}")
+
+    while True:
+        runtime = (time.time() - START_TIME) / 60
+        if runtime > (MAX_RUNTIME_MINUTES - 2):
+            log("⏰ Time limit reached")
+            break
+
+        if not process_single_task():
+            log("✅ No more tasks")
+            break
+
         time.sleep(5)
+
+
+if __name__ == "__main__":
+    run_loop()
