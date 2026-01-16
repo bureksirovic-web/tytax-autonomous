@@ -1,7 +1,7 @@
 ﻿# BACKLOG
 
 ## 🧪 LEVEL 1: SIMPLE (Warm Up)
-- [ ] **Task: Update Footer Version**
+- [x] **Task: Update Footer Version**
     - *Goal:* Verify basic file editing.
     - *Action:* Find the footer version text and change it to "v3.0 (Jules Reset)".
 
