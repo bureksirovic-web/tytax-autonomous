@@ -170,7 +170,7 @@ FAIL: Potential mobile overlap. Verify toast positioning on 320px screen.
 
  (Retry: No valid SEARCH/REPLACE blocks found.)
 
-- [ ] **Implement 'Exercise Notes' Field** (Retry: No blocks matched.)
+ (Retry: No blocks matched.)
 
 - [ ] **Implement 'Toast' Notification System** (Retry: Let's analyze this diff as the Critic.
 
@@ -187,3 +187,5 @@ FAIL: Insufficient context to verify state immutability and responsive design of
 
 - [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components** (Retry: FAIL: Missing Component Definitions. The diff introduces `<VaultTab>`, `<BuilderTab>`, `<FeaturesTab>`, and `<SettingsTab>` without defining them. This will cause a runtime error.
 )
+
+- [ ] **Implement 'Exercise Notes' Field** (Retry: No blocks matched.)
