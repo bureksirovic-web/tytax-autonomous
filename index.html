@@ -4811,18 +4811,19 @@
                         const warmupSets = generateWarmups(lastMaxLoad, warmupStrategy);
 
                         return { 
-                            name, 
-                            station: m?.station || "Tytax", 
+                            name,
+                            station: m?.station || "Tytax",
                             unilateral: m?.unilateral || false,
                             impact: m?.impact || [],
-                            targetReps: m?.reps || "8-12", 
-                            note: m?.note || "", 
-                            sets: [...warmupSets, ...workingSets], 
-                            setup: setupNotes[name] || "" 
+                            targetReps: m?.reps || "8-12",
+                            note: m?.note || "",
+                            sets: [...warmupSets, ...workingSets],
+                            setup: setupNotes[name] || "",
+                            notes: "" // Initialize notes field
                         };
-                    }) 
-                }); 
-            }; 
+                    })
+                });
+            };
  
             const currentVolume = useMemo(() => { 
                 if (!currentWorkout) return 0; 
@@ -5362,54 +5363,58 @@
                                                         ) : null;
                                                     })()}
                                                                     {ex.note && <p className="text-[9px] font-bold text-slate-400 leading-tight border-l-2 border-indigo-500 pl-2">{ex.note}</p>}
-                                                                    <div className="flex items-center gap-4 group pt-2"> 
+                                                                    <div className="flex items-center gap-4 group pt-2">
                                                                         <div className="flex items-center gap-2 flex-grow">
-                                                                            <Icon name="tool" className="w-3.5 h-3.5 text-slate-500 group-hover:text-indigo-400 transition-colors" /> 
-                                                                            
+                                                                            <Icon name="tool" className="w-3.5 h-3.5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
+
                                                                             <div className="flex flex-col flex-grow">
                                                                                 {/* STRUCTURED SELECTOR */}
                                                                                 <div className="flex gap-1 w-full">
-                                                                                    <select 
-                                                                                        value={ex.setup?.split('|')[0]?.trim() || ''} 
+                                                                                    <select
+                                                                                        value={ex.setup?.split('|')[0]?.trim() || ''}
                                                                                         onChange={e => {
                                                                                             const currentLever = ex.setup?.split('|')[1]?.trim() || '-';
                                                                                             const newVal = `${e.target.value} | ${currentLever}`;
-                                                                                            setSetupNotes({...setupNotes, [ex.name]: newVal}); 
-                                                                                            const up = structuredClone(currentWorkout); up.exercises[exIdx].setup = newVal; setCurrentWorkout(up);
+                                                                                            const up = structuredClone(currentWorkout);
+                                                                                            up.exercises[exIdx].setup = newVal;
+                                                                                            setCurrentWorkout(up);
+                                                                                            setSetupNotes({ ...setupNotes, [ex.name]: newVal });
                                                                                         }}
                                                                                         className="bg-transparent text-[10px] font-bold text-indigo-300 border-none p-0 focus:ring-0 w-1/2 cursor-pointer"
                                                                                     >
                                                                                         <option value="">Seat</option>
-                                                                                        {[1,2,3,4,5,6,7,8].map(n => <option key={n} value={`Seat ${n}`}>Seat {n}</option>)}
+                                                                                        {[1, 2, 3, 4, 5, 6, 7, 8].map(n => <option key={n} value={`Seat ${n}`}>Seat {n}</option>)}
                                                                                     </select>
                                                                                     <span className="text-slate-600">|</span>
-                                                                                    <select 
-                                                                                        value={ex.setup?.split('|')[1]?.trim() || ''} 
+                                                                                    <select
+                                                                                        value={ex.setup?.split('|')[1]?.trim() || ''}
                                                                                         onChange={e => {
                                                                                             const currentSeat = ex.setup?.split('|')[0]?.trim() || 'Seat -';
                                                                                             const newVal = `${currentSeat} | ${e.target.value}`;
-                                                                                            setSetupNotes({...setupNotes, [ex.name]: newVal}); 
-                                                                                            const up = structuredClone(currentWorkout); up.exercises[exIdx].setup = newVal; setCurrentWorkout(up);
+                                                                                            const up = structuredClone(currentWorkout);
+                                                                                            up.exercises[exIdx].setup = newVal;
+                                                                                            setCurrentWorkout(up);
+                                                                                            setSetupNotes({ ...setupNotes, [ex.name]: newVal });
                                                                                         }}
                                                                                         className="bg-transparent text-[10px] font-bold text-indigo-300 border-none p-0 focus:ring-0 w-1/2 cursor-pointer"
                                                                                     >
                                                                                         <option value="">Lever</option>
-                                                                                        {['A','B','C','D','E'].map(l => <option key={l} value={`Lever ${l}`}>Lever {l}</option>)}
+                                                                                        {['A', 'B', 'C', 'D', 'E'].map(l => <option key={l} value={`Lever ${l}`}>Lever {l}</option>)}
                                                                                     </select>
                                                                                 </div>
                                                                                 {/* TECH CUES FIELD */}
-                                                                                <input 
+                                                                                <input
                                                                                     type="text"
                                                                                     placeholder="Tech Cues (e.g. Chest up, slow eccentric)"
                                                                                     value={setupNotes[ex.name + "_cues"] || ""}
-                                                                                    onChange={e => setSetupNotes({...setupNotes, [ex.name + "_cues"]: e.target.value})}
+                                                                                    onChange={e => setSetupNotes({ ...setupNotes, [ex.name + "_cues"]: e.target.value })}
                                                                                     className="bg-transparent text-[9px] font-bold text-slate-500 border-none p-0 focus:ring-0 w-full placeholder:text-slate-700 italic"
                                                                                 />
                                                                             </div>
                                                                         </div>
                                                                         <div className="flex gap-2">
                                                                             <button onClick={() => {
-                                                                                const up = {...currentWorkout};
+                                                                                const up = structuredClone(currentWorkout);
                                                                                 const maxLoad = getLastMaxLoad(ex.name, logs);
                                                                                 const warmUpKg = maxLoad > 0 ? (maxLoad * 0.5).toFixed(1) : '';
                                                                                 up.exercises[exIdx].sets.unshift({ kg: warmUpKg, reps: '', rir: '', done: false, type: 'warmup' });
@@ -5426,11 +5431,22 @@
                                                                                 <Icon name="shuffle" className="w-4 h-4" />
                                                                             </button>
                                                                         </div>
-                                                                    </div> 
-                                                                </div> 
-                                                                <a href={`https://www.youtube.com/results?search_query=TYTAX+T1+${encodeURIComponent(ex.name)}`} target="_blank" className="p-4 bg-slate-900 rounded-2xl text-slate-500 border border-white/5 hover:text-indigo-400 transition-colors"><Icon name="play" className="w-5 h-5"/></a> 
-                                                            </div> 
-                                                            <div className="space-y-3"> 
+                                                                    </div>
+                                                                </div>
+                                                                <a href={`https://www.youtube.com/results?search_query=TYTAX+T1+${encodeURIComponent(ex.name)}`} target="_blank" className="p-4 bg-slate-900 rounded-2xl text-slate-500 border border-white/5 hover:text-indigo-400 transition-colors"><Icon name="play" className="w-5 h-5" /></a>
+                                                            </div>
+                                                            <div className="space-y-3">
+                                                                {/* Exercise Notes Input */}
+                                                                <textarea
+                                                                    placeholder="Exercise notes..."
+                                                                    value={ex.notes || ""}
+                                                                    onChange={e => {
+                                                                        const up = structuredClone(currentWorkout);
+                                                                        up.exercises[exIdx].notes = e.target.value;
+                                                                        setCurrentWorkout(up);
+                                                                    }}
+                                                                    className="w-full p-3 bg-black rounded-2xl font-black text-base text-white border-none focus:ring-2 focus:ring-indigo-500"
+                                                                />
                                                                 {ex.sets.map((set, sIdx) => {
                                                                     // GHOST REPS LOGIC
                                                                     const prevSession = logs.find(l => l.exercises.some(e => e.name === ex.name));
@@ -5444,63 +5460,77 @@
                                                                     const beatGhost = ghostReps && set.reps && parseInt(set.reps) > parseInt(ghostReps);
 
                                                                     return (
-                                                                    <div key={sIdx} className={`grid grid-cols-12 gap-2 items-center p-3 rounded-3xl transition-all relative overflow-hidden ${set.done ? 'bg-emerald-900/10' : set.type === 'warmup' ? 'bg-yellow-900/10 border border-yellow-500/10' : 'bg-slate-900/60'}`}> 
-                                                                        {set.type === 'warmup' && <div className="absolute top-0 right-0 w-2 h-2 bg-yellow-500 rounded-bl-full" />}
-                                                                        <div className={`col-span-1 text-center font-black text-[10px] ${set.type === 'warmup' ? 'text-yellow-600' : 'text-slate-700'}`}>{sIdx+1}</div> 
-                                                                        <input id={`input-kg-${exIdx}-${sIdx}`} type="number" placeholder="KG" value={set.kg} disabled={set.done} onChange={e => { const up = {...currentWorkout}; up.exercises[exIdx].sets[sIdx].kg = e.target.value; setCurrentWorkout(up); }} className={`col-span-3 p-3 bg-black rounded-2xl font-black text-base text-center border-none text-white focus:ring-2 ${set.type === 'warmup' ? 'focus:ring-yellow-500' : 'focus:ring-indigo-500'}`} /> 
-                                                                        <div className="col-span-3 relative">
-                                                                            <input id={`input-reps-${exIdx}-${sIdx}`} type="number" placeholder={ghostReps ? `Ghost: ${ghostReps}` : "R"} value={set.reps} disabled={set.done} onChange={e => { const up = {...currentWorkout}; up.exercises[exIdx].sets[sIdx].reps = e.target.value; setCurrentWorkout(up); }} className={`w-full p-3 bg-black rounded-2xl font-black text-base text-center border-none focus:ring-2 ${set.type === 'warmup' ? 'focus:ring-yellow-500' : 'focus:ring-indigo-500'} ${beatGhost ? 'text-emerald-400 font-bold' : 'text-white'}`} /> 
-                                                                             {ex.unilateral && <span className="absolute right-1 bottom-1 text-[8px] font-bold text-slate-600">/side</span>}
-                                                                        </div>
-                                                                        <div className="col-span-2 flex flex-col gap-1">
-                                                                            <select value={set.rir} disabled={set.done} onChange={e => { const up = {...currentWorkout}; up.exercises[exIdx].sets[sIdx].rir = e.target.value; setCurrentWorkout(up); }} className="bg-slate-800 text-indigo-400 text-[9px] font-black rounded-lg p-1 text-center border-none">
-                                                                                <option value="">RIR</option>
-                                                                                {[0,1,2,3,4].map(r => <option key={r} value={r}>{r}</option>)}
-                                                                            </select>
-                                                                            <span className="text-[8px] font-black text-slate-600 text-center">1RM: {calculateE1RM(set.kg, set.reps)}</span>
-                                                                        </div>
-                                                                        <button disabled={!set.kg || !set.reps || set.done} onClick={() => {
-                                                                            const up = {...currentWorkout}; up.exercises[exIdx].sets[sIdx].done = true; setCurrentWorkout(up); setTimer(90); setTimerActive(true);
-                                                                            if (window.navigator.vibrate) window.navigator.vibrate(50);
-                                                                            
-                                                                            // IMPACT PULSE
-                                                                            const card = document.getElementById(`exercise-card-${exIdx}`);
-                                                                            if (card) {
-                                                                                card.classList.add('glow-indigo');
-                                                                                setTimeout(() => card.classList.remove('glow-indigo'), 1000);
-                                                                            }
+                                                                        <div key={sIdx} className={`grid grid-cols-12 gap-2 items-center p-3 rounded-3xl transition-all relative overflow-hidden ${set.done ? 'bg-emerald-900/10' : set.type === 'warmup' ? 'bg-yellow-900/10 border border-yellow-500/10' : 'bg-slate-900/60'}`}>
+                                                                            {set.type === 'warmup' && <div className="absolute top-0 right-0 w-2 h-2 bg-yellow-500 rounded-bl-full" />}
+                                                                            <div className={`col-span-1 text-center font-black text-[10px] ${set.type === 'warmup' ? 'text-yellow-600' : 'text-slate-700'}`}>{sIdx + 1}</div>
+                                                                            <input id={`input-kg-${exIdx}-${sIdx}`} type="number" placeholder="KG" value={set.kg} disabled={set.done} onChange={e => {
+                                                                                const up = structuredClone(currentWorkout);
+                                                                                up.exercises[exIdx].sets[sIdx].kg = e.target.value;
+                                                                                setCurrentWorkout(up);
+                                                                            }} className={`col-span-3 p-3 bg-black rounded-2xl font-black text-base text-center border-none text-white focus:ring-2 ${set.type === 'warmup' ? 'focus:ring-yellow-500' : 'focus:ring-indigo-500'}`} />
+                                                                            <div className="col-span-3 relative">
+                                                                                <input id={`input-reps-${exIdx}-${sIdx}`} type="number" placeholder={ghostReps ? `Ghost: ${ghostReps}` : "R"} value={set.reps} disabled={set.done} onChange={e => {
+                                                                                    const up = structuredClone(currentWorkout);
+                                                                                    up.exercises[exIdx].sets[sIdx].reps = e.target.value;
+                                                                                    setCurrentWorkout(up);
+                                                                                }} className={`w-full p-3 bg-black rounded-2xl font-black text-base text-center border-none focus:ring-2 ${set.type === 'warmup' ? 'focus:ring-yellow-500' : 'focus:ring-indigo-500'} ${beatGhost ? 'text-emerald-400 font-bold' : 'text-white'}`} />
+                                                                                {ex.unilateral && <span className="absolute right-1 bottom-1 text-[8px] font-bold text-slate-600">/side</span>}
+                                                                            </div>
+                                                                            <div className="col-span-2 flex flex-col gap-1">
+                                                                                <select value={set.rir} disabled={set.done} onChange={e => {
+                                                                                    const up = structuredClone(currentWorkout);
+                                                                                    up.exercises[exIdx].sets[sIdx].rir = e.target.value;
+                                                                                    setCurrentWorkout(up);
+                                                                                }} className="bg-slate-800 text-indigo-400 text-[9px] font-black rounded-lg p-1 text-center border-none">
+                                                                                    <option value="">RIR</option>
+                                                                                    {[0, 1, 2, 3, 4].map(r => <option key={r} value={r}>{r}</option>)}
+                                                                                </select>
+                                                                                <span className="text-[8px] font-black text-slate-600 text-center">1RM: {calculateE1RM(set.kg, set.reps)}</span>
+                                                                            </div>
+                                                                            <button disabled={!set.kg || !set.reps || set.done} onClick={() => {
+                                                                                const up = structuredClone(currentWorkout);
+                                                                                up.exercises[exIdx].sets[sIdx].done = true;
+                                                                                setCurrentWorkout(up); setTimer(90); setTimerActive(true);
+                                                                                if (window.navigator.vibrate) window.navigator.vibrate(50);
 
-                                                                            // Smart Focus Logic
-                                                                            setTimeout(() => {
-                                                                                const nextSet = document.getElementById(`input-kg-${exIdx}-${sIdx+1}`);
-                                                                                const nextExInput = document.getElementById(`input-kg-${exIdx+1}-0`);
-                                                                                const nextExCard = document.getElementById(`exercise-card-${exIdx+1}`);
-
-                                                                                if (nextSet) {
-                                                                                    nextSet.focus();
-                                                                                    nextSet.select();
-                                                                                    nextSet.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                                                                // IMPACT PULSE
+                                                                                const card = document.getElementById(`exercise-card-${exIdx}`);
+                                                                                if (card) {
+                                                                                    card.classList.add('glow-indigo');
+                                                                                    setTimeout(() => card.classList.remove('glow-indigo'), 1000);
                                                                                 }
-                                                                                else if (nextExInput) {
-                                                                                    nextExInput.focus();
-                                                                                    nextExInput.select();
-                                                                                    if (nextExCard) {
-                                                                                        nextExCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                                                                    } else {
-                                                                                        nextExInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                                                                                // Smart Focus Logic
+                                                                                setTimeout(() => {
+                                                                                    const nextSet = document.getElementById(`input-kg-${exIdx}-${sIdx + 1}`);
+                                                                                    const nextExInput = document.getElementById(`input-kg-${exIdx + 1}-0`);
+                                                                                    const nextExCard = document.getElementById(`exercise-card-${exIdx + 1}`);
+
+                                                                                    if (nextSet) {
+                                                                                        nextSet.focus();
+                                                                                        nextSet.select();
+                                                                                        nextSet.scrollIntoView({ behavior: 'smooth', block: 'center' });
                                                                                     }
+                                                                                    else if (nextExInput) {
+                                                                                        nextExInput.focus();
+                                                                                        nextExInput.select();
+                                                                                        if (nextExCard) {
+                                                                                            nextExCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                                                                        } else {
+                                                                                            nextExInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                                                                        }
+                                                                                    }
+                                                                                }, 100);
+                                                                            }} className={`col-span-2 p-4 rounded-2xl flex items-center justify-center transition-all ${set.done ? 'bg-emerald-500 text-white shadow-lg' : 'bg-slate-800 text-slate-600 active:scale-90 disabled:opacity-20'}`}><Icon name="check" className="w-5 h-5" /></button>
+                                                                            <button onClick={() => {
+                                                                                if (confirm("Delete this set?")) {
+                                                                                    const newWorkout = structuredClone(currentWorkout);
+                                                                                    newWorkout.exercises[exIdx].sets.splice(sIdx, 1);
+                                                                                    setCurrentWorkout(newWorkout);
                                                                                 }
-                                                                            }, 100);
-                                                                        }} className={`col-span-2 p-4 rounded-2xl flex items-center justify-center transition-all ${set.done ? 'bg-emerald-500 text-white shadow-lg' : 'bg-slate-800 text-slate-600 active:scale-90 disabled:opacity-20'}`}><Icon name="check" className="w-5 h-5" /></button>
-                                                                        <button onClick={() => {
-                                                                            if (confirm("Delete this set?")) {
-                                                                                const newWorkout = structuredClone(currentWorkout);
-                                                                                newWorkout.exercises[exIdx].sets.splice(sIdx, 1);
-                                                                                setCurrentWorkout(newWorkout);
-                                                                            }
-                                                                        }} className="col-span-1 h-12 rounded-2xl flex items-center justify-center transition-all bg-red-900/20 text-red-500 hover:bg-red-500 hover:text-white active:scale-90 border border-red-500/20"><Icon name="trash" className="w-4 h-4" /></button>
-                                                                    </div>
-                                                                );
+                                                                            }} className="col-span-1 h-12 rounded-2xl flex items-center justify-center transition-all bg-red-900/20 text-red-500 hover:bg-red-500 hover:text-white active:scale-90 border border-red-500/20"><Icon name="trash" className="w-4 h-4" /></button>
+                                                                        </div>
+                                                                    );
                                                                 })}
                                                                 {/* Smart Rest Timer Buttons */}
                                                                 <div className="flex justify-center gap-2 mt-3">
@@ -5509,18 +5539,8 @@
                                                                     <button onClick={() => { setTimer(90); setTimerActive(true); }} className="px-3 py-1 bg-slate-800 rounded-full text-[10px] font-black text-slate-400 uppercase tracking-widest hover:text-white transition-colors">90s</button>
                                                                 </div>
                                                                 <button onClick={() => {
-                                                                    const up = {...currentWorkout};
-                                                                    const lastKg = up.exercises[exIdx].sets[up.exercises[exIdx].sets.length-1]?.kg || '';
-                                                                    up.exercises[exIdx].sets.push({ kg: lastKg, reps: '', rir: '', done: false, type: 'working' });
-                                                                    setCurrentWorkout(up);
-                                                                            }
-                                                                        }} className="col-span-1 h-12 rounded-2xl flex items-center justify-center transition-all bg-red-900/20 text-red-500 hover:bg-red-500 hover:text-white active:scale-90 border border-red-500/20"><Icon name="trash" className="w-4 h-4" /></button>
-                                                                    </div>
-                                                                );
-                                                                })}
-                                                                <button onClick={() => {
-                                                                    const up = {...currentWorkout};
-                                                                    const lastKg = up.exercises[exIdx].sets[up.exercises[exIdx].sets.length-1]?.kg || '';
+                                                                    const up = structuredClone(currentWorkout);
+                                                                    const lastKg = up.exercises[exIdx].sets[up.exercises[exIdx].sets.length - 1]?.kg || '';
                                                                     up.exercises[exIdx].sets.push({ kg: lastKg, reps: '', rir: '', done: false, type: 'working' });
                                                                     setCurrentWorkout(up);
                                                                 }} className="w-full py-3 bg-slate-900 rounded-2xl border border-white/5 text-[10px] font-black uppercase tracking-widest text-slate-500 hover:text-white hover:border-white/10 transition-colors">+ Add Working Set</button>
