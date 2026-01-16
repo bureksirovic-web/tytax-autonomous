@@ -2,7 +2,7 @@
 
 ## 🔄 PHASE 1: WORKOUT UX RESTORATION
 
-- [ ] **Feature: Auto-Collapse Completed Exercises**
+- [ ] **Feature: Auto-Collapse Completed Exercises** (SKIPPED)
     - *Goal:* When an exercise is marked 'Done' (or all sets checked), the card should collapse.
     - *Action:*
         1. Add isCollapsed state to the Exercise Card.
@@ -21,7 +21,8 @@
 - [ ] **Feature: Restore 'Trends' Tab**
     - *Goal:* Re-enable the Trends view in the main navigation.
     - *Action:*
-        1. Ensure enderTrends() function exists in App.
+        1. Ensure 
+enderTrends() function exists in App.
         2. Add 'Trends' button to the Nav bar.
         3. Ensure it displays the Volume/Progress charts.
 
