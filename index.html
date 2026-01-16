@@ -4434,7 +4434,7 @@
         };
 
         const VaultCard = ({ log, onEdit, onDelete }) => {
-            const [expanded, setExpanded] = useState(true);
+            const [expanded, setExpanded] = useState(false);
             const [impactExpanded, setImpactExpanded] = useState(false);
 
             // Metrics
@@ -4463,10 +4463,10 @@
             const impactDist = useMemo(() => calculateImpactDistribution(log.exercises || [], true), [log.exercises]);
 
             return (
-                <div className="glass p-8 rounded-[2.5rem] relative group border-white/5 transition-all duration-300">
+                <div className={`glass relative group border-white/5 transition-all duration-300 ${expanded ? 'p-8 rounded-[2.5rem]' : 'p-5 rounded-[2rem]'}`}>
 
                     {/* Header */}
-                    <div className="flex justify-between items-start mb-6">
+                    <div className={`flex justify-between items-start ${expanded ? 'mb-6' : 'mb-3'}`}>
                         <div>
                             <span className="px-4 py-1 accent-gradient rounded-full text-[9px] font-black uppercase tracking-widest text-white shadow-lg">{log.session}</span>
                             <h3 className="font-black text-2xl mt-3 text-white tracking-tighter leading-none italic">{new Date(log.date).toDateString()}</h3>
@@ -4478,7 +4478,7 @@
                     </div>
 
                     {/* Metrics Grid */}
-                    <div className="grid grid-cols-4 gap-2 mb-6">
+                    <div className={`grid grid-cols-4 gap-2 ${expanded ? 'mb-6' : 'mb-3'}`}>
                          <div className="bg-slate-900/50 p-3 rounded-2xl text-center border border-white/5">
                              <p className="text-[8px] font-black text-slate-500 uppercase tracking-widest">Time</p>
                              <p className="text-sm font-black text-white italic">{durationMins}m</p>
@@ -4498,7 +4498,7 @@
                     </div>
 
                     {/* Collapsible Kinetic Impact */}
-                    <div className="mb-4 space-y-2">
+                    <div className={`space-y-2 ${expanded ? 'mb-4' : 'mb-3'}`}>
                          <button
                              onClick={() => setImpactExpanded(!impactExpanded)}
                              className="w-full py-3 bg-slate-900/30 rounded-xl border border-white/5 flex items-center justify-center gap-2 text-[9px] font-black uppercase tracking-widest text-slate-500 hover:text-white transition-colors"
