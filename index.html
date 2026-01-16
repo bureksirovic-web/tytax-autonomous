@@ -4574,6 +4574,8 @@
                 return p?.data.MASTER_EXERCISES || [];
             });
 
+            const { showToast } = React.useContext(ToastContext); // Use ToastContext for showToast
+
             useEffect(() => {
                 document.body.style.backgroundColor = oledMode ? '#000000' : '#020617';
             }, [oledMode]);
@@ -4610,7 +4612,6 @@
             const [swappingIdx, setSwappingIdx] = useState(null);
             const [editingLog, setEditingLog] = useState(null);
  
-            const { showToast } = React.useContext(ToastContext); // Use ToastContext for showToast
 
             useEffect(() => { 
                 localStorage.setItem('tytax_logs', JSON.stringify(logs)); 
@@ -4620,7 +4621,7 @@
                 localStorage.setItem('tytax_setup_notes', JSON.stringify(setupNotes)); 
                 localStorage.setItem('tytax_start_date', startDate); 
                 localStorage.setItem('tytax_oled_mode', oledMode);
-                localStorage.setItem('tytax_warmup_strategy', warmupStrategy);
+                localStorage.setItem('tytax_warmup_strategy', JSON.stringify(warmupStrategy));
                 localStorage.setItem('tytax_inventory', JSON.stringify(userInventory));
                 localStorage.setItem('tytax_user_profile', JSON.stringify(userProfile));
                 localStorage.setItem('tytax_bodyweight_log', JSON.stringify(bodyweightLog));
