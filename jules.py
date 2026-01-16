@@ -51,8 +51,7 @@ def ask_gemini(prompt, role="coder"):
         except: continue
     return None
 
-def apply_patch(file_path, patch_text):
-    original = read_file(file_path)
+def apply_patch(file_path, patch_text, original):
     is_new = not os.path.exists(file_path) or len(original) == 0
     blocks = re.findall(r"<<<<<<< SEARCH\s*\n(.*?)\n=======\n(.*?)\n>>>>>>> REPLACE", patch_text, re.DOTALL)
     if not blocks: return None, "No blocks found."
@@ -93,24 +92,23 @@ def run_task():
     if "css" in action.lower(): target_file = "css/styles.css"
     elif "js" in action.lower(): target_file = "js/components.js"
 
+    orig_content = read_file(target_file)
+    ctx = read_file("index.html") if target_file != "index.html" else ""
+
     for attempt in range(MAX_QA_RETRIES):
         log(f"💡 Attempt {attempt+1}/{MAX_QA_RETRIES}")
-        if attempt > 10: time.sleep(60) # Deep Thinking Backoff
+        if attempt > 10: time.sleep(60)
         
-        orig_content = read_file(target_file)
-        # Context includes index.html for component extraction tasks
-        ctx = read_file("index.html") if target_file != "index.html" else ""
         prompt = f"TASK: {action}\nFILE: {target_file}\nCONTEXT:\n{ctx}\nCODE:\n{orig_content}"
         
         patch_resp = ask_gemini(prompt, role="coder")
         if not patch_resp: continue
         
-        new_code, status = apply_patch(target_file, patch_resp)
+        new_code, status = apply_patch(target_file, patch_resp, orig_content)
         if not new_code:
             log(f"❌ {status}")
             continue
 
-        # Level 9 Critic Check
         ok, feedback = verify_fix(title, orig_content, new_code)
         if not ok:
             log(f"❌ QA REJECTED: {feedback}")
