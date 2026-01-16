@@ -1,14 +1,18 @@
-﻿# Jules Agent Specification (Level 22)
+﻿# Jules Agent Specification (Level 23)
 
-## 1. Model Hierarchy (NO 1.5 Models)
-- [x] **Coder:** Start with 3.0-pro-preview -> 2.0-flash-exp -> 2.0-flash.
-- [x] **Sentinel/Critic:** Use 2.0-flash family ONLY.
-- [x] **BANNED:** gemini-1.5-pro, gemini-1.5-flash.
+## 1. Input Sanitization (NEW)
+- [x] **API Key Cleaning:** MUST strip all whitespace/newlines from GEMINI_API_KEY before use.
+- [x] **Model Name Cleaning:** MUST strip whitespace from model names.
+- [x] **URL Safety:** Prevent "No connection adapters" errors by ensuring clean connection strings.
 
-## 2. Core Functionalities (from Evolution History)
-- [x] **Ghost Protocol:** Blacklist 404 models.
-- [x] **Rate Limit Shield:** Sleep 10s on 429.
-- [x] **Markdown Stripper:** Clean code fences.
-- [x] **Fuzzy Match:** Logic to find code even with bad indentation.
-- [x] **Move-to-Bottom:** Rotate stuck tasks to end of backlog.
-- [x] **Render Watchdog:** Verify deployment.
+## 2. Model Hierarchy (Strict 2.0/3.0)
+- [x] **Coder:** gemini-3.0-pro-preview -> gemini-2.0-flash-exp -> gemini-2.0-flash.
+- [x] **Sentinel:** gemini-2.0-flash-exp (Smart Safety).
+- [x] **Critic:** gemini-2.0-flash (Fast Logic).
+- [x] **BANNED:** All 1.5 models (Ghost Protocol/Hallucination risk).
+
+## 3. Core Mechanics
+- [x] **Ghost Protocol:** Blacklist 404 models per session.
+- [x] **Rate Limit Shield:** Sleep 10s on 429 errors.
+- [x] **Markdown Stripper:** Remove code fences from AI output.
+- [x] **Task Rotation:** Move stuck tasks to bottom of backlog after 4 retries.
