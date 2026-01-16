@@ -5218,6 +5218,8 @@
             const [editingLog, setEditingLog] = useState(null);
             const [manualExpanded, setManualExpanded] = useState(() => new Set());
             const [isAddingExercise, setIsAddingExercise] = useState(false);
+
+            const availableExercises = useMemo(() => getAvailableExercises(logs), [logs]);
  
             useEffect(() => { 
                 localStorage.setItem('tytax_logs', JSON.stringify(logs)); 
