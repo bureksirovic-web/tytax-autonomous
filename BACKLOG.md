@@ -5,7 +5,6 @@
     - *Action:* Find the text "v1.0" (or similar) and change it to "v2.0 (Night Shift)".
 
 ## 🧪 LEVEL 2: NORMAL (Logic & State)
-- [ ] **Feature: Auto-Collapse Completed Exercises**
     - *Goal:* Save screen space by shrinking done exercises.
     - *Action:*
         1. Add isCollapsed state to the ExerciseCard.
@@ -22,3 +21,6 @@
 
 ## ⚠️ SKIPPED TASKS
 - [ ] **Task: Update App Version Label** (SKIPPED)
+
+## ⚠️ SKIPPED TASKS
+- [ ] **Feature: Auto-Collapse Completed Exercises** (SKIPPED)
