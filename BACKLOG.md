@@ -1,32 +1,19 @@
 ﻿# BACKLOG
 
 ## 🧪 LEVEL 1: SIMPLE (Warm Up)
-    - *Goal:* Change the visible version number in the app footer.
-    - *Action:* Change "v1.0" to "v2.0 (Night Shift)".
+- [ ] **Task: Update Footer Version**
+    - *Goal:* Verify basic file editing.
+    - *Action:* Find the footer version text and change it to "v3.0 (Jules Reset)".
 
-## 🧪 LEVEL 2: NORMAL (Logic)
-    - *Goal:* Save screen space.
-    - *Action:* Add isCollapsed state to ExerciseCard. Toggle when isDone is true.
+## 🧪 LEVEL 2: NORMAL (Logic & State)
+- [ ] **Feature: Workout Timer Toggle**
+    - *Goal:* Test React state management.
+    - *Action:* 1. Add a boolean state showTimer (default true).
+        2. Add a small button "Hide Timer" / "Show Timer" near the top.
+        3. Conditionally render the timer based on this state.
 
-## 🧪 LEVEL 3: COMPLEX (CSS)
-- [x] **Fix: Kinetic Impact Graph Positioning**
-    - *Goal:* Fix overlapping graph.
-    - *Action:* Force position: fixed at bottom-right with correct z-index.
-
-## ⚠️ SKIPPED TASKS
-- [ ] **Task: Update App Version Label** (SKIPPED)
-
-## ⚠️ SKIPPED TASKS
-- [ ] **Feature: Auto-Collapse Completed Exercises** (SKIPPED)
-## 🧪 LEVEL 31: SYSTEM VALIDATION (Auto-Discovery & QA)
-    - *Goal:* Confirm Jules finds valid models without crashing.
-    - *Action:* Add a comment to the top of index.html saying: "".
-
-    - *Goal:* Test the new 'Strict Patching' engine.
-    - *Action:* Find the <footer> and replace the copyright text with: "© 2026 TyTax Autonomous | Built by Jules Level 31".
-
-- [x] **Test: Critic Logic (Logic Trap)**
-    - *Goal:* See if the Critic allows a 'bad' change or if the Coder handles it.
-    - *Action:* Change the background color of the 'Start Workout' button to 'red' (Note: This might violate design rules, let's see if it just does it).
-- [ ] **Test: Verify Model Auto-Discovery** (SKIPPED)
-- [ ] **Test: Complex String Parsing** (SKIPPED)
+## 🧪 LEVEL 3: COMPLEX (CSS & Z-Index)
+- [ ] **Fix: Kinetic Graph Overlap**
+    - *Goal:* Test CSS spatial reasoning.
+    - *Action:* The "Kinetic Impact" graph sometimes covers the "Finish Workout" modal.
+    - *Fix:* Ensure the Modal has a higher z-index (e.g., 9999) than the Graph container.
