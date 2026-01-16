@@ -4422,6 +4422,69 @@
             );
         };
 
+        const ExercisePicker = ({ masterExercises, userInventory, onSelect, onCancel }) => {
+            const [search, setSearch] = useState('');
+
+            const candidates = useMemo(() => {
+                return masterExercises.filter(ex => {
+                    // Inventory Check
+                    const att = getAttachment(ex.name, PRESETS);
+                    if (att && !userInventory.includes(att.name) && att.priority !== 'Owned') return false;
+
+                    // Name Search
+                    if (search) return ex.name.toLowerCase().includes(search.toLowerCase());
+                    return true;
+                }).sort((a, b) => a.name.localeCompare(b.name));
+            }, [search, masterExercises, userInventory]);
+
+            return (
+                <div className="fixed inset-0 z-[200] bg-black/95 backdrop-blur-xl flex flex-col p-6 animate-fade-in">
+                    <div className="flex justify-between items-center mb-6">
+                        <div>
+                            <h2 className="text-2xl font-black italic uppercase tracking-tighter text-white">Add<br/><span className="text-indigo-500">Exercise</span></h2>
+                            <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Manual Injection</p>
+                        </div>
+                        <button onClick={onCancel} className="p-4 bg-slate-900 rounded-2xl text-slate-500"><Icon name="x" /></button>
+                    </div>
+
+                    <input
+                        value={search}
+                        onChange={e => setSearch(e.target.value)}
+                        placeholder="Search library..."
+                        className="w-full p-4 bg-slate-900 rounded-2xl font-bold text-xs text-white border-none focus:ring-2 focus:ring-indigo-500 mb-4"
+                        autoFocus
+                    />
+
+                    <div className="flex-1 overflow-y-auto space-y-3 no-scrollbar pb-10">
+                        {candidates.length > 0 ? (
+                            candidates.map(ex => (
+                                <button
+                                    key={ex.name}
+                                    onClick={() => onSelect(ex)}
+                                    className="w-full p-5 bg-slate-900/50 border border-white/5 rounded-[2rem] text-left hover:bg-indigo-900/20 hover:border-indigo-500/50 transition-all group"
+                                >
+                                    <div className="flex justify-between items-start">
+                                        <div>
+                                            <h4 className="font-black text-sm text-white italic group-hover:text-indigo-300">{cleanName(ex.name)}</h4>
+                                            <div className="flex gap-2 mt-2">
+                                                <span className="px-2 py-1 bg-slate-800 rounded-lg text-[8px] font-black text-slate-500 uppercase">{ex.station || 'Tytax'}</span>
+                                                <span className="px-2 py-1 bg-slate-800 rounded-lg text-[8px] font-black text-slate-500 uppercase">{ex.pattern || 'Isolation'}</span>
+                                            </div>
+                                        </div>
+                                        {ex.unilateral && <span className="text-[8px] font-black text-purple-400 uppercase tracking-widest border border-purple-500/30 px-2 py-1 rounded-lg">Uni</span>}
+                                    </div>
+                                </button>
+                            ))
+                        ) : (
+                            <div className="text-center py-10 opacity-50">
+                                <p className="text-[10px] font-black uppercase tracking-widest">No matches found.</p>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            );
+        };
+
         const ExerciseSwapper = ({ targetName, masterExercises, userInventory, onSwap, onCancel }) => {
             const [search, setSearch] = useState('');
             const targetEx = masterExercises.find(e => e.name === targetName);
@@ -5151,6 +5214,7 @@
             const [swappingIdx, setSwappingIdx] = useState(null);
             const [editingLog, setEditingLog] = useState(null);
             const [manualExpanded, setManualExpanded] = useState(() => new Set());
+            const [isAddingExercise, setIsAddingExercise] = useState(false);
  
             useEffect(() => { 
                 localStorage.setItem('tytax_logs', JSON.stringify(logs)); 
@@ -5640,6 +5704,42 @@
                         {prCelebration && <PRModal prs={prCelebration} onClose={() => setPrCelebration(null)} />}
                         {calculatorTarget && <PlateCalculator targetKg={calculatorTarget.targetKg} onClose={() => setCalculatorTarget(null)} />}
                         {showOneRepMax && <OneRepMaxCalculator onClose={() => setShowOneRepMax(false)} />}
+                        {isAddingExercise && (
+                            <ExercisePicker
+                                masterExercises={masterExercises}
+                                userInventory={userInventory}
+                                onCancel={() => setIsAddingExercise(false)}
+                                onSelect={(newMaster) => {
+                                    const up = structuredClone(currentWorkout);
+
+                                    // Default Construction: 3 sets, empty weights
+                                    const targetSetsCount = parseInt(newMaster.sets || 3);
+                                    const workingSets = Array.from({length: targetSetsCount}, () => ({ kg: '', reps: '', rir: '', done: false, type: 'working' }));
+
+                                    up.exercises.push({
+                                        name: newMaster.name,
+                                        station: newMaster.station || "Tytax",
+                                        unilateral: newMaster.unilateral || false,
+                                        impact: newMaster.impact || [],
+                                        targetReps: newMaster.reps || "8-12",
+                                        note: newMaster.note || "",
+                                        sets: workingSets,
+                                        setup: setupNotes[newMaster.name] || ""
+                                    });
+
+                                    setCurrentWorkout(up);
+                                    setIsAddingExercise(false);
+                                    showToast("Exercise Added");
+
+                                    // Auto-scroll to bottom
+                                    setTimeout(() => {
+                                        const el = document.getElementById(`exercise-card-${up.exercises.length - 1}`);
+                                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                                    }, 100);
+                                }}
+                            />
+                        )}
+
                         {swappingIdx !== null && (
                             <ExerciseSwapper 
                                 targetName={currentWorkout.exercises[swappingIdx].name}
@@ -6110,6 +6210,11 @@
                                             );
                                         })}
                                         </div>
+                                        <button onClick={() => setIsAddingExercise(true)} className="w-full py-4 bg-slate-900 rounded-[2rem] border border-white/5 text-[10px] font-black uppercase tracking-widest text-indigo-400 hover:text-white hover:bg-indigo-900/20 transition-all mb-4 flex items-center justify-center gap-2">
+                                            <Icon name="library" className="w-4 h-4" />
+                                            <span>Add Manual Exercise</span>
+                                        </button>
+
                                         <button onClick={() => {
                                             setDebriefData({ workout: currentWorkout, duration: stopwatch, volume: currentVolume });
                                         }} className="w-full py-8 accent-gradient text-white rounded-[3rem] font-black uppercase shadow-2xl tracking-[0.4em] text-xs">Terminate Session</button>
