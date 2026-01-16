@@ -16,7 +16,7 @@
 
 ## 🛠️ PRIORITY 1: STABILIZE NIGHT SHIFT FEATURES
 
-- [ ] **Stabilize 'Default Routines' Injection**
+- [x] **Stabilize 'Default Routines' Injection**
     - *Goal:* Ensure the new "Starter Routines" don't cause an infinite loop.
     - *Action:* Check the useEffect that loads saved_workouts.
     - *Fix:* Ensure it has a dependency array [] (run once) or properly checks if (saved_workouts.length === 0).

@@ -4570,7 +4570,13 @@
 
             const [library, setLibrary] = useState(() => {
                 // Initialize library with preset data if available, otherwise empty (will be populated on load)
-                const p = allPresets.find(pr => pr.id === 'kinetic_impact') || PRESETS[0];
+                let p;
+                try {
+                    p = allPresets.find(pr => pr.id === 'kinetic_impact') || PRESETS[0];
+                } catch (e) {
+                    console.error("Error accessing PRESETS", e);
+                    p = PRESETS[0]; // Fallback to the first preset
+                }
                 return p?.data.MASTER_EXERCISES || [];
             });
 
@@ -5085,9 +5091,14 @@
 
                         {(!userProfile && logs.length === 0) && <WelcomeWizard onComplete={(p) => {
                             setUserProfile(p);
-                            const defaultProto = PRESETS[0];
-                            applyLibraryData(defaultProto.data);
-                            showToast(`Welcome, Commander ${p.name}`);
+                            try {
+                                const defaultProto = PRESETS[0];
+                                applyLibraryData(defaultProto.data);
+                                showToast(`Welcome, Commander ${p.name}`);
+                            } catch (e) {
+                                console.error("Error applying default protocol", e);
+                                showToast("System Initialized (Basic)");
+                            }
                         }} />}
                         
                         {toast && <div className="fixed top-24 left-1/2 -translate-x-1/2 z-[250] bg-indigo-500 text-white px-8 py-4 rounded-3xl shadow-2xl font-black text-[10px] uppercase tracking-widest animate-pulse">{toast}</div>} 
