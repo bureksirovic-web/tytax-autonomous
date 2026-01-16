@@ -13,6 +13,8 @@
     - *Action:* Check the useEffect that checks saved_workouts.length === 0.
     - *Fix:* Ensure the dependency array is empty [] or strictly managed.
 
-- [ ] **Fix Missing ToastProvider** (Retry: Unknown)
+ (Retry: Unknown)
 
 - [ ] **Fix 'Default Routines' Infinite Loop** (Retry: Unknown)
+
+- [ ] **Fix Missing ToastProvider** (Retry: Unknown)
