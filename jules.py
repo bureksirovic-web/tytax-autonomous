@@ -10,7 +10,7 @@ import git
 import requests
 
 # ============================
-# Jules Level 34 (STABILITY TUNE)
+# Jules Level 35 (STABILITY TUNE)
 # ============================
 # Changes from Level 31:
 # - PRIORITY CHANGE: Demoted Gemini 3 (Unstable/Slow). Promoted Gemini 2.0 & 1.5 Pro.
@@ -30,7 +30,7 @@ RENDER_API_KEY = _clean_env("RENDER_API_KEY")
 RENDER_SERVICE_ID = _clean_env("RENDER_SERVICE_ID") or "srv-d5jlon15pdvs739hp3jg"
 SITE_URL = _clean_env("SITE_URL") or "https://tytax-elite.onrender.com"
 
-MAX_QA_RETRIES = 12
+MAX_QA_RETRIES = 15
 MAX_RUNTIME_MINUTES = int(_clean_env("MAX_RUNTIME_MINUTES", "45") or 45)
 # INCREASED TIMEOUT FOR SAFETY
 REQUEST_TIMEOUT = int(_clean_env("REQUEST_TIMEOUT", "120") or 120)
@@ -298,7 +298,7 @@ def process_single_task(model_list: list[str]) -> bool:
     history = ""
 
     for attempt in range(MAX_QA_RETRIES):
-        log(f"💡 Coder Attempt {attempt + 1}/{MAX_QA_RETRIES}..."); if attempt > 5: time.sleep(10)
+        log(f"💡 Coder Attempt {attempt + 1}/{MAX_QA_RETRIES}..."); if attempt > 10: log("⏳ Deep Thinking Mode: Resting 60s..."); time.sleep(60); elif attempt > 5: time.sleep(10)
 
         prompt = (
             f"TASK: {task}\n"
@@ -339,10 +339,11 @@ def process_single_task(model_list: list[str]) -> bool:
 
 if __name__ == "__main__":
     if not GEMINI_API_KEY: sys.exit(1)
-    log("🤖 Jules Level 34 (STABILITY TUNE) Started...")
+    log("🤖 Jules Level 35 (STABILITY TUNE) Started...")
     models = pick_models()
     while process_single_task(models):
         time.sleep(5)
+
 
 
 
