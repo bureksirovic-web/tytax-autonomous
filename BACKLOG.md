@@ -26,7 +26,7 @@
     - *Action:* Check the setShowCalculator logic in the GymTab.
     - *Fix:* Ensure the state showCalculator is defined in GymTab (e.g., const [showCalculator, setShowCalculator] = React.useState(false);).
 
-- [ ] **Verify 'Exercise Notes' Field**
+- [x] **Verify 'Exercise Notes' Field**
     - *Goal:* Ensure typing in notes doesn't re-render the whole page aggressively.
     - *Action:* Check the <input> for notes in the active exercise card.
     - *Fix:* Ensure it uses onBlur to save (better performance) or debounced onChange.
