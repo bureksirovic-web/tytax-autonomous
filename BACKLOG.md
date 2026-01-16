@@ -16,7 +16,7 @@
       <ToastProvider> <div className="min-h-screen..."> ... </div> </ToastProvider>
     - *Constraint:* Ensure ToastProvider is defined before App.
 
-- [ ] **Verify Default Routines Logic (Infinite Loop Check)**
+- [x] **Verify Default Routines Logic (Infinite Loop Check)**
     - *Goal:* Ensure the new 'Starter Pack' logic doesn't crash the browser.
     - *Action:* Check the useEffect that loads default workouts.
     - *Fix:* Ensure the dependency array is [] (run once) and not [saved_workouts] (infinite loop).
