@@ -14,12 +14,14 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "").replace("\n", "").strip()
 RENDER_API_KEY = os.environ.get("RENDER_API_KEY", "").replace("\n", "").strip()
 RENDER_SERVICE_ID = os.environ.get("RENDER_SERVICE_ID", "").replace("\n", "").strip()
 
-# --- MODEL STACK (UPDATED NAMES) ---
-# We added 'latest' and '8b' to find a model that isn't rate limited
+# --- MODEL STACK (CANONICAL NAMES) ---
+# We removed '-latest' which caused 404s.
+# We added '1.5-pro' because it has a separate rate limit from Flash.
 CODER_MODELS = [
-    "gemini-2.0-flash",          # Primary
-    "gemini-1.5-flash-latest",   # Standard Backup
-    "gemini-1.5-flash-8b-latest" # High-Availability Backup
+    "gemini-2.0-flash",       # Primary (Currently Rate Limited)
+    "gemini-1.5-flash",       # Backup 1 (Standard Name)
+    "gemini-1.5-pro",         # Backup 2 (High Logic, Separate Quota)
+    "gemini-1.5-flash-8b"     # Backup 3 (High Availability)
 ]
 
 MAX_QA_RETRIES = 4
@@ -42,8 +44,10 @@ def write_file(filename, content):
 
 # --- PRE-FLIGHT ---
 def test_connection():
-    log(f"🔌 Testing Connection with {CODER_MODELS[0]}...")
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{CODER_MODELS[0]}:generateContent?key={GEMINI_API_KEY}"
+    # We test the *second* model in the list since we know the first might be rate limited
+    test_model = CODER_MODELS[1]
+    log(f"🔌 Testing Connection with {test_model}...")
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{test_model}:generateContent?key={GEMINI_API_KEY}"
     headers = {'Content-Type': 'application/json'}
     data = {"contents": [{"parts": [{"text": "Hello"}]}]}
     try:
@@ -83,7 +87,7 @@ def ask_gemini(prompt, model_list, role="coder"):
                     except: return None
                 elif resp.status_code == 429:
                     log(f"⏳ {model} Rate Limit. Switching...")
-                    time.sleep(2)
+                    time.sleep(1) # Short sleep, then switch immediately
                     break 
                 elif resp.status_code == 404:
                     log(f"🚫 {model} not found. Switching...")
@@ -102,7 +106,6 @@ def apply_patch(original, patch):
     matches = re.findall(pattern, clean_patch, re.DOTALL)
     
     if not matches:
-        # DEBUG: PRINT RAW RESPONSE TO SEE WHY IT FAILED
         log("⚠️ DEBUG: PARSING FAILED. RAW MODEL RESPONSE:")
         log("---------------------------------------------------")
         log(clean_patch[:500] + "..." if len(clean_patch) > 500 else clean_patch)
@@ -172,7 +175,6 @@ def process_task():
     for attempt in range(MAX_QA_RETRIES):
         log(f"💡 Attempt {attempt+1}/{MAX_QA_RETRIES}...")
         
-        # STRICT PROMPT FOR BACKUP MODELS
         prompt = f"""
 TASK: {task}
 CONTEXT: {context}
@@ -218,7 +220,7 @@ IMPORTANT INSTRUCTIONS:
 
 if __name__ == "__main__":
     if test_connection():
-        log("🤖 Jules Level 28 (DEBUGGER MODE) Started...")
+        log("🤖 Jules Level 29 (BACKUP MODELS FIXED) Started...")
         while process_task():
             time.sleep(5)
     else:
