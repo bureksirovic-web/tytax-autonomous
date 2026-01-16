@@ -372,4 +372,6 @@ FAIL: Toast notification is not responsive and may overlap with other UI element
 
  (Retry: Unknown)
 
-- [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components** (Retry: No blocks matched.)
+ (Retry: No blocks matched.)
+
+- [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components** (Retry: No valid SEARCH/REPLACE blocks found.)
