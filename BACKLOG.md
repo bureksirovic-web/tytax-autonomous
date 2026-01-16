@@ -161,7 +161,7 @@ FAIL: Potential mobile overlap. Verify toast positioning on 320px screen.
 
  (Retry: No valid SEARCH/REPLACE blocks found.)
 
-- [ ] **Implement 'Exercise Notes' Field** (Retry: No blocks matched.)
+ (Retry: No blocks matched.)
 
 - [ ] **Implement 'Toast' Notification System** (Retry: FAIL: Missing ToastProvider in App component. The Toast context is created and used, but the App component needs to be wrapped in `<ToastProvider>` to make the context available to the rest of the application.
 )
@@ -169,3 +169,5 @@ FAIL: Potential mobile overlap. Verify toast positioning on 320px screen.
 - [ ] **Implement 'The Gatekeeper' in jules.py** (Retry: No valid SEARCH/REPLACE blocks found.)
 
 - [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components** (Retry: No valid SEARCH/REPLACE blocks found.)
+
+- [ ] **Implement 'Exercise Notes' Field** (Retry: No blocks matched.)
