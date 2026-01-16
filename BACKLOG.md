@@ -273,6 +273,8 @@ Given the lack of responsiveness and potential overlap issues on smaller screens
 FAIL: Toast notification is not responsive and may overlap with other UI elements on smaller screens.
 )
 
-- [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components** (Retry: No valid SEARCH/REPLACE blocks found.)
+ (Retry: No valid SEARCH/REPLACE blocks found.)
 
 - [ ] **Implement 'Exercise Notes' Field** (Retry: No blocks matched.)
+
+- [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components** (Retry: No valid SEARCH/REPLACE blocks found.)
