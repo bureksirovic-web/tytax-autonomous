@@ -1,22 +1,23 @@
 ﻿# BACKLOG
 
-## 🚑 EMERGENCY REPAIR: Fix White Screen Crash
+## 🚨 PRIORITY: FIX WHITE SCREEN CRASH
 
+- [ ] **Debug and Fix 'useState' Global Scope Error**
+    - *Error:* Uncaught TypeError: Cannot read properties of null (reading 'useState')
+    - *Diagnosis:* A useState hook is likely being called OUTSIDE of the unction App() component (in the global scope).
+    - *Action:* Scan the top of the file and the Toast logic.
+    - *Fix:* Move any const [x, setX] = useState(...) lines INSIDE the App or ToastProvider component.
+    - *Verify:* Ensure React.useState is only called inside valid functional components.
 
-    - *Diagnosis:* The App is crashing because 'ToastContext' is undefined.
-    - *Action:* Locate the main unction App().
-    - *Fix:* Wrap the ENTIRE return statement (the Router/Routes) inside <ToastProvider> ... </ToastProvider>.
-    - *Check:* Ensure const ToastProvider is actually defined in the file.
+- [ ] **Inject Missing 'ToastProvider' Wrapper**
+    - *Diagnosis:* The console warned useToast must be used within a ToastProvider.
+    - *Action:* Find the unction App return statement.
+    - *Fix:* Wrap the router:
+      <ToastProvider> <div className="min-h-screen..."> ... </div> </ToastProvider>
+    - *Constraint:* Ensure ToastProvider is defined before App.
 
+- [ ] **Verify Default Routines Logic (Infinite Loop Check)**
+    - *Goal:* Ensure the new 'Starter Pack' logic doesn't crash the browser.
+    - *Action:* Check the useEffect that loads default workouts.
+    - *Fix:* Ensure the dependency array is [] (run once) and not [saved_workouts] (infinite loop).
 
-    - *Diagnosis:* The useEffect for injecting routines might be triggering on every render.
-    - *Action:* Check the useEffect that checks saved_workouts.length === 0.
-    - *Fix:* Ensure the dependency array is empty [] or strictly managed.
-
- (Retry: Unknown)
-
- (Retry: Unknown)
-
-- [ ] **Fix Missing ToastProvider** (Retry: Unknown)
-
-- [ ] **Fix 'Default Routines' Infinite Loop** (Retry: Unknown)
