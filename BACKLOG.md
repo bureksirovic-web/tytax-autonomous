@@ -116,7 +116,7 @@ FAIL: Insufficient context to assess performance impact and correctness of inven
 
  (Retry: No valid SEARCH/REPLACE blocks found.)
 
-- [ ] **Implement 'Exercise Notes' Field** (Retry: FAIL: Potential Data Integrity Issue. The code adds a new input field for "Exercise Notes" and stores its value in the `setupNotes` state. However, the provided context doesn't show how this `setupNotes` state is initialized, persisted, or integrated with the existing data schema in `localStorage`. Without proper handling, this could lead to data loss or corruption when the user refreshes the page or closes the browser. The code also lacks validation or sanitization of the input, which could lead to security vulnerabilities.
+ (Retry: FAIL: Potential Data Integrity Issue. The code adds a new input field for "Exercise Notes" and stores its value in the `setupNotes` state. However, the provided context doesn't show how this `setupNotes` state is initialized, persisted, or integrated with the existing data schema in `localStorage`. Without proper handling, this could lead to data loss or corruption when the user refreshes the page or closes the browser. The code also lacks validation or sanitization of the input, which could lead to security vulnerabilities.
 )
 
 - [ ] **Implement 'Toast' Notification System** (Retry: Let's analyze this diff carefully, playing the role of the Critic.
@@ -152,3 +152,5 @@ FAIL: Potential mobile overlap. Verify toast positioning on 320px screen.
 - [ ] **Implement 'The Gatekeeper' in jules.py** (Retry: No blocks matched.)
 
 - [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components** (Retry: No valid SEARCH/REPLACE blocks found.)
+
+- [ ] **Implement 'Exercise Notes' Field** (Retry: No blocks matched.)
