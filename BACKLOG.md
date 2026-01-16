@@ -12,7 +12,6 @@
         3. When collapsed, show a minimal header (e.g., "Bench Press ✅").
 
 ## 🧪 LEVEL 3: COMPLEX (CSS & Layout)
-- [ ] **Fix: Kinetic Impact Graph Positioning**
     - *Goal:* The muscle graph is blocking the 'Finish Workout' button.
     - *Action:*
         1. Locate the <KineticImpact /> container.
@@ -24,3 +23,6 @@
 
 ## ⚠️ SKIPPED TASKS
 - [ ] **Feature: Auto-Collapse Completed Exercises** (SKIPPED)
+
+## ⚠️ SKIPPED TASKS
+- [ ] **Fix: Kinetic Impact Graph Positioning** (SKIPPED)
