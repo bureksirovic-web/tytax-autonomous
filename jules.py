@@ -52,7 +52,6 @@ def truncate_content(content, max_chars=12000):
 
 def get_system_context():
     context_buffer = ""
-    # We load ALL docs again, not just AGENTS.md
     doc_files = ["AGENTS.md", "ARCHITECTURE.md", "TESTING_PROTOCOL.md"]
     for doc in doc_files:
         content = read_file(doc)
@@ -125,7 +124,6 @@ def sentinel_check(code, task):
 
 # --- 6. SURGICAL PATCHING (Hybrid: Regex + Fuzzy) ---
 def apply_patch(original, patch):
-    # 1. Clean Markdown (From Level 19)
     clean_patch = re.sub(r'^`[a-zA-Z]*\s*$', '', patch, flags=re.MULTILINE).strip()
     
     pattern = r"<<<<<<< SEARCH\s*\n(.*?)\n=======\n(.*?)\n>>>>>>> REPLACE"
@@ -136,15 +134,12 @@ def apply_patch(original, patch):
     applied_count = 0
     
     for search_block, replace_block in matches:
-        # Strategy A: Exact Match
         if search_block in new_code:
             new_code = new_code.replace(search_block, replace_block)
             applied_count += 1
-        # Strategy B: Whitespace Strip
         elif search_block.strip() in new_code:
             new_code = new_code.replace(search_block.strip(), replace_block.strip())
             applied_count += 1
-        # Strategy C: Fuzzy Match (Restored from Level 15)
         else:
             log("⚠️ Exact match failed. Attempting Fuzzy Match...")
             matcher = difflib.SequenceMatcher(None, new_code, search_block)
@@ -152,7 +147,7 @@ def apply_patch(original, patch):
             if match.size > 0:
                 found_block = new_code[match.a : match.a + match.size]
                 ratio = difflib.SequenceMatcher(None, found_block, search_block).ratio()
-                if ratio >= 0.85: # Threshold
+                if ratio >= 0.85:
                     log(f"✅ Fuzzy Match Applied (Score: {ratio:.2f})")
                     new_code = new_code[:match.a] + replace_block + new_code[match.a + match.size:]
                     applied_count += 1
@@ -172,7 +167,7 @@ def check_render():
     url = f"[https://api.render.com/v1/services/](https://api.render.com/v1/services/){RENDER_SERVICE_ID}/deploys?limit=1"
     headers = {"Authorization": f"Bearer {RENDER_API_KEY}"}
     
-    for _ in range(20): # 5 mins max
+    for _ in range(20):
         try:
             resp = requests.get(url, headers=headers)
             if resp.status_code == 200:
@@ -221,7 +216,7 @@ def process_task():
     for attempt in range(MAX_QA_RETRIES):
         log(f"💡 Attempt {attempt+1}/{MAX_QA_RETRIES}...")
         
-        # 1. CODER (With full context)
+        # 1. CODER
         prompt = f"""
 TASK: {task}
 {system_context}
@@ -256,7 +251,7 @@ FORMAT:
             history = f"Sentinel Compiler Error: {msg}"
             continue
             
-        # 4. CRITIC (Restored from Level 15)
+        # 4. CRITIC
         log("🕵️ Critic Reviewing...")
         critic_prompt = f"TASK: {task}\nReview this code change. Reply PASS or FAIL.\n\nPATCH:\n{patch}"
         review = call_gemini(CRITIC_MODELS, critic_prompt, role="critic")
