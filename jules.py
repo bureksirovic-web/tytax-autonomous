@@ -14,15 +14,8 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "").replace("\n", "").strip()
 RENDER_API_KEY = os.environ.get("RENDER_API_KEY", "").replace("\n", "").strip()
 RENDER_SERVICE_ID = os.environ.get("RENDER_SERVICE_ID", "").replace("\n", "").strip()
 
-# --- MODEL STACK (CANONICAL NAMES) ---
-# We removed '-latest' which caused 404s.
-# We added '1.5-pro' because it has a separate rate limit from Flash.
-CODER_MODELS = [
-    "gemini-2.0-flash",       # Primary (Currently Rate Limited)
-    "gemini-1.5-flash",       # Backup 1 (Standard Name)
-    "gemini-1.5-pro",         # Backup 2 (High Logic, Separate Quota)
-    "gemini-1.5-flash-8b"     # Backup 3 (High Availability)
-]
+# Placeholder - populated by Auto-Discovery
+CODER_MODELS = [] 
 
 MAX_QA_RETRIES = 4
 REQUEST_TIMEOUT = 90
@@ -42,41 +35,64 @@ def read_file(filename):
 def write_file(filename, content):
     with open(filename, 'w', encoding='utf-8') as f: f.write(content)
 
-# --- PRE-FLIGHT ---
-def test_connection():
-    # We test the *second* model in the list since we know the first might be rate limited
-    test_model = CODER_MODELS[1]
-    log(f"🔌 Testing Connection with {test_model}...")
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{test_model}:generateContent?key={GEMINI_API_KEY}"
-    headers = {'Content-Type': 'application/json'}
-    data = {"contents": [{"parts": [{"text": "Hello"}]}]}
+# --- AUTO-DISCOVERY ENGINE ---
+def discover_models():
+    """Queries the API to find valid models instead of guessing."""
+    log("🔍 Auto-Discovering available models...")
+    url = f"https://generativelanguage.googleapis.com/v1beta/models?key={GEMINI_API_KEY}"
+    
     try:
-        resp = requests.post(url, headers=headers, data=json.dumps(data), timeout=10)
-        if resp.status_code == 200:
-            log("✅ Connection Valid.")
-            return True
-        else:
-            log(f"❌ Connection Failed: {resp.status_code} - {resp.text}")
-            return False
+        resp = requests.get(url, timeout=10)
+        if resp.status_code != 200:
+            log(f"❌ Discovery Failed: {resp.status_code} - {resp.text}")
+            return []
+            
+        data = resp.json()
+        valid_models = []
+        
+        # 1. Filter for 'generateContent' support
+        for m in data.get('models', []):
+            if 'generateContent' in m.get('supportedGenerationMethods', []):
+                # Strip 'models/' prefix if present
+                name = m['name'].replace('models/', '')
+                valid_models.append(name)
+        
+        # 2. Priority Ranking (2.0 > 1.5 > Pro > Flash)
+        ranked = []
+        
+        # Priority 1: Gemini 2.0 (Smartest/Fastest)
+        ranked.extend([m for m in valid_models if 'gemini-2.0' in m])
+        
+        # Priority 2: Gemini 1.5 Flash (Reliable)
+        ranked.extend([m for m in valid_models if 'gemini-1.5-flash' in m and m not in ranked])
+        
+        # Priority 3: Gemini 1.5 Pro (High Logic)
+        ranked.extend([m for m in valid_models if 'gemini-1.5-pro' in m and m not in ranked])
+        
+        # Priority 4: Anything else
+        ranked.extend([m for m in valid_models if m not in ranked])
+        
+        log(f"✅ Discovered {len(ranked)} usable models.")
+        log(f"📋 Priority Stack: {ranked[:5]}...")
+        return ranked
+
     except Exception as e:
-        log(f"❌ Network Error: {e}")
-        return False
+        log(f"❌ Discovery Error: {e}")
+        return []
 
 # --- API ENGINE ---
 def ask_gemini(prompt, model_list, role="coder"):
-    if isinstance(model_list, str): model_list = [model_list]
-    
     headers = {'Content-Type': 'application/json'}
     data = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {"maxOutputTokens": 8192, "temperature": 0.1}
     }
     
+    # Try the discovered models in order
     for model in model_list:
-        model = model.strip()
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_API_KEY}"
         
-        for attempt in range(2):
+        for attempt in range(1): # Single attempt per model to fail fast and rotate
             try:
                 log(f"🔄 [{role.upper()}] Asking {model}...")
                 resp = requests.post(url, headers=headers, data=json.dumps(data), timeout=REQUEST_TIMEOUT)
@@ -86,11 +102,10 @@ def ask_gemini(prompt, model_list, role="coder"):
                         return resp.json()['candidates'][0]['content']['parts'][0]['text']
                     except: return None
                 elif resp.status_code == 429:
-                    log(f"⏳ {model} Rate Limit. Switching...")
-                    time.sleep(1) # Short sleep, then switch immediately
-                    break 
+                    log(f"⏳ {model} Rate Limit. Rotating...")
+                    break # Next model
                 elif resp.status_code == 404:
-                    log(f"🚫 {model} not found. Switching...")
+                    log(f"🚫 {model} returned 404 (Unexpected). Rotating...")
                     break
                 else:
                     log(f"❌ Error {resp.status_code}: {resp.text[:100]}...")
@@ -101,15 +116,12 @@ def ask_gemini(prompt, model_list, role="coder"):
 # --- PATCH ENGINE ---
 def apply_patch(original, patch):
     clean_patch = re.sub(r'^`[a-zA-Z]*\s*$', '', patch, flags=re.MULTILINE).strip()
-    
     pattern = r"<<<<<<< SEARCH\s*\n(.*?)\n=======\n(.*?)\n>>>>>>> REPLACE"
     matches = re.findall(pattern, clean_patch, re.DOTALL)
     
     if not matches:
-        log("⚠️ DEBUG: PARSING FAILED. RAW MODEL RESPONSE:")
-        log("---------------------------------------------------")
-        log(clean_patch[:500] + "..." if len(clean_patch) > 500 else clean_patch)
-        log("---------------------------------------------------")
+        log("⚠️ DEBUG: PARSING FAILED. RAW RESPONSE:")
+        log(clean_patch[:300] + "...")
         return None, "No blocks found."
     
     new_code = original
@@ -162,6 +174,13 @@ def move_task_to_bottom(task_name):
 
 # --- MAIN ---
 def process_task():
+    global CODER_MODELS
+    if not CODER_MODELS:
+        CODER_MODELS = discover_models()
+        if not CODER_MODELS:
+            log("🛑 No models found via Auto-Discovery.")
+            return False
+
     backlog = read_file("BACKLOG.md")
     match = re.search(r'- \[ \] \*\*(.*?)\*\*(?!\s*\(SKIPPED)', backlog)
     if not match: return False
@@ -183,10 +202,9 @@ CODE:
 {code}
 
 IMPORTANT INSTRUCTIONS:
-1. You are a CODE GENERATOR, not a chat bot.
-2. Output ONLY the SEARCH/REPLACE blocks.
-3. DO NOT include any conversational text like "Here is the code".
-4. FORMAT:
+1. You are a CODE GENERATOR.
+2. Output ONLY the SEARCH/REPLACE blocks. NO conversational text.
+3. FORMAT:
 <<<<<<< SEARCH
 (exact lines to remove)
 =======
@@ -219,9 +237,6 @@ IMPORTANT INSTRUCTIONS:
     return True
 
 if __name__ == "__main__":
-    if test_connection():
-        log("🤖 Jules Level 29 (BACKUP MODELS FIXED) Started...")
-        while process_task():
-            time.sleep(5)
-    else:
-        log("🛑 Aborting.")
+    log("🤖 Jules Level 30 (AUTO-DISCOVERY) Started...")
+    while process_task():
+        time.sleep(5)
