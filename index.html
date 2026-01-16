@@ -4883,14 +4883,6 @@
                     return [];
                 }
             });
-            const [setupNotes, setSetupNotes] = useState(() => {
-                try {
-                    return JSON.parse(localStorage.getItem('tytax_setup_notes') || '{}');
-                } catch (e) {
-                    console.error("Error parsing tytax_setup_notes from localStorage", e);
-                    return {};
-                }
-            });
             const [startDate, setStartDate] = useState(() => localStorage.getItem('tytax_start_date') || new Date().toISOString().split('T')[0]);
             const [oledMode, setOledMode] = useState(() => localStorage.getItem('tytax_oled_mode') === 'true');
             const [warmupStrategy, setWarmupStrategy] = useState(() => localStorage.getItem('tytax_warmup_strategy') || 'Standard');
@@ -4987,7 +4979,6 @@
                 localStorage.setItem('tytax_session_order', JSON.stringify(sessionOrder)); 
                 localStorage.setItem('tytax_training_plan', JSON.stringify(trainingPlan)); 
                 localStorage.setItem('tytax_master_exercises', JSON.stringify(masterExercises)); 
-                localStorage.setItem('tytax_setup_notes', JSON.stringify(setupNotes)); 
                 localStorage.setItem('tytax_start_date', startDate); 
                 localStorage.setItem('tytax_oled_mode', oledMode);
                 localStorage.setItem('tytax_warmup_strategy', warmupStrategy);
@@ -4995,7 +4986,7 @@
                 localStorage.setItem('tytax_user_profile', JSON.stringify(userProfile));
                 localStorage.setItem('tytax_bodyweight_log', JSON.stringify(bodyweightLog));
                 localStorage.setItem('tytax_pinned_metrics', JSON.stringify(pinnedMetrics));
-            }, [logs, sessionOrder, trainingPlan, masterExercises, setupNotes, startDate, oledMode, warmupStrategy, userInventory, userProfile, bodyweightLog, pinnedMetrics]);
+            }, [logs, sessionOrder, trainingPlan, masterExercises, startDate, oledMode, warmupStrategy, userInventory, userProfile, bodyweightLog, pinnedMetrics]);
  
             useEffect(() => { 
                 let interval; 
@@ -5083,6 +5074,68 @@
                     if (wakeLock) wakeLock.release();
                 };
             }, [activeTab, timerActive]);
+
+            // Arrow Key Navigation
+            useEffect(() => {
+                const handleNav = (e) => {
+                    if (activeTab !== 'workout' || !currentWorkout) return;
+                    if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
+                        const active = document.activeElement;
+                        if (active.tagName === 'INPUT' && active.id.startsWith('input-')) {
+                            const parts = active.id.split('-');
+                            const type = parts[1]; // kg or reps
+                            const exIdx = parseInt(parts[2]);
+                            const sIdx = parseInt(parts[3]);
+
+                            let nextId = null;
+
+                            if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+                                // Toggle Type
+                                const newType = type === 'kg' ? 'reps' : 'kg';
+                                nextId = `input-${newType}-${exIdx}-${sIdx}`;
+                            } else if (e.key === 'ArrowUp') {
+                                // Previous Set
+                                if (sIdx > 0) nextId = `input-${type}-${exIdx}-${sIdx - 1}`;
+                                else if (exIdx > 0) {
+                                    // Last set of previous exercise
+                                    const prevEx = currentWorkout.exercises[exIdx - 1];
+                                    if (prevEx && prevEx.sets) {
+                                        nextId = `input-${type}-${exIdx - 1}-${prevEx.sets.length - 1}`;
+                                        // Expand previous card if needed
+                                        if (!manualExpanded.has(exIdx - 1)) {
+                                            setManualExpanded(prev => new Set(prev).add(exIdx - 1));
+                                        }
+                                    }
+                                }
+                            } else if (e.key === 'ArrowDown') {
+                                // Next Set
+                                const currentSets = currentWorkout.exercises[exIdx].sets;
+                                if (sIdx < currentSets.length - 1) nextId = `input-${type}-${exIdx}-${sIdx + 1}`;
+                                else if (exIdx < currentWorkout.exercises.length - 1) {
+                                    // First set of next exercise
+                                    nextId = `input-${type}-${exIdx + 1}-0`;
+                                    // Expand next card if needed
+                                    if (!manualExpanded.has(exIdx + 1)) {
+                                        setManualExpanded(prev => new Set(prev).add(exIdx + 1));
+                                    }
+                                }
+                            }
+
+                            if (nextId) {
+                                e.preventDefault();
+                                const el = document.getElementById(nextId);
+                                if (el) {
+                                    el.focus();
+                                    el.select();
+                                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                }
+                            }
+                        }
+                    }
+                };
+                window.addEventListener('keydown', handleNav);
+                return () => window.removeEventListener('keydown', handleNav);
+            }, [activeTab, currentWorkout, manualExpanded]);
  
             const showToast = (m) => { setToast(m); setTimeout(() => setToast(null), 3000); }; 
 
@@ -5205,8 +5258,7 @@
                             impact: m?.impact || [],
                             targetReps: m?.reps || "8-12", 
                             note: m?.note || "", 
-                            sets: [...warmupSets, ...workingSets], 
-                            setup: setupNotes[name] || "" 
+                            sets: [...warmupSets, ...workingSets]
                         };
                     }) 
                 }); 
@@ -5445,8 +5497,7 @@
                                         impact: newMaster.impact || [],
                                         targetReps: newMaster.reps || "8-12",
                                         note: newMaster.note || "",
-                                        sets: [...warmupSets, ...workingSets],
-                                        setup: setupNotes[newMaster.name] || ""
+                                        sets: [...warmupSets, ...workingSets]
                                     };
                                     
                                     setCurrentWorkout(up);
@@ -5707,133 +5758,90 @@
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         {currentWorkout.exercises.map((ex, exIdx) => { 
                                             const prev = currentWorkout.exercises[exIdx-1]; 
-                                            const stationChange = prev && normalizeStationName(prev.station) !== normalizeStationName(ex.station); 
+                                            const stationChange = !prev || normalizeStationName(prev.station) !== normalizeStationName(ex.station);
+                                            // Collapse if completed AND (not manually expanded) AND (not the active incomplete exercise)
+                                            // We want the *first* incomplete exercise to be expanded by default.
+                                            const firstIncompleteIdx = currentWorkout.exercises.findIndex(e => !e.sets.every(s => s.done));
                                             const isComplete = ex.sets.every(s => s.done);
-                                            const isCollapsed = isComplete && !manualExpanded.has(exIdx);
+                                            const isCollapsed = (isComplete && !manualExpanded.has(exIdx)) || (exIdx !== firstIncompleteIdx && !isComplete && !manualExpanded.has(exIdx));
 
                                             return ( 
                                                 <div key={exIdx} id={`exercise-card-${exIdx}`} className="space-y-4 scroll-mt-32"> 
                                                     {stationChange && ( 
-                                                        <div className="flex items-center gap-3 px-2 py-4"> 
-                                                            <div className="h-0.5 flex-grow bg-indigo-500/50" />
-                                                            <div className="p-2 bg-indigo-900/30 rounded-xl border border-indigo-500/30">
-                                                                <span className="text-[10px] font-black text-indigo-300 uppercase tracking-[0.3em] italic">Station: {ex.station}</span>
-                                                            </div>
-                                                            <div className="h-0.5 flex-grow bg-indigo-500/50" /> 
+                                                        <div className="mt-6 mb-2 px-2">
+                                                            <span className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em]">{ex.station}</span>
                                                         </div> 
                                                     )} 
 
                                                     {isCollapsed ? (
-                                                        <div className="glass p-6 rounded-[2.5rem] flex items-center justify-between border border-emerald-500/30 bg-emerald-900/10">
-                                                            <div className="flex items-center gap-4">
-                                                                <div className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-black">
-                                                                    <Icon name="check" className="w-5 h-5" />
-                                                                </div>
-                                                                <div>
-                                                                    <h3 className="font-black text-white italic">{cleanName(ex.name)}</h3>
-                                                                    <p className="text-[9px] font-bold text-emerald-400 uppercase tracking-widest">{ex.sets.length} Sets Completed</p>
-                                                                </div>
+                                                        <div
+                                                            onClick={() => setManualExpanded(prev => { const s = new Set(prev); if(s.has(exIdx)) s.delete(exIdx); else s.add(exIdx); return s; })}
+                                                            className={`p-4 rounded-2xl flex items-center justify-between cursor-pointer transition-all border ${isComplete ? 'bg-slate-900/50 border-white/5 opacity-60 hover:opacity-100' : 'bg-slate-800 border-white/10'}`}
+                                                        >
+                                                            <div className="flex items-center gap-3">
+                                                                {isComplete ? <div className="text-emerald-500"><Icon name="check" className="w-4 h-4" /></div> : <div className="text-slate-500"><Icon name="dumbbell" className="w-4 h-4" /></div>}
+                                                                <h3 className={`font-black text-sm italic ${isComplete ? 'text-slate-400 line-through decoration-slate-600' : 'text-white'}`}>{cleanName(ex.name)}</h3>
                                                             </div>
-                                                            <button
-                                                                onClick={() => setManualExpanded(prev => new Set(prev).add(exIdx))}
-                                                                className="px-4 py-2 bg-slate-900 rounded-xl text-[9px] font-black uppercase tracking-widest text-slate-400 hover:text-white transition-colors border border-white/5"
-                                                            >
-                                                                Edit
-                                                            </button>
+                                                            <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">{ex.sets.filter(s=>s.done).length}/{ex.sets.length} Done</span>
                                                         </div>
                                                     ) : (
                                                     <div className={`glass rounded-[2.5rem] overflow-hidden border-t-4 transition-all duration-500 ${isComplete ? 'border-emerald-500 opacity-90' : 'border-indigo-600 shadow-xl'}`}>
-                                                        <div className="p-8 space-y-6"> 
-                                                            <div className="flex justify-between items-start"> 
-                                                                <div className="space-y-2 max-w-[75%]"> 
-                                                    <div className="flex gap-2 flex-wrap">
-                                                        <span className="px-3 py-1 bg-indigo-900/40 text-indigo-400 text-[9px] font-black uppercase rounded-lg border border-indigo-500/20">{ex.station}</span> 
-                                                        {ex.unilateral && (
-                                                            <span className="px-3 py-1 bg-blue-900/40 text-blue-400 text-[9px] font-black uppercase rounded-lg border border-blue-500/20">Unilateral</span>
-                                                        )}
-                                                        {recoveryStatus.status !== 'Fried' && currentWorkout.laggingMuscle && ex.note.toLowerCase().includes(currentWorkout.laggingMuscle) && (
-                                                            <span className="px-3 py-1 bg-yellow-900/40 text-yellow-400 text-[9px] font-black uppercase rounded-lg border border-yellow-500/20 glow-yellow animate-pulse">Kinetic Boost</span>
-                                                        )}
-                                                    </div>
-                                                                    <h3 className="font-black text-xl text-white tracking-tighter italic leading-[1.1]">{cleanName(ex.name)}</h3> 
-                                                    {(() => {
-                                                        const att = getAttachment(ex.name, PRESETS);
-                                                        return att ? (
-                                                            <div className="flex items-center gap-2 py-1 px-2 bg-slate-800 rounded-lg border border-white/5 w-fit my-1">
-                                                                <Icon name="tool" className="w-3 h-3 text-indigo-400" />
-                                                                <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wide">{att.name}</span>
+                                                        <div className="p-6 md:p-8 space-y-6">
+
+                                                            {/* HEADER SECTION */}
+                                                            <div className="space-y-4">
+                                                                <div className="flex justify-between items-start">
+                                                                    <div className="space-y-1">
+                                                                        {/* Top Metadata Row */}
+                                                                        <div className="flex items-center gap-2">
+                                                                            {/* Target Muscle Pill */}
+                                                                            <span className="text-[9px] font-black text-indigo-400 uppercase tracking-widest border border-indigo-500/30 px-2 py-0.5 rounded-md">
+                                                                                Target: {getImpact(ex)[0]?.muscle || 'General'}
+                                                                            </span>
+                                                                            {ex.unilateral && <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wide">Unilateral</span>}
+                                                                        </div>
+
+                                                                        {/* Title */}
+                                                                        <h3 className="font-black text-2xl text-white tracking-tighter italic leading-none">{cleanName(ex.name)}</h3>
+
+                                                                        {/* Tech Cues Banner */}
+                                                                        {ex.note && (
+                                                                            <p className="text-xs font-bold text-amber-400 italic leading-tight pt-1 flex items-start gap-1">
+                                                                                <span className="opacity-50">/</span> {ex.note}
+                                                                            </p>
+                                                                        )}
+                                                                    </div>
+
+                                                                    {/* Action Buttons */}
+                                                                    <div className="flex gap-2">
+                                                                        <a href={`https://www.youtube.com/results?search_query=TYTAX+T1+${encodeURIComponent(ex.name)}`} target="_blank" className="p-3 bg-slate-900 rounded-xl text-slate-500 border border-white/5 hover:text-indigo-400 transition-colors"><Icon name="play" className="w-4 h-4"/></a>
+                                                                    </div>
+                                                                </div>
+
+                                                                {/* Toolbar */}
+                                                                <div className="flex items-center gap-2 overflow-x-auto no-scrollbar">
+                                                                    <button onClick={() => {
+                                                                        const up = {...currentWorkout};
+                                                                        const maxLoad = getLastMaxLoad(ex.name, logs);
+                                                                        const warmUpKg = maxLoad > 0 ? (maxLoad * 0.5).toFixed(1) : '';
+                                                                        up.exercises[exIdx].sets.unshift({ kg: warmUpKg, reps: '', rir: '', done: false, type: 'warmup' });
+                                                                        setCurrentWorkout(up);
+                                                                    }} className="px-4 py-2 bg-yellow-900/20 text-yellow-500 rounded-xl text-[9px] font-black uppercase tracking-widest hover:bg-yellow-900/40 transition-colors border border-yellow-500/20 whitespace-nowrap">
+                                                                        + Warmup
+                                                                    </button>
+
+                                                                    {ex.station.includes("Smith") && (
+                                                                        <button onClick={() => setCalculatorTarget({ targetKg: ex.sets[0].kg || 20, barKg: 20 })} className="px-4 py-2 bg-indigo-900/20 text-indigo-400 rounded-xl text-[9px] font-black uppercase tracking-widest hover:bg-indigo-900/40 transition-colors border border-indigo-500/20 whitespace-nowrap flex items-center gap-2">
+                                                                            <Icon name="dumbbell" className="w-3 h-3" /> Plates
+                                                                        </button>
+                                                                    )}
+
+                                                                    <button onClick={() => setSwappingIdx(exIdx)} className="px-4 py-2 bg-slate-800 text-slate-400 rounded-xl text-[9px] font-black uppercase tracking-widest hover:bg-slate-700 transition-colors border border-white/5 whitespace-nowrap flex items-center gap-2">
+                                                                        <Icon name="shuffle" className="w-3 h-3" /> Swap
+                                                                    </button>
+                                                                </div>
                                                             </div>
-                                                        ) : null;
-                                                    })()}
-                                                                    {ex.note && <p className="text-[9px] font-bold text-slate-400 leading-tight border-l-2 border-indigo-500 pl-2">{ex.note}</p>}
-                                                                    <div className="flex items-center gap-4 group pt-2"> 
-                                                                        <div className="flex items-center gap-2 flex-grow">
-                                                                            <Icon name="tool" className="w-3.5 h-3.5 text-slate-500 group-hover:text-indigo-400 transition-colors" /> 
-                                                                            
-                                                                            <div className="flex flex-col flex-grow">
-                                                                                {/* STRUCTURED SELECTOR */}
-                                                                                <div className="flex gap-1 w-full">
-                                                                                    <select 
-                                                                                        value={ex.setup?.split('|')[0]?.trim() || ''} 
-                                                                                        onChange={e => {
-                                                                                            const currentLever = ex.setup?.split('|')[1]?.trim() || '-';
-                                                                                            const newVal = `${e.target.value} | ${currentLever}`;
-                                                                                            setSetupNotes({...setupNotes, [ex.name]: newVal}); 
-                                                                                            const up = structuredClone(currentWorkout); up.exercises[exIdx].setup = newVal; setCurrentWorkout(up);
-                                                                                        }}
-                                                                                        className="bg-transparent text-[10px] font-bold text-indigo-300 border-none p-0 focus:ring-0 w-1/2 cursor-pointer"
-                                                                                    >
-                                                                                        <option value="">Seat</option>
-                                                                                        {[1,2,3,4,5,6,7,8].map(n => <option key={n} value={`Seat ${n}`}>Seat {n}</option>)}
-                                                                                    </select>
-                                                                                    <span className="text-slate-600">|</span>
-                                                                                    <select 
-                                                                                        value={ex.setup?.split('|')[1]?.trim() || ''} 
-                                                                                        onChange={e => {
-                                                                                            const currentSeat = ex.setup?.split('|')[0]?.trim() || 'Seat -';
-                                                                                            const newVal = `${currentSeat} | ${e.target.value}`;
-                                                                                            setSetupNotes({...setupNotes, [ex.name]: newVal}); 
-                                                                                            const up = structuredClone(currentWorkout); up.exercises[exIdx].setup = newVal; setCurrentWorkout(up);
-                                                                                        }}
-                                                                                        className="bg-transparent text-[10px] font-bold text-indigo-300 border-none p-0 focus:ring-0 w-1/2 cursor-pointer"
-                                                                                    >
-                                                                                        <option value="">Lever</option>
-                                                                                        {['A','B','C','D','E'].map(l => <option key={l} value={`Lever ${l}`}>Lever {l}</option>)}
-                                                                                    </select>
-                                                                                </div>
-                                                                                {/* TECH CUES FIELD */}
-                                                                                <input 
-                                                                                    type="text"
-                                                                                    placeholder="Tech Cues (e.g. Chest up, slow eccentric)"
-                                                                                    value={setupNotes[ex.name + "_cues"] || ""}
-                                                                                    onChange={e => setSetupNotes({...setupNotes, [ex.name + "_cues"]: e.target.value})}
-                                                                                    className="bg-transparent text-[9px] font-bold text-slate-500 border-none p-0 focus:ring-0 w-full placeholder:text-slate-700 italic"
-                                                                                />
-                                                                            </div>
-                                                                        </div>
-                                                                        <div className="flex gap-2">
-                                                                            <button onClick={() => {
-                                                                                const up = {...currentWorkout};
-                                                                                const maxLoad = getLastMaxLoad(ex.name, logs);
-                                                                                const warmUpKg = maxLoad > 0 ? (maxLoad * 0.5).toFixed(1) : '';
-                                                                                up.exercises[exIdx].sets.unshift({ kg: warmUpKg, reps: '', rir: '', done: false, type: 'warmup' });
-                                                                                setCurrentWorkout(up);
-                                                                            }} className="px-3 py-1.5 bg-yellow-900/20 text-yellow-500 rounded-lg text-[9px] font-black uppercase tracking-widest hover:bg-yellow-900/40 transition-colors border border-yellow-500/20">
-                                                                                +Warmup
-                                                                            </button>
-                                                                            {ex.station.includes("Smith") && (
-                                                                                <button onClick={() => setCalculatorTarget({ targetKg: ex.sets[0].kg || 20, barKg: 20 })} className="p-2 bg-indigo-900/20 rounded-lg text-indigo-400 hover:bg-indigo-900/40 transition-colors">
-                                                                                    <Icon name="dumbbell" className="w-4 h-4" />
-                                                                                </button>
-                                                                            )}
-                                                                            <button onClick={() => setSwappingIdx(exIdx)} className="p-2 bg-slate-800 rounded-lg text-slate-500 hover:text-indigo-400 hover:bg-slate-700 transition-colors border border-white/5">
-                                                                                <Icon name="shuffle" className="w-4 h-4" />
-                                                                            </button>
-                                                                        </div>
-                                                                    </div> 
-                                                                </div> 
-                                                                <a href={`https://www.youtube.com/results?search_query=TYTAX+T1+${encodeURIComponent(ex.name)}`} target="_blank" className="p-4 bg-slate-900 rounded-2xl text-slate-500 border border-white/5 hover:text-indigo-400 transition-colors"><Icon name="play" className="w-5 h-5"/></a> 
-                                                            </div> 
+
                                                             <div className="space-y-3"> 
                                                                 {ex.sets.map((set, sIdx) => {
                                                                     // GHOST REPS LOGIC
@@ -6159,7 +6167,7 @@
                                         <div className="flex gap-4"> 
                                             <button onClick={exportCSV} className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-emerald-400 border border-white/5 hover:text-white transition-colors">Export CSV</button>
                                             <button onClick={() => { 
-                                                const blob = new Blob([JSON.stringify({ logs, sessionOrder, trainingPlan, masterExercises, startDate, setupNotes, oledMode, userInventory, userProfile, customProtocols, warmupStrategy })], { type: 'application/json' }); 
+                                                const blob = new Blob([JSON.stringify({ logs, sessionOrder, trainingPlan, masterExercises, startDate, oledMode, userInventory, userProfile, customProtocols, warmupStrategy })], { type: 'application/json' });
                                                 const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "tytax_backup.json"; a.click(); 
                                             }} className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-slate-400 border border-white/5 hover:text-white transition-colors"><Icon name="history" /> Backup</button> 
                                             <label className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-indigo-400 border border-white/5 cursor-pointer hover:bg-indigo-900/10 transition-colors"> 
@@ -6175,7 +6183,6 @@
                                                             setTrainingPlan(d.trainingPlan || {}); 
                                                             setSessionOrder(d.sessionOrder || []); 
                                                             setStartDate(d.startDate || startDate); 
-                                                            setSetupNotes(d.setupNotes || {}); 
                                                             if (d.oledMode !== undefined) setOledMode(d.oledMode);
                                                             if (d.userInventory) setUserInventory(d.userInventory);
                                                             if (d.userProfile) setUserProfile(d.userProfile);
