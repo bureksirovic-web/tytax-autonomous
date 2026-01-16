@@ -280,36 +280,36 @@
 
         const getLaggingMuscle = (logs, masterExercises) => {
             if (!logs.length) return null;
-            
+        
             // 1. Calculate Protocol Ideal (Global)
             const protocolDist = calculateImpactDistribution(masterExercises, false);
-            
+        
             // 2. Calculate Actual (Last 7 Days)
             const now = new Date();
             const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
             const recentLogs = logs.filter(l => new Date(l.date) > sevenDaysAgo);
-            
+        
             // Flatten all exercises from recent logs
             const allRecentExercises = recentLogs.flatMap(l => l.exercises);
             const actualDist = calculateImpactDistribution(allRecentExercises, true);
-            
+        
             // 3. Find largest negative delta
             // We compare the rank/presence. If a muscle is high in Protocol but low in Actual.
             // Simplified: Compare pct vs pct.
             let maxGap = 0;
             let laggingMuscle = null;
-            
+        
             protocolDist.forEach(proto => {
                 const actual = actualDist.find(a => a.muscle === proto.muscle);
                 const actualPct = actual ? actual.pct : 0;
                 const gap = proto.pct - actualPct;
-                
+        
                 if (gap > maxGap && gap > 30) { // Threshold of 30% gap
                     maxGap = gap;
                     laggingMuscle = proto.muscle;
                 }
             });
-            
+        
             return laggingMuscle;
         };
 
