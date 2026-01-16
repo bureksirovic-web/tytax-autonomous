@@ -9,7 +9,7 @@
     - *Fix:* Move any const [x, setX] = useState(...) lines INSIDE the App or ToastProvider component.
     - *Verify:* Ensure React.useState is only called inside valid functional components.
 
-- [ ] **Inject Missing 'ToastProvider' Wrapper**
+- [x] **Inject Missing 'ToastProvider' Wrapper**
     - *Diagnosis:* The console warned useToast must be used within a ToastProvider.
     - *Action:* Find the unction App return statement.
     - *Fix:* Wrap the router:
