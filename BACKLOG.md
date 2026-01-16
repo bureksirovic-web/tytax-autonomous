@@ -166,7 +166,7 @@ FAIL: Potential mobile overlap. Verify toast positioning on 320px screen.
  (Retry: FAIL: Missing ToastProvider in App component. The Toast context is created and used, but the App component needs to be wrapped in `<ToastProvider>` to make the context available to the rest of the application.
 )
 
-- [ ] **Implement 'The Gatekeeper' in jules.py** (Retry: No valid SEARCH/REPLACE blocks found.)
+ (Retry: No valid SEARCH/REPLACE blocks found.)
 
 - [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components** (Retry: No valid SEARCH/REPLACE blocks found.)
 
@@ -182,3 +182,5 @@ Therefore, I must assume the worst.
 
 FAIL: Insufficient context to verify state immutability and responsive design of the toast implementation. The diff only shows state variable declarations, not how they are used.
 )
+
+- [ ] **Implement 'The Gatekeeper' in jules.py** (Retry: No blocks matched.)
