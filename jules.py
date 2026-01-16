@@ -7,6 +7,8 @@ import difflib
 from datetime import datetime
 import git
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 # ==========================================
 # JULES LEVEL 9 MASTER RESTORE (V2 OPTIMIZED)
@@ -28,6 +30,9 @@ ENABLE_FUZZY_PATCH = True
 
 # Create a session object for connection pooling
 session = requests.Session()
+retries = Retry(total=3, backoff_factor=0.5, status_forcelist=[500, 502, 503, 504])
+session.mount('https://', HTTPAdapter(max_retries=retries))
+session.mount('http://', HTTPAdapter(max_retries=retries))
 
 def log(msg): print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}", flush=True)
 
