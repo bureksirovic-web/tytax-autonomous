@@ -238,7 +238,7 @@ FAIL: Toast message font size is too small and may not be readable on all device
 
  (Retry: No valid SEARCH/REPLACE blocks found.)
 
-- [ ] **Implement 'Exercise Notes' Field** (Retry: FAIL: Input field lacks state management. The input field needs to be tied to the React state to be useful. Without `onChange` and a state variable to hold the input value, the user's notes will not be saved or reflected in the UI. Also, the state update needs to use structuredClone to avoid direct state mutation.
+ (Retry: FAIL: Input field lacks state management. The input field needs to be tied to the React state to be useful. Without `onChange` and a state variable to hold the input value, the user's notes will not be saved or reflected in the UI. Also, the state update needs to use structuredClone to avoid direct state mutation.
 )
 
 - [ ] **Implement 'Toast' Notification System** (Retry: Okay, let's analyze this diff as the Critic.
@@ -274,3 +274,5 @@ FAIL: Toast notification is not responsive and may overlap with other UI element
 )
 
 - [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components** (Retry: No valid SEARCH/REPLACE blocks found.)
+
+- [ ] **Implement 'Exercise Notes' Field** (Retry: No blocks matched.)
