@@ -4494,6 +4494,11 @@
             const [expanded, setExpanded] = useState(true);
             const [impactExpanded, setImpactExpanded] = useState(false);
 
+            // Filter skipped exercises (0 sets done)
+            const completedExercises = useMemo(() => {
+                return (log.exercises || []).filter(ex => ex.sets && ex.sets.some(s => s.done));
+            }, [log.exercises]);
+
             // Metrics
             const durationMins = Math.max(1, Math.floor(log.duration / 60));
             const density = Math.round((log.volume || 0) / durationMins);
@@ -4501,12 +4506,12 @@
             // Intensity (Avg RIR) calculation
             let totalRir = 0;
             let rirCount = 0;
-            if (log.exercises) {
-                log.exercises.forEach(ex => {
+            if (completedExercises) {
+                completedExercises.forEach(ex => {
                     if (ex.sets) {
                         ex.sets.forEach(s => {
-                            // Check if RIR is recorded and valid
-                            if (s.rir !== "" && s.rir !== undefined && s.rir !== null) {
+                            // Check if RIR is recorded and valid and set is done
+                            if (s.done && s.rir !== "" && s.rir !== undefined && s.rir !== null) {
                                 totalRir += parseFloat(s.rir);
                                 rirCount++;
                             }
@@ -4517,7 +4522,7 @@
             const avgRir = rirCount ? (totalRir / rirCount).toFixed(1) : '-';
 
             // Impact Distribution
-            const impactDist = useMemo(() => calculateImpactDistribution(log.exercises || [], true), [log.exercises]);
+            const impactDist = useMemo(() => calculateImpactDistribution(completedExercises, true), [completedExercises]);
 
             return (
                 <div className="glass p-8 rounded-[2.5rem] relative group border-white/5 transition-all duration-300">
@@ -4593,7 +4598,7 @@
                     {/* Expanded Content */}
                     {expanded && (
                         <div className="mt-6 space-y-6 animate-slide-up">
-                            {log.exercises && log.exercises.map((ex, i) => (
+                            {completedExercises.map((ex, i) => (
                                 <div key={i} className="space-y-2">
                                     <div className="flex justify-between items-center">
                                         <h4 className="text-xs font-black text-white italic uppercase tracking-tight">{cleanName(ex.name)}</h4>
