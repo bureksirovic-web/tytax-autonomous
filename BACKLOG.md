@@ -1,6 +1,6 @@
 ﻿
 ## 🚨 CRITICAL FIX: SessionDebrief Prop Injection
-- [ ] **Fix: Missing debriefData in SessionDebrief** 
+- [ ] **Fix: Missing debriefData in SessionDebrief** (SKIPPED: Max retries)
     - *Issue:* SessionDebrief crashes because it references 'debriefData' which is not in its scope.
     - *Action:* 1. Update the SessionDebrief component definition to include 'debriefData' in the destructuring:
            'const SessionDebrief = ({ duration, volume, debriefData, onComplete }) => {'
@@ -9,3 +9,5 @@
            'if (!debriefData) return null;' 
            This prevents the 'SYSTEM FAILURE' screen if data hasn't loaded yet.
 
+
+## ⚠️ SKIPPED TASKS
