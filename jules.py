@@ -10,22 +10,17 @@ from datetime import datetime
 
 # --- CONFIGURATION ---
 REPO_PATH = "."
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "").replace("\n", "").strip()
+RENDER_API_KEY = os.environ.get("RENDER_API_KEY", "").replace("\n", "").strip()
+RENDER_SERVICE_ID = os.environ.get("RENDER_SERVICE_ID", "").replace("\n", "").strip()
 
-# NUCLEAR SANITIZATION
-raw_key = os.environ.get("GEMINI_API_KEY", "")
-GEMINI_API_KEY = raw_key.replace("\n", "").replace("\r", "").strip()
-RENDER_API_KEY = os.environ.get("RENDER_API_KEY", "").replace("\n", "").replace("\r", "").strip()
-RENDER_SERVICE_ID = os.environ.get("RENDER_SERVICE_ID", "").replace("\n", "").replace("\r", "").strip()
-
-# --- MODEL STACK (THE "GREEN BAR" MODELS) ---
-# We prioritized these based on your usage dashboard availability.
+# --- MODEL STACK (UPDATED NAMES) ---
+# We added 'latest' and '8b' to find a model that isn't rate limited
 CODER_MODELS = [
-    "gemini-2.0-flash",      # PRIMARY: Fast, Smart, High Quota
-    "gemini-1.5-flash",      # BACKUP: Extremely reliable
-    "gemini-2.5-flash"       # TERTIARY: If available
+    "gemini-2.0-flash",          # Primary
+    "gemini-1.5-flash-latest",   # Standard Backup
+    "gemini-1.5-flash-8b-latest" # High-Availability Backup
 ]
-
-# We removed 3.0-pro and 2.0-flash-exp because they are exhausted/404.
 
 MAX_QA_RETRIES = 4
 REQUEST_TIMEOUT = 90
@@ -87,28 +82,32 @@ def ask_gemini(prompt, model_list, role="coder"):
                         return resp.json()['candidates'][0]['content']['parts'][0]['text']
                     except: return None
                 elif resp.status_code == 429:
-                    log(f"⏳ {model} Rate Limit. Switching to backup...")
+                    log(f"⏳ {model} Rate Limit. Switching...")
                     time.sleep(2)
-                    break # Break inner loop -> Try next model immediately
+                    break 
                 elif resp.status_code == 404:
                     log(f"🚫 {model} not found. Switching...")
                     break
                 else:
                     log(f"❌ Error {resp.status_code}: {resp.text[:100]}...")
-                    
             except Exception as e:
                 log(f"❌ Network Error: {e}")
     return None
 
 # --- PATCH ENGINE ---
 def apply_patch(original, patch):
-    # 1. Clean Markdown
     clean_patch = re.sub(r'^`[a-zA-Z]*\s*$', '', patch, flags=re.MULTILINE).strip()
     
     pattern = r"<<<<<<< SEARCH\s*\n(.*?)\n=======\n(.*?)\n>>>>>>> REPLACE"
     matches = re.findall(pattern, clean_patch, re.DOTALL)
     
-    if not matches: return None, "No blocks found."
+    if not matches:
+        # DEBUG: PRINT RAW RESPONSE TO SEE WHY IT FAILED
+        log("⚠️ DEBUG: PARSING FAILED. RAW MODEL RESPONSE:")
+        log("---------------------------------------------------")
+        log(clean_patch[:500] + "..." if len(clean_patch) > 500 else clean_patch)
+        log("---------------------------------------------------")
+        return None, "No blocks found."
     
     new_code = original
     applied_count = 0
@@ -173,7 +172,25 @@ def process_task():
     for attempt in range(MAX_QA_RETRIES):
         log(f"💡 Attempt {attempt+1}/{MAX_QA_RETRIES}...")
         
-        prompt = f"TASK: {task}\nCONTEXT: {context}\nERRORS: {history}\nCODE:\n{code}\n\nINSTRUCTIONS: Return SEARCH/REPLACE blocks. NO markdown."
+        # STRICT PROMPT FOR BACKUP MODELS
+        prompt = f"""
+TASK: {task}
+CONTEXT: {context}
+ERRORS: {history}
+CODE:
+{code}
+
+IMPORTANT INSTRUCTIONS:
+1. You are a CODE GENERATOR, not a chat bot.
+2. Output ONLY the SEARCH/REPLACE blocks.
+3. DO NOT include any conversational text like "Here is the code".
+4. FORMAT:
+<<<<<<< SEARCH
+(exact lines to remove)
+=======
+(new lines to insert)
+>>>>>>> REPLACE
+"""
         patch = ask_gemini(prompt, CODER_MODELS, role="coder")
         if not patch: continue
         
@@ -201,7 +218,7 @@ def process_task():
 
 if __name__ == "__main__":
     if test_connection():
-        log("🤖 Jules Level 27 (FRESH MODELS) Started...")
+        log("🤖 Jules Level 28 (DEBUGGER MODE) Started...")
         while process_task():
             time.sleep(5)
     else:
