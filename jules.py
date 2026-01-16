@@ -15,8 +15,9 @@ RENDER_API_KEY = os.environ.get("RENDER_API_KEY")
 RENDER_SERVICE_ID = "srv-d5jlon15pdvs739hp3jg"
 SITE_URL = "https://tytax-elite.onrender.com"
 
-MAX_QA_RETRIES = 3 
-MAX_RUNTIME_MINUTES = 45
+# INCREASED RETRIES: We have more models, so we can try more times.
+MAX_QA_RETRIES = 4 
+MAX_RUNTIME_MINUTES = 60
 START_TIME = time.time()
 
 def log(message):
@@ -25,10 +26,21 @@ def log(message):
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY missing!")
 
-# HIERARCHY: Try 3.0 Pro first (Reasoning), fallback to 2.0 Flash (Speed)
-MODELS_TO_TRY = [
-    "gemini-3-pro-preview",   # Primary: Advanced Reasoning
-    "gemini-2.0-flash-exp"    # Fallback: Fast & Reliable
+# --- THE NEW MULTI-LANE BRAIN ---
+# Lane 1: The Architect (Complex Logic)
+# Lane 2: The Engineer (Fast Coding)
+# Lane 3: The Critic (Review Only)
+
+CODER_MODELS = [
+    "gemini-3-pro-preview",    # 1. Primary Genius
+    "gemini-3-flash",          # 2. Smart & Fast (New 3.0 Model)
+    "gemini-2.5-flash",        # 3. Backup Workhorse
+    "gemini-2.0-flash"         # 4. Last Resort
+]
+
+CRITIC_MODELS = [
+    "gemini-2.5-pro",          # 1. The Expert Reviewer (Unused Quota)
+    "gemini-2.0-flash"         # 2. Fast Check
 ]
 
 def read_file(filename):
@@ -42,20 +54,13 @@ def write_file(filename, content):
 
 # --- SYSTEM CONTEXT LOADER (RAG) ---
 def get_system_context():
-    """Reads architectural rules to enforce the Jules persona."""
     context_buffer = ""
-    # Critical documentation files
     doc_files = ["AGENTS.md", "ARCHITECTURE.md", "TESTING_PROTOCOL.md"]
-    
     for doc in doc_files:
         content = read_file(doc)
         if content:
             context_buffer += f"\n\n=== SYSTEM CONTEXT: {doc} ===\n{content}\n"
             log(f"🧠 Loaded context from {doc}")
-    
-    if not context_buffer:
-        log("⚠️ No system documentation found. Jules is using raw logic.")
-    
     return context_buffer
 
 def get_next_task():
@@ -85,29 +90,33 @@ def extract_text_from_response(response_json):
         return "".join([p.get("text", "") for p in parts])
     except: return None
 
-def ask_gemini_robust(prompt, model_hint="coder"):
+def ask_gemini_robust(prompt, role="coder"):
     headers = {'Content-Type': 'application/json'}
     data = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {"maxOutputTokens": 8192, "temperature": 0.1},
     }
     
-    for model in MODELS_TO_TRY:
+    # INTELLIGENT ROUTING: Pick the right list based on the job
+    models_to_use = CRITIC_MODELS if role == "critic" else CODER_MODELS
+    
+    for model in models_to_use:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_API_KEY}"
-        for attempt in range(3):
+        # Only try each model twice to fail-over quickly
+        for attempt in range(2): 
             try:
-                log(f"🔄 [{model_hint.upper()}] {model} (Attempt {attempt+1}/3)...")
+                log(f"🔄 [{role.upper()}] {model} (Attempt {attempt+1})...")
                 resp = requests.post(url, headers=headers, data=json.dumps(data))
                 
-                # --- ROBUST LOGGING ---
                 if resp.status_code == 200:
                     text = extract_text_from_response(resp.json())
                     if text: 
                         log(f"📥 [200 OK] Response received: {len(text)} chars")
                         return text
                 elif resp.status_code == 429:
-                    log(f"⏳ [429 Rate Limit] Waiting 10s...")
-                    time.sleep(10)
+                    log(f"⏳ [429 Rate Limit] Switching to next model...")
+                    time.sleep(2) 
+                    break # Break inner loop -> Go to next model in list
                 else:
                     log(f"❌ [API Error {resp.status_code}] {resp.text[:200]}...")
             except Exception as e:
@@ -138,9 +147,9 @@ def verify_fix(task, original_code, new_code, context):
     if original_code == new_code: return False, "No changes detected."
     diff = "".join(difflib.unified_diff(original_code.splitlines(True), new_code.splitlines(True), n=3))
     
-    # Inject System Context into Critic as well
     prompt = f"{context}\n\nROLE: You are the Critic defined in AGENTS.md.\nTASK: {task}\nDIFF:\n{diff}\n\nDoes this fix the task without breaking React state immutability or the Index.html structure? Respond 'PASS' or 'FAIL: [reason]'"
-    response = ask_gemini_robust(prompt, model_hint="critic")
+    # ROUTING: Explicitly ask the 'critic' models
+    response = ask_gemini_robust(prompt, role="critic")
     return ("PASS" in (response or "").upper()), response
 
 def wait_for_render_deploy():
@@ -168,7 +177,6 @@ def process_single_task():
     if not task: return False
     log(f"\n📋 TARGET: {task}")
     
-    # 1. Load System Context (RAG)
     system_context = get_system_context()
     current_code = read_file("index.html")
     critique_history = ""
@@ -177,7 +185,6 @@ def process_single_task():
     for attempt in range(MAX_QA_RETRIES):
         log(f"💡 Coder Attempt {attempt + 1}/{MAX_QA_RETRIES}...")
         
-        # 2. Inject Context into Prompt
         prompt = f"""
 {system_context}
 
@@ -190,7 +197,7 @@ TASK: {task}
 CRITIQUE HISTORY: {critique_history}
 
 RESPONSE FORMAT:
-Strictly use the SEARCH/REPLACE block format defined in ARCHITECTURE.md (if applicable) or standard Git conflict markers:
+Strictly use the SEARCH/REPLACE block format defined in ARCHITECTURE.md.
 <<<<<<< SEARCH
 (exact code to remove)
 =======
@@ -200,7 +207,8 @@ Strictly use the SEARCH/REPLACE block format defined in ARCHITECTURE.md (if appl
 CODE CONTEXT:
 {current_code}
 """
-        response = ask_gemini_robust(prompt)
+        # ROUTING: Explicitly ask the 'coder' models
+        response = ask_gemini_robust(prompt, role="coder")
         if not response: continue
         
         new_code, message = apply_patch(current_code, response)
@@ -211,7 +219,6 @@ CODE CONTEXT:
             continue
 
         log("🕵️ Verifying Logic...")
-        # 3. Pass Context to Critic
         is_valid, feedback = verify_fix(task, current_code, new_code, system_context)
         if is_valid:
             log("✅ QA Passed. Saving...")
@@ -224,7 +231,6 @@ CODE CONTEXT:
             repo.git.add("BACKLOG.md")
             repo.index.commit(f"docs: marked {task} as done")
             
-            # --- AGGRESSIVE SYNC ---
             try:
                 log("🔄 Pulling latest changes before push...")
                 repo.remotes.origin.pull(rebase=True)
@@ -241,7 +247,6 @@ CODE CONTEXT:
             last_error = feedback
             critique_history = f"QA REJECTED: {feedback}"
             
-    # Fail-Forward
     mark_task_failed(task, last_error)
     repo = git.Repo(REPO_PATH)
     repo.git.add("BACKLOG.md")
@@ -250,13 +255,13 @@ CODE CONTEXT:
     return True
 
 def run_loop():
-    log("🤖 Jules Level 11 (HYBRID MASTER) Started...")
+    log("🤖 Jules Level 12 (MULTI-MODEL SWARM) Started...")
     while True:
         if (time.time() - START_TIME) / 60 > (MAX_RUNTIME_MINUTES - 5): break
         if not process_single_task(): 
             log("✅ No more tasks or sync error.")
             break
-        time.sleep(10)
+        time.sleep(5)
 
 if __name__ == "__main__":
     run_loop()
