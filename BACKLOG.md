@@ -185,7 +185,7 @@ FAIL: Insufficient context to verify state immutability and responsive design of
 
  (Retry: No blocks matched.)
 
-- [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components** (Retry: FAIL: Missing Component Definitions. The diff introduces `<VaultTab>`, `<BuilderTab>`, `<FeaturesTab>`, and `<SettingsTab>` without defining them. This will cause a runtime error.
+ (Retry: FAIL: Missing Component Definitions. The diff introduces `<VaultTab>`, `<BuilderTab>`, `<FeaturesTab>`, and `<SettingsTab>` without defining them. This will cause a runtime error.
 )
 
 - [ ] **Implement 'Exercise Notes' Field** (Retry: No blocks matched.)
@@ -227,3 +227,5 @@ FAIL: Toast message font size is too small and may not be readable on all device
 )
 
 - [ ] **Implement 'The Gatekeeper' in jules.py** (Retry: No blocks matched.)
+
+- [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components** (Retry: No valid SEARCH/REPLACE blocks found.)
