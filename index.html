@@ -5192,7 +5192,8 @@
                 // Check if we need to upgrade to Kinetic Impact data
                 const currentPreset = allPresets.find(p => p.id === 'kinetic_impact');
                 if (currentPreset && masterExercises.length > 0) {
-                    const needsUpgrade = masterExercises.some(ex => !ex.note && currentPreset.data.MASTER_EXERCISES.some(nex => cleanName(nex.name) === cleanName(ex.name)));
+                    // Check for missing impact data, not notes (as new data doesn't always have notes)
+                    const needsUpgrade = masterExercises.some(ex => !ex.impact && currentPreset.data.MASTER_EXERCISES.some(nex => cleanName(nex.name) === cleanName(ex.name)));
 
                     if (needsUpgrade) {
                         if (confirm("New Kinetic Impact protocol available. Update your library? (Recommended)")) {
