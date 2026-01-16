@@ -4496,6 +4496,173 @@
             );
         };
 
+        const SystemManual = () => {
+            return (
+                <div className="tab-content space-y-10 pb-20">
+                    <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">System<br/><span className="text-indigo-500">Manual</span></h2>
+
+                    {/* INTRO */}
+                    <div className="glass p-8 rounded-[3rem] border-white/5 space-y-4">
+                        <div className="flex items-center gap-3">
+                            <Icon name="info" className="text-indigo-500 w-6 h-6" />
+                            <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Classified: Commander Eyes Only</h3>
+                        </div>
+                        <p className="text-xs text-slate-400 leading-relaxed font-medium">
+                            Welcome, Commander. This tactical dossier details the operational protocols of the Tytax Elite Companion.
+                            This system is not a simple logbook; it is an intelligent kinetic engine designed to optimize force output and manage systemic fatigue.
+                        </p>
+                    </div>
+
+                    {/* KINETIC IMPACT ENGINE */}
+                    <div className="glass p-8 rounded-[3rem] border-white/5 space-y-6">
+                        <div className="flex items-center gap-3">
+                            <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="trends" className="w-5 h-5" /></div>
+                            <div>
+                                <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Kinetic Impact Engine</h3>
+                                <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Protocol: Vector Analysis</p>
+                            </div>
+                        </div>
+                        <div className="space-y-4">
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-indigo-300 uppercase tracking-widest mb-2">Technical Specs</p>
+                                <p className="text-xs text-slate-400 leading-relaxed">The engine parses every exercise for weighted vector data. It identifies "Primary", "Secondary", and "Tertiary" muscle groups and calculates an aggregate stimulation score. Unilateral exercises are automatically doubled in the volume calculus.</p>
+                            </div>
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-emerald-400 uppercase tracking-widest mb-2">Field Application</p>
+                                <p className="text-xs text-slate-400 leading-relaxed">Observe the "Live Kinetic Impact" bars during your session. If your target muscle group (e.g., Chest) is glowing <span className="text-emerald-500 font-bold">Emerald (100%)</span>, you have met the stimulus requirement. If it remains low, deploy additional volume.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* VOLUME PARITY */}
+                    <div className="glass p-8 rounded-[3rem] border-white/5 space-y-6">
+                        <div className="flex items-center gap-3">
+                            <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="bolt" className="w-5 h-5" /></div>
+                            <div>
+                                <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Volume Parity</h3>
+                                <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Protocol: Progressive Overload</p>
+                            </div>
+                        </div>
+                        <p className="text-xs text-slate-400 leading-relaxed font-medium">
+                            The system maintains a rolling index of your session volume (Load × Reps). The <span className="text-indigo-400 font-bold">Parity Bar</span> at the top of your mission screen compares your current payload against your previous best.
+                        </p>
+                        <div className="grid grid-cols-2 gap-2 text-center">
+                            <div className="p-3 bg-slate-900 rounded-xl border border-white/5">
+                                <span className="text-lg font-black text-white italic">100%</span>
+                                <span className="block text-[8px] text-slate-500 uppercase font-bold">Matched Best</span>
+                            </div>
+                            <div className="p-3 bg-indigo-900/20 rounded-xl border border-indigo-500/20">
+                                <span className="text-lg font-black text-indigo-400 italic">&gt;100%</span>
+                                <span className="block text-[8px] text-indigo-300 uppercase font-bold">Overload Achieved</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* BIOMETRIC STATUS */}
+                    <div className="glass p-8 rounded-[3rem] border-white/5 space-y-6">
+                        <div className="flex items-center gap-3">
+                            <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="shield" className="w-5 h-5" /></div>
+                            <div>
+                                <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Biometric Status</h3>
+                                <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Protocol: ACWR Fatigue Management</p>
+                            </div>
+                        </div>
+                        <p className="text-xs text-slate-400 leading-relaxed font-medium">
+                            The Acute:Chronic Workload Ratio (ACWR) algorithm monitors your systemic stress. It uses Exponential Moving Average decay, meaning stress from 48 hours ago impacts your score less than stress from 2 hours ago.
+                        </p>
+                        <div className="space-y-3">
+                            <div className="flex items-center justify-between p-3 bg-emerald-900/10 border border-emerald-500/20 rounded-2xl">
+                                <span className="text-[10px] font-black text-emerald-500 uppercase tracking-widest">Fresh (Ratio &lt; 1.5)</span>
+                                <span className="text-[9px] text-slate-400">Green Light. Train with maximum intensity.</span>
+                            </div>
+                            <div className="flex items-center justify-between p-3 bg-yellow-900/10 border border-yellow-500/20 rounded-2xl">
+                                <span className="text-[10px] font-black text-yellow-500 uppercase tracking-widest">Recovering (1.5 - 2.0)</span>
+                                <span className="text-[9px] text-slate-400">Caution. Consider reducing volume or RPE.</span>
+                            </div>
+                            <div className="flex items-center justify-between p-3 bg-red-900/10 border border-red-500/20 rounded-2xl">
+                                <span className="text-[10px] font-black text-red-500 uppercase tracking-widest">Fried (&gt; 2.0)</span>
+                                <span className="text-[9px] text-slate-400">Critical. High injury risk. Deload mandatory.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* GAP ANALYSIS */}
+                    <div className="glass p-8 rounded-[3rem] border-white/5 space-y-6">
+                        <div className="flex items-center gap-3">
+                            <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="info" className="w-5 h-5" /></div>
+                            <div>
+                                <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Gap Analysis</h3>
+                                <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Protocol: Weak Point Detection</p>
+                            </div>
+                        </div>
+                        <p className="text-xs text-slate-400 leading-relaxed font-medium">
+                            Every 7 days, the system compares your "Protocol Ideal" (the theoretical muscular balance of your program) against your "Actual Load".
+                            If a muscle group is lagging significantly (e.g., Rear Delts), the system will highlight relevant exercises in <span className="text-yellow-400 font-bold">Glow-Yellow</span> during your session.
+                            <br/><br/>
+                            <strong>Directive:</strong> Prioritize these "Kinetic Boost" exercises to restore systemic balance.
+                        </p>
+                    </div>
+
+                    {/* TACTICAL TOOLS */}
+                    <div className="glass p-8 rounded-[3rem] border-white/5 space-y-6">
+                        <div className="flex items-center gap-3">
+                            <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="tool" className="w-5 h-5" /></div>
+                            <div>
+                                <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Tactical Tools</h3>
+                                <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Protocol: Field Utilities</p>
+                            </div>
+                        </div>
+                        <div className="grid grid-cols-1 gap-4">
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Smart Warmups</p>
+                                <p className="text-[10px] text-slate-500">Auto-calculates warmup sets at 50% and 75% of your historical max load for a specific movement.</p>
+                            </div>
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">e1RM Projector</p>
+                                <p className="text-[10px] text-slate-500">Uses the Brzycki formula to estimate your One-Rep Max in real-time. Use this to track strength gains without testing failure.</p>
+                            </div>
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Plate Loader</p>
+                                <p className="text-[10px] text-slate-500">Tap the dumbbell icon on Smith Machine exercises. Calculates exact plate loading (25kg, 20kg, etc.) for a target weight.</p>
+                            </div>
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Focus Mode</p>
+                                <p className="text-[10px] text-slate-500">Eliminates UI distractions. Hides navigation and headers, leaving only the operational mission interface.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* ARCHITECT MODULE */}
+                    <div className="glass p-8 rounded-[3rem] border-white/5 space-y-6">
+                        <div className="flex items-center gap-3">
+                            <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="library" className="w-5 h-5" /></div>
+                            <div>
+                                <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Architect Module</h3>
+                                <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Protocol: Mission Planning</p>
+                            </div>
+                        </div>
+                        <p className="text-xs text-slate-400 leading-relaxed font-medium">
+                            The Builder tab is your Mission Planner. Use the wizard to generate a 3, 4, 5, or 6-day split (Full Body, Upper/Lower, or PPL).
+                            You can then customize individual slots using the "Smart Filter" which only shows exercises relevant to that session's archetype.
+                        </p>
+                    </div>
+
+                    {/* DATA VAULT */}
+                    <div className="glass p-8 rounded-[3rem] border-white/5 space-y-6">
+                        <div className="flex items-center gap-3">
+                            <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="history" className="w-5 h-5" /></div>
+                            <div>
+                                <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Data Vault</h3>
+                                <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Protocol: Long-Term Storage</p>
+                            </div>
+                        </div>
+                        <p className="text-xs text-slate-400 leading-relaxed font-medium">
+                            Your training history is stored in the browser's local persistence layer.
+                            <br/><br/>
+                            <strong>Advisory:</strong> Regularly export your data via the "Master Node" (Settings) tab. The "Backup" function creates a JSON file that can be restored on any device running the Tytax Elite system.
+                        </p>
+                    </div>
+
         const VaultCard = ({ log, onEdit, onDelete }) => {
             const [expanded, setExpanded] = useState(true);
             const [impactExpanded, setImpactExpanded] = useState(false);
@@ -6040,6 +6207,7 @@
                         )}
 
                         {/* FEATURES TAB */}
+                        {activeTab === 'features' && <SystemManual />}
                         {activeTab === 'features' && (
                             <div className="tab-content space-y-8 pb-20">
                                 <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">System<br/><span className="text-indigo-500">Manual</span></h2>
