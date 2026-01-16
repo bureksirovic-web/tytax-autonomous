@@ -4137,14 +4137,14 @@
             }
         };
 
-        const SessionDebrief = ({ duration, volume, onComplete }) => {
+        const SessionDebrief = ({ duration, volume, debriefData, onComplete }) => {
             const [rpe, setRpe] = useState(7);
             const [notes, setNotes] = useState("");
-        
+
             // Calculate total sets and exercises
             const totalExercises = debriefData?.workout?.exercises?.length || 0;
             const totalSets = debriefData?.workout?.exercises?.reduce((acc, ex) => acc + (ex?.sets?.length || 0), 0) || 0;
-        
+
             return (
                 <div className="fixed inset-0 z-[200] bg-black/95 backdrop-blur-xl flex items-center justify-center p-6 animate-fade-in">
                     <div className="w-full max-w-sm space-y-8">
