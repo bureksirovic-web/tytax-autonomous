@@ -4086,13 +4086,13 @@
                                         <span className="text-[9px] font-bold text-slate-500">({draft.length} Selected)</span>
                                      </div>
                                      {/* DOCK SAVE BUTTON */}
-                                    <button onClick={saveCurrentSlot} className="px-5 py-2 bg-indigo-600 text-white rounded-full text-[8px] font-black uppercase tracking-widest shadow-lg hover:bg-indigo-500">
+                                    <button onClick={saveCurrentSlot} className="px-5 py-2 bg-indigo-600 text-white rounded-full text-[8px] font-black uppercase tracking-widest shadow-lg hover:bg-indigo-500 whitespace-nowrap">
                                        Save Session
                                     </button>
                                 </div>
 
                                 {/* Live Bar Chart */}
-                                <div className="grid grid-cols-10 gap-1 h-16 items-end">
+                                <div className="grid grid-cols-10 gap-1 h-16 items-end overflow-x-auto">
                                      {['Chest', 'Back', 'Shoulders', 'Biceps', 'Triceps', 'Quads', 'Hamstrings', 'Glutes', 'Calves', 'Core'].map(group => {
                                          // Calculate Real-Time Score for this Group
                                          const score = draft.reduce((acc, ex) => {

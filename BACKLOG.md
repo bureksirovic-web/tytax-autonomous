@@ -13,7 +13,7 @@
         3. Conditionally render the timer based on this state.
 
 ## 🧪 LEVEL 3: COMPLEX (CSS & Z-Index)
-- [ ] **Fix: Kinetic Graph Overlap**
+- [x] **Fix: Kinetic Graph Overlap**
     - *Goal:* Test CSS spatial reasoning.
     - *Action:* The "Kinetic Impact" graph sometimes covers the "Finish Workout" modal.
     - *Fix:* Ensure the Modal has a higher z-index (e.g., 9999) than the Graph container.
