@@ -5162,6 +5162,9 @@
                     return ["Squat", "Bench", "Deadlift"];
                 }
             });
+            const [autoBackup, setAutoBackup] = useState(() => {
+                return localStorage.getItem('tytax_auto_backup') === 'true';
+            });
 
             // --- CUSTOM PROTOCOLS ---
             const [customProtocols, setCustomProtocols] = useState(() => {
@@ -5233,7 +5236,8 @@
                 localStorage.setItem('tytax_user_profile', JSON.stringify(userProfile));
                 localStorage.setItem('tytax_bodyweight_log', JSON.stringify(bodyweightLog));
                 localStorage.setItem('tytax_pinned_metrics', JSON.stringify(pinnedMetrics));
-            }, [logs, sessionOrder, trainingPlan, masterExercises, startDate, oledMode, warmupStrategy, userInventory, userProfile, bodyweightLog, pinnedMetrics]);
+                localStorage.setItem('tytax_auto_backup', autoBackup);
+            }, [logs, sessionOrder, trainingPlan, masterExercises, startDate, oledMode, warmupStrategy, userInventory, userProfile, bodyweightLog, pinnedMetrics, autoBackup]);
  
             useEffect(() => { 
                 let interval; 
@@ -5409,7 +5413,73 @@
  
             const loadPreset = (p) => { applyLibraryData(p.data); showToast(`${p.name} Active`); setActiveTab('workout'); }; 
             const importJSON = () => { try { applyLibraryData(JSON.parse(libraryInput)); showToast("Custom Protocol Loaded"); setLibraryInput(""); setActiveTab('workout'); } catch(e) { showToast("Invalid Protocol JSON"); } }; 
- 
+
+            const handleBackup = (dataOverride = null) => {
+                const data = dataOverride || { logs, sessionOrder, trainingPlan, masterExercises, startDate, oledMode, userInventory, userProfile, customProtocols, warmupStrategy };
+                const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
+                const a = document.createElement('a');
+                a.href = URL.createObjectURL(blob);
+                a.download = `tytax_backup_${new Date().toISOString().split('T')[0]}.json`;
+                a.click();
+            };
+
+            const handleImport = (file) => {
+                const r = new FileReader();
+                r.onload = (ev) => {
+                    try {
+                        const d = JSON.parse(ev.target.result);
+
+                        // Scenario 1: Full Backup (Has Logs)
+                        if (d.logs && Array.isArray(d.logs)) {
+                            if (confirm("RESTORE BACKUP?\n\nThis will overwrite your current history, settings, and profile with the data from this file.\n\nContinue?")) {
+                                setLogs(d.logs || []);
+                                setMasterExercises(d.masterExercises || []);
+                                setTrainingPlan(d.trainingPlan || {});
+                                setSessionOrder(d.sessionOrder || []);
+                                setStartDate(d.startDate || startDate);
+                                if (d.oledMode !== undefined) setOledMode(d.oledMode);
+                                if (d.userInventory) setUserInventory(d.userInventory);
+                                if (d.userProfile) setUserProfile(d.userProfile);
+                                if (d.customProtocols) setCustomProtocols(d.customProtocols);
+                                if (d.warmupStrategy) setWarmupStrategy(d.warmupStrategy);
+                                showToast("System Restored");
+                            }
+                        }
+                        // Scenario 2: Protocol Only (No Logs, but has Plan)
+                        else if (d.INITIAL_PLAN || d.trainingPlan) {
+                            const name = prompt("PROTOCOL DETECTED\n\nEnter a name for this custom protocol:", "Imported Protocol");
+                            if (name) {
+                                const newProtocol = {
+                                    id: `imported_${Date.now()}`,
+                                    name: name,
+                                    description: "Imported from file",
+                                    data: {
+                                        INITIAL_PLAN: d.INITIAL_PLAN || d.trainingPlan,
+                                        INITIAL_ORDER: d.INITIAL_ORDER || d.sessionOrder || Object.keys(d.trainingPlan || d.INITIAL_PLAN),
+                                        MASTER_EXERCISES: d.MASTER_EXERCISES || d.masterExercises || []
+                                    }
+                                };
+                                const updated = [...customProtocols, newProtocol];
+                                setCustomProtocols(updated);
+                                localStorage.setItem('tytax_custom_protocols', JSON.stringify(updated));
+
+                                if(confirm(`Protocol "${name}" imported.\n\nLoad it now?`)) {
+                                    loadPreset(newProtocol);
+                                } else {
+                                    showToast("Protocol Saved to Library");
+                                }
+                            }
+                        } else {
+                            throw new Error("Unknown Format");
+                        }
+                    } catch(err) {
+                        alert("Import Failed: Invalid File Format");
+                        console.error(err);
+                    }
+                };
+                r.readAsText(file);
+            };
+
             const getPredictedSession = (d) => { 
                 if (!sessionOrder.length) return null; 
                 const diff = Math.floor((new Date(d) - new Date(startDate)) / 86400000); 
@@ -5692,7 +5762,8 @@
                                 }
                             });
 
-                            setLogs([finalWorkout, ...logs]);
+                            const updatedLogs = [finalWorkout, ...logs];
+                            setLogs(updatedLogs);
                             
                             setDebriefData(null);
                             setCurrentWorkout(null); 
@@ -5703,6 +5774,24 @@
                                 setPrCelebration(newPRs);
                             } else {
                                 showToast("Protocol Logged"); 
+                            }
+
+                            if (autoBackup) {
+                                setTimeout(() => {
+                                    handleBackup({
+                                        logs: updatedLogs,
+                                        sessionOrder,
+                                        trainingPlan,
+                                        masterExercises,
+                                        startDate,
+                                        oledMode,
+                                        userInventory,
+                                        userProfile,
+                                        customProtocols,
+                                        warmupStrategy
+                                    });
+                                    showToast("Auto-Backup Saved");
+                                }, 1000);
                             }
                         }} />}
 
@@ -5954,6 +6043,15 @@
                                         <div className="p-2 bg-slate-900 rounded-xl text-slate-500 group-hover:text-indigo-400 transition-colors"><Icon name="info" className="w-5 h-5" /></div>
                                         <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">System Guide</span>
                                     </button>
+                                    <button onClick={handleBackup} className="glass p-6 rounded-[2rem] flex items-center justify-center gap-3 hover:bg-indigo-900/20 transition-colors group border-white/5">
+                                        <div className="p-2 bg-slate-900 rounded-xl text-slate-500 group-hover:text-indigo-400 transition-colors"><Icon name="history" className="w-5 h-5" /></div>
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">Backup Data</span>
+                                    </button>
+                                    <label className="glass p-6 rounded-[2rem] flex items-center justify-center gap-3 hover:bg-indigo-900/20 transition-colors group border-white/5 cursor-pointer">
+                                        <div className="p-2 bg-slate-900 rounded-xl text-slate-500 group-hover:text-indigo-400 transition-colors"><Icon name="library" className="w-5 h-5" /></div>
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">Import Data</span>
+                                        <input type="file" onChange={(e) => handleImport(e.target.files[0])} className="hidden" />
+                                    </label>
                                 </div>
                             </div> 
                         )} 
@@ -6450,38 +6548,18 @@
                                             <button onClick={() => setOledMode(!oledMode)} className={`w-12 h-6 rounded-full transition-colors relative ${oledMode ? 'bg-indigo-500' : 'bg-slate-800'}`}>
                                                 <div className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform ${oledMode ? 'translate-x-6' : 'translate-x-0'}`} />
                                             </button>
+                                        </div>
+                                        <div className="flex justify-between items-center px-2">
+                                            <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Auto-Backup (Post-Workout)</label>
+                                            <button onClick={() => setAutoBackup(!autoBackup)} className={`w-12 h-6 rounded-full transition-colors relative ${autoBackup ? 'bg-emerald-500' : 'bg-slate-800'}`}>
+                                                <div className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform ${autoBackup ? 'translate-x-6' : 'translate-x-0'}`} />
+                                            </button>
                                         </div> 
                                         <div className="flex gap-4"> 
                                             <button onClick={exportCSV} className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-emerald-400 border border-white/5 hover:text-white transition-colors">Export CSV</button>
-                                            <button onClick={() => { 
-                                                const blob = new Blob([JSON.stringify({ logs, sessionOrder, trainingPlan, masterExercises, startDate, oledMode, userInventory, userProfile, customProtocols, warmupStrategy })], { type: 'application/json' });
-                                                const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "tytax_backup.json"; a.click(); 
-                                            }} className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-slate-400 border border-white/5 hover:text-white transition-colors"><Icon name="history" /> Backup</button> 
+                                            <button onClick={handleBackup} className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-slate-400 border border-white/5 hover:text-white transition-colors"><Icon name="history" /> Backup</button>
                                             <label className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-indigo-400 border border-white/5 cursor-pointer hover:bg-indigo-900/10 transition-colors"> 
-                                                <Icon name="library" /> Import <input type="file" onChange={(e) => { 
-                                                    const f = e.target.files[0]; const r = new FileReader(); 
-                                                    r.onload = (ev) => { 
-                                                        try {
-                                                            const d = JSON.parse(ev.target.result); 
-                                                            if (!d.logs && !d.sessionOrder) throw new Error("Invalid Format");
-                                                            
-                                                            setLogs(d.logs || []); 
-                                                            setMasterExercises(d.masterExercises || []); 
-                                                            setTrainingPlan(d.trainingPlan || {}); 
-                                                            setSessionOrder(d.sessionOrder || []); 
-                                                            setStartDate(d.startDate || startDate); 
-                                                            if (d.oledMode !== undefined) setOledMode(d.oledMode);
-                                                            if (d.userInventory) setUserInventory(d.userInventory);
-                                                            if (d.userProfile) setUserProfile(d.userProfile);
-                                                            if (d.customProtocols) setCustomProtocols(d.customProtocols);
-                                                            if (d.warmupStrategy) setWarmupStrategy(d.warmupStrategy);
-                                                            
-                                                            showToast("Vault Restored"); 
-                                                        } catch(err) {
-                                                            alert("Restore Failed: Invalid Backup File");
-                                                        }
-                                                    }; r.readAsText(f); 
-                                                }} className="hidden" /> 
+                                                <Icon name="library" /> Import <input type="file" onChange={(e) => handleImport(e.target.files[0])} className="hidden" />
                                             </label> 
                                         </div> 
                                     </div> 
