@@ -5262,7 +5262,14 @@
                                                     <button key={s} onClick={() => setSelectedSession(s)} className={`p-5 rounded-3xl text-[10px] font-black uppercase border transition-all ${selectedSession === s ? 'accent-gradient text-white border-transparent shadow-xl scale-105' : 'bg-slate-900 text-slate-600 border-white/5'}`}>{s}</button> 
                                                 ))} 
                                             </div> 
-                                            <button onClick={startWorkout} className="w-full py-8 accent-gradient text-white rounded-[2.5rem] font-black uppercase tracking-[0.4em] text-xs shadow-2xl active:scale-95 transition-all">Engage Lift</button> 
+                                            <button 
+                                                onClick={startWorkout} 
+                                                className={`w-full py-8 accent-gradient text-white rounded-[2.5rem] font-black uppercase tracking-[0.4em] text-xs shadow-2xl active:scale-95 transition-all ${trainingPlan[selectedSession || getPredictedSession(selectedDate)] ? '' : 'opacity-50 cursor-not-allowed'}`}
+                                                disabled={!trainingPlan[selectedSession || getPredictedSession(selectedDate)]}
+                                                title={trainingPlan[selectedSession || getPredictedSession(selectedDate)] ? '' : 'Select a session to begin'}
+                                            >
+                                                Engage Lift
+                                            </button>
                                         </div> 
                                     </div> 
                                 ) : ( 
