@@ -36,7 +36,7 @@ MAX_RUNTIME_MINUTES = int(_clean_env("MAX_RUNTIME_MINUTES", "45") or 45)
 REQUEST_TIMEOUT = int(_clean_env("REQUEST_TIMEOUT", "120") or 120)
 START_TIME = time.time()
 
-ENABLE_FUZZY_PATCH = (_clean_env("JULES_FUZZY", "0") == "1")
+ENABLE_FUZZY_PATCH = True
 
 DEFAULT_CONTEXT_FILES = ["AGENTS.md", "ARCHITECTURE.md"]
 CONTEXT_FILES = [
@@ -343,3 +343,4 @@ if __name__ == "__main__":
     models = pick_models()
     while process_single_task(models):
         time.sleep(5)
+
