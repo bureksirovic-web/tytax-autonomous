@@ -2,7 +2,7 @@
 
 ## 🚨 PRIORITY: FIX WHITE SCREEN CRASH
 
-- [ ] **Debug and Fix 'useState' Global Scope Error**
+
     - *Error:* Uncaught TypeError: Cannot read properties of null (reading 'useState')
     - *Diagnosis:* A useState hook is likely being called OUTSIDE of the unction App() component (in the global scope).
     - *Action:* Scan the top of the file and the Toast logic.
@@ -21,3 +21,4 @@
     - *Action:* Check the useEffect that loads default workouts.
     - *Fix:* Ensure the dependency array is [] (run once) and not [saved_workouts] (infinite loop).
 
+- [ ] **Debug and Fix 'useState' Global Scope Error** (Retry: FAIL: The diff removes the toast functionality entirely instead of fixing it. The task is to fix the global scope error, which means moving the `useState` hook and its related logic *inside* the `App` component where it can be correctly called. This change just deletes the feature.)
