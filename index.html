@@ -72,30 +72,48 @@
             return 'OTHER';
         };
 
-        const normalizeMuscleName = (name) => {
-            if (!name) return 'Other';
-            const n = name.toUpperCase().trim();
-            
-            // MAP USER JSON KEYS -> SYSTEM KEYS
-            if (n.includes('CHEST') || n.includes('PECTORALIS')) return 'Chest';
-            if (n.includes('LATISSIMUS') || n.includes('LATS') || n.includes('BACK - VERTICAL')) return 'Lats';
-            if (n.includes('TRAPEZIUS') || n.includes('RHOMBOIDS') || n.includes('BACK - HORIZONTAL')) return 'Mid Back';
-            if (n.includes('ANTERIOR DELT') || n.includes('FRONT DELT')) return 'Front Delts';
-            if (n.includes('LATERAL DELT') || n.includes('SIDE DELT')) return 'Side Delts';
-            if (n.includes('POSTERIOR DELT') || n.includes('REAR DELT')) return 'Rear Delts';
-            if (n.includes('DELTOID') || n.includes('SHOULDER')) return 'Delts';
-            if (n.includes('BICEPS')) return 'Biceps';
-            if (n.includes('TRICEPS')) return 'Triceps';
-            if (n.includes('QUADRICEPS') || n.includes('QUADS')) return 'Quads';
-            if (n.includes('HAMSTRINGS')) return 'Hamstrings';
-            if (n.includes('GLUTE') || n.includes('GLUTEUS')) return 'Glutes';
-            if (n.includes('CALVES') || n.includes('GASTROCNEMIUS') || n.includes('SOLEUS')) return 'Calves';
-            if (n.includes('RECTUS ABDOMINIS') || n.includes('OBLIQUES') || n.includes('CORE')) return 'Core';
-            if (n.includes('FOREARM') || n.includes('GRIP')) return 'Forearms';
+        const normalizeMuscleName = (() => {
+            const cache = new Map();
+            const rules = [
+                { keys: ['CHEST', 'PECTORALIS'], result: 'Chest' },
+                { keys: ['LATISSIMUS', 'LATS', 'BACK - VERTICAL'], result: 'Lats' },
+                { keys: ['TRAPEZIUS', 'RHOMBOIDS', 'BACK - HORIZONTAL'], result: 'Mid Back' },
+                { keys: ['ANTERIOR DELT', 'FRONT DELT'], result: 'Front Delts' },
+                { keys: ['LATERAL DELT', 'SIDE DELT'], result: 'Side Delts' },
+                { keys: ['POSTERIOR DELT', 'REAR DELT'], result: 'Rear Delts' },
+                { keys: ['DELTOID', 'SHOULDER'], result: 'Delts' },
+                { keys: ['BICEPS'], result: 'Biceps' },
+                { keys: ['TRICEPS'], result: 'Triceps' },
+                { keys: ['QUADRICEPS', 'QUADS'], result: 'Quads' },
+                { keys: ['HAMSTRINGS'], result: 'Hamstrings' },
+                { keys: ['GLUTE', 'GLUTEUS'], result: 'Glutes' },
+                { keys: ['CALVES', 'GASTROCNEMIUS', 'SOLEUS'], result: 'Calves' },
+                { keys: ['RECTUS ABDOMINIS', 'OBLIQUES', 'CORE'], result: 'Core' },
+                { keys: ['FOREARM', 'GRIP'], result: 'Forearms' }
+            ];
 
-            // Fallback: Capitalize first letter
-            return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
-        };
+            return (name) => {
+                if (!name) return 'Other';
+                if (cache.has(name)) return cache.get(name);
+
+                const n = name.toUpperCase().trim();
+                let result = null;
+
+                for (const rule of rules) {
+                    if (rule.keys.some(k => n.includes(k))) {
+                        result = rule.result;
+                        break;
+                    }
+                }
+
+                if (!result) {
+                    result = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+                }
+
+                cache.set(name, result);
+                return result;
+            };
+        })();
 
         const getImpact = (exercise) => {
             // Check for v2.1 structured impact (Array)
@@ -141,6 +159,12 @@
                 .map(([m, s]) => ({ muscle: m, pct: (s / max) * 100 }));
         };
 
+        // Hoisted Regexes for Performance
+        const REGEX_LEVEL = /(Primary|Secondary|Tertiary)/i;
+        const REGEX_SCORE = /(\d+)/;
+        const REGEX_CLEAN_CHARS = /[~>]/g;
+        const REGEX_CLEAN_PHRASE = /keep it light\/clean/i;
+
         const parseImpact = (note) => {
             if (!note) return [];
             const impacts = [];
@@ -150,17 +174,17 @@
             segments.forEach(segment => {
                 const cleanSeg = segment.trim();
                 // Regex to find "Primary", "Secondary", or "Tertiary" (case insensitive)
-                const levelMatch = cleanSeg.match(/(Primary|Secondary|Tertiary)/i);
+                const levelMatch = cleanSeg.match(REGEX_LEVEL);
                 // Regex to find the score (digits)
-                const scoreMatch = cleanSeg.match(/(\d+)/);
+                const scoreMatch = cleanSeg.match(REGEX_SCORE);
                 
                 if (levelMatch && scoreMatch) {
                     // Extract muscle name: remove level, score, special chars like ~
                     let muscle = cleanSeg
                         .replace(levelMatch[0], '')
                         .replace(scoreMatch[0], '')
-                        .replace(/[~>]/g, '')
-                        .replace(/keep it light\/clean/i, '') // Specific cleanup for known noisy notes
+                        .replace(REGEX_CLEAN_CHARS, '')
+                        .replace(REGEX_CLEAN_PHRASE, '') // Specific cleanup for known noisy notes
                         .trim();
                     
                     if (muscle) {
@@ -311,6 +335,31 @@
             });
         
             return laggingMuscle;
+        };
+
+        const getWeeklyVolume = (logs) => {
+            const weeks = {};
+            logs.forEach(l => {
+                const date = new Date(l.date);
+                // Simple Week grouping (approx)
+                const startOfYear = new Date(date.getFullYear(), 0, 1);
+                const pastDays = (date - startOfYear) / 86400000;
+                const weekNum = Math.ceil((pastDays + startOfYear.getDay() + 1) / 7);
+                const key = `${date.getFullYear()}-W${weekNum}`;
+
+                weeks[key] = (weeks[key] || 0) + (l.volume || 0);
+            });
+
+            return Object.entries(weeks)
+                .sort((a,b) => a[0].localeCompare(b[0]))
+                .slice(-8) // Last 8 weeks
+                .map(([week, vol]) => ({ date: week, value: vol }));
+        };
+
+        const getAvailableExercises = (logs) => {
+             const set = new Set();
+             logs.forEach(l => l.exercises.forEach(e => set.add(e.name)));
+             return Array.from(set).sort();
         };
 
         // --- PRESETS --- 
@@ -3763,7 +3812,7 @@
                                         <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Day {idx + 1}</span>
                                         <h3 className={`text-xl font-black italic uppercase tracking-tighter ${day.exercises.length > 0 ? 'text-white' : 'text-slate-600'}`}>{day.name}</h3>
                                         {day.exercises.length > 0 ? (
-                                            <p className="text-[10px] text-indigo-400 font-bold">{day.exercises.length} Exercises â€¢ {getProjectedImpact(day.exercises)[0]?.muscle || 'Mixed'} Focus</p>
+                                            <p className="text-[10px] text-indigo-400 font-bold">{day.exercises.length} Exercises • {getProjectedImpact(day.exercises)[0]?.muscle || 'Mixed'} Focus</p>
                                         ) : (
                                             <p className="text-[10px] text-slate-600 italic">Empty Slot - Tap to Design</p>
                                         )}
@@ -4146,27 +4195,41 @@
             const totalSets = workout?.exercises?.reduce((acc, ex) => acc + (ex?.sets?.length || 0), 0) || 0;
 
             return (
-                <div className="fixed inset-0 z-[200] bg-black/95 backdrop-blur-xl flex items-center justify-center p-6 animate-fade-in">
-                    <div className="w-full max-w-sm space-y-8">
-                        <div className="text-center space-y-2">
-                            <h2 className="text-3xl font-black italic uppercase tracking-tighter text-white">Mission<br/><span className="text-emerald-500">Debrief</span></h2>
-                            <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Session Complete â€¢ {Math.floor(duration / 60)}m</p>
+                <div className="fixed inset-0 z-[200] bg-black/95 backdrop-blur-xl flex items-center justify-center p-6 animate-fade-in overflow-y-auto">
+                    <div className="w-full max-w-sm space-y-8 text-center relative">
+                        {/* Background Glow */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-indigo-500/10 blur-[100px] rounded-full pointer-events-none" />
+
+                        <div className="space-y-2 relative z-10">
+                            <h1 className="text-4xl font-black italic uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-white via-indigo-200 to-indigo-500 leading-none">Mission<br/>Complete</h1>
+                            <p className="text-[10px] font-black text-emerald-500 uppercase tracking-[0.3em] flex items-center justify-center gap-2">
+                                <Icon name="check" className="w-4 h-4" /> Protocol Validated
+                            </p>
                         </div>
-        
-                        <div className="space-y-4">
-                            <div className="flex justify-between items-center">
-                                <div>
-                                    <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Total Volume</p>
-                                    <p className="text-2xl font-black text-white italic">{volume} <span className="text-sm text-slate-500 not-italic ml-1">kg</span></p>
+
+                        <div className="grid grid-cols-2 gap-4 relative z-10">
+                            <div className="bg-slate-900/80 backdrop-blur-md p-5 rounded-[2rem] border border-white/10 space-y-1">
+                                <p className="text-[9px] font-black text-indigo-400 uppercase tracking-widest">Total Load</p>
+                                <p className="text-3xl font-black text-white italic">{volume.toLocaleString()}<span className="text-[10px] text-slate-500 not-italic ml-1">KG</span></p>
+                            </div>
+                            <div className="bg-slate-900/80 backdrop-blur-md p-5 rounded-[2rem] border border-white/10 space-y-1">
+                                <p className="text-[9px] font-black text-indigo-400 uppercase tracking-widest">Duration</p>
+                                <p className="text-3xl font-black text-white italic">{Math.floor(duration / 60)}<span className="text-[10px] text-slate-500 not-italic ml-1">MIN</span></p>
+                            </div>
+                            <div className="col-span-2 bg-slate-900/80 backdrop-blur-md p-5 rounded-[2rem] border border-white/10 flex justify-between items-center">
+                                <div className="text-left">
+                                    <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Exercises</p>
+                                    <p className="text-xl font-black text-white italic">{totalExercises}</p>
                                 </div>
-                                <div>
-                                    <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Total Work</p>
-                                    <p className="text-2xl font-black text-white italic">{totalExercises} <span className="text-sm text-slate-500 not-italic ml-1">EX</span> â€¢ {totalSets} <span className="text-sm text-slate-500 not-italic ml-1">SETS</span></p>
+                                <div className="h-8 w-px bg-white/10" />
+                                <div className="text-right">
+                                    <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Total Sets</p>
+                                    <p className="text-xl font-black text-white italic">{totalSets}</p>
                                 </div>
                             </div>
                         </div>
         
-                        <div className="space-y-4">
+                        <div className="space-y-4 relative z-10">
                             <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Perceived Exertion (RPE)</label>
                             <div className="grid grid-cols-5 gap-2">
                                 {[6, 7, 8, 9, 10].map(r => (
@@ -4600,6 +4663,147 @@
                         </p>
                     </div>
 
+        const VaultCard = ({ log, onEdit, onDelete }) => {
+            const [expanded, setExpanded] = useState(true);
+            const [impactExpanded, setImpactExpanded] = useState(false);
+
+            // Metrics
+            const durationMins = Math.max(1, Math.floor(log.duration / 60));
+            const density = Math.round((log.volume || 0) / durationMins);
+
+            // Intensity (Avg RIR) calculation
+            let totalRir = 0;
+            let rirCount = 0;
+            if (log.exercises) {
+                log.exercises.forEach(ex => {
+                    if (ex.sets) {
+                        ex.sets.forEach(s => {
+                            // Check if RIR is recorded and valid
+                            if (s.rir !== "" && s.rir !== undefined && s.rir !== null) {
+                                totalRir += parseFloat(s.rir);
+                                rirCount++;
+                            }
+                        });
+                    }
+                });
+            }
+            const avgRir = rirCount ? (totalRir / rirCount).toFixed(1) : '-';
+
+            // Impact Distribution
+            const impactDist = useMemo(() => calculateImpactDistribution(log.exercises || [], true), [log.exercises]);
+
+            return (
+                <div className="glass p-8 rounded-[2.5rem] relative group border-white/5 transition-all duration-300">
+
+                    {/* Header */}
+                    <div className="flex justify-between items-start mb-6">
+                        <div>
+                            <span className="px-4 py-1 accent-gradient rounded-full text-[9px] font-black uppercase tracking-widest text-white shadow-lg">{log.session}</span>
+                            <h3 className="font-black text-2xl mt-3 text-white tracking-tighter leading-none italic">{new Date(log.date).toDateString()}</h3>
+                        </div>
+                        <div className="flex gap-2">
+                            <button onClick={() => onEdit(log)} className="p-3 bg-slate-800 text-slate-400 hover:text-white transition-colors rounded-xl border border-white/5 hover:border-white/20"><Icon name="tool" className="w-4 h-4" /></button>
+                            <button onClick={() => onDelete(log.id)} className="p-3 bg-red-900/10 text-red-900 hover:text-red-500 transition-colors rounded-xl border border-red-500/10 hover:border-red-500/50"><Icon name="trash" className="w-4 h-4" /></button>
+                        </div>
+                    </div>
+
+                    {/* Metrics Grid */}
+                    <div className="grid grid-cols-4 gap-2 mb-6">
+                         <div className="bg-slate-900/50 p-3 rounded-2xl text-center border border-white/5">
+                             <p className="text-[8px] font-black text-slate-500 uppercase tracking-widest">Time</p>
+                             <p className="text-sm font-black text-white italic">{durationMins}m</p>
+                         </div>
+                         <div className="bg-slate-900/50 p-3 rounded-2xl text-center border border-white/5">
+                             <p className="text-[8px] font-black text-slate-500 uppercase tracking-widest">Vol</p>
+                             <p className="text-sm font-black text-white italic">{log.volume || 0}k</p>
+                         </div>
+                         <div className="bg-slate-900/50 p-3 rounded-2xl text-center border border-white/5">
+                             <p className="text-[8px] font-black text-slate-500 uppercase tracking-widest">Dens</p>
+                             <p className="text-sm font-black text-emerald-400 italic">{density}</p>
+                         </div>
+                         <div className="bg-slate-900/50 p-3 rounded-2xl text-center border border-white/5">
+                             <p className="text-[8px] font-black text-slate-500 uppercase tracking-widest">Int</p>
+                             <p className="text-sm font-black text-indigo-400 italic">@{avgRir}</p>
+                         </div>
+                    </div>
+
+                    {/* Collapsible Kinetic Impact */}
+                    <div className="mb-4 space-y-2">
+                         <button
+                             onClick={() => setImpactExpanded(!impactExpanded)}
+                             className="w-full py-3 bg-slate-900/30 rounded-xl border border-white/5 flex items-center justify-center gap-2 text-[9px] font-black uppercase tracking-widest text-slate-500 hover:text-white transition-colors"
+                         >
+                            <Icon name="trends" className="w-3 h-3" />
+                            {impactExpanded ? 'Hide Impact Data' : 'Show Kinetic Impact'}
+                         </button>
+
+                         {impactExpanded && (
+                            <div className="space-y-2 p-4 bg-slate-900/40 rounded-2xl border border-white/5 animate-fade-in">
+                                {impactDist.length > 0 ? impactDist.map((d) => (
+                                    <div key={d.muscle} className="space-y-1">
+                                        <div className="flex justify-between text-[8px] font-black uppercase tracking-widest text-slate-500">
+                                            <span>{d.muscle}</span>
+                                            <span>{d.score}</span>
+                                        </div>
+                                        <div className="h-1 bg-slate-800 rounded-full overflow-hidden">
+                                            <div className="h-full bg-slate-500" style={{width: `${d.pct}%`}} />
+                                        </div>
+                                    </div>
+                                )) : <p className="text-[9px] text-slate-600 text-center italic">No impact data available</p>}
+                            </div>
+                         )}
+                    </div>
+
+                    {/* Expand Details Button */}
+                    <button
+                        onClick={() => setExpanded(!expanded)}
+                        className={`w-full py-4 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-2 ${expanded ? 'bg-indigo-600 text-white shadow-lg' : 'bg-slate-900 text-slate-400 hover:text-white border border-white/5'}`}
+                    >
+                        {expanded ? 'Collapse Details' : 'View Session Log'}
+                        <Icon name={expanded ? 'x' : 'library'} className="w-3 h-3" />
+                    </button>
+
+                    {/* Expanded Content */}
+                    {expanded && (
+                        <div className="mt-6 space-y-6 animate-slide-up">
+                            {log.exercises && log.exercises.map((ex, i) => (
+                                <div key={i} className="space-y-2">
+                                    <div className="flex justify-between items-center">
+                                        <h4 className="text-xs font-black text-white italic uppercase tracking-tight">{cleanName(ex.name)}</h4>
+                                        <span className="text-[9px] font-bold text-slate-500 uppercase">{ex.station}</span>
+                                    </div>
+                                    <div className="grid grid-cols-6 gap-1 bg-slate-900/50 p-2 rounded-xl border border-white/5">
+                                        {/* Table Header */}
+                                        <div className="text-[8px] font-black text-slate-600 uppercase text-center">Set</div>
+                                        <div className="col-span-2 text-[8px] font-black text-slate-600 uppercase text-center">Load</div>
+                                        <div className="text-[8px] font-black text-slate-600 uppercase text-center">Reps</div>
+                                        <div className="text-[8px] font-black text-slate-600 uppercase text-center">RIR</div>
+                                        <div className="text-[8px] font-black text-slate-600 uppercase text-center">1RM</div>
+
+                                        {/* Rows */}
+                                        {ex.sets && ex.sets.map((s, si) => (
+                                            <React.Fragment key={si}>
+                                                <div className={`text-[9px] font-bold text-center ${s.type === 'warmup' ? 'text-yellow-600' : 'text-slate-500'}`}>{si + 1}</div>
+                                                <div className="col-span-2 text-[9px] font-black text-white text-center">{s.kg || '-'} <span className="text-[7px] text-slate-600">KG</span></div>
+                                                <div className="text-[9px] font-black text-white text-center">{s.reps || '-'}</div>
+                                                <div className="text-[9px] font-black text-indigo-400 text-center">{s.rir !== '' ? `@${s.rir}` : '-'}</div>
+                                                <div className="text-[9px] font-bold text-slate-500 text-center">{calculateE1RM(s.kg, s.reps)}</div>
+                                            </React.Fragment>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
+
+                            {/* Session Notes */}
+                            {log.notes && (
+                                <div className="mt-6 p-5 bg-yellow-900/10 border border-yellow-500/20 rounded-2xl relative overflow-hidden">
+                                     <div className="absolute top-0 left-0 w-1 h-full bg-yellow-500/50" />
+                                     <p className="text-[8px] font-black text-yellow-500 uppercase tracking-widest mb-2">Session Notes</p>
+                                     <p className="text-xs font-medium text-slate-300 italic leading-relaxed">"{log.notes}"</p>
+                                </div>
+                            )}
+                        </div>
+                    )}
                 </div>
             );
         };
@@ -4625,6 +4829,197 @@
                 return this.props.children;
             }
         }
+
+        const TrendsOverview = ({ logs, bodyweightLog, userProfile, onLogBodyweight }) => {
+            const weeklyVol = useMemo(() => getWeeklyVolume(logs), [logs]);
+
+            // Calculate Consistency Streak (Weeks active in last 12 weeks)
+            const activeWeeks = weeklyVol.filter(w => w.value > 0).length;
+            const fitnessScore = Math.min(100, Math.round((activeWeeks / 8) * 100)); // 8 weeks baseline
+
+            return (
+                <div className="space-y-6">
+                    <div className="grid grid-cols-2 gap-4">
+                        <div className="glass p-6 rounded-[2.5rem] flex flex-col justify-between h-40">
+                            <div className="flex justify-between items-start">
+                                <div className="p-3 bg-emerald-500/20 rounded-2xl text-emerald-500"><Icon name="shield" className="w-5 h-5" /></div>
+                                <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Score</span>
+                            </div>
+                            <div>
+                                <p className="text-3xl font-black text-white italic">{fitnessScore}</p>
+                                <p className="text-[9px] font-bold text-slate-600 uppercase tracking-widest">Consistency Index</p>
+                            </div>
+                        </div>
+                        <div className="glass p-6 rounded-[2.5rem] flex flex-col justify-between h-40 relative overflow-hidden">
+                            <div className="flex justify-between items-start z-10 relative">
+                                <div className="p-3 bg-indigo-500/20 rounded-2xl text-indigo-500"><Icon name="bolt" className="w-5 h-5" /></div>
+                                <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Volume</span>
+                            </div>
+                            <div className="z-10 relative">
+                                <p className="text-xl font-black text-white italic">{weeklyVol.length > 0 ? (weeklyVol[weeklyVol.length-1].value/1000).toFixed(1) + 'k' : '0'}</p>
+                                <p className="text-[9px] font-bold text-slate-600 uppercase tracking-widest">Last Week Load</p>
+                            </div>
+                            {/* Mini Chart Background */}
+                            <div className="absolute bottom-0 left-0 right-0 h-16 opacity-20">
+                                <div className="flex items-end h-full gap-1 px-4 pb-4">
+                                    {weeklyVol.map((w, i) => (
+                                        <div key={i} className="flex-1 bg-indigo-500 rounded-t-sm" style={{height: `${(w.value / Math.max(...weeklyVol.map(v=>v.value), 1)) * 100}%`}} />
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="glass p-8 rounded-[3rem] space-y-6">
+                        <div className="flex justify-between items-center">
+                            <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">Weekly Volume</h3>
+                            <span className="text-[8px] font-black text-indigo-500 uppercase tracking-widest">Global Load (KG)</span>
+                        </div>
+                        <ProgressGraph data={weeklyVol} color="#6366f1" label="Total Volume" />
+                    </div>
+
+                    <div className="glass p-8 rounded-[3rem] space-y-6">
+                        <div className="flex justify-between items-center">
+                            <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">Bodyweight</h3>
+                            <button onClick={onLogBodyweight} className="text-[8px] font-black bg-indigo-900/30 text-indigo-400 px-3 py-2 rounded-lg uppercase tracking-widest hover:bg-indigo-900/50">+ Log</button>
+                        </div>
+                        <ProgressGraph data={bodyweightLog.length > 0 ? bodyweightLog : [{date: 'Now', value: userProfile?.bodyweight || 0}]} color="#f59e0b" label="KG" />
+                    </div>
+                </div>
+            );
+        };
+
+        const MuscleDistribution = ({ logs }) => {
+            const distribution = useMemo(() => {
+                const recentExercises = logs.slice(0, 20).flatMap(l => l.exercises);
+                return calculateImpactDistribution(recentExercises, true).slice(0, 5); // Top 5
+            }, [logs]);
+
+            if (distribution.length === 0) return null;
+
+            return (
+                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
+                    <div className="flex items-center gap-3">
+                        <div className="p-3 bg-purple-900/20 rounded-2xl text-purple-400"><Icon name="trends" className="w-5 h-5" /></div>
+                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Growth Focus</h3>
+                    </div>
+
+                    <div className="space-y-4">
+                        {distribution.map((d, i) => (
+                            <div key={d.muscle} className="space-y-1">
+                                <div className="flex justify-between items-center">
+                                    <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest flex items-center gap-2">
+                                        <span className="w-4 text-slate-600">#{i+1}</span> {d.muscle}
+                                    </span>
+                                    <span className="text-[10px] font-bold text-slate-500">{Math.round(d.pct)}%</span>
+                                </div>
+                                <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                    <div className="h-full bg-purple-500" style={{width: `${d.pct}%`}} />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <p className="text-[9px] text-slate-500 font-bold italic text-center">Based on last 20 sessions</p>
+                </div>
+            );
+        };
+
+        const ExerciseInspector = ({ logs, availableExercises }) => {
+            const [selected, setSelected] = useState(availableExercises[0] || '');
+            const [data, setData] = useState([]);
+
+            useEffect(() => {
+                if (!selected) return;
+                const exLogs = logs.filter(l => l.exercises.some(e => e.name === selected)).reverse();
+                const chartData = exLogs.map(l => {
+                    const sessionEx = l.exercises.find(e => e.name === selected);
+                    const bestE1RM = Math.max(...sessionEx.sets.map(s => calculateE1RM(s.kg, s.reps)));
+                    return { date: new Date(l.date).toLocaleDateString(undefined, {month:'short', day:'numeric'}), value: bestE1RM.toFixed(1) };
+                });
+                setData(chartData);
+            }, [selected, logs]);
+
+            return (
+                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
+                    <div className="flex justify-between items-center">
+                        <div className="flex items-center gap-3">
+                            <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="library" className="w-5 h-5" /></div>
+                            <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Inspector</h3>
+                        </div>
+                    </div>
+
+                    <div className="relative">
+                        <select
+                            value={selected}
+                            onChange={e => setSelected(e.target.value)}
+                            className="w-full p-4 bg-slate-900 rounded-2xl font-bold text-xs text-white border border-white/5 focus:ring-2 focus:ring-indigo-500 appearance-none"
+                        >
+                            {availableExercises.map(ex => <option key={ex} value={ex}>{cleanName(ex)}</option>)}
+                        </select>
+                        <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                    </div>
+
+                    {data.length > 0 ? (
+                        <ProgressGraph data={data} label="e1RM" />
+                    ) : (
+                        <div className="h-48 flex items-center justify-center text-slate-700 text-xs font-black uppercase tracking-widest">No Data Available</div>
+                    )}
+                </div>
+            );
+        };
+
+        const PinnedMetrics = ({ logs, pinned, onEdit }) => {
+            return (
+                <div className="space-y-4">
+                    <div className="flex justify-between items-end px-2">
+                        <h2 className="text-2xl font-black tracking-tighter italic uppercase leading-none">Trophy<br/><span className="text-indigo-500">Case</span></h2>
+                        <button onClick={onEdit} className="px-4 py-2 bg-slate-900 rounded-xl border border-white/5 text-[8px] font-black uppercase tracking-widest text-slate-500 hover:text-white transition-colors">
+                            Edit Pinned
+                        </button>
+                    </div>
+                    <div className="grid grid-cols-1 gap-3">
+                        {pinned.map(lift => {
+                            let best = 0;
+                            let last = 0;
+
+                            // Find history
+                            const history = logs.filter(l => l.exercises.some(e => e.name.toLowerCase().includes(lift.toLowerCase()) || e.name === lift)).sort((a,b) => new Date(a.date) - new Date(b.date));
+
+                            if (history.length > 0) {
+                                history.forEach(l => {
+                                    const ex = l.exercises.find(e => e.name.toLowerCase().includes(lift.toLowerCase()) || e.name === lift);
+                                    if (ex) {
+                                        const maxE1RM = Math.max(...ex.sets.map(s => calculateE1RM(s.kg, s.reps)));
+                                        if (maxE1RM > best) best = maxE1RM;
+                                        last = maxE1RM;
+                                    }
+                                });
+                            }
+
+                            return (
+                                <div key={lift} className="glass p-6 rounded-[2.5rem] flex justify-between items-center group">
+                                    <div className="flex items-center gap-4">
+                                        <div className="p-3 bg-slate-900 rounded-2xl text-yellow-500 border border-white/5 group-hover:border-yellow-500/30 transition-colors">
+                                            <Icon name="bolt" className="w-5 h-5" />
+                                        </div>
+                                        <div>
+                                            <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">{cleanName(lift)}</p>
+                                            <p className="text-2xl font-black text-white italic">{best}<span className="text-[10px] text-slate-600 ml-1">KG PR</span></p>
+                                        </div>
+                                    </div>
+                                    <div className="text-right">
+                                        <p className="text-[8px] font-bold text-slate-600 uppercase tracking-widest">Latest</p>
+                                        <p className="text-sm font-black text-slate-400 italic">{last} kg</p>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            );
+        };
 
         const App = () => {
             // --- PERSISTENCE ---
@@ -4696,6 +5091,14 @@
                     return [];
                 }
             });
+            const [pinnedMetrics, setPinnedMetrics] = useState(() => {
+                try {
+                    return JSON.parse(localStorage.getItem('tytax_pinned_metrics') || '["Squat", "Bench", "Deadlift"]');
+                } catch (e) {
+                    console.error("Error parsing tytax_pinned_metrics", e);
+                    return ["Squat", "Bench", "Deadlift"];
+                }
+            });
 
             // --- CUSTOM PROTOCOLS ---
             const [customProtocols, setCustomProtocols] = useState(() => {
@@ -4750,6 +5153,7 @@
             const [debriefData, setDebriefData] = useState(null);
             const [swappingIdx, setSwappingIdx] = useState(null);
             const [editingLog, setEditingLog] = useState(null);
+            const [manualExpanded, setManualExpanded] = useState(() => new Set());
  
             useEffect(() => { 
                 localStorage.setItem('tytax_logs', JSON.stringify(logs)); 
@@ -4763,7 +5167,8 @@
                 localStorage.setItem('tytax_inventory', JSON.stringify(userInventory));
                 localStorage.setItem('tytax_user_profile', JSON.stringify(userProfile));
                 localStorage.setItem('tytax_bodyweight_log', JSON.stringify(bodyweightLog));
-            }, [logs, sessionOrder, trainingPlan, masterExercises, setupNotes, startDate, oledMode, warmupStrategy, userInventory, userProfile, bodyweightLog]); 
+                localStorage.setItem('tytax_pinned_metrics', JSON.stringify(pinnedMetrics));
+            }, [logs, sessionOrder, trainingPlan, masterExercises, setupNotes, startDate, oledMode, warmupStrategy, userInventory, userProfile, bodyweightLog, pinnedMetrics]);
  
             useEffect(() => { 
                 let interval; 
@@ -4825,7 +5230,7 @@
                 const handleKey = (e) => {
                     if (e.code === 'Space' && activeTab === 'workout') {
                         // Toggle timer if active, or just prevent default scrolling
-                        if (document.activeElement.tagName !== 'INPUT') {
+                        if (document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
                             e.preventDefault();
                             if (timerActive) setTimerActive(false);
                         }
@@ -4918,6 +5323,8 @@
                     }
                 }
                 
+                setManualExpanded(new Set()); // Reset manual expansion state on new workout
+
                 setCurrentWorkout({ 
                     date: selectedDate, session: sess, lastStats, isDeload, laggingMuscle,
                     exercises: [...items, ...extraExercises].map(name => { 
@@ -5137,7 +5544,7 @@
                             />
                         )}
 
-                        {debriefData && <SessionDebrief duration={debriefData.duration} onComplete={(data) => {
+                        {debriefData && <SessionDebrief duration={debriefData.duration} volume={debriefData.volume} workout={debriefData.workout} onComplete={(data) => {
                              // PR LOGIC
                              const { workout, duration, volume } = debriefData;
                              const finalWorkout = { ...workout, rpe: data.rpe, notes: data.notes, id: Date.now(), duration, volume };
@@ -5297,7 +5704,7 @@
                                         <div className="space-y-4"> 
                                             <div className="p-6 bg-indigo-900/10 rounded-3xl border border-indigo-500/20"> 
                                                 <p className="text-[10px] font-black text-indigo-400 uppercase tracking-widest">Active Sequence</p> 
-                                                <p className="text-sm font-black text-white mt-1 italic uppercase tracking-tight">{sessionOrder.join(' â€¢ ')}</p> 
+                                                <p className="text-sm font-black text-white mt-1 italic uppercase tracking-tight">{sessionOrder.join(' • ')}</p>
                                             </div> 
                                             <button onClick={() => setActiveTab('workout')} className="w-full py-5 accent-gradient text-white rounded-[2rem] font-black text-[10px] uppercase tracking-[0.4em] shadow-2xl">Enter Training Center</button> 
                                         </div> 
@@ -5474,6 +5881,9 @@
                                         {currentWorkout.exercises.map((ex, exIdx) => { 
                                             const prev = currentWorkout.exercises[exIdx-1]; 
                                             const stationChange = prev && normalizeStationName(prev.station) !== normalizeStationName(ex.station); 
+                                            const isComplete = ex.sets.every(s => s.done);
+                                            const isCollapsed = isComplete && !manualExpanded.has(exIdx);
+
                                             return ( 
                                                 <div key={exIdx} id={`exercise-card-${exIdx}`} className="space-y-4 scroll-mt-32"> 
                                                     {stationChange && ( 
@@ -5485,7 +5895,27 @@
                                                             <div className="h-0.5 flex-grow bg-indigo-500/50" /> 
                                                         </div> 
                                                     )} 
-                                                    <div className={`glass rounded-[2.5rem] overflow-hidden border-t-4 transition-all duration-500 ${ex.sets.every(s => s.done) ? 'border-emerald-500 opacity-40 grayscale scale-[0.98]' : 'border-indigo-600 shadow-xl'}`}> 
+
+                                                    {isCollapsed ? (
+                                                        <div className="glass p-6 rounded-[2.5rem] flex items-center justify-between border border-emerald-500/30 bg-emerald-900/10">
+                                                            <div className="flex items-center gap-4">
+                                                                <div className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-black">
+                                                                    <Icon name="check" className="w-5 h-5" />
+                                                                </div>
+                                                                <div>
+                                                                    <h3 className="font-black text-white italic">{cleanName(ex.name)}</h3>
+                                                                    <p className="text-[9px] font-bold text-emerald-400 uppercase tracking-widest">{ex.sets.length} Sets Completed</p>
+                                                                </div>
+                                                            </div>
+                                                            <button
+                                                                onClick={() => setManualExpanded(prev => new Set(prev).add(exIdx))}
+                                                                className="px-4 py-2 bg-slate-900 rounded-xl text-[9px] font-black uppercase tracking-widest text-slate-400 hover:text-white transition-colors border border-white/5"
+                                                            >
+                                                                Edit
+                                                            </button>
+                                                        </div>
+                                                    ) : (
+                                                    <div className={`glass rounded-[2.5rem] overflow-hidden border-t-4 transition-all duration-500 ${isComplete ? 'border-emerald-500 opacity-90' : 'border-indigo-600 shadow-xl'}`}>
                                                         <div className="p-8 space-y-6"> 
                                                             <div className="flex justify-between items-start"> 
                                                                 <div className="space-y-2 max-w-[75%]"> 
@@ -5643,6 +6073,10 @@
                                                                             if (confirm("Delete this set?")) {
                                                                                 const newWorkout = structuredClone(currentWorkout);
                                                                                 newWorkout.exercises[exIdx].sets.splice(sIdx, 1);
+                                                                                // Re-expand if user deletes a set (making it incomplete)
+                                                                                if (newWorkout.exercises[exIdx].sets.some(s => !s.done)) {
+                                                                                    setManualExpanded(prev => new Set(prev).add(exIdx));
+                                                                                }
                                                                                 setCurrentWorkout(newWorkout);
                                                                             }
                                                                         }} className="col-span-1 h-12 rounded-2xl flex items-center justify-center transition-all bg-red-900/20 text-red-500 hover:bg-red-500 hover:text-white active:scale-90 border border-red-500/20"><Icon name="trash" className="w-4 h-4" /></button>
@@ -5658,6 +6092,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    )}
                                                 </div>
                                             );
                                         })}
@@ -5665,6 +6100,35 @@
                                         <button onClick={() => {
                                             setDebriefData({ workout: currentWorkout, duration: stopwatch, volume: currentVolume });
                                         }} className="w-full py-8 accent-gradient text-white rounded-[3rem] font-black uppercase shadow-2xl tracking-[0.4em] text-xs">Terminate Session</button>
+
+                                        {/* STICKY LIVE IMPACT DOCK */}
+                                        <div className="fixed bottom-0 left-0 right-0 glass border-t border-white/10 px-6 py-4 pb-8 z-[60] shadow-[0_-10px_40px_rgba(0,0,0,0.5)] transition-transform duration-300">
+                                            <div className="max-w-md mx-auto space-y-3">
+                                                <div className="flex justify-between items-center">
+                                                     <div className="flex items-center gap-2">
+                                                        <Icon name="trends" className="w-3 h-3 text-indigo-400" />
+                                                        <span className="text-[10px] font-black text-white uppercase tracking-widest">Live Load</span>
+                                                        <span className="text-[9px] font-bold text-slate-500">({currentWorkout.exercises.filter(ex => ex.sets.some(s => s.done)).length} Active)</span>
+                                                     </div>
+                                                </div>
+
+                                                <div className="grid grid-cols-10 gap-1 h-16 items-end overflow-x-auto">
+                                                     {['Chest', 'Back', 'Shoulders', 'Biceps', 'Triceps', 'Quads', 'Hamstrings', 'Glutes', 'Calves', 'Core'].map(group => {
+                                                         const score = calculateImpactDistribution(currentWorkout.exercises, true).find(d => d.muscle.toUpperCase().includes(group.toUpperCase()))?.score || 0;
+                                                         const pct = Math.min(100, (score / 300) * 100);
+
+                                                         return (
+                                                             <div key={group} className="flex flex-col items-center gap-1 h-full justify-end group">
+                                                                 <div className="w-full bg-slate-800/50 rounded-t-md relative h-full overflow-hidden">
+                                                                     <div className={`absolute bottom-0 left-0 right-0 transition-all duration-500 ${pct >= 100 ? 'bg-emerald-500' : 'bg-indigo-500'}`} style={{height: `${pct}%`}} />
+                                                                 </div>
+                                                                 <span className="text-[6px] font-black text-slate-500 uppercase tracking-tighter group-hover:text-white leading-tight -rotate-45 mb-2 origin-left whitespace-nowrap">{group}</span>
+                                                             </div>
+                                                         );
+                                                     })}
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 )}
                             </div>
@@ -5672,77 +6136,34 @@
  
                         {activeTab === 'trends' && ( 
                             <div className="tab-content space-y-10 pb-20"> 
-                                <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">Force<br/><span className="text-indigo-500">Output</span></h2> 
+                                <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">Force<br/><span className="text-indigo-500">Analytics</span></h2>
                                 
-                                {/* TROPHY CASE */}
-                                <div className="grid grid-cols-3 gap-3">
-                                    {['Squat', 'Bench', 'Deadlift'].map(lift => {
-                                        // Find best e1RM for any exercise matching the pattern
-                                        let best = 0;
-                                        logs.forEach(l => {
-                                            l.exercises.forEach(e => {
-                                                if (e.name.toLowerCase().includes(lift.toLowerCase())) {
-                                                    const maxE1RM = Math.max(...e.sets.map(s => calculateE1RM(s.kg, s.reps)));
-                                                    if (maxE1RM > best) best = maxE1RM;
-                                                }
-                                            })
-                                        });
-                                        return (
-                                            <div key={lift} className="glass p-6 rounded-[2rem] text-center space-y-2">
-                                                <Icon name="bolt" className="w-6 h-6 mx-auto text-yellow-500" />
-                                                <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">{lift}</p>
-                                                <p className="text-2xl font-black text-white italic">{best}<span className="text-[10px] text-slate-600 ml-1">KG</span></p>
-                                            </div>
-                                        );
-                                    })}
-                                </div>
-                                
-                                {/* Work Capacity / Density Chart */}
-                                {logs.length > 1 && (
-                                    <div className="glass p-8 rounded-[3rem] space-y-6">
-                                        <div className="flex justify-between items-center">
-                                            <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">Work Capacity</h3>
-                                            <span className="text-[8px] font-black text-emerald-500 uppercase tracking-widest">Density (KG/Min)</span>
-                                        </div>
-                                        <ProgressGraph data={logs.slice().reverse().map(l => ({
-                                            date: new Date(l.date).toLocaleDateString(undefined, {month:'short', day:'numeric'}),
-                                            value: Math.round((l.volume || 0) / Math.max(1, (l.duration || 60) / 60))
-                                        })).slice(-10)} color="#10b981" label="Density" />
-                                    </div>
-                                )}
+                                <TrendsOverview
+                                    logs={logs}
+                                    bodyweightLog={bodyweightLog}
+                                    userProfile={userProfile}
+                                    onLogBodyweight={() => {
+                                        const w = prompt("Log current bodyweight:");
+                                        if (w && !isNaN(w)) setBodyweightLog([...bodyweightLog, { date: new Date().toISOString().split('T')[0], value: parseFloat(w) }]);
+                                    }}
+                                />
 
-                                {/* Bodyweight Tracker */}
-                                <div className="glass p-8 rounded-[3rem] space-y-6">
-                                    <div className="flex justify-between items-center">
-                                        <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">Bodyweight</h3>
-                                        <button onClick={() => {
-                                            const w = prompt("Log current bodyweight:");
-                                            if (w && !isNaN(w)) setBodyweightLog([...bodyweightLog, { date: new Date().toISOString().split('T')[0], value: parseFloat(w) }]);
-                                        }} className="text-[8px] font-black bg-indigo-900/30 text-indigo-400 px-3 py-2 rounded-lg uppercase tracking-widest hover:bg-indigo-900/50">+ Log</button>
-                                    </div>
-                                    <ProgressGraph data={bodyweightLog.length > 0 ? bodyweightLog : [{date: 'Now', value: userProfile?.bodyweight || 0}]} color="#f59e0b" label="KG" />
-                                </div>
+                                <MuscleDistribution logs={logs} />
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {masterExercises.map(ex => { 
-                                    const exLogs = logs.filter(l => l.exercises.some(e => e.name === ex.name)).reverse(); 
-                                    const chartData = exLogs.map(l => { 
-                                        const sessionEx = l.exercises.find(e => e.name === ex.name); 
-                                        const bestE1RM = Math.max(...sessionEx.sets.map(s => calculateE1RM(s.kg, s.reps))); 
-                                        return { date: new Date(l.date).toLocaleDateString(undefined, {month:'short', day:'numeric'}), value: bestE1RM.toFixed(1) }; 
-                                    }); 
-                                    if (!chartData.length) return null; 
-                                    return ( 
-                                        <div key={ex.name} className="glass p-8 rounded-[3rem] space-y-6"> 
-                                            <div className="flex justify-between items-center"> 
-                                                <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">{cleanName(ex.name)}</h3> 
-                                                <span className="text-[8px] font-black text-indigo-500 uppercase tracking-widest">{ex.station}</span> 
-                                            </div> 
-                                            <ProgressGraph data={chartData} label="e1RM" /> 
-                                        </div> 
-                                    ); 
-                                })} 
-                                </div>
+                                <ExerciseInspector
+                                    logs={logs}
+                                    availableExercises={availableExercises}
+                                />
+
+                                <PinnedMetrics
+                                    logs={logs}
+                                    pinned={pinnedMetrics}
+                                    onEdit={() => {
+                                        const newPinned = prompt("Enter 3 exercises to pin (comma separated):", pinnedMetrics.join(','));
+                                        if (newPinned) setPinnedMetrics(newPinned.split(',').map(s => s.trim()).slice(0, 4));
+                                    }}
+                                />
+
                                 {logs.length === 0 && <div className="py-40 text-center opacity-20"><Icon name="trends" className="w-12 h-12 mx-auto" /><p className="text-[10px] font-black uppercase mt-4 tracking-[0.3em]">No data records</p></div>} 
                             </div> 
                         )} 
@@ -5754,47 +6175,13 @@
                                     <div className="py-40 text-center opacity-20"><Icon name="history" className="w-12 h-12 mx-auto" /><p className="text-[10px] font-black uppercase mt-4 tracking-[0.3em]">Vault is empty</p></div> 
                                 ) : (
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {logs.map(log => ( 
-                                    <div key={log.id} className="glass p-8 rounded-[2.5rem] relative group border-white/5"> 
-                                        <div className="flex justify-between items-start mb-6"> 
-                                            <div> 
-                                                <span className="px-4 py-1 accent-gradient rounded-full text-[9px] font-black uppercase tracking-widest text-white shadow-lg">{log.session}</span> 
-                                                <h3 className="font-black text-2xl mt-3 text-white tracking-tighter leading-none italic">{new Date(log.date).toDateString()}</h3> 
-                                                <p className="text-[10px] font-black text-slate-500 mt-2 uppercase tracking-widest italic">{Math.floor(log.duration/60)}m duration â€¢ {log.volume || 0}kg total</p> 
-                                            </div> 
-                                            <div className="flex gap-2">
-                                                <button onClick={() => setEditingLog(log)} className="p-3 bg-slate-800 text-slate-400 hover:text-white transition-colors rounded-xl"><Icon name="tool" className="w-4 h-4" /></button>
-                                                <button onClick={() => { if(confirm("Delete entry?")) setLogs(logs.filter(l => l.id !== log.id)); }} className="p-3 bg-red-900/10 text-red-900 hover:text-red-500 transition-colors rounded-xl"><Icon name="x" className="w-4 h-4" /></button>
-                                            </div>
-                                        </div>
-                                        <div className="space-y-4 border-t border-white/5 pt-6">
-                                            {/* SESSION IMPACT SUMMARY */}
-                                            <div className="space-y-2">
-                                                <p className="text-[9px] font-black text-indigo-400 uppercase tracking-widest">Kinetic Impact</p>
-                                                {(() => {
-                                                    const sorted = calculateImpactDistribution(log.exercises, true);
-                                                    return sorted.map((d) => (
-                                                        <div key={d.muscle} className="space-y-1">
-                                                            <div className="flex justify-between text-[8px] font-black uppercase tracking-widest text-slate-500">
-                                                                <span>{d.muscle}</span>
-                                                                <span>{d.score}</span>
-                                                            </div>
-                                                            <div className="h-1 bg-slate-800 rounded-full overflow-hidden">
-                                                                <div className="h-full bg-slate-500" style={{width: `${d.pct}%`}} />
-                                                            </div>
-                                                        </div>
-                                                    ));
-                                                })()}
-                                            </div>
-                                            <div className="h-px bg-white/5" />
-                                            {log.exercises.map((ex, i) => ( 
-                                                <div key={i} className="flex justify-between items-center text-xs"> 
-                                                    <span className="font-bold text-slate-500 uppercase text-[10px] tracking-tight">{cleanName(ex.name)}</span> 
-                                                    <span className="text-indigo-400 font-black italic">{Math.max(...ex.sets.map(s => parseFloat(s.kg)||0))}kg</span> 
-                                                </div> 
-                                            ))} 
-                                        </div>
-                                    </div>
+                                {logs.map(log => (
+                                    <VaultCard
+                                        key={log.id}
+                                        log={log}
+                                        onEdit={(l) => setEditingLog(l)}
+                                        onDelete={(id) => { if(confirm("Delete entry?")) setLogs(logs.filter(l => l.id !== id)); }}
+                                    />
                                 ))}
                                 </div>
                                 )}
@@ -5821,6 +6208,85 @@
 
                         {/* FEATURES TAB */}
                         {activeTab === 'features' && <SystemManual />}
+                        {activeTab === 'features' && (
+                            <div className="tab-content space-y-8 pb-20">
+                                <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">System<br/><span className="text-indigo-500">Manual</span></h2>
+                                
+                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
+                                    <div className="flex items-center gap-3">
+                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="trends" className="w-5 h-5" /></div>
+                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Kinetic Impact</h3>
+                                    </div>
+                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">A real-time visual representation of muscle stimulation based on the Tomi Kinetic Impact protocol. The app parses exercise notes for "Primary," "Secondary," and "Tertiary" muscle groups to visualize your training balance.</p>
+                                </div>
+
+                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
+                                    <div className="flex items-center gap-3">
+                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="bolt" className="w-5 h-5" /></div>
+                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Volume Parity</h3>
+                                    </div>
+                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">An automated progressive overload monitor. The system compares your current session's total weight (KG × Reps) against your last performance. Reach 100% to exceed your previous best.</p>
+                                </div>
+
+                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
+                                    <div className="flex items-center gap-3">
+                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="dumbbell" className="w-5 h-5" /></div>
+                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Smart Logic</h3>
+                                    </div>
+                                    <ul className="space-y-4">
+                                        <li className="space-y-1">
+                                            <span className="text-[10px] font-black text-white uppercase tracking-widest block">Auto-Warmups</span>
+                                            <span className="text-xs text-slate-500 font-medium">Uses historical max load to suggest 50% and 75% warmup sets.</span>
+                                        </li>
+                                        <li className="space-y-1">
+                                            <span className="text-[10px] font-black text-white uppercase tracking-widest block">e1RM Calculation</span>
+                                            <span className="text-xs text-slate-500 font-medium">Every set calculates an Estimated 1-Rep Max to track strength gains without failure testing.</span>
+                                        </li>
+                                        <li className="space-y-1">
+                                            <span className="text-[10px] font-black text-white uppercase tracking-widest block">RIR Logging</span>
+                                            <span className="text-xs text-slate-500 font-medium">Track Reps In Reserve (0-4). 0 RIR means absolute failure.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
+                                    <div className="flex items-center gap-3">
+                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="tool" className="w-5 h-5" /></div>
+                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Station Aware</h3>
+                                    </div>
+                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">The app detects station changes (e.g., Smith Machine to Lat Station) and provides visual dividers. Use the Dumbbell Icon on Smith exercises to open the Plate Loader tool.</p>
+                                </div>
+
+                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
+                                    <div className="flex items-center gap-3">
+                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="shield" className="w-5 h-5" /></div>
+                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Biometric Status</h3>
+                                    </div>
+                                    <div className="space-y-2">
+                                        <div className="flex justify-between items-center text-xs font-bold text-slate-500"><span className="text-emerald-500">Fresh</span> <span>ACWR &lt; 1.5</span></div>
+                                        <div className="flex justify-between items-center text-xs font-bold text-slate-500"><span className="text-yellow-500">Recovering</span> <span>ACWR 1.5 - 2.0</span></div>
+                                        <div className="flex justify-between items-center text-xs font-bold text-slate-500"><span className="text-red-500">Fried</span> <span>ACWR &gt; 2.0 (Deload recommended)</span></div>
+                                    </div>
+                                    <p className="text-[10px] text-slate-600 mt-4 leading-relaxed">The system uses the <strong>Acute:Chronic Workload Ratio (ACWR)</strong> with <strong>Time-Decay</strong>. Stress from 48h ago counts less than stress from 2h ago. This ensures the status reflects your <em>current</em> readiness.</p>
+                                </div>
+
+                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
+                                    <div className="flex items-center gap-3">
+                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="info" className="w-5 h-5" /></div>
+                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Gap Analysis</h3>
+                                    </div>
+                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">Every 7 days, the app compares actual performance against the protocol's ideal distribution. If you are <span className="text-emerald-500 font-bold">Fresh</span>, neglected muscles trigger a <span className="text-yellow-400 font-bold">Glow-Yellow</span> reminder to add volume.</p>
+                                </div>
+
+                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
+                                    <div className="flex items-center gap-3">
+                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="library" className="w-5 h-5" /></div>
+                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Meta-Library Support</h3>
+                                    </div>
+                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">The system now supports structured exercise data. This allows for "Pattern Swapping" (e.g., replacing one Chest Press with another while maintaining the same Kinetic Impact) and "Attachment Tracking" to streamline your Tytax setup.</p>
+                                </div>
+                            </div>
+                        )}
  
                         {activeTab === 'settings' && ( 
                             <div className="tab-content space-y-10 pb-20"> 
@@ -5839,7 +6305,7 @@
                                             <div className="grid grid-cols-2 gap-2">
                                                 {PRESETS[0].data.RECOMMENDED_ATTACHMENTS.map(att => (
                                                     <button key={att.name} onClick={() => { if (userInventory.includes(att.name)) setUserInventory(userInventory.filter(i => i !== att.name)); else setUserInventory([...userInventory, att.name]); }} className={`p-3 rounded-xl text-[9px] font-bold text-left transition-all ${userInventory.includes(att.name) ? 'bg-indigo-900/30 text-indigo-400 border border-indigo-500/30' : 'bg-slate-900 text-slate-600 border border-white/5'}`}>
-                                                        {userInventory.includes(att.name) ? 'âœ“ ' : 'â—‹ '} {att.name}
+                                                        {userInventory.includes(att.name) ? '✓ ' : '○ '} {att.name}
                                                     </button>
                                                 ))}
                                             </div>
