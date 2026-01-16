@@ -60,29 +60,6 @@
                 </svg> 
             ); 
         }; 
-
-        // --- TOAST CONTEXT ---
-        const ToastContext = React.createContext(null);
-
-        const ToastProvider = ({ children }) => {
-            const [toast, setToast] = useState(null);
-
-            const showToast = (message) => {
-                setToast(message);
-                setTimeout(() => setToast(null), 3000);
-            };
-
-            return (
-                <ToastContext.Provider value={{ showToast }}>
-                    {children}
-                    {toast && (
-                        <div className="fixed top-4 left-1/2 -translate-x-1/2 z-[250] bg-indigo-500 text-white px-8 py-4 rounded-3xl shadow-2xl font-black text-[10px] uppercase tracking-widest animate-pulse">
-                            {toast}
-                        </div>
-                    )}
-                </ToastContext.Provider>
-            );
-        };
  
         // --- HELPER FUNCTIONS ---
         const normalizeStationName = (name) => {
@@ -336,12 +313,12 @@
             return laggingMuscle;
         };
 
-        // --- PRESETS ---
-        const PRESETS = [
-            {
-                id: "kinetic_impact",
-                name: "Tytax Elite v3.0 (Fixed 6/1 Split)",
-                description: "Official 6/1 Kinetic Load protocol updated for v3.0 library.",
+        // --- PRESETS --- 
+        const PRESETS = [ 
+            { 
+                id: "kinetic_impact", 
+                name: "Tytax Elite v3.0 (Fixed 6/1 Split)", 
+                description: "Official 6/1 Kinetic Load protocol updated for v3.0 library.", 
                 data: {
                   "MUSCLE_GROUPS": [
   {
@@ -3588,7 +3565,7 @@
                     <div className="w-full max-w-sm space-y-8 text-center relative">
                         {/* Confetti / Glow Effect */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-amber-500/20 blur-[100px] rounded-full animate-pulse" />
-
+                        
                         <div className="relative z-10 space-y-2">
                             <Icon name="bolt" className="w-16 h-16 text-amber-400 mx-auto animate-bounce" />
                             <h2 className="text-4xl font-black italic uppercase text-white tracking-tighter leading-none">New<br/><span className="text-amber-400">Record</span></h2>
@@ -3610,18 +3587,10 @@
         };
 
         const PlateCalculator = ({ targetKg, onClose }) => {
-            const [barWeight, setBarWeight] = useState(() => {
-                try {
-                    return parseInt(localStorage.getItem('tytax_bar_weight') || '20');
-                } catch (e) {
-                    console.error("Error parsing tytax_bar_weight from localStorage", e);
-                    return 20;
-                }
-            });
+            const [barWeight, setBarWeight] = useState(() => parseInt(localStorage.getItem('tytax_bar_weight') || '20'));
             useEffect(() => { localStorage.setItem('tytax_bar_weight', barWeight); }, [barWeight]);
-
             const plates = [25, 20, 15, 10, 5, 2.5, 1.25];
-
+            
             const calculate = () => {
                 let weight = (targetKg - barWeight) / 2;
                 if (weight <= 0) return [];
@@ -3634,22 +3603,22 @@
                 });
                 return needed;
             };
-
+            
             const result = calculate();
-
+            
             return (
                 <div className="fixed inset-0 z-[150] bg-black/80 backdrop-blur-sm flex items-center justify-center p-6" onClick={onClose}>
                     <div className="bg-slate-900 border border-white/10 rounded-[2rem] p-8 w-full max-w-sm space-y-6" onClick={e => e.stopPropagation()}>
                         <div className="flex justify-between items-center">
-                            <h3 className="text-xl font-black text-white italic uppercase tracking-tighter">Plate<br /><span className="text-indigo-500">Loader</span></h3>
+                            <h3 className="text-xl font-black text-white italic uppercase tracking-tighter">Plate<br/><span className="text-indigo-500">Loader</span></h3>
                             <button onClick={onClose} className="p-2 bg-slate-800 rounded-xl text-slate-400"><Icon name="x" /></button>
                         </div>
-
+                        
                         <div className="flex justify-between items-center bg-slate-800/50 p-4 rounded-2xl">
                             <span className="text-xs font-black text-slate-400 uppercase tracking-widest">Target</span>
                             <span className="text-2xl font-black text-white">{targetKg} <span className="text-xs text-slate-500">KG</span></span>
                         </div>
-
+                        
                         <div className="space-y-4">
                             <div className="flex justify-between text-[10px] font-black uppercase tracking-widest text-slate-500">
                                 <span>Per Side</span>
@@ -3666,18 +3635,18 @@
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Bar Weight</label>
-                            <div className="flex gap-2">
+                             <label className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Bar Weight</label>
+                             <div className="flex gap-2">
                                 {[20, 15, 10].map(w => (
                                     <button key={w} onClick={() => setBarWeight(w)} className={`flex-1 py-3 rounded-xl text-[10px] font-black transition-all ${barWeight === w ? 'bg-indigo-600 text-white shadow-lg' : 'bg-slate-800 text-slate-500'}`}>{w}kg</button>
                                 ))}
-                            </div>
+                             </div>
                         </div>
                     </div>
                 </div>
             );
         };
-
+ 
         const BuilderWizard = ({ onComplete, onCancel }) => {
             const [step, setStep] = useState(1);
             const [config, setConfig] = useState({ days: 3, split: 'FB', session: null });
@@ -3764,7 +3733,7 @@
             return (
                 <div className="tab-content space-y-6 pb-32">
                     {/* Header */}
-                    <div className="sticky top-0 bg-[#020617]/95 backdrop-blur-xl z-30 p-4 -mx-4 border-b border-white/5 space-y-4 shadow-sm">
+                    <div className="sticky top-0 bg-[#020617]/95 backdrop-blur-xl z-30 p-4 -mx-4 border-b border-white/5 space-y-4">
                         <div className="flex justify-between items-end">
                             <div>
                                  <h2 className="text-3xl font-black tracking-tighter italic uppercase leading-none">Program<br/><span className="text-indigo-500">Manager</span></h2>
@@ -4570,17 +4539,9 @@
 
             const [library, setLibrary] = useState(() => {
                 // Initialize library with preset data if available, otherwise empty (will be populated on load)
-                let p;
-                try {
-                    p = allPresets.find(pr => pr.id === 'kinetic_impact') || PRESETS[0];
-                } catch (e) {
-                    console.error("Error accessing PRESETS", e);
-                    p = PRESETS[0]; // Fallback to the first preset
-                }
+                const p = allPresets.find(pr => pr.id === 'kinetic_impact') || PRESETS[0];
                 return p?.data.MASTER_EXERCISES || [];
             });
-
-            const { showToast } = React.useContext(ToastContext); // Use ToastContext for showToast
 
             useEffect(() => {
                 document.body.style.backgroundColor = oledMode ? '#000000' : '#020617';
@@ -4607,6 +4568,7 @@
             const [selectedSession, setSelectedSession] = useState(null); 
             const [currentWorkout, setCurrentWorkout] = useState(null); 
             const [libraryInput, setLibraryInput] = useState(""); 
+            const [toast, setToast] = useState(null); 
             const [stopwatch, setStopwatch] = useState(0); 
             const [timer, setTimer] = useState(0); 
             const [timerActive, setTimerActive] = useState(false); 
@@ -4618,7 +4580,6 @@
             const [swappingIdx, setSwappingIdx] = useState(null);
             const [editingLog, setEditingLog] = useState(null);
  
-
             useEffect(() => { 
                 localStorage.setItem('tytax_logs', JSON.stringify(logs)); 
                 localStorage.setItem('tytax_session_order', JSON.stringify(sessionOrder)); 
@@ -4627,7 +4588,7 @@
                 localStorage.setItem('tytax_setup_notes', JSON.stringify(setupNotes)); 
                 localStorage.setItem('tytax_start_date', startDate); 
                 localStorage.setItem('tytax_oled_mode', oledMode);
-                localStorage.setItem('tytax_warmup_strategy', JSON.stringify(warmupStrategy));
+                localStorage.setItem('tytax_warmup_strategy', warmupStrategy);
                 localStorage.setItem('tytax_inventory', JSON.stringify(userInventory));
                 localStorage.setItem('tytax_user_profile', JSON.stringify(userProfile));
                 localStorage.setItem('tytax_bodyweight_log', JSON.stringify(bodyweightLog));
@@ -4720,6 +4681,8 @@
                 };
             }, [activeTab, timerActive]);
  
+            const showToast = (m) => { setToast(m); setTimeout(() => setToast(null), 3000); }; 
+
             const exportCSV = () => {
                 const headers = ["Date,Session,Exercise,Set,KG,Reps,RIR,e1RM"];
                 const rows = logs.flatMap(l => l.exercises.flatMap(e => e.sets.filter(s => s.done).map((s, i) => `${new Date(l.date).toLocaleDateString()},${l.session},"${e.name}",${i+1},${s.kg},${s.reps},${s.rir},${calculateE1RM(s.kg, s.reps)}`)));
@@ -4831,19 +4794,18 @@
                         const warmupSets = generateWarmups(lastMaxLoad, warmupStrategy);
 
                         return { 
-                            name,
-                            station: m?.station || "Tytax",
+                            name, 
+                            station: m?.station || "Tytax", 
                             unilateral: m?.unilateral || false,
                             impact: m?.impact || [],
-                            targetReps: m?.reps || "8-12",
-                            note: m?.note || "",
-                            sets: [...warmupSets, ...workingSets],
-                            setup: setupNotes[name] || "",
-                            notes: ""
+                            targetReps: m?.reps || "8-12", 
+                            note: m?.note || "", 
+                            sets: [...warmupSets, ...workingSets], 
+                            setup: setupNotes[name] || "" 
                         };
-                    })
-                });
-            };
+                    }) 
+                }); 
+            }; 
  
             const currentVolume = useMemo(() => { 
                 if (!currentWorkout) return 0; 
@@ -5091,14 +5053,9 @@
 
                         {(!userProfile && logs.length === 0) && <WelcomeWizard onComplete={(p) => {
                             setUserProfile(p);
-                            try {
-                                const defaultProto = PRESETS[0];
-                                applyLibraryData(defaultProto.data);
-                                showToast(`Welcome, Commander ${p.name}`);
-                            } catch (e) {
-                                console.error("Error applying default protocol", e);
-                                showToast("System Initialized (Basic)");
-                            }
+                            const defaultProto = PRESETS[0];
+                            applyLibraryData(defaultProto.data);
+                            showToast(`Welcome, Commander ${p.name}`);
                         }} />}
                         
                         {toast && <div className="fixed top-24 left-1/2 -translate-x-1/2 z-[250] bg-indigo-500 text-white px-8 py-4 rounded-3xl shadow-2xl font-black text-[10px] uppercase tracking-widest animate-pulse">{toast}</div>} 
@@ -5288,14 +5245,7 @@
                                                     <button key={s} onClick={() => setSelectedSession(s)} className={`p-5 rounded-3xl text-[10px] font-black uppercase border transition-all ${selectedSession === s ? 'accent-gradient text-white border-transparent shadow-xl scale-105' : 'bg-slate-900 text-slate-600 border-white/5'}`}>{s}</button> 
                                                 ))} 
                                             </div> 
-                                            <button 
-                                                onClick={startWorkout} 
-                                                className={`w-full py-8 accent-gradient text-white rounded-[2.5rem] font-black uppercase tracking-[0.4em] text-xs shadow-2xl active:scale-95 transition-all ${trainingPlan[selectedSession || getPredictedSession(selectedDate)] ? '' : 'opacity-50 cursor-not-allowed'}`}
-                                                disabled={!trainingPlan[selectedSession || getPredictedSession(selectedDate)]}
-                                                title={trainingPlan[selectedSession || getPredictedSession(selectedDate)] ? '' : 'Select a session to begin'}
-                                            >
-                                                Engage Lift
-                                            </button>
+                                            <button onClick={startWorkout} className="w-full py-8 accent-gradient text-white rounded-[2.5rem] font-black uppercase tracking-[0.4em] text-xs shadow-2xl active:scale-95 transition-all">Engage Lift</button> 
                                         </div> 
                                     </div> 
                                 ) : ( 
@@ -5388,58 +5338,54 @@
                                                         ) : null;
                                                     })()}
                                                                     {ex.note && <p className="text-[9px] font-bold text-slate-400 leading-tight border-l-2 border-indigo-500 pl-2">{ex.note}</p>}
-                                                                    <div className="flex items-center gap-4 group pt-2">
+                                                                    <div className="flex items-center gap-4 group pt-2"> 
                                                                         <div className="flex items-center gap-2 flex-grow">
-                                                                            <Icon name="tool" className="w-3.5 h-3.5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
-
+                                                                            <Icon name="tool" className="w-3.5 h-3.5 text-slate-500 group-hover:text-indigo-400 transition-colors" /> 
+                                                                            
                                                                             <div className="flex flex-col flex-grow">
                                                                                 {/* STRUCTURED SELECTOR */}
                                                                                 <div className="flex gap-1 w-full">
-                                                                                    <select
-                                                                                        value={ex.setup?.split('|')[0]?.trim() || ''}
+                                                                                    <select 
+                                                                                        value={ex.setup?.split('|')[0]?.trim() || ''} 
                                                                                         onChange={e => {
                                                                                             const currentLever = ex.setup?.split('|')[1]?.trim() || '-';
                                                                                             const newVal = `${e.target.value} | ${currentLever}`;
-                                                                                            const up = structuredClone(currentWorkout);
-                                                                                            up.exercises[exIdx].setup = newVal;
-                                                                                            setCurrentWorkout(up);
-                                                                                            setSetupNotes({ ...setupNotes, [ex.name]: newVal });
+                                                                                            setSetupNotes({...setupNotes, [ex.name]: newVal}); 
+                                                                                            const up = structuredClone(currentWorkout); up.exercises[exIdx].setup = newVal; setCurrentWorkout(up);
                                                                                         }}
                                                                                         className="bg-transparent text-[10px] font-bold text-indigo-300 border-none p-0 focus:ring-0 w-1/2 cursor-pointer"
                                                                                     >
                                                                                         <option value="">Seat</option>
-                                                                                        {[1, 2, 3, 4, 5, 6, 7, 8].map(n => <option key={n} value={`Seat ${n}`}>Seat {n}</option>)}
+                                                                                        {[1,2,3,4,5,6,7,8].map(n => <option key={n} value={`Seat ${n}`}>Seat {n}</option>)}
                                                                                     </select>
                                                                                     <span className="text-slate-600">|</span>
-                                                                                    <select
-                                                                                        value={ex.setup?.split('|')[1]?.trim() || ''}
+                                                                                    <select 
+                                                                                        value={ex.setup?.split('|')[1]?.trim() || ''} 
                                                                                         onChange={e => {
                                                                                             const currentSeat = ex.setup?.split('|')[0]?.trim() || 'Seat -';
                                                                                             const newVal = `${currentSeat} | ${e.target.value}`;
-                                                                                            const up = structuredClone(currentWorkout);
-                                                                                            up.exercises[exIdx].setup = newVal;
-                                                                                            setCurrentWorkout(up);
-                                                                                            setSetupNotes({ ...setupNotes, [ex.name]: newVal });
+                                                                                            setSetupNotes({...setupNotes, [ex.name]: newVal}); 
+                                                                                            const up = structuredClone(currentWorkout); up.exercises[exIdx].setup = newVal; setCurrentWorkout(up);
                                                                                         }}
                                                                                         className="bg-transparent text-[10px] font-bold text-indigo-300 border-none p-0 focus:ring-0 w-1/2 cursor-pointer"
                                                                                     >
                                                                                         <option value="">Lever</option>
-                                                                                        {['A', 'B', 'C', 'D', 'E'].map(l => <option key={l} value={`Lever ${l}`}>Lever {l}</option>)}
+                                                                                        {['A','B','C','D','E'].map(l => <option key={l} value={`Lever ${l}`}>Lever {l}</option>)}
                                                                                     </select>
                                                                                 </div>
                                                                                 {/* TECH CUES FIELD */}
-                                                                                <input
+                                                                                <input 
                                                                                     type="text"
                                                                                     placeholder="Tech Cues (e.g. Chest up, slow eccentric)"
                                                                                     value={setupNotes[ex.name + "_cues"] || ""}
-                                                                                    onChange={e => setSetupNotes({ ...setupNotes, [ex.name + "_cues"]: e.target.value })}
+                                                                                    onChange={e => setSetupNotes({...setupNotes, [ex.name + "_cues"]: e.target.value})}
                                                                                     className="bg-transparent text-[9px] font-bold text-slate-500 border-none p-0 focus:ring-0 w-full placeholder:text-slate-700 italic"
                                                                                 />
                                                                             </div>
                                                                         </div>
                                                                         <div className="flex gap-2">
                                                                             <button onClick={() => {
-                                                                                const up = structuredClone(currentWorkout);
+                                                                                const up = {...currentWorkout};
                                                                                 const maxLoad = getLastMaxLoad(ex.name, logs);
                                                                                 const warmUpKg = maxLoad > 0 ? (maxLoad * 0.5).toFixed(1) : '';
                                                                                 up.exercises[exIdx].sets.unshift({ kg: warmUpKg, reps: '', rir: '', done: false, type: 'warmup' });
@@ -5456,22 +5402,11 @@
                                                                                 <Icon name="shuffle" className="w-4 h-4" />
                                                                             </button>
                                                                         </div>
-                                                                    </div>
-                                                                </div>
-                                                                <a href={`https://www.youtube.com/results?search_query=TYTAX+T1+${encodeURIComponent(ex.name)}`} target="_blank" className="p-4 bg-slate-900 rounded-2xl text-slate-500 border border-white/5 hover:text-indigo-400 transition-colors"><Icon name="play" className="w-5 h-5" /></a>
-                                                            </div>
-                                                            <div className="space-y-3">
-                                                                {/* Exercise Notes Input */}
-                                                                <textarea
-                                                                    placeholder="Exercise notes..."
-                                                                    value={ex.notes || ""}
-                                                                    onChange={e => {
-                                                                        const up = structuredClone(currentWorkout);
-                                                                        up.exercises[exIdx].notes = e.target.value;
-                                                                        setCurrentWorkout(up);
-                                                                    }}
-                                                                    className="w-full p-3 bg-black rounded-2xl font-black text-base text-white border-none focus:ring-2 focus:ring-indigo-500"
-                                                                />
+                                                                    </div> 
+                                                                </div> 
+                                                                <a href={`https://www.youtube.com/results?search_query=TYTAX+T1+${encodeURIComponent(ex.name)}`} target="_blank" className="p-4 bg-slate-900 rounded-2xl text-slate-500 border border-white/5 hover:text-indigo-400 transition-colors"><Icon name="play" className="w-5 h-5"/></a> 
+                                                            </div> 
+                                                            <div className="space-y-3"> 
                                                                 {ex.sets.map((set, sIdx) => {
                                                                     // GHOST REPS LOGIC
                                                                     const prevSession = logs.find(l => l.exercises.some(e => e.name === ex.name));
@@ -5485,87 +5420,67 @@
                                                                     const beatGhost = ghostReps && set.reps && parseInt(set.reps) > parseInt(ghostReps);
 
                                                                     return (
-                                                                        <div key={sIdx} className={`grid grid-cols-12 gap-2 items-center p-3 rounded-3xl transition-all relative overflow-hidden ${set.done ? 'bg-emerald-900/10' : set.type === 'warmup' ? 'bg-yellow-900/10 border border-yellow-500/10' : 'bg-slate-900/60'}`}>
-                                                                            {set.type === 'warmup' && <div className="absolute top-0 right-0 w-2 h-2 bg-yellow-500 rounded-bl-full" />}
-                                                                            <div className={`col-span-1 text-center font-black text-[10px] ${set.type === 'warmup' ? 'text-yellow-600' : 'text-slate-700'}`}>{sIdx + 1}</div>
-                                                                            <input id={`input-kg-${exIdx}-${sIdx}`} type="number" placeholder="KG" value={set.kg} disabled={set.done} onChange={e => {
-                                                                                const up = structuredClone(currentWorkout);
-                                                                                up.exercises[exIdx].sets[sIdx].kg = e.target.value;
-                                                                                setCurrentWorkout(up);
-                                                                            }} className={`col-span-3 p-3 bg-black rounded-2xl font-black text-base text-center border-none text-white focus:ring-2 ${set.type === 'warmup' ? 'focus:ring-yellow-500' : 'focus:ring-indigo-500'}`} />
-                                                                            <div className="col-span-3 relative">
-                                                                                <input id={`input-reps-${exIdx}-${sIdx}`} type="number" placeholder={ghostReps ? `Ghost: ${ghostReps}` : "R"} value={set.reps} disabled={set.done} onChange={e => {
-                                                                                    const up = structuredClone(currentWorkout);
-                                                                                    up.exercises[exIdx].sets[sIdx].reps = e.target.value;
-                                                                                    setCurrentWorkout(up);
-                                                                                }} className={`w-full p-3 bg-black rounded-2xl font-black text-base text-center border-none focus:ring-2 ${set.type === 'warmup' ? 'focus:ring-yellow-500' : 'focus:ring-indigo-500'} ${beatGhost ? 'text-emerald-400 font-bold' : 'text-white'}`} />
-                                                                                {ex.unilateral && <span className="absolute right-1 bottom-1 text-[8px] font-bold text-slate-600">/side</span>}
-                                                                            </div>
-                                                                            <div className="col-span-2 flex flex-col gap-1">
-                                                                                <select value={set.rir} disabled={set.done} onChange={e => {
-                                                                                    const up = structuredClone(currentWorkout);
-                                                                                    up.exercises[exIdx].sets[sIdx].rir = e.target.value;
-                                                                                    setCurrentWorkout(up);
-                                                                                }} className="bg-slate-800 text-indigo-400 text-[9px] font-black rounded-lg p-1 text-center border-none">
-                                                                                    <option value="">RIR</option>
-                                                                                    {[0, 1, 2, 3, 4].map(r => <option key={r} value={r}>{r}</option>)}
-                                                                                </select>
-                                                                                <span className="text-[8px] font-black text-slate-600 text-center">1RM: {calculateE1RM(set.kg, set.reps)}</span>
-                                                                            </div>
-                                                                            <button disabled={!set.kg || !set.reps || set.done} onClick={() => {
-                                                                                const up = structuredClone(currentWorkout);
-                                                                                up.exercises[exIdx].sets[sIdx].done = true;
-                                                                                setCurrentWorkout(up); setTimer(90); setTimerActive(true);
-                                                                                if (window.navigator.vibrate) window.navigator.vibrate(50);
-
-                                                                                // IMPACT PULSE
-                                                                                const card = document.getElementById(`exercise-card-${exIdx}`);
-                                                                                if (card) {
-                                                                                    card.classList.add('glow-indigo');
-                                                                                    setTimeout(() => card.classList.remove('glow-indigo'), 1000);
-                                                                                }
-
-                                                                                // Smart Focus Logic
-                                                                                setTimeout(() => {
-                                                                                    const nextSet = document.getElementById(`input-kg-${exIdx}-${sIdx + 1}`);
-                                                                                    const nextExInput = document.getElementById(`input-kg-${exIdx + 1}-0`);
-                                                                                    const nextExCard = document.getElementById(`exercise-card-${exIdx + 1}`);
-
-                                                                                    if (nextSet) {
-                                                                                        nextSet.focus();
-                                                                                        nextSet.select();
-                                                                                        nextSet.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                                                                    }
-                                                                                    else if (nextExInput) {
-                                                                                        nextExInput.focus();
-                                                                                        nextExInput.select();
-                                                                                        if (nextExCard) {
-                                                                                            nextExCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                                                                        } else {
-                                                                                            nextExInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                                                                        }
-                                                                                    }
-                                                                                }, 100);
-                                                                            }} className={`col-span-2 p-4 rounded-2xl flex items-center justify-center transition-all ${set.done ? 'bg-emerald-500 text-white shadow-lg' : 'bg-slate-800 text-slate-600 active:scale-90 disabled:opacity-20'}`}><Icon name="check" className="w-5 h-5" /></button>
-                                                                            <button onClick={() => {
-                                                                                if (confirm("Delete this set?")) {
-                                                                                    const newWorkout = structuredClone(currentWorkout);
-                                                                                    newWorkout.exercises[exIdx].sets.splice(sIdx, 1);
-                                                                                    setCurrentWorkout(newWorkout);
-                                                                                }
-                                                                            }} className="col-span-1 h-12 rounded-2xl flex items-center justify-center transition-all bg-red-900/20 text-red-500 hover:bg-red-500 hover:text-white active:scale-90 border border-red-500/20"><Icon name="trash" className="w-4 h-4" /></button>
+                                                                    <div key={sIdx} className={`grid grid-cols-12 gap-2 items-center p-3 rounded-3xl transition-all relative overflow-hidden ${set.done ? 'bg-emerald-900/10' : set.type === 'warmup' ? 'bg-yellow-900/10 border border-yellow-500/10' : 'bg-slate-900/60'}`}> 
+                                                                        {set.type === 'warmup' && <div className="absolute top-0 right-0 w-2 h-2 bg-yellow-500 rounded-bl-full" />}
+                                                                        <div className={`col-span-1 text-center font-black text-[10px] ${set.type === 'warmup' ? 'text-yellow-600' : 'text-slate-700'}`}>{sIdx+1}</div> 
+                                                                        <input id={`input-kg-${exIdx}-${sIdx}`} type="number" placeholder="KG" value={set.kg} disabled={set.done} onChange={e => { const up = {...currentWorkout}; up.exercises[exIdx].sets[sIdx].kg = e.target.value; setCurrentWorkout(up); }} className={`col-span-3 p-3 bg-black rounded-2xl font-black text-base text-center border-none text-white focus:ring-2 ${set.type === 'warmup' ? 'focus:ring-yellow-500' : 'focus:ring-indigo-500'}`} /> 
+                                                                        <div className="col-span-3 relative">
+                                                                            <input id={`input-reps-${exIdx}-${sIdx}`} type="number" placeholder={ghostReps ? `Ghost: ${ghostReps}` : "R"} value={set.reps} disabled={set.done} onChange={e => { const up = {...currentWorkout}; up.exercises[exIdx].sets[sIdx].reps = e.target.value; setCurrentWorkout(up); }} className={`w-full p-3 bg-black rounded-2xl font-black text-base text-center border-none focus:ring-2 ${set.type === 'warmup' ? 'focus:ring-yellow-500' : 'focus:ring-indigo-500'} ${beatGhost ? 'text-emerald-400 font-bold' : 'text-white'}`} /> 
+                                                                             {ex.unilateral && <span className="absolute right-1 bottom-1 text-[8px] font-bold text-slate-600">/side</span>}
                                                                         </div>
-                                                                    );
+                                                                        <div className="col-span-2 flex flex-col gap-1">
+                                                                            <select value={set.rir} disabled={set.done} onChange={e => { const up = {...currentWorkout}; up.exercises[exIdx].sets[sIdx].rir = e.target.value; setCurrentWorkout(up); }} className="bg-slate-800 text-indigo-400 text-[9px] font-black rounded-lg p-1 text-center border-none">
+                                                                                <option value="">RIR</option>
+                                                                                {[0,1,2,3,4].map(r => <option key={r} value={r}>{r}</option>)}
+                                                                            </select>
+                                                                            <span className="text-[8px] font-black text-slate-600 text-center">1RM: {calculateE1RM(set.kg, set.reps)}</span>
+                                                                        </div>
+                                                                        <button disabled={!set.kg || !set.reps || set.done} onClick={() => {
+                                                                            const up = {...currentWorkout}; up.exercises[exIdx].sets[sIdx].done = true; setCurrentWorkout(up); setTimer(90); setTimerActive(true);
+                                                                            if (window.navigator.vibrate) window.navigator.vibrate(50);
+                                                                            
+                                                                            // IMPACT PULSE
+                                                                            const card = document.getElementById(`exercise-card-${exIdx}`);
+                                                                            if (card) {
+                                                                                card.classList.add('glow-indigo');
+                                                                                setTimeout(() => card.classList.remove('glow-indigo'), 1000);
+                                                                            }
+
+                                                                            // Smart Focus Logic
+                                                                            setTimeout(() => {
+                                                                                const nextSet = document.getElementById(`input-kg-${exIdx}-${sIdx+1}`);
+                                                                                const nextExInput = document.getElementById(`input-kg-${exIdx+1}-0`);
+                                                                                const nextExCard = document.getElementById(`exercise-card-${exIdx+1}`);
+
+                                                                                if (nextSet) {
+                                                                                    nextSet.focus();
+                                                                                    nextSet.select();
+                                                                                    nextSet.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                                                                }
+                                                                                else if (nextExInput) {
+                                                                                    nextExInput.focus();
+                                                                                    nextExInput.select();
+                                                                                    if (nextExCard) {
+                                                                                        nextExCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                                                                    } else {
+                                                                                        nextExInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                                                                    }
+                                                                                }
+                                                                            }, 100);
+                                                                        }} className={`col-span-2 p-4 rounded-2xl flex items-center justify-center transition-all ${set.done ? 'bg-emerald-500 text-white shadow-lg' : 'bg-slate-800 text-slate-600 active:scale-90 disabled:opacity-20'}`}><Icon name="check" className="w-5 h-5" /></button>
+                                                                        <button onClick={() => {
+                                                                            if (confirm("Delete this set?")) {
+                                                                                const newWorkout = structuredClone(currentWorkout);
+                                                                                newWorkout.exercises[exIdx].sets.splice(sIdx, 1);
+                                                                                setCurrentWorkout(newWorkout);
+                                                                            }
+                                                                        }} className="col-span-1 h-12 rounded-2xl flex items-center justify-center transition-all bg-red-900/20 text-red-500 hover:bg-red-500 hover:text-white active:scale-90 border border-red-500/20"><Icon name="trash" className="w-4 h-4" /></button>
+                                                                    </div>
+                                                                );
                                                                 })}
-                                                                {/* Smart Rest Timer Buttons */}
-                                                                <div className="flex justify-center gap-2 mt-3">
-                                                                    <button onClick={() => { setTimer(30); setTimerActive(true); }} className="px-3 py-1 bg-slate-800 rounded-full text-[10px] font-black text-slate-400 uppercase tracking-widest hover:text-white transition-colors">30s</button>
-                                                                    <button onClick={() => { setTimer(60); setTimerActive(true); }} className="px-3 py-1 bg-slate-800 rounded-full text-[10px] font-black text-slate-400 uppercase tracking-widest hover:text-white transition-colors">60s</button>
-                                                                    <button onClick={() => { setTimer(90); setTimerActive(true); }} className="px-3 py-1 bg-slate-800 rounded-full text-[10px] font-black text-slate-400 uppercase tracking-widest hover:text-white transition-colors">90s</button>
-                                                                </div>
                                                                 <button onClick={() => {
-                                                                    const up = structuredClone(currentWorkout);
-                                                                    const lastKg = up.exercises[exIdx].sets[up.exercises[exIdx].sets.length - 1]?.kg || '';
+                                                                    const up = {...currentWorkout};
+                                                                    const lastKg = up.exercises[exIdx].sets[up.exercises[exIdx].sets.length-1]?.kg || '';
                                                                     up.exercises[exIdx].sets.push({ kg: lastKg, reps: '', rir: '', done: false, type: 'working' });
                                                                     setCurrentWorkout(up);
                                                                 }} className="w-full py-3 bg-slate-900 rounded-2xl border border-white/5 text-[10px] font-black uppercase tracking-widest text-slate-500 hover:text-white hover:border-white/10 transition-colors">+ Add Working Set</button>
@@ -5586,8 +5501,8 @@
  
                         {activeTab === 'trends' && ( 
                             <div className="tab-content space-y-10 pb-20"> 
-                                <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">Force<br/><span className="text-indigo-500">Output</span></h2>
-
+                                <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">Force<br/><span className="text-indigo-500">Output</span></h2> 
+                                
                                 {/* TROPHY CASE */}
                                 <div className="grid grid-cols-3 gap-3">
                                     {['Squat', 'Bench', 'Deadlift'].map(lift => {
@@ -5610,23 +5525,18 @@
                                         );
                                     })}
                                 </div>
-
+                                
                                 {/* Work Capacity / Density Chart */}
-                                {logs.length > 1 ? (
+                                {logs.length > 1 && (
                                     <div className="glass p-8 rounded-[3rem] space-y-6">
                                         <div className="flex justify-between items-center">
                                             <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">Work Capacity</h3>
                                             <span className="text-[8px] font-black text-emerald-500 uppercase tracking-widest">Density (KG/Min)</span>
                                         </div>
                                         <ProgressGraph data={logs.slice().reverse().map(l => ({
-                                            date: new Date(l.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric' }),
+                                            date: new Date(l.date).toLocaleDateString(undefined, {month:'short', day:'numeric'}),
                                             value: Math.round((l.volume || 0) / Math.max(1, (l.duration || 60) / 60))
                                         })).slice(-10)} color="#10b981" label="Density" />
-                                    </div>
-                                ) : (
-                                    <div className="py-40 text-center opacity-20">
-                                        <Icon name="trends" className="w-12 h-12 mx-auto" />
-                                        <p className="text-[10px] font-black uppercase mt-4 tracking-[0.3em]">No data records</p>
                                     </div>
                                 )}
 
@@ -5639,86 +5549,83 @@
                                             if (w && !isNaN(w)) setBodyweightLog([...bodyweightLog, { date: new Date().toISOString().split('T')[0], value: parseFloat(w) }]);
                                         }} className="text-[8px] font-black bg-indigo-900/30 text-indigo-400 px-3 py-2 rounded-lg uppercase tracking-widest hover:bg-indigo-900/50">+ Log</button>
                                     </div>
-                                    <ProgressGraph data={bodyweightLog.length > 0 ? bodyweightLog : [{ date: 'Now', value: userProfile?.bodyweight || 0 }]} color="#f59e0b" label="KG" />
+                                    <ProgressGraph data={bodyweightLog.length > 0 ? bodyweightLog : [{date: 'Now', value: userProfile?.bodyweight || 0}]} color="#f59e0b" label="KG" />
                                 </div>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                    {masterExercises.map(ex => {
-                                        const exLogs = logs.filter(l => l.exercises.some(e => e.name === ex.name)).reverse();
-                                        const chartData = exLogs.map(l => {
-                                            const sessionEx = l.exercises.find(e => e.name === ex.name);
-                                            const bestE1RM = Math.max(...sessionEx.sets.map(s => calculateE1RM(s.kg, s.reps)));
-                                            return { date: new Date(l.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric' }), value: bestE1RM.toFixed(1) };
-                                        });
-                                        if (!chartData.length) return null;
-                                        return (
-                                            <div key={ex.name} className="glass p-8 rounded-[3rem] space-y-6">
-                                                <div className="flex justify-between items-center">
-                                                    <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">{cleanName(ex.name)}</h3>
-                                                    <span className="text-[8px] font-black text-indigo-500 uppercase tracking-widest">{ex.station}</span>
-                                                </div>
-                                                <ProgressGraph data={chartData} label="e1RM" />
-                                            </div>
-                                        );
-                                    })}
+                                {masterExercises.map(ex => { 
+                                    const exLogs = logs.filter(l => l.exercises.some(e => e.name === ex.name)).reverse(); 
+                                    const chartData = exLogs.map(l => { 
+                                        const sessionEx = l.exercises.find(e => e.name === ex.name); 
+                                        const bestE1RM = Math.max(...sessionEx.sets.map(s => calculateE1RM(s.kg, s.reps))); 
+                                        return { date: new Date(l.date).toLocaleDateString(undefined, {month:'short', day:'numeric'}), value: bestE1RM.toFixed(1) }; 
+                                    }); 
+                                    if (!chartData.length) return null; 
+                                    return ( 
+                                        <div key={ex.name} className="glass p-8 rounded-[3rem] space-y-6"> 
+                                            <div className="flex justify-between items-center"> 
+                                                <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">{cleanName(ex.name)}</h3> 
+                                                <span className="text-[8px] font-black text-indigo-500 uppercase tracking-widest">{ex.station}</span> 
+                                            </div> 
+                                            <ProgressGraph data={chartData} label="e1RM" /> 
+                                        </div> 
+                                    ); 
+                                })} 
                                 </div>
-                                {logs.length === 0 && <div className="py-40 text-center opacity-20"><Icon name="trends" className="w-12 h-12 mx-auto" /><p className="text-[10px] font-black uppercase mt-4 tracking-[0.3em]">No data records</p></div>}
-                            </div>
-                        )}
-
-                        {activeTab === 'history' && (
-                            <div className="tab-content space-y-6 pb-20">
-                                <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">Archive<br/><span className="text-indigo-500">Vault</span></h2>
-                                {logs.length === 0 ? (
-                                    <div className="py-40 text-center opacity-20">
-                                        <Icon name="history" className="w-12 h-12 mx-auto" />
-                                        <p className="text-[10px] font-black uppercase mt-4 tracking-[0.3em]">Vault is empty</p>
-                                    </div>
+                                {logs.length === 0 && <div className="py-40 text-center opacity-20"><Icon name="trends" className="w-12 h-12 mx-auto" /><p className="text-[10px] font-black uppercase mt-4 tracking-[0.3em]">No data records</p></div>} 
+                            </div> 
+                        )} 
+ 
+                        {activeTab === 'history' && ( 
+                            <div className="tab-content space-y-6 pb-20"> 
+                                <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">Archive<br/><span className="text-indigo-500">Vault</span></h2> 
+                                {logs.length === 0 ? ( 
+                                    <div className="py-40 text-center opacity-20"><Icon name="history" className="w-12 h-12 mx-auto" /><p className="text-[10px] font-black uppercase mt-4 tracking-[0.3em]">Vault is empty</p></div> 
                                 ) : (
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        {logs.map(log => (
-                                            <div key={log.id} className="glass p-6 rounded-[2.5rem] relative group border-white/5">
-                                                <div className="flex justify-between items-start mb-4">
-                                                    <div>
-                                                        <span className="px-4 py-1 accent-gradient rounded-full text-[9px] font-black uppercase tracking-widest text-white shadow-lg">{log.session}</span>
-                                                        <h3 className="font-black text-2xl mt-3 text-white tracking-tighter leading-none italic">{new Date(log.date).toDateString()}</h3>
-                                                        <p className="text-[10px] font-black text-slate-500 mt-2 uppercase tracking-widest italic">{Math.floor(log.duration / 60)}m duration • {log.volume || 0}kg total</p>
-                                                    </div>
-                                                    <div className="flex gap-2">
-                                                        <button onClick={() => setEditingLog(log)} className="p-3 bg-slate-800 text-slate-400 hover:text-white transition-colors rounded-xl"><Icon name="tool" className="w-4 h-4" /></button>
-                                                        <button onClick={() => { if (confirm("Delete entry?")) setLogs(logs.filter(l => l.id !== log.id)); }} className="p-3 bg-red-900/10 text-red-900 hover:text-red-500 transition-colors rounded-xl"><Icon name="x" className="w-4 h-4" /></button>
-                                                    </div>
-                                                </div>
-                                                <div className="space-y-3 border-t border-white/5 pt-4">
-                                                    {/* SESSION IMPACT SUMMARY */}
-                                                    <div className="space-y-2">
-                                                        <p className="text-[9px] font-black text-indigo-400 uppercase tracking-widest">Kinetic Impact</p>
-                                                        {(() => {
-                                                            const sorted = calculateImpactDistribution(log.exercises, true);
-                                                            return sorted.map((d) => (
-                                                                <div key={d.muscle} className="space-y-1">
-                                                                    <div className="flex justify-between text-[8px] font-black uppercase tracking-widest text-slate-500">
-                                                                        <span>{d.muscle}</span>
-                                                                        <span>{d.score}</span>
-                                                                    </div>
-                                                                    <div className="h-1 bg-slate-800 rounded-full overflow-hidden">
-                                                                        <div className="h-full bg-indigo-500" style={{ width: `${d.pct}%` }} />
-                                                                    </div>
-                                                                </div>
-                                                            ));
-                                                        })()}
-                                                    </div>
-                                                    <div className="h-px bg-white/5" />
-                                                    {log.exercises.map((ex, i) => (
-                                                        <div key={i} className="flex justify-between items-center text-xs">
-                                                            <span className="font-bold text-slate-500 uppercase text-[10px] tracking-tight">{cleanName(ex.name)}</span>
-                                                            <span className="text-indigo-400 font-black italic">{Math.max(...ex.sets.map(s => parseFloat(s.kg) || 0))}kg</span>
-                                                        </div>
-                                                    ))}
-                                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                {logs.map(log => ( 
+                                    <div key={log.id} className="glass p-8 rounded-[2.5rem] relative group border-white/5"> 
+                                        <div className="flex justify-between items-start mb-6"> 
+                                            <div> 
+                                                <span className="px-4 py-1 accent-gradient rounded-full text-[9px] font-black uppercase tracking-widest text-white shadow-lg">{log.session}</span> 
+                                                <h3 className="font-black text-2xl mt-3 text-white tracking-tighter leading-none italic">{new Date(log.date).toDateString()}</h3> 
+                                                <p className="text-[10px] font-black text-slate-500 mt-2 uppercase tracking-widest italic">{Math.floor(log.duration/60)}m duration • {log.volume || 0}kg total</p> 
+                                            </div> 
+                                            <div className="flex gap-2">
+                                                <button onClick={() => setEditingLog(log)} className="p-3 bg-slate-800 text-slate-400 hover:text-white transition-colors rounded-xl"><Icon name="tool" className="w-4 h-4" /></button>
+                                                <button onClick={() => { if(confirm("Delete entry?")) setLogs(logs.filter(l => l.id !== log.id)); }} className="p-3 bg-red-900/10 text-red-900 hover:text-red-500 transition-colors rounded-xl"><Icon name="x" className="w-4 h-4" /></button>
                                             </div>
-                                        ))}
+                                        </div>
+                                        <div className="space-y-4 border-t border-white/5 pt-6">
+                                            {/* SESSION IMPACT SUMMARY */}
+                                            <div className="space-y-2">
+                                                <p className="text-[9px] font-black text-indigo-400 uppercase tracking-widest">Kinetic Impact</p>
+                                                {(() => {
+                                                    const sorted = calculateImpactDistribution(log.exercises, true);
+                                                    return sorted.map((d) => (
+                                                        <div key={d.muscle} className="space-y-1">
+                                                            <div className="flex justify-between text-[8px] font-black uppercase tracking-widest text-slate-500">
+                                                                <span>{d.muscle}</span>
+                                                                <span>{d.score}</span>
+                                                            </div>
+                                                            <div className="h-1 bg-slate-800 rounded-full overflow-hidden">
+                                                                <div className="h-full bg-slate-500" style={{width: `${d.pct}%`}} />
+                                                            </div>
+                                                        </div>
+                                                    ));
+                                                })()}
+                                            </div>
+                                            <div className="h-px bg-white/5" />
+                                            {log.exercises.map((ex, i) => ( 
+                                                <div key={i} className="flex justify-between items-center text-xs"> 
+                                                    <span className="font-bold text-slate-500 uppercase text-[10px] tracking-tight">{cleanName(ex.name)}</span> 
+                                                    <span className="text-indigo-400 font-black italic">{Math.max(...ex.sets.map(s => parseFloat(s.kg)||0))}kg</span> 
+                                                </div> 
+                                            ))} 
+                                        </div>
                                     </div>
+                                ))}
+                                </div>
                                 )}
                             </div>
                         )}
@@ -5746,93 +5653,78 @@
                             <div className="tab-content space-y-8 pb-20">
                                 <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">System<br/><span className="text-indigo-500">Manual</span></h2>
                                 
-                                <div className="glass p-4 rounded-[2rem] space-y-4 border-white/5">
+                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
                                     <div className="flex items-center gap-3">
-                                        <div className="p-2 bg-indigo-900/20 rounded-xl text-indigo-400"><Icon name="trends" className="w-5 h-5" /></div>
-                                        <h3 className="text-lg font-black italic uppercase text-white tracking-tighter">Kinetic Impact</h3>
+                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="trends" className="w-5 h-5" /></div>
+                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Kinetic Impact</h3>
                                     </div>
-                                    <p className="text-sm text-slate-400 leading-relaxed font-medium">A real-time visual representation of muscle stimulation based on the Tomi Kinetic Impact protocol. The app parses exercise notes for "Primary," "Secondary," and "Tertiary" muscle groups to visualize your training balance.</p>
+                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">A real-time visual representation of muscle stimulation based on the Tomi Kinetic Impact protocol. The app parses exercise notes for "Primary," "Secondary," and "Tertiary" muscle groups to visualize your training balance.</p>
                                 </div>
 
-                                <div className="glass p-4 rounded-[2rem] space-y-4 border-white/5">
+                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
                                     <div className="flex items-center gap-3">
-                                        <div className="p-2 bg-indigo-900/20 rounded-xl text-indigo-400"><Icon name="bolt" className="w-5 h-5" /></div>
-                                        <h3 className="text-lg font-black italic uppercase text-white tracking-tighter">Volume Parity</h3>
+                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="bolt" className="w-5 h-5" /></div>
+                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Volume Parity</h3>
                                     </div>
-                                    <p className="text-sm text-slate-400 leading-relaxed font-medium">An automated progressive overload monitor. The system compares your current session's total weight (KG × Reps) against your last performance. Reach 100% to exceed your previous best.</p>
+                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">An automated progressive overload monitor. The system compares your current session's total weight (KG × Reps) against your last performance. Reach 100% to exceed your previous best.</p>
                                 </div>
 
-                                <div className="glass p-4 rounded-[2rem] space-y-4 border-white/5">
+                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
                                     <div className="flex items-center gap-3">
-                                        <div className="p-2 bg-indigo-900/20 rounded-xl text-indigo-400"><Icon name="dumbbell" className="w-5 h-5" /></div>
-                                        <h3 className="text-lg font-black italic uppercase text-white tracking-tighter">Smart Logic</h3>
+                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="dumbbell" className="w-5 h-5" /></div>
+                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Smart Logic</h3>
                                     </div>
-                                    <ul className="space-y-2">
+                                    <ul className="space-y-4">
                                         <li className="space-y-1">
                                             <span className="text-[10px] font-black text-white uppercase tracking-widest block">Auto-Warmups</span>
-                                            <span className="text-sm text-slate-500 font-medium">Uses historical max load to suggest 50% and 75% warmup sets.</span>
+                                            <span className="text-xs text-slate-500 font-medium">Uses historical max load to suggest 50% and 75% warmup sets.</span>
                                         </li>
                                         <li className="space-y-1">
                                             <span className="text-[10px] font-black text-white uppercase tracking-widest block">e1RM Calculation</span>
-                                            <span className="text-sm text-slate-500 font-medium">Every set calculates an Estimated 1-Rep Max to track strength gains without failure testing.</span>
+                                            <span className="text-xs text-slate-500 font-medium">Every set calculates an Estimated 1-Rep Max to track strength gains without failure testing.</span>
                                         </li>
                                         <li className="space-y-1">
                                             <span className="text-[10px] font-black text-white uppercase tracking-widest block">RIR Logging</span>
-                                            <span className="text-sm text-slate-500 font-medium">Track Reps In Reserve (0-4). 0 RIR means absolute failure.</span>
+                                            <span className="text-xs text-slate-500 font-medium">Track Reps In Reserve (0-4). 0 RIR means absolute failure.</span>
                                         </li>
                                     </ul>
                                 </div>
 
-                                <div className="glass p-4 rounded-[2rem] space-y-4 border-white/5">
+                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
                                     <div className="flex items-center gap-3">
-                                        <div className="p-2 bg-indigo-900/20 rounded-xl text-indigo-400"><Icon name="tool" className="w-5 h-5" /></div>
-                                        <h3 className="text-lg font-black italic uppercase text-white tracking-tighter">Station Aware</h3>
+                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="tool" className="w-5 h-5" /></div>
+                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Station Aware</h3>
                                     </div>
-                                    <p className="text-sm text-slate-400 leading-relaxed font-medium">The app detects station changes (e.g., Smith Machine to Lat Station) and provides visual dividers. Use the Dumbbell Icon on Smith exercises to open the Plate Loader tool.</p>
+                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">The app detects station changes (e.g., Smith Machine to Lat Station) and provides visual dividers. Use the Dumbbell Icon on Smith exercises to open the Plate Loader tool.</p>
                                 </div>
 
-                                <div className="glass p-4 rounded-[2rem] space-y-4 border-white/5">
+                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
                                     <div className="flex items-center gap-3">
-                                        <div className="p-2 bg-indigo-900/20 rounded-xl text-indigo-400"><Icon name="shield" className="w-5 h-5" /></div>
-                                        <h3 className="text-lg font-black italic uppercase text-white tracking-tighter">Biometric Status</h3>
+                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="shield" className="w-5 h-5" /></div>
+                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Biometric Status</h3>
                                     </div>
                                     <div className="space-y-2">
                                         <div className="flex justify-between items-center text-xs font-bold text-slate-500"><span className="text-emerald-500">Fresh</span> <span>ACWR &lt; 1.5</span></div>
                                         <div className="flex justify-between items-center text-xs font-bold text-slate-500"><span className="text-yellow-500">Recovering</span> <span>ACWR 1.5 - 2.0</span></div>
                                         <div className="flex justify-between items-center text-xs font-bold text-slate-500"><span className="text-red-500">Fried</span> <span>ACWR &gt; 2.0 (Deload recommended)</span></div>
                                     </div>
-                                    <p className="text-sm text-slate-600 mt-2 leading-relaxed">The system uses the <strong>Acute:Chronic Workload Ratio (ACWR)</strong> with <strong>Time-Decay</strong>. Stress from 48h ago counts less than stress from 2h ago. This ensures the status reflects your <em>current</em> readiness.</p>
+                                    <p className="text-[10px] text-slate-600 mt-4 leading-relaxed">The system uses the <strong>Acute:Chronic Workload Ratio (ACWR)</strong> with <strong>Time-Decay</strong>. Stress from 48h ago counts less than stress from 2h ago. This ensures the status reflects your <em>current</em> readiness.</p>
                                 </div>
 
-                                <div className="glass p-4 rounded-[2rem] space-y-4 border-white/5">
+                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
                                     <div className="flex items-center gap-3">
-                                        <div className="p-2 bg-indigo-900/20 rounded-xl text-indigo-400"><Icon name="info" className="w-5 h-5" /></div>
-                                        <h3 className="text-lg font-black italic uppercase text-white tracking-tighter">Gap Analysis</h3>
+                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="info" className="w-5 h-5" /></div>
+                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Gap Analysis</h3>
                                     </div>
-                                    <p className="text-sm text-slate-400 leading-relaxed font-medium">Every 7 days, the app compares actual performance against the protocol's ideal distribution. If you are <span className="text-emerald-500 font-bold">Fresh</span>, neglected muscles trigger a <span className="text-yellow-400 font-bold">Glow-Yellow</span> reminder to add volume.</p>
+                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">Every 7 days, the app compares actual performance against the protocol's ideal distribution. If you are <span className="text-emerald-500 font-bold">Fresh</span>, neglected muscles trigger a <span className="text-yellow-400 font-bold">Glow-Yellow</span> reminder to add volume.</p>
                                 </div>
 
-                                <div className="glass p-4 rounded-[2rem] space-y-4 border-white/5">
+                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
                                     <div className="flex items-center gap-3">
-                                        <div className="p-2 bg-indigo-900/20 rounded-xl text-indigo-400"><Icon name="library" className="w-5 h-5" /></div>
-                                        <h3 className="text-lg font-black italic uppercase text-white tracking-tighter">Meta-Library Support</h3>
+                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="library" className="w-5 h-5" /></div>
+                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Meta-Library Support</h3>
                                     </div>
-                                    <p className="text-sm text-slate-400 leading-relaxed font-medium">The system now supports structured exercise data. This allows for "Pattern Swapping" (e.g., replacing one Chest Press with another while maintaining the same Kinetic Impact) and "Attachment Tracking" to streamline your Tytax setup.</p>
-                                </div>
-
-                                {/* Maintenance Checklist Section */}
-                                <div className="glass p-4 rounded-[2rem] space-y-4 border-white/5">
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-2 bg-indigo-900/20 rounded-xl text-indigo-400"><Icon name="check" className="w-5 h-5" /></div>
-                                        <h3 className="text-lg font-black italic uppercase text-white tracking-tighter">Maintenance Checklist</h3>
-                                    </div>
-                                    <ul className="list-disc list-inside text-sm text-slate-400 space-y-2">
-                                        <li>Inspect cables for fraying or damage.</li>
-                                        <li>Check pulleys for smooth operation.</li>
-                                        <li>Tighten all bolts and screws.</li>
-                                        <li>Clean and lubricate moving parts.</li>
-                                        <li>Inspect and replace worn pads or upholstery.</li>
-                                    </ul>
+                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">The system now supports structured exercise data. This allows for "Pattern Swapping" (e.g., replacing one Chest Press with another while maintaining the same Kinetic Impact) and "Attachment Tracking" to streamline your Tytax setup.</p>
                                 </div>
                             </div>
                         )}
@@ -5886,11 +5778,11 @@
                                                 const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "tytax_backup.json"; a.click(); 
                                             }} className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-slate-400 border border-white/5 hover:text-white transition-colors"><Icon name="history" /> Backup</button> 
                                             <label className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-indigo-400 border border-white/5 cursor-pointer hover:bg-indigo-900/10 transition-colors"> 
-                                                <Icon name="library" /> Import <input type="file" onChange={(e) => {
-                                                    const f = e.target.files[0]; const r = new FileReader();
-                                                    r.onload = (ev) => {
+                                                <Icon name="library" /> Import <input type="file" onChange={(e) => { 
+                                                    const f = e.target.files[0]; const r = new FileReader(); 
+                                                    r.onload = (ev) => { 
                                                         try {
-                                                            const d = JSON.parse(ev.target.result);
+                                                            const d = JSON.parse(ev.target.result); 
                                                             if (!d.logs && !d.sessionOrder) throw new Error("Invalid Format");
                                                             
                                                             setLogs(d.logs || []); 
@@ -5941,18 +5833,8 @@
             ); 
         }; 
  
-        // Removed global toast state and showToast function, now handled by ToastProvider
-        // const [toast, setToast] = useState(null); 
-        // const showToast = (m) => { setToast(m); setTimeout(() => setToast(null), 3000); }; 
-
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(
-            <ToastProvider>
-                <ErrorBoundary>
-                    <App /> {/* showToast prop removed */}
-                </ErrorBoundary>
-            </ToastProvider>
-        );
-    </script>
-</body>
+        const root = ReactDOM.createRoot(document.getElementById('root')); 
+        root.render(<ErrorBoundary><App /></ErrorBoundary>); 
+    </script> 
+</body> 
 </html>
