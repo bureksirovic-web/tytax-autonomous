@@ -5195,6 +5195,9 @@
                     return ["Squat", "Bench", "Deadlift"];
                 }
             });
+            const [autoBackup, setAutoBackup] = useState(() => {
+                return localStorage.getItem('tytax_auto_backup') === 'true';
+            });
 
             // --- CUSTOM PROTOCOLS ---
             const [customProtocols, setCustomProtocols] = useState(() => {
@@ -5748,7 +5751,8 @@
                                 }
                             });
 
-                            setLogs([finalWorkout, ...logs]);
+                            const updatedLogs = [finalWorkout, ...logs];
+                            setLogs(updatedLogs);
                             
                             setDebriefData(null);
                             setCurrentWorkout(null); 
@@ -5759,6 +5763,24 @@
                                 setPrCelebration(newPRs);
                             } else {
                                 showToast("Protocol Logged"); 
+                            }
+
+                            if (autoBackup) {
+                                setTimeout(() => {
+                                    handleBackup({
+                                        logs: updatedLogs,
+                                        sessionOrder,
+                                        trainingPlan,
+                                        masterExercises,
+                                        startDate,
+                                        oledMode,
+                                        userInventory,
+                                        userProfile,
+                                        customProtocols,
+                                        warmupStrategy
+                                    });
+                                    showToast("Auto-Backup Saved");
+                                }, 1000);
                             }
                         }} />}
 
@@ -6010,6 +6032,15 @@
                                         <div className="p-2 bg-slate-900 rounded-xl text-slate-500 group-hover:text-indigo-400 transition-colors"><Icon name="info" className="w-5 h-5" /></div>
                                         <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">System Guide</span>
                                     </button>
+                                    <button onClick={handleBackup} className="glass p-6 rounded-[2rem] flex items-center justify-center gap-3 hover:bg-indigo-900/20 transition-colors group border-white/5">
+                                        <div className="p-2 bg-slate-900 rounded-xl text-slate-500 group-hover:text-indigo-400 transition-colors"><Icon name="history" className="w-5 h-5" /></div>
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">Backup Data</span>
+                                    </button>
+                                    <label className="glass p-6 rounded-[2rem] flex items-center justify-center gap-3 hover:bg-indigo-900/20 transition-colors group border-white/5 cursor-pointer">
+                                        <div className="p-2 bg-slate-900 rounded-xl text-slate-500 group-hover:text-indigo-400 transition-colors"><Icon name="library" className="w-5 h-5" /></div>
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">Import Data</span>
+                                        <input type="file" onChange={(e) => handleImport(e.target.files[0])} className="hidden" />
+                                    </label>
                                 </div>
                             </div> 
                         )} 
@@ -6506,13 +6537,16 @@
                                             <button onClick={() => setOledMode(!oledMode)} className={`w-12 h-6 rounded-full transition-colors relative ${oledMode ? 'bg-indigo-500' : 'bg-slate-800'}`}>
                                                 <div className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform ${oledMode ? 'translate-x-6' : 'translate-x-0'}`} />
                                             </button>
+                                        </div>
+                                        <div className="flex justify-between items-center px-2">
+                                            <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Auto-Backup (Post-Workout)</label>
+                                            <button onClick={() => setAutoBackup(!autoBackup)} className={`w-12 h-6 rounded-full transition-colors relative ${autoBackup ? 'bg-emerald-500' : 'bg-slate-800'}`}>
+                                                <div className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform ${autoBackup ? 'translate-x-6' : 'translate-x-0'}`} />
+                                            </button>
                                         </div> 
                                         <div className="flex gap-4"> 
                                             <button onClick={exportCSV} className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-emerald-400 border border-white/5 hover:text-white transition-colors">Export CSV</button>
-                                            <button onClick={() => { 
-                                                const blob = new Blob([JSON.stringify({ logs, sessionOrder, trainingPlan, masterExercises, startDate, oledMode, userInventory, userProfile, customProtocols, warmupStrategy })], { type: 'application/json' });
-                                                const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "tytax_backup.json"; a.click(); 
-                                            }} className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-slate-400 border border-white/5 hover:text-white transition-colors"><Icon name="history" /> Backup</button> 
+                                            <button onClick={handleBackup} className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-slate-400 border border-white/5 hover:text-white transition-colors"><Icon name="history" /> Backup</button>
                                             <label className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-indigo-400 border border-white/5 cursor-pointer hover:bg-indigo-900/10 transition-colors"> 
                                                 <Icon name="library" /> Import <input type="file" onChange={(e) => { 
                                                     const f = e.target.files[0]; const r = new FileReader(); 
