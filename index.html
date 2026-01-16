@@ -5896,8 +5896,23 @@
             ); 
         }; 
  
-        const root = ReactDOM.createRoot(document.getElementById('root')); 
-        root.render(<ErrorBoundary><App /></ErrorBoundary>); 
-    </script> 
-</body> 
+        const [toast, setToast] = useState(null); 
+
+        const showToast = (m) => { setToast(m); setTimeout(() => setToast(null), 3000); }; 
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(
+            <>
+                {toast && (
+                    <div className="fixed top-4 left-1/2 -translate-x-1/2 z-[250] bg-indigo-500 text-white px-8 py-4 rounded-3xl shadow-2xl font-black text-[10px] uppercase tracking-widest animate-pulse">
+                        {toast}
+                    </div>
+                )}
+                <ErrorBoundary>
+                    <App showToast={showToast} />
+                </ErrorBoundary>
+            </>
+        );
+    </script>
+</body>
 </html>
