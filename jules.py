@@ -9,25 +9,25 @@ import random
 import difflib
 from datetime import datetime
 
-# --- 1. CONFIGURATION ---
+# --- CONFIGURATION ---
 REPO_PATH = "."
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 RENDER_API_KEY = os.environ.get("RENDER_API_KEY")
 RENDER_SERVICE_ID = os.environ.get("RENDER_SERVICE_ID")
 
-# --- 2. MULTI-MODEL SWARM CONFIG ---
-# Coder: Fast, Creative (Writes the fix)
+# --- MODEL SWARM CONFIGURATION ---
+# Coder: Fast & Creative (Writes the code)
 CODER_MODELS = ["gemini-2.0-flash", "gemini-1.5-flash-latest", "gemini-2.0-flash-exp"]
 
-# Sentinel: Smart, Strict (Checks for crashes)
+# Sentinel: Strict & Smart (The Compiler) - MUST be Pro level
 SENTINEL_MODEL = "gemini-1.5-pro-latest"
 
-# Critic: Standard Review (Checks logic)
+# Critic: Standard Review (Logic checker)
 CRITIC_MODELS = ["gemini-1.5-flash-latest", "gemini-2.0-flash"]
 
 MAX_QA_RETRIES = 4
 REQUEST_TIMEOUT = 60
-UNAVAILABLE_MODELS = set() # Ghost Protocol
+UNAVAILABLE_MODELS = set() # Ghost Protocol Blacklist
 
 def log(message):
     print(f"[{datetime.now().strftime('%H:%M:%S')}] {message}", flush=True)
@@ -44,9 +44,9 @@ def read_file(filename):
 def write_file(filename, content):
     with open(filename, 'w', encoding='utf-8') as f: f.write(content)
 
-# --- 3. INTELLIGENT API CALLER ---
+# --- INTELLIGENT API ENGINE ---
 def call_gemini(model_list, prompt, temp=0.1, role="coder"):
-    # Ensure input is a list
+    # Ensure input is a list so we can iterate
     if isinstance(model_list, str): model_list = [model_list]
     
     for model in model_list:
@@ -81,34 +81,35 @@ def call_gemini(model_list, prompt, temp=0.1, role="coder"):
             
     return None
 
-# --- 4. THE SENTINEL (SAFETY RAIL) ---
+# --- THE SENTINEL (SAFETY RAIL) ---
 def sentinel_check(code, task):
     log("🛡️ Sentinel is scanning code for ReferenceErrors...")
     
     prompt = f"""
-    ROLE: You are a Javascript Compiler.
-    TASK: Scan this React code for CRITICAL CRASHES.
+    ROLE: You are a STRICT Javascript Compiler.
+    TASK: Scan this React code for CRITICAL RUNTIME ERRORS.
     
-    LOOK FOR:
-    1. Variables used in JSX (like 'toast', 'showModal') that are NOT defined in the component.
-    2. Syntax Errors (unclosed brackets).
+    CHECKLIST:
+    1. Are all variables used in JSX (like 'toast', 'showModal') defined?
+    2. Are Hooks (useState) inside the component?
+    3. Are there Syntax Errors (unclosed brackets)?
     
     CODE:
-    {code[:15000]}... [truncated]
+    {code[:20000]}... [truncated]
     
     OUTPUT:
     - If Safe: "PASS"
     - If Unsafe: "FAIL: [Reason]"
     """
     
-    # We force the smartest model (1.5 Pro) for this check
+    # Force the smartest model (1.5 Pro) for this critical check
     response = call_gemini([SENTINEL_MODEL], prompt, temp=0.0, role="sentinel")
     
     if response and "PASS" in response:
         return True, "Safe"
     return False, response or "No response"
 
-# --- 5. SURGICAL PATCHING ---
+# --- SURGICAL PATCHING ---
 def apply_patch(original, patch):
     pattern = r"<<<<<<< SEARCH\s*\n(.*?)\n=======\n(.*?)\n>>>>>>> REPLACE"
     matches = re.findall(pattern, patch, re.DOTALL)
@@ -116,18 +117,20 @@ def apply_patch(original, patch):
     
     new_code = original
     for search, replace in matches:
+        # 1. Exact Match
         if search in new_code:
             new_code = new_code.replace(search, replace)
+        # 2. Whitespace-Insensitive Match
         elif search.strip() in new_code:
             new_code = new_code.replace(search.strip(), replace.strip())
         else:
-            # Fuzzy fallback could go here, but keeping it strict for safety first
             return None, "Search block match failed."
             
+    # SAFETY: Root Tag Protection
     if "<!DOCTYPE html>" not in new_code: return None, "CRITICAL: Root tag deleted."
     return new_code, "Applied"
 
-# --- 6. RENDER WATCHDOG ---
+# --- RENDER WATCHDOG ---
 def check_render():
     if not RENDER_API_KEY: 
         log("⚠️ No Render Key. Skipping Check.")
@@ -178,7 +181,7 @@ def process_task():
             history = status
             continue
             
-        # 3. SENTINEL
+        # 3. SENTINEL (The Gatekeeper)
         is_safe, msg = sentinel_check(new_code, task)
         if not is_safe:
             log(f"🚫 SENTINEL BLOCKED: {msg}")
@@ -197,9 +200,11 @@ def process_task():
         log("✅ ALL CHECKS PASSED. Committing...")
         write_file("index.html", new_code)
         
+        # Update Backlog
         new_backlog = backlog.replace(f"- [ ] **{task}**", f"- [x] **{task}**")
         write_file("BACKLOG.md", new_backlog)
         
+        # Git Push
         repo = git.Repo(REPO_PATH)
         repo.git.add(all=True)
         repo.index.commit(f"feat(jules): {task}")
@@ -208,7 +213,7 @@ def process_task():
         check_render()
         return True
 
-    # Fail Logic
+    # Failure Handling
     log("⚠️ Task stuck. Skipping.")
     new_backlog = backlog.replace(f"- [ ] **{task}**", f"- [ ] **{task}** (SKIPPED)")
     write_file("BACKLOG.md", new_backlog)
