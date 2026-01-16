@@ -190,7 +190,7 @@ FAIL: Insufficient context to verify state immutability and responsive design of
 
  (Retry: No blocks matched.)
 
-- [ ] **Implement 'Toast' Notification System** (Retry: Okay, let's analyze this diff as the Critic.
+ (Retry: Okay, let's analyze this diff as the Critic.
 
 **Initial Assessment:** The code introduces a toast notification system using React state and a `Toast` component. It appears to follow the architectural constraints and coding standards. However, there are a few potential issues to investigate.
 
@@ -231,4 +231,7 @@ FAIL: Toast message font size is too small and may not be readable on all device
 - [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components** (Retry: No valid SEARCH/REPLACE blocks found.)
 
 - [ ] **Implement 'Exercise Notes' Field** (Retry: FAIL: State Mutation Detected. The code directly mutates the `currentWorkout` state object. The line `up.exercises[exIdx].sets[sIdx].rir = e.target.value;` modifies the state directly, violating the principle of immutability. This can lead to unpredictable behavior and rendering issues in React.
+)
+
+- [ ] **Implement 'Toast' Notification System** (Retry: FAIL: Tailwind CSS classes are being used directly within the Toast component's JSX. This violates the constraint against using `style={{...}}` tags or raw CSS files. All styling must be done via Tailwind CSS classes.
 )
