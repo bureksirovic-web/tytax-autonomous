@@ -1,18 +1,14 @@
-﻿# Jules Agent Specification (Level 19)
+﻿# Jules Agent Specification (Level 22)
 
-## 1. Multi-Model Intelligence
-- [x] **Role Separation:** Coder (Creative), Sentinel (Strict), Critic (Logic).
+## 1. Model Hierarchy (NO 1.5 Models)
+- [x] **Coder:** Start with 3.0-pro-preview -> 2.0-flash-exp -> 2.0-flash.
+- [x] **Sentinel/Critic:** Use 2.0-flash family ONLY.
+- [x] **BANNED:** gemini-1.5-pro, gemini-1.5-flash.
+
+## 2. Core Functionalities (from Evolution History)
 - [x] **Ghost Protocol:** Blacklist 404 models.
-- [x] **Rate Limit Shield:** Sleep on 429.
-
-## 2. The Sentinel (Safety Rail)
-- [x] **Compiler Check:** Block deployment if ReferenceErrors found.
-- [x] **Root Protection:** Ensure <!DOCTYPE html> is never deleted.
-
-## 3. Surgical Patching
-- [x] **Markdown Stripper:** Automatically remove `html code fences.
-- [x] **Fuzzy Match:** Support whitespace-insensitive matching.
-
-## 4. Task Management
-- [x] **Backlog Rotation:** If a task fails 4 times, REMOVE it from the top and APPEND it to the bottom of BACKLOG.md with a (SKIPPED) tag.
-- [x] **Render Watchdog:** Verify deployment is 'live' before starting next task.
+- [x] **Rate Limit Shield:** Sleep 10s on 429.
+- [x] **Markdown Stripper:** Clean code fences.
+- [x] **Fuzzy Match:** Logic to find code even with bad indentation.
+- [x] **Move-to-Bottom:** Rotate stuck tasks to end of backlog.
+- [x] **Render Watchdog:** Verify deployment.

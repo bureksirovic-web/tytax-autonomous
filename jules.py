@@ -15,15 +15,15 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 RENDER_API_KEY = os.environ.get("RENDER_API_KEY")
 RENDER_SERVICE_ID = os.environ.get("RENDER_SERVICE_ID")
 
-# --- 2. MULTI-MODEL SWARM ---
-# Coder: Fast, Creative (Writes the fix)
-CODER_MODELS = ["gemini-2.0-flash", "gemini-1.5-flash-latest", "gemini-2.0-flash-exp"]
+# --- 2. MODEL STACK (NO 1.5 ALLOWED) ---
+# Coder: Tries the bleeding edge first, falls back to 2.0 Flash
+CODER_MODELS = ["gemini-3.0-pro-preview", "gemini-2.0-flash-exp", "gemini-2.0-flash"]
 
-# Sentinel: Smart, Strict (The Compiler) - Must be high reasoning
-SENTINEL_MODEL = "gemini-1.5-pro-latest"
+# Sentinel: Uses 2.0 Flash Exp (High reasoning, no 1.5)
+SENTINEL_MODELS = ["gemini-2.0-flash-exp", "gemini-2.0-flash"]
 
-# Critic: Standard Review (Logic checker) - Restored from v29
-CRITIC_MODELS = ["gemini-1.5-flash-latest", "gemini-2.0-flash"]
+# Critic: Uses 2.0 Flash (Fast & Strict)
+CRITIC_MODELS = ["gemini-2.0-flash"]
 
 MAX_QA_RETRIES = 4
 REQUEST_TIMEOUT = 60
@@ -44,7 +44,7 @@ def read_file(filename):
 def write_file(filename, content):
     with open(filename, 'w', encoding='utf-8') as f: f.write(content)
 
-# --- 3. CONTEXT ENGINE (Restored from v29) ---
+# --- 3. CONTEXT ENGINE ---
 def truncate_content(content, max_chars=12000):
     if len(content) <= max_chars: return content
     half = max_chars // 2
@@ -67,7 +67,7 @@ def call_gemini(model_list, prompt, temp=0.1, role="coder"):
     for model in model_list:
         if model in UNAVAILABLE_MODELS: continue
 
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_API_KEY}"
+        url = f"[https://generativelanguage.googleapis.com/v1beta/models/](https://generativelanguage.googleapis.com/v1beta/models/){model}:generateContent?key={GEMINI_API_KEY}"
         headers = {'Content-Type': 'application/json'}
         data = {
             "contents": [{"parts": [{"text": prompt}]}],
@@ -88,8 +88,8 @@ def call_gemini(model_list, prompt, temp=0.1, role="coder"):
                 UNAVAILABLE_MODELS.add(model)
             
             elif resp.status_code == 429:
-                log(f"⏳ Rate Limit on {model}. Sleeping 5s...")
-                time.sleep(5)
+                log(f"⏳ Rate Limit on {model}. Sleeping 10s...")
+                time.sleep(10)
                 
         except Exception as e:
             log(f"❌ API Error: {e}")
@@ -117,13 +117,15 @@ def sentinel_check(code, task):
     - If Unsafe: "FAIL: [Reason]"
     """
     
-    response = call_gemini([SENTINEL_MODEL], prompt, temp=0.0, role="sentinel")
+    # Using 2.0 models now
+    response = call_gemini(SENTINEL_MODELS, prompt, temp=0.0, role="sentinel")
     if response and "PASS" in response:
         return True, "Safe"
-    return False, response or "No response"
+    return False, response or "No response (Sentinel failed)"
 
-# --- 6. SURGICAL PATCHING (Hybrid: Regex + Fuzzy) ---
+# --- 6. SURGICAL PATCHING (Hybrid) ---
 def apply_patch(original, patch):
+    # Markdown Stripper
     clean_patch = re.sub(r'^`[a-zA-Z]*\s*$', '', patch, flags=re.MULTILINE).strip()
     
     pattern = r"<<<<<<< SEARCH\s*\n(.*?)\n=======\n(.*?)\n>>>>>>> REPLACE"
@@ -164,7 +166,7 @@ def check_render():
         return
     
     log("🚀 Watching Render Deployment...")
-    url = f"[https://api.render.com/v1/services/](https://api.render.com/v1/services/){RENDER_SERVICE_ID}/deploys?limit=1"
+    url = f"https://api.render.com/v1/services/{RENDER_SERVICE_ID}/deploys?limit=1"
     headers = {"Authorization": f"Bearer {RENDER_API_KEY}"}
     
     for _ in range(20):
