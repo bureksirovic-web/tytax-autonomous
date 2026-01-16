@@ -159,6 +159,12 @@
                 .map(([m, s]) => ({ muscle: m, pct: (s / max) * 100 }));
         };
 
+        // Hoisted Regexes for Performance
+        const REGEX_LEVEL = /(Primary|Secondary|Tertiary)/i;
+        const REGEX_SCORE = /(\d+)/;
+        const REGEX_CLEAN_CHARS = /[~>]/g;
+        const REGEX_CLEAN_PHRASE = /keep it light\/clean/i;
+
         const parseImpact = (note) => {
             if (!note) return [];
             const impacts = [];
@@ -168,17 +174,17 @@
             segments.forEach(segment => {
                 const cleanSeg = segment.trim();
                 // Regex to find "Primary", "Secondary", or "Tertiary" (case insensitive)
-                const levelMatch = cleanSeg.match(/(Primary|Secondary|Tertiary)/i);
+                const levelMatch = cleanSeg.match(REGEX_LEVEL);
                 // Regex to find the score (digits)
-                const scoreMatch = cleanSeg.match(/(\d+)/);
+                const scoreMatch = cleanSeg.match(REGEX_SCORE);
                 
                 if (levelMatch && scoreMatch) {
                     // Extract muscle name: remove level, score, special chars like ~
                     let muscle = cleanSeg
                         .replace(levelMatch[0], '')
                         .replace(scoreMatch[0], '')
-                        .replace(/[~>]/g, '')
-                        .replace(/keep it light\/clean/i, '') // Specific cleanup for known noisy notes
+                        .replace(REGEX_CLEAN_CHARS, '')
+                        .replace(REGEX_CLEAN_PHRASE, '') // Specific cleanup for known noisy notes
                         .trim();
                     
                     if (muscle) {
