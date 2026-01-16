@@ -31,4 +31,6 @@
     - *Action:* Check the <input> for notes in the active exercise card.
     - *Fix:* Ensure it uses onBlur to save (better performance) or debounced onChange.
 
+ (Retry: Max retries exhausted or Patch/Critic failed.)
+
 - [ ] **Verify 'Plate Calculator' Modal** (Retry: Max retries exhausted or Patch/Critic failed.)
