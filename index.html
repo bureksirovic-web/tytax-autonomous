@@ -3505,7 +3505,7 @@
 
             return (
                 <div className="w-full h-56 bg-slate-900/40 p-4 rounded-[2rem] border border-white/5 relative">
-                    <canvas ref={canvasRef} />
+                    <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full" />
                     <div className="absolute top-4 left-6 pointer-events-none">
                          <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Latest</p>
                          <p className="text-2xl font-black text-white italic">{data[data.length-1].value}</p>
