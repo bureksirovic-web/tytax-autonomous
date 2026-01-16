@@ -1,18 +1,14 @@
-﻿# Jules Agent Specification (Level 23)
+﻿# Jules Agent Specification (Level 24 - Hybrid Restore)
 
-## 1. Input Sanitization (NEW)
-- [x] **API Key Cleaning:** MUST strip all whitespace/newlines from GEMINI_API_KEY before use.
-- [x] **Model Name Cleaning:** MUST strip whitespace from model names.
-- [x] **URL Safety:** Prevent "No connection adapters" errors by ensuring clean connection strings.
+## 1. The Brain (Restored from Level 9)
+- [x] **Primary:** gemini-3-pro-preview (The one that built the Charts).
+- [x] **Secondary:** gemini-2.0-flash-exp (The fast backup).
+- [x] **Critic:** gemini-3-pro-preview (Uses high intelligence to verify logic).
 
-## 2. Model Hierarchy (Strict 2.0/3.0)
-- [x] **Coder:** gemini-3.0-pro-preview -> gemini-2.0-flash-exp -> gemini-2.0-flash.
-- [x] **Sentinel:** gemini-2.0-flash-exp (Smart Safety).
-- [x] **Critic:** gemini-2.0-flash (Fast Logic).
-- [x] **BANNED:** All 1.5 models (Ghost Protocol/Hallucination risk).
+## 2. The Fixes (Patches for Level 9 Failures)
+- [x] **Markdown Stripper:** Removes `html blocks so the parser finds the code.
+- [x] **Sanitizer:** Strips whitespace from API keys to prevent connection errors.
+- [x] **Task Rotation:** Prevents infinite retry loops on stuck tasks.
 
-## 3. Core Mechanics
-- [x] **Ghost Protocol:** Blacklist 404 models per session.
-- [x] **Rate Limit Shield:** Sleep 10s on 429 errors.
-- [x] **Markdown Stripper:** Remove code fences from AI output.
-- [x] **Task Rotation:** Move stuck tasks to bottom of backlog after 4 retries.
+## 3. The Logic Loop
+- Read Task -> Generate Patch -> Apply (Fuzzy) -> Verify (Diff) -> Push -> Check Render.
