@@ -230,10 +230,13 @@ FAIL: Toast message font size is too small and may not be readable on all device
 
  (Retry: No valid SEARCH/REPLACE blocks found.)
 
-- [ ] **Implement 'Exercise Notes' Field** (Retry: FAIL: State Mutation Detected. The code directly mutates the `currentWorkout` state object. The line `up.exercises[exIdx].sets[sIdx].rir = e.target.value;` modifies the state directly, violating the principle of immutability. This can lead to unpredictable behavior and rendering issues in React.
+ (Retry: FAIL: State Mutation Detected. The code directly mutates the `currentWorkout` state object. The line `up.exercises[exIdx].sets[sIdx].rir = e.target.value;` modifies the state directly, violating the principle of immutability. This can lead to unpredictable behavior and rendering issues in React.
 )
 
 - [ ] **Implement 'Toast' Notification System** (Retry: FAIL: Tailwind CSS classes are being used directly within the Toast component's JSX. This violates the constraint against using `style={{...}}` tags or raw CSS files. All styling must be done via Tailwind CSS classes.
 )
 
 - [ ] **Force-Rewrite 'VaultTab' & 'SettingsTab' Components** (Retry: No valid SEARCH/REPLACE blocks found.)
+
+- [ ] **Implement 'Exercise Notes' Field** (Retry: FAIL: Input field lacks state management. The input field needs to be tied to the React state to be useful. Without `onChange` and a state variable to hold the input value, the user's notes will not be saved or reflected in the UI. Also, the state update needs to use structuredClone to avoid direct state mutation.
+)
