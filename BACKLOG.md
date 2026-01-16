@@ -21,7 +21,7 @@
     - *Action:* Check the useEffect that loads saved_workouts.
     - *Fix:* Ensure it has a dependency array [] (run once) or properly checks if (saved_workouts.length === 0).
 
-- [ ] **Verify 'Plate Calculator' Modal**
+
     - *Goal:* Ensure the calculator icon opens the modal and doesn't crash.
     - *Action:* Check the setShowCalculator logic in the GymTab.
     - *Fix:* Ensure the state showCalculator is defined in GymTab (e.g., const [showCalculator, setShowCalculator] = React.useState(false);).
@@ -31,3 +31,4 @@
     - *Action:* Check the <input> for notes in the active exercise card.
     - *Fix:* Ensure it uses onBlur to save (better performance) or debounced onChange.
 
+- [ ] **Verify 'Plate Calculator' Modal** (Retry: Max retries exhausted or Patch/Critic failed.)
