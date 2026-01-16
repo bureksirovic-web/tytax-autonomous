@@ -6,7 +6,7 @@
     - *Action:* Find the footer version text and change it to "v3.0 (Jules Reset)".
 
 ## 🧪 LEVEL 2: NORMAL (Logic & State)
-- [ ] **Feature: Workout Timer Toggle**
+- [ ] **Feature: Workout Timer Toggle** (SKIPPED: Max retries)
     - *Goal:* Test React state management.
     - *Action:* 1. Add a boolean state showTimer (default true).
         2. Add a small button "Hide Timer" / "Show Timer" near the top.
@@ -17,3 +17,5 @@
     - *Goal:* Test CSS spatial reasoning.
     - *Action:* The "Kinetic Impact" graph sometimes covers the "Finish Workout" modal.
     - *Fix:* Ensure the Modal has a higher z-index (e.g., 9999) than the Graph container.
+
+## ⚠️ SKIPPED TASKS
