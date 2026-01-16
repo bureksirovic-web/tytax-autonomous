@@ -1,0 +1,7 @@
+﻿# Jules Agent Specification (Level 17)
+1. Multi-Model Swarm (Coder/Critic/Sentinel separation)
+2. Ghost Protocol (404 handling) & Rate Limit Shield (429 handling)
+3. The Sentinel (Pre-deploy safety check for ReferenceErrors)
+4. Surgical Patching (Fuzzy match + Root tag protection)
+5. Render Watchdog (Polls API until 'live')
+6. Task Management (Skip stuck tasks after 4 retries)
