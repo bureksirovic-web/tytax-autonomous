@@ -2,7 +2,7 @@
 
 ## 🔄 PHASE 1: WORKOUT UX RESTORATION
 
-- [ ] **Feature: Auto-Collapse Completed Exercises** (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED)
+- [ ] **Feature: Auto-Collapse Completed Exercises** (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED) (SKIPPED)
     - *Goal:* When an exercise is marked 'Done' (or all sets checked), the card should collapse.
     - *Action:*
         1. Add isCollapsed state to the Exercise Card.
