@@ -1,36 +1,31 @@
 ﻿# BACKLOG
 
-## 🚨 PRIORITY 0: SYSTEM RECOVERY (Fix the Crash)
+## 🔄 PHASE 1: WORKOUT UX RESTORATION
 
-- [x] **Fix 'ReferenceError: toast is not defined' in App**
-    - *CRITICAL:* The app is white-screening because 	oast is used in JSX but not defined.
-    - *Action:* Locate the start of unction App().
-    - *Insert:* `javascript
-      const [toast, setToast] = React.useState(null);
-      const showToast = (message, duration = 3000) => {
-        setToast({ message, duration });
-        setTimeout(() => setToast(null), duration);
-      };
-      `
-    - *Verify:* The error 	oast is not defined must be gone.
+- [ ] **Feature: Auto-Collapse Completed Exercises**
+    - *Goal:* When an exercise is marked 'Done' (or all sets checked), the card should collapse.
+    - *Action:*
+        1. Add isCollapsed state to the Exercise Card.
+        2. Toggle it automatically when isDone becomes true.
+        3. Show a minimal 'Summary Header' (e.g., 'Bench Press: 3 Sets ✅') when collapsed.
+    - *Sentinel Check:* Ensure isCollapsed state is defined.
 
-## 🛠️ PRIORITY 1: STABILIZE NIGHT SHIFT FEATURES
+- [ ] **Fix: Kinetic Impact Graph Positioning**
+    - *Goal:* The Live Muscle Impact graph is overlapping content or sitting in the wrong place.
+    - *Action:* 1. locate the <KineticImpact /> component (or SVG).
+        2. Adjust CSS to position: sticky or ixed at the bottom of the workout view.
+        3. Ensure z-index places it *behind* the 'Finish Workout' modal but *visible* during sets.
 
-- [x] **Stabilize 'Default Routines' Injection**
-    - *Goal:* Ensure the new "Starter Routines" don't cause an infinite loop.
-    - *Action:* Check the useEffect that loads saved_workouts.
-    - *Fix:* Ensure it has a dependency array [] (run once) or properly checks if (saved_workouts.length === 0).
+## 📊 PHASE 2: DATA & TRENDS
 
+- [ ] **Feature: Restore 'Trends' Tab**
+    - *Goal:* Re-enable the Trends view in the main navigation.
+    - *Action:*
+        1. Ensure enderTrends() function exists in App.
+        2. Add 'Trends' button to the Nav bar.
+        3. Ensure it displays the Volume/Progress charts.
 
-    - *Goal:* Ensure the calculator icon opens the modal and doesn't crash.
-    - *Action:* Check the setShowCalculator logic in the GymTab.
-    - *Fix:* Ensure the state showCalculator is defined in GymTab (e.g., const [showCalculator, setShowCalculator] = React.useState(false);).
+- [ ] **UI Polish: Vault Layout Improvements**
+    - *Goal:* The Vault looks 'old'. Bring back the modern spacing and dark cards.
+    - *Action:* Increase padding on Vault Cards (p-4 to p-6), darken backgrounds (g-slate-800 to g-slate-900), and add subtle borders (order-slate-700).
 
-- [x] **Verify 'Exercise Notes' Field**
-    - *Goal:* Ensure typing in notes doesn't re-render the whole page aggressively.
-    - *Action:* Check the <input> for notes in the active exercise card.
-    - *Fix:* Ensure it uses onBlur to save (better performance) or debounced onChange.
-
- (Retry: Max retries exhausted or Patch/Critic failed.)
-
-- [ ] **Verify 'Plate Calculator' Modal** (Retry: Max retries exhausted or Patch/Critic failed.)
