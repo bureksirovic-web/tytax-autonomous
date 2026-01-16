@@ -11,17 +11,21 @@ from datetime import datetime
 # --- CONFIGURATION ---
 REPO_PATH = "."
 
-# NUCLEAR SANITIZATION: This fixes the "No Connection Adapters" error
-# We explicitly remove newlines (\n, \r) and whitespace.
+# NUCLEAR SANITIZATION
 raw_key = os.environ.get("GEMINI_API_KEY", "")
 GEMINI_API_KEY = raw_key.replace("\n", "").replace("\r", "").strip()
-
 RENDER_API_KEY = os.environ.get("RENDER_API_KEY", "").replace("\n", "").replace("\r", "").strip()
 RENDER_SERVICE_ID = os.environ.get("RENDER_SERVICE_ID", "").replace("\n", "").replace("\r", "").strip()
 
-# --- MODEL STACK (The "Level 9" Configuration) ---
-CODER_MODELS = ["gemini-3.0-pro-preview", "gemini-2.0-flash-exp"]
-CRITIC_MODEL = "gemini-2.0-flash-exp"
+# --- MODEL STACK (THE "GREEN BAR" MODELS) ---
+# We prioritized these based on your usage dashboard availability.
+CODER_MODELS = [
+    "gemini-2.0-flash",      # PRIMARY: Fast, Smart, High Quota
+    "gemini-1.5-flash",      # BACKUP: Extremely reliable
+    "gemini-2.5-flash"       # TERTIARY: If available
+]
+
+# We removed 3.0-pro and 2.0-flash-exp because they are exhausted/404.
 
 MAX_QA_RETRIES = 4
 REQUEST_TIMEOUT = 90
@@ -41,25 +45,22 @@ def read_file(filename):
 def write_file(filename, content):
     with open(filename, 'w', encoding='utf-8') as f: f.write(content)
 
-# --- PRE-FLIGHT CHECK ---
+# --- PRE-FLIGHT ---
 def test_connection():
-    """Verifies that the API Key is clean and working before we start."""
-    log("🔌 Testing API Connection...")
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key={GEMINI_API_KEY}"
+    log(f"🔌 Testing Connection with {CODER_MODELS[0]}...")
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{CODER_MODELS[0]}:generateContent?key={GEMINI_API_KEY}"
     headers = {'Content-Type': 'application/json'}
     data = {"contents": [{"parts": [{"text": "Hello"}]}]}
-    
     try:
         resp = requests.post(url, headers=headers, data=json.dumps(data), timeout=10)
         if resp.status_code == 200:
-            log("✅ API Connection Successful.")
+            log("✅ Connection Valid.")
             return True
         else:
-            log(f"❌ API Test Failed: {resp.status_code} - {resp.text}")
+            log(f"❌ Connection Failed: {resp.status_code} - {resp.text}")
             return False
     except Exception as e:
-        log(f"❌ Connection Error: {e}")
-        log("💡 HINT: Your API Key might still have a hidden newline. Check your environment variables.")
+        log(f"❌ Network Error: {e}")
         return False
 
 # --- API ENGINE ---
@@ -73,7 +74,7 @@ def ask_gemini(prompt, model_list, role="coder"):
     }
     
     for model in model_list:
-        model = model.replace("\n", "").strip() # Double safety
+        model = model.strip()
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_API_KEY}"
         
         for attempt in range(2):
@@ -86,20 +87,22 @@ def ask_gemini(prompt, model_list, role="coder"):
                         return resp.json()['candidates'][0]['content']['parts'][0]['text']
                     except: return None
                 elif resp.status_code == 429:
-                    log(f"⏳ Rate Limit. Sleeping 10s...")
-                    time.sleep(10)
+                    log(f"⏳ {model} Rate Limit. Switching to backup...")
+                    time.sleep(2)
+                    break # Break inner loop -> Try next model immediately
                 elif resp.status_code == 404:
-                    log(f"🚫 {model} not found.")
+                    log(f"🚫 {model} not found. Switching...")
                     break
                 else:
-                    log(f"❌ Error {resp.status_code}: {resp.text[:200]}")
+                    log(f"❌ Error {resp.status_code}: {resp.text[:100]}...")
                     
             except Exception as e:
                 log(f"❌ Network Error: {e}")
     return None
 
-# --- PATCH ENGINE (Markdown Stripper) ---
+# --- PATCH ENGINE ---
 def apply_patch(original, patch):
+    # 1. Clean Markdown
     clean_patch = re.sub(r'^`[a-zA-Z]*\s*$', '', patch, flags=re.MULTILINE).strip()
     
     pattern = r"<<<<<<< SEARCH\s*\n(.*?)\n=======\n(.*?)\n>>>>>>> REPLACE"
@@ -118,7 +121,6 @@ def apply_patch(original, patch):
             new_code = new_code.replace(search.strip(), replace.strip())
             applied_count += 1
         else:
-             # Basic fuzzy fallback
             matcher = difflib.SequenceMatcher(None, new_code, search)
             match = matcher.find_longest_match(0, len(new_code), 0, len(search))
             if match.size > 0 and (match.size / len(search) > 0.8):
@@ -181,7 +183,7 @@ def process_task():
             history = status
             continue
             
-        log("✅ Logic Verified. Committing...")
+        log("✅ Verified. Committing...")
         write_file("index.html", new_code)
         
         new_backlog = read_file("BACKLOG.md").replace(f"- [ ] **{task}**", f"- [x] **{task}**")
@@ -199,8 +201,8 @@ def process_task():
 
 if __name__ == "__main__":
     if test_connection():
-        log("🤖 Jules Level 26 (CONNECTION FIXED) Started...")
+        log("🤖 Jules Level 27 (FRESH MODELS) Started...")
         while process_task():
             time.sleep(5)
     else:
-        log("🛑 Aborting due to connection failure.")
+        log("🛑 Aborting.")
