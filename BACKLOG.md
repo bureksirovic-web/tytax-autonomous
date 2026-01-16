@@ -1,24 +1,33 @@
 ﻿# BACKLOG
 
-## 🚨 PRIORITY: FIX WHITE SCREEN CRASH
+## 🚨 PRIORITY 0: SYSTEM RECOVERY (Fix the Crash)
 
+- [ ] **Fix 'ReferenceError: toast is not defined' in App**
+    - *CRITICAL:* The app is white-screening because 	oast is used in JSX but not defined.
+    - *Action:* Locate the start of unction App().
+    - *Insert:* `javascript
+      const [toast, setToast] = React.useState(null);
+      const showToast = (message, duration = 3000) => {
+        setToast({ message, duration });
+        setTimeout(() => setToast(null), duration);
+      };
+      `
+    - *Verify:* The error 	oast is not defined must be gone.
 
-    - *Error:* Uncaught TypeError: Cannot read properties of null (reading 'useState')
-    - *Diagnosis:* A useState hook is likely being called OUTSIDE of the unction App() component (in the global scope).
-    - *Action:* Scan the top of the file and the Toast logic.
-    - *Fix:* Move any const [x, setX] = useState(...) lines INSIDE the App or ToastProvider component.
-    - *Verify:* Ensure React.useState is only called inside valid functional components.
+## 🛠️ PRIORITY 1: STABILIZE NIGHT SHIFT FEATURES
 
-- [x] **Inject Missing 'ToastProvider' Wrapper**
-    - *Diagnosis:* The console warned useToast must be used within a ToastProvider.
-    - *Action:* Find the unction App return statement.
-    - *Fix:* Wrap the router:
-      <ToastProvider> <div className="min-h-screen..."> ... </div> </ToastProvider>
-    - *Constraint:* Ensure ToastProvider is defined before App.
+- [ ] **Stabilize 'Default Routines' Injection**
+    - *Goal:* Ensure the new "Starter Routines" don't cause an infinite loop.
+    - *Action:* Check the useEffect that loads saved_workouts.
+    - *Fix:* Ensure it has a dependency array [] (run once) or properly checks if (saved_workouts.length === 0).
 
-- [x] **Verify Default Routines Logic (Infinite Loop Check)**
-    - *Goal:* Ensure the new 'Starter Pack' logic doesn't crash the browser.
-    - *Action:* Check the useEffect that loads default workouts.
-    - *Fix:* Ensure the dependency array is [] (run once) and not [saved_workouts] (infinite loop).
+- [ ] **Verify 'Plate Calculator' Modal**
+    - *Goal:* Ensure the calculator icon opens the modal and doesn't crash.
+    - *Action:* Check the setShowCalculator logic in the GymTab.
+    - *Fix:* Ensure the state showCalculator is defined in GymTab (e.g., const [showCalculator, setShowCalculator] = React.useState(false);).
 
-- [x] **Debug and Fix 'useState' Global Scope Error** (Retry: FAIL: The diff removes the toast functionality entirely instead of fixing it. The task is to fix the global scope error, which means moving the `useState` hook and its related logic *inside* the `App` component where it can be correctly called. This change just deletes the feature.)
+- [ ] **Verify 'Exercise Notes' Field**
+    - *Goal:* Ensure typing in notes doesn't re-render the whole page aggressively.
+    - *Action:* Check the <input> for notes in the active exercise card.
+    - *Fix:* Ensure it uses onBlur to save (better performance) or debounced onChange.
+
