@@ -1,14 +1,18 @@
-﻿# Jules Agent Specification (Level 17)
+﻿# Jules Agent Specification (Level 19)
 
-## 1. Multi-Model Intelligence ("The Swarm")
-- [x] **Role Separation:** Distinct model lists for CODER, SENTINEL, and CRITIC.
-- [x] **Ghost Protocol:** Blacklist models that return 404.
-- [x] **Rate Limit Shield:** Backoff sleep on 429 errors.
+## 1. Multi-Model Intelligence
+- [x] **Role Separation:** Coder (Creative), Sentinel (Strict), Critic (Logic).
+- [x] **Ghost Protocol:** Blacklist 404 models.
+- [x] **Rate Limit Shield:** Sleep on 429.
 
-## 2. The "Sentinel" Safety Rail
-- [x] **Compiler Simulation:** Scans for ReferenceErrors (undefined variables).
-- [x] **Blocker:** Discards code if Sentinel says "FAIL".
+## 2. The Sentinel (Safety Rail)
+- [x] **Compiler Check:** Block deployment if ReferenceErrors found.
+- [x] **Root Protection:** Ensure <!DOCTYPE html> is never deleted.
 
-## 3. Deployment & Verification
-- [x] **Render Watchdog:** Polls Render API until status is 'live'.
-- [x] **Task Management:** Skips tasks after 4 failed retries.
+## 3. Surgical Patching
+- [x] **Markdown Stripper:** Automatically remove `html code fences.
+- [x] **Fuzzy Match:** Support whitespace-insensitive matching.
+
+## 4. Task Management
+- [x] **Backlog Rotation:** If a task fails 4 times, REMOVE it from the top and APPEND it to the bottom of BACKLOG.md with a (SKIPPED) tag.
+- [x] **Render Watchdog:** Verify deployment is 'live' before starting next task.
