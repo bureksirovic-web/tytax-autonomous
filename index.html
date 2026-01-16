@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+﻿<!DOCTYPE html> 
 <html lang="en"> 
 <head> 
     <meta charset="UTF-8"> 
@@ -178,7 +178,7 @@
 
         const cleanName = (name) => {
             return name
-                .replace(/TYTAX® T1-X(\-\d+)?\s*\|\s*/g, '')
+                .replace(/TYTAXÂ® T1-X(\-\d+)?\s*\|\s*/g, '')
                 .replace(/Instruction\s*\|\s*/g, '')
                 .replace(/\s+/g, ' ').trim();
         };
@@ -3763,7 +3763,7 @@
                                         <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Day {idx + 1}</span>
                                         <h3 className={`text-xl font-black italic uppercase tracking-tighter ${day.exercises.length > 0 ? 'text-white' : 'text-slate-600'}`}>{day.name}</h3>
                                         {day.exercises.length > 0 ? (
-                                            <p className="text-[10px] text-indigo-400 font-bold">{day.exercises.length} Exercises • {getProjectedImpact(day.exercises)[0]?.muscle || 'Mixed'} Focus</p>
+                                            <p className="text-[10px] text-indigo-400 font-bold">{day.exercises.length} Exercises â€¢ {getProjectedImpact(day.exercises)[0]?.muscle || 'Mixed'} Focus</p>
                                         ) : (
                                             <p className="text-[10px] text-slate-600 italic">Empty Slot - Tap to Design</p>
                                         )}
@@ -4150,7 +4150,7 @@
                     <div className="w-full max-w-sm space-y-8">
                         <div className="text-center space-y-2">
                             <h2 className="text-3xl font-black italic uppercase tracking-tighter text-white">Mission<br/><span className="text-emerald-500">Debrief</span></h2>
-                            <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Session Complete • {Math.floor(duration / 60)}m</p>
+                            <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Session Complete â€¢ {Math.floor(duration / 60)}m</p>
                         </div>
         
                         <div className="space-y-4">
@@ -4161,7 +4161,7 @@
                                 </div>
                                 <div>
                                     <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Total Work</p>
-                                    <p className="text-2xl font-black text-white italic">{totalExercises} <span className="text-sm text-slate-500 not-italic ml-1">EX</span> • {totalSets} <span className="text-sm text-slate-500 not-italic ml-1">SETS</span></p>
+                                    <p className="text-2xl font-black text-white italic">{totalExercises} <span className="text-sm text-slate-500 not-italic ml-1">EX</span> â€¢ {totalSets} <span className="text-sm text-slate-500 not-italic ml-1">SETS</span></p>
                                 </div>
                             </div>
                         </div>
@@ -5126,7 +5126,7 @@
                                         <div className="space-y-4"> 
                                             <div className="p-6 bg-indigo-900/10 rounded-3xl border border-indigo-500/20"> 
                                                 <p className="text-[10px] font-black text-indigo-400 uppercase tracking-widest">Active Sequence</p> 
-                                                <p className="text-sm font-black text-white mt-1 italic uppercase tracking-tight">{sessionOrder.join(' • ')}</p> 
+                                                <p className="text-sm font-black text-white mt-1 italic uppercase tracking-tight">{sessionOrder.join(' â€¢ ')}</p> 
                                             </div> 
                                             <button onClick={() => setActiveTab('workout')} className="w-full py-5 accent-gradient text-white rounded-[2rem] font-black text-[10px] uppercase tracking-[0.4em] shadow-2xl">Enter Training Center</button> 
                                         </div> 
@@ -5589,7 +5589,7 @@
                                             <div> 
                                                 <span className="px-4 py-1 accent-gradient rounded-full text-[9px] font-black uppercase tracking-widest text-white shadow-lg">{log.session}</span> 
                                                 <h3 className="font-black text-2xl mt-3 text-white tracking-tighter leading-none italic">{new Date(log.date).toDateString()}</h3> 
-                                                <p className="text-[10px] font-black text-slate-500 mt-2 uppercase tracking-widest italic">{Math.floor(log.duration/60)}m duration • {log.volume || 0}kg total</p> 
+                                                <p className="text-[10px] font-black text-slate-500 mt-2 uppercase tracking-widest italic">{Math.floor(log.duration/60)}m duration â€¢ {log.volume || 0}kg total</p> 
                                             </div> 
                                             <div className="flex gap-2">
                                                 <button onClick={() => setEditingLog(log)} className="p-3 bg-slate-800 text-slate-400 hover:text-white transition-colors rounded-xl"><Icon name="tool" className="w-4 h-4" /></button>
@@ -5666,7 +5666,7 @@
                                         <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="bolt" className="w-5 h-5" /></div>
                                         <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Volume Parity</h3>
                                     </div>
-                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">An automated progressive overload monitor. The system compares your current session's total weight (KG × Reps) against your last performance. Reach 100% to exceed your previous best.</p>
+                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">An automated progressive overload monitor. The system compares your current session's total weight (KG Ã— Reps) against your last performance. Reach 100% to exceed your previous best.</p>
                                 </div>
 
                                 <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
@@ -5746,7 +5746,7 @@
                                             <div className="grid grid-cols-2 gap-2">
                                                 {PRESETS[0].data.RECOMMENDED_ATTACHMENTS.map(att => (
                                                     <button key={att.name} onClick={() => { if (userInventory.includes(att.name)) setUserInventory(userInventory.filter(i => i !== att.name)); else setUserInventory([...userInventory, att.name]); }} className={`p-3 rounded-xl text-[9px] font-bold text-left transition-all ${userInventory.includes(att.name) ? 'bg-indigo-900/30 text-indigo-400 border border-indigo-500/30' : 'bg-slate-900 text-slate-600 border border-white/5'}`}>
-                                                        {userInventory.includes(att.name) ? '✓ ' : '○ '} {att.name}
+                                                        {userInventory.includes(att.name) ? 'âœ“ ' : 'â—‹ '} {att.name}
                                                     </button>
                                                 ))}
                                             </div>
