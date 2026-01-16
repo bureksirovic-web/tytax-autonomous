@@ -4666,6 +4666,35 @@
                         </p>
                     </div>
 
+                    {/* TRENDS INTELLIGENCE */}
+                    <div className="glass p-8 rounded-[3rem] border-white/5 space-y-6">
+                        <div className="flex items-center gap-3">
+                            <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="trends" className="w-5 h-5" /></div>
+                            <div>
+                                <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Trends Intelligence</h3>
+                                <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Protocol: Performance Analytics</p>
+                            </div>
+                        </div>
+                        <div className="space-y-4">
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Consistency Index</p>
+                                <p className="text-[10px] text-slate-500">Tracks your active training weeks. A score of 100 requires 8 consecutive weeks of adherence. Drop-offs reduce your tactical readiness score.</p>
+                            </div>
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Volume Tracking & Bodyweight</p>
+                                <p className="text-[10px] text-slate-500">Visualizes your total weekly tonnage and bodyweight trends over time. Use the "+ Log" button on the Trends tab to update biometric data.</p>
+                            </div>
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Growth Focus</p>
+                                <p className="text-[10px] text-slate-500">Analyzes your last 20 sessions to display a ranked distribution of muscle stimulation. Ensure your "Growth Focus" aligns with your aesthetic or performance goals.</p>
+                            </div>
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Trophy Case</p>
+                                <p className="text-[10px] text-slate-500">Pin your primary compound lifts (Squat, Bench, Deadlift, etc.) to monitor your all-time PRs and latest performance metrics at a glance.</p>
+                            </div>
+                        </div>
+                    </div>
+
                     {/* TACTICAL TOOLS */}
                     <div className="glass p-8 rounded-[3rem] border-white/5 space-y-6">
                         <div className="flex items-center gap-3">
@@ -4704,10 +4733,82 @@
                                 <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Protocol: Mission Planning</p>
                             </div>
                         </div>
-                        <p className="text-xs text-slate-400 leading-relaxed font-medium">
-                            The Builder tab is your Mission Planner. Use the wizard to generate a 3, 4, 5, or 6-day split (Full Body, Upper/Lower, or PPL).
-                            You can then customize individual slots using the "Smart Filter" which only shows exercises relevant to that session's archetype.
+                        <p className="text-xs text-slate-400 leading-relaxed font-medium mb-4">
+                            The Builder is an advanced mission planning interface designed to construct custom protocols. It operates in three stages:
                         </p>
+                        <div className="space-y-3">
+                            <div className="p-3 bg-slate-900/50 rounded-2xl border border-white/5 flex gap-3 items-center">
+                                <div className="w-6 h-6 rounded-full bg-indigo-500 text-white flex items-center justify-center text-[10px] font-black">1</div>
+                                <div>
+                                    <span className="text-[10px] font-black text-white uppercase tracking-widest block">Protocol Wizard</span>
+                                    <span className="text-[9px] text-slate-500">Select Frequency (2-6 Days) and Split Structure (Full Body, Upper/Lower, PPL).</span>
+                                </div>
+                            </div>
+                            <div className="p-3 bg-slate-900/50 rounded-2xl border border-white/5 flex gap-3 items-center">
+                                <div className="w-6 h-6 rounded-full bg-indigo-500 text-white flex items-center justify-center text-[10px] font-black">2</div>
+                                <div>
+                                    <span className="text-[10px] font-black text-white uppercase tracking-widest block">Program Manager</span>
+                                    <span className="text-[9px] text-slate-500">Overview of your draft. Tap any slot to enter the Session Editor.</span>
+                                </div>
+                            </div>
+                            <div className="p-3 bg-slate-900/50 rounded-2xl border border-white/5 flex gap-3 items-center">
+                                <div className="w-6 h-6 rounded-full bg-indigo-500 text-white flex items-center justify-center text-[10px] font-black">3</div>
+                                <div>
+                                    <span className="text-[10px] font-black text-white uppercase tracking-widest block">Session Editor</span>
+                                    <span className="text-[9px] text-slate-500">Use "Smart Filter" to find pattern-appropriate exercises. Analyze "Live Load" to ensure target muscles are hit.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* FIELD OPERATIONS */}
+                    <div className="glass p-8 rounded-[3rem] border-white/5 space-y-6">
+                        <div className="flex items-center gap-3">
+                            <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="bolt" className="w-5 h-5" /></div>
+                            <div>
+                                <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Field Operations</h3>
+                                <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Protocol: Active Session Tools</p>
+                            </div>
+                        </div>
+                        <div className="space-y-4">
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Manual Injection</p>
+                                <p className="text-[10px] text-slate-500">Use the "Add Manual Exercise" button at the bottom of the session to inject additional volume (e.g., Abs, Calves) without altering the core protocol.</p>
+                            </div>
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Exercise Swapping</p>
+                                <p className="text-[10px] text-slate-500">Tap "Swap" on any exercise card to replace it with a compatible movement from the library (e.g., changing Bench Press to Dumbbell Press) while preserving Kinetic Impact intent.</p>
+                            </div>
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Mission Debrief</p>
+                                <p className="text-[10px] text-slate-500">Upon "Terminate Session", the system generates a debrief report. New PRs are celebrated, and volume metrics are logged to the Vault.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* MASTER NODE */}
+                    <div className="glass p-8 rounded-[3rem] border-white/5 space-y-6">
+                        <div className="flex items-center gap-3">
+                            <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="settings" className="w-5 h-5" /></div>
+                            <div>
+                                <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Master Node</h3>
+                                <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Protocol: System Configuration</p>
+                            </div>
+                        </div>
+                        <div className="grid grid-cols-1 gap-4">
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Inventory Locker</p>
+                                <p className="text-[10px] text-slate-500">Toggle owned attachments (Ropes, V-bars, etc.) in the Settings tab. The "Smart Filter" in the Builder will hide exercises requiring equipment you do not possess.</p>
+                            </div>
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Warmup Strategy</p>
+                                <p className="text-[10px] text-slate-500">Configure global warmup logic: "Standard" (50%/75%), "Heavy" (Potentiation for low reps), or "Pyramid" (Volume focus).</p>
+                            </div>
+                             <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Rotation Epoch</p>
+                                <p className="text-[10px] text-slate-500">Reset your program start date to align the predictive engine with your actual schedule.</p>
+                            </div>
+                        </div>
                     </div>
 
                     {/* DATA VAULT */}
@@ -6329,85 +6430,6 @@
 
                         {/* FEATURES TAB */}
                         {activeTab === 'features' && <SystemManual />}
-                        {activeTab === 'features' && (
-                            <div className="tab-content space-y-8 pb-20">
-                                <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">System<br/><span className="text-indigo-500">Manual</span></h2>
-                                
-                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="trends" className="w-5 h-5" /></div>
-                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Kinetic Impact</h3>
-                                    </div>
-                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">A real-time visual representation of muscle stimulation based on the Tomi Kinetic Impact protocol. The app parses exercise notes for "Primary," "Secondary," and "Tertiary" muscle groups to visualize your training balance.</p>
-                                </div>
-
-                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="bolt" className="w-5 h-5" /></div>
-                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Volume Parity</h3>
-                                    </div>
-                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">An automated progressive overload monitor. The system compares your current session's total weight (KG × Reps) against your last performance. Reach 100% to exceed your previous best.</p>
-                                </div>
-
-                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="dumbbell" className="w-5 h-5" /></div>
-                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Smart Logic</h3>
-                                    </div>
-                                    <ul className="space-y-4">
-                                        <li className="space-y-1">
-                                            <span className="text-[10px] font-black text-white uppercase tracking-widest block">Auto-Warmups</span>
-                                            <span className="text-xs text-slate-500 font-medium">Uses historical max load to suggest 50% and 75% warmup sets.</span>
-                                        </li>
-                                        <li className="space-y-1">
-                                            <span className="text-[10px] font-black text-white uppercase tracking-widest block">e1RM Calculation</span>
-                                            <span className="text-xs text-slate-500 font-medium">Every set calculates an Estimated 1-Rep Max to track strength gains without failure testing.</span>
-                                        </li>
-                                        <li className="space-y-1">
-                                            <span className="text-[10px] font-black text-white uppercase tracking-widest block">RIR Logging</span>
-                                            <span className="text-xs text-slate-500 font-medium">Track Reps In Reserve (0-4). 0 RIR means absolute failure.</span>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="tool" className="w-5 h-5" /></div>
-                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Station Aware</h3>
-                                    </div>
-                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">The app detects station changes (e.g., Smith Machine to Lat Station) and provides visual dividers. Use the Dumbbell Icon on Smith exercises to open the Plate Loader tool.</p>
-                                </div>
-
-                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="shield" className="w-5 h-5" /></div>
-                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Biometric Status</h3>
-                                    </div>
-                                    <div className="space-y-2">
-                                        <div className="flex justify-between items-center text-xs font-bold text-slate-500"><span className="text-emerald-500">Fresh</span> <span>ACWR &lt; 1.5</span></div>
-                                        <div className="flex justify-between items-center text-xs font-bold text-slate-500"><span className="text-yellow-500">Recovering</span> <span>ACWR 1.5 - 2.0</span></div>
-                                        <div className="flex justify-between items-center text-xs font-bold text-slate-500"><span className="text-red-500">Fried</span> <span>ACWR &gt; 2.0 (Deload recommended)</span></div>
-                                    </div>
-                                    <p className="text-[10px] text-slate-600 mt-4 leading-relaxed">The system uses the <strong>Acute:Chronic Workload Ratio (ACWR)</strong> with <strong>Time-Decay</strong>. Stress from 48h ago counts less than stress from 2h ago. This ensures the status reflects your <em>current</em> readiness.</p>
-                                </div>
-
-                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="info" className="w-5 h-5" /></div>
-                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Gap Analysis</h3>
-                                    </div>
-                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">Every 7 days, the app compares actual performance against the protocol's ideal distribution. If you are <span className="text-emerald-500 font-bold">Fresh</span>, neglected muscles trigger a <span className="text-yellow-400 font-bold">Glow-Yellow</span> reminder to add volume.</p>
-                                </div>
-
-                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="library" className="w-5 h-5" /></div>
-                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Meta-Library Support</h3>
-                                    </div>
-                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">The system now supports structured exercise data. This allows for "Pattern Swapping" (e.g., replacing one Chest Press with another while maintaining the same Kinetic Impact) and "Attachment Tracking" to streamline your Tytax setup.</p>
-                                </div>
-                            </div>
-                        )}
  
                         {activeTab === 'settings' && ( 
                             <div className="tab-content space-y-10 pb-20"> 

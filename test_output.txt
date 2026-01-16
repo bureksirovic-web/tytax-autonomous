@@ -1,0 +1,8 @@
+
+Running 3 tests using 1 worker
+
+  ✓  1 verification/verify_manual.spec.js:18:3 › System Manual Verification › Manual page should not have duplicate content (3.4s)
+  ✓  2 verification/verify_manual.spec.js:38:3 › System Manual Verification › Architect Module section should contain detailed steps (3.4s)
+  ✓  3 verification/verify_manual.spec.js:55:3 › System Manual Verification › No console errors (3.4s)
+
+  3 passed (11.5s)
