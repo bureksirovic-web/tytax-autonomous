@@ -1,13 +1,8 @@
-﻿
-## 🚨 CRITICAL FIX: SessionDebrief Prop Injection
-- [ ] **Fix: Missing debriefData in SessionDebrief** (SKIPPED: Max retries)
-    - *Issue:* SessionDebrief crashes because it references 'debriefData' which is not in its scope.
-    - *Action:* 1. Update the SessionDebrief component definition to include 'debriefData' in the destructuring:
-           'const SessionDebrief = ({ duration, volume, debriefData, onComplete }) => {'
-        2. Locate where <SessionDebrief /> is called (likely in the main App component) and ensure 'debriefData' is passed as a prop.
-        3. Add a safety guard at the top of the component: 
-           'if (!debriefData) return null;' 
-           This prevents the 'SYSTEM FAILURE' screen if data hasn't loaded yet.
+﻿# BACKLOG
 
-
-## ⚠️ SKIPPED TASKS
+## 🚨 CRITICAL REPAIR: SessionDebrief Data Flow
+- [ ] **Fix: ReferenceError debriefData is not defined**
+    - *Action:* The component needs access to the workout summary data. 
+    - *Surgical Instruction:* 1. Either pass 'debriefData' into the component OR ensure the component uses 'workout' if that is what the parent provides.
+        2. **CRITIC NOTE:** It is acceptable to change the prop name to 'workout' as long as the component logic (totalExercises/totalSets) is updated to match.
+        3. Ensure the parent App component passes the data object correctly.
