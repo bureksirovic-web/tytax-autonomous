@@ -3831,6 +3831,102 @@
             );
         };
 
+        const Arsenal = ({ masterExercises }) => {
+            const [search, setSearch] = useState('');
+            const [filter, setFilter] = useState('ALL');
+
+            const categories = ['ALL', 'BACK', ...new Set(masterExercises.map(ex => {
+                if (ex.muscle_group) return ex.muscle_group;
+                const imp = getImpact(ex);
+                let m = imp.length > 0 ? imp[0].muscle : 'OTHER';
+                return m.toUpperCase();
+            }))];
+
+            const filtered = masterExercises.filter(ex => {
+                 const primaryMuscle = ex.muscle_group || (() => {
+                    const i = getImpact(ex);
+                    return i.length > 0 ? i[0].muscle.toUpperCase() : 'OTHER';
+                })();
+
+                let matchesCat = filter === 'ALL' || primaryMuscle === filter;
+                if (filter === 'BACK' && (primaryMuscle === 'BACK_VERTICAL' || primaryMuscle === 'BACK_HORIZONTAL')) {
+                    matchesCat = true;
+                }
+                const matchesSearch = ex.name.toLowerCase().includes(search.toLowerCase()) ||
+                                      (ex.pattern && ex.pattern.toLowerCase().includes(search.toLowerCase()));
+                return matchesCat && matchesSearch;
+            });
+
+            return (
+                <div className="tab-content space-y-6 pb-32">
+                     <div className="sticky top-0 bg-[#020617]/95 backdrop-blur-xl z-30 p-4 -mx-4 border-b border-white/5 space-y-4">
+                        <div className="flex items-center gap-3">
+                            <div className="p-3 bg-indigo-500/20 rounded-2xl text-indigo-400">
+                                <Icon name="library" className="w-6 h-6" />
+                            </div>
+                            <div>
+                                <h2 className="text-3xl font-black italic uppercase tracking-tighter text-white">Arsenal<br/><span className="text-indigo-500">Database</span></h2>
+                            </div>
+                        </div>
+
+                        <input
+                            value={search}
+                            onChange={e => setSearch(e.target.value)}
+                            placeholder="Search Operations..."
+                            className="w-full p-4 bg-slate-900 rounded-2xl font-bold text-xs text-white border-none focus:ring-2 focus:ring-indigo-500"
+                        />
+
+                        <div className="flex gap-2 overflow-x-auto no-scrollbar pb-2">
+                            {categories.map(cat => (
+                                <button
+                                    key={cat}
+                                    onClick={() => setFilter(cat)}
+                                    className={`px-4 py-2 rounded-xl text-[9px] font-black uppercase tracking-widest whitespace-nowrap transition-all ${filter === cat ? 'bg-indigo-600 text-white shadow-lg' : 'bg-slate-900 text-slate-500 border border-white/5'}`}
+                                >
+                                    {cat.replace('_', ' ')}
+                                </button>
+                            ))}
+                        </div>
+                     </div>
+
+                     <div className="space-y-3">
+                        {filtered.length > 0 ? filtered.map((ex, i) => {
+                            const impact = getImpact(ex);
+                            return (
+                                <div key={i} className="p-4 bg-slate-900/50 rounded-2xl border border-white/5 flex flex-col gap-3 group hover:border-indigo-500/30 transition-colors">
+                                    <div className="flex justify-between items-start gap-4">
+                                        <div className="space-y-1 flex-1">
+                                            <div className="flex items-center gap-2">
+                                                <span className="px-2 py-1 bg-slate-800 rounded-lg text-[8px] font-black text-slate-400 uppercase tracking-wider">{ex.station || 'Free Weight'}</span>
+                                                {ex.unilateral && <span className="text-[8px] font-bold text-purple-400 uppercase">Unilateral</span>}
+                                            </div>
+                                            <h4 className="font-black text-sm text-white leading-tight">{cleanName(ex.name)}</h4>
+                                        </div>
+                                        <a href={`https://www.youtube.com/results?search_query=TYTAX+T1+${encodeURIComponent(ex.name)}`} target="_blank" className="p-3 bg-slate-800 rounded-xl text-slate-500 hover:text-red-500 hover:bg-slate-900 transition-colors">
+                                            <Icon name="play" className="w-4 h-4" />
+                                        </a>
+                                    </div>
+
+                                    <div className="flex flex-wrap gap-2">
+                                        {impact.map((imp, idx) => (
+                                            <div key={idx} className="flex items-center gap-1 bg-slate-950/50 px-2 py-1 rounded-lg border border-white/5">
+                                                <div className={`w-1.5 h-1.5 rounded-full ${imp.level === 'Primary' ? 'bg-indigo-500' : 'bg-slate-600'}`} />
+                                                <span className={`text-[9px] font-bold uppercase ${imp.level === 'Primary' ? 'text-indigo-300' : 'text-slate-500'}`}>{imp.muscle} <span className="opacity-50">{imp.score}</span></span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            );
+                        }) : (
+                            <div className="py-20 text-center opacity-40">
+                                <p className="text-[10px] font-black uppercase tracking-widest">No Intel Found</p>
+                            </div>
+                        )}
+                     </div>
+                </div>
+            );
+        };
+
         const BuilderTab = ({ metaLibrary, userInventory, onSave, onCancel }) => {
             // STATE: Global Program
             const [wizardConfig, setWizardConfig] = useState(null);
@@ -4043,15 +4139,17 @@
                                 {categories.map(cat => {
                                     // Smart Filter: Hide irrelevant buttons
                                     const currentSlot = programDraft[activeSlot];
-                                    const isSmartActive = useSmartFilter && filter === 'ALL' && search === '';
+                                    const isSmartActive = useSmartFilter;
                                     
                                     if (currentSlot && isSmartActive) {
                                         const sessionName = currentSlot.name.toLowerCase();
-                                        const isUpper = sessionName.includes('upper') || sessionName.includes('push') || sessionName.includes('pull');
+                                        const isPull = sessionName.includes('pull');
+                                        const isUpper = (sessionName.includes('upper') || sessionName.includes('push')) && !isPull;
                                         const isLower = sessionName.includes('lower') || sessionName.includes('legs');
 
-                                        if (isUpper && (cat === 'QUADS' || cat === 'HAMSTRINGS' || cat === 'GLUTES' || cat === 'CALVES')) return null;
-                                        if (isLower && (cat === 'CHEST' || cat === 'BACK' || cat === 'SHOULDERS' || cat === 'BICEPS' || cat === 'TRICEPS' || cat === 'FOREARMS_GRIP')) return null;
+                                        if (isUpper && ['QUADS', 'HAMSTRINGS', 'GLUTES', 'CALVES'].includes(cat)) return null;
+                                        if (isPull && ['QUADS', 'CALVES', 'CHEST', 'TRICEPS'].includes(cat)) return null;
+                                        if (isLower && ['CHEST', 'BACK', 'BACK_VERTICAL', 'BACK_HORIZONTAL', 'SHOULDERS', 'BICEPS', 'TRICEPS', 'FOREARMS_GRIP'].includes(cat)) return null;
                                     }
 
                                     return (
@@ -5170,6 +5268,9 @@
                     return ["Squat", "Bench", "Deadlift"];
                 }
             });
+            const [autoBackup, setAutoBackup] = useState(() => {
+                return localStorage.getItem('tytax_auto_backup') === 'true';
+            });
 
             const [language, setLanguage] = useState(() => localStorage.getItem('tytax_language') || 'hr');
             useEffect(() => localStorage.setItem('tytax_language', language), [language]);
@@ -5207,7 +5308,8 @@
                 // Check if we need to upgrade to Kinetic Impact data
                 const currentPreset = allPresets.find(p => p.id === 'kinetic_impact');
                 if (currentPreset && masterExercises.length > 0) {
-                    const needsUpgrade = masterExercises.some(ex => !ex.note && currentPreset.data.MASTER_EXERCISES.some(nex => cleanName(nex.name) === cleanName(ex.name)));
+                    // Check for missing impact data, not notes (as new data doesn't always have notes)
+                    const needsUpgrade = masterExercises.some(ex => !ex.impact && currentPreset.data.MASTER_EXERCISES.some(nex => cleanName(nex.name) === cleanName(ex.name)));
 
                     if (needsUpgrade) {
                         if (confirm("New Kinetic Impact protocol available. Update your library? (Recommended)")) {
@@ -5251,7 +5353,8 @@
                 localStorage.setItem('tytax_user_profile', JSON.stringify(userProfile));
                 localStorage.setItem('tytax_bodyweight_log', JSON.stringify(bodyweightLog));
                 localStorage.setItem('tytax_pinned_metrics', JSON.stringify(pinnedMetrics));
-            }, [logs, sessionOrder, trainingPlan, masterExercises, startDate, oledMode, warmupStrategy, userInventory, userProfile, bodyweightLog, pinnedMetrics]);
+                localStorage.setItem('tytax_auto_backup', autoBackup);
+            }, [logs, sessionOrder, trainingPlan, masterExercises, startDate, oledMode, warmupStrategy, userInventory, userProfile, bodyweightLog, pinnedMetrics, autoBackup]);
  
             useEffect(() => { 
                 let interval; 
@@ -5427,7 +5530,73 @@
  
             const loadPreset = (p) => { applyLibraryData(p.data); showToast(`${p.name} Active`); setActiveTab('workout'); }; 
             const importJSON = () => { try { applyLibraryData(JSON.parse(libraryInput)); showToast("Custom Protocol Loaded"); setLibraryInput(""); setActiveTab('workout'); } catch(e) { showToast("Invalid Protocol JSON"); } }; 
- 
+
+            const handleBackup = (dataOverride = null) => {
+                const data = dataOverride || { logs, sessionOrder, trainingPlan, masterExercises, startDate, oledMode, userInventory, userProfile, customProtocols, warmupStrategy };
+                const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
+                const a = document.createElement('a');
+                a.href = URL.createObjectURL(blob);
+                a.download = `tytax_backup_${new Date().toISOString().split('T')[0]}.json`;
+                a.click();
+            };
+
+            const handleImport = (file) => {
+                const r = new FileReader();
+                r.onload = (ev) => {
+                    try {
+                        const d = JSON.parse(ev.target.result);
+
+                        // Scenario 1: Full Backup (Has Logs)
+                        if (d.logs && Array.isArray(d.logs)) {
+                            if (confirm("RESTORE BACKUP?\n\nThis will overwrite your current history, settings, and profile with the data from this file.\n\nContinue?")) {
+                                setLogs(d.logs || []);
+                                setMasterExercises(d.masterExercises || []);
+                                setTrainingPlan(d.trainingPlan || {});
+                                setSessionOrder(d.sessionOrder || []);
+                                setStartDate(d.startDate || startDate);
+                                if (d.oledMode !== undefined) setOledMode(d.oledMode);
+                                if (d.userInventory) setUserInventory(d.userInventory);
+                                if (d.userProfile) setUserProfile(d.userProfile);
+                                if (d.customProtocols) setCustomProtocols(d.customProtocols);
+                                if (d.warmupStrategy) setWarmupStrategy(d.warmupStrategy);
+                                showToast("System Restored");
+                            }
+                        }
+                        // Scenario 2: Protocol Only (No Logs, but has Plan)
+                        else if (d.INITIAL_PLAN || d.trainingPlan) {
+                            const name = prompt("PROTOCOL DETECTED\n\nEnter a name for this custom protocol:", "Imported Protocol");
+                            if (name) {
+                                const newProtocol = {
+                                    id: `imported_${Date.now()}`,
+                                    name: name,
+                                    description: "Imported from file",
+                                    data: {
+                                        INITIAL_PLAN: d.INITIAL_PLAN || d.trainingPlan,
+                                        INITIAL_ORDER: d.INITIAL_ORDER || d.sessionOrder || Object.keys(d.trainingPlan || d.INITIAL_PLAN),
+                                        MASTER_EXERCISES: d.MASTER_EXERCISES || d.masterExercises || []
+                                    }
+                                };
+                                const updated = [...customProtocols, newProtocol];
+                                setCustomProtocols(updated);
+                                localStorage.setItem('tytax_custom_protocols', JSON.stringify(updated));
+
+                                if(confirm(`Protocol "${name}" imported.\n\nLoad it now?`)) {
+                                    loadPreset(newProtocol);
+                                } else {
+                                    showToast("Protocol Saved to Library");
+                                }
+                            }
+                        } else {
+                            throw new Error("Unknown Format");
+                        }
+                    } catch(err) {
+                        alert("Import Failed: Invalid File Format");
+                        console.error(err);
+                    }
+                };
+                r.readAsText(file);
+            };
+
             const getPredictedSession = (d) => { 
                 if (!sessionOrder.length) return null; 
                 const diff = Math.floor((new Date(d) - new Date(startDate)) / 86400000); 
@@ -5710,7 +5879,8 @@
                                 }
                             });
 
-                            setLogs([finalWorkout, ...logs]);
+                            const updatedLogs = [finalWorkout, ...logs];
+                            setLogs(updatedLogs);
                             
                             setDebriefData(null);
                             setCurrentWorkout(null); 
@@ -5721,6 +5891,24 @@
                                 setPrCelebration(newPRs);
                             } else {
                                 showToast("Protocol Logged"); 
+                            }
+
+                            if (autoBackup) {
+                                setTimeout(() => {
+                                    handleBackup({
+                                        logs: updatedLogs,
+                                        sessionOrder,
+                                        trainingPlan,
+                                        masterExercises,
+                                        startDate,
+                                        oledMode,
+                                        userInventory,
+                                        userProfile,
+                                        customProtocols,
+                                        warmupStrategy
+                                    });
+                                    showToast("Auto-Backup Saved");
+                                }, 1000);
                             }
                         }} />}
 
@@ -5972,6 +6160,15 @@
                                         <div className="p-2 bg-slate-900 rounded-xl text-slate-500 group-hover:text-indigo-400 transition-colors"><Icon name="info" className="w-5 h-5" /></div>
                                         <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">{t('home.system_guide')}</span>
                                     </button>
+                                    <button onClick={handleBackup} className="glass p-6 rounded-[2rem] flex items-center justify-center gap-3 hover:bg-indigo-900/20 transition-colors group border-white/5">
+                                        <div className="p-2 bg-slate-900 rounded-xl text-slate-500 group-hover:text-indigo-400 transition-colors"><Icon name="history" className="w-5 h-5" /></div>
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">Backup Data</span>
+                                    </button>
+                                    <label className="glass p-6 rounded-[2rem] flex items-center justify-center gap-3 hover:bg-indigo-900/20 transition-colors group border-white/5 cursor-pointer">
+                                        <div className="p-2 bg-slate-900 rounded-xl text-slate-500 group-hover:text-indigo-400 transition-colors"><Icon name="library" className="w-5 h-5" /></div>
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">Import Data</span>
+                                        <input type="file" onChange={(e) => handleImport(e.target.files[0])} className="hidden" />
+                                    </label>
                                 </div>
                             </div> 
                         )} 
@@ -6327,6 +6524,10 @@
                             </div>
                         )}
 
+                        {activeTab === 'arsenal' && (
+                            <Arsenal masterExercises={library} />
+                        )}
+
                         {/* BUILDER TAB */}
                         {activeTab === 'builder' && (
                             <BuilderTab 
@@ -6476,6 +6677,12 @@
                                             <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{t('settings.oled_mode')}</label>
                                             <button onClick={() => setOledMode(!oledMode)} className={`w-12 h-6 rounded-full transition-colors relative ${oledMode ? 'bg-indigo-500' : 'bg-slate-800'}`}>
                                                 <div className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform ${oledMode ? 'translate-x-6' : 'translate-x-0'}`} />
+                                            </button>
+                                        </div>
+                                        <div className="flex justify-between items-center px-2">
+                                            <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Auto-Backup (Post-Workout)</label>
+                                            <button onClick={() => setAutoBackup(!autoBackup)} className={`w-12 h-6 rounded-full transition-colors relative ${autoBackup ? 'bg-emerald-500' : 'bg-slate-800'}`}>
+                                                <div className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform ${autoBackup ? 'translate-x-6' : 'translate-x-0'}`} />
                                             </button>
                                         </div> 
                                         <div className="flex gap-4"> 

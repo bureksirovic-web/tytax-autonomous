@@ -1,0 +1,38 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 verification/verify_arsenal.spec.js:55:3 › Arsenal Tab Verification › should navigate to Arsenal tab and display exercises (6.5s)
+
+
+  1) verification/verify_arsenal.spec.js:55:3 › Arsenal Tab Verification › should navigate to Arsenal tab and display exercises
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByText('Lat Pulldown')
+    Expected: visible
+    Error: strict mode violation: getByText('Lat Pulldown') resolved to 6 elements:
+        1) <h4 class="font-black text-sm text-white leading-tight">TYTAX T1 | Upper Pulley Wide-Grip Lat Pulldown</h4> aka getByRole('heading', { name: 'TYTAX T1 | Upper Pulley Wide-' })
+        2) <h4 class="font-black text-sm text-white leading-tight">TYTAX T1 | Upper Pulley Close-Grip Lat Pulldown</h4> aka getByRole('heading', { name: 'TYTAX T1 | Upper Pulley Close' })
+        3) <h4 class="font-black text-sm text-white leading-tight">TYTAX T1 | Upper Pulley Underhand Lat Pulldown</h4> aka getByRole('heading', { name: 'TYTAX T1 | Upper Pulley Underhand Lat Pulldown' })
+        4) <h4 class="font-black text-sm text-white leading-tight">TYTAX T1 | Upper Pulley Neutral-Grip Lat Pulldown…</h4> aka getByRole('heading', { name: 'TYTAX T1 | Upper Pulley Neutral-Grip Lat Pulldown (V-handle)' })
+        5) <h4 class="font-black text-sm text-white leading-tight">TYTAX T1 | Upper Pulley Single-Arm Kneeling Lat P…</h4> aka getByRole('heading', { name: 'TYTAX T1 | Upper Pulley Single-Arm Kneeling Lat Pulldown' })
+        6) <h4 class="font-black text-sm text-white leading-tight">TYTAX T1 | Upper Pulley Straight-Arm Lat Pulldown</h4> aka getByRole('heading', { name: 'TYTAX T1 | Upper Pulley Straight-Arm Lat Pulldown' })
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByText('Lat Pulldown')[22m
+
+
+      79 |     await searchInput.fill('Lat Pulldown');
+      80 |     await expect(page.getByText('Smith Flat Bench Press')).not.toBeVisible();
+    > 81 |     await expect(page.getByText('Lat Pulldown')).toBeVisible();
+         |                                                  ^
+      82 |
+      83 |     // 8. Test Filter
+      84 |     // Clear search
+        at /app/verification/verify_arsenal.spec.js:81:50
+
+    Error Context: test-results/verification-verify_arsena-63ad3-l-tab-and-display-exercises/error-context.md
+
+  1 failed
+    verification/verify_arsenal.spec.js:55:3 › Arsenal Tab Verification › should navigate to Arsenal tab and display exercises
