@@ -8,6 +8,7 @@
     <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
     <script src="translations.js"></script>
+    <script src="mainframe_library.js"></script>
     <script src="https://unpkg.com/@babel/standalone@7.23.10/babel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style> 
@@ -3744,6 +3745,90 @@
             );
         };
  
+        const MainframeModal = ({ mainframeDatabase, activeArsenal, onAdd, onClose, oledMode }) => {
+            const [search, setSearch] = useState('');
+            const [filter, setFilter] = useState('ALL');
+
+            const categories = ['ALL', 'BACK', 'CHEST', 'SHOULDERS', 'LEGS', 'CORE', 'ARMS'];
+
+            const filtered = mainframeDatabase.filter(ex => {
+                const primaryMuscle = (ex.muscle_group || 'OTHER').toUpperCase();
+
+                // Simple categorization mapping
+                let matchesCat = filter === 'ALL';
+                if (filter === 'LEGS' && ['QUADS', 'HAMSTRINGS', 'GLUTES', 'CALVES'].includes(primaryMuscle)) matchesCat = true;
+                else if (filter === 'ARMS' && ['BICEPS', 'TRICEPS', 'FOREARMS', 'FOREARMS_GRIP'].includes(primaryMuscle)) matchesCat = true;
+                else if (filter === 'BACK' && ['BACK_VERTICAL', 'BACK_HORIZONTAL', 'LATS'].includes(primaryMuscle)) matchesCat = true;
+                else if (primaryMuscle === filter) matchesCat = true;
+
+                const matchesSearch = ex.name.toLowerCase().includes(search.toLowerCase()) ||
+                                      (ex.station && ex.station.toLowerCase().includes(search.toLowerCase()));
+                return matchesCat && matchesSearch;
+            });
+
+            return (
+                <div className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl animate-fade-in flex flex-col">
+                    {/* Header */}
+                    <div className={`p-6 border-b border-white/10 ${oledMode ? 'bg-black' : 'bg-[#020617]'} sticky top-0 z-20 space-y-4`}>
+                        <div className="flex justify-between items-center">
+                            <h2 className="text-3xl font-black italic uppercase tracking-tighter text-white">TYTAX<br/><span className="text-indigo-500">MAINFRAME</span></h2>
+                            <button onClick={onClose} className="p-3 bg-slate-800 rounded-xl text-slate-400 hover:text-white"><Icon name="x" /></button>
+                        </div>
+
+                        <input
+                            value={search}
+                            onChange={e => setSearch(e.target.value)}
+                            placeholder="Search Global Database..."
+                            className="w-full p-4 bg-slate-900 rounded-2xl font-bold text-xs text-white border border-white/10 focus:ring-2 focus:ring-indigo-500"
+                            autoFocus
+                        />
+
+                        <div className="flex gap-2 overflow-x-auto no-scrollbar">
+                            {categories.map(cat => (
+                                <button
+                                    key={cat}
+                                    onClick={() => setFilter(cat)}
+                                    className={`px-4 py-2 rounded-xl text-[9px] font-black uppercase tracking-widest whitespace-nowrap transition-all ${filter === cat ? 'bg-indigo-600 text-white shadow-lg' : 'bg-slate-900 text-slate-500 border border-white/5'}`}
+                                >
+                                    {cat}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* List */}
+                    <div className="flex-1 overflow-y-auto p-4 space-y-3 pb-32">
+                        {filtered.length > 0 ? filtered.map((ex, i) => {
+                            const isOwned = activeArsenal.some(a => a.name === ex.name);
+                            return (
+                                <div key={i} className={`p-4 rounded-2xl border flex items-center justify-between group transition-all ${isOwned ? 'bg-indigo-900/10 border-indigo-500/30' : 'bg-slate-900/50 border-white/5 hover:border-white/20'}`}>
+                                    <div className="flex-1 pr-4">
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <span className="text-[8px] font-black text-slate-500 uppercase tracking-widest bg-black/30 px-2 py-0.5 rounded">{ex.station}</span>
+                                            {ex.unilateral && <span className="text-[8px] font-bold text-purple-500 uppercase">Unilateral</span>}
+                                        </div>
+                                        <h4 className="font-bold text-sm text-white leading-tight">{cleanName(ex.name)}</h4>
+                                        <p className="text-[9px] text-slate-500 mt-1">{getImpact(ex).map(i => i.muscle).join(', ')}</p>
+                                    </div>
+                                    <button
+                                        onClick={() => onAdd(ex)}
+                                        className={`px-4 py-3 rounded-xl font-black text-[9px] uppercase tracking-widest flex items-center gap-2 transition-all ${isOwned ? 'bg-indigo-500/20 text-indigo-300' : 'bg-slate-800 text-slate-400 hover:bg-emerald-600 hover:text-white'}`}
+                                    >
+                                        {isOwned ? <Icon name="check" className="w-3 h-3" /> : <Icon name="bolt" className="w-3 h-3" />}
+                                        {isOwned ? 'Updated' : 'Add'}
+                                    </button>
+                                </div>
+                            );
+                        }) : (
+                            <div className="py-20 text-center opacity-40">
+                                <p className="text-[10px] font-black uppercase tracking-widest">No Matches Found</p>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            );
+        };
+
         const BuilderWizard = ({ onComplete, onCancel }) => {
             const [step, setStep] = useState(1);
             const [config, setConfig] = useState({ days: 3, split: 'FB', session: null });
@@ -3878,7 +3963,7 @@
             );
         };
 
-        const Arsenal = ({ masterExercises, oledMode }) => {
+        const Arsenal = ({ masterExercises, oledMode, onDelete, onAccessMainframe }) => {
             const [search, setSearch] = useState('');
             const [filter, setFilter] = useState('ALL');
 
@@ -3912,14 +3997,18 @@
                                 <Icon name="library" className="w-6 h-6" />
                             </div>
                             <div>
-                                <h2 className="text-3xl font-black italic uppercase tracking-tighter text-white">Arsenal<br/><span className="text-indigo-500">Database</span></h2>
+                                <h2 className="text-3xl font-black italic uppercase tracking-tighter text-white">Active<br/><span className="text-indigo-500">Arsenal</span></h2>
                             </div>
                         </div>
+
+                        <button onClick={onAccessMainframe} className="w-full py-4 bg-indigo-600 text-white rounded-2xl font-black text-xs uppercase tracking-widest shadow-lg flex items-center justify-center gap-2 hover:bg-indigo-500 transition-all">
+                            <Icon name="bolt" className="w-4 h-4" /> Access Mainframe
+                        </button>
 
                         <input
                             value={search}
                             onChange={e => setSearch(e.target.value)}
-                            placeholder="Search Operations..."
+                            placeholder="Search Active Operations..."
                             className="w-full p-4 bg-slate-900 rounded-2xl font-bold text-xs text-white border-none focus:ring-2 focus:ring-indigo-500"
                         />
 
@@ -3949,9 +4038,16 @@
                                             </div>
                                             <h4 className="font-black text-sm text-white leading-tight">{cleanName(ex.name)}</h4>
                                         </div>
-                                        <a href={`https://www.youtube.com/results?search_query=TYTAX+T1+${encodeURIComponent(ex.name)}`} target="_blank" className="p-3 bg-slate-800 rounded-xl text-slate-500 hover:text-red-500 hover:bg-slate-900 transition-colors">
-                                            <Icon name="play" className="w-4 h-4" />
-                                        </a>
+                                        <div className="flex gap-2">
+                                            {/* Video Link */}
+                                            <a href={ex.videoUrl || `https://www.youtube.com/results?search_query=TYTAX+T1+${encodeURIComponent(ex.name)}`} target="_blank" className="p-3 bg-slate-800 rounded-xl text-slate-500 hover:text-indigo-400 hover:bg-slate-900 transition-colors">
+                                                <Icon name="play" className="w-4 h-4" />
+                                            </a>
+                                            {/* Delete Button */}
+                                            <button onClick={() => onDelete(ex.name)} className="p-3 bg-slate-800 rounded-xl text-slate-500 hover:text-red-500 hover:bg-slate-900 transition-colors">
+                                                <Icon name="trash" className="w-4 h-4" />
+                                            </button>
+                                        </div>
                                     </div>
 
                                     <div className="flex flex-wrap gap-2">
@@ -3966,7 +4062,7 @@
                             );
                         }) : (
                             <div className="py-20 text-center opacity-40">
-                                <p className="text-[10px] font-black uppercase tracking-widest">No Intel Found</p>
+                                <p className="text-[10px] font-black uppercase tracking-widest">Active Arsenal Empty</p>
                             </div>
                         )}
                      </div>
@@ -5384,18 +5480,21 @@
             });
             const [masterExercises, setMasterExercises] = useState(() => {
                 try {
+                    // "Active Arsenal" - User's Curated List
                     const local = JSON.parse(localStorage.getItem('tytax_master_exercises') || '[]');
                     if (Array.isArray(local) && local.length > 0) return local;
 
-                    // FALLBACK FOR EMPTY STATE (Fix #4)
-                    const p = PRESETS.find(pr => pr.id === 'kinetic_impact') || PRESETS[0];
-                    return p?.data.MASTER_EXERCISES || [];
+                    // START EMPTY for new users (as per requirements), forcing Mainframe selection
+                    return [];
                 } catch (e) {
                     console.error("Error parsing tytax_master_exercises from localStorage", e);
-                    // Absolute fallback
-                    return PRESETS[0]?.data.MASTER_EXERCISES || [];
+                    return [];
                 }
             });
+            const [mainframeDatabase, setMainframeDatabase] = useState(() => {
+                return window.TYTAX_MAINFRAME || [];
+            });
+            const [showMainframe, setShowMainframe] = useState(false);
             const [startDate, setStartDate] = useState(() => localStorage.getItem('tytax_start_date') || new Date().toISOString().split('T')[0]);
             const [oledMode, setOledMode] = useState(() => localStorage.getItem('tytax_oled_mode') === 'true');
             const [warmupStrategy, setWarmupStrategy] = useState(() => localStorage.getItem('tytax_warmup_strategy') || 'Standard');
@@ -5482,6 +5581,13 @@
                     }
                 }
             }, []);
+
+            // --- ONBOARDING: FORCE MAINFRAME ACCESS ---
+            useEffect(() => {
+                if (masterExercises.length === 0 && mainframeDatabase.length > 0) {
+                    setShowMainframe(true);
+                }
+            }, [masterExercises.length, mainframeDatabase.length]);
 
             // --- UI STATES ---
             const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
@@ -5631,6 +5737,7 @@
                         setCalculatorTarget(null);
                         setShowOneRepMax(false);
                         setPrCelebration(null);
+                        setShowMainframe(false);
                     }
                 };
                 window.addEventListener('keydown', handleKey);
@@ -6683,7 +6790,33 @@
                         )}
 
                         {activeTab === 'arsenal' && (
-                            <Arsenal masterExercises={library} oledMode={oledMode} />
+                            <Arsenal
+                                masterExercises={masterExercises}
+                                oledMode={oledMode}
+                                onDelete={(name) => {
+                                    if(confirm("Decommission this operation? Logs will be preserved.")) {
+                                        setMasterExercises(prev => prev.filter(e => e.name !== name));
+                                    }
+                                }}
+                                onAccessMainframe={() => setShowMainframe(true)}
+                            />
+                        )}
+
+                        {showMainframe && (
+                            <MainframeModal
+                                mainframeDatabase={mainframeDatabase}
+                                activeArsenal={masterExercises}
+                                oledMode={oledMode}
+                                onClose={() => setShowMainframe(false)}
+                                onAdd={(ex) => {
+                                    setMasterExercises(prev => {
+                                        const exists = prev.some(e => e.name === ex.name);
+                                        if (exists) return prev.map(e => e.name === ex.name ? ex : e);
+                                        return [...prev, ex];
+                                    });
+                                    showToast(masterExercises.some(e => e.name === ex.name) ? "Unit Updated" : "Unit Requisitioned");
+                                }}
+                            />
                         )}
 
                         {/* BUILDER TAB */}
