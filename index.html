@@ -4042,15 +4042,17 @@
                                 {categories.map(cat => {
                                     // Smart Filter: Hide irrelevant buttons
                                     const currentSlot = programDraft[activeSlot];
-                                    const isSmartActive = useSmartFilter && filter === 'ALL' && search === '';
+                                    const isSmartActive = useSmartFilter;
                                     
                                     if (currentSlot && isSmartActive) {
                                         const sessionName = currentSlot.name.toLowerCase();
-                                        const isUpper = sessionName.includes('upper') || sessionName.includes('push') || sessionName.includes('pull');
+                                        const isPull = sessionName.includes('pull');
+                                        const isUpper = (sessionName.includes('upper') || sessionName.includes('push')) && !isPull;
                                         const isLower = sessionName.includes('lower') || sessionName.includes('legs');
 
-                                        if (isUpper && (cat === 'QUADS' || cat === 'HAMSTRINGS' || cat === 'GLUTES' || cat === 'CALVES')) return null;
-                                        if (isLower && (cat === 'CHEST' || cat === 'BACK' || cat === 'SHOULDERS' || cat === 'BICEPS' || cat === 'TRICEPS' || cat === 'FOREARMS_GRIP')) return null;
+                                        if (isUpper && ['QUADS', 'HAMSTRINGS', 'GLUTES', 'CALVES'].includes(cat)) return null;
+                                        if (isPull && ['QUADS', 'CALVES', 'CHEST', 'TRICEPS'].includes(cat)) return null;
+                                        if (isLower && ['CHEST', 'BACK', 'BACK_VERTICAL', 'BACK_HORIZONTAL', 'SHOULDERS', 'BICEPS', 'TRICEPS', 'FOREARMS_GRIP'].includes(cat)) return null;
                                     }
 
                                     return (
