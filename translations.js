@@ -5,6 +5,7 @@ const TRANSLATIONS = {
             workout: "Gym",
             trends: "Trends",
             history: "Vault",
+            arsenal: "Arsenal",
             builder: "Builder",
             features: "Manual",
             settings: "Settings"
@@ -220,6 +221,7 @@ const TRANSLATIONS = {
             workout: "Trening",
             trends: "Trendovi",
             history: "Arhiva",
+            arsenal: "Arsenal",
             builder: "Graditelj",
             features: "Priručnik",
             settings: "Postavke"
