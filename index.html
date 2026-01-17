@@ -3830,6 +3830,102 @@
             );
         };
 
+        const Arsenal = ({ masterExercises }) => {
+            const [search, setSearch] = useState('');
+            const [filter, setFilter] = useState('ALL');
+
+            const categories = ['ALL', 'BACK', ...new Set(masterExercises.map(ex => {
+                if (ex.muscle_group) return ex.muscle_group;
+                const imp = getImpact(ex);
+                let m = imp.length > 0 ? imp[0].muscle : 'OTHER';
+                return m.toUpperCase();
+            }))];
+
+            const filtered = masterExercises.filter(ex => {
+                 const primaryMuscle = ex.muscle_group || (() => {
+                    const i = getImpact(ex);
+                    return i.length > 0 ? i[0].muscle.toUpperCase() : 'OTHER';
+                })();
+
+                let matchesCat = filter === 'ALL' || primaryMuscle === filter;
+                if (filter === 'BACK' && (primaryMuscle === 'BACK_VERTICAL' || primaryMuscle === 'BACK_HORIZONTAL')) {
+                    matchesCat = true;
+                }
+                const matchesSearch = ex.name.toLowerCase().includes(search.toLowerCase()) ||
+                                      (ex.pattern && ex.pattern.toLowerCase().includes(search.toLowerCase()));
+                return matchesCat && matchesSearch;
+            });
+
+            return (
+                <div className="tab-content space-y-6 pb-32">
+                     <div className="sticky top-0 bg-[#020617]/95 backdrop-blur-xl z-30 p-4 -mx-4 border-b border-white/5 space-y-4">
+                        <div className="flex items-center gap-3">
+                            <div className="p-3 bg-indigo-500/20 rounded-2xl text-indigo-400">
+                                <Icon name="library" className="w-6 h-6" />
+                            </div>
+                            <div>
+                                <h2 className="text-3xl font-black italic uppercase tracking-tighter text-white">Arsenal<br/><span className="text-indigo-500">Database</span></h2>
+                            </div>
+                        </div>
+
+                        <input
+                            value={search}
+                            onChange={e => setSearch(e.target.value)}
+                            placeholder="Search Operations..."
+                            className="w-full p-4 bg-slate-900 rounded-2xl font-bold text-xs text-white border-none focus:ring-2 focus:ring-indigo-500"
+                        />
+
+                        <div className="flex gap-2 overflow-x-auto no-scrollbar pb-2">
+                            {categories.map(cat => (
+                                <button
+                                    key={cat}
+                                    onClick={() => setFilter(cat)}
+                                    className={`px-4 py-2 rounded-xl text-[9px] font-black uppercase tracking-widest whitespace-nowrap transition-all ${filter === cat ? 'bg-indigo-600 text-white shadow-lg' : 'bg-slate-900 text-slate-500 border border-white/5'}`}
+                                >
+                                    {cat.replace('_', ' ')}
+                                </button>
+                            ))}
+                        </div>
+                     </div>
+
+                     <div className="space-y-3">
+                        {filtered.length > 0 ? filtered.map((ex, i) => {
+                            const impact = getImpact(ex);
+                            return (
+                                <div key={i} className="p-4 bg-slate-900/50 rounded-2xl border border-white/5 flex flex-col gap-3 group hover:border-indigo-500/30 transition-colors">
+                                    <div className="flex justify-between items-start gap-4">
+                                        <div className="space-y-1 flex-1">
+                                            <div className="flex items-center gap-2">
+                                                <span className="px-2 py-1 bg-slate-800 rounded-lg text-[8px] font-black text-slate-400 uppercase tracking-wider">{ex.station || 'Free Weight'}</span>
+                                                {ex.unilateral && <span className="text-[8px] font-bold text-purple-400 uppercase">Unilateral</span>}
+                                            </div>
+                                            <h4 className="font-black text-sm text-white leading-tight">{cleanName(ex.name)}</h4>
+                                        </div>
+                                        <a href={`https://www.youtube.com/results?search_query=TYTAX+T1+${encodeURIComponent(ex.name)}`} target="_blank" className="p-3 bg-slate-800 rounded-xl text-slate-500 hover:text-red-500 hover:bg-slate-900 transition-colors">
+                                            <Icon name="play" className="w-4 h-4" />
+                                        </a>
+                                    </div>
+
+                                    <div className="flex flex-wrap gap-2">
+                                        {impact.map((imp, idx) => (
+                                            <div key={idx} className="flex items-center gap-1 bg-slate-950/50 px-2 py-1 rounded-lg border border-white/5">
+                                                <div className={`w-1.5 h-1.5 rounded-full ${imp.level === 'Primary' ? 'bg-indigo-500' : 'bg-slate-600'}`} />
+                                                <span className={`text-[9px] font-bold uppercase ${imp.level === 'Primary' ? 'text-indigo-300' : 'text-slate-500'}`}>{imp.muscle} <span className="opacity-50">{imp.score}</span></span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            );
+                        }) : (
+                            <div className="py-20 text-center opacity-40">
+                                <p className="text-[10px] font-black uppercase tracking-widest">No Intel Found</p>
+                            </div>
+                        )}
+                     </div>
+                </div>
+            );
+        };
+
         const BuilderTab = ({ metaLibrary, userInventory, onSave, onCancel }) => {
             // STATE: Global Program
             const [wizardConfig, setWizardConfig] = useState(null);
@@ -5703,6 +5799,7 @@
                                 { id: 'workout', icon: 'bolt', label: 'Gym' }, 
                                 { id: 'trends', icon: 'trends', label: 'Trends' }, 
                                 { id: 'history', icon: 'history', label: 'Vault' },
+                                { id: 'arsenal', icon: 'library', label: 'Arsenal' },
                                 { id: 'builder', icon: 'tool', label: 'Builder' },
                                 { id: 'features', icon: 'info', label: 'Manual' }
                             ].map(tab => (
@@ -6407,6 +6504,10 @@
                             </div>
                         )}
 
+                        {activeTab === 'arsenal' && (
+                            <Arsenal masterExercises={library} />
+                        )}
+
                         {/* BUILDER TAB */}
                         {activeTab === 'builder' && (
                             <BuilderTab 
@@ -6577,6 +6678,7 @@
                                 { id: 'workout', icon: 'bolt', label: 'Gym' }, 
                                 { id: 'trends', icon: 'trends', label: 'Trends' }, 
                                 { id: 'history', icon: 'history', label: 'Vault' },
+                                { id: 'arsenal', icon: 'library', label: 'Arsenal' },
                                 { id: 'builder', icon: 'tool', label: 'Builder' },
                                 { id: 'features', icon: 'info', label: 'Features' }
                             ].map(tab => ( 
