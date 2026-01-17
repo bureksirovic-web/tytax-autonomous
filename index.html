@@ -6195,7 +6195,7 @@
                                 {/* SYSTEM STATUS */} 
                                 <div className="glass p-10 rounded-[3rem] space-y-8 border-white/5 relative overflow-hidden glow-indigo"> 
                                     <div className="absolute -top-10 -right-10 w-40 h-40 bg-indigo-600/10 blur-[60px]" /> 
-                                    <div className="flex items-center justify-between"> 
+                                    <div className="flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between gap-4 md:gap-0">
                                         <div className="flex items-center gap-3"> 
                                             <div className={`w-3 h-3 rounded-full ${sessionOrder.length > 0 ? 'bg-emerald-500 status-pulse shadow-[0_0_15px_rgba(16,185,129,0.5)]' : 'bg-red-500 shadow-[0_0_15px_rgba(239,68,68,0.5)]'}`} /> 
                                             <h2 className="text-3xl font-black tracking-tighter italic uppercase leading-none">{t('status.system')}<br/><span className={`${sessionOrder.length > 0 ? 'text-indigo-500' : 'text-red-500'}`}>{sessionOrder.length > 0 ? t('status.online') : t('status.standby')}</span></h2>
@@ -6809,7 +6809,7 @@
  
                     {/* MOBILE NAV (Visible < md) */} 
                     {!focusMode && (
-                        <nav className="md:hidden fixed bottom-8 left-8 right-8 glass text-white rounded-[3rem] flex justify-around p-3 shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-40 border-white/5"> 
+                        <nav className="md:hidden fixed bottom-4 left-2 right-2 glass text-white rounded-[3rem] flex justify-between p-2 shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-40 border-white/5 overflow-x-auto no-scrollbar">
                             {[ 
                                 { id: 'home', icon: 'home', label: t('nav.home') },
                                 { id: 'workout', icon: 'bolt', label: t('nav.workout') },
@@ -6818,8 +6818,8 @@
                                 { id: 'builder', icon: 'tool', label: t('nav.builder') },
                                 { id: 'features', icon: 'info', label: t('nav.features') }
                             ].map(tab => ( 
-                                <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex flex-col items-center gap-1 px-6 py-4 rounded-[2.5rem] transition-all duration-700 ${activeTab === tab.id ? 'accent-gradient scale-110 shadow-2xl' : 'text-slate-600 hover:text-slate-400'}`}> 
-                                    <Icon name={tab.icon} className="w-6 h-6" /><span className="text-[7px] font-black uppercase tracking-[0.2em]">{tab.label}</span> 
+                                <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex flex-col items-center gap-1 px-3 py-3 rounded-[2.5rem] min-w-[60px] transition-all duration-700 ${activeTab === tab.id ? 'accent-gradient scale-110 shadow-2xl' : 'text-slate-600 hover:text-slate-400'}`}>
+                                    <Icon name={tab.icon} className="w-5 h-5" /><span className="text-[6px] font-black uppercase tracking-[0.2em]">{tab.label}</span>
                                 </button> 
                             ))} 
                         </nav> 
