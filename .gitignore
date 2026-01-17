@@ -16,3 +16,4 @@ Thumbs.db
 # --- Logs ---
 *.log
 STABLE_STATE_REPORT.txt
+node_modules/
