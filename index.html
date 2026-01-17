@@ -63,6 +63,42 @@
         }; 
  
         // --- HELPER FUNCTIONS ---
+        const safeLocalStorage = {
+            setItem: (key, value) => {
+                try {
+                    localStorage.setItem(key, value);
+                } catch (e) {
+                    if (e.name === 'QuotaExceededError' || e.name === 'NS_ERROR_DOM_QUOTA_REACHED') {
+                        window.dispatchEvent(new Event('tytax-storage-error'));
+                    } else {
+                        console.error('LocalStorage Error:', e);
+                    }
+                }
+            },
+            getItem: (key) => {
+                try {
+                    return localStorage.getItem(key);
+                } catch (e) {
+                    console.error('LocalStorage Error:', e);
+                    return null;
+                }
+            },
+            removeItem: (key) => {
+                try {
+                    localStorage.removeItem(key);
+                } catch (e) {
+                    console.error('LocalStorage Error:', e);
+                }
+            },
+            clear: () => {
+                try {
+                    localStorage.clear();
+                } catch (e) {
+                    console.error('LocalStorage Error:', e);
+                }
+            }
+        };
+
         // Global translation helper for components defined outside App
         const t = (key) => {
             const lang = localStorage.getItem('tytax_language') || 'hr';
