@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com/3.4.1"></script>
     <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="translations.js"></script>
     <script src="https://unpkg.com/@babel/standalone@7.23.10/babel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style> 
@@ -3583,7 +3584,7 @@
                 <div className="w-full h-56 bg-slate-900/40 p-4 rounded-[2rem] border border-white/5 relative">
                     <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full" />
                     <div className="absolute top-4 left-6 pointer-events-none">
-                         <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Latest</p>
+                         <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">{t('trends.latest')}</p>
                          <p className="text-2xl font-black text-white italic">{data[data.length-1].value}</p>
                     </div>
                 </div>
@@ -3600,24 +3601,24 @@
                 <div className="fixed inset-0 z-[150] bg-black/80 backdrop-blur-sm flex items-center justify-center p-6" onClick={onClose}>
                     <div className="bg-slate-900 border border-white/10 rounded-[2rem] p-8 w-full max-w-sm space-y-6" onClick={e => e.stopPropagation()}>
                         <div className="flex justify-between items-center">
-                            <h3 className="text-xl font-black text-white italic uppercase tracking-tighter">1RM<br/><span className="text-indigo-500">Projector</span></h3>
+                            <h3 className="text-xl font-black text-white italic uppercase tracking-tighter">{t('modals.one_rm_projector').split(' ')[0]}<br/><span className="text-indigo-500">{t('modals.one_rm_projector').split(' ').slice(1).join(' ')}</span></h3>
                             <button onClick={onClose} className="p-2 bg-slate-800 rounded-xl text-slate-400"><Icon name="x" /></button>
                         </div>
                         
                         <div className="grid grid-cols-2 gap-4">
                             <div className="space-y-2">
-                                <label className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Weight (KG)</label>
+                                <label className="text-[9px] font-black text-slate-500 uppercase tracking-widest">{t('modals.weight_kg')}</label>
                                 <input type="number" value={weight} onChange={e => setWeight(e.target.value)} className="w-full p-4 bg-black rounded-2xl font-black text-white border-none focus:ring-2 focus:ring-indigo-500" placeholder="0" />
                             </div>
                             <div className="space-y-2">
-                                <label className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Reps</label>
+                                <label className="text-[9px] font-black text-slate-500 uppercase tracking-widest">{t('modals.reps_label')}</label>
                                 <input type="number" value={reps} onChange={e => setReps(e.target.value)} className="w-full p-4 bg-black rounded-2xl font-black text-white border-none focus:ring-2 focus:ring-indigo-500" placeholder="0" />
                             </div>
                         </div>
                         
                         <div className="bg-slate-800/50 p-6 rounded-[2rem] space-y-4">
                             <div className="flex justify-between items-center">
-                                <span className="text-xs font-black text-white uppercase tracking-widest">Est. 1RM</span>
+                                <span className="text-xs font-black text-white uppercase tracking-widest">{t('modals.est_1rm')}</span>
                                 <span className="text-3xl font-black text-indigo-400 italic">{e1rm}<span className="text-sm text-slate-500 not-italic ml-1">kg</span></span>
                             </div>
                             <div className="h-px bg-white/5" />
@@ -3644,7 +3645,7 @@
                         
                         <div className="relative z-10 space-y-2">
                             <Icon name="bolt" className="w-16 h-16 text-amber-400 mx-auto animate-bounce" />
-                            <h2 className="text-4xl font-black italic uppercase text-white tracking-tighter leading-none">New<br/><span className="text-amber-400">Record</span></h2>
+                            <h2 className="text-4xl font-black italic uppercase text-white tracking-tighter leading-none">{t('modals.new_record').split(' ')[0]}<br/><span className="text-amber-400">{t('modals.new_record').split(' ').slice(1).join(' ')}</span></h2>
                         </div>
 
                         <div className="space-y-3 relative z-10">
@@ -3656,7 +3657,7 @@
                             ))}
                         </div>
 
-                        <button onClick={onClose} className="w-full py-4 bg-amber-500 text-black rounded-[2rem] font-black uppercase tracking-[0.2em] shadow-xl hover:scale-105 transition-transform relative z-10">Claim Victory</button>
+                        <button onClick={onClose} className="w-full py-4 bg-amber-500 text-black rounded-[2rem] font-black uppercase tracking-[0.2em] shadow-xl hover:scale-105 transition-transform relative z-10">{t('modals.claim_victory')}</button>
                     </div>
                 </div>
             );
@@ -3686,18 +3687,18 @@
                 <div className="fixed inset-0 z-[150] bg-black/80 backdrop-blur-sm flex items-center justify-center p-6" onClick={onClose}>
                     <div className="bg-slate-900 border border-white/10 rounded-[2rem] p-8 w-full max-w-sm space-y-6" onClick={e => e.stopPropagation()}>
                         <div className="flex justify-between items-center">
-                            <h3 className="text-xl font-black text-white italic uppercase tracking-tighter">Plate<br/><span className="text-indigo-500">Loader</span></h3>
+                            <h3 className="text-xl font-black text-white italic uppercase tracking-tighter">{t('modals.plate_loader').split(' ')[0]}<br/><span className="text-indigo-500">{t('modals.plate_loader').split(' ').slice(1).join(' ')}</span></h3>
                             <button onClick={onClose} className="p-2 bg-slate-800 rounded-xl text-slate-400"><Icon name="x" /></button>
                         </div>
                         
                         <div className="flex justify-between items-center bg-slate-800/50 p-4 rounded-2xl">
-                            <span className="text-xs font-black text-slate-400 uppercase tracking-widest">Target</span>
+                            <span className="text-xs font-black text-slate-400 uppercase tracking-widest">{t('modals.target')}</span>
                             <span className="text-2xl font-black text-white">{targetKg} <span className="text-xs text-slate-500">KG</span></span>
                         </div>
                         
                         <div className="space-y-4">
                             <div className="flex justify-between text-[10px] font-black uppercase tracking-widest text-slate-500">
-                                <span>Per Side</span>
+                                <span>{t('modals.per_side')}</span>
                                 <span>{Math.max(0, (targetKg - barWeight) / 2)}kg</span>
                             </div>
                             <div className="flex flex-wrap gap-2 justify-center">
@@ -3706,12 +3707,12 @@
                                         <span className="text-sm font-black text-white">{p}</span>
                                         <div className="absolute inset-0 rounded-full shadow-[inset_0_2px_4px_rgba(255,255,255,0.1)]" />
                                     </div>
-                                )) : <p className="text-xs text-slate-600 italic">Bar Only / Invalid</p>}
+                                )) : <p className="text-xs text-slate-600 italic">{t('modals.bar_only')}</p>}
                             </div>
                         </div>
 
                         <div className="space-y-2">
-                             <label className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Bar Weight</label>
+                             <label className="text-[9px] font-black text-slate-500 uppercase tracking-widest">{t('modals.bar_weight')}</label>
                              <div className="flex gap-2">
                                 {[20, 15, 10].map(w => (
                                     <button key={w} onClick={() => setBarWeight(w)} className={`flex-1 py-3 rounded-xl text-[10px] font-black transition-all ${barWeight === w ? 'bg-indigo-600 text-white shadow-lg' : 'bg-slate-800 text-slate-500'}`}>{w}kg</button>
@@ -3733,18 +3734,18 @@
                     <div className="absolute inset-0 z-50 glass flex items-center justify-center p-6 animate-fade-in">
                         <div className="max-w-sm w-full space-y-8">
                             <div className="text-center space-y-2">
-                                <h2 className="text-3xl font-black italic uppercase tracking-tighter text-white">Training<br/><span className="text-indigo-500">Frequency</span></h2>
-                                <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">How many days per week?</p>
+                                <h2 className="text-3xl font-black italic uppercase tracking-tighter text-white">{t('builder.training_frequency').split(' ')[0]}<br/><span className="text-indigo-500">{t('builder.training_frequency').split(' ').slice(1).join(' ')}</span></h2>
+                                <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">{t('builder.how_many_days')}</p>
                             </div>
                             <div className="grid grid-cols-3 gap-3">
                                 {[2,3,4,5,6].map(d => (
                                     <button key={d} onClick={() => { setConfig({...config, days: d}); setStep(2); }} className="p-6 bg-slate-900 rounded-2xl border border-white/5 hover:border-indigo-500 hover:text-indigo-400 transition-all group">
                                         <span className="text-2xl font-black italic text-white group-hover:text-indigo-400">{d}</span>
-                                        <span className="block text-[8px] font-bold uppercase text-slate-600 group-hover:text-indigo-500">Days</span>
+                                        <span className="block text-[8px] font-bold uppercase text-slate-600 group-hover:text-indigo-500">{t('builder.days')}</span>
                                     </button>
                                 ))}
                             </div>
-                            <button onClick={onCancel} className="w-full py-4 text-[10px] font-black uppercase tracking-widest text-slate-600 hover:text-slate-400">Cancel</button>
+                            <button onClick={onCancel} className="w-full py-4 text-[10px] font-black uppercase tracking-widest text-slate-600 hover:text-slate-400">{t('builder.cancel')}</button>
                         </div>
                     </div>
                 );
@@ -3760,8 +3761,8 @@
                     <div className="absolute inset-0 z-50 glass flex items-center justify-center p-6">
                         <div className="max-w-sm w-full space-y-8">
                             <div className="text-center space-y-2">
-                                <h2 className="text-3xl font-black italic uppercase tracking-tighter text-white">Split<br/><span className="text-indigo-500">Structure</span></h2>
-                                <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Recommended for {config.days} Days</p>
+                                <h2 className="text-3xl font-black italic uppercase tracking-tighter text-white">{t('builder.split_structure').split(' ')[0]}<br/><span className="text-indigo-500">{t('builder.split_structure').split(' ').slice(1).join(' ')}</span></h2>
+                                <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">{t('builder.recommended_for').replace('{days}', config.days)}</p>
                             </div>
                             <div className="space-y-3">
                                 {splits.map(s => (
@@ -3771,7 +3772,7 @@
                                     </button>
                                 ))}
                             </div>
-                            <button onClick={() => setStep(1)} className="w-full py-4 text-[10px] font-black uppercase tracking-widest text-slate-600 hover:text-white">Back</button>
+                            <button onClick={() => setStep(1)} className="w-full py-4 text-[10px] font-black uppercase tracking-widest text-slate-600 hover:text-white">{t('builder.back')}</button>
                         </div>
                     </div>
                 );
@@ -3785,8 +3786,8 @@
                 <div className="absolute inset-0 z-50 glass flex items-center justify-center p-6">
                     <div className="max-w-sm w-full space-y-8">
                         <div className="text-center space-y-2">
-                            <h2 className="text-3xl font-black italic uppercase tracking-tighter text-white">Design<br/><span className="text-indigo-500">Target</span></h2>
-                            <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">What are we building today?</p>
+                            <h2 className="text-3xl font-black italic uppercase tracking-tighter text-white">{t('builder.design_target').split(' ')[0]}<br/><span className="text-indigo-500">{t('builder.design_target').split(' ').slice(1).join(' ')}</span></h2>
+                            <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">{t('builder.what_building')}</p>
                         </div>
                         <div className="space-y-3">
                             {sessions.map(s => (
@@ -3795,7 +3796,7 @@
                                 </button>
                             ))}
                         </div>
-                        <button onClick={() => setStep(2)} className="w-full py-4 text-[10px] font-black uppercase tracking-widest text-slate-600 hover:text-white">Back</button>
+                        <button onClick={() => setStep(2)} className="w-full py-4 text-[10px] font-black uppercase tracking-widest text-slate-600 hover:text-white">{t('builder.back')}</button>
                     </div>
                 </div>
             );
@@ -3812,7 +3813,7 @@
                     <div className="sticky top-0 bg-[#020617]/95 backdrop-blur-xl z-30 p-4 -mx-4 border-b border-white/5 space-y-4">
                         <div className="flex justify-between items-end">
                             <div>
-                                 <h2 className="text-3xl font-black tracking-tighter italic uppercase leading-none">Program<br/><span className="text-indigo-500">Manager</span></h2>
+                                 <h2 className="text-3xl font-black tracking-tighter italic uppercase leading-none">{t('builder.program_manager').split(' ')[0]}<br/><span className="text-indigo-500">{t('builder.program_manager').split(' ').slice(1).join(' ')}</span></h2>
                                  <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-2">{config.days}-Day {config.split} Split</p>
                             </div>
                             <button 
@@ -3820,7 +3821,7 @@
                                 disabled={!isComplete}
                                 className="px-6 py-3 bg-emerald-500 text-black rounded-xl text-[10px] font-black uppercase tracking-widest shadow-lg disabled:opacity-20 disabled:cursor-not-allowed flex items-center gap-2 transition-all"
                             >
-                                <Icon name="check" className="w-4 h-4" /> Publish
+                                <Icon name="check" className="w-4 h-4" /> {t('builder.publish')}
                             </button>
                         </div>
                         
@@ -3852,7 +3853,103 @@
                         ))}
                     </div>
 
-                    <button onClick={onCancel} className="w-full py-6 text-[10px] font-black uppercase tracking-widest text-slate-600 hover:text-red-500 transition-colors bg-slate-900/50 rounded-[2rem]">Discard Program Draft</button>
+                    <button onClick={onCancel} className="w-full py-6 text-[10px] font-black uppercase tracking-widest text-slate-600 hover:text-red-500 transition-colors bg-slate-900/50 rounded-[2rem]">{t('builder.discard')}</button>
+                </div>
+            );
+        };
+
+        const Arsenal = ({ masterExercises }) => {
+            const [search, setSearch] = useState('');
+            const [filter, setFilter] = useState('ALL');
+
+            const categories = ['ALL', 'BACK', ...new Set(masterExercises.map(ex => {
+                if (ex.muscle_group) return ex.muscle_group;
+                const imp = getImpact(ex);
+                let m = imp.length > 0 ? imp[0].muscle : 'OTHER';
+                return m.toUpperCase();
+            }))];
+
+            const filtered = masterExercises.filter(ex => {
+                 const primaryMuscle = ex.muscle_group || (() => {
+                    const i = getImpact(ex);
+                    return i.length > 0 ? i[0].muscle.toUpperCase() : 'OTHER';
+                })();
+
+                let matchesCat = filter === 'ALL' || primaryMuscle === filter;
+                if (filter === 'BACK' && (primaryMuscle === 'BACK_VERTICAL' || primaryMuscle === 'BACK_HORIZONTAL')) {
+                    matchesCat = true;
+                }
+                const matchesSearch = ex.name.toLowerCase().includes(search.toLowerCase()) ||
+                                      (ex.pattern && ex.pattern.toLowerCase().includes(search.toLowerCase()));
+                return matchesCat && matchesSearch;
+            });
+
+            return (
+                <div className="tab-content space-y-6 pb-32">
+                     <div className="sticky top-0 bg-[#020617]/95 backdrop-blur-xl z-30 p-4 -mx-4 border-b border-white/5 space-y-4">
+                        <div className="flex items-center gap-3">
+                            <div className="p-3 bg-indigo-500/20 rounded-2xl text-indigo-400">
+                                <Icon name="library" className="w-6 h-6" />
+                            </div>
+                            <div>
+                                <h2 className="text-3xl font-black italic uppercase tracking-tighter text-white">Arsenal<br/><span className="text-indigo-500">Database</span></h2>
+                            </div>
+                        </div>
+
+                        <input
+                            value={search}
+                            onChange={e => setSearch(e.target.value)}
+                            placeholder="Search Operations..."
+                            className="w-full p-4 bg-slate-900 rounded-2xl font-bold text-xs text-white border-none focus:ring-2 focus:ring-indigo-500"
+                        />
+
+                        <div className="flex gap-2 overflow-x-auto no-scrollbar pb-2">
+                            {categories.map(cat => (
+                                <button
+                                    key={cat}
+                                    onClick={() => setFilter(cat)}
+                                    className={`px-4 py-2 rounded-xl text-[9px] font-black uppercase tracking-widest whitespace-nowrap transition-all ${filter === cat ? 'bg-indigo-600 text-white shadow-lg' : 'bg-slate-900 text-slate-500 border border-white/5'}`}
+                                >
+                                    {cat.replace('_', ' ')}
+                                </button>
+                            ))}
+                        </div>
+                     </div>
+
+                     <div className="space-y-3">
+                        {filtered.length > 0 ? filtered.map((ex, i) => {
+                            const impact = getImpact(ex);
+                            return (
+                                <div key={i} className="p-4 bg-slate-900/50 rounded-2xl border border-white/5 flex flex-col gap-3 group hover:border-indigo-500/30 transition-colors">
+                                    <div className="flex justify-between items-start gap-4">
+                                        <div className="space-y-1 flex-1">
+                                            <div className="flex items-center gap-2">
+                                                <span className="px-2 py-1 bg-slate-800 rounded-lg text-[8px] font-black text-slate-400 uppercase tracking-wider">{ex.station || 'Free Weight'}</span>
+                                                {ex.unilateral && <span className="text-[8px] font-bold text-purple-400 uppercase">Unilateral</span>}
+                                            </div>
+                                            <h4 className="font-black text-sm text-white leading-tight">{cleanName(ex.name)}</h4>
+                                        </div>
+                                        <a href={`https://www.youtube.com/results?search_query=TYTAX+T1+${encodeURIComponent(ex.name)}`} target="_blank" className="p-3 bg-slate-800 rounded-xl text-slate-500 hover:text-red-500 hover:bg-slate-900 transition-colors">
+                                            <Icon name="play" className="w-4 h-4" />
+                                        </a>
+                                    </div>
+
+                                    <div className="flex flex-wrap gap-2">
+                                        {impact.map((imp, idx) => (
+                                            <div key={idx} className="flex items-center gap-1 bg-slate-950/50 px-2 py-1 rounded-lg border border-white/5">
+                                                <div className={`w-1.5 h-1.5 rounded-full ${imp.level === 'Primary' ? 'bg-indigo-500' : 'bg-slate-600'}`} />
+                                                <span className={`text-[9px] font-bold uppercase ${imp.level === 'Primary' ? 'text-indigo-300' : 'text-slate-500'}`}>{imp.muscle} <span className="opacity-50">{imp.score}</span></span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            );
+                        }) : (
+                            <div className="py-20 text-center opacity-40">
+                                <p className="text-[10px] font-black uppercase tracking-widest">No Intel Found</p>
+                            </div>
+                        )}
+                     </div>
                 </div>
             );
         };
@@ -4047,20 +4144,20 @@
                             <div className="flex justify-between items-end px-2">
                                 <div>
                                      <h2 className="text-xl font-black italic uppercase text-white">{programDraft[activeSlot].name}</h2>
-                                     <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Editing Session</p>
+                                     <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">{t('builder.editing_session')}</p>
                                 </div>
                                 <div className="flex gap-2">
-                                    <button onClick={optimizeStationFlow} className="px-4 py-2 bg-indigo-900/30 rounded-xl border border-indigo-500/30 flex items-center gap-2 hover:bg-indigo-900/50 transition-colors"><Icon name="bolt" className="w-3 h-3 text-indigo-400" /><span className="text-[8px] font-black uppercase tracking-widest text-indigo-400">Sort</span></button>
+                                    <button onClick={optimizeStationFlow} className="px-4 py-2 bg-indigo-900/30 rounded-xl border border-indigo-500/30 flex items-center gap-2 hover:bg-indigo-900/50 transition-colors"><Icon name="bolt" className="w-3 h-3 text-indigo-400" /><span className="text-[8px] font-black uppercase tracking-widest text-indigo-400">{t('builder.sort')}</span></button>
                                     <button onClick={() => setView('MANAGER')} className="px-4 py-2 bg-slate-800 rounded-xl border border-white/5 flex items-center gap-2 hover:bg-slate-700 transition-colors">
                                         <Icon name="x" className="w-3 h-3 text-slate-400" />
-                                        <span className="text-[8px] font-black uppercase tracking-widest text-slate-400">Back</span>
+                                        <span className="text-[8px] font-black uppercase tracking-widest text-slate-400">{t('builder.back')}</span>
                                     </button>
                                 </div>
                             </div>
                             
                             {/* SEARCH & FILTER */}
                             <div className="flex gap-2">
-                                <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Search..." className="w-full p-4 bg-slate-900 rounded-2xl font-bold text-xs text-white border-none focus:ring-2 focus:ring-indigo-500" />
+                                <input value={search} onChange={e => setSearch(e.target.value)} placeholder={t('builder.search')} className="w-full p-4 bg-slate-900 rounded-2xl font-bold text-xs text-white border-none focus:ring-2 focus:ring-indigo-500" />
                                 <button onClick={() => setUseInventoryFilter(!useInventoryFilter)} className={`px-4 rounded-2xl transition-colors ${useInventoryFilter ? 'bg-indigo-600 text-white' : 'bg-slate-900 text-slate-500 border border-white/5'}`}><Icon name="filter" /></button>
                             </div>
 
@@ -4069,15 +4166,17 @@
                                 {categories.map(cat => {
                                     // Smart Filter: Hide irrelevant buttons
                                     const currentSlot = programDraft[activeSlot];
-                                    const isSmartActive = useSmartFilter && filter === 'ALL' && search === '';
+                                    const isSmartActive = useSmartFilter;
                                     
                                     if (currentSlot && isSmartActive) {
                                         const sessionName = currentSlot.name.toLowerCase();
-                                        const isUpper = sessionName.includes('upper') || sessionName.includes('push') || sessionName.includes('pull');
+                                        const isPull = sessionName.includes('pull');
+                                        const isUpper = (sessionName.includes('upper') || sessionName.includes('push')) && !isPull;
                                         const isLower = sessionName.includes('lower') || sessionName.includes('legs');
 
-                                        if (isUpper && (cat === 'QUADS' || cat === 'HAMSTRINGS' || cat === 'GLUTES' || cat === 'CALVES')) return null;
-                                        if (isLower && (cat === 'CHEST' || cat === 'BACK' || cat === 'SHOULDERS' || cat === 'BICEPS' || cat === 'TRICEPS' || cat === 'FOREARMS_GRIP')) return null;
+                                        if (isUpper && ['QUADS', 'HAMSTRINGS', 'GLUTES', 'CALVES'].includes(cat)) return null;
+                                        if (isPull && ['QUADS', 'CALVES', 'CHEST', 'TRICEPS'].includes(cat)) return null;
+                                        if (isLower && ['CHEST', 'BACK', 'BACK_VERTICAL', 'BACK_HORIZONTAL', 'SHOULDERS', 'BICEPS', 'TRICEPS', 'FOREARMS_GRIP'].includes(cat)) return null;
                                     }
 
                                     return (
@@ -4107,7 +4206,7 @@
                                             <div className="space-y-3">
                                                 <div className="flex flex-wrap gap-2">
                                                     <span className="px-2 py-1 bg-slate-800 rounded-lg text-[8px] font-black text-slate-400 uppercase tracking-wider">{ex.station || 'Free Weight'}</span>
-                                                    {ex.unilateral && <span className="px-2 py-1 bg-purple-900/30 text-purple-400 rounded-lg text-[8px] font-black uppercase tracking-wider border border-purple-500/20">Unilateral</span>}
+                                                    {ex.unilateral && <span className="px-2 py-1 bg-purple-900/30 text-purple-400 rounded-lg text-[8px] font-black uppercase tracking-wider border border-purple-500/20">{t('workout.unilateral')}</span>}
                                                 </div>
                                                 
                                                 <h4 className={`font-black text-lg italic leading-tight ${isSelected ? 'text-indigo-200' : 'text-white'}`}>{cleanName(ex.name)}</h4>
@@ -4117,7 +4216,7 @@
                                                     {/* Project the primary muscle impact */}
                                                     <div className="flex items-center gap-1">
                                                         <div className="w-2 h-2 rounded-full bg-indigo-500" />
-                                                        <span className="text-[9px] font-bold text-slate-400 uppercase">{normalizeMuscleName(ex.muscle_group || 'General')}</span>
+                                                        <span className="text-[9px] font-bold text-slate-400 uppercase">{t('muscles.' + normalizeMuscleName(ex.muscle_group || 'General'))}</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -4131,21 +4230,21 @@
                                     <Icon name="library" className="w-8 h-8 text-slate-600" />
                                 </div>
                                 <div className="space-y-2">
-                                    <p className="text-sm font-black text-white uppercase tracking-widest">No Matches</p>
-                                    <p className="text-[10px] text-slate-500 max-w-[200px] mx-auto">Your filter "{normalizeMuscleName(filter)}" has no exercises in the current library.</p>
+                                    <p className="text-sm font-black text-white uppercase tracking-widest">{t('builder.no_matches')}</p>
+                                    <p className="text-[10px] text-slate-500 max-w-[200px] mx-auto">Your filter "{t('muscles.' + normalizeMuscleName(filter))}" has no exercises in the current library.</p>
                                 </div>
                                 <div className="flex flex-col gap-2">
                                     <button 
                                         onClick={() => setFilter('ALL')} 
                                         className="px-8 py-4 bg-indigo-600 text-white rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] shadow-lg hover:scale-105 transition-transform"
                                     >
-                                        Show All Exercises
+                                        {t('builder.show_all')}
                                     </button>
                                     <button 
                                         onClick={() => { setFilter('ALL'); setSearch(''); setUseInventoryFilter(false); }} 
                                         className="px-8 py-4 bg-slate-900 text-slate-500 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] border border-white/5 hover:text-white transition-colors"
                                     >
-                                        Clear All Filters
+                                        {t('builder.clear_filters')}
                                     </button>
                                 </div>
                             </div>
@@ -4163,7 +4262,7 @@
                                      </div>
                                      {/* DOCK SAVE BUTTON */}
                                     <button onClick={saveCurrentSlot} className="px-5 py-2 bg-indigo-600 text-white rounded-full text-[8px] font-black uppercase tracking-widest shadow-lg hover:bg-indigo-500 whitespace-nowrap">
-                                       Save Session
+                                       {t('builder.save_session')}
                                     </button>
                                 </div>
 
@@ -4201,7 +4300,7 @@
                                                  <div className="w-full bg-slate-800/50 rounded-t-md relative h-full overflow-hidden">
                                                      <div className={`absolute bottom-0 left-0 right-0 transition-all duration-500 ${pct >= 100 ? 'bg-emerald-500' : 'bg-indigo-500'}`} style={{height: `${pct}%`}} />
                                                  </div>
-                                                 <span className="text-[6px] font-black text-slate-500 uppercase tracking-tighter group-hover:text-white leading-tight -rotate-45 mb-2 origin-left whitespace-nowrap">{group}</span>
+                                                 <span className="text-[6px] font-black text-slate-500 uppercase tracking-tighter group-hover:text-white leading-tight -rotate-45 mb-2 origin-left whitespace-nowrap">{t('muscles.' + group)}</span>
                                              </div>
                                          );
                                      })}
@@ -4293,14 +4392,14 @@
                     <div className="fixed inset-0 z-[300] bg-black/95 backdrop-blur-xl flex items-center justify-center p-6 animate-fade-in">
                         <div className="w-full max-w-sm space-y-8 text-center">
                             <div className="space-y-2">
-                                <h1 className="text-4xl font-black italic uppercase tracking-tighter text-white">Welcome<br/><span className="text-indigo-500">Commander</span></h1>
-                                <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Tytax Elite System Initialization</p>
+                                <h1 className="text-4xl font-black italic uppercase tracking-tighter text-white">{t('modals.welcome').split(' ')[0]}<br/><span className="text-indigo-500">{t('modals.welcome').split(' ').slice(1).join(' ')}</span></h1>
+                                <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">{t('status.initialize')}</p>
                             </div>
                             <div className="space-y-4">
-                                <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Identify Yourself</label>
-                                <input value={profile.name} onChange={e => setProfile({...profile, name: e.target.value})} className="w-full p-5 bg-slate-900 rounded-2xl text-center font-black text-white text-lg border border-white/5 focus:border-indigo-500 focus:ring-0" placeholder="Captain's Name" />
+                                <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{t('modals.enter_name')}</label>
+                                <input value={profile.name} onChange={e => setProfile({...profile, name: e.target.value})} className="w-full p-5 bg-slate-900 rounded-2xl text-center font-black text-white text-lg border border-white/5 focus:border-indigo-500 focus:ring-0" placeholder="..." />
                             </div>
-                            <button disabled={!profile.name} onClick={() => setStep(2)} className="w-full py-5 bg-indigo-600 text-white rounded-[2rem] font-black uppercase tracking-[0.2em] shadow-xl disabled:opacity-50">Next Step</button>
+                            <button disabled={!profile.name} onClick={() => setStep(2)} className="w-full py-5 bg-indigo-600 text-white rounded-[2rem] font-black uppercase tracking-[0.2em] shadow-xl disabled:opacity-50">Next</button>
                         </div>
                     </div>
                 );
@@ -4693,6 +4792,35 @@
                         </p>
                     </div>
 
+                    {/* TRENDS INTELLIGENCE */}
+                    <div className="glass p-8 rounded-[3rem] border-white/5 space-y-6">
+                        <div className="flex items-center gap-3">
+                            <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="trends" className="w-5 h-5" /></div>
+                            <div>
+                                <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Trends Intelligence</h3>
+                                <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Protocol: Performance Analytics</p>
+                            </div>
+                        </div>
+                        <div className="space-y-4">
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Consistency Index</p>
+                                <p className="text-[10px] text-slate-500">Tracks your active training weeks. A score of 100 requires 8 consecutive weeks of adherence. Drop-offs reduce your tactical readiness score.</p>
+                            </div>
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Volume Tracking & Bodyweight</p>
+                                <p className="text-[10px] text-slate-500">Visualizes your total weekly tonnage and bodyweight trends over time. Use the "+ Log" button on the Trends tab to update biometric data.</p>
+                            </div>
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Growth Focus</p>
+                                <p className="text-[10px] text-slate-500">Analyzes your last 20 sessions to display a ranked distribution of muscle stimulation. Ensure your "Growth Focus" aligns with your aesthetic or performance goals.</p>
+                            </div>
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Trophy Case</p>
+                                <p className="text-[10px] text-slate-500">Pin your primary compound lifts (Squat, Bench, Deadlift, etc.) to monitor your all-time PRs and latest performance metrics at a glance.</p>
+                            </div>
+                        </div>
+                    </div>
+
                     {/* TACTICAL TOOLS */}
                     <div className="glass p-8 rounded-[3rem] border-white/5 space-y-6">
                         <div className="flex items-center gap-3">
@@ -4731,10 +4859,82 @@
                                 <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Protocol: Mission Planning</p>
                             </div>
                         </div>
-                        <p className="text-xs text-slate-400 leading-relaxed font-medium">
-                            The Builder tab is your Mission Planner. Use the wizard to generate a 3, 4, 5, or 6-day split (Full Body, Upper/Lower, or PPL).
-                            You can then customize individual slots using the "Smart Filter" which only shows exercises relevant to that session's archetype.
+                        <p className="text-xs text-slate-400 leading-relaxed font-medium mb-4">
+                            The Builder is an advanced mission planning interface designed to construct custom protocols. It operates in three stages:
                         </p>
+                        <div className="space-y-3">
+                            <div className="p-3 bg-slate-900/50 rounded-2xl border border-white/5 flex gap-3 items-center">
+                                <div className="w-6 h-6 rounded-full bg-indigo-500 text-white flex items-center justify-center text-[10px] font-black">1</div>
+                                <div>
+                                    <span className="text-[10px] font-black text-white uppercase tracking-widest block">Protocol Wizard</span>
+                                    <span className="text-[9px] text-slate-500">Select Frequency (2-6 Days) and Split Structure (Full Body, Upper/Lower, PPL).</span>
+                                </div>
+                            </div>
+                            <div className="p-3 bg-slate-900/50 rounded-2xl border border-white/5 flex gap-3 items-center">
+                                <div className="w-6 h-6 rounded-full bg-indigo-500 text-white flex items-center justify-center text-[10px] font-black">2</div>
+                                <div>
+                                    <span className="text-[10px] font-black text-white uppercase tracking-widest block">Program Manager</span>
+                                    <span className="text-[9px] text-slate-500">Overview of your draft. Tap any slot to enter the Session Editor.</span>
+                                </div>
+                            </div>
+                            <div className="p-3 bg-slate-900/50 rounded-2xl border border-white/5 flex gap-3 items-center">
+                                <div className="w-6 h-6 rounded-full bg-indigo-500 text-white flex items-center justify-center text-[10px] font-black">3</div>
+                                <div>
+                                    <span className="text-[10px] font-black text-white uppercase tracking-widest block">Session Editor</span>
+                                    <span className="text-[9px] text-slate-500">Use "Smart Filter" to find pattern-appropriate exercises. Analyze "Live Load" to ensure target muscles are hit.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* FIELD OPERATIONS */}
+                    <div className="glass p-8 rounded-[3rem] border-white/5 space-y-6">
+                        <div className="flex items-center gap-3">
+                            <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="bolt" className="w-5 h-5" /></div>
+                            <div>
+                                <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Field Operations</h3>
+                                <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Protocol: Active Session Tools</p>
+                            </div>
+                        </div>
+                        <div className="space-y-4">
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Manual Injection</p>
+                                <p className="text-[10px] text-slate-500">Use the "Add Manual Exercise" button at the bottom of the session to inject additional volume (e.g., Abs, Calves) without altering the core protocol.</p>
+                            </div>
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Exercise Swapping</p>
+                                <p className="text-[10px] text-slate-500">Tap "Swap" on any exercise card to replace it with a compatible movement from the library (e.g., changing Bench Press to Dumbbell Press) while preserving Kinetic Impact intent.</p>
+                            </div>
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Mission Debrief</p>
+                                <p className="text-[10px] text-slate-500">Upon "Terminate Session", the system generates a debrief report. New PRs are celebrated, and volume metrics are logged to the Vault.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* MASTER NODE */}
+                    <div className="glass p-8 rounded-[3rem] border-white/5 space-y-6">
+                        <div className="flex items-center gap-3">
+                            <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="settings" className="w-5 h-5" /></div>
+                            <div>
+                                <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Master Node</h3>
+                                <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Protocol: System Configuration</p>
+                            </div>
+                        </div>
+                        <div className="grid grid-cols-1 gap-4">
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Inventory Locker</p>
+                                <p className="text-[10px] text-slate-500">Toggle owned attachments (Ropes, V-bars, etc.) in the Settings tab. The "Smart Filter" in the Builder will hide exercises requiring equipment you do not possess.</p>
+                            </div>
+                            <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Warmup Strategy</p>
+                                <p className="text-[10px] text-slate-500">Configure global warmup logic: "Standard" (50%/75%), "Heavy" (Potentiation for low reps), or "Pyramid" (Volume focus).</p>
+                            </div>
+                             <div className="p-4 bg-slate-900/50 rounded-2xl border border-white/5">
+                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-1">Rotation Epoch</p>
+                                <p className="text-[10px] text-slate-500">Reset your program start date to align the predictive engine with your actual schedule.</p>
+                            </div>
+                        </div>
                     </div>
 
                     {/* DATA VAULT */}
@@ -4797,7 +4997,7 @@
                     <div className="flex justify-between items-start mb-6">
                         <div>
                             <span className="px-4 py-1 accent-gradient rounded-full text-[9px] font-black uppercase tracking-widest text-white shadow-lg">{log.session}</span>
-                            <h3 className="font-black text-2xl mt-3 text-white tracking-tighter leading-none italic">{new Date(log.date).toDateString()}</h3>
+                            <h3 className="font-black text-2xl mt-3 text-white tracking-tighter leading-none italic">{new Date(log.date).toLocaleDateString(language === 'hr' ? 'hr-HR' : 'en-US', {weekday: 'short', month:'short', day:'numeric'})}</h3>
                         </div>
                         <div className="flex gap-2">
                             <button onClick={() => onEdit(log)} className="p-3 bg-slate-800 text-slate-400 hover:text-white transition-colors rounded-xl border border-white/5 hover:border-white/20"><Icon name="tool" className="w-4 h-4" /></button>
@@ -4808,7 +5008,7 @@
                     {/* Metrics Grid */}
                     <div className="grid grid-cols-4 gap-2 mb-6">
                          <div className="bg-slate-900/50 p-3 rounded-2xl text-center border border-white/5">
-                             <p className="text-[8px] font-black text-slate-500 uppercase tracking-widest">Time</p>
+                             <p className="text-[8px] font-black text-slate-500 uppercase tracking-widest">{t('vault.duration')}</p>
                              <p className="text-sm font-black text-white italic">{durationMins}m</p>
                          </div>
                          <div className="bg-slate-900/50 p-3 rounded-2xl text-center border border-white/5">
@@ -4816,11 +5016,11 @@
                              <p className="text-sm font-black text-white italic">{log.volume || 0}k</p>
                          </div>
                          <div className="bg-slate-900/50 p-3 rounded-2xl text-center border border-white/5">
-                             <p className="text-[8px] font-black text-slate-500 uppercase tracking-widest">Dens</p>
+                             <p className="text-[8px] font-black text-slate-500 uppercase tracking-widest">{t('vault.density')}</p>
                              <p className="text-sm font-black text-emerald-400 italic">{density}</p>
                          </div>
                          <div className="bg-slate-900/50 p-3 rounded-2xl text-center border border-white/5">
-                             <p className="text-[8px] font-black text-slate-500 uppercase tracking-widest">Int</p>
+                             <p className="text-[8px] font-black text-slate-500 uppercase tracking-widest">{t('vault.intensity')}</p>
                              <p className="text-sm font-black text-indigo-400 italic">@{avgRir}</p>
                          </div>
                     </div>
@@ -4832,7 +5032,7 @@
                              className="w-full py-3 bg-slate-900/30 rounded-xl border border-white/5 flex items-center justify-center gap-2 text-[9px] font-black uppercase tracking-widest text-slate-500 hover:text-white transition-colors"
                          >
                             <Icon name="trends" className="w-3 h-3" />
-                            {impactExpanded ? 'Hide Impact Data' : 'Show Kinetic Impact'}
+                            {impactExpanded ? 'Hide Impact Data' : t('workout.live_kinetic_impact')}
                          </button>
 
                          {impactExpanded && (
@@ -4840,7 +5040,7 @@
                                 {impactDist.length > 0 ? impactDist.map((d) => (
                                     <div key={d.muscle} className="space-y-1">
                                         <div className="flex justify-between text-[8px] font-black uppercase tracking-widest text-slate-500">
-                                            <span>{d.muscle}</span>
+                                            <span>{t('muscles.' + d.muscle)}</span>
                                             <span>{d.score}</span>
                                         </div>
                                         <div className="h-1 bg-slate-800 rounded-full overflow-hidden">
@@ -4911,14 +5111,21 @@
             static getDerivedStateFromError(error) { return { hasError: true }; }
             render() {
                 if (this.state.hasError) {
+                    const lang = localStorage.getItem('tytax_language') || 'hr';
+                    const t = (k) => {
+                        try {
+                            return k.split('.').reduce((o, i) => o[i], TRANSLATIONS[lang]) || k;
+                        } catch (e) { return k; }
+                    };
+
                     return (
                         <div className="min-h-screen bg-black flex items-center justify-center p-10 text-center">
                             <div className="space-y-6">
-                                <h1 className="text-4xl font-black text-red-500 uppercase tracking-tighter italic">System Failure</h1>
-                                <p className="text-xs text-slate-500 font-mono">Critical runtime error. Attempting recovery.</p>
+                                <h1 className="text-4xl font-black text-red-500 uppercase tracking-tighter italic">{t('modals.system_failure')}</h1>
+                                <p className="text-xs text-slate-500 font-mono">{t('modals.critical_error')}</p>
                                 <div className="flex flex-col gap-4">
-                                    <button onClick={() => window.location.reload()} className="px-8 py-4 bg-indigo-600 text-white rounded-2xl font-black uppercase tracking-widest shadow-lg hover:bg-indigo-500">Reload System</button>
-                                    <button onClick={() => { if(confirm("WARNING: This will delete all logs and settings. Continue?")) { localStorage.clear(); window.location.reload(); } }} className="text-[10px] font-black text-red-500/50 uppercase tracking-widest hover:text-red-500 transition-colors">Factory Reset (Data Wipe)</button>
+                                    <button onClick={() => window.location.reload()} className="px-8 py-4 bg-indigo-600 text-white rounded-2xl font-black uppercase tracking-widest shadow-lg hover:bg-indigo-500">{t('modals.reload_system')}</button>
+                                    <button onClick={() => { if(confirm(t('modals.factory_confirm'))) { localStorage.clear(); window.location.reload(); } }} className="text-[10px] font-black text-red-500/50 uppercase tracking-widest hover:text-red-500 transition-colors">{t('modals.factory_reset')}</button>
                                 </div>
                             </div>
                         </div>
@@ -4941,21 +5148,21 @@
                         <div className="glass p-6 rounded-[2.5rem] flex flex-col justify-between h-40">
                             <div className="flex justify-between items-start">
                                 <div className="p-3 bg-emerald-500/20 rounded-2xl text-emerald-500"><Icon name="shield" className="w-5 h-5" /></div>
-                                <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Score</span>
+                                <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest">{t('status.score')}</span>
                             </div>
                             <div>
                                 <p className="text-3xl font-black text-white italic">{fitnessScore}</p>
-                                <p className="text-[9px] font-bold text-slate-600 uppercase tracking-widest">Consistency Index</p>
+                                <p className="text-[9px] font-bold text-slate-600 uppercase tracking-widest">{t('status.consistency')}</p>
                             </div>
                         </div>
                         <div className="glass p-6 rounded-[2.5rem] flex flex-col justify-between h-40 relative overflow-hidden">
                             <div className="flex justify-between items-start z-10 relative">
                                 <div className="p-3 bg-indigo-500/20 rounded-2xl text-indigo-500"><Icon name="bolt" className="w-5 h-5" /></div>
-                                <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Volume</span>
+                                <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest">{t('status.volume')}</span>
                             </div>
                             <div className="z-10 relative">
                                 <p className="text-xl font-black text-white italic">{weeklyVol.length > 0 ? (weeklyVol[weeklyVol.length-1].value/1000).toFixed(1) + 'k' : '0'}</p>
-                                <p className="text-[9px] font-bold text-slate-600 uppercase tracking-widest">Last Week Load</p>
+                                <p className="text-[9px] font-bold text-slate-600 uppercase tracking-widest">{t('status.last_week_load')}</p>
                             </div>
                             {/* Mini Chart Background */}
                             <div className="absolute bottom-0 left-0 right-0 h-16 opacity-20">
@@ -4970,16 +5177,16 @@
 
                     <div className="glass p-8 rounded-[3rem] space-y-6">
                         <div className="flex justify-between items-center">
-                            <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">Weekly Volume</h3>
-                            <span className="text-[8px] font-black text-indigo-500 uppercase tracking-widest">Global Load (KG)</span>
+                            <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">{t('trends.weekly_volume')}</h3>
+                            <span className="text-[8px] font-black text-indigo-500 uppercase tracking-widest">{t('trends.global_load')}</span>
                         </div>
                         <ProgressGraph data={weeklyVol} color="#6366f1" label="Total Volume" />
                     </div>
 
                     <div className="glass p-8 rounded-[3rem] space-y-6">
                         <div className="flex justify-between items-center">
-                            <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">Bodyweight</h3>
-                            <button onClick={onLogBodyweight} className="text-[8px] font-black bg-indigo-900/30 text-indigo-400 px-3 py-2 rounded-lg uppercase tracking-widest hover:bg-indigo-900/50">+ Log</button>
+                            <h3 className="font-black text-xl text-white leading-none tracking-tighter italic">{t('trends.bodyweight')}</h3>
+                            <button onClick={onLogBodyweight} className="text-[8px] font-black bg-indigo-900/30 text-indigo-400 px-3 py-2 rounded-lg uppercase tracking-widest hover:bg-indigo-900/50">{t('trends.log')}</button>
                         </div>
                         <ProgressGraph data={bodyweightLog.length > 0 ? bodyweightLog : [{date: 'Now', value: userProfile?.bodyweight || 0}]} color="#f59e0b" label="KG" />
                     </div>
@@ -4999,7 +5206,7 @@
                 <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
                     <div className="flex items-center gap-3">
                         <div className="p-3 bg-purple-900/20 rounded-2xl text-purple-400"><Icon name="trends" className="w-5 h-5" /></div>
-                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Growth Focus</h3>
+                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">{t('trends.growth_focus')}</h3>
                     </div>
 
                     <div className="space-y-4">
@@ -5007,7 +5214,7 @@
                             <div key={d.muscle} className="space-y-1">
                                 <div className="flex justify-between items-center">
                                     <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest flex items-center gap-2">
-                                        <span className="w-4 text-slate-600">#{i+1}</span> {d.muscle}
+                                        <span className="w-4 text-slate-600">#{i+1}</span> {t('muscles.' + d.muscle)}
                                     </span>
                                     <span className="text-[10px] font-bold text-slate-500">{Math.round(d.pct)}%</span>
                                 </div>
@@ -5017,7 +5224,7 @@
                             </div>
                         ))}
                     </div>
-                    <p className="text-[9px] text-slate-500 font-bold italic text-center">Based on last 20 sessions</p>
+                    <p className="text-[9px] text-slate-500 font-bold italic text-center">{t('trends.based_on_20')}</p>
                 </div>
             );
         };
@@ -5032,17 +5239,17 @@
                 const chartData = exLogs.map(l => {
                     const sessionEx = l.exercises.find(e => e.name === selected);
                     const bestE1RM = Math.max(...sessionEx.sets.map(s => calculateE1RM(s.kg, s.reps)));
-                    return { date: new Date(l.date).toLocaleDateString(undefined, {month:'short', day:'numeric'}), value: bestE1RM.toFixed(1) };
+                    return { date: new Date(l.date).toLocaleDateString(language === 'hr' ? 'hr-HR' : 'en-US', {month:'short', day:'numeric'}), value: bestE1RM.toFixed(1) };
                 });
                 setData(chartData);
-            }, [selected, logs]);
+            }, [selected, logs, language]);
 
             return (
                 <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
                     <div className="flex justify-between items-center">
                         <div className="flex items-center gap-3">
                             <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="library" className="w-5 h-5" /></div>
-                            <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Inspector</h3>
+                            <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">{t('trends.inspector')}</h3>
                         </div>
                     </div>
 
@@ -5062,7 +5269,7 @@
                     {data.length > 0 ? (
                         <ProgressGraph data={data} label="e1RM" />
                     ) : (
-                        <div className="h-48 flex items-center justify-center text-slate-700 text-xs font-black uppercase tracking-widest">No Data Available</div>
+                        <div className="h-48 flex items-center justify-center text-slate-700 text-xs font-black uppercase tracking-widest">{t('trends.no_data')}</div>
                     )}
                 </div>
             );
@@ -5072,9 +5279,9 @@
             return (
                 <div className="space-y-4">
                     <div className="flex justify-between items-end px-2">
-                        <h2 className="text-2xl font-black tracking-tighter italic uppercase leading-none">Trophy<br/><span className="text-indigo-500">Case</span></h2>
+                        <h2 className="text-2xl font-black tracking-tighter italic uppercase leading-none">{t('trends.trophy_case').split(' ')[0]}<br/><span className="text-indigo-500">{t('trends.trophy_case').split(' ').slice(1).join(' ')}</span></h2>
                         <button onClick={onEdit} className="px-4 py-2 bg-slate-900 rounded-xl border border-white/5 text-[8px] font-black uppercase tracking-widest text-slate-500 hover:text-white transition-colors">
-                            Edit Pinned
+                            {t('trends.edit_pinned')}
                         </button>
                     </div>
                     <div className="grid grid-cols-1 gap-3">
@@ -5108,7 +5315,7 @@
                                         </div>
                                     </div>
                                     <div className="text-right">
-                                        <p className="text-[8px] font-bold text-slate-600 uppercase tracking-widest">Latest</p>
+                                        <p className="text-[8px] font-bold text-slate-600 uppercase tracking-widest">{t('trends.latest')}</p>
                                         <p className="text-sm font-black text-slate-400 italic">{last} kg</p>
                                     </div>
                                 </div>
@@ -5199,6 +5406,16 @@
                 return localStorage.getItem('tytax_auto_backup') === 'true';
             });
 
+            const [language, setLanguage] = useState(() => localStorage.getItem('tytax_language') || 'hr');
+            useEffect(() => localStorage.setItem('tytax_language', language), [language]);
+
+            const t = (key) => {
+                const keys = key.split('.');
+                let val = TRANSLATIONS[language];
+                for (const k of keys) val = val?.[k];
+                return val || key;
+            };
+
             // --- CUSTOM PROTOCOLS ---
             const [customProtocols, setCustomProtocols] = useState(() => {
                 try {
@@ -5225,7 +5442,8 @@
                 // Check if we need to upgrade to Kinetic Impact data
                 const currentPreset = allPresets.find(p => p.id === 'kinetic_impact');
                 if (currentPreset && masterExercises.length > 0) {
-                    const needsUpgrade = masterExercises.some(ex => !ex.note && currentPreset.data.MASTER_EXERCISES.some(nex => cleanName(nex.name) === cleanName(ex.name)));
+                    // Check for missing impact data, not notes (as new data doesn't always have notes)
+                    const needsUpgrade = masterExercises.some(ex => !ex.impact && currentPreset.data.MASTER_EXERCISES.some(nex => cleanName(nex.name) === cleanName(ex.name)));
 
                     if (needsUpgrade) {
                         if (confirm("New Kinetic Impact protocol available. Update your library? (Recommended)")) {
@@ -5688,12 +5906,12 @@
                         
                         <nav className="space-y-2 flex-1">
                             {[ 
-                                { id: 'home', icon: 'home', label: 'Home' }, 
-                                { id: 'workout', icon: 'bolt', label: 'Gym' }, 
-                                { id: 'trends', icon: 'trends', label: 'Trends' }, 
-                                { id: 'history', icon: 'history', label: 'Vault' },
-                                { id: 'builder', icon: 'tool', label: 'Builder' },
-                                { id: 'features', icon: 'info', label: 'Manual' }
+                                { id: 'home', icon: 'home', label: t('nav.home') },
+                                { id: 'workout', icon: 'bolt', label: t('nav.workout') },
+                                { id: 'trends', icon: 'trends', label: t('nav.trends') },
+                                { id: 'history', icon: 'history', label: t('nav.history') },
+                                { id: 'builder', icon: 'tool', label: t('nav.builder') },
+                                { id: 'features', icon: 'info', label: t('nav.features') }
                             ].map(tab => (
                                 <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`w-full flex items-center gap-4 px-4 py-3 rounded-2xl transition-all group ${activeTab === tab.id ? 'bg-indigo-600 text-white shadow-lg' : 'text-slate-500 hover:bg-slate-900 hover:text-white'}`}>
                                     <Icon name={tab.icon} className={`w-5 h-5 ${activeTab === tab.id ? 'text-white' : 'text-slate-500 group-hover:text-indigo-400'}`} />
@@ -5705,12 +5923,12 @@
                         {/* Desktop System Status Mini-Widget */}
                         <div className="bg-slate-900/50 rounded-2xl p-4 border border-white/5 space-y-2">
                             <div className="flex justify-between items-center text-[9px] font-black uppercase tracking-widest text-slate-500">
-                                <span>System</span>
-                                <span className={sessionOrder.length > 0 ? "text-emerald-500" : "text-red-500"}>{sessionOrder.length > 0 ? "Online" : "Standby"}</span>
+                                <span>{t('status.system')}</span>
+                                <span className={sessionOrder.length > 0 ? "text-emerald-500" : "text-red-500"}>{sessionOrder.length > 0 ? t('status.online') : t('status.standby')}</span>
                             </div>
                             <div className="flex justify-between items-center text-[9px] font-black uppercase tracking-widest text-slate-500">
-                                <span>Recovery</span>
-                                <span className={recoveryStatus.color}>{recoveryStatus.status}</span>
+                                <span>{t('status.recovery')}</span>
+                                <span className={recoveryStatus.color}>{t(`status.${recoveryStatus.status.toLowerCase()}`)}</span>
                             </div>
                         </div>
                     </aside>
@@ -5870,7 +6088,7 @@
 
                         {(!userProfile && logs.length === 0) && <WelcomeWizard onComplete={(p) => {
                             setUserProfile(p);
-                            showToast(`Welcome, Commander ${p.name}`);
+                            showToast(`${t('modals.welcome')} ${p.name}`);
                         }} />}
                         
                         {toast && <div className="fixed top-24 left-1/2 -translate-x-1/2 z-[250] bg-indigo-500 text-white px-8 py-4 rounded-3xl shadow-2xl font-black text-[10px] uppercase tracking-widest animate-pulse">{toast}</div>} 
@@ -5913,11 +6131,11 @@
                                     <div className="flex items-center justify-between"> 
                                         <div className="flex items-center gap-3"> 
                                             <div className={`w-3 h-3 rounded-full ${sessionOrder.length > 0 ? 'bg-emerald-500 status-pulse shadow-[0_0_15px_rgba(16,185,129,0.5)]' : 'bg-red-500 shadow-[0_0_15px_rgba(239,68,68,0.5)]'}`} /> 
-                                            <h2 className="text-3xl font-black tracking-tighter italic uppercase leading-none">System<br/><span className={`${sessionOrder.length > 0 ? 'text-indigo-500' : 'text-red-500'}`}>{sessionOrder.length > 0 ? 'Online' : 'Standby'}</span></h2> 
+                                            <h2 className="text-3xl font-black tracking-tighter italic uppercase leading-none">{t('status.system')}<br/><span className={`${sessionOrder.length > 0 ? 'text-indigo-500' : 'text-red-500'}`}>{sessionOrder.length > 0 ? t('status.online') : t('status.standby')}</span></h2>
                                         </div> 
                                         {sessionOrder.length === 0 && ( 
                                             <div className="bg-red-900/20 border border-red-500/30 px-3 py-1 rounded-xl animate-pulse"> 
-                                                <span className="text-[8px] font-black text-red-500 uppercase tracking-widest">Action Required</span> 
+                                                <span className="text-[8px] font-black text-red-500 uppercase tracking-widest">{t('status.action_required')}</span>
                                             </div> 
                                         )} 
                                     </div> 
@@ -5925,13 +6143,13 @@
                                     {sessionOrder.length === 0 ? ( 
                                         <div className="space-y-6"> 
                                             <div className="bg-indigo-900/10 p-4 rounded-2xl border border-indigo-500/10"> 
-                                                <p className="text-[10px] font-black text-indigo-400 uppercase tracking-widest">Activation Guide</p> 
-                                                <p className="text-xs font-bold text-slate-400 mt-2 leading-relaxed italic">Select a preset protocol below to initialize the system. This will go "Online" as soon as a program is selected.</p> 
+                                                <p className="text-[10px] font-black text-indigo-400 uppercase tracking-widest">{t('status.activation_guide')}</p>
+                                                <p className="text-xs font-bold text-slate-400 mt-2 leading-relaxed italic">{t('status.activation_text')}</p>
                                             </div> 
                                             <div className="grid grid-cols-1 gap-3"> 
                                                 {allPresets.map(p => ( 
                                                     <button key={p.id} onClick={() => loadPreset(p)} className="p-6 bg-slate-900 rounded-[2rem] border border-indigo-500/30 text-left group hover:border-indigo-500 transition-all shadow-xl"> 
-                                                        <h4 className="font-black text-white text-base group-hover:text-indigo-400 italic">Initialize: {p.name}</h4> 
+                                                        <h4 className="font-black text-white text-base group-hover:text-indigo-400 italic">{t('status.initialize')}: {p.name}</h4>
                                                         <p className="text-[9px] font-bold text-slate-500 mt-2 uppercase">{p.description}</p> 
                                                     </button> 
                                                 ))} 
@@ -5940,10 +6158,10 @@
                                     ) : ( 
                                         <div className="space-y-4"> 
                                             <div className="p-6 bg-indigo-900/10 rounded-3xl border border-indigo-500/20"> 
-                                                <p className="text-[10px] font-black text-indigo-400 uppercase tracking-widest">Active Sequence</p> 
+                                                <p className="text-[10px] font-black text-indigo-400 uppercase tracking-widest">{t('status.active_sequence')}</p>
                                                 <p className="text-sm font-black text-white mt-1 italic uppercase tracking-tight">{sessionOrder.join(' • ')}</p>
                                             </div> 
-                                            <button onClick={() => setActiveTab('workout')} className="w-full py-5 accent-gradient text-white rounded-[2rem] font-black text-[10px] uppercase tracking-[0.4em] shadow-2xl">Enter Training Center</button> 
+                                            <button onClick={() => setActiveTab('workout')} className="w-full py-5 accent-gradient text-white rounded-[2rem] font-black text-[10px] uppercase tracking-[0.4em] shadow-2xl">{t('status.enter_training_center')}</button>
                                         </div> 
                                     )} 
                                 </div> 
@@ -5956,7 +6174,7 @@
                                                 <Icon name="bolt" className="w-6 h-6 animate-pulse" />
                                             </div>
                                             <div>
-                                                <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Streak</p>
+                                                <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">{t('status.streak')}</p>
                                                 {/* Calculate Streak */}
                                                 <p className="text-2xl font-black text-white italic">{(() => {
                                                     const weeks = new Set(logs.map(l => {
@@ -5966,7 +6184,7 @@
                                                         return `${d.getFullYear()}-W${Math.ceil(days / 7)}`;
                                                     }));
                                                     return weeks.size; // Simple "Active Weeks" count for now as per "Streak" requirement variation
-                                                })()} <span className="text-[10px] text-slate-600 not-italic">WEEKS</span></p>
+                                                })()} <span className="text-[10px] text-slate-600 not-italic">{t('status.weeks')}</span></p>
                                             </div>
                                         </div>
                                         <div className="glass p-6 rounded-[2.5rem] flex items-center gap-4">
@@ -5974,7 +6192,7 @@
                                                 <Icon name="tool" className="w-6 h-6" />
                                             </div>
                                             <div>
-                                                <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">Level</p>
+                                                <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">{t('status.level')}</p>
                                                 <p className="text-2xl font-black text-white italic">{(() => {
                                                     const totalVol = logs.reduce((acc, l) => acc + (l.volume || 0), 0);
                                                     return Math.floor(Math.sqrt(totalVol) / 10) || 1; 
@@ -5990,14 +6208,14 @@
                                         <div className="flex justify-between items-center relative z-10">
                                             <div className="flex items-center gap-3">
                                                 <Icon name="shield" className={`w-6 h-6 ${recoveryStatus.color}`} />
-                                                <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">System Status</h3>
+                                                <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">{t('status.system_status')}</h3>
                                             </div>
-                                            <span className={`text-[10px] font-black uppercase tracking-widest ${recoveryStatus.color}`}>{recoveryStatus.status}</span>
+                                            <span className={`text-[10px] font-black uppercase tracking-widest ${recoveryStatus.color}`}>{t(`status.${recoveryStatus.status.toLowerCase()}`)}</span>
                                         </div>
                                         <div className="h-2 bg-slate-800 rounded-full overflow-hidden relative z-10">
                                             <div className={`h-full transition-all duration-1000 ${recoveryStatus.barColor}`} style={{width: `${recoveryStatus.pct}%`}} />
                                         </div>
-                                        <p className="text-[9px] text-slate-500 font-bold italic text-center relative z-10">Based on acute volume load (48h)</p>
+                                        <p className="text-[9px] text-slate-500 font-bold italic text-center relative z-10">{t('status.based_on_acute')}</p>
                                         <div className={`absolute top-0 right-0 w-32 h-32 blur-[50px] opacity-10 ${recoveryStatus.barColor}`} />
                                     </div>
                                 )}
@@ -6010,7 +6228,7 @@
                                     <div className="space-y-4 px-2"> 
                                         <div className="flex items-center gap-2"> 
                                             <Icon name="library" className="text-indigo-500 w-4 h-4" /> 
-                                            <h3 className="text-[10px] font-black uppercase text-white tracking-[0.2em]">Protocol Suite</h3> 
+                                            <h3 className="text-[10px] font-black uppercase text-white tracking-[0.2em]">{t('status.protocol_suite')}</h3>
                                         </div> 
                                         <div className="flex gap-2 overflow-x-auto no-scrollbar pb-2"> 
                                             {allPresets.map(p => ( 
@@ -6026,11 +6244,11 @@
                                 <div className="grid grid-cols-2 gap-4">
                                     <button onClick={() => setShowOneRepMax(true)} className="glass p-6 rounded-[2rem] flex items-center justify-center gap-3 hover:bg-indigo-900/20 transition-colors group border-white/5">
                                         <div className="p-2 bg-slate-900 rounded-xl text-slate-500 group-hover:text-indigo-400 transition-colors"><Icon name="dumbbell" className="w-5 h-5" /></div>
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">1RM Calc</span>
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">{t('home.rm_calc')}</span>
                                     </button>
                                     <button onClick={() => setActiveTab('features')} className="glass p-6 rounded-[2rem] flex items-center justify-center gap-3 hover:bg-indigo-900/20 transition-colors group border-white/5">
                                         <div className="p-2 bg-slate-900 rounded-xl text-slate-500 group-hover:text-indigo-400 transition-colors"><Icon name="info" className="w-5 h-5" /></div>
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">System Guide</span>
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">{t('home.system_guide')}</span>
                                     </button>
                                     <button onClick={handleBackup} className="glass p-6 rounded-[2rem] flex items-center justify-center gap-3 hover:bg-indigo-900/20 transition-colors group border-white/5">
                                         <div className="p-2 bg-slate-900 rounded-xl text-slate-500 group-hover:text-indigo-400 transition-colors"><Icon name="history" className="w-5 h-5" /></div>
@@ -6051,16 +6269,16 @@
                                     <div className="glass p-10 rounded-[3rem] space-y-8 text-center border-red-500/20 bg-red-900/5"> 
                                         <Icon name="bolt" className="w-12 h-12 mx-auto text-red-900 opacity-50" /> 
                                         <div className="space-y-2"> 
-                                            <h2 className="text-xl font-black uppercase text-white tracking-widest italic">System Offline</h2> 
-                                            <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">No Protocol Loaded. System Standby.</p> 
+                                            <h2 className="text-xl font-black uppercase text-white tracking-widest italic">{t('status.offline')}</h2>
+                                            <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{t('status.no_protocol')}. {t('status.standby')}.</p>
                                         </div> 
-                                        <button onClick={() => setActiveTab('home')} className="w-full py-5 accent-gradient text-white rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] shadow-xl">Activate System on Home Tab</button> 
+                                        <button onClick={() => setActiveTab('home')} className="w-full py-5 accent-gradient text-white rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] shadow-xl">{t('workout.activate_system')}</button>
                                     </div> 
                                 ) : !currentWorkout ? ( 
                                     <div className="glass p-10 rounded-[3rem] space-y-10 border-white/5 shadow-2xl"> 
                                         <div className="space-y-2"> 
-                                            <h2 className="text-4xl font-black tracking-tighter leading-none italic uppercase">Training<br/><span className="text-indigo-500">Center</span></h2> 
-                                            <p className="text-[11px] font-black text-slate-500 uppercase tracking-widest">Recommended: {getPredictedSession(selectedDate) || "---"}</p> 
+                                            <h2 className="text-4xl font-black tracking-tighter leading-none italic uppercase">{t('workout.training_center').split(' ')[0]}<br/><span className="text-indigo-500">{t('workout.training_center').split(' ').slice(1).join(' ')}</span></h2>
+                                            <p className="text-[11px] font-black text-slate-500 uppercase tracking-widest">{t('workout.recommended')}: {getPredictedSession(selectedDate) || "---"}</p>
                                         </div> 
                                         <div className="space-y-6"> 
                                             <input type="date" value={selectedDate} onChange={e => setSelectedDate(e.target.value)} className="w-full p-5 bg-slate-900 rounded-3xl font-black text-indigo-400 border border-white/5" /> 
@@ -6069,7 +6287,7 @@
                                                     <button key={s} onClick={() => setSelectedSession(s)} className={`p-5 rounded-3xl text-[10px] font-black uppercase border transition-all ${selectedSession === s ? 'accent-gradient text-white border-transparent shadow-xl scale-105' : 'bg-slate-900 text-slate-600 border-white/5'}`}>{s}</button> 
                                                 ))} 
                                             </div> 
-                                            <button onClick={startWorkout} className="w-full py-8 accent-gradient text-white rounded-[2.5rem] font-black uppercase tracking-[0.4em] text-xs shadow-2xl active:scale-95 transition-all">Engage Lift</button> 
+                                            <button onClick={startWorkout} className="w-full py-8 accent-gradient text-white rounded-[2.5rem] font-black uppercase tracking-[0.4em] text-xs shadow-2xl active:scale-95 transition-all">{t('workout.engage_lift')}</button>
                                         </div> 
                                     </div> 
                                 ) : ( 
@@ -6079,7 +6297,7 @@
                                             {currentWorkout.lastStats && ( 
                                                 <div className="glass p-6 rounded-[2rem] space-y-3"> 
                                                     <div className="flex justify-between items-end"> 
-                                                        <p className="text-[10px] font-black text-indigo-400 uppercase tracking-widest">Volume Parity</p> 
+                                                        <p className="text-[10px] font-black text-indigo-400 uppercase tracking-widest">{t('workout.volume_parity')}</p>
                                                         <p className="text-[10px] font-black text-white italic">{currentVolume} / {currentWorkout.lastStats.volume} kg</p> 
                                                     </div> 
                                                     <div className="h-2.5 bg-slate-800 rounded-full overflow-hidden shadow-inner"> 
@@ -6092,25 +6310,25 @@
                                             {currentWorkout && (
                                                 <button onClick={() => setFocusMode(!focusMode)} className={`col-span-2 p-4 rounded-2xl border transition-all flex items-center justify-center gap-2 ${focusMode ? 'bg-indigo-600 text-white border-transparent' : 'bg-slate-900 text-slate-500 border-white/5'}`}>
                                                     <Icon name="bolt" className="w-4 h-4" />
-                                                    <span className="text-[9px] font-black uppercase tracking-widest">{focusMode ? 'Exit Focus Mode' : 'Enter Focus Mode'}</span>
+                                                    <span className="text-[9px] font-black uppercase tracking-widest">{focusMode ? t('workout.exit_focus') : t('workout.enter_focus')}</span>
                                                 </button>
                                             )}
 
                                             {/* LIVE KINETIC IMPACT PANEL */}
                                             <div className="glass p-6 rounded-[2rem] space-y-3 col-span-2 md:col-span-2">
                                                 <div className="flex justify-between items-end">
-                                                    <p className="text-[10px] font-black text-indigo-400 uppercase tracking-widest">Live Kinetic Impact</p>
-                                                    <p className="text-[10px] font-black text-white italic">Session Load</p>
+                                                    <p className="text-[10px] font-black text-indigo-400 uppercase tracking-widest">{t('workout.live_kinetic_impact')}</p>
+                                                    <p className="text-[10px] font-black text-white italic">{t('workout.session_load')}</p>
                                                 </div>
                                                 <div className="space-y-2">
                                                     {(() => {
                                                         const sorted = calculateImpactDistribution(currentWorkout.exercises, true);
-                                                        if (sorted.length === 0) return <span className="text-[9px] text-slate-600 font-bold uppercase tracking-widest italic">Start lifting to see impact data</span>;
+                                                        if (sorted.length === 0) return <span className="text-[9px] text-slate-600 font-bold uppercase tracking-widest italic">{t('trends.no_data')}</span>;
                                                         
                                                         return sorted.map((d) => (
                                                             <div key={d.muscle} className="space-y-1">
                                                                 <div className="flex justify-between text-[8px] font-black uppercase tracking-widest text-slate-400">
-                                                                    <span>{d.muscle}</span>
+                                                                    <span>{t('muscles.' + d.muscle)}</span>
                                                                     <span>{d.score}</span>
                                                                 </div>
                                                                 <div className="h-1.5 bg-slate-800 rounded-full overflow-hidden">
@@ -6164,9 +6382,9 @@
                                                                         <div className="flex items-center gap-2">
                                                                             {/* Target Muscle Pill */}
                                                                             <span className="text-[9px] font-black text-indigo-400 uppercase tracking-widest border border-indigo-500/30 px-2 py-0.5 rounded-md">
-                                                                                Target: {getImpact(ex)[0]?.muscle || 'General'}
+                                                                                {t('modals.target')}: {t('muscles.' + (getImpact(ex)[0]?.muscle || 'Other'))}
                                                                             </span>
-                                                                            {ex.unilateral && <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wide">Unilateral</span>}
+                                                                            {ex.unilateral && <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wide">{t('workout.unilateral')}</span>}
                                                                         </div>
 
                                                                         {/* Title */}
@@ -6195,17 +6413,17 @@
                                                                         up.exercises[exIdx].sets.unshift({ kg: warmUpKg, reps: '', rir: '', done: false, type: 'warmup' });
                                                                         setCurrentWorkout(up);
                                                                     }} className="px-4 py-2 bg-yellow-900/20 text-yellow-500 rounded-xl text-[9px] font-black uppercase tracking-widest hover:bg-yellow-900/40 transition-colors border border-yellow-500/20 whitespace-nowrap">
-                                                                        + Warmup
+                                                                        + {t('workout.warmup')}
                                                                     </button>
 
                                                                     {ex.station.includes("Smith") && (
                                                                         <button onClick={() => setCalculatorTarget({ targetKg: ex.sets[0].kg || 20, barKg: 20 })} className="px-4 py-2 bg-indigo-900/20 text-indigo-400 rounded-xl text-[9px] font-black uppercase tracking-widest hover:bg-indigo-900/40 transition-colors border border-indigo-500/20 whitespace-nowrap flex items-center gap-2">
-                                                                            <Icon name="dumbbell" className="w-3 h-3" /> Plates
+                                                                            <Icon name="dumbbell" className="w-3 h-3" /> {t('workout.plates')}
                                                                         </button>
                                                                     )}
 
                                                                     <button onClick={() => setSwappingIdx(exIdx)} className="px-4 py-2 bg-slate-800 text-slate-400 rounded-xl text-[9px] font-black uppercase tracking-widest hover:bg-slate-700 transition-colors border border-white/5 whitespace-nowrap flex items-center gap-2">
-                                                                        <Icon name="shuffle" className="w-3 h-3" /> Swap
+                                                                        <Icon name="shuffle" className="w-3 h-3" /> {t('workout.swap')}
                                                                     </button>
                                                                 </div>
                                                             </div>
@@ -6229,7 +6447,7 @@
                                                                         <div className={`col-span-1 text-center font-black text-[10px] ${set.type === 'warmup' ? 'text-yellow-600' : 'text-slate-700'}`}>{sIdx+1}</div> 
                                                                         <input id={`input-kg-${exIdx}-${sIdx}`} type="number" placeholder="KG" value={set.kg} disabled={set.done} onChange={e => { const up = {...currentWorkout}; up.exercises[exIdx].sets[sIdx].kg = e.target.value; setCurrentWorkout(up); }} className={`col-span-3 p-3 bg-black rounded-2xl font-black text-base text-center border-none text-white focus:ring-2 ${set.type === 'warmup' ? 'focus:ring-yellow-500' : 'focus:ring-indigo-500'}`} /> 
                                                                         <div className="col-span-3 relative">
-                                                                            <input id={`input-reps-${exIdx}-${sIdx}`} type="number" placeholder={ghostReps ? `Ghost: ${ghostReps}` : "R"} value={set.reps} disabled={set.done} onChange={e => { const up = {...currentWorkout}; up.exercises[exIdx].sets[sIdx].reps = e.target.value; setCurrentWorkout(up); }} className={`w-full p-3 bg-black rounded-2xl font-black text-base text-center border-none focus:ring-2 ${set.type === 'warmup' ? 'focus:ring-yellow-500' : 'focus:ring-indigo-500'} ${beatGhost ? 'text-emerald-400 font-bold' : 'text-white'}`} /> 
+                                                                            <input id={`input-reps-${exIdx}-${sIdx}`} type="number" placeholder={ghostReps ? `${t('workout.ghost')}: ${ghostReps}` : "R"} value={set.reps} disabled={set.done} onChange={e => { const up = {...currentWorkout}; up.exercises[exIdx].sets[sIdx].reps = e.target.value; setCurrentWorkout(up); }} className={`w-full p-3 bg-black rounded-2xl font-black text-base text-center border-none focus:ring-2 ${set.type === 'warmup' ? 'focus:ring-yellow-500' : 'focus:ring-indigo-500'} ${beatGhost ? 'text-emerald-400 font-bold' : 'text-white'}`} />
                                                                              {ex.unilateral && <span className="absolute right-1 bottom-1 text-[8px] font-bold text-slate-600">/side</span>}
                                                                         </div>
                                                                         <div className="col-span-2 flex flex-col gap-1">
@@ -6291,7 +6509,7 @@
                                                                     const lastKg = up.exercises[exIdx].sets[up.exercises[exIdx].sets.length-1]?.kg || '';
                                                                     up.exercises[exIdx].sets.push({ kg: lastKg, reps: '', rir: '', done: false, type: 'working' });
                                                                     setCurrentWorkout(up);
-                                                                }} className="w-full py-3 bg-slate-900 rounded-2xl border border-white/5 text-[10px] font-black uppercase tracking-widest text-slate-500 hover:text-white hover:border-white/10 transition-colors">+ Add Working Set</button>
+                                                                }} className="w-full py-3 bg-slate-900 rounded-2xl border border-white/5 text-[10px] font-black uppercase tracking-widest text-slate-500 hover:text-white hover:border-white/10 transition-colors">{t('workout.add_set')}</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -6302,12 +6520,12 @@
                                         </div>
                                         <button onClick={() => setIsAddingExercise(true)} className="w-full py-4 bg-slate-900 rounded-[2rem] border border-white/5 text-[10px] font-black uppercase tracking-widest text-indigo-400 hover:text-white hover:bg-indigo-900/20 transition-all mb-4 flex items-center justify-center gap-2">
                                             <Icon name="library" className="w-4 h-4" />
-                                            <span>Add Manual Exercise</span>
+                                            <span>{t('workout.add_manual')}</span>
                                         </button>
 
                                         <button onClick={() => {
                                             setDebriefData({ workout: currentWorkout, duration: stopwatch, volume: currentVolume });
-                                        }} className="w-full py-8 accent-gradient text-white rounded-[3rem] font-black uppercase shadow-2xl tracking-[0.4em] text-xs">Terminate Session</button>
+                                        }} className="w-full py-8 accent-gradient text-white rounded-[3rem] font-black uppercase shadow-2xl tracking-[0.4em] text-xs">{t('workout.terminate')}</button>
 
                                         {/* STICKY LIVE IMPACT DOCK */}
                                         <div className="fixed bottom-0 left-0 right-0 glass border-t border-white/10 px-6 py-4 pb-8 z-[60] shadow-[0_-10px_40px_rgba(0,0,0,0.5)] transition-transform duration-300">
@@ -6315,8 +6533,8 @@
                                                 <div className="flex justify-between items-center">
                                                      <div className="flex items-center gap-2">
                                                         <Icon name="trends" className="w-3 h-3 text-indigo-400" />
-                                                        <span className="text-[10px] font-black text-white uppercase tracking-widest">Live Load</span>
-                                                        <span className="text-[9px] font-bold text-slate-500">({currentWorkout.exercises.filter(ex => ex.sets.some(s => s.done)).length} Active)</span>
+                                                        <span className="text-[10px] font-black text-white uppercase tracking-widest">{t('workout.live_load')}</span>
+                                                        <span className="text-[9px] font-bold text-slate-500">({currentWorkout.exercises.filter(ex => ex.sets.some(s => s.done)).length} {t('workout.active')})</span>
                                                      </div>
                                                 </div>
 
@@ -6330,7 +6548,7 @@
                                                                  <div className="w-full bg-slate-800/50 rounded-t-md relative h-full overflow-hidden">
                                                                      <div className={`absolute bottom-0 left-0 right-0 transition-all duration-500 ${pct >= 100 ? 'bg-emerald-500' : 'bg-indigo-500'}`} style={{height: `${pct}%`}} />
                                                                  </div>
-                                                                 <span className="text-[6px] font-black text-slate-500 uppercase tracking-tighter group-hover:text-white leading-tight -rotate-45 mb-2 origin-left whitespace-nowrap">{group}</span>
+                                                                 <span className="text-[6px] font-black text-slate-500 uppercase tracking-tighter group-hover:text-white leading-tight -rotate-45 mb-2 origin-left whitespace-nowrap">{t('muscles.' + group)}</span>
                                                              </div>
                                                          );
                                                      })}
@@ -6396,6 +6614,10 @@
                             </div>
                         )}
 
+                        {activeTab === 'arsenal' && (
+                            <Arsenal masterExercises={library} />
+                        )}
+
                         {/* BUILDER TAB */}
                         {activeTab === 'builder' && (
                             <BuilderTab 
@@ -6416,100 +6638,30 @@
 
                         {/* FEATURES TAB */}
                         {activeTab === 'features' && <SystemManual />}
-                        {activeTab === 'features' && (
-                            <div className="tab-content space-y-8 pb-20">
-                                <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">System<br/><span className="text-indigo-500">Manual</span></h2>
-                                
-                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="trends" className="w-5 h-5" /></div>
-                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Kinetic Impact</h3>
-                                    </div>
-                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">A real-time visual representation of muscle stimulation based on the Tomi Kinetic Impact protocol. The app parses exercise notes for "Primary," "Secondary," and "Tertiary" muscle groups to visualize your training balance.</p>
-                                </div>
-
-                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="bolt" className="w-5 h-5" /></div>
-                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Volume Parity</h3>
-                                    </div>
-                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">An automated progressive overload monitor. The system compares your current session's total weight (KG × Reps) against your last performance. Reach 100% to exceed your previous best.</p>
-                                </div>
-
-                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="dumbbell" className="w-5 h-5" /></div>
-                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Smart Logic</h3>
-                                    </div>
-                                    <ul className="space-y-4">
-                                        <li className="space-y-1">
-                                            <span className="text-[10px] font-black text-white uppercase tracking-widest block">Auto-Warmups</span>
-                                            <span className="text-xs text-slate-500 font-medium">Uses historical max load to suggest 50% and 75% warmup sets.</span>
-                                        </li>
-                                        <li className="space-y-1">
-                                            <span className="text-[10px] font-black text-white uppercase tracking-widest block">e1RM Calculation</span>
-                                            <span className="text-xs text-slate-500 font-medium">Every set calculates an Estimated 1-Rep Max to track strength gains without failure testing.</span>
-                                        </li>
-                                        <li className="space-y-1">
-                                            <span className="text-[10px] font-black text-white uppercase tracking-widest block">RIR Logging</span>
-                                            <span className="text-xs text-slate-500 font-medium">Track Reps In Reserve (0-4). 0 RIR means absolute failure.</span>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="tool" className="w-5 h-5" /></div>
-                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Station Aware</h3>
-                                    </div>
-                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">The app detects station changes (e.g., Smith Machine to Lat Station) and provides visual dividers. Use the Dumbbell Icon on Smith exercises to open the Plate Loader tool.</p>
-                                </div>
-
-                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="shield" className="w-5 h-5" /></div>
-                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Biometric Status</h3>
-                                    </div>
-                                    <div className="space-y-2">
-                                        <div className="flex justify-between items-center text-xs font-bold text-slate-500"><span className="text-emerald-500">Fresh</span> <span>ACWR &lt; 1.5</span></div>
-                                        <div className="flex justify-between items-center text-xs font-bold text-slate-500"><span className="text-yellow-500">Recovering</span> <span>ACWR 1.5 - 2.0</span></div>
-                                        <div className="flex justify-between items-center text-xs font-bold text-slate-500"><span className="text-red-500">Fried</span> <span>ACWR &gt; 2.0 (Deload recommended)</span></div>
-                                    </div>
-                                    <p className="text-[10px] text-slate-600 mt-4 leading-relaxed">The system uses the <strong>Acute:Chronic Workload Ratio (ACWR)</strong> with <strong>Time-Decay</strong>. Stress from 48h ago counts less than stress from 2h ago. This ensures the status reflects your <em>current</em> readiness.</p>
-                                </div>
-
-                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="info" className="w-5 h-5" /></div>
-                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Gap Analysis</h3>
-                                    </div>
-                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">Every 7 days, the app compares actual performance against the protocol's ideal distribution. If you are <span className="text-emerald-500 font-bold">Fresh</span>, neglected muscles trigger a <span className="text-yellow-400 font-bold">Glow-Yellow</span> reminder to add volume.</p>
-                                </div>
-
-                                <div className="glass p-8 rounded-[3rem] space-y-6 border-white/5">
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-3 bg-indigo-900/20 rounded-2xl text-indigo-400"><Icon name="library" className="w-5 h-5" /></div>
-                                        <h3 className="text-xl font-black italic uppercase text-white tracking-tighter">Meta-Library Support</h3>
-                                    </div>
-                                    <p className="text-xs text-slate-400 leading-relaxed font-medium">The system now supports structured exercise data. This allows for "Pattern Swapping" (e.g., replacing one Chest Press with another while maintaining the same Kinetic Impact) and "Attachment Tracking" to streamline your Tytax setup.</p>
-                                </div>
-                            </div>
-                        )}
  
                         {activeTab === 'settings' && ( 
                             <div className="tab-content space-y-10 pb-20"> 
-                                <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">Master<br/><span className="text-indigo-500">Node</span></h2> 
+                                <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">{t('settings.master_node').split(' ')[0]}<br/><span className="text-indigo-500">{t('settings.master_node').split(' ').slice(1).join(' ')}</span></h2>
                                 <div className="glass p-10 rounded-[3rem] space-y-10 border-white/5"> 
                                     <div className="space-y-4"> 
-                                        <div className="flex items-center gap-3"><Icon name="bolt" className="text-indigo-500 w-5 h-5" /><h3 className="font-black text-white uppercase text-xs tracking-widest">Protocol Ingestion</h3></div> 
-                                        <textarea value={libraryInput} onChange={e => setLibraryInput(e.target.value)} placeholder='Paste JSON protocol here...' className="w-full h-40 bg-black p-6 rounded-[2rem] text-[10px] font-mono border border-white/5 text-indigo-300 focus:ring-1 focus:ring-indigo-500 no-scrollbar" /> 
-                                        <button onClick={importJSON} className="w-full py-5 accent-gradient text-white rounded-[2rem] font-black text-xs uppercase shadow-2xl tracking-[0.3em]">Inject JSON</button> 
+                                        <div className="flex items-center gap-3"><Icon name="bolt" className="text-indigo-500 w-5 h-5" /><h3 className="font-black text-white uppercase text-xs tracking-widest">{t('settings.protocol_ingestion')}</h3></div>
+                                        <textarea value={libraryInput} onChange={e => setLibraryInput(e.target.value)} placeholder={t('settings.paste_json')} className="w-full h-40 bg-black p-6 rounded-[2rem] text-[10px] font-mono border border-white/5 text-indigo-300 focus:ring-1 focus:ring-indigo-500 no-scrollbar" />
+                                        <button onClick={importJSON} className="w-full py-5 accent-gradient text-white rounded-[2rem] font-black text-xs uppercase shadow-2xl tracking-[0.3em]">{t('settings.inject_json')}</button>
                                     </div> 
                                     <div className="h-px bg-white/5" /> 
-                                    <div className="grid grid-cols-1 gap-6"> 
+                                    <div className="grid grid-cols-1 gap-6">
+                                        {/* LANGUAGE TOGGLE */}
+                                        <div className="flex justify-between items-center px-2">
+                                            <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{t('settings.language')}</label>
+                                            <div className="flex bg-slate-900 rounded-xl p-1 border border-white/5">
+                                                <button onClick={() => setLanguage('hr')} className={`px-4 py-2 rounded-lg text-[9px] font-black uppercase transition-all ${language === 'hr' ? 'bg-indigo-600 text-white shadow-lg' : 'text-slate-500 hover:text-white'}`}>{t('settings.croatian')}</button>
+                                                <button onClick={() => setLanguage('en')} className={`px-4 py-2 rounded-lg text-[9px] font-black uppercase transition-all ${language === 'en' ? 'bg-indigo-600 text-white shadow-lg' : 'text-slate-500 hover:text-white'}`}>{t('settings.english')}</button>
+                                            </div>
+                                        </div>
+
                                         {/* INVENTORY LOCKER */}
                                         <div className="space-y-4">
-                                            <div className="flex items-center gap-3"><Icon name="tool" className="text-indigo-500 w-5 h-5" /><h3 className="font-black text-white uppercase text-xs tracking-widest">Inventory Locker</h3></div>
+                                            <div className="flex items-center gap-3"><Icon name="tool" className="text-indigo-500 w-5 h-5" /><h3 className="font-black text-white uppercase text-xs tracking-widest">{t('settings.inventory_locker')}</h3></div>
                                             <div className="grid grid-cols-2 gap-2">
                                                 {PRESETS[0].data.RECOMMENDED_ATTACHMENTS.map(att => (
                                                     <button key={att.name} onClick={() => { if (userInventory.includes(att.name)) setUserInventory(userInventory.filter(i => i !== att.name)); else setUserInventory([...userInventory, att.name]); }} className={`p-3 rounded-xl text-[9px] font-bold text-left transition-all ${userInventory.includes(att.name) ? 'bg-indigo-900/30 text-indigo-400 border border-indigo-500/30' : 'bg-slate-900 text-slate-600 border border-white/5'}`}>
@@ -6521,11 +6673,11 @@
                                         <div className="h-px bg-white/5" />
 
                                         <div className="flex justify-between items-center px-2"> 
-                                            <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Rotation Epoch</label> 
+                                            <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{t('settings.rotation_epoch')}</label>
                                             <input type="date" value={startDate} onChange={e => setStartDate(e.target.value)} className="bg-transparent font-black text-indigo-500 border-none text-right focus:ring-0" /> 
                                         </div>
                                         <div className="flex justify-between items-center px-2"> 
-                                            <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Warmup Strategy</label> 
+                                            <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{t('settings.warmup_strategy')}</label>
                                             <select value={warmupStrategy} onChange={e => setWarmupStrategy(e.target.value)} className="bg-transparent font-black text-indigo-500 border-none text-right focus:ring-0 uppercase text-[10px]">
                                                 <option value="Standard">Standard</option>
                                                 <option value="Heavy">Heavy (Potentiation)</option>
@@ -6533,7 +6685,7 @@
                                             </select>
                                         </div>
                                         <div className="flex justify-between items-center px-2"> 
-                                            <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">OLED Pure Black</label> 
+                                            <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{t('settings.oled_mode')}</label>
                                             <button onClick={() => setOledMode(!oledMode)} className={`w-12 h-6 rounded-full transition-colors relative ${oledMode ? 'bg-indigo-500' : 'bg-slate-800'}`}>
                                                 <div className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform ${oledMode ? 'translate-x-6' : 'translate-x-0'}`} />
                                             </button>
@@ -6545,8 +6697,11 @@
                                             </button>
                                         </div> 
                                         <div className="flex gap-4"> 
-                                            <button onClick={exportCSV} className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-emerald-400 border border-white/5 hover:text-white transition-colors">Export CSV</button>
-                                            <button onClick={handleBackup} className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-slate-400 border border-white/5 hover:text-white transition-colors"><Icon name="history" /> Backup</button>
+                                            <button onClick={exportCSV} className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-emerald-400 border border-white/5 hover:text-white transition-colors">{t('settings.export_csv')}</button>
+                                            <button onClick={() => { 
+                                                const blob = new Blob([JSON.stringify({ logs, sessionOrder, trainingPlan, masterExercises, startDate, oledMode, userInventory, userProfile, customProtocols, warmupStrategy })], { type: 'application/json' });
+                                                const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "tytax_backup.json"; a.click(); 
+                                            }} className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-slate-400 border border-white/5 hover:text-white transition-colors"><Icon name="history" /> {t('settings.backup')}</button>
                                             <label className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-indigo-400 border border-white/5 cursor-pointer hover:bg-indigo-900/10 transition-colors"> 
                                                 <Icon name="library" /> Import <input type="file" onChange={(e) => { 
                                                     const f = e.target.files[0]; const r = new FileReader(); 
@@ -6579,7 +6734,7 @@
                                             </label> 
                                         </div> 
                                     </div> 
-                                    <button onClick={() => { if(confirm("Purge system?")) { localStorage.clear(); window.location.reload(); } }} className="w-full text-red-900 hover:text-red-500 py-4 font-black text-[10px] uppercase tracking-[0.4em] transition-colors">Emergency Purge</button> 
+                                    <button onClick={() => { if(confirm(t('settings.purge_confirm'))) { localStorage.clear(); window.location.reload(); } }} className="w-full text-red-900 hover:text-red-500 py-4 font-black text-[10px] uppercase tracking-[0.4em] transition-colors">{t('settings.emergency_purge')}</button>
                                 </div> 
                             </div> 
                         )} 
@@ -6589,12 +6744,12 @@
                     {!focusMode && (
                         <nav className="md:hidden fixed bottom-8 left-8 right-8 glass text-white rounded-[3rem] flex justify-around p-3 shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-40 border-white/5"> 
                             {[ 
-                                { id: 'home', icon: 'home', label: 'Home' }, 
-                                { id: 'workout', icon: 'bolt', label: 'Gym' }, 
-                                { id: 'trends', icon: 'trends', label: 'Trends' }, 
-                                { id: 'history', icon: 'history', label: 'Vault' },
-                                { id: 'builder', icon: 'tool', label: 'Builder' },
-                                { id: 'features', icon: 'info', label: 'Features' }
+                                { id: 'home', icon: 'home', label: t('nav.home') },
+                                { id: 'workout', icon: 'bolt', label: t('nav.workout') },
+                                { id: 'trends', icon: 'trends', label: t('nav.trends') },
+                                { id: 'history', icon: 'history', label: t('nav.history') },
+                                { id: 'builder', icon: 'tool', label: t('nav.builder') },
+                                { id: 'features', icon: 'info', label: t('nav.features') }
                             ].map(tab => ( 
                                 <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex flex-col items-center gap-1 px-6 py-4 rounded-[2.5rem] transition-all duration-700 ${activeTab === tab.id ? 'accent-gradient scale-110 shadow-2xl' : 'text-slate-600 hover:text-slate-400'}`}> 
                                     <Icon name={tab.icon} className="w-6 h-6" /><span className="text-[7px] font-black uppercase tracking-[0.2em]">{tab.label}</span> 
