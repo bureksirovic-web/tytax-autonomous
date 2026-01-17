@@ -4371,6 +4371,15 @@
             const [step, setStep] = useState(1);
             const [profile, setProfile] = useState({ name: '', units: 'KG', bodyweight: '' });
 
+            // Helper for translations inside Wizard (since it's outside App scope)
+            const t = (key) => {
+                const lang = localStorage.getItem('tytax_language') || 'en';
+                const keys = key.split('.');
+                let val = TRANSLATIONS[lang];
+                for (const k of keys) val = val?.[k];
+                return val || key;
+            };
+
             if (step === 1) {
                 return (
                     <div className="fixed inset-0 z-[300] bg-black/95 backdrop-blur-xl flex items-center justify-center p-6 animate-fade-in">
@@ -5390,7 +5399,7 @@
                 return localStorage.getItem('tytax_auto_backup') === 'true';
             });
 
-            const [language, setLanguage] = useState(() => localStorage.getItem('tytax_language') || 'hr');
+            const [language, setLanguage] = useState(() => localStorage.getItem('tytax_language') || 'en');
             useEffect(() => localStorage.setItem('tytax_language', language), [language]);
 
             const t = (key) => {
@@ -5458,6 +5467,43 @@
             const [isAddingExercise, setIsAddingExercise] = useState(false);
 
             const availableExercises = useMemo(() => getAvailableExercises(logs), [logs]);
+
+            const handleBackup = (dataOverride) => {
+                const data = dataOverride || { logs, sessionOrder, trainingPlan, masterExercises, startDate, oledMode, userInventory, userProfile, customProtocols, warmupStrategy };
+                const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
+                const a = document.createElement('a');
+                a.href = URL.createObjectURL(blob);
+                a.download = `tytax_backup_${new Date().toISOString().split('T')[0]}.json`;
+                a.click();
+            };
+
+            const handleImport = (file) => {
+                if (!file) return;
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    try {
+                        const d = JSON.parse(e.target.result);
+                        if (!d.logs && !d.sessionOrder) throw new Error("Invalid Format");
+                        if (d.logs && !Array.isArray(d.logs)) throw new Error("Security Violation: Logs must be an array");
+
+                        setLogs(d.logs || []);
+                        setMasterExercises(d.masterExercises || []);
+                        setTrainingPlan(d.trainingPlan || {});
+                        setSessionOrder(d.sessionOrder || []);
+                        setStartDate(d.startDate || startDate);
+                        if (d.oledMode !== undefined) setOledMode(d.oledMode);
+                        if (d.userInventory) setUserInventory(d.userInventory);
+                        if (d.userProfile) setUserProfile(d.userProfile);
+                        if (d.customProtocols) setCustomProtocols(d.customProtocols);
+                        if (d.warmupStrategy) setWarmupStrategy(d.warmupStrategy);
+
+                        showToast("System Restored");
+                    } catch (err) {
+                        alert("Restore Failed: " + err.message);
+                    }
+                };
+                reader.readAsText(file);
+            };
  
             // --- STORAGE SAFETY & QUOTA WARNING (Fix #2) ---
             useEffect(() => {
