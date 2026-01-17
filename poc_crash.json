@@ -1,8 +1,4 @@
 {
   "logs": "MALICIOUS_PAYLOAD_NOT_AN_ARRAY",
-  "sessionOrder": ["Upper A", "Lower A"],
-  "trainingPlan": {},
-  "masterExercises": [],
-  "startDate": "2023-01-01",
-  "oledMode": false
+  "sessionOrder": ["Upper A", "Lower A"]
 }

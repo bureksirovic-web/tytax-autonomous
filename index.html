@@ -63,6 +63,33 @@
         }; 
  
         // --- HELPER FUNCTIONS ---
+        const safeLocalStorage = {
+            setItem: (key, value) => {
+                try {
+                    localStorage.setItem(key, value);
+                } catch (e) {
+                    if (e.name === 'QuotaExceededError' || e.name === 'NS_ERROR_DOM_QUOTA_REACHED') {
+                        // Emit event so App can show a toast, or fallback to alert
+                        window.dispatchEvent(new CustomEvent('tytax-storage-error'));
+                        console.error("Storage Quota Exceeded", e);
+                    }
+                }
+            },
+            getItem: (key) => localStorage.getItem(key)
+        };
+
+        const escapeCSV = (str) => {
+            if (typeof str !== 'string') return str;
+            // 1. Escape double quotes with double-double quotes
+            let val = str.replace(/"/g, '""');
+            // 2. Prevent Formula Injection (CSV Injection)
+            if (/^[=+\-@]/.test(val)) {
+                val = "'" + val;
+            }
+            // 3. Wrap in quotes
+            return `"${val}"`;
+        };
+
         const normalizeStationName = (name) => {
             const n = name.toLowerCase();
             if (n.includes('smith')) return 'SMITH';
@@ -5328,10 +5355,16 @@
             });
             const [masterExercises, setMasterExercises] = useState(() => {
                 try {
-                    return JSON.parse(localStorage.getItem('tytax_master_exercises') || '[]');
+                    const local = JSON.parse(localStorage.getItem('tytax_master_exercises') || '[]');
+                    if (Array.isArray(local) && local.length > 0) return local;
+
+                    // FALLBACK FOR EMPTY STATE (Fix #4)
+                    const p = PRESETS.find(pr => pr.id === 'kinetic_impact') || PRESETS[0];
+                    return p?.data.MASTER_EXERCISES || [];
                 } catch (e) {
                     console.error("Error parsing tytax_master_exercises from localStorage", e);
-                    return [];
+                    // Absolute fallback
+                    return PRESETS[0]?.data.MASTER_EXERCISES || [];
                 }
             });
             const [startDate, setStartDate] = useState(() => localStorage.getItem('tytax_start_date') || new Date().toISOString().split('T')[0]);
@@ -5442,20 +5475,26 @@
 
             const availableExercises = useMemo(() => getAvailableExercises(logs), [logs]);
  
+            // --- STORAGE SAFETY & QUOTA WARNING (Fix #2) ---
+            useEffect(() => {
+                const handleStorageError = () => showToast("WARNING: Storage Full! Data not saved.");
+                window.addEventListener('tytax-storage-error', handleStorageError);
+                return () => window.removeEventListener('tytax-storage-error', handleStorageError);
+            }, []);
+
             useEffect(() => { 
-                localStorage.setItem('tytax_logs', JSON.stringify(logs)); 
-                localStorage.setItem('tytax_session_order', JSON.stringify(sessionOrder)); 
-                localStorage.setItem('tytax_training_plan', JSON.stringify(trainingPlan)); 
-                localStorage.setItem('tytax_master_exercises', JSON.stringify(masterExercises)); 
-                localStorage.setItem('tytax_start_date', startDate); 
-                localStorage.setItem('tytax_oled_mode', oledMode);
-                localStorage.setItem('tytax_warmup_strategy', warmupStrategy);
-                localStorage.setItem('tytax_inventory', JSON.stringify(userInventory));
-                localStorage.setItem('tytax_user_profile', JSON.stringify(userProfile));
-                localStorage.setItem('tytax_bodyweight_log', JSON.stringify(bodyweightLog));
-                localStorage.setItem('tytax_pinned_metrics', JSON.stringify(pinnedMetrics));
-                localStorage.setItem('tytax_auto_backup', autoBackup);
-            }, [logs, sessionOrder, trainingPlan, masterExercises, startDate, oledMode, warmupStrategy, userInventory, userProfile, bodyweightLog, pinnedMetrics, autoBackup]);
+                safeLocalStorage.setItem('tytax_logs', JSON.stringify(logs));
+                safeLocalStorage.setItem('tytax_session_order', JSON.stringify(sessionOrder));
+                safeLocalStorage.setItem('tytax_training_plan', JSON.stringify(trainingPlan));
+                safeLocalStorage.setItem('tytax_master_exercises', JSON.stringify(masterExercises));
+                safeLocalStorage.setItem('tytax_start_date', startDate);
+                safeLocalStorage.setItem('tytax_oled_mode', oledMode);
+                safeLocalStorage.setItem('tytax_warmup_strategy', warmupStrategy);
+                safeLocalStorage.setItem('tytax_inventory', JSON.stringify(userInventory));
+                safeLocalStorage.setItem('tytax_user_profile', JSON.stringify(userProfile));
+                safeLocalStorage.setItem('tytax_bodyweight_log', JSON.stringify(bodyweightLog));
+                safeLocalStorage.setItem('tytax_pinned_metrics', JSON.stringify(pinnedMetrics));
+            }, [logs, sessionOrder, trainingPlan, masterExercises, startDate, oledMode, warmupStrategy, userInventory, userProfile, bodyweightLog, pinnedMetrics]);
  
             useEffect(() => { 
                 let interval; 
@@ -5610,7 +5649,10 @@
 
             const exportCSV = () => {
                 const headers = ["Date,Session,Exercise,Set,KG,Reps,RIR,e1RM"];
-                const rows = logs.flatMap(l => l.exercises.flatMap(e => e.sets.filter(s => s.done).map((s, i) => `${new Date(l.date).toLocaleDateString()},${l.session},"${e.name}",${i+1},${s.kg},${s.reps},${s.rir},${calculateE1RM(s.kg, s.reps)}`)));
+                // FIX #3: Escape CSV fields and prevent injection
+                const rows = logs.flatMap(l => l.exercises.flatMap(e => e.sets.filter(s => s.done).map((s, i) =>
+                    `${new Date(l.date).toLocaleDateString()},${l.session},${escapeCSV(e.name)},${i+1},${s.kg},${s.reps},${s.rir},${calculateE1RM(s.kg, s.reps)}`
+                )));
                 const blob = new Blob([headers.concat(rows).join("\n")], { type: "text/csv" });
                 const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "tytax_training_log.csv"; a.click();
             };
@@ -5630,74 +5672,21 @@
             }; 
  
             const loadPreset = (p) => { applyLibraryData(p.data); showToast(`${p.name} Active`); setActiveTab('workout'); }; 
-            const importJSON = () => { try { applyLibraryData(JSON.parse(libraryInput)); showToast("Custom Protocol Loaded"); setLibraryInput(""); setActiveTab('workout'); } catch(e) { showToast("Invalid Protocol JSON"); } }; 
+            // FIX #1: Strict Type Validation in importJSON
+            const importJSON = () => {
+                try {
+                    const d = JSON.parse(libraryInput);
+                    if (!d.MASTER_EXERCISES || !Array.isArray(d.MASTER_EXERCISES)) throw new Error("Invalid Format");
 
-            const handleBackup = (dataOverride = null) => {
-                const data = dataOverride || { logs, sessionOrder, trainingPlan, masterExercises, startDate, oledMode, userInventory, userProfile, customProtocols, warmupStrategy };
-                const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
-                const a = document.createElement('a');
-                a.href = URL.createObjectURL(blob);
-                a.download = `tytax_backup_${new Date().toISOString().split('T')[0]}.json`;
-                a.click();
+                    applyLibraryData(d);
+                    showToast("Custom Protocol Loaded");
+                    setLibraryInput("");
+                    setActiveTab('workout');
+                } catch(e) {
+                    showToast("Invalid Protocol JSON");
+                }
             };
-
-            const handleImport = (file) => {
-                const r = new FileReader();
-                r.onload = (ev) => {
-                    try {
-                        const d = JSON.parse(ev.target.result);
-
-                        // Scenario 1: Full Backup (Has Logs)
-                        if (d.logs && Array.isArray(d.logs)) {
-                            if (confirm("RESTORE BACKUP?\n\nThis will overwrite your current history, settings, and profile with the data from this file.\n\nContinue?")) {
-                                setLogs(d.logs || []);
-                                setMasterExercises(d.masterExercises || []);
-                                setTrainingPlan(d.trainingPlan || {});
-                                setSessionOrder(d.sessionOrder || []);
-                                setStartDate(d.startDate || startDate);
-                                if (d.oledMode !== undefined) setOledMode(d.oledMode);
-                                if (d.userInventory) setUserInventory(d.userInventory);
-                                if (d.userProfile) setUserProfile(d.userProfile);
-                                if (d.customProtocols) setCustomProtocols(d.customProtocols);
-                                if (d.warmupStrategy) setWarmupStrategy(d.warmupStrategy);
-                                showToast("System Restored");
-                            }
-                        }
-                        // Scenario 2: Protocol Only (No Logs, but has Plan)
-                        else if (d.INITIAL_PLAN || d.trainingPlan) {
-                            const name = prompt("PROTOCOL DETECTED\n\nEnter a name for this custom protocol:", "Imported Protocol");
-                            if (name) {
-                                const newProtocol = {
-                                    id: `imported_${Date.now()}`,
-                                    name: name,
-                                    description: "Imported from file",
-                                    data: {
-                                        INITIAL_PLAN: d.INITIAL_PLAN || d.trainingPlan,
-                                        INITIAL_ORDER: d.INITIAL_ORDER || d.sessionOrder || Object.keys(d.trainingPlan || d.INITIAL_PLAN),
-                                        MASTER_EXERCISES: d.MASTER_EXERCISES || d.masterExercises || []
-                                    }
-                                };
-                                const updated = [...customProtocols, newProtocol];
-                                setCustomProtocols(updated);
-                                localStorage.setItem('tytax_custom_protocols', JSON.stringify(updated));
-
-                                if(confirm(`Protocol "${name}" imported.\n\nLoad it now?`)) {
-                                    loadPreset(newProtocol);
-                                } else {
-                                    showToast("Protocol Saved to Library");
-                                }
-                            }
-                        } else {
-                            throw new Error("Unknown Format");
-                        }
-                    } catch(err) {
-                        alert("Import Failed: Invalid File Format");
-                        console.error(err);
-                    }
-                };
-                r.readAsText(file);
-            };
-
+ 
             const getPredictedSession = (d) => { 
                 if (!sessionOrder.length) return null; 
                 const diff = Math.floor((new Date(d) - new Date(startDate)) / 86400000); 
@@ -6714,13 +6703,17 @@
                                                 const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "tytax_backup.json"; a.click(); 
                                             }} className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-slate-400 border border-white/5 hover:text-white transition-colors"><Icon name="history" /> {t('settings.backup')}</button>
                                             <label className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-indigo-400 border border-white/5 cursor-pointer hover:bg-indigo-900/10 transition-colors"> 
-                                                <Icon name="library" /> {t('settings.import')} <input type="file" onChange={(e) => {
+                                                <Icon name="library" /> Import <input type="file" onChange={(e) => { 
                                                     const f = e.target.files[0]; const r = new FileReader(); 
                                                     r.onload = (ev) => { 
                                                         try {
                                                             const d = JSON.parse(ev.target.result); 
+                                                            // FIX #1: Strict Type Validation (DoS Prevention)
                                                             if (!d.logs && !d.sessionOrder) throw new Error("Invalid Format");
                                                             
+                                                            if (d.logs && !Array.isArray(d.logs)) throw new Error("Security Violation: Logs must be an array");
+                                                            if (d.sessionOrder && !Array.isArray(d.sessionOrder)) throw new Error("Security Violation: Session Order must be an array");
+
                                                             setLogs(d.logs || []); 
                                                             setMasterExercises(d.masterExercises || []); 
                                                             setTrainingPlan(d.trainingPlan || {}); 
@@ -6732,9 +6725,9 @@
                                                             if (d.customProtocols) setCustomProtocols(d.customProtocols);
                                                             if (d.warmupStrategy) setWarmupStrategy(d.warmupStrategy);
                                                             
-                                                            showToast(t('settings.vault_restored'));
+                                                            showToast("Vault Restored"); 
                                                         } catch(err) {
-                                                            alert(t('settings.invalid_format'));
+                                                            alert("Restore Failed: " + err.message);
                                                         }
                                                     }; r.readAsText(f); 
                                                 }} className="hidden" /> 
