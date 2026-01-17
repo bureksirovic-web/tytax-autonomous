@@ -3822,7 +3822,7 @@
             );
         };
 
-        const ProgramManager = ({ config, programDraft, onEditSlot, onPublish, onCancel }) => {
+        const ProgramManager = ({ config, programDraft, onEditSlot, onPublish, onCancel, oledMode }) => {
             // Calculate overall completion
             const filledSlots = programDraft.filter(d => d.exercises.length > 0).length;
             const isComplete = filledSlots === programDraft.length;
@@ -3830,7 +3830,7 @@
             return (
                 <div className="tab-content space-y-6 pb-32">
                     {/* Header */}
-                    <div className="sticky top-0 bg-[#020617]/95 backdrop-blur-xl z-30 p-4 -mx-4 border-b border-white/5 space-y-4">
+                    <div className={`sticky top-0 ${oledMode ? 'bg-black/95' : 'bg-[#020617]/95'} backdrop-blur-xl z-30 p-4 -mx-4 border-b border-white/5 space-y-4`}>
                         <div className="flex justify-between items-end">
                             <div>
                                  <h2 className="text-3xl font-black tracking-tighter italic uppercase leading-none">{t('builder.program_manager').split(' ')[0]}<br/><span className="text-indigo-500">{t('builder.program_manager').split(' ').slice(1).join(' ')}</span></h2>
@@ -3878,7 +3878,7 @@
             );
         };
 
-        const Arsenal = ({ masterExercises }) => {
+        const Arsenal = ({ masterExercises, oledMode }) => {
             const [search, setSearch] = useState('');
             const [filter, setFilter] = useState('ALL');
 
@@ -3906,7 +3906,7 @@
 
             return (
                 <div className="tab-content space-y-6 pb-32">
-                     <div className="sticky top-0 bg-[#020617]/95 backdrop-blur-xl z-30 p-4 -mx-4 border-b border-white/5 space-y-4">
+                     <div className={`sticky top-0 ${oledMode ? 'bg-black/95' : 'bg-[#020617]/95'} backdrop-blur-xl z-30 p-4 -mx-4 border-b border-white/5 space-y-4`}>
                         <div className="flex items-center gap-3">
                             <div className="p-3 bg-indigo-500/20 rounded-2xl text-indigo-400">
                                 <Icon name="library" className="w-6 h-6" />
@@ -3974,7 +3974,7 @@
             );
         };
 
-        const BuilderTab = ({ metaLibrary, userInventory, onSave, onCancel }) => {
+        const BuilderTab = ({ metaLibrary, userInventory, onSave, onCancel, oledMode }) => {
             // STATE: Global Program
             const [wizardConfig, setWizardConfig] = useState(null);
             const [programDraft, setProgramDraft] = useState([]); 
@@ -4153,14 +4153,14 @@
             if (view === 'WIZARD') return <BuilderWizard onComplete={handleWizardComplete} onCancel={onCancel} />;
 
             // VIEW 2: MANAGER (HUB)
-            if (view === 'MANAGER') return <ProgramManager config={wizardConfig} programDraft={programDraft} onEditSlot={openSlot} onPublish={publishProtocol} onCancel={onCancel} />;
+            if (view === 'MANAGER') return <ProgramManager config={wizardConfig} programDraft={programDraft} onEditSlot={openSlot} onPublish={publishProtocol} onCancel={onCancel} oledMode={oledMode} />;
 
             // VIEW 3: EDITOR (EXISTING BUILDER UI)
             if (view === 'EDITOR') {
                 return (
                     <div className="tab-content space-y-6 pb-32">
                         {/* EDITOR HEADER */}
-                        <div className="space-y-4 sticky top-0 bg-[#020617]/95 backdrop-blur-xl z-30 p-2 -mx-2">
+                        <div className={`space-y-4 sticky top-0 ${oledMode ? 'bg-black/95' : 'bg-[#020617]/95'} backdrop-blur-xl z-30 p-2 -mx-2`}>
                             <div className="flex justify-between items-end px-2">
                                 <div>
                                      <h2 className="text-xl font-black italic uppercase text-white">{programDraft[activeSlot].name}</h2>
@@ -5959,10 +5959,10 @@
             }, [logs, trainingPlan, masterExercises]);
  
             return ( 
-                <div className="min-h-screen bg-[#020617] text-slate-200 font-inter selection:bg-indigo-500/30 md:flex">
+                <div className={`min-h-screen ${oledMode ? 'bg-black' : 'bg-[#020617]'} text-slate-200 font-inter selection:bg-indigo-500/30 md:flex`}>
                     
                     {/* DESKTOP SIDEBAR (Visible md+) */}
-                    <aside className="hidden md:flex flex-col w-64 h-screen sticky top-0 border-r border-white/5 bg-[#020617] p-6 z-50">
+                    <aside className={`hidden md:flex flex-col w-64 h-screen sticky top-0 border-r border-white/5 ${oledMode ? 'bg-black' : 'bg-[#020617]'} p-6 z-50`}>
                         <div className="flex items-center gap-3 mb-10 px-2">
                             <div className="p-2 accent-gradient rounded-xl shadow-lg shadow-indigo-500/20">
                                 <Icon name="bolt" className="text-white w-6 h-6" />
@@ -6683,7 +6683,7 @@
                         )}
 
                         {activeTab === 'arsenal' && (
-                            <Arsenal masterExercises={library} />
+                            <Arsenal masterExercises={library} oledMode={oledMode} />
                         )}
 
                         {/* BUILDER TAB */}
@@ -6691,6 +6691,7 @@
                             <BuilderTab 
                                 metaLibrary={library}
                                 userInventory={userInventory}
+                                oledMode={oledMode}
                                 onSave={(newProtocol) => {
                                     const updated = [...customProtocols, newProtocol];
                                     setCustomProtocols(updated);
