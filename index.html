@@ -3862,7 +3862,7 @@
                                         {day.exercises.length > 0 ? (
                                             <p className="text-[10px] text-indigo-400 font-bold">{day.exercises.length} Exercises • {getProjectedImpact(day.exercises)[0]?.muscle || 'Mixed'} Focus</p>
                                         ) : (
-                                            <p className="text-[10px] text-slate-600 italic">Empty Slot - Tap to Design</p>
+                                            <p className="text-[10px] text-slate-600 italic">{t('builder.empty_slot')}</p>
                                         )}
                                     </div>
                                     <div className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all ${day.exercises.length > 0 ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/20' : 'bg-slate-800 text-slate-600 group-hover:text-indigo-400'}`}>
@@ -3966,7 +3966,7 @@
                             );
                         }) : (
                             <div className="py-20 text-center opacity-40">
-                                <p className="text-[10px] font-black uppercase tracking-widest">No Intel Found</p>
+                                <p className="text-[10px] font-black uppercase tracking-widest">{t('builder.no_intel')}</p>
                             </div>
                         )}
                      </div>
@@ -4030,13 +4030,13 @@
 
             // 4. PUBLISH -> SAVE TO APP PRESETS
             const publishProtocol = () => {
-                const name = prompt("Name your Protocol:", `${wizardConfig.days}-Day ${wizardConfig.split} Elite`);
+                const name = prompt(t('builder.name_protocol'), `${wizardConfig.days}-Day ${wizardConfig.split} Elite`);
                 if (!name) return;
 
                 const newProtocol = {
                     id: `custom_${Date.now()}`,
                     name: name,
-                    description: `Custom ${wizardConfig.days}-Day ${wizardConfig.split} program created in Architect.`,
+                    description: t('builder.custom_description').replace('{days}', wizardConfig.days).replace('{split}', wizardConfig.split),
                     data: {
                         // Map the draft slots to the protocol format
                         INITIAL_PLAN: programDraft.reduce((acc, day) => {
@@ -4498,7 +4498,7 @@
                     
                     <div className="flex-1 overflow-y-auto space-y-8 pb-32 no-scrollbar">
                         <div className="space-y-4">
-                            <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest px-2">Session Notes</label>
+                            <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest px-2">{t('builder.session_notes')}</label>
                             <textarea value={editedLog.notes || ''} onChange={e => setEditedLog({...editedLog, notes: e.target.value})} className="w-full bg-slate-900 rounded-3xl p-5 text-xs text-white border-none focus:ring-2 focus:ring-indigo-500" rows="3" />
                         </div>
 
@@ -5125,7 +5125,7 @@
                             {log.notes && (
                                 <div className="mt-6 p-5 bg-yellow-900/10 border border-yellow-500/20 rounded-2xl relative overflow-hidden">
                                      <div className="absolute top-0 left-0 w-1 h-full bg-yellow-500/50" />
-                                     <p className="text-[8px] font-black text-yellow-500 uppercase tracking-widest mb-2">Session Notes</p>
+                                     <p className="text-[8px] font-black text-yellow-500 uppercase tracking-widest mb-2">{t('builder.session_notes')}</p>
                                      <p className="text-xs font-medium text-slate-300 italic leading-relaxed">"{log.notes}"</p>
                                 </div>
                             )}
@@ -5475,9 +5475,9 @@
                     const needsUpgrade = masterExercises.some(ex => !ex.impact && currentPreset.data.MASTER_EXERCISES.some(nex => cleanName(nex.name) === cleanName(ex.name)));
 
                     if (needsUpgrade) {
-                        if (confirm("New Kinetic Impact protocol available. Update your library? (Recommended)")) {
+                        if (confirm(t('status.upgrade_prompt'))) {
                             applyLibraryData(currentPreset.data);
-                            showToast("System Upgraded");
+                            showToast(t('status.system_upgraded'));
                         }
                     }
                 }
@@ -5519,8 +5519,8 @@
                 reader.onload = (e) => {
                     try {
                         const d = JSON.parse(e.target.result);
-                        if (!d.logs && !d.sessionOrder) throw new Error("Invalid Format");
-                        if (d.logs && !Array.isArray(d.logs)) throw new Error("Security Violation: Logs must be an array");
+                        if (!d.logs && !d.sessionOrder) throw new Error(t('settings.invalid_format'));
+                        if (d.logs && !Array.isArray(d.logs)) throw new Error(t('settings.security_violation_logs'));
 
                         setLogs(d.logs || []);
                         setMasterExercises(d.masterExercises || []);
@@ -5533,9 +5533,9 @@
                         if (d.customProtocols) setCustomProtocols(d.customProtocols);
                         if (d.warmupStrategy) setWarmupStrategy(d.warmupStrategy);
 
-                        showToast("System Restored");
+                        showToast(t('settings.vault_restored'));
                     } catch (err) {
-                        alert("Restore Failed: " + err.message);
+                        alert(t('settings.restore_failed') + err.message);
                     }
                 };
                 reader.readAsText(file);
@@ -5543,7 +5543,7 @@
  
             // --- STORAGE SAFETY & QUOTA WARNING (Fix #2) ---
             useEffect(() => {
-                const handleStorageError = () => showToast("WARNING: Storage Full! Data not saved.");
+                const handleStorageError = () => showToast(t('status.storage_warning'));
                 window.addEventListener('tytax-storage-error', handleStorageError);
                 return () => window.removeEventListener('tytax-storage-error', handleStorageError);
             }, []);
@@ -5598,7 +5598,7 @@
                     // 3. Voice Synthesis
                     if ('speechSynthesis' in window) {
                         window.speechSynthesis.cancel();
-                        const u = new SpeechSynthesisUtterance("Rest complete");
+                        const u = new SpeechSynthesisUtterance(t('workout.rest_complete'));
                         u.rate = 1.2;
                         u.pitch = 1.0;
                         window.speechSynthesis.speak(u);
@@ -5742,14 +5742,14 @@
             const importJSON = () => {
                 try {
                     const d = JSON.parse(libraryInput);
-                    if (!d.MASTER_EXERCISES || !Array.isArray(d.MASTER_EXERCISES)) throw new Error("Invalid Format");
+                    if (!d.MASTER_EXERCISES || !Array.isArray(d.MASTER_EXERCISES)) throw new Error(t('settings.invalid_format'));
 
                     applyLibraryData(d);
-                    showToast("Custom Protocol Loaded");
+                    showToast(t('settings.protocol_loaded'));
                     setLibraryInput("");
                     setActiveTab('workout');
                 } catch(e) {
-                    showToast("Invalid Protocol JSON");
+                    showToast(t('settings.invalid_json'));
                 }
             };
  
@@ -6009,7 +6009,7 @@
                                 onSave={(updatedLog) => {
                                     setLogs(logs.map(l => l.id === updatedLog.id ? updatedLog : l));
                                     setEditingLog(null);
-                                    showToast("Log Updated");
+                                    showToast(t('vault.log_updated'));
                                 }}
                                 onCancel={() => setEditingLog(null)}
                             />
@@ -6048,7 +6048,7 @@
                             if (newPRs.length > 0) {
                                 setPrCelebration(newPRs);
                             } else {
-                                showToast("Protocol Logged"); 
+                                showToast(t('workout.protocol_logged'));
                             }
 
                             if (autoBackup) {
@@ -6065,7 +6065,7 @@
                                         customProtocols,
                                         warmupStrategy
                                     });
-                                    showToast("Auto-Backup Saved");
+                                    showToast(t('settings.auto_backup_saved'));
                                 }, 1000);
                             }
                         }} />}
@@ -6098,7 +6098,7 @@
 
                                     setCurrentWorkout(up);
                                     setIsAddingExercise(false);
-                                    showToast("Exercise Added");
+                                    showToast(t('workout.exercise_added'));
 
                                     // Auto-scroll to bottom
                                     setTimeout(() => {
@@ -6149,7 +6149,7 @@
                                     
                                     setCurrentWorkout(up);
                                     setSwappingIdx(null);
-                                    showToast("Exercise Swapped");
+                                    showToast(t('workout.exercise_swapped'));
                                 }}
                             />
                         )}
@@ -6185,7 +6185,7 @@
                                     </div> 
                                     <div> 
                                         <h1 className="font-black text-2xl tracking-tighter italic leading-none">TYTAX<span className="text-indigo-500">ELITE</span></h1> 
-                                        {currentWorkout && <p className="text-[9px] font-black text-slate-500 mt-1 uppercase tracking-widest italic">Live Session: {Math.floor(stopwatch/60)}m</p>} 
+                                        {currentWorkout && <p className="text-[9px] font-black text-slate-500 mt-1 uppercase tracking-widest italic">{t('workout.live_session')}: {Math.floor(stopwatch/60)}m</p>}
                                     </div> 
                                 </div> 
                                 <button onClick={() => setActiveTab('settings')} aria-label="Settings" className="p-3 bg-slate-900 rounded-2xl text-slate-500 border border-white/5"><Icon name="settings" /></button> 
@@ -6320,11 +6320,11 @@
                                     </button>
                                     <button onClick={handleBackup} className="glass p-6 rounded-[2rem] flex items-center justify-center gap-3 hover:bg-indigo-900/20 transition-colors group border-white/5">
                                         <div className="p-2 bg-slate-900 rounded-xl text-slate-500 group-hover:text-indigo-400 transition-colors"><Icon name="history" className="w-5 h-5" /></div>
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">Backup Data</span>
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">{t('home.backup_data')}</span>
                                     </button>
                                     <label className="glass p-6 rounded-[2rem] flex items-center justify-center gap-3 hover:bg-indigo-900/20 transition-colors group border-white/5 cursor-pointer">
                                         <div className="p-2 bg-slate-900 rounded-xl text-slate-500 group-hover:text-indigo-400 transition-colors"><Icon name="library" className="w-5 h-5" /></div>
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">Import Data</span>
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">{t('home.import_data')}</span>
                                         <input type="file" onChange={(e) => handleImport(e.target.files[0])} className="hidden" />
                                     </label>
                                 </div>
@@ -6637,7 +6637,7 @@
                                     bodyweightLog={bodyweightLog}
                                     userProfile={userProfile}
                                     onLogBodyweight={() => {
-                                        const w = prompt("Log current bodyweight:");
+                                        const w = prompt(t('trends.log_bodyweight'));
                                         if (w && !isNaN(w)) setBodyweightLog([...bodyweightLog, { date: new Date().toISOString().split('T')[0], value: parseFloat(w) }]);
                                     }}
                                 />
@@ -6653,12 +6653,12 @@
                                     logs={logs}
                                     pinned={pinnedMetrics}
                                     onEdit={() => {
-                                        const newPinned = prompt("Enter 3 exercises to pin (comma separated):", pinnedMetrics.join(','));
+                                        const newPinned = prompt(t('trends.enter_pinned'), pinnedMetrics.join(','));
                                         if (newPinned) setPinnedMetrics(newPinned.split(',').map(s => s.trim()).slice(0, 4));
                                     }}
                                 />
 
-                                {logs.length === 0 && <div className="py-40 text-center opacity-20"><Icon name="trends" className="w-12 h-12 mx-auto" /><p className="text-[10px] font-black uppercase mt-4 tracking-[0.3em]">No data records</p></div>} 
+                                {logs.length === 0 && <div className="py-40 text-center opacity-20"><Icon name="trends" className="w-12 h-12 mx-auto" /><p className="text-[10px] font-black uppercase mt-4 tracking-[0.3em]">{t('trends.no_records')}</p></div>}
                             </div> 
                         )} 
  
@@ -6759,7 +6759,7 @@
                                             </button>
                                         </div>
                                         <div className="flex justify-between items-center px-2">
-                                            <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Auto-Backup (Post-Workout)</label>
+                                            <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{t('settings.auto_backup')}</label>
                                             <button onClick={() => setAutoBackup(!autoBackup)} className={`w-12 h-6 rounded-full transition-colors relative ${autoBackup ? 'bg-emerald-500' : 'bg-slate-800'}`}>
                                                 <div className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform ${autoBackup ? 'translate-x-6' : 'translate-x-0'}`} />
                                             </button>
@@ -6777,10 +6777,10 @@
                                                         try {
                                                             const d = JSON.parse(ev.target.result); 
                                                             // FIX #1: Strict Type Validation (DoS Prevention)
-                                                            if (!d.logs && !d.sessionOrder) throw new Error("Invalid Format");
+                                                            if (!d.logs && !d.sessionOrder) throw new Error(t('settings.invalid_format'));
                                                             
-                                                            if (d.logs && !Array.isArray(d.logs)) throw new Error("Security Violation: Logs must be an array");
-                                                            if (d.sessionOrder && !Array.isArray(d.sessionOrder)) throw new Error("Security Violation: Session Order must be an array");
+                                                            if (d.logs && !Array.isArray(d.logs)) throw new Error(t('settings.security_violation_logs'));
+                                                            if (d.sessionOrder && !Array.isArray(d.sessionOrder)) throw new Error(t('settings.security_violation_session'));
 
                                                             setLogs(d.logs || []); 
                                                             setMasterExercises(d.masterExercises || []); 
@@ -6793,9 +6793,9 @@
                                                             if (d.customProtocols) setCustomProtocols(d.customProtocols);
                                                             if (d.warmupStrategy) setWarmupStrategy(d.warmupStrategy);
                                                             
-                                                            showToast("Vault Restored"); 
+                                                            showToast(t('settings.vault_restored'));
                                                         } catch(err) {
-                                                            alert("Restore Failed: " + err.message);
+                                                            alert(t('settings.restore_failed') + err.message);
                                                         }
                                                     }; r.readAsText(f); 
                                                 }} className="hidden" /> 

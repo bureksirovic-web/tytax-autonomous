@@ -34,11 +34,16 @@ const TRANSLATIONS = {
             system_status: "System Status",
             based_on_acute: "Based on acute volume load (48h)",
             protocol_suite: "Protocol Suite",
-            initialize: "Initialize"
+            initialize: "Initialize",
+            upgrade_prompt: "New Kinetic Impact protocol available. Update your library? (Recommended)",
+            system_upgraded: "System Upgraded",
+            storage_warning: "WARNING: Storage Full! Data not saved."
         },
         home: {
             rm_calc: "1RM Calc",
-            system_guide: "System Guide"
+            system_guide: "System Guide",
+            backup_data: "Backup Data",
+            import_data: "Import Data"
         },
         workout: {
             training_center: "Training Center",
@@ -66,7 +71,9 @@ const TRANSLATIONS = {
             exercise_swapped: "Exercise Swapped",
             protocol_logged: "Protocol Logged",
             activate_system: "Activate System on Home Tab",
-            unilateral: "Unilateral"
+            unilateral: "Unilateral",
+            live_session: "Live Session",
+            rest_complete: "Rest complete"
         },
         trends: {
             force_analytics: "Force Analytics",
@@ -80,7 +87,10 @@ const TRANSLATIONS = {
             trophy_case: "Trophy Case",
             edit_pinned: "Edit Pinned",
             latest: "Latest",
-            no_data: "No Data Available"
+            no_data: "No Data Available",
+            log_bodyweight: "Log current bodyweight:",
+            enter_pinned: "Enter 3 exercises to pin (comma separated):",
+            no_records: "No data records"
         },
         vault: {
             archive_vault: "Archive Vault",
@@ -117,7 +127,11 @@ const TRANSLATIONS = {
             view_log: "View Session Log",
             collapse: "Collapse Details",
             name_protocol: "Name your Protocol:",
-            protocol_created: "Protocol \"{name}\" Created"
+            protocol_created: "Protocol \"{name}\" Created",
+            empty_slot: "Empty Slot - Tap to Design",
+            no_intel: "No Intel Found",
+            session_notes: "Session Notes",
+            custom_description: "Custom {days}-Day {split} program created in Architect."
         },
         settings: {
             master_node: "Master Node",
@@ -137,7 +151,14 @@ const TRANSLATIONS = {
             invalid_format: "Invalid Format",
             language: "Language",
             croatian: "Croatian",
-            english: "English"
+            english: "English",
+            auto_backup: "Auto-Backup (Post-Workout)",
+            auto_backup_saved: "Auto-Backup Saved",
+            protocol_loaded: "Custom Protocol Loaded",
+            invalid_json: "Invalid Protocol JSON",
+            restore_failed: "Restore Failed: ",
+            security_violation_logs: "Security Violation: Logs must be an array",
+            security_violation_session: "Security Violation: Session Order must be an array"
         },
         muscles: {
             Chest: "Chest",
@@ -251,11 +272,16 @@ const TRANSLATIONS = {
             based_on_acute: "Na temelju akutnog volumena (48h)",
             protocol_suite: "Protokoli",
             initialize: "Pokreni",
-            no_protocol: "Nema Učitanog Protokola"
+            no_protocol: "Nema Učitanog Protokola",
+            upgrade_prompt: "Dostupan novi Kinetic Impact protokol. Ažurirati knjižnicu? (Preporučeno)",
+            system_upgraded: "Sustav Nadograđen",
+            storage_warning: "UPOZORENJE: Pohrana Puna! Podaci nisu spremljeni."
         },
         home: {
             rm_calc: "1RM Kalk",
-            system_guide: "Vodič Sustava"
+            system_guide: "Vodič Sustava",
+            backup_data: "Sigurnosna Kopija",
+            import_data: "Uvoz Podataka"
         },
         workout: {
             training_center: "Centar za Trening",
@@ -283,7 +309,9 @@ const TRANSLATIONS = {
             exercise_swapped: "Vježba Zamijenjena",
             protocol_logged: "Protokol Spremljen",
             activate_system: "Aktiviraj Sustav na Početnoj",
-            unilateral: "Unilateralno"
+            unilateral: "Unilateralno",
+            live_session: "Trening Uživo",
+            rest_complete: "Odmor završen"
         },
         trends: {
             force_analytics: "Analitika Sile",
@@ -297,7 +325,10 @@ const TRANSLATIONS = {
             trophy_case: "Trofeji",
             edit_pinned: "Uredi Prikaz",
             latest: "Zadnje",
-            no_data: "Nema Podataka"
+            no_data: "Nema Podataka",
+            log_bodyweight: "Unesite trenutnu tjelesnu težinu:",
+            enter_pinned: "Unesite 3 vježbe za praćenje (odvojene zarezom):",
+            no_records: "Nema zapisa"
         },
         vault: {
             archive_vault: "Arhiva Treninga",
@@ -334,7 +365,11 @@ const TRANSLATIONS = {
             view_log: "Pregledaj Zapis",
             collapse: "Sakrij Detalje",
             name_protocol: "Naziv Protokola:",
-            protocol_created: "Protokol \"{name}\" Kreiran"
+            protocol_created: "Protokol \"{name}\" Kreiran",
+            empty_slot: "Prazno mjesto - Dodirni za dizajn",
+            no_intel: "Nema podataka",
+            session_notes: "Bilješke treninga",
+            custom_description: "Prilagođeni {days}-dnevni {split} program kreiran u Arhitektu."
         },
         settings: {
             master_node: "Glavni Čvor",
@@ -354,7 +389,14 @@ const TRANSLATIONS = {
             invalid_format: "Neispravan Format",
             language: "Jezik",
             croatian: "Hrvatski",
-            english: "Engleski"
+            english: "Engleski",
+            auto_backup: "Auto-Backup (Nakon Treninga)",
+            auto_backup_saved: "Auto-Backup Spremljen",
+            protocol_loaded: "Prilagođeni Protokol Učitan",
+            invalid_json: "Neispravan JSON Protokola",
+            restore_failed: "Vraćanje Neuspjelo: ",
+            security_violation_logs: "Sigurnosna Povreda: Zapisi moraju biti niz",
+            security_violation_session: "Sigurnosna Povreda: Redoslijed treninga mora biti niz"
         },
         muscles: {
             Chest: "Prsa",
