@@ -27,7 +27,9 @@ async def run():
 
         page = await context.new_page()
 
-        # Load the page
+        page.on("console", lambda msg: print(f"CONSOLE: {msg.text}"))
+        page.on("pageerror", lambda exc: print(f"PAGE ERROR: {exc}"))
+
         print("Loading page...")
         await page.goto(f"file://{os.getcwd()}/index.html")
         await page.wait_for_timeout(2000)
@@ -39,23 +41,27 @@ async def run():
         else:
             print("FAILURE: Settings button not found.")
 
-        # Take screenshot of Dashboard (showing Postavke)
-        await page.screenshot(path="verification/dashboard_fixed.png")
-        print("Screenshot saved: verification/dashboard_fixed.png")
-
         # Navigate to Trends (Trendovi)
         print("Navigating to Trends...")
         await page.click("button:has-text('Trendovi')")
         await page.wait_for_timeout(2000)
-        await page.screenshot(path="verification/trends_fixed.png")
-        print("Screenshot saved: verification/trends_fixed.png")
+
+        # Check if Trends loaded (look for unique text 'Tjedni Volumen')
+        if await page.locator("text=Tjedni Volumen").first.is_visible():
+             print("SUCCESS: Trends tab loaded.")
+        else:
+             print("FAILURE: Trends tab did not load properly.")
 
         # Navigate to Builder (Graditelj)
         print("Navigating to Builder...")
         await page.click("button:has-text('Graditelj')")
         await page.wait_for_timeout(2000)
-        await page.screenshot(path="verification/builder_fixed.png")
-        print("Screenshot saved: verification/builder_fixed.png")
+
+        # Check if Builder loaded (look for 'Učestalost' from 'Učestalost Treninga')
+        if await page.locator("text=Učestalost").first.is_visible():
+             print("SUCCESS: Builder tab loaded.")
+        else:
+             print("FAILURE: Builder tab did not load properly.")
 
         await browser.close()
 

@@ -6,7 +6,8 @@ const TRANSLATIONS = {
             trends: "Trends",
             history: "Vault",
             builder: "Builder",
-            features: "Manual"
+            features: "Manual",
+            settings: "Settings"
         },
         status: {
             system: "System",
@@ -220,7 +221,8 @@ const TRANSLATIONS = {
             trends: "Trendovi",
             history: "Arhiva",
             builder: "Graditelj",
-            features: "Priručnik"
+            features: "Priručnik",
+            settings: "Postavke"
         },
         status: {
             system: "Sustav",
