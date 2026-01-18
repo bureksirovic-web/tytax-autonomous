@@ -1,0 +1,85 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - heading "TYTAXELITE" [level=1] [ref=e9]
+    - navigation [ref=e10]:
+      - button "Home" [ref=e11] [cursor=pointer]:
+        - img [ref=e12]
+        - generic [ref=e15]: Home
+      - button "Gym" [ref=e16] [cursor=pointer]:
+        - img [ref=e17]
+        - generic [ref=e19]: Gym
+      - button "Trends" [ref=e20] [cursor=pointer]:
+        - img [ref=e21]
+        - generic [ref=e24]: Trends
+      - button "Vault" [ref=e25] [cursor=pointer]:
+        - img [ref=e26]
+        - generic [ref=e29]: Vault
+      - button "Arsenal" [ref=e30] [cursor=pointer]:
+        - img [ref=e31]
+        - generic [ref=e33]: Arsenal
+      - button "Builder" [ref=e34] [cursor=pointer]:
+        - img [ref=e35]
+        - generic [ref=e37]: Builder
+      - button "Manual" [ref=e38] [cursor=pointer]:
+        - img [ref=e39]
+        - generic [ref=e41]: Manual
+      - button "Settings" [ref=e42] [cursor=pointer]:
+        - img [ref=e43]
+        - generic [ref=e46]: Settings
+    - generic [ref=e47]:
+      - generic [ref=e48]:
+        - generic [ref=e49]: System
+        - generic [ref=e50]: Standby
+      - generic [ref=e51]:
+        - generic [ref=e52]: Recovery
+        - generic [ref=e53]: Fresh
+  - main [ref=e54]:
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - heading "Welcome, Commander" [level=1] [ref=e58]:
+          - text: Welcome,
+          - text: Commander
+        - paragraph [ref=e59]: Initialize
+      - generic [ref=e60]:
+        - text: "Enter your designation:"
+        - textbox "..." [ref=e61]
+      - button "Next" [disabled] [ref=e62]
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - img [ref=e65]
+        - paragraph [ref=e67]: "System Status: Arsenal pre-loaded with Elite Protocol. Access Mainframe to customize or delete entries."
+      - generic [ref=e68]:
+        - generic [ref=e70]:
+          - heading "System Standby" [level=2] [ref=e73]:
+            - text: System
+            - text: Standby
+          - generic [ref=e74]: Action Required
+        - generic [ref=e75]:
+          - generic [ref=e76]:
+            - paragraph [ref=e77]: Activation Guide
+            - paragraph [ref=e78]: Select a preset protocol below to initialize the system. This will go "Online" as soon as a program is selected.
+          - 'button "Initialize: Tytax Elite v3.0 (Fixed 6/1 Split) Official 6/1 Kinetic Load protocol updated for v3.0 library." [ref=e80] [cursor=pointer]':
+            - 'heading "Initialize: Tytax Elite v3.0 (Fixed 6/1 Split)" [level=4] [ref=e81]'
+            - paragraph [ref=e82]: Official 6/1 Kinetic Load protocol updated for v3.0 library.
+      - generic [ref=e83]:
+        - button "Requisition Intel" [ref=e84] [cursor=pointer]:
+          - img [ref=e86]
+          - generic [ref=e88]: Requisition Intel
+        - button "1RM Calc" [ref=e89] [cursor=pointer]:
+          - img [ref=e91]
+          - generic [ref=e93]: 1RM Calc
+        - button "System Guide" [ref=e94] [cursor=pointer]:
+          - img [ref=e96]
+          - generic [ref=e98]: System Guide
+        - button "Backup Data" [ref=e99] [cursor=pointer]:
+          - img [ref=e101]
+          - generic [ref=e104]: Backup Data
+        - generic [ref=e105] [cursor=pointer]:
+          - img [ref=e107]
+          - generic [ref=e109]: Import Data
+```
