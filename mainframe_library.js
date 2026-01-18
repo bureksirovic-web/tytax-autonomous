@@ -21,8 +21,17 @@ window.TYTAX_MAINFRAME = [
         "s": 35
       }
     ],
-    "note": "",
-    "videos": []
+    "note": "t1x_number=179",
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=CNKJaduMaWo",
+        "label": "Official App Video"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=Y4F7NaQv_aA",
+        "label": "Official App Instruction"
+      }
+    ]
   },
   {
     "name": "Smith Incline Bench Press",
@@ -46,15 +55,15 @@ window.TYTAX_MAINFRAME = [
         "s": 35
       }
     ],
-    "note": "",
+    "note": "t1x_number=4",
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7NebYSt2P9U",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=L4pk8XggJFA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -80,15 +89,15 @@ window.TYTAX_MAINFRAME = [
         "s": 30
       }
     ],
-    "note": "",
+    "note": "t1x_number=10",
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=fMPwMW9UHY8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=x3KX_NSIb84",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -764,8 +773,17 @@ window.TYTAX_MAINFRAME = [
         "s": 30
       }
     ],
-    "note": "",
-    "videos": []
+    "note": "t1x_number=1020",
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=JgDCtTSrUSA",
+        "label": "Official App Video"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
+        "label": "Official App Instruction"
+      }
+    ]
   },
   {
     "name": "Smith Standing Overhead Press",
@@ -1789,8 +1807,13 @@ window.TYTAX_MAINFRAME = [
         "s": 25
       }
     ],
-    "note": "",
-    "videos": []
+    "note": "t1x_number=594",
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=WBgDTPQ62K4",
+        "label": "Official App Video"
+      }
+    ]
   },
   {
     "name": "Smith Split Squat",
@@ -1914,8 +1937,17 @@ window.TYTAX_MAINFRAME = [
         "s": 35
       }
     ],
-    "note": "Likely requires a dedicated leg-press plate/attachment. If you don't have it, remove this exercise.",
-    "videos": []
+    "note": "Likely requires a dedicated leg-press plate/attachment. If you don't have it, remove this exercise.; t1x_number=31",
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=oGva3toNDbs",
+        "label": "Official App Video"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=Djqo9kNI0Jo",
+        "label": "Official App Instruction"
+      }
+    ]
   },
   {
     "name": "Seated Leg Extension",
@@ -1939,15 +1971,15 @@ window.TYTAX_MAINFRAME = [
         "s": 25
       }
     ],
-    "note": "",
+    "note": "t1x_number=112",
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=o8Ye8nWLZ00",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=hhq-K4BtKh0",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -1998,15 +2030,15 @@ window.TYTAX_MAINFRAME = [
         "s": 25
       }
     ],
-    "note": "",
+    "note": "t1x_number=1195",
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Drfglxg6PQs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=aCHCFnNHyNs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -2232,8 +2264,17 @@ window.TYTAX_MAINFRAME = [
         "s": 25
       }
     ],
-    "note": "",
-    "videos": []
+    "note": "t1x_number=1195",
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=Drfglxg6PQs",
+        "label": "Official App Video"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=aCHCFnNHyNs",
+        "label": "Official App Instruction"
+      }
+    ]
   },
   {
     "name": "Smith Hip Thrust",
@@ -2257,15 +2298,15 @@ window.TYTAX_MAINFRAME = [
         "s": 30
       }
     ],
-    "note": "",
+    "note": "t1x_number=1348",
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=_VUvQ8X3IMM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=AR0lTYWYJLY",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -2291,15 +2332,15 @@ window.TYTAX_MAINFRAME = [
         "s": 25
       }
     ],
-    "note": "",
+    "note": "t1x_number=157",
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=O4ThRPDEYGo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=AR0lTYWYJLY",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -2475,8 +2516,17 @@ window.TYTAX_MAINFRAME = [
         "s": 40
       }
     ],
-    "note": "",
-    "videos": []
+    "note": "t1x_number=329",
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=Luw0_vbfk8Y",
+        "label": "Official App Video"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=9RMevfw_KCU",
+        "label": "Official App Instruction"
+      }
+    ]
   },
   {
     "name": "Smith Step-Up (high step glute bias)",
@@ -2550,8 +2600,13 @@ window.TYTAX_MAINFRAME = [
         "s": 25
       }
     ],
-    "note": "",
-    "videos": []
+    "note": "t1x_number=1070",
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=EK8oJIyk_vM",
+        "label": "Official App Video"
+      }
+    ]
   },
   {
     "name": "Smith Donkey Calf Raise (hip hinge support)",
@@ -2600,8 +2655,17 @@ window.TYTAX_MAINFRAME = [
         "s": 30
       }
     ],
-    "note": "Likely requires a dedicated leg-press plate/attachment. If you don't have it, remove this exercise.",
-    "videos": []
+    "note": "Likely requires a dedicated leg-press plate/attachment. If you don't have it, remove this exercise.; t1x_number=33",
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=drrx5K0gcPc",
+        "label": "Official App Video"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=VkBOCdjnU1A",
+        "label": "Official App Instruction"
+      }
+    ]
   },
   {
     "name": "Smith Single-Leg Standing Calf Raise",
@@ -2700,8 +2764,13 @@ window.TYTAX_MAINFRAME = [
         "s": 25
       }
     ],
-    "note": "",
-    "videos": []
+    "note": "t1x_number=1070",
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=EK8oJIyk_vM",
+        "label": "Official App Video"
+      }
+    ]
   },
   {
     "name": "Smith Standing Calf Raise (2s top hold)",
@@ -3021,11 +3090,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=SlIzz-jmJLM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=E_cPiJzCzN4",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -3073,7 +3142,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=YwHxQoVxZS0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -3094,12 +3163,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; instructionLevel=easy; t1x_number=6",
     "videos": [
       {
+        "url": "https://www.youtube.com/watch?v=6osaCvzS_gk",
+        "label": "Official App Video"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=bx9CATKlfp0",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=viupaYYXVbI",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -3143,11 +3216,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=k5ZqNZTZlSU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=arljJ4OtrF4",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -3169,11 +3242,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=fELmICBQEwY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XhJxK26QRCk",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -3192,7 +3265,16 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=1",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=SlIzz-jmJLM",
+        "label": "Official App Video"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=E_cPiJzCzN4",
+        "label": "Official App Instruction"
+      }
+    ]
   },
   {
     "name": "Factory1",
@@ -3209,7 +3291,16 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=1",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=SlIzz-jmJLM",
+        "label": "Official App Video"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=E_cPiJzCzN4",
+        "label": "Official App Instruction"
+      }
+    ]
   },
   {
     "name": "Packaging",
@@ -3226,7 +3317,16 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=1",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=SlIzz-jmJLM",
+        "label": "Official App Video"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=E_cPiJzCzN4",
+        "label": "Official App Instruction"
+      }
+    ]
   },
   {
     "name": "All About the TYTAX\u00c2\u00ae T1-X",
@@ -3243,7 +3343,16 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=1",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=SlIzz-jmJLM",
+        "label": "Official App Video"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=E_cPiJzCzN4",
+        "label": "Official App Instruction"
+      }
+    ]
   },
   {
     "name": "Factory2",
@@ -3396,7 +3505,12 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=5",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=YwHxQoVxZS0",
+        "label": "Official App Video"
+      }
+    ]
   },
   {
     "name": "TYTAX\u00c2\u00ae TX | Create workout routines for men",
@@ -3413,7 +3527,12 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=5",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=YwHxQoVxZS0",
+        "label": "Official App Video"
+      }
+    ]
   },
   {
     "name": "TYTAX\u00c2\u00ae TX | Create workout routines for women",
@@ -3430,7 +3549,12 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=6",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=6osaCvzS_gk",
+        "label": "Official App Video"
+      }
+    ]
   },
   {
     "name": "Delivery#6",
@@ -3447,7 +3571,12 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=6",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=6osaCvzS_gk",
+        "label": "Official App Video"
+      }
+    ]
   },
   {
     "name": "TYTAX\u00c2\u00ae TX | Option PR - The Power Runner",
@@ -3498,7 +3627,16 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=8",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=k5ZqNZTZlSU",
+        "label": "Official App Video"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=arljJ4OtrF4",
+        "label": "Official App Instruction"
+      }
+    ]
   },
   {
     "name": "TYTAX\u00c2\u00ae TX | Option DR - Dual Rotor",
@@ -3515,7 +3653,16 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=8",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=k5ZqNZTZlSU",
+        "label": "Official App Video"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=arljJ4OtrF4",
+        "label": "Official App Instruction"
+      }
+    ]
   },
   {
     "name": "TYTAX\u00c2\u00ae TX | Option JD-X - Jammer Arms and much more!",
@@ -3532,7 +3679,16 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=9",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=fELmICBQEwY",
+        "label": "Official App Video"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=XhJxK26QRCk",
+        "label": "Official App Instruction"
+      }
+    ]
   },
   {
     "name": "Delivery#9",
@@ -3549,7 +3705,16 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=9",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=fELmICBQEwY",
+        "label": "Official App Video"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=XhJxK26QRCk",
+        "label": "Official App Instruction"
+      }
+    ]
   },
   {
     "name": "TYTAX\u00c2\u00ae TX | Option TB - Unique T-Bar",
@@ -3643,7 +3808,16 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=12",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=ahI5tgw3DRg",
+        "label": "Official App Video"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
+        "label": "Official App Instruction"
+      }
+    ]
   },
   {
     "name": "Dumbbell Fly",
@@ -3663,11 +3837,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ahI5tgw3DRg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -3686,7 +3860,16 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=13",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=XqDNhAHn_VY",
+        "label": "Official App Video"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
+        "label": "Official App Instruction"
+      }
+    ]
   },
   {
     "name": "Dumbbell Incline Bench Press",
@@ -3706,11 +3889,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=XqDNhAHn_VY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -3732,11 +3915,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=hMlUsqmc7qI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -3758,11 +3941,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=q8uYVmqiBQU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -3784,11 +3967,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=cDSVIsJwg4g",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -3810,11 +3993,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7yIFdWSeCq0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -3836,11 +4019,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=WCtcRqpNris",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=jUq4H8pp6dY",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -3862,11 +4045,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=sTXDyCvQVCg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=jUq4H8pp6dY",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -3888,15 +4071,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=iWrc2kKDWis",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=SivFjRsH5wY",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -3918,11 +4101,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=q30lhv_ynBw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -3944,11 +4127,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=GK8vqedU-RY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=R9UI1Psxs80",
-        "label": "Instruction (Vertical)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -3970,7 +4153,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=J6BO-69dojg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -4000,31 +4183,31 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=IzSBk-ceXV8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=tgfE2d_Jdu8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=BdbHiE3yASA",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=JDk9ygtW72M",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=T6299r23YB4",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=rVvVkWmDeAc",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=LQr5UYNH0Yg",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -4054,7 +4237,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=tNMY9134UD0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -4084,11 +4267,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=lNFUNy_XaZw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=v-VXhjyiOB4",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -4110,27 +4293,27 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=vtMgnU0ZMrI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XscrhPD6Zhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=Qy4xu7bjT6o",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=LwHKXIUfX3o",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=W064st-0KCE",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XAblrZKBST8",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -4160,19 +4343,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=acNqDR5X1RI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Zble4OFaPUs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=oGva3toNDbs",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Djqo9kNI0Jo",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -4202,19 +4385,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=awWY-TvSQXI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=PqeU2GBD3p4",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=AtPNhtILEKI",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5-VA7udSHNg",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -4236,11 +4419,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=drrx5K0gcPc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=VkBOCdjnU1A",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -4270,11 +4453,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=6xvNcKsFGkg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=_fHOukprfzU",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -4304,15 +4487,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=wiKX1fM-cq0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=bk99US0-DlY",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=W9npPgosLxE",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -4342,11 +4525,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=9ERNuE7oPkg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=--hBK4DklvI",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -4368,11 +4551,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=SbvbC-RiOpg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=iAoi_A6OpKs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -4394,11 +4577,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=AWm2dv1poCs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=7JOYqOtzU-4",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -4420,11 +4603,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=bJSCnGau_L4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=-e8O4dAt5bw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -4446,19 +4629,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Wt5Tdaf8310",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=tfDRb6Muwew",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=8Gdj4Dg8Jig",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=36MZICyEGFc",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -4480,11 +4663,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8Llnc-Hahb8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=SG8HikXZceM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -4506,15 +4689,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=pQLnRLEXKA0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=7JOYqOtzU-4",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=yt06vJ2n61o",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -4536,15 +4719,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8UC99-35i5s",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Cc45Uv4CFQc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=LAFy23XEUdw",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -4566,19 +4749,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=YbYyfseu05Q",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Qn0GWsVbQA0",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=A3djTlrgKy4",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=CqMiFMeuzBc",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -4600,11 +4783,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=duw81hnVrEI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=CqMiFMeuzBc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -4626,7 +4809,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=yUs66_ulPE0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -4648,7 +4831,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=O1q4rnoe-Bo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -4670,7 +4853,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=IJ6tcKqCC3Y",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -4692,11 +4875,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=jOt6YZp9hYE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=lxF5Yn68jOI",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -4726,15 +4909,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ppP5zG49TA8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Luw0_vbfk8Y",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=9RMevfw_KCU",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -4756,7 +4939,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=sJS7vXkyE7g",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -4786,11 +4969,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=bdhAXlzxE18",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=kp_V2h9ELZQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -4812,11 +4995,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=HITPORt_B1E",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=TzrDy_n6VnM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -4838,11 +5021,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=SIkPgZhJ0-0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=nqTbqqNaIKk",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -4864,11 +5047,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=-_miHHSxU0M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=nqTbqqNaIKk",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -4894,11 +5077,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7b418aNtcRo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XVxiQCqIdLI",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -4924,11 +5107,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=OenDVxFjRC4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XVxiQCqIdLI",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -4954,11 +5137,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ULlz6MlkZIw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=rkRvAVHO5jc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -4984,11 +5167,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=pBX374-xxk8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=rkRvAVHO5jc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -5014,15 +5197,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Paysx91yBLs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=rkRvAVHO5jc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=98iXoj9o7cA",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -5048,7 +5231,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=NoFYZoXaY_4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -5070,11 +5253,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=lSCqI8NCL8Y",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=kCxbjCmXwnY",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -5096,19 +5279,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=uet91IdsIWI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=y4Yi6USFOPo",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=SE2ZSSpFZEo",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=r5eyAhiICLQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -5134,19 +5317,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=UC8Y2vjaPOA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gfPKYHyDZ-I",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=rrPuU1BkmeE",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Mp00MgkTpAk",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -5172,11 +5355,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=mmqWQglUFlo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=oeR4tMvBr3M",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -5202,11 +5385,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=WOVSQrOXbPg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=oeR4tMvBr3M",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -5232,11 +5415,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=SyUT8FvmeaM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=oeR4tMvBr3M",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -5262,23 +5445,23 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=G6aZzWNJyT8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=oeR4tMvBr3M",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=hILs808iT2s",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5wysJCyPsPU",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=zWLYpENNT1I",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -5300,11 +5483,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=AyEKBJZ8rn0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=O3WvjeoE_l8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -5330,11 +5513,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ruSp5xklV6Q",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -5356,19 +5539,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Z-sBgp0ozo8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=ohw1mL7zBoY",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -5390,11 +5573,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=9Bj3l4Opre8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -5416,11 +5599,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=DuFxKodRMGI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -5442,19 +5625,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=OQL3ndM7_JQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=mcMWTmUauOw",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -5476,11 +5659,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=eyf5zQ-wpLg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -5506,11 +5689,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=PqSz7zcNkpQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -5532,11 +5715,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=uAgIijVHPxM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -5558,11 +5741,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=2K4CzK48ZO0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -5584,11 +5767,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=9_oLBNF4WCQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -5610,11 +5793,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=NyAh1LAm-hU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -5636,11 +5819,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=-vTIhqeo4V4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -5662,11 +5845,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=6gthjOIDg0Y",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -5688,15 +5871,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=1dH4xs5iz0E",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=DwDso5_fhAE",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -5718,11 +5901,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=M39IKYtbzE8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -5748,11 +5931,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=q2OZiibpyQk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0o3a544jkr0",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -5774,19 +5957,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LXY-hqWj1bg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=-7AZkDqjio0",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=l1ZuFMp0aZE",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -5808,19 +5991,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=UJTPDxLaBmY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=1nN-37x3o78",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=sX0gtDcGBZ8",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -5842,11 +6025,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=JnDfceOzsJ8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -5868,39 +6051,39 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=_3QbLhn6u8U",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=ljby8lmF4Ho",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=SG8HikXZceM",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=noZUCUFfJVE",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=wS9SOfdHpPA",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=zOE_43a-zmc",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=87Nis45cqA4",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=aKa7hHO9NgA",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -5922,7 +6105,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=BcMU4NB5Am4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -5944,7 +6127,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=MgwHhH2MQbw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -5966,7 +6149,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=gNKL4yOqTuQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -5988,7 +6171,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=BVMfKsIWGIw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -6010,7 +6193,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=_XLkffSBKuU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -6031,8 +6214,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=99",
     "videos": [
       {
+        "url": "https://www.youtube.com/watch?v=fWK-Rr4ETCM",
+        "label": "Official App Video"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=0NdO1TeWG-o",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -6054,7 +6241,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=fWK-Rr4ETCM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -6076,7 +6263,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=uzEoo7zQ3bY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -6098,31 +6285,31 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=-LuAcU5h6uw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=B_4Fn7K2IPk",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=aqXbS2JfUW8",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=na33GL6OAyQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=8qGYxthYk1Q",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=RHrltur8Eik",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=F3oFHqUxFkw",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -6152,11 +6339,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=jRV5u2IjD9M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=IE032HQqXEU",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -6182,11 +6369,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=zSTPO-FJR1c",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=IE032HQqXEU",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -6212,11 +6399,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=_MtEU1FYqYU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=IE032HQqXEU",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -6246,11 +6433,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=QmAicitEP9c",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=IE032HQqXEU",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -6280,15 +6467,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=-LuAcU5h6uw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=6v2Dsb1H20I",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=x40qh1qKcY8",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -6310,23 +6497,23 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Bf0WQiMy9bs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=2JpGMkqK5mc",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=JDk9ygtW72M",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=2I-Zub4CKgA",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=iQNcDmdy1uQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -6348,15 +6535,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=-LuAcU5h6uw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=JcNX1YxkKEA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=CloV97iOkYM",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -6378,19 +6565,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=-LuAcU5h6uw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=bCVcq0WrtW4",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=2AtCOcaZC5c",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eBGvUnp-l-0",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -6416,11 +6603,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=-LuAcU5h6uw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=qzVaCCE66hU",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -6442,11 +6629,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=V8cXmscMH3M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=8ln6d7Oekbc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -6472,11 +6659,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=5pC4cE6gBR8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5wysJCyPsPU",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -6498,11 +6685,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ubHGFSTA1Ms",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -6524,11 +6711,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=6Gr_ddt8E-M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -6550,11 +6737,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=NUUEKwgB0-Q",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -6576,11 +6763,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ZFIzqZE3ugs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -6602,11 +6789,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=aQQICmdM3-4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -6628,11 +6815,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=cyJoARB2ji0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=36MZICyEGFc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -6654,11 +6841,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=G4nzm4lzSv4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=36MZICyEGFc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -6680,7 +6867,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=xOJt5cIoCRc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -6702,15 +6889,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7On4Wi_Uso4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=cdrGH2Yw61Q",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=SG8HikXZceM",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -6736,7 +6923,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=u3froOP8W24",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -6762,19 +6949,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=j3p06HkxlL8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Abn9l40ecNQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=bd0vOWIX8l0",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -6796,11 +6983,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=wqEy-ILeUKw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -6822,11 +7009,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=svhsVBpGjWI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -6848,11 +7035,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Sw5oQGO_Y8g",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -6874,11 +7061,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=skQZyrySRFQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -6900,11 +7087,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=2tt5WC_IBGI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -6926,11 +7113,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=hIWmyxeCAns",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -6952,11 +7139,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=CSCurLv8IhA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -6978,15 +7165,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=NijlDv52s0A",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=WCGI-swWys0",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -7008,11 +7195,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=GWaOKY6McQQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -7034,11 +7221,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=0ZMoRTkwEYU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -7060,11 +7247,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=fJLmzRRVXwE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -7086,11 +7273,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=T6-YG2SBQG0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -7120,11 +7307,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=gdOZSVYPTp8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -7150,11 +7337,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=95M5yY2l9M0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -7184,11 +7371,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=wyCTxPtsrzM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -7210,11 +7397,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=msbTpnFlZ6Y",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -7236,11 +7423,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=z1d898AxQ8U",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -7262,15 +7449,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ueELbnjur3A",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=PeRksUw5ZJk",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -7296,7 +7483,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=cWsH0YrHCLI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -7318,15 +7505,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=MJbBFKqhOIU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0eZFgD3SCR0",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=nMTntgTyTZM",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -7348,19 +7535,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=AIuU7fDOkHU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=6P0iTG5RUfQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=3SnhDr3ZiFo",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -7382,19 +7569,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=f1FbXYFS_1c",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=6P0iTG5RUfQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=juOMy_YU-3c",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -7424,11 +7611,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qk9M94SXNe0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=6P0iTG5RUfQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -7458,35 +7645,35 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=FTmdPsdivhY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=6P0iTG5RUfQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=tImz1sPdVOQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=rQsCJRbkIvc",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=bmn7JgxFs84",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=7Kr9KQt9KqI",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -7512,19 +7699,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=NW17G59djVQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=6P0iTG5RUfQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=C_B0JU9tqVE",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -7550,11 +7737,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=PonZ7Nnr6N0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=6P0iTG5RUfQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -7576,27 +7763,27 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=yYnh7J5VetU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=hdLBaVWy064",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=K2U_SFHT9-c",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=Z6j6h8EQ4hg",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -7618,11 +7805,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=0dQVadwK6Ok",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -7644,19 +7831,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=fjtbv8pAPuw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=_B5MNksZUH0",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -7678,19 +7865,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Wne-r74Cjt4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=_wO3rqpMaSk",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -7712,11 +7899,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=17T6Uofhlhs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -7742,15 +7929,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=-nIQYeWjhe4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=xyEsYR-i2Io",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -7776,11 +7963,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=mIzEmlB0cTE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -7802,23 +7989,23 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=mNg0CXynlJo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=LQWT3Qt6ehY",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=FNPDY8938DE",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -7840,19 +8027,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=_WXuxIo2yvk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=UjRb4fsFlYk",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -7874,19 +8061,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=xHvHtH4fdGU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=tlQX_jNVeKE",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=4gAhhwGdc7o",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -7912,11 +8099,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=dvUcEoAOSb8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -7942,11 +8129,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=rTwSVlksnVo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -7968,23 +8155,23 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=BhDPSbwDkPY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=OKtfwETFoZ4",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=hEn66raXplk",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -8006,11 +8193,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=CNKJaduMaWo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Y4F7NaQv_aA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -8032,11 +8219,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=b4xAQ8ud93o",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=rvE6BtQmqZE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -8058,11 +8245,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=UcBl4RiqhIA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -8084,11 +8271,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=K5Cq9MrlQlA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -8114,11 +8301,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=YhXhzsRL1I4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -8140,11 +8327,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=tHHNlolzE9U",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XyO9CU9PGDM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -8174,11 +8361,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Ene4jcOYE0Q",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -8200,11 +8387,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ifDTeg8zMT4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -8226,7 +8413,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=IU3m0klki_Q",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -8252,23 +8439,23 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=vGbZFblnwA0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=7ovvq-I4lu4",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=bicLxvvwMJk",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -8290,11 +8477,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=RhmV0bbjQ-w",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -8316,11 +8503,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qI21iO-Kqxc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=OYTlGTXCOV4",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -8350,23 +8537,23 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=hVgIUQErlyc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=8Zpw7E91xqo",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=MrmKTvAqS2k",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=yUDCfeehj98",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=oYZnmHVnYK4",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -8392,11 +8579,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=rWaFQL8aPrQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=8Zpw7E91xqo",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -8418,7 +8605,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=tvDfrMQJvf8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -8440,7 +8627,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=AaLNsP90FUA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -8466,11 +8653,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=b6vCOzQLcDg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Iw58ktZRpmc",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -8496,11 +8683,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=a0IyYpXsVJQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -8526,7 +8713,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=zIDRRY-smNk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -8552,27 +8739,27 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=gPCKHK8CH_c",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=VvV5QmysWSM",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=2Yj722VrPLI",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=MKeAjgT0jsg",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=taTLp33U8Hc",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -8598,11 +8785,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=wXt6JCQsnpQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -8628,11 +8815,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=CCz_1z_cgps",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -8658,15 +8845,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=e8EVJFd5rJo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=AgoJRTvdp4U",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=M1MAPE0XYm8",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -8692,11 +8879,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=6WsMFtGPDAQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -8722,11 +8909,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=uDfiExXwJJ0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -8752,11 +8939,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=yi4LVaDqE7M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -8782,7 +8969,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=sBLkh-oFGWY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -8804,7 +8991,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=vOmj9PNNl_I",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -8826,7 +9013,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=MlAdGTAnmD0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -8848,7 +9035,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=umJlCafqU8w",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -8870,7 +9057,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=4j_uNBGFceE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -8892,23 +9079,23 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=WflvqidyHBo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=chZNdRPRmgM",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=EqnmQXYuBZ8",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=mwTi8vYuc-I",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=ai8FmgKnbJI",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -8930,31 +9117,31 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=G49SLhhPXW0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=R-GbJHEOWo8",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=jovj1sgUT_Y",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=XKKsomjPFKk",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=DL8b9viDLRk",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=P9Wz02VWQC4",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=4gAhhwGdc7o",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -8976,7 +9163,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=-1eTiM-YIow",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -8998,7 +9185,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=QNkZ63PmHH4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -9024,7 +9211,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=G4y0qIROLy8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -9046,7 +9233,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=cSEhUfz4ZjM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -9068,15 +9255,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=umejHueyiio",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=48T5G8KCwfQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=8BQB88GTrrQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -9098,7 +9285,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=NxjD8mJOjVk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -9120,15 +9307,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=gff-Nqp3mZU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=HoQcQvYSLfI",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -9150,11 +9337,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qUz0tbAIvxM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -9176,15 +9363,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=V2ZngvvJWng",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XNRawvsQucM",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -9206,11 +9393,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=BTLefPr6FyI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -9232,11 +9419,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=OGArD0C0EFY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -9258,11 +9445,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=FAJ_BT-cQ5I",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -9284,31 +9471,31 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LC_JC86NOMU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=kXZCibParV8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=f7T_BEYBV0I",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=IL2BpWHqoIU",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=igWKKMSCJXE",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=c4hsSoYVR4M",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=t8ufQFFBwc0",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -9330,19 +9517,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=yV3GMthfyRQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=sXY7L230q5A",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -9364,7 +9551,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=jCLiLnPY8XY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -9386,7 +9573,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=a3GosFyKEsA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -9408,7 +9595,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=D_NZpkCurbg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -9430,11 +9617,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=CKsB_yXd_Ow",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -9456,11 +9643,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=YFulT8IQWmI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -9482,15 +9669,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=h16HHCggOJI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=9nwUpiczE1I",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -9512,11 +9699,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=yKKq96_AoPE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -9538,11 +9725,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=BkyFo6GEzFs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -9564,11 +9751,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=PhqR5rkOaHc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -9590,19 +9777,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=yE8MuzJ4jwg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=6smpz9CCaa4",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=KYidSiSFM5w",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=HtKV9yeWBTw",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -9624,7 +9811,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=1ycjYVPjZAo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -9646,11 +9833,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=5kyaeA3d0WU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -9672,11 +9859,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=KLNBqfuso-M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -9698,11 +9885,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=jmK2WF9Cvfk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -9724,15 +9911,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qLNerp1dzWE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=-5xqeQ6bjaU",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -9754,7 +9941,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=EhDp56J6N7s",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -9776,15 +9963,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ZUni_3CYxIc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=f44zxrtz7Zs",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -9806,19 +9993,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=eR31EwitZyo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=nwKFw_TxwlM",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -9840,7 +10027,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=X0IqpsDMH7A",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -9862,11 +10049,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Yre87cytWoI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -9888,11 +10075,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=4uz4RL0RLuU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -9914,11 +10101,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7jIrzPY-lTs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=-XHifJgTZWc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -9940,7 +10127,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=lFUG_lYY7GQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -9962,11 +10149,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=gdLEtA63N-s",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -9988,11 +10175,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Y3josRe7tjU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -10014,15 +10201,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=a09Tt6c3Ixw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ga3GyjVJ5bU",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -10044,23 +10231,23 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=f6mmvjLEuP8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=8Z1MWIYwGvU",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=EF_C26QoD58",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=kQQHl87rDzk",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -10082,19 +10269,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=6bUjESN_tEo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=H_QVLXPP4BQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=fd-uqHTMJyU",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -10116,11 +10303,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=HKyXDsLj9kg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -10142,11 +10329,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=5_SIjyAIJTg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -10172,11 +10359,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Qjk2uyHEUCo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -10198,11 +10385,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=1nN6iKpRBTI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -10224,11 +10411,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Cf4uCLzeP0Q",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=p1tmFiawoXI",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -10250,7 +10437,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=I3_Uoa6UA8s",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -10272,7 +10459,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=GxaZnuWI5xE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -10294,7 +10481,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=3AVsKMPwfLM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -10320,11 +10507,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=U_uswocDjwg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -10350,11 +10537,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Gr57_NDD9bA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -10380,11 +10567,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=eYEp8ypu05o",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -10410,7 +10597,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=RT_hG-pjRZ4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -10432,11 +10619,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=0MtiA-wlMZM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -10458,11 +10645,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ML42jYZZRpo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -10484,11 +10671,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ENTg-GazTK4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=HtKV9yeWBTw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -10514,11 +10701,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=QLMAOepp50c",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -10540,15 +10727,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=MKKG8__YHBI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=p1n18ZDITEw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=l8bAHF9qEGY",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -10574,11 +10761,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=VdsOnkyZ9EU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=p1n18ZDITEw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -10600,27 +10787,27 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=UiZcA40S_KE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=HtKV9yeWBTw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=u76PYQ6dFj4",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=CeM42owAVKk",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Nj7dxrblT2M",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -10642,7 +10829,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=iTKZYqomQKU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -10664,11 +10851,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Y3yMtZDJyGM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=HtKV9yeWBTw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -10690,7 +10877,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=YHzlVbiJ5Fg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -10716,7 +10903,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=xjpF-s2QvgY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -10742,7 +10929,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=HZlIK0NeD2w",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -10768,11 +10955,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=AsZu6qk9FuQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=zNGG88_nrh0",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -10798,15 +10985,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=rJYtH68_UiQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=59N0dwiuOCM",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=NHzyxASixCw",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -10828,11 +11015,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=QWQL-p-PqyU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=SG8HikXZceM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -10854,15 +11041,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=5DLxvGwX7IY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=fmMFeteNf5k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=u0DFa1UhsO0",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -10888,19 +11075,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=repWhd-fQNg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=qtO_gx7H8OM",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=EwZp1tJBIe8",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=NzpAqdTrFUI",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -10926,7 +11113,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=U9_ZA_nWZM4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -10948,11 +11135,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=raY4_ak9MFE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -10974,11 +11161,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ouhSOR7KpQY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11000,7 +11187,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Uy_iu6V-BBA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -11022,7 +11209,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=JAdej3z9-7w",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -11048,7 +11235,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=4yDJdP_Vyx4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -11070,11 +11257,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qA5li8epyNs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11096,11 +11283,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=wKufRYUAUps",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=SG8HikXZceM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11122,19 +11309,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=lzDwASYeTm4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=VxHZkJgZDDw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=ENTjvW6ncCg",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0hcQS9LdA24",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -11156,23 +11343,23 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=oDuA1NmXpqc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=_OIjYnTgGk0",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=SLHsAuACzuU",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=VcQRt_QCEfk",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=1kYImEBHeew",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -11194,7 +11381,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=hTKGgVPqngc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -11220,7 +11407,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=0tLlqewA_RI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -11242,7 +11429,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=vdbaIISKfn8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -11264,11 +11451,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=4p-bJEkZoKA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=HtKV9yeWBTw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11290,11 +11477,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=QyNjXavDVxM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=9UsVLy640Kg",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11316,11 +11503,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=o6JQdFVo3vs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=8Lzb0NlNbZk",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11342,11 +11529,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Gf2xOGDyFiU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=FPJYAN2pSqA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11368,11 +11555,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=yt06vJ2n61o",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=jovj1sgUT_Y",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11394,11 +11581,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=XNH9pFIr6RM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=T_BKXWK9X8o",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11424,11 +11611,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=4W9dYfkoisg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11450,11 +11637,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8UPnsE04p_U",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=jovj1sgUT_Y",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11476,11 +11663,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=RUwXDv_WbbM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=jovj1sgUT_Y",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11506,11 +11693,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Nbu2QThtumg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=jovj1sgUT_Y",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11532,7 +11719,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LrvmhIh3jYI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -11554,11 +11741,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=uIZhc_NRl5I",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=VxHZkJgZDDw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11580,11 +11767,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=1STojUnB1dc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=VxHZkJgZDDw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11606,11 +11793,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=a24GDvdQ7-I",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=VxHZkJgZDDw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11636,11 +11823,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=W3UQi8VNODc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=jovj1sgUT_Y",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11662,11 +11849,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=M6GakMDr4hQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=jovj1sgUT_Y",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11688,11 +11875,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=tOQnWznAyTU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11714,11 +11901,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=s7UOwNm2qJY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=jovj1sgUT_Y",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11740,11 +11927,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=AwxuGgrEync",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11766,11 +11953,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=TZ5vq4PhFmM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11792,11 +11979,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ATSwtLK1X_c",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11818,15 +12005,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=RMznTJichYI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=F8FE8ambFno",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -11848,11 +12035,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=aLFzBepguWA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11874,11 +12061,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=G2ZFarHSTOM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11900,15 +12087,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=XzqLbqtaMjI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=rzmFrQT5ow4",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -11934,11 +12121,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=4IXy6ajLra0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -11960,11 +12147,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=oqJbRzbPdNc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=UGEUpihuItk",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -11986,7 +12173,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8aFT9VzxqOc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -12008,7 +12195,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7wjTj_bG8Vw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -12030,7 +12217,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=z1Fw1PTNDyo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -12052,11 +12239,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=1NI9Vy7Kbj8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12078,11 +12265,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=bWgGO6HUh4E",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12104,7 +12291,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=EEXBBZ9nqAc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -12126,15 +12313,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=60eQEkVXIys",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=WBjFFwNXq0A",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -12156,11 +12343,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=DO_zHxfQQcE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=EwZp1tJBIe8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12182,11 +12369,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=nHlqhDzCzzo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=EwZp1tJBIe8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12208,7 +12395,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=lxD7gEscz8k",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -12230,15 +12417,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=1aXPvUHKnZE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=wxiIDWz-Jc0",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -12260,7 +12447,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8GG7v0KX6B0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -12282,11 +12469,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=vWOKSq8fWWs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=bhun3_emzSw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12308,11 +12495,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=F3HKYGce85E",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12334,7 +12521,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=OvruFbTVMbs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -12356,11 +12543,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=46wok88JyoU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12382,11 +12569,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=6o2iJVZAWa0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=FPJYAN2pSqA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12408,7 +12595,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=P6Vo06fY_3A",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -12430,7 +12617,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=TUKXdaZvzNc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -12452,11 +12639,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=4_t5mz4RfLo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12478,11 +12665,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=hbe_XnE9CoY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12504,11 +12691,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=S0W3yY72_i4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12530,11 +12717,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ESLifC30MaI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12556,7 +12743,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=2i3nCzrevQs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -12578,19 +12765,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=3qHib4UzpdE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=AmoABij8VC8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=nKAVlkaC79I",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -12612,11 +12799,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=IL0aw0JNSrk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12638,11 +12825,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ahMVynTM1_w",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12664,11 +12851,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=BTgc8NPMWSI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12690,11 +12877,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=JJgJ3rdotew",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12716,11 +12903,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=nn3tMw4Pv5M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12742,11 +12929,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=YfWdaNfdkB8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12768,11 +12955,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=g-wR0N4HR-M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=th3BFlk8xrE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12794,11 +12981,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=1RueyuNa3ig",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12824,11 +13011,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qWMU7iCJ06g",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12850,11 +13037,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=SyI1BOLt6hE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12876,11 +13063,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=g8eYm9vxOlA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12902,11 +13089,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=i4RCTtGP740",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -12928,7 +13115,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=yGk4mwlrEsw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -12954,7 +13141,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=JSvXJH0bhYQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -12980,7 +13167,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=z096EirTyes",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -13002,7 +13189,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=eJ0pY80iPew",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -13024,11 +13211,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=PUehEraQfuk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=HH85f81KC5A",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -13050,11 +13237,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=15GSsXr1mT8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=J1VgGUaPve0",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -13076,11 +13263,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=HzwIwvDTOQs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -13106,7 +13293,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=lH2_id00UGQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -13128,11 +13315,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=RWmjetMpyJM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=hXvsYDLNNn0",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -13154,7 +13341,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=v62crofjKKM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -13184,7 +13371,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=bSVwYQIWJZE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -13206,11 +13393,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=xfa1LLHwgs8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0o3a544jkr0",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -13240,11 +13427,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8EyGhXqokFg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0o3a544jkr0",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -13266,15 +13453,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=SMEVF-QOTCg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0o3a544jkr0",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=Gf3QdBksKfU",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -13296,15 +13483,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=-p5SEwCfYf0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0o3a544jkr0",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=AM4syDgsUiQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -13330,11 +13517,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=oOK1dxPzMR8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0o3a544jkr0",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -13356,7 +13543,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=mN5MiaRrPac",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -13378,7 +13565,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=3JitGwWFSWw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -13400,11 +13587,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=T7FLqno2KAQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XscrhPD6Zhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -13430,11 +13617,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=YiuLUPsLiwE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=p1n18ZDITEw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -13460,11 +13647,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qCeM9qoPHY4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0o3a544jkr0",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -13486,7 +13673,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8toDr3WlXjk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -13512,43 +13699,43 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=6RhXxDt0vYE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=H4pWpM2swJA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=ZMDY8M9V2Uo",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=nMTntgTyTZM",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=eFHPKTAemTA",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=kyRtTyr1hK4",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=ac7U-UwwDg0",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=ZkztT8B1orY",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0-EGMTSc-Zo",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -13574,19 +13761,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=6UaSS8F62-o",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ka7t6zm_Iy0",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=UEyOMFeEcMc",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=amzslztE7Ug",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -13612,19 +13799,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=1runnvZzbPE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=1kdnSLa85EU",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=7QAdRNCmmAU",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=T0uXUIkqveE",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -13654,11 +13841,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=OLev7ntWOXI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=T0uXUIkqveE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -13688,11 +13875,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=TApbtVciq8Q",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=T0uXUIkqveE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -13722,11 +13909,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=lYS8pozEuiw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=xiNJvfTZJUc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -13756,15 +13943,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=2lDJPD4bsJw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=OGMUZnrWKh4",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -13794,11 +13981,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=DCJLR9VF-XM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pvx93e6fOpI",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -13828,11 +14015,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=BsnuduVdXBE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=_RrqLAeG2N0",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -13854,11 +14041,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=YFMEYSQqTe0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=WzYuFTtgpo4",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -13884,11 +14071,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ptHMxCdjPgs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -13914,11 +14101,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=M3V1K4FiMwE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -13944,11 +14131,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=s_mPRAs7ilc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -13974,15 +14161,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=DtZggvH3dVA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=w0tUG8jhboI",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -14008,11 +14195,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=2N_1FAxuOFY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14038,11 +14225,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=_JtaeDj8jBE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14068,11 +14255,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=DVMXqbn8UsI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14098,11 +14285,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=_xi0ORADUNM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14128,19 +14315,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=p7xLp54skzw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=D0YStrFKoFU",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=v3HUMTRHSYM",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -14166,11 +14353,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Fv8qN6r8qYk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14196,11 +14383,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Uh8q_INGhTI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14226,11 +14413,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=SWbpqwI4m_M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14256,11 +14443,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=xvjOAk4rHrg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14286,11 +14473,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=iIJ3E3v1B_c",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14316,11 +14503,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7dXEjVx4F3c",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14342,19 +14529,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qU4wpfbUxEk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=JgLQPd84cqc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=18jAiKbFnQA",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5txTTqbmQZU",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -14376,11 +14563,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=2rm1r12nYz0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eyrdG0F2BXY",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14402,19 +14589,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=we88cjH3EzQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=J6erH42VFlc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=kGQ0D4nSS8c",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=IrTYq3GpxDA",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -14436,11 +14623,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=HeQyK_luGQk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=U_WTIXvRtFE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14462,11 +14649,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7Q-g5sjnB3o",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=J6erH42VFlc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14488,11 +14675,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=H5ZnU4guWMw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eyrdG0F2BXY",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14514,11 +14701,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=KQGQQcLA6Js",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eyrdG0F2BXY",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14544,7 +14731,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=slVobXTjues",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -14574,11 +14761,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=56B7LnQGiQU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=NHzyxASixCw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14604,19 +14791,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=4vO-DPY3Ymw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=jvYTqxxGuNE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=0HDnid4JoV8",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=sWD6jjr4TRU",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -14642,11 +14829,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=XY5uHcn5Be0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=jvYTqxxGuNE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14672,11 +14859,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=JT9HqEd-Vjo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=BVrWjYWLWK4",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14702,11 +14889,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=thVRmTru18U",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=a9sUgB9Zh_g",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14732,11 +14919,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=PreCEjeOWqQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=CUEZt-MWs8Y",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14762,7 +14949,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LpGm-Cjs8DA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=YlGuuYtvdJQ",
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14788,15 +14979,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LpGm-Cjs8DA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=YlGuuYtvdJQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=gwJlwJNkqmw",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -14822,11 +15013,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ENgtIk4AAik",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=YlGuuYtvdJQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14848,11 +15039,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Tg6fguN8Zlg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=U4YdhpIXrgM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14874,11 +15065,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=VDdEojVDkXI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=zOE_43a-zmc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14900,19 +15091,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=6kUHJ_Y9ld0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=HtKV9yeWBTw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=_itB-jg6guc",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -14942,11 +15133,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=fkKDDFNTf98",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=wVKG2wrokcg",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -14968,11 +15159,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Riogn-Zsf7g",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -15002,7 +15193,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=FA5pCLkfkS4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -15028,7 +15219,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=g-xrFqUOsIA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -15054,7 +15245,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=pdizAAtA2n0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -15080,11 +15271,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=sGeq7eQtLvU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=cZNYMNXLViI",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -15110,11 +15301,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qnDW5hHVggU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=cZNYMNXLViI",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -15140,11 +15331,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=nScQ5VzHT3E",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=E0IapxgArCg",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -15174,11 +15365,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=-LqXlf1Hz30",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=VkBOCdjnU1A",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -15203,8 +15394,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=497",
     "videos": [
       {
+        "url": "https://www.youtube.com/watch?v=KfHjGfxElBs",
+        "label": "Official App Video"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=ilRBnbIyCfE",
+        "label": "Official App Instruction"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=eNoC0iCMjsU",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -15230,11 +15429,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=KfHjGfxElBs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=ilRBnbIyCfE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -15260,11 +15459,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=THoJq9pTF2k",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=x1jzvOp3qsg",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -15294,11 +15493,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=rCj38M8U-VY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Hs5968gT7zw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -15328,19 +15527,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=9_m3S66duH0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=sWV_0QqL0d8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=02ibfbB03qE",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Zfu9VaclBaI",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -15366,7 +15565,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=DfgkAXXMcx8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -15388,15 +15587,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ptjLnmI5gf0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=VqQ9JMbJvmw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=UyV7NIMEQyY",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -15418,23 +15617,23 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=lp0bm7BI8Pc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=SG8HikXZceM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=DHQYu7o7Tbs",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=FwoL9abLoyM",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=VqQ9JMbJvmw",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -15460,11 +15659,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Au235cMd66c",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=sVhAvytMvjY",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -15490,11 +15689,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=FuRJyVUFA1Q",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=E6g0SYK333k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -15516,31 +15715,31 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qT8zeY-kz6E",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=cq5y6MYTZ2Y",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=YQHnkVbNKAU",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=C88hJDiti7k",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uajrWzdWIxc",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=T5qKdFQDrs0",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -15570,11 +15769,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=bR8GPwyvhKU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Xz4fAw4b4KQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -15600,7 +15799,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=-tT5dP_BmfY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -15626,7 +15825,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=674eZEFkHKs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -15652,7 +15851,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=SFZBakazDc8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -15678,11 +15877,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7Pcn8MWxO84",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=J2fLmZ8DAi4",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -15708,11 +15907,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=D6y1ScfjzRY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=f6z_3_NugTM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -15738,11 +15937,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ye_B9eaS-3Q",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uzLRa5cvqAw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -15772,11 +15971,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=PeHoMrLas1Q",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=oXdEg2UuXh4",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -15806,7 +16005,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=SSszLPvrjZM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -15828,7 +16027,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Q0zAXnq-7pg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -15850,7 +16049,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=6C0TAXBIOQs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -15872,7 +16071,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=m-Q_oy9NPJM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -15894,11 +16093,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=WU5AJLK-tjg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=UHBEMJswidc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -15924,11 +16123,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=E54txhQI4cU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=93L_8vqJ2KA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -15954,11 +16153,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Qp2rcEPAeY0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=8Zpw7E91xqo",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -15984,11 +16183,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=EJ5s5qGJYW0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=8Zpw7E91xqo",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -16014,11 +16213,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=0Ho7XwSPTpU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Q4s4hLiA030",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -16048,11 +16247,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=iXh2APwEoW8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=JDk9ygtW72M",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -16074,11 +16273,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=1uEugqX623Q",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=BOlXSL3yMqI",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -16100,11 +16299,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LXsxOvy9qbQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=EO2R1631sPg",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -16130,7 +16329,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=00hEE7VFkvI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16151,12 +16350,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=544",
     "videos": [
       {
+        "url": "https://www.youtube.com/watch?v=iQNcDmdy1uQ",
+        "label": "Official App Video"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=PK89JufSglM",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=3tk-9NYf6fo",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -16178,11 +16381,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=HzIXDFrVG-A",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=hSFX7DqTiaY",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -16204,7 +16407,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Ei_xiExgol8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16226,7 +16429,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=sci9MvXKFzo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16252,7 +16455,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=mtI6KVyH-QA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16278,7 +16481,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=2sV2kk7nauo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16304,7 +16507,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=TGiFUqsvnQQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16330,11 +16533,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=tatHqWl6aMU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=jxkChmXk6jY",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -16356,7 +16559,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LtfiJXEW3rE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16378,7 +16581,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=jfdjS2kFubo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16400,7 +16603,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=P6vPtTnwxv0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16430,7 +16633,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=vKKFWiOKDrY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16452,7 +16655,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=9gMiEFIPRR0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16478,7 +16681,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=AUJwrwS4s78",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16500,7 +16703,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=KzDbx0GGhg4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16522,11 +16725,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=1GiI5BI4kV4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=f_YxRnOS4UA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -16548,7 +16751,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=-6A_Fz_2Ly0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16570,7 +16773,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=HOZO3qynOj8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16592,7 +16795,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Bn0fiSLh0G0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16614,7 +16817,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=YiP7Ic_PFFk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16640,7 +16843,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=fsXghv20dnU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16662,11 +16865,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=OQ4F1W-Mm0w",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=dRxpi9jdrXM",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -16692,15 +16895,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=fmrem_JS5RY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=diBbEkJXXyk",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=eEb4HfafNyA",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -16726,7 +16929,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=1SMvHnN_c80",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16756,7 +16959,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=R9FgDNiZHps",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16782,7 +16985,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=GWcrmlJV2Lw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16812,7 +17015,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=KZfIzMi2-PI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16838,7 +17041,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=4R8h3o5OnAM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16864,7 +17067,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=WEtVqUr0RUY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16890,7 +17093,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=inpuS75OIm4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16912,7 +17115,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=fYtC7DmbjHg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16938,7 +17141,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=xRabbEPcn0w",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -16963,8 +17166,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=576",
     "videos": [
       {
+        "url": "https://www.youtube.com/watch?v=PDsiw4_52HE",
+        "label": "Official App Video"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=Lf9hvsCmsTE",
+        "label": "Official App Instruction"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=sYQiat4zDRY",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -16990,11 +17201,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=PDsiw4_52HE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Lf9hvsCmsTE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -17016,11 +17227,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Yqj9zIkGXMo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=L-qtA790Yv4",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -17042,11 +17253,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8jBwp5N6EZ4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=f4oPZkuDfYI",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -17068,7 +17279,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=s7vhvGMfoCA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -17090,15 +17301,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=mA5z6TiM8Uw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=fw4DEF2k0QE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=1hZDDe4safE",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -17120,15 +17331,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=jJx1G00ARVc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=fw4DEF2k0QE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=oIZu7LvgSJw",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -17158,11 +17369,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=50Z7lvZkt_M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XVxiQCqIdLI",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -17192,11 +17403,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=10Bw_W6exXw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XVxiQCqIdLI",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -17226,15 +17437,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qga2uvgrkhQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XVxiQCqIdLI",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=n6bGyaKmX_c",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -17260,7 +17471,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7-S5HH5GFRo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -17286,11 +17497,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=OPs3F7JFGOw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=vGG2iVKM7bc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -17316,7 +17527,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=IipCdY8p4o8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -17342,7 +17553,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=4iLvTHfNP48",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -17368,7 +17579,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=D8fsXu7STU0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -17398,11 +17609,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=fJXtVZeouKc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -17428,7 +17639,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=pTvve0OFmG8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -17454,11 +17665,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=62Af8nAQy4M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5hAZnyi50nk",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -17488,11 +17699,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=CgXFumC-r08",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=dfJnV8O-mhs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -17522,7 +17733,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=WBgDTPQ62K4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -17552,11 +17763,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=xwewRMWnb8w",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=D4GXKek-8f0",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -17582,11 +17793,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=t4WLMX0xtKI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -17616,7 +17827,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=HfhGc5VMH_I",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -17646,7 +17857,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=4-_D2f6_frU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -17676,11 +17887,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=lnwKF5gC970",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -17710,7 +17921,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Xspfgkdnkw0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -17740,11 +17951,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=-NTmVRIpueg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -17774,11 +17985,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=XBElTs07eG8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -17808,11 +18019,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=xia5tVcdjMs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -17842,11 +18053,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7HiGP1kPNek",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -17868,11 +18079,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=caqI0jit9GM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -17894,11 +18105,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=B4rTF1Q4uII",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -17920,19 +18131,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ByHgIGrH_6E",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=d4UTaWCXOCs",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=PAKg_QMTPHo",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -17958,11 +18169,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=n6KAZxcdw0I",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -17988,11 +18199,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Tjt4fyUc7Ko",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -18018,11 +18229,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=l8uhGudKy5g",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -18048,11 +18259,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=zhbK6jFMG-M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -18082,11 +18293,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Tcjn8xfHMLw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -18116,11 +18327,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Jy7Pqdc-0vo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -18146,11 +18357,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=CiJXjv_LEPs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -18176,11 +18387,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ltA9nYTZv9U",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -18210,11 +18421,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=c0jYXcqvMTg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -18240,11 +18451,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=iZdcno_UTRY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -18270,11 +18481,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=6o0imjgXggA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -18300,11 +18511,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=xrr8gGfls6o",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -18326,11 +18537,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=0mSyzFEqoZQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -18352,11 +18563,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=NyAe1BAq3eg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -18382,11 +18593,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=3Iw_MpkuJUc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=TBsLaK1aYB8",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -18412,7 +18623,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=b70EvokgYxs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -18438,7 +18649,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=h92ipOmgLwU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -18460,7 +18671,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=cBORGyVRf3s",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -18482,7 +18693,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=gk60mIJ2kPw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -18504,7 +18715,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ak8G_B7e--E",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -18530,7 +18741,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=4HbH2pNnkNM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -18552,7 +18763,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=taT5UJ2czko",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -18574,7 +18785,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=VF8cqAnD7WU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -18600,7 +18811,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=lqeZt1qN3q8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -18630,7 +18841,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=fPlXLPmL0xY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -18652,7 +18863,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=26AIw9S7RN4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -18682,11 +18893,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=cX-lIVapLuE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=cyjd4vGNOxc",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -18716,7 +18927,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=33c97hR6iTE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -18738,7 +18949,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=pjBT0aCvxJo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -18768,7 +18979,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=JuJy85zhrJ0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -18798,7 +19009,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=CoIlUmoGPtc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -18828,27 +19039,27 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LznvncnKhPM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=WiR8Smag7Cc",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=RHOOeUQarLI",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=W16mr254CJs",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=SvqdxXF8-iU",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=MWmK3eqlWpw",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -18878,7 +19089,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=r56o3zIGIQI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -18908,7 +19119,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=p5xfRnz146o",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -18938,7 +19149,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=QiTaOeFm-Lc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -18968,7 +19179,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ELC6aWnF7dM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -18998,11 +19209,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=joeSM1O-YAU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=4FmWuVkihr0",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -19032,7 +19243,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ryGIKKLXCyU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -19062,11 +19273,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=WSTDfieOVEI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=BpmJHSVemQI",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -19096,7 +19307,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=e_nE9CkCh_U",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -19126,7 +19337,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=FZdKEnZLi8I",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -19156,7 +19367,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=NjKCkJ-hKik",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -19186,7 +19397,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Gj69TsZQvmk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -19216,7 +19427,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=T-NG8bY9eMs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -19246,7 +19457,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=d53cfdei10M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -19276,11 +19487,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=6osaCvzS_gk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=sabHR5Ai1p8",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -19310,7 +19521,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=N5nPhtCp9PE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -19340,7 +19551,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=wp1FObkZpu4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -19370,15 +19581,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=RxqVj-rI63I",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=1lMWRu3c3Hg",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=zPYYotzEB8I",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -19408,7 +19619,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=BW8Nx6eCTz8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -19438,7 +19649,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=RAerMqxL3HQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -19468,11 +19679,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=yAkwF5NJ3os",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=3s4YBzvUxJ8",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -19502,7 +19713,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=XlXHjpHVPN4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -19528,7 +19739,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=rx6fUXBws3Y",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -19554,7 +19765,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=_v83o_kwuro",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -19580,11 +19791,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=1H6HFe16yOI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=BjJvHq_-lzw",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -19610,7 +19821,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=OtkNrLeSkk0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -19640,7 +19851,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=oRRZ5J7mm-g",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -19670,7 +19881,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=uNhnzK2oVq0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -19696,7 +19907,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8NMxnkrKntE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -19726,7 +19937,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=zdYUvy4i9kM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -19748,15 +19959,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7E4cpE8oixY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=WrznVIacHZQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -19778,11 +19989,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LiqJpYQkIQ8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -19804,27 +20015,27 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8e6dO7hOgP4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=hDIsCgDavdE",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Pe2lrx_2crM",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=aKa7hHO9NgA",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=irFv0B1rErE",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -19846,27 +20057,27 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=mOZJywZaIGk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=WU3cpexDqBg",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5VF4Tz3gNu4",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=iqbThYn_kco",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=1ucNJTge268",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -19888,11 +20099,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=45qyKo_eU3c",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -19914,11 +20125,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=q-b1UgP2JyU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -19940,15 +20151,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=n6Qb0xdbjYI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=TDAWO2Rf5jo",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -19970,11 +20181,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=UOlEwrcDXH4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -19996,15 +20207,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=nWYFfxxmeOY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=ubjIXu75A60",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -20030,11 +20241,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=T3I-KcKi-fo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20056,11 +20267,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=IWa1AOnkvtc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20086,11 +20297,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=WUfN0MrU-YY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20112,11 +20323,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=A_6KHAtnhW0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20142,11 +20353,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Qa1jsbRVkZU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20172,11 +20383,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=YeVU2iPoJzI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20202,11 +20413,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=YeVU2iPoJzI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20232,11 +20443,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=oIW0buEra7U",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20262,11 +20473,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=9Xb7a9p8TJQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20292,11 +20503,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=82muo_0fR88",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20318,11 +20529,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Cqn9bXeJnIs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20344,11 +20555,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=139NBHlPGdc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20370,27 +20581,27 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=TzRPfKWK_YQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=qMHUuShgxjU",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=BvVPD74xAw0",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Y_IKIMCZdEQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -20412,15 +20623,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=yz115LBxQ0o",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=fHjiqksgCeI",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -20442,11 +20653,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=67n6lDaPwTg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20472,23 +20683,23 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=EuA7IJNzfRA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=wmFqOnUPX3A",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=aKa7hHO9NgA",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=0kcF0cj6_x0",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -20514,11 +20725,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=FkAqLHMlz9I",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20544,11 +20755,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=yMcEC03-Xds",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20574,11 +20785,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=IbNd5991v-M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20600,11 +20811,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=mJ5Pg2LIRyc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20630,11 +20841,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=flV8td3ZOd8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20660,11 +20871,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=erZn3TWlSI0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20686,11 +20897,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8KKMGqEbBbc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20716,11 +20927,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=BET3jBDrtH0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20742,11 +20953,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=cSIUYFmXMHM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20768,11 +20979,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=cUBLo7Nt9Yw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20794,11 +21005,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=9tN1IaJmuwA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20820,11 +21031,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=mjLUYPCgdWs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20846,11 +21057,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Q2ITW1ZKxX4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20872,11 +21083,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ueeS8bMUMdc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20898,11 +21109,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=lNUlpbqdNqk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20924,11 +21135,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=hlcI9ofFAiA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20950,11 +21161,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=-71A1Y-cm4Y",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -20984,19 +21195,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=gWs3yD0Cgto",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=vpP7Teil8ug",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=X2Vxxytq-5w",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -21026,7 +21237,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8qrZBoqgcIs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21056,7 +21267,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qlsrMV5o4II",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21078,19 +21289,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=kbxl2JZeit8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=qE2zJBpAoOg",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Fa1uwe3oVS8",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -21112,7 +21323,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=NPSB_VoiAhM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21134,7 +21345,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=-bg71VXiLcU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21160,7 +21371,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=SPMYsCNJv0M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21186,7 +21397,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=nYwhsNP5oiw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21216,7 +21427,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=chZNdRPRmgM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21246,7 +21457,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Q3fRQ6kPH-A",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21276,7 +21487,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=it1VuIT2SRY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21306,7 +21517,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=z4BSVIsgN6s",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21336,11 +21547,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=rTvXEKh1ZQo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uX1ZSEEVtmA",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -21362,31 +21573,31 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=J73b1cnDTG0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d54tsyJo9Es",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=S8mbzimNVqo",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=na33GL6OAyQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=jYu-0OOjUd4",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0hcQS9LdA24",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=e68Ax0dEwgw",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -21416,7 +21627,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=V_CjQLOowmM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21446,7 +21657,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Gl9_Rtod7Bs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21468,7 +21679,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=o-z4a-KYOyQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21494,11 +21705,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Vr_fe3y-9vo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=SUoj85fr7AA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -21528,7 +21739,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=dNPRnS3zQaI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21558,15 +21769,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=reJfuK9n4MA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0yxSt0UE7yM",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -21596,7 +21807,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=D8YJqMONjDg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21622,7 +21833,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=W4n-R6q_YxA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21648,7 +21859,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=fox67TgWAoo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21674,7 +21885,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=gW-5cYX6EO0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21704,7 +21915,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=2ui8Y5o2KC8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21734,7 +21945,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=cxaj_q3lfXw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21764,7 +21975,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=VBoPSJ5uw94",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21794,7 +22005,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=NjSHOxpfeDs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21824,7 +22035,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=-1e8ybXkxCU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -21850,11 +22061,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=bff2SuNO1Fo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -21884,11 +22095,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=mXwqBtIfp_E",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -21918,19 +22129,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=L0g7zJvSvUw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=_kznp8UIS1w",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -21960,11 +22171,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7H833KNkrGA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -21990,15 +22201,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=VfROhpzU7dU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=RsRXncztF8E",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -22024,11 +22235,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=eJo5SHWGR-0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -22050,15 +22261,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=9X6_FWDS7tA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=hIbXsXvHAjc",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -22084,11 +22295,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7rR_oc-K9CA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -22118,11 +22329,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=b-T2YPud9-w",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -22152,7 +22363,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ctC4bZAxlEQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -22182,11 +22393,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=zK9orhWtDEo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -22216,11 +22427,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=sd8gp3ujbDI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -22250,11 +22461,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=j86RNZccpzM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -22284,11 +22495,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=zRIl6O8YcPM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -22318,11 +22529,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ws-NYc8hocg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -22352,7 +22563,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=sZ4f_uUFGek",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -22382,11 +22593,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=bnomRgbSMVE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -22408,11 +22619,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=_9x7pKfe-tc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -22442,11 +22653,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=M5c1ULGvgqo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -22476,11 +22687,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=v_1G5CHQZZQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -22502,11 +22713,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=33skXkypQ9s",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -22536,11 +22747,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=HRxePUedKts",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -22570,11 +22781,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=AqJQdx4kloM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -22604,11 +22815,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=RLthPsp7zkY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -22638,7 +22849,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=UekBYy_HLdU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -22664,7 +22875,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Yva7RJbvKGU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -22694,7 +22905,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=c3v4jiyR7So",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -22720,7 +22931,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=zr_gVdzBAUw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -22750,7 +22961,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=a-vmnR2Dc-A",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -22780,7 +22991,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Cnp7X3Egzaw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -22810,7 +23021,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=JXOVLsBWNns",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -22836,7 +23047,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8tzcHbNCVxw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -22866,7 +23077,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=s6W6tXpt0PU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -22892,7 +23103,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LN6J7KaN6T0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -22922,7 +23133,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7INDKsMs5fY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -22952,7 +23163,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=L1b164zFXvc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -22982,7 +23193,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=NexDeS9yeUc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23012,7 +23223,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=rKMnJBD6w3E",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23038,7 +23249,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=X1nf8II2Kd4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23068,7 +23279,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=UmAYUYPgFIc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23094,7 +23305,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ec3c4yq02uI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23120,7 +23331,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=9cY5rMLEZkg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23142,7 +23353,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=37wwmP0EYA0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23164,7 +23375,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=UZCiIB5wulw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23190,7 +23401,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=FBrd0X9wo_k",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23212,11 +23423,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7pAGrIqMFG0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gPp1L5Ojnrw",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -23238,7 +23449,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=wzR1C1gshsg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23260,7 +23471,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qbQR26bmQpQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23282,11 +23493,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=zvH5t06Rsso",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=_OIjYnTgGk0",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -23308,23 +23519,23 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=bUa-Q_sZFGc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=2I543ylqHq8",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Tv8sxTXaWF8",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=QaDjFcJAgNA",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=HciZjB_Pf4U",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -23346,7 +23557,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=hxecVj7ZnLg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23368,7 +23579,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=AerlAydJlVc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23394,7 +23605,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=sAWlNqyGw-0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23420,7 +23631,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=_ZHedEElX_k",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23442,7 +23653,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=xZXnCJ0iXy8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23464,11 +23675,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=4P3LVOpmt2k",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=74BOX9GOdAg",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -23490,11 +23701,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=KpHSw0XVZoM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=QaDjFcJAgNA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -23524,7 +23735,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=kxtQlLxMSQk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23554,7 +23765,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=C3j-s8MYETY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23584,7 +23795,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=BtVFLz8SpuM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23614,7 +23825,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=QNQPvfT1qCA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23644,7 +23855,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=_3CkXl5ZZCo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23666,11 +23877,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=lo5Qv197sX4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=yA_1km5oakw",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -23696,11 +23907,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=bDbHQD5qeoM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=wLbsGNc58ik",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -23726,7 +23937,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=1b9VNsbHPmA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23748,7 +23959,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=zjkM6h6XPLU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23770,7 +23981,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=XmRIkOANnbs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23792,7 +24003,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=x55aUn9_FCE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23814,7 +24025,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qzfnmb1djvs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23836,7 +24047,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=K710Hkp_eq8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23858,7 +24069,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=3AZgIGrl7sc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23880,7 +24091,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=AYeglzKSTLg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23902,7 +24113,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=3AXarvJvr7A",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23932,7 +24143,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=JiPg9FR8NOc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23962,7 +24173,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=p778js_Fm-g",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -23992,7 +24203,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=UI5lSrN2ysw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24014,7 +24225,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=V2ThhBGWd_c",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24044,7 +24255,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=2jGjveM0dvY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24066,7 +24277,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=_L6BatTk3uA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24092,11 +24303,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=eCHBqbno1DE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=p7ekT60OLtY",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -24118,11 +24329,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=9RKIBEBhgPo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=VMPDbiiFyqE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -24152,7 +24363,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=HPZ4You6k2M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24182,7 +24393,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=mwVHUcpIK0Y",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24212,7 +24423,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=nFpZHYJP-z8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24242,7 +24453,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=_2TzSXYjTrU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24272,7 +24483,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=K5XCYcx-tw4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24302,7 +24513,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=RbZB7nUQ7Kg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24332,7 +24543,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=E37j8ssxlmU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24362,7 +24573,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=KBZFsy7F9E8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24392,7 +24603,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=5QVrIIMQmdk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24422,7 +24633,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=hqITzVgNhHI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24452,7 +24663,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=9iD9Na1yr6k",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24482,7 +24693,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=BPBWrzoNITY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24512,7 +24723,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=719X5rhV3UA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24542,31 +24753,31 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=FUyaJXvSRSQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=zXMk88WAO0c",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=QO75xilerG4",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=3HKd5cN7TEY",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=j9This39PNg",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=ReZI0_vGiD4",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=dDtom3mactM",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -24588,11 +24799,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=IZNj8GIjTkA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=QIUqzsWLdIE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -24614,7 +24825,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=1yvdBlJWHhE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24640,11 +24851,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=O3xKh8eERqM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=H35y5GByqyQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -24670,7 +24881,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=jbsGvrVgd5M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24692,7 +24903,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=z01Ll3aoJ-8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24718,7 +24929,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=238rYy8Bg7w",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24748,7 +24959,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=uYMJ4OxSplQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24778,7 +24989,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=GbcVdPZk6IA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24808,7 +25019,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=vpPi9sDBiT8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24830,11 +25041,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=d-5F7DcGpEQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=SCLH6RsRzoM",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -24856,7 +25067,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=uS73GRStz4I",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24886,7 +25097,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=e4BT5GIKjLc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24916,7 +25127,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=rE7QWDCt4cM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24946,7 +25157,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=KL5QfhjYcow",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -24976,7 +25187,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=mFy6nX5a_Co",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -25006,11 +25217,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=hfjNTwGto3M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=yAmQ_TJfqoI",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25036,7 +25247,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=PwHPk76SCDI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -25062,15 +25273,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=CC9ePRPDdW8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=krmzFjDdc-Y",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=wvxKZ9ZaAvs",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -25096,7 +25307,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=BRg5GuNPxmk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -25122,11 +25333,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Et3lTOSri9w",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=duMO4qLcKlQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -25152,7 +25363,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=vxtdzVUVJgY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -25182,7 +25393,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=6nbGbWro1jc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -25212,11 +25423,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ucbIcmf4NVw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=LVRokocP29w",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25246,7 +25457,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=NJlPSfSVnlw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -25276,7 +25487,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=0e9I8MemQrc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -25302,23 +25513,23 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=FgNVwfyIot0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=FHJGqSPlmP8",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=7mpvfKkqk64",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=j6WcSVcl12o",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=rYM81zfXVhY",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -25340,11 +25551,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=stWsGu1ulco",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25366,11 +25577,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=efBpz0B9Hj0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25392,11 +25603,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Zm-h6ABqQiU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25418,11 +25629,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=21cpv8mH5Fc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25444,11 +25655,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=3HxioApvi0A",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25474,11 +25685,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=BBjyjVfY4ow",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25508,11 +25719,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=PGMejJh1ufU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25542,11 +25753,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=AyODU4X97mc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25572,11 +25783,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=GY2jNb_TdZM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25602,11 +25813,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=a1ihsZ-lICo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25632,15 +25843,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=GZRp5mQrMqk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=iimS68A0YHY",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -25670,11 +25881,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=dk7SIevkDPs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25700,11 +25911,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=HYq-nnmSyVc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25734,11 +25945,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=xCoLaSEyCX8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25760,11 +25971,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=bn3Uf75r6DQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25786,15 +25997,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8Fz9sRpH2NA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=Zt5dwW1utmQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -25816,11 +26027,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=CMTc5fZ1XcE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25842,11 +26053,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=GH3WCM6sz1w",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25868,7 +26079,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=T1UGl6ncQNg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -25890,11 +26101,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=kZBXQXagCVk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25916,11 +26127,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=hS8M02SLmyQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25946,11 +26157,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=_qz1ZmzoPog",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25972,11 +26183,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=RDZQExkXZPA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -25998,23 +26209,23 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=tRN5zDzcroo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=CbDktg2POII",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=9kX1QRN9PWg",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=dYsoN0ovU1w",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -26036,11 +26247,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=02MYXjMEA1E",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26062,11 +26273,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=BN1ujZl-r_c",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26088,11 +26299,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=KZXP7t_wRiQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26114,11 +26325,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=0CGBCzhbRTM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26140,11 +26351,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=hZwC4K9vEiY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26166,11 +26377,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=k_hx-ewBuOQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26192,11 +26403,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=z1DxTcqBvVc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26218,11 +26429,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=BmcWZ5scy94",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26248,11 +26459,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=mw6yoo5NY6M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26278,11 +26489,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=wvpxhcIyObw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26308,11 +26519,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=T7pNykNWaTA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26342,11 +26553,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=e2LUNJOAnqw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26376,11 +26587,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=JMNT8wYyhlU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26406,11 +26617,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=T8xLFCzIdG0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26440,11 +26651,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Vt5Y_nqmF-U",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26466,11 +26677,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=gCygjtPD32I",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26492,11 +26703,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=W_YJR0CEGCg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26518,11 +26729,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=EhJ2zY2bFso",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26544,11 +26755,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=HRKlN_AZ_xc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26570,11 +26781,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=1j_VuFPjeco",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26596,19 +26807,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=fW5K_mMeeOA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=rsjT7SiRX4w",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -26638,11 +26849,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=0P0P4tnB7hI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26672,11 +26883,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Mr4amixiiQU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26706,11 +26917,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=3e9iaPXwmHc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26740,11 +26951,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=pv7lHsV9XwU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26774,11 +26985,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Yv39ABFABa8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26800,19 +27011,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=V7gQD-QXOgQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=oqK9A-o9S8k",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -26834,15 +27045,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=5Rx8IjrdgoY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=wFYSeAf-6pI",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -26864,7 +27075,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=PaFm8Q_5qEE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -26890,11 +27101,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qCxGAxQNUno",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26916,11 +27127,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=njH2PwQQja4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26950,11 +27161,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=9CedbKmq108",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -26976,11 +27187,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=UC7mjwqx7co",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27002,11 +27213,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=eaGqo2o1288",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27028,11 +27239,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=fsHF3l5cEQw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27054,11 +27265,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Jhfmk6WQKmo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27080,11 +27291,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=yJlpfWn8jv8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27106,11 +27317,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=bpz1MwpKGkI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27132,11 +27343,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=EABPmPboBbo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27162,11 +27373,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Cs1oY_xTqOI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27188,11 +27399,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=RflEdS6l1z4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27218,11 +27429,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=3TkbdPlQu5s",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27244,11 +27455,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=AMDnkdTcqpE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27278,11 +27489,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=UqEFyIsGjnI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27304,11 +27515,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=0oBOF4DFcNo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27330,11 +27541,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=vKNvJTowaec",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27356,11 +27567,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=BKT0E7Ie--0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27382,11 +27593,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8bj0EwDQLc0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27408,11 +27619,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=esI_ZH7u4iY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27438,11 +27649,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=YubxbNwwg9w",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27468,11 +27679,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=XTlzbc2IzTo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27502,11 +27713,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=9Bt9ABYJ1TY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27532,11 +27743,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=5Y2xEKA2B3w",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27562,11 +27773,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=yax2QetRcUI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27592,11 +27803,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=JPN2jGW-Ng8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27618,11 +27829,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=yfsBpwaBl8s",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27648,11 +27859,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=fbsRDQB1mU8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27678,11 +27889,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=JJKrSX5o9Ik",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27712,11 +27923,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=JgDCtTSrUSA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27738,11 +27949,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=4cuYxx7oXOI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27764,11 +27975,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=PlKiR10glEI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27794,11 +28005,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=SanSppEB0ac",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27824,11 +28035,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=EiB6vDr8EcA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27850,11 +28061,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=rN364zHbDQ0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27876,11 +28087,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=XrGfF24fyfU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27906,11 +28117,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=R-AZmGx8tpA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27936,11 +28147,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qzRVCKFkJ64",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -27970,11 +28181,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=0nlWPBpgLxU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -28004,11 +28215,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=mDc9uTSqHCc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -28034,11 +28245,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qMizJ7jyRNg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -28068,11 +28279,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=KnnnDexNcdM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=FGFeJr26qBQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -28102,11 +28313,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LuvJiu0PEx0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=FGFeJr26qBQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -28128,7 +28339,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=GFkgteV3OHU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -28158,7 +28369,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=YYYbUm6TabA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -28180,7 +28391,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=22FeRZtR7sY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -28206,7 +28417,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=SPz2-Ei_Q4Y",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -28228,7 +28439,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=_PcvsvVsOno",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -28254,7 +28465,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=KrVq8lNZhzY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -28276,7 +28487,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=0M453JL-MXg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -28302,7 +28513,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=5yxp-RrReJI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -28324,11 +28535,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=wzP6wonMFBg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=LwHKXIUfX3o",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -28358,11 +28569,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=wmeGf0gG5hg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=VpKsaZLcW-g",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -28392,11 +28603,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=NvFUruN7cOE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=4uwshwYvHkI",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -28426,11 +28637,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=c-bib_BFA0o",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=WDygiR2Sn4A",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -28456,11 +28667,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=S2vxHJRHzLg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=WDygiR2Sn4A",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -28486,11 +28697,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=YsmqWWmFPHw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=WDygiR2Sn4A",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -28516,11 +28727,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=AmYgxT04LRI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=WDygiR2Sn4A",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -28546,7 +28757,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Jpvim0TUHJc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -28572,7 +28783,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=oWJzzrky-5E",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -28598,7 +28809,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=_ZO2LnxZwKM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -28624,7 +28835,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=NghozwSFwaM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -28650,7 +28861,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=dLef_S5knMA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -28676,7 +28887,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=-28VwydFImc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -28702,7 +28913,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ufbM2npofiE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -28728,7 +28939,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ljt2Gp9gInM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -28754,7 +28965,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=UIYnTYP02Uw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -28776,15 +28987,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=HfFnnQD-A-k",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=cO-BuIQTMwg",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uxSS59IJ-is",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -28814,19 +29025,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=IIqmkUHStwA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=GKAEsp-FTNY",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=_OdJwIN3xHE",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=ZvkoA6aN7FI",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -28856,11 +29067,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=5lMaIG3ncyA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=8hfJSB3NSBo",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -28890,7 +29101,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=MaapqzoodDw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -28920,19 +29131,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LvDlrjgbIL4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=O6r6W1Ybsig",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=yeFmDxSc-qk",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=kzblLG5YXOU",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -28962,7 +29173,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=bFMw1c9Fijg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -28992,7 +29203,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=sP6XVxZr_kI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -29022,7 +29233,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=d9sfthfkCXg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -29044,19 +29255,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Soo5ZQLABiI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=8hfJSB3NSBo",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=SIR_sZRNLFg",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=yBfEy-nddYw",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -29078,7 +29289,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=EK8oJIyk_vM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -29108,11 +29319,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LHC9GgfJZ08",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uxSS59IJ-is",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -29142,7 +29353,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=pkMGmhuf0xU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -29164,7 +29375,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=zQY9BOUL1e8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -29186,7 +29397,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=TN0CGQtA0wE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -29216,7 +29427,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Nm-Gd2cPPAI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -29238,11 +29449,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=bxB29JCSI5Y",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=kvVz9li8zS0",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -29264,15 +29475,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=kjaWGiV2DmU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=HcS3c6Ki5CU",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=eaxkBx_xGJo",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -29294,11 +29505,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Rnx2IbnZ-z4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=HcS3c6Ki5CU",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -29328,15 +29539,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=rgUpYd_eC7Y",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=m121tGEpfgg",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=iCiY8cGjcmI",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -29358,15 +29569,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=YsDdAfXbcvg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=6lfn0-cndgU",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=m121tGEpfgg",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -29396,11 +29607,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=o-tT7XdzaS0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=m121tGEpfgg",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -29430,11 +29641,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=T-DTKSHrslU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=m121tGEpfgg",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -29464,11 +29675,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ojY6UkQaqBE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=6crQXgNPKSc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -29498,11 +29709,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=W5VicAbiiyo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=m121tGEpfgg",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -29532,19 +29743,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ZQLaJxeVEqw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=HI2be-h40NA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=Fn6pfZ_DE44",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=bPU1MB2FQqo",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -29574,11 +29785,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=70gjzprOSV8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=HI2be-h40NA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -29608,11 +29819,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=0nbb7AfktME",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=fHaECRuFCUg",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -29638,11 +29849,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=0Cze_PZGiDE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=HI2be-h40NA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -29664,7 +29875,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=VM_EF8UX5mw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -29686,7 +29897,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=5zPaM-lGKvk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -29708,11 +29919,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Q_TZkxTi-1Q",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=v1y5P958MOs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -29734,7 +29945,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=-rG2t_721NU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -29756,7 +29967,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8I_ywMo2ZGs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -29786,7 +29997,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=5WM7wr-RfVo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -29808,11 +30019,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=USgGHhPbO9w",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=-0C6JmLcpC8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -29834,7 +30045,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=zKX5OkHEmi0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -29860,11 +30071,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=r28gWGO1tLk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=804FeHK9WFc",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -29890,7 +30101,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=SiB7IxzMThg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -29916,7 +30127,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=P1wTLy5qmD4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -29942,7 +30153,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=_lOICt7s9gA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -29964,19 +30175,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=iO18b_VDwBY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=EoggyigRask",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=jK3uHpxRP48",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -29998,11 +30209,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=6aURVy9Ven4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=jK3uHpxRP48",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -30024,11 +30235,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Vkcxifo-tyY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=jK3uHpxRP48",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -30050,11 +30261,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=mbJYBiRkw_Q",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=jK3uHpxRP48",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -30076,11 +30287,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ZHy-VZyhfok",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=jK3uHpxRP48",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -30102,11 +30313,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=wonD_NkupkY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=6q2q95xIus4",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -30128,19 +30339,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=iEYWc7KprI8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=VZmMXREhgYQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=tvnx3hmD0FA",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=6nDcwujfwZc",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -30162,11 +30373,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=TMVRXUXym5U",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=aKa7hHO9NgA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -30196,11 +30407,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=DijgOikKclA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=aKa7hHO9NgA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -30226,11 +30437,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=X5i3BbERm5g",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=aKa7hHO9NgA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -30252,7 +30463,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=EPHbdxxPA5w",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -30274,15 +30485,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=2f3el5DDugk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=aKa7hHO9NgA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=dbNFcCUboFQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -30308,15 +30519,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Ul3r0ugCntg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=aKa7hHO9NgA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=6byLpMUFthI",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -30338,11 +30549,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LWMwJsAIriM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=aKa7hHO9NgA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -30368,15 +30579,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=bFv_YW4owRA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=aKa7hHO9NgA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=09phdXnF9Z0",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -30402,11 +30613,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=VM3gAmVF0NU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=aKa7hHO9NgA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -30432,11 +30643,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=EwYrX_k657U",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=aKa7hHO9NgA",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -30458,7 +30669,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=KuMiOnT-Cng",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -30484,7 +30695,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Fmy9aUjfxTY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -30514,7 +30725,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ClWWKl2Mijo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -30536,7 +30747,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=a87eJ8aiVok",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -30558,11 +30769,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Sy7UeXmbznI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=x91_C_TG200",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -30588,11 +30799,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=gx9KdKuFkVg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Mp00MgkTpAk",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -30618,11 +30829,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=_8tZxnUvC-Y",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=uBlq0Hli-AU",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -30648,11 +30859,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=gcp9iCSHHH0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=RngDg5DVg58",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -30678,15 +30889,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=o6ol-4JCf-Y",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=m89wTRvAhRE",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=yBfEy-nddYw",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -30716,7 +30927,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=-KqsVr8QeaE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -30738,7 +30949,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Cunb2XmFaR8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -30760,11 +30971,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=jLLGu2Jnkik",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=S0o5cw1IBWY",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -30786,11 +30997,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=9rmnzRPnpSc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=FA90te3HpPU",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -30812,7 +31023,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=z0sq3uE7_nk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -30838,7 +31049,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LG7YqZets74",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -30868,7 +31079,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=bkZRTxwbUsA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -30890,7 +31101,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=EAK7rCKbuxk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -30912,7 +31123,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=VFjqcLjfJSE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -30934,7 +31145,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Eb3fboiSjqE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -30964,7 +31175,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=3uBxsTgYKgE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -30994,7 +31205,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Qq9MisbaCUs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31020,7 +31231,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=OvhoB8TEIbA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31042,7 +31253,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8s4I43QJPKs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31064,7 +31275,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=cB3ua2O-J7E",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31086,7 +31297,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=KAb6XHA4z9M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31108,11 +31319,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7eBsnchhU84",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gjt0YrEWAqM",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -31134,7 +31345,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=fp3OBpNJmOI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31156,7 +31367,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8ItkL_uM_Sg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31178,7 +31389,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=aw754n8JHhc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31200,15 +31411,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=YGx2rPl-GUc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=6I8VfVkjw_Q",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -31230,7 +31441,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=1RBWodFNGX0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31252,7 +31463,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=o1VQxMe9Ad4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31274,7 +31485,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Z-h-OO4XT_E",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31304,11 +31515,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=f9zdd9X4v6A",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=tS2uGBM51DM",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -31338,7 +31549,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=NUsLv-yvoVY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31368,15 +31579,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=mch_ICEt9FY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=4UlvDqZjDm0",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Bonus YT Instruction"
       }
     ]
   },
@@ -31398,7 +31609,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=J9Q0GTktw58",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31428,7 +31639,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=sLzwX1wXw7Q",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31454,7 +31665,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ZztjwHUM0uk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31484,7 +31695,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=n7avFQE4Vok",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31506,7 +31717,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=exIElshrk7Y",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31528,7 +31739,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=anYdCr7FWP8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31554,11 +31765,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=GVmIJjShViE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -31588,11 +31799,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Yq1Ke2-JeG4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -31622,11 +31833,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LoajpcrNkh0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -31656,11 +31867,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=k8p0Oc83VsQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -31682,7 +31893,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=MCW6iN3XRnU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31704,7 +31915,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=vPDzkoo_GiI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31726,7 +31937,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Fq-gaXZh8aE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31748,7 +31959,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ngAeRChqGl8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31770,7 +31981,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=jHDPLz3qrS0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31792,7 +32003,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=1ouiGpqXNiU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31814,7 +32025,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=G9fZ-ZTm0vM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31836,7 +32047,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=AfhUnObAhv4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31862,7 +32073,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qpXFTmRIOk8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31884,7 +32095,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=v1UiX6xCfqI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31910,7 +32121,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Ofr9K9dzLto",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31932,11 +32143,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=84AfkEsl6bM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=JGe2T_ruUtY",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -31966,7 +32177,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=kEPiZLRS9_Q",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -31996,11 +32207,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=OApto_Xx3Bk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=_wnMr3ruvOA",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -32030,11 +32241,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=TLR5sI1sDDU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=rz9dMphWja4",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32056,11 +32267,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=WFK70PKNlDM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32082,11 +32293,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=135dAOBnMF8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32108,11 +32319,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=pnMawj3BOR0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32142,11 +32353,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=SsGPfBQ1n8I",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32176,11 +32387,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=4R86un36ssI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32202,15 +32413,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=nC8uOXCgd84",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=RNDBQHwxGEo",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -32240,11 +32451,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LZhzTEp9Muk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32274,11 +32485,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=gfKIDHzWJVI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32308,11 +32519,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=grIifKiV5-8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32342,11 +32553,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=KNkUes8WZjM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32376,11 +32587,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=RLWAtbKUTAg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32402,7 +32613,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=2I5AsgHSe8k",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -32424,11 +32635,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=j6Hh2W18oko",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32450,15 +32661,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=3CjZanIbcz0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=--w66gzedTE",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -32480,11 +32691,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=lUIzzSLaUvk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32506,11 +32717,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=njwMm6qHwVQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32532,11 +32743,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=BZmwgLoAFDI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32558,15 +32769,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qizPceZGjYs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=hirSeWWu8tQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -32588,11 +32799,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=0T9HPa2oylY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32614,11 +32825,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=5q6E8b8bOMA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32640,11 +32851,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=858I8KaBuJs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32666,7 +32877,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=uFAnN_OElLA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -32696,11 +32907,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=wbjssKyBhVs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32722,11 +32933,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=UKqYGb3UCw8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32748,11 +32959,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=C16UH6-5EWM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=nGFGPj3uB6w",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32774,7 +32985,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=UDdKqldfJ9k",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -32804,11 +33015,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=io-hldbVAYk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=kn6F7_qZuJ4",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -32838,7 +33049,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=xJozzsJbVzc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -32868,7 +33079,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=4wH_BU7O0Ho",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -32890,7 +33101,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=xZv3rCisUEc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -32920,11 +33131,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=yrogOcpSYd8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=4p-8rbIvP-M",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -32950,7 +33161,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=FJAasSExE1I",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -32980,7 +33191,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=abkrLc9L8Wk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -33002,7 +33213,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=p4DorjJYgA8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -33028,7 +33239,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=d2EphRNhP2k",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -33054,7 +33265,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=mpV5LZIb-R0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -33084,7 +33295,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=03oXWbHZcao",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -33110,7 +33321,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Et7bEOyxLm4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -33132,11 +33343,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=tgexYpGUTdI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -33158,11 +33369,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8kHxNnt6Dlo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -33184,11 +33395,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=0yxSt0UE7yM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -33214,11 +33425,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=_kznp8UIS1w",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -33244,11 +33455,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8kHxNnt6Dlo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -33274,11 +33485,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8kHxNnt6Dlo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -33300,11 +33511,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=0uIbLJQeEGc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -33326,11 +33537,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=yvbCL9adKKQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -33352,11 +33563,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=JiBKcTStNPE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -33378,11 +33589,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=kkiUv8AJ8vo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -33408,11 +33619,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=K7Id_jPHCFE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -33438,11 +33649,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LU5oNWoh3i8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -33472,11 +33683,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=5g_HVlX9Sbk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -33502,11 +33713,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=r1MFmSl1xyw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -33536,11 +33747,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Yv7p6VjOh3E",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -33566,11 +33777,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8KaJUizs_Hg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -33592,7 +33803,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=320W03VuBq0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -33618,7 +33829,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=hFTgLrRMMy0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -33640,7 +33851,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=1BMcpVmTSLo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -33662,7 +33873,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=goxWkhS2F44",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -33684,7 +33895,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=nQEOJBipcQo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -33706,11 +33917,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=J5yvcTWTRnk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=WAZfTbh_kxA",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -33732,11 +33943,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=JkRN6jIsqD0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=1zXkF6GmU2k",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -33758,11 +33969,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=_7NGla8cKgo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=6WTL5yJapLo",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -33784,11 +33995,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qEePtlX9eS0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=F2vi6Q7i-Lw",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -33810,7 +34021,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=DyYZkIn0rOk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -33832,15 +34043,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=VWHYB8ZwBzU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XVxiQCqIdLI",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=h7m93TxIW3E",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -33862,11 +34073,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=gEIj_VvBfk4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XVxiQCqIdLI",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -33888,11 +34099,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=3Zn12MpvHrY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XVxiQCqIdLI",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -33914,11 +34125,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=PhicOAemBxY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XVxiQCqIdLI",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -33940,7 +34151,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=zYW3lpG663I",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -33966,7 +34177,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=SuPZTzu_xfk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -33988,11 +34199,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=00BiZtQv9Ek",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=sY1F74gHhCU",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -34022,7 +34233,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ERfWcDb96_E",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -34048,7 +34259,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ltKyNow3kHc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -34078,11 +34289,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7-qHEdAdEaA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=F3EMBWJGsAE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -34104,7 +34315,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=YU2ed8YSS3U",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -34126,11 +34337,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LTIT4YtDzgg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=-7AZkDqjio0",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -34152,7 +34363,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=rmWe70tf744",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -34178,7 +34389,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=gs0M5SF-AbA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -34200,7 +34411,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Be1i-A77EYQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -34222,7 +34433,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=H5pahFPEDE0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -34244,7 +34455,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Dbxk00fMnK4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -34274,11 +34485,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=99pBSnGX4B8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=9O0YNq0jlxs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -34300,11 +34511,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Yiq3gUUAaec",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=HH85f81KC5A",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -34334,11 +34545,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qrbKtQg3Baw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=WzYuFTtgpo4",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -34360,15 +34571,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=aVIAyYQph6Q",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=TYBaSwhr5uw",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=qRDwF0H04jY",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -34390,11 +34601,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Hs-PP-eESQM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=ZD2oDkjteiQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -34416,7 +34627,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=KqiozayVOmY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -34438,7 +34649,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=d50J5ww2t4I",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -34460,11 +34671,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=FtVW3sawRbk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=DSX6GAZl7qY",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -34486,11 +34697,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=lxhX4VKLEsM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=tNoFXfP-d1I",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -34520,11 +34731,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=kTPqJ6oYxYc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0-EGMTSc-Zo",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -34550,11 +34761,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=OwkSPeCtaJM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=RU3HlOF4m9E",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -34576,11 +34787,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=VCtMy9Gf8Gg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=RU3HlOF4m9E",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -34606,11 +34817,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=MmahoY2hLAw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=RU3HlOF4m9E",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -34636,11 +34847,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=R7_yAGjbnO4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=SJZWTsh0BXs",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -34666,11 +34877,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=PKMmw-AC2Ug",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=FgjrNNv3gAE",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -34696,7 +34907,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=U8_YgZUM8rg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -34722,11 +34933,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=1otq141OBP8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=49z1gVKWSIM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -34756,11 +34967,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=3lAHmafif-M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=tR_8uezxgVM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -34790,7 +35001,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=u_azSHIivjs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -34812,11 +35023,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=bvDON4gXsyc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Xz4fAw4b4KQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -34838,11 +35049,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LsrrhNLPygg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=s4EQrriB0SM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -34864,7 +35075,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=FifKu3DRDuc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -34886,7 +35097,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ZiCe6wV2vzk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -34916,11 +35127,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=jGkNf0yuwuE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=LQ11rBpDd40",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -34942,11 +35153,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qJzKc0jid2M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=CLWExrPCA4Y",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -34968,11 +35179,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7P1ZYnn4IgE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Sf_mkLmV4OM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -34998,11 +35209,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=QAoj6jeHmEU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=8BQB88GTrrQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35028,11 +35239,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=3G32IoVuBd0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=8BQB88GTrrQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35058,11 +35269,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=quHrg76FKgs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=6njWRXHk9EM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35088,15 +35299,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=gogVTLiPqpM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=sIJuqNFAswk",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       },
       {
         "url": "https://www.youtube.com/watch?v=4dqGPZa2j-M",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -35122,7 +35333,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=0y9R1zVBTy4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -35148,11 +35359,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=4YloHlRU23M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=6v2Dsb1H20I",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35178,11 +35389,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=9EydK00BaqU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=8E398RvjC5U",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35212,7 +35423,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ufHnY2vTwYo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -35238,11 +35449,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=JoxSPOxxrTM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=WV-IvUfrmSg",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35268,11 +35479,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=b9enjxd55lE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=2A3RFmnSRBQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35298,11 +35509,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=rsqPgQgYwBw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=2A3RFmnSRBQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35328,11 +35539,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=NA8SmgeHjuc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=2A3RFmnSRBQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35362,11 +35573,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=fhIQIbuLpX8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=2A3RFmnSRBQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35396,11 +35607,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=PAUgSx_Gitk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=2A3RFmnSRBQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35422,11 +35633,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=YE3gvkXA8hU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ge--RHSdGuQ",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35448,7 +35659,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=64IzLrTbQ6A",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -35470,7 +35681,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=wQygeh-IwiQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -35492,11 +35703,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=bHUpVioGY_g",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=Qgth0ES7TNU",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35518,11 +35729,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=amRbL5l0IDQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=L-vAWAFiZyM",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35548,11 +35759,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=BuSaXh-hM8M",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=1lMWRu3c3Hg",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35582,11 +35793,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=cB7lF3ppG9U",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=1lMWRu3c3Hg",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35612,11 +35823,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=oVyj5jjjPUs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=1lMWRu3c3Hg",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35642,11 +35853,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=tyg4QjU5eDc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=1lMWRu3c3Hg",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35672,11 +35883,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=wf3xcBtNDeA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=1lMWRu3c3Hg",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35698,11 +35909,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=NzTO5JerBUc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=FB0cJG2rYI4",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35724,11 +35935,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=m8TowNxHZew",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=4gAhhwGdc7o",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35750,11 +35961,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LI6FedFRaW8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=4gAhhwGdc7o",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35776,11 +35987,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ZcTT_LmJOJo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=4gAhhwGdc7o",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35802,11 +36013,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=zIvOIt1xJzg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=4gAhhwGdc7o",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35828,11 +36039,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=rkXqgR3DHa4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=4gAhhwGdc7o",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35854,11 +36065,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=oyD7mT17xVg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=4gAhhwGdc7o",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35880,11 +36091,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=S1WFk4zPPVY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=4gAhhwGdc7o",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35906,11 +36117,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=q7oRiLdPcmc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=4gAhhwGdc7o",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -35940,7 +36151,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Xl4G4mL2Icw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -35970,11 +36181,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=mWkYXXuf0lw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=8VEXnj_o1Ss",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -36004,11 +36215,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Dr7BGgGOnFw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=mFTIcl7JOhY",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -36038,7 +36249,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=6ByXD_Pmgp4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36068,11 +36279,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8seJDNxUT1I",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=HREd9YyEgt4",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -36102,7 +36313,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=gV1lUuNT8xc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36128,7 +36339,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Eq9L29Ao3pg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36154,11 +36365,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=rM7zA6EtaoM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=99aWL2oDH84",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -36180,7 +36391,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=sw0nUzGl718",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36202,11 +36413,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Wmw8xKNvCZI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=RHrltur8Eik",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -36228,11 +36439,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=lxqdu3hDrXA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=RHrltur8Eik",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -36258,11 +36469,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=w_A3LHhhxvI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=RHrltur8Eik",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -36284,7 +36495,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=wP9grW1epic",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36306,11 +36517,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=HD92tYD5uAw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=8SYua4FQZ6U",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -36332,7 +36543,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=6Nv-mEiBuQ0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36354,7 +36565,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=q9EwyUh_mIQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36376,7 +36587,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=fMhBLnIQHrs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36402,11 +36613,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=IHZUOVg1NYk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=sWD6jjr4TRU",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -36432,7 +36643,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=XwtBaplHTkc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36458,7 +36669,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=4cGFuvLq9BA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36480,11 +36691,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=PLxCtcWNXMY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=m_xHUyABJpY",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -36506,11 +36717,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=QFBF-32GzUY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=m_xHUyABJpY",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -36536,7 +36747,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=s1hy23XbmPA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36558,7 +36769,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=DmpdS_Bv-30",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36580,7 +36791,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8hLWQvlJcgs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36602,7 +36813,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=AcOj_uO6WBs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36624,7 +36835,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=IdXZyvIxyUU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36646,7 +36857,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=x6OQYinl3W8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36668,7 +36879,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=zKvxkGPzXGc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36690,7 +36901,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=tIa-iBgLBtQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36712,7 +36923,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=5loCqxkEPDY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36734,11 +36945,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=TVXINRIXSck",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=xLQB5sSy5V8",
-        "label": "Instruction (Horizontal)"
+        "label": "Official App Instruction"
       }
     ]
   },
@@ -36760,7 +36971,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=fqnXo3-kfvs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36782,7 +36993,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=kwuVeaCZGVM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36804,7 +37015,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=KlIWnJHn1O8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36826,7 +37037,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=gfLoqzo8r9g",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36848,7 +37059,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=cyQiXsNyMqo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36870,7 +37081,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=dCMDu7H9IVo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36892,7 +37103,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=pq4oqum1yd4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36914,7 +37125,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=G0Pr-WwhEsk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -36940,11 +37151,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=wKcHvF9edWM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=OoF_10rBQtI",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -36970,7 +37181,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=52jfIHzUKTU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37000,7 +37211,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=dDAWgKxhNow",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37026,7 +37237,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=wd0JuDbMFdk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37048,7 +37259,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=D4pJaDLJyZw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37070,7 +37281,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=n2imcns0CCw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37092,7 +37303,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=jiv6rjOMWTY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37114,7 +37325,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=mvN8F5JXao0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37140,7 +37351,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=3YhOhmvad2A",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37166,7 +37377,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=l3-9wH5_dOc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37188,11 +37399,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=GMUiG62BJCY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=xDQN9iNoy0o",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -37214,7 +37425,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=kQxfk-9Dpc4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37236,7 +37447,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=q-bwirkoIpc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37258,7 +37469,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=vYeMf0-haeo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37280,7 +37491,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7mDeMz_kwJA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37306,7 +37517,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=oq5l8lHAsvg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37332,7 +37543,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=xxS9ggSSfSU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37358,7 +37569,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=RDnccJ121GA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37384,7 +37595,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=hcotZc4fu2Y",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37406,7 +37617,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=uWTW3NB2pfA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37436,7 +37647,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Vihmsn9RuiI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37462,7 +37673,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=83e5rHQvwdo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37488,7 +37699,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7vkRyoyeCms",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37514,7 +37725,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=MMfcIIR8Mtk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37540,7 +37751,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=bHsyIJ7689E",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37566,7 +37777,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=8xhlLG74JzY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37592,7 +37803,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=dNrZhJQKiqA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37618,7 +37829,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=nZajmMfLK6g",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37640,7 +37851,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=gsBGwMRviEU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37666,7 +37877,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=0CBXyNcAnLE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37696,15 +37907,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=dW5LbjUoX58",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=ryR22bq2l-0",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=cDDFSdOoXaE",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -37734,7 +37945,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=j_nezjIxB3U",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37760,7 +37971,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=UyBLKSs_sZ4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37782,7 +37993,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ArG7jCARITc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37808,7 +38019,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=C-8HFn9LHDI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37834,7 +38045,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=wv0lOKi7LZA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37860,7 +38071,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=IFm6DSVTcE4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37886,7 +38097,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=2Fsy-CrwIL4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37912,7 +38123,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=O2lW4dfnMXM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37938,7 +38149,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ajDSfnLyzqQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37964,7 +38175,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7dQ5kNsmMF8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -37990,7 +38201,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=1mwP83NjgXc",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38012,7 +38223,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=j-1B8UJub9I",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38034,7 +38245,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Vc81WppTAZ8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38056,11 +38267,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=FEDKMJukRUk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=q6BMGqYcMfc",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -38082,7 +38293,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=L3z8bC63M78",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38104,7 +38315,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=5VM-8s34_vE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38126,7 +38337,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=81ZgwJ_qZTY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38148,7 +38359,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=1YCzYgNxgR0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38174,7 +38385,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=cl7VYYKYGX4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38200,7 +38411,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=uLs0fwrnGFo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38222,7 +38433,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=xSzr4Nu154Y",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38248,7 +38459,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=dnGmHxbHr38",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38274,7 +38485,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=cykdkhNqdE8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38300,7 +38511,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=3J8LzZrvFGs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38326,7 +38537,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=SBvWImFzAko",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38356,7 +38567,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=bVwTWjir_so",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38378,7 +38589,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=mtNb24gHdKg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38400,7 +38611,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=IioPrDUhnY4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38422,7 +38633,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=miJfa2IjC7U",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38444,7 +38655,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=86bgCzWJG90",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38474,7 +38685,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=338g8zQnTeA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38500,7 +38711,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=l1ree4u-DJ4",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38530,7 +38741,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=hmVuPQui2Sk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38560,7 +38771,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=uvLfCCLv_18",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38582,7 +38793,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=DMTLvz86Gfg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38608,7 +38819,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=wjJTTivLF_k",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38630,11 +38841,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=7BMrLRFzVI8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=tT0pQzqv9os",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -38660,11 +38871,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=dFmKgvkoGOM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=G8ioI5jR43M",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -38686,11 +38897,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=DEB-qTFUjFw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=8VVQsgowiLc",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -38712,11 +38923,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Fh70R7DOyyw",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=gz4n8g7zvaw",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -38738,11 +38949,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=LXCR_bXY6GM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=a01gf--Yuec",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -38768,19 +38979,19 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=nLt2fI4m0Ig",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=sE9jkIKyDNM",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=OkplzqfhTpU",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=wGzA1_hGrTw",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -38806,11 +39017,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=gkVq-reTBhk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=cTzNevZwndA",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -38836,7 +39047,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=omSS2qW7iaQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38862,7 +39073,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=nJj_xGGN170",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38888,7 +39099,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=u79M6eaczx8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38914,7 +39125,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=vUERZSwjo0s",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38940,7 +39151,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=FWYfM13RKj0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -38966,11 +39177,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=3-OkARe2uP8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=k1XeRuqEHus",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -38992,15 +39203,15 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=O8WEklF-SvA",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0hG8LKxVbzQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=4PXTleLEzic",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -39022,7 +39233,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=BJfP2HfZX9Q",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -39048,11 +39259,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=YS0SfxRHUDg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=jrVnwwmFkgc",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -39078,7 +39289,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=S1Tfd73I7U8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -39104,7 +39315,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=QbYVBXy96x0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -39134,11 +39345,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=xOwkHObPN4A",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=0Ki4T5T-ggw",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -39160,11 +39371,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=aqya26UNWLo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=r38oFmsMZdw",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -39190,7 +39401,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Snsb9txn130",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -39212,7 +39423,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=qAEqVRqP9vo",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -39234,7 +39445,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=2FF8wb7HMmM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -39256,7 +39467,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=UVSTjVaMthg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -39278,7 +39489,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=hK26N5rs8SY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -39304,11 +39515,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=h3BI5SQQPU8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=SA--cGy02sI",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -39330,11 +39541,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=FNs8OEZtiFE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=BmxirUlfiNA",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -39356,11 +39567,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=fJLTbuDnYHI",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=k5a05MwcgYQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -39382,11 +39593,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=hIGiwwGzKds",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=mzpQmgUPuZc",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -39408,11 +39619,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=WwIMXGhOoSY",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=O1-RSXRK3SM",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -39434,7 +39645,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=NEvUVCFF8x8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -39456,7 +39667,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=kzEJBWVR3JU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -39482,11 +39693,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=eDjJDOl59zU",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=XG4hfCZgRII",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -39508,7 +39719,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=cXLk5yN6UW0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -39530,11 +39741,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=30ApIYaQHeQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=N94U9OMQzkI",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -39556,7 +39767,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=OivoFOVCftg",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -39578,7 +39789,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=CQqR7VP-Hdk",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -39600,11 +39811,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=gWD2eOK3LRE",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=X3b9KbZZ8v4",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -39634,7 +39845,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=HxdigAt02Qs",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -39656,7 +39867,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=FvyPw3Ka5O0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -39682,7 +39893,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=ZkeP2ZhJQ4U",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -39708,7 +39919,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=4xMMyRlLS2Y",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -39730,11 +39941,11 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=-WAly_CRjr8",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=8Sb0iKSHEkk",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -39764,27 +39975,27 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=Yver3xSBFhM",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=YZ5coRSKIIQ",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=S2UcIE4PIrk",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=02VJdaEIiq0",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=fMHJHEmYBEY",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       },
       {
         "url": "https://www.youtube.com/watch?v=q5C3KaCrVZs",
-        "label": "Exercise (Horizontal)"
+        "label": "Bonus YT Video"
       }
     ]
   },
@@ -39814,7 +40025,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=PFNQvCUabII",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   },
@@ -39844,7 +40055,7 @@ window.TYTAX_MAINFRAME = [
     "videos": [
       {
         "url": "https://www.youtube.com/watch?v=YtBleVdIiE0",
-        "label": "Exercise (Horizontal)"
+        "label": "Official App Video"
       }
     ]
   }
