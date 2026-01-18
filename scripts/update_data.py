@@ -1,13 +1,17 @@
 import json
 import re
+import os
 
 def update_data():
+    base_dir = os.path.dirname(__file__)
     # Read the JSON file
-    with open('tytax_t1_exercise_library_v1_1.json', 'r') as f:
+    json_path = os.path.join(base_dir, '../tytax_library.json') # Corrected filename based on ls output
+    with open(json_path, 'r') as f:
         new_data = json.load(f)
 
     # Read the HTML file
-    with open('index.html', 'r') as f:
+    html_path = os.path.join(base_dir, '../index.html')
+    with open(html_path, 'r') as f:
         html_content = f.read()
 
     # Locate the PRESETS definition
@@ -168,7 +172,7 @@ def update_data():
     
     updated_html = html_content[:idx_open_brace+1] + new_data_content + html_content[idx_data_end:]
     
-    with open('index.html', 'w') as f:
+    with open(html_path, 'w') as f:
         f.write(updated_html)
 
 if __name__ == "__main__":

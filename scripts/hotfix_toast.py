@@ -3,8 +3,9 @@
 def fix_app():
     print('🚑 Starting Surgical Hotfix for Toast Error...')
     
+    target_file = os.path.join(os.path.dirname(__file__), "../index.html")
     # Read the file
-    with open('index.html', 'r', encoding='utf-8') as f:
+    with open(target_file, 'r', encoding='utf-8') as f:
         content = f.read()
     
     # The missing code block
@@ -37,7 +38,7 @@ def fix_app():
     new_content = parts[0] + target_str + "\n" + toast_logic + "\n" + parts[1]
     
     # 4. Save
-    with open('index.html', 'w', encoding='utf-8') as f:
+    with open(target_file, 'w', encoding='utf-8') as f:
         f.write(new_content)
     
     print("✅ HOTFIX APPLIED. The 'toast' variable is now defined inside App().")

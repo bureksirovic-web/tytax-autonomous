@@ -31,7 +31,9 @@ async def run():
         page.on("pageerror", lambda exc: print(f"PAGE ERROR: {exc}"))
 
         print("Loading page...")
-        await page.goto(f"file://{os.getcwd()}/index.html")
+        # Point to the index.html one level up from this script's directory
+        app_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../index.html"))
+        await page.goto(f"file://{app_path}")
         await page.wait_for_timeout(2000)
 
         # Check for Settings button (Postavke)
