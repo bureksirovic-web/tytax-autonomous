@@ -19,8 +19,13 @@ from datetime import datetime
 
 # --- CONFIGURATION ---
 REPO_PATH = os.environ.get("JULES_REPO_PATH", ".")
-APP_FILE = "index.html"
-BACKLOG_FILE = "BACKLOG.md"
+# Use absolute paths relative to script location for default fallback
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(SCRIPT_DIR)
+
+APP_FILE = os.path.join(ROOT_DIR, "index.html")
+BACKLOG_FILE = os.path.join(ROOT_DIR, "docs/BACKLOG.md") # Moved to docs/
+AGENTS_FILE = os.path.join(ROOT_DIR, "docs/AGENTS.md")   # Moved to docs/
 
 # Nuclear Sanitization of Keys
 GEMINI_API_KEY = (os.environ.get("GEMINI_API_KEY") or "").replace("\n", "").strip()
@@ -258,8 +263,8 @@ def process_task(git_mgr, models):
         return False
         
     context = ""
-    if os.path.exists("AGENTS.md"):
-        with open("AGENTS.md", "r") as f: context += f.read()
+    if os.path.exists(AGENTS_FILE):
+        with open(AGENTS_FILE, "r") as f: context += f.read()
 
     # 3. Attempt Loop
     success = False

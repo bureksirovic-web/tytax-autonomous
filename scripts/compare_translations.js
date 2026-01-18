@@ -1,8 +1,10 @@
 
 const fs = require('fs');
 const vm = require('vm');
+const path = require('path');
 
-let code = fs.readFileSync('translations.js', 'utf8');
+const targetFile = path.join(__dirname, '../translations.js');
+let code = fs.readFileSync(targetFile, 'utf8');
 // Append assignment to global
 code += '; global.TRANSLATIONS = TRANSLATIONS;';
 
