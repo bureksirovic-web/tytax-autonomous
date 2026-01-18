@@ -24,12 +24,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=179",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Q79tciVbn25WPfrJMMDC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=CNKJaduMaWo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Y4F7NaQv_aA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -58,12 +62,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=4",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/RyVqJtKV4SxARcahkdCH",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7NebYSt2P9U",
-        "label": "Official App Video"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=L4pk8XggJFA",
-        "label": "Official App Instruction"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -92,12 +100,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=10",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/EzuI2KuQ1LhLteQWicuV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=fMPwMW9UHY8",
-        "label": "Official App Video"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=x3KX_NSIb84",
-        "label": "Official App Instruction"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -776,12 +788,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=1020",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/evD1WQpjx1GipSuuxMDB",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=JgDCtTSrUSA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -1810,8 +1826,12 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=594",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/XWedLnj5RMMkc8GthXpk",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=WBgDTPQ62K4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -1940,12 +1960,16 @@ window.TYTAX_MAINFRAME = [
     "note": "Likely requires a dedicated leg-press plate/attachment. If you don't have it, remove this exercise.; t1x_number=31",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/DQOUpKIRvFnnrUiuxKu5",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=oGva3toNDbs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Djqo9kNI0Jo",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -1974,12 +1998,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=112",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/YwKvNtovdX9pKFL2iKm6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=o8Ye8nWLZ00",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=hhq-K4BtKh0",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -2033,12 +2061,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=1195",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xWQdstZtk0luWxkOHQT0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Drfglxg6PQs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=aCHCFnNHyNs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -2267,12 +2299,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=1195",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xWQdstZtk0luWxkOHQT0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Drfglxg6PQs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=aCHCFnNHyNs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -2301,12 +2337,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=1348",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bkAwoIzjaFpqvT9x7oyF",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=_VUvQ8X3IMM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=AR0lTYWYJLY",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -2335,12 +2375,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=157",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/XjifX4a8Y8CiqM9CEhR3",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=O4ThRPDEYGo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=AR0lTYWYJLY",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -2519,12 +2563,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=329",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/unPVwz4rEWR24xBimllr",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Luw0_vbfk8Y",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=9RMevfw_KCU",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -2603,8 +2651,12 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=1070",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/vTOQbWotscAr7TrNdYg9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=EK8oJIyk_vM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -2658,12 +2710,16 @@ window.TYTAX_MAINFRAME = [
     "note": "Likely requires a dedicated leg-press plate/attachment. If you don't have it, remove this exercise.; t1x_number=33",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/c6UCJPHa4nvW3q15wadv",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=drrx5K0gcPc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=VkBOCdjnU1A",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -2767,8 +2823,12 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=1070",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/vTOQbWotscAr7TrNdYg9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=EK8oJIyk_vM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -3089,12 +3149,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; instructionLevel=easy; t1x_number=1",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zpKU6bhli2T2iewJkDCi",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=SlIzz-jmJLM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=E_cPiJzCzN4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -3115,12 +3179,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; instructionLevel=easy; t1x_number=2",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1dLn7qiPtAXYVQm2DnIt",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=_VCeX5FwDxY",
-        "label": "Exercise (Horizontal)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Igsf_R2Ga9k",
-        "label": "Instruction (Horizontal)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -3141,8 +3209,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=5",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ybVQeIw3gmiDuA4qI9YR",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YwHxQoVxZS0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -3163,8 +3235,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; instructionLevel=easy; t1x_number=6",
     "videos": [
       {
-        "url": "https://www.youtube.com/watch?v=6osaCvzS_gk",
-        "label": "Exercise (Landscape)"
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/sPmGLfrcaKFvQRWIT9UO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=bx9CATKlfp0",
+        "label": "YouTube (Secondary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=viupaYYXVbI",
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -3185,8 +3265,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=7",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/S6hOzY4gBcD5dgALVENO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=d1NR55lWYkg",
-        "label": "Exercise (Horizontal)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -3207,12 +3291,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; instructionLevel=easy; t1x_number=8",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ctXnp71t2tya56DEa5Km",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=k5ZqNZTZlSU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=arljJ4OtrF4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -3233,12 +3321,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=9",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/sMNCnGWGCU2z4G6pvgfV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=fELmICBQEwY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XhJxK26QRCk",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -3259,12 +3351,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=1",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zpKU6bhli2T2iewJkDCi",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=SlIzz-jmJLM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=E_cPiJzCzN4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -3285,12 +3381,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=1",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zpKU6bhli2T2iewJkDCi",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=SlIzz-jmJLM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=E_cPiJzCzN4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -3311,17 +3411,21 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=1",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zpKU6bhli2T2iewJkDCi",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=SlIzz-jmJLM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=E_cPiJzCzN4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
   {
-    "name": "All About the TYTAX\u00c2\u00ae T1-X",
+    "name": "All About the TYTAXÂ® T1-X",
     "station": "Tytax",
     "muscle_group": "CORE",
     "pattern": "Core",
@@ -3337,12 +3441,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=1",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zpKU6bhli2T2iewJkDCi",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=SlIzz-jmJLM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=E_cPiJzCzN4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -3361,10 +3469,23 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=2",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1dLn7qiPtAXYVQm2DnIt",
+        "label": "TYTAX App (Primary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=_VCeX5FwDxY",
+        "label": "YouTube (Secondary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=Igsf_R2Ga9k",
+        "label": "YouTube Instruction"
+      }
+    ]
   },
   {
-    "name": "TYTAX\u00c2\u00ae T1-X Exercise Overview",
+    "name": "TYTAXÂ® T1-X Exercise Overview",
     "station": "Tytax",
     "muscle_group": "CORE",
     "pattern": "Core",
@@ -3378,7 +3499,20 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=2",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1dLn7qiPtAXYVQm2DnIt",
+        "label": "TYTAX App (Primary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=_VCeX5FwDxY",
+        "label": "YouTube (Secondary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=Igsf_R2Ga9k",
+        "label": "YouTube Instruction"
+      }
+    ]
   },
   {
     "name": "Delivery Texas",
@@ -3395,10 +3529,23 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=2",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1dLn7qiPtAXYVQm2DnIt",
+        "label": "TYTAX App (Primary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=_VCeX5FwDxY",
+        "label": "YouTube (Secondary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=Igsf_R2Ga9k",
+        "label": "YouTube Instruction"
+      }
+    ]
   },
   {
-    "name": "TYTAX\u00c2\u00ae T1-X Rotation",
+    "name": "TYTAXÂ® T1-X Rotation",
     "station": "Tytax",
     "muscle_group": "CORE",
     "pattern": "Rotation",
@@ -3412,7 +3559,12 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=3",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/CBsqVuhTHnz3KERKuk54",
+        "label": "TYTAX App (Primary)"
+      }
+    ]
   },
   {
     "name": "Laser1",
@@ -3429,7 +3581,12 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=3",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/CBsqVuhTHnz3KERKuk54",
+        "label": "TYTAX App (Primary)"
+      }
+    ]
   },
   {
     "name": "Delivery Georgia, USA",
@@ -3446,10 +3603,15 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=3",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/CBsqVuhTHnz3KERKuk54",
+        "label": "TYTAX App (Primary)"
+      }
+    ]
   },
   {
-    "name": "TYTAX\u00c2\u00ae TX | Folding the bench",
+    "name": "TYTAXÂ® TX | Folding the bench",
     "station": "Tytax",
     "muscle_group": "CORE",
     "pattern": "Core",
@@ -3463,7 +3625,20 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=4",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/RyVqJtKV4SxARcahkdCH",
+        "label": "TYTAX App (Primary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=7NebYSt2P9U",
+        "label": "YouTube (Secondary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=L4pk8XggJFA",
+        "label": "YouTube Instruction"
+      }
+    ]
   },
   {
     "name": "Delivery Lebanon, TN, USA",
@@ -3480,7 +3655,20 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=4",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/RyVqJtKV4SxARcahkdCH",
+        "label": "TYTAX App (Primary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=7NebYSt2P9U",
+        "label": "YouTube (Secondary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=L4pk8XggJFA",
+        "label": "YouTube Instruction"
+      }
+    ]
   },
   {
     "name": "DeliveryPromo",
@@ -3499,13 +3687,17 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=5",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ybVQeIw3gmiDuA4qI9YR",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YwHxQoVxZS0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
   {
-    "name": "TYTAX\u00c2\u00ae TX | Create workout routines for men",
+    "name": "TYTAXÂ® TX | Create workout routines for men",
     "station": "Tytax",
     "muscle_group": "CORE",
     "pattern": "Core",
@@ -3521,13 +3713,17 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=5",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ybVQeIw3gmiDuA4qI9YR",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YwHxQoVxZS0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
   {
-    "name": "TYTAX\u00c2\u00ae TX | Create workout routines for women",
+    "name": "TYTAXÂ® TX | Create workout routines for women",
     "station": "Tytax",
     "muscle_group": "CORE",
     "pattern": "Core",
@@ -3543,8 +3739,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=6",
     "videos": [
       {
-        "url": "https://www.youtube.com/watch?v=6osaCvzS_gk",
-        "label": "Exercise (Landscape)"
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/sPmGLfrcaKFvQRWIT9UO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=bx9CATKlfp0",
+        "label": "YouTube (Secondary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=viupaYYXVbI",
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -3565,13 +3769,21 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=6",
     "videos": [
       {
-        "url": "https://www.youtube.com/watch?v=6osaCvzS_gk",
-        "label": "Exercise (Landscape)"
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/sPmGLfrcaKFvQRWIT9UO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=bx9CATKlfp0",
+        "label": "YouTube (Secondary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=viupaYYXVbI",
+        "label": "YouTube Instruction"
       }
     ]
   },
   {
-    "name": "TYTAX\u00c2\u00ae TX | Option PR - The Power Runner",
+    "name": "TYTAXÂ® TX | Option PR - The Power Runner",
     "station": "Tytax",
     "muscle_group": "CORE",
     "pattern": "Core",
@@ -3585,7 +3797,16 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=7",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/S6hOzY4gBcD5dgALVENO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=d1NR55lWYkg",
+        "label": "YouTube (Secondary)"
+      }
+    ]
   },
   {
     "name": "Delivery#7",
@@ -3602,7 +3823,16 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=7",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/S6hOzY4gBcD5dgALVENO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=d1NR55lWYkg",
+        "label": "YouTube (Secondary)"
+      }
+    ]
   },
   {
     "name": "Delivery#8",
@@ -3621,17 +3851,21 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=8",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ctXnp71t2tya56DEa5Km",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=k5ZqNZTZlSU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=arljJ4OtrF4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
   {
-    "name": "TYTAX\u00c2\u00ae TX | Option DR - Dual Rotor",
+    "name": "TYTAXÂ® TX | Option DR - Dual Rotor",
     "station": "Tytax",
     "muscle_group": "CORE",
     "pattern": "Core",
@@ -3647,17 +3881,21 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=8",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ctXnp71t2tya56DEa5Km",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=k5ZqNZTZlSU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=arljJ4OtrF4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
   {
-    "name": "TYTAX\u00c2\u00ae TX | Option JD-X - Jammer Arms and much more!",
+    "name": "TYTAXÂ® TX | Option JD-X - Jammer Arms and much more!",
     "station": "Tytax",
     "muscle_group": "CORE",
     "pattern": "Core",
@@ -3673,12 +3911,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=9",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/sMNCnGWGCU2z4G6pvgfV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=fELmICBQEwY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XhJxK26QRCk",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -3699,17 +3941,21 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=9",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/sMNCnGWGCU2z4G6pvgfV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=fELmICBQEwY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XhJxK26QRCk",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
   {
-    "name": "TYTAX\u00c2\u00ae TX | Option TB - Unique T-Bar",
+    "name": "TYTAXÂ® TX | Option TB - Unique T-Bar",
     "station": "Tytax",
     "muscle_group": "CORE",
     "pattern": "Core",
@@ -3723,7 +3969,20 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=10",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/EzuI2KuQ1LhLteQWicuV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=fMPwMW9UHY8",
+        "label": "YouTube (Secondary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=x3KX_NSIb84",
+        "label": "YouTube Instruction"
+      }
+    ]
   },
   {
     "name": "Delivery#10",
@@ -3740,7 +3999,20 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=10",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/EzuI2KuQ1LhLteQWicuV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=fMPwMW9UHY8",
+        "label": "YouTube (Secondary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=x3KX_NSIb84",
+        "label": "YouTube Instruction"
+      }
+    ]
   },
   {
     "name": "Dumbbell Bench Press",
@@ -3759,12 +4031,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; instructionLevel=easy; t1x_number=11",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/CwXBVw19WNbVt9iFWL8q",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=gNTB64Yj1zY",
-        "label": "Exercise (Horizontal)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
-        "label": "Instruction (Horizontal)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -3783,7 +4059,20 @@ window.TYTAX_MAINFRAME = [
       }
     ],
     "note": "t1x_number=11",
-    "videos": []
+    "videos": [
+      {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/CwXBVw19WNbVt9iFWL8q",
+        "label": "TYTAX App (Primary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=gNTB64Yj1zY",
+        "label": "YouTube (Secondary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
+        "label": "YouTube Instruction"
+      }
+    ]
   },
   {
     "name": "Moving TYTAX TX on wheels",
@@ -3802,12 +4091,8 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=12",
     "videos": [
       {
-        "url": "https://www.youtube.com/watch?v=ahI5tgw3DRg",
-        "label": "Exercise (Landscape)"
-      },
-      {
-        "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
-        "label": "Instruction (Landscape)"
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/nLNKK7V0bGwDAZHhtYBz",
+        "label": "TYTAX App (Primary)"
       }
     ]
   },
@@ -3828,12 +4113,8 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; instructionLevel=easy; t1x_number=12",
     "videos": [
       {
-        "url": "https://www.youtube.com/watch?v=ahI5tgw3DRg",
-        "label": "Exercise (Landscape)"
-      },
-      {
-        "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
-        "label": "Instruction (Landscape)"
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/nLNKK7V0bGwDAZHhtYBz",
+        "label": "TYTAX App (Primary)"
       }
     ]
   },
@@ -3854,12 +4135,8 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=13",
     "videos": [
       {
-        "url": "https://www.youtube.com/watch?v=XqDNhAHn_VY",
-        "label": "Exercise (Landscape)"
-      },
-      {
-        "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
-        "label": "Instruction (Landscape)"
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/RyKD6RONXRAGze4Fop4E",
+        "label": "TYTAX App (Primary)"
       }
     ]
   },
@@ -3880,12 +4157,8 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; instructionLevel=easy; t1x_number=13",
     "videos": [
       {
-        "url": "https://www.youtube.com/watch?v=XqDNhAHn_VY",
-        "label": "Exercise (Landscape)"
-      },
-      {
-        "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
-        "label": "Instruction (Landscape)"
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/RyKD6RONXRAGze4Fop4E",
+        "label": "TYTAX App (Primary)"
       }
     ]
   },
@@ -3906,12 +4179,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; instructionLevel=easy; t1x_number=14",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/yXXiUIJIn2wCgBGpQ5xB",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=hMlUsqmc7qI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -3932,12 +4209,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=16",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/cCcOzzAvJAlEzNpqaAV0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=q8uYVmqiBQU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -3958,12 +4239,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=17",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/HJz2qTPKZJ7VrTeDXGA1",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=cDSVIsJwg4g",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -3984,12 +4269,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=18",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/toKC5OZ57yASGLl8xZuV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7yIFdWSeCq0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4010,12 +4299,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=19",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/o1xQHNvemvBp76wF8GW0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=WCtcRqpNris",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=jUq4H8pp6dY",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4036,12 +4329,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=20",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/0zFemD3W3kGrD6kIzOKh",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=sTXDyCvQVCg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=jUq4H8pp6dY",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4062,12 +4359,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=21",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/IIjTBa1GUG9RFdntc9b9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=iWrc2kKDWis",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4088,12 +4389,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=23",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/g25BxOe4C5p0FPipIBIH",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=q30lhv_ynBw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=0h-SgtknS3s",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4114,12 +4419,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=24",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Mze7SWQHB4T7n63QkVeK",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=GK8vqedU-RY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=R9UI1Psxs80",
-        "label": "Instruction (Portrait)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4140,8 +4449,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=25",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/L6LP1A3udLtZpmKt3s9E",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=J6BO-69dojg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -4170,12 +4483,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=26",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/VBFdaihfB3BCNWTyeRdX",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=IzSBk-ceXV8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=tgfE2d_Jdu8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4204,8 +4521,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=27",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/TEOJZ9E4mk7Y9SmJq8IU",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=tNMY9134UD0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -4234,12 +4555,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=28",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/YLXRDZVa4tfX2wYJV7q5",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=lNFUNy_XaZw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=v-VXhjyiOB4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4260,12 +4585,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=29",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xUrDXSfQ1YtI4e3bqeTc",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=vtMgnU0ZMrI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XscrhPD6Zhc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4294,12 +4623,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=30",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/YXGF9mxtpJFazts0oFzP",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=acNqDR5X1RI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Zble4OFaPUs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4328,12 +4661,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=32",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/EhMCaPYtgo3xwXIcykQn",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=awWY-TvSQXI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=PqeU2GBD3p4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4354,12 +4691,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=33",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/c6UCJPHa4nvW3q15wadv",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=drrx5K0gcPc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=VkBOCdjnU1A",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4388,12 +4729,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; t1x_number=34",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8C4R8OXvryVECwLqy4vw",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=6xvNcKsFGkg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=_fHOukprfzU",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4422,12 +4767,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; t1x_number=35",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/A2D9KNi2SSD9liya4B5s",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=wiKX1fM-cq0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=bk99US0-DlY",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4456,12 +4805,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=36",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ed3yG2EhBoJAQ1o4xjfZ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=9ERNuE7oPkg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=--hBK4DklvI",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4482,12 +4835,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; t1x_number=37",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/m1QFI4B1378qnDG1iT6S",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=SbvbC-RiOpg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=iAoi_A6OpKs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4508,12 +4865,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=38",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/JHhTwz1a3qtOascnwFH9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=AWm2dv1poCs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=7JOYqOtzU-4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4534,12 +4895,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=39",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/K8X6aZ7Awk12ejW2ay48",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=bJSCnGau_L4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=-e8O4dAt5bw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4560,12 +4925,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=40",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jsSCjVy2gXrmG6WcDcFB",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Wt5Tdaf8310",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=tfDRb6Muwew",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4586,12 +4955,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=41",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/dMn0nk8q6RLsFqxwDnUc",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8Llnc-Hahb8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=SG8HikXZceM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4612,12 +4985,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=42",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/MWzOHZzmRZXVLre67kSM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=pQLnRLEXKA0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=7JOYqOtzU-4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4638,12 +5015,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; t1x_number=43",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/tSAYt0cF8XXcOZmCmUBE",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8UC99-35i5s",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Cc45Uv4CFQc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4664,12 +5045,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=44",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/rVUHm0eWLKTr16IIeLq8",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YbYyfseu05Q",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Qn0GWsVbQA0",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4690,12 +5075,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=46",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bvWyewAoCeGiMs8TrFv7",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=duw81hnVrEI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=CqMiFMeuzBc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4716,8 +5105,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=47",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xbQabPXboL9XmqT0Mj4Q",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=yUs66_ulPE0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -4738,8 +5131,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=48",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ehx8U75kDm0JzZ56tsB2",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=O1q4rnoe-Bo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -4760,8 +5157,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=49",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/GNFRZDJ2G7ieb8r43d1a",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=IJ6tcKqCC3Y",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -4782,12 +5183,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=50",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/SmzXQ0hCuywwQaThxd9s",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=jOt6YZp9hYE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=lxF5Yn68jOI",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4816,8 +5221,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=51",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/PA2rBiDQoNEzgqfNBo7d",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ppP5zG49TA8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -4838,8 +5247,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=52",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/wuCQijjG5dsn6m55VmxE",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=sJS7vXkyE7g",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -4868,12 +5281,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=53",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/gizNvpqM8q6F0SMspjv6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=bdhAXlzxE18",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=kp_V2h9ELZQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4894,12 +5311,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=54",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7rzxsNVyi2Ndk2qcYvxB",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=HITPORt_B1E",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=TzrDy_n6VnM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4920,12 +5341,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=57",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jI03umlfueK0gFQBXF88",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=SIkPgZhJ0-0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=nqTbqqNaIKk",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4946,12 +5371,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=58",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/0xnzv4mSsRCfbhXKVrzm",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=-_miHHSxU0M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=nqTbqqNaIKk",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -4976,12 +5405,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=59",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/6R0NY9AiSaI82YK5d1BS",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7b418aNtcRo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XVxiQCqIdLI",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5006,12 +5439,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=60",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/gC4aXUFW0uL2Kznf6Wrl",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=OenDVxFjRC4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XVxiQCqIdLI",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5036,12 +5473,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=61",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/t7gJOS5dAitgnPxDGc65",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ULlz6MlkZIw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=rkRvAVHO5jc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5066,12 +5507,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=62",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/d3NJlmDRXtl2fiq1z8E6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=pBX374-xxk8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=rkRvAVHO5jc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5096,12 +5541,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=63",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/QIkQIHPbF8lSDHRLFvzM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Paysx91yBLs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=rkRvAVHO5jc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5126,8 +5575,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=64",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/R7WhaeWzXCD00PkCtJJG",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=NoFYZoXaY_4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -5148,12 +5601,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=65",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/U5J9KsrdRdiKbQOycIif",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=lSCqI8NCL8Y",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=kCxbjCmXwnY",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5174,8 +5631,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=66",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/IV4rP5bWttR28qGdluPf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=uet91IdsIWI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -5200,12 +5661,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=67",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/BepfLEWXZILcKChCMA3F",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=UC8Y2vjaPOA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gfPKYHyDZ-I",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5230,12 +5695,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=68",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/SLcWT4idkuION8MKP7QP",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=mmqWQglUFlo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=oeR4tMvBr3M",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5260,12 +5729,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=70",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/oetHj7u82meSNBcRnLZv",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=WOVSQrOXbPg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=oeR4tMvBr3M",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5290,12 +5763,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=71",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ttlmPKcIh2dnO3ahOnzD",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=SyUT8FvmeaM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=oeR4tMvBr3M",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5320,12 +5797,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=72",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/lTTl7k8Q6J9Ov2DR0BES",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=G6aZzWNJyT8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=oeR4tMvBr3M",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5346,12 +5827,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=73",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/FHhQ65UgF2BK817pbPaj",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=AyEKBJZ8rn0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=O3WvjeoE_l8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5376,12 +5861,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=74",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ti91V9UKJlZSUwbzS2X9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ruSp5xklV6Q",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5402,12 +5891,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; instructionLevel=medium; t1x_number=75",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/0dmDWzAPJTe08opUCAhU",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Z-sBgp0ozo8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5428,12 +5921,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=76",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/50Mbs3dxWDBzRjbb6zZ5",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=9Bj3l4Opre8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5454,12 +5951,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=77",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ARBmxWqOvMage3x5GmPt",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=DuFxKodRMGI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5480,12 +5981,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=78",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/SKHITgtWenHsc3nKx8h7",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=OQL3ndM7_JQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5506,12 +6011,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=79",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/LZ6JfyJmdQLg6RMIzxhb",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=eyf5zQ-wpLg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5536,12 +6045,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=80",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/DOzWjtsK2PKOvRgD8blp",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=PqSz7zcNkpQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5562,12 +6075,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=81",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/fGo5GQBmD2NndZl5BAQu",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=uAgIijVHPxM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5588,12 +6105,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=82",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7Bw0ddt084su0AiSs3cO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=2K4CzK48ZO0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5614,12 +6135,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=83",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/MOv6SKt7clNH9gbTuCqp",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=9_oLBNF4WCQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5640,12 +6165,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; t1x_number=84",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2o27rf0eSEDMNXtZGbmN",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=NyAh1LAm-hU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5666,12 +6195,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=85",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/6PfbkMhdMiUgYpu7N8nz",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=-vTIhqeo4V4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5692,12 +6225,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=86",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/mML5rObwv57Eg9nAJSVP",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=6gthjOIDg0Y",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5718,12 +6255,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=87",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/t3yibtwFfK9iclpWFT0n",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=1dH4xs5iz0E",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5744,12 +6285,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=88",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/S1tmWgRkkGLnaplqpmyn",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=M39IKYtbzE8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5774,12 +6319,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=89",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jAePT7whWuhUmGwfnYfO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=q2OZiibpyQk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=0o3a544jkr0",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5800,12 +6349,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=90",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/hmunFplppBg3Np8OEO0t",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=LXY-hqWj1bg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=-7AZkDqjio0",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5826,12 +6379,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=91",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xL2ivlLwV318QfQh9Uty",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=UJTPDxLaBmY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=1nN-37x3o78",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5852,12 +6409,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=92",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1PsYUYv0BrWuwxaBZldE",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=JnDfceOzsJ8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5878,12 +6439,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=93",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/b8qtaqxiap5HeWCxd6W2",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=_3QbLhn6u8U",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -5904,8 +6469,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=94",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2hJIr5gJY8fNQpiEfXil",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=BcMU4NB5Am4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -5926,8 +6495,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=95",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/5AkNcx3IBuqtYly3RxqI",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=MgwHhH2MQbw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -5948,8 +6521,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=96",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/X1Z3k6lyKegN6VshgMti",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=gNKL4yOqTuQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -5970,8 +6547,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=97",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/MHo9gTlKEffKUvwOarL3",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=BVMfKsIWGIw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -5992,8 +6573,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=98",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/QMX3dEeVZvdHEFQ0cSGE",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=_XLkffSBKuU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -6014,8 +6599,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=99",
     "videos": [
       {
-        "url": "https://www.youtube.com/watch?v=fWK-Rr4ETCM",
-        "label": "Exercise (Landscape)"
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/YuOqaZHdDS9x2NrM3aPz",
+        "label": "TYTAX App (Primary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=0NdO1TeWG-o",
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -6036,8 +6625,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=99",
     "videos": [
       {
-        "url": "https://www.youtube.com/watch?v=fWK-Rr4ETCM",
-        "label": "Exercise (Landscape)"
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/YuOqaZHdDS9x2NrM3aPz",
+        "label": "TYTAX App (Primary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=0NdO1TeWG-o",
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -6058,8 +6651,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=101",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Nwr6zsOPaWRUEg2yhAot",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=uzEoo7zQ3bY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -6080,12 +6677,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=102",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/JHSIUGGHWafxwcPmXJaf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=-LuAcU5h6uw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=B_4Fn7K2IPk",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6114,12 +6715,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=103",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/EC6YYUZPaMtVBuAd1O8e",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=jRV5u2IjD9M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=IE032HQqXEU",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6144,12 +6749,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=104",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/pWhyTWlHlA28AmdtPjFi",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=zSTPO-FJR1c",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=IE032HQqXEU",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6174,12 +6783,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=105",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Hk4UCYo04b8D4W2azwOT",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=_MtEU1FYqYU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=IE032HQqXEU",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6208,12 +6821,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=106",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/eoKuodehbRVxDdhIylHw",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=QmAicitEP9c",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=IE032HQqXEU",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6242,12 +6859,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=107",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/gAeJ4SDpRigac2pCjoVW",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=-LuAcU5h6uw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=6v2Dsb1H20I",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6268,8 +6889,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=108",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/d24g5e3J9IlgizLagQ87",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Bf0WQiMy9bs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -6290,12 +6915,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=109",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ZCHuOSN3MsH0XoVj0YkG",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=-LuAcU5h6uw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=JcNX1YxkKEA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6316,12 +6945,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=110",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/hPhc984IvHhFRCxHJ9QR",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=-LuAcU5h6uw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=bCVcq0WrtW4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6346,12 +6979,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=111",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/OJIzBEBN3Zyr8tIJ1hNt",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=-LuAcU5h6uw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=qzVaCCE66hU",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6372,12 +7009,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=118",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/4JlWCqWVnUfV6Xm0ehmi",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=V8cXmscMH3M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=8ln6d7Oekbc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6402,12 +7043,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=120",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/WVP6PDSzm893JpU6McGO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=5pC4cE6gBR8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=5wysJCyPsPU",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6428,12 +7073,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=122",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bvFG8JGGBK0e9oIJm4tE",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ubHGFSTA1Ms",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6454,12 +7103,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=124",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/squEf6oej1qDuqFWiDTs",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=6Gr_ddt8E-M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6480,12 +7133,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=125",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/9OZmQLU72o56J2lUTZON",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=NUUEKwgB0-Q",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6506,12 +7163,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=126",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1zo7c68GPhvEqsAQVySa",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ZFIzqZE3ugs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6532,12 +7193,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=127",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ZsmCAEs9ZlsYyN2Wlazy",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=aQQICmdM3-4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6558,12 +7223,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=128",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/42qJt3xyYC6893TYzn4h",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=cyJoARB2ji0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=36MZICyEGFc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6584,12 +7253,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=129",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ZGXHI8ia6lERYpMgNq8p",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=G4nzm4lzSv4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=36MZICyEGFc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6610,8 +7283,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=131",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xXExLum88hFMX04ai4Cu",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=xOJt5cIoCRc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -6632,8 +7309,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=132",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/tcWBgbdEHGT4sGoCLXZO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7On4Wi_Uso4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -6658,8 +7339,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=133",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/54nT0wHe412UXZhNWYwT",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=u3froOP8W24",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -6684,8 +7369,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=134",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Io8134CsN6GPA5o6tLBa",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=j3p06HkxlL8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -6706,12 +7395,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=135",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/LXaOOQUzt2OojkioeDJp",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=wqEy-ILeUKw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6732,12 +7425,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=136",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/lWL0wdYoYyDKvVkH7POj",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=svhsVBpGjWI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6758,12 +7455,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=137",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/tqfyRaHglYtXDDgVFr18",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Sw5oQGO_Y8g",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6784,12 +7485,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=138",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/sk1jJrcG93M5AMJ1WjVl",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=skQZyrySRFQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6810,12 +7515,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=139",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/S1bYr22uMqEKurWhDGEK",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=2tt5WC_IBGI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6836,12 +7545,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=140",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Jp51Yl9X7AoIEZ1E1gLK",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=hIWmyxeCAns",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6862,12 +7575,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=141",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7qFMmkzzHN9yALuM8F2V",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=CSCurLv8IhA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6888,8 +7605,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=142",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/oPf56QxcgiCqUJadVLrA",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=NijlDv52s0A",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -6910,12 +7631,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=144",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/c2cw2StoT4IP5lR8p5FF",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=GWaOKY6McQQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6936,12 +7661,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=145",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Sz4BRPQkKaVX2zLHpVNO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=0ZMoRTkwEYU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6962,12 +7691,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=146",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/lYpkMRumO7tHjQmLTldD",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=fJLmzRRVXwE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -6988,12 +7721,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=148",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/JWE1codq742Hf8zqruEk",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=T6-YG2SBQG0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7022,12 +7759,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=149",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/m6c07X6PnjWmNpMwSzPu",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=gdOZSVYPTp8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7052,12 +7793,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=150",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1mGfNzqB2qOf1WSOYWwj",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=95M5yY2l9M0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7086,12 +7831,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=151",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/SAHd4CDFOrWzwrlWHcyR",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=wyCTxPtsrzM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7112,12 +7861,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=152",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/POwwD4yf5Y2ZblefH1XZ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=msbTpnFlZ6Y",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7138,12 +7891,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=153",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/OGoVbM8LNY49qdyUtYaV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=z1d898AxQ8U",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7164,12 +7921,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=154",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/wSsd7bk1bnFGm4F91nQq",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ueELbnjur3A",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7194,8 +7955,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=156",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/QA4x5Mu3cCVnDO4HR16m",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=cWsH0YrHCLI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -7216,8 +7981,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=159",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/QFUaQ0pH3SP20x32PIdm",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=MJbBFKqhOIU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -7238,12 +8007,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=160",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/IVPXtNWF609I0uFbU4Tq",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=AIuU7fDOkHU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=6P0iTG5RUfQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7264,12 +8037,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=161",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/oaM6ojA82nmwHNJ9H5aB",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=f1FbXYFS_1c",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=6P0iTG5RUfQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7298,12 +8075,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=162",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/gYHSV3ECBSo4SEi3NdRg",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qk9M94SXNe0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=6P0iTG5RUfQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7332,12 +8113,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=163",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/iPuDHdPK3d13YfaN6OH8",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=FTmdPsdivhY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=6P0iTG5RUfQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7362,12 +8147,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=164",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/c0gBPLTvwDANFSFkNf2J",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=NW17G59djVQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=6P0iTG5RUfQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7392,12 +8181,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=165",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/pgl7Iuq0ZpdlncXyvulR",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=PonZ7Nnr6N0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=6P0iTG5RUfQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7418,12 +8211,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=166",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/dFfBINUYebNA4sWnJ9CM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=yYnh7J5VetU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7444,12 +8241,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=167",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/LKBGiMue1z1kiF4GsEGR",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=0dQVadwK6Ok",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7470,12 +8271,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=168",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/gqlhWESYqyjwHEKknoLc",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=fjtbv8pAPuw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7496,12 +8301,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=169",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/aBX8tVq4KK8THOvWmRqZ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Wne-r74Cjt4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7522,12 +8331,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=170",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/e7MRQmk0dHfz947MPp0D",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=17T6Uofhlhs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7552,12 +8365,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=171",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/VhLyuiClqnBTzcxYDBlB",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=-nIQYeWjhe4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7582,12 +8399,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=172",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/YV5kN19qMlhit649dKc6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=mIzEmlB0cTE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7608,12 +8429,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=173",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ok1gGQANjeD9mLdpB50E",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=mNg0CXynlJo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7634,12 +8459,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=174",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/4FxB8sGlNIRtpcovSb6x",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=_WXuxIo2yvk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7660,12 +8489,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=175",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/gWqiwBFVlif5FYLBPfVC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=xHvHtH4fdGU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7690,12 +8523,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=176",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/TGmZ4L09dNh5cCDMonLg",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=dvUcEoAOSb8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7720,12 +8557,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=177",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/cd2GyNmzeBG66KoUUrNK",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=rTwSVlksnVo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7746,12 +8587,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=178",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/IDkn66YuzOVfzvIWL557",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=BhDPSbwDkPY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7772,12 +8617,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=179",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Q79tciVbn25WPfrJMMDC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=CNKJaduMaWo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Y4F7NaQv_aA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7798,12 +8647,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=180",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/LBDqAjMWJEz8f2dIMJFI",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=b4xAQ8ud93o",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=rvE6BtQmqZE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7824,12 +8677,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=181",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/VxhNuiCoUBoBX4i95eM6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=UcBl4RiqhIA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7850,12 +8707,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=182",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/h20XZO7Vf6My2FjV1aki",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=K5Cq9MrlQlA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7880,12 +8741,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=183",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jX4oIbUGDoOpmxL0wK9T",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YhXhzsRL1I4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7906,12 +8771,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; t1x_number=184",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/QOZt0CcMNnkSQ3On1LWV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=tHHNlolzE9U",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XyO9CU9PGDM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7940,12 +8809,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=185",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jd5J1wmCzHApiEk7HACV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Ene4jcOYE0Q",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7966,12 +8839,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=186",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/dp22Z0EIuw8rmviDkEIf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ifDTeg8zMT4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -7992,8 +8869,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=187",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/iC8egb5bhMdvARscZprv",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=IU3m0klki_Q",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -8018,12 +8899,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=188",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xwJvuvzNZGjVUNzDHZnj",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=vGbZFblnwA0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -8044,12 +8929,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=189",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/eAmfLyW9SfBar6OKB7NU",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=RhmV0bbjQ-w",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -8070,8 +8959,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=190",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/XzS5MKpUE9M7qvV6DvKv",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qI21iO-Kqxc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -8100,12 +8993,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=191",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/vWYE8lzCYHiVckilCMU7",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=hVgIUQErlyc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=8Zpw7E91xqo",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -8130,12 +9027,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=192",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/0VRU3OmKARFRUrTCKRRL",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=rWaFQL8aPrQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=8Zpw7E91xqo",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -8156,8 +9057,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; instructionLevel=easy; t1x_number=193",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/0koQFWDKFa4K6JdvQZYi",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=tvDfrMQJvf8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -8178,8 +9083,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=195",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/dSbgMWaGv3XEsFDBjNd9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=AaLNsP90FUA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -8204,8 +9113,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=196",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/VmhRGJs67HXTAzEc4Rzv",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=b6vCOzQLcDg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -8230,12 +9143,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=197",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/rCtgU8TheCjOV7PwSs1R",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=a0IyYpXsVJQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -8260,8 +9177,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=198",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/GzoK9o0nS6ZfH956DQfe",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=zIDRRY-smNk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -8286,12 +9207,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=199",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/qyBRHTh1qo4nueRDE2zx",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=gPCKHK8CH_c",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -8316,12 +9241,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=200",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/j3uWAai0nIfZygOFcS1e",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=wXt6JCQsnpQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -8346,12 +9275,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=203",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/TdnMtGxnE7XtqEMEOVgj",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=CCz_1z_cgps",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -8376,8 +9309,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=204",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/D8eJkAZGcSc0F4NJiMgC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=e8EVJFd5rJo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -8402,12 +9339,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=205",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/V16hG5AsMfdsYqgHca3b",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=6WsMFtGPDAQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -8432,12 +9373,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; t1x_number=206",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/W5sMV9g6b9ZCc5xob00G",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=uDfiExXwJJ0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -8462,12 +9407,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; t1x_number=207",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Aj9YPQsgTQFk8cFBgKN4",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=yi4LVaDqE7M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -8492,8 +9441,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=209",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/CeNbvq6XNe1Q2oB80yeW",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=sBLkh-oFGWY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -8514,8 +9467,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; instructionLevel=medium; t1x_number=210",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/WdUYO40AFZZIcGDdLPGE",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=vOmj9PNNl_I",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -8536,8 +9493,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=211",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/eUmiZynf8dakBpoiegCR",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=MlAdGTAnmD0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -8558,8 +9519,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=212",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/HSV9OLAhWPeq0xZoDBOl",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=umJlCafqU8w",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -8580,8 +9545,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=213",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/kFejaYCT4bQyx96BEIy6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=4j_uNBGFceE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -8602,8 +9571,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=214",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/3DTauUWSnOIzWSRaQvw0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=WflvqidyHBo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -8624,8 +9597,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=215",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bYZUZzFZVzm9H5PRzqrb",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=G49SLhhPXW0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -8646,8 +9623,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=216",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/UJwZcyh0NY4IHp1h1qVf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=-1eTiM-YIow",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -8668,8 +9649,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=217",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/i2StUgyUIlksEVPyRMRr",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=QNkZ63PmHH4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -8694,8 +9679,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=218",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/luVfO2DxzwJSQkfz5Zin",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=G4y0qIROLy8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -8716,8 +9705,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=219",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/JyIOhNWM6FiniGf5GUyk",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=cSEhUfz4ZjM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -8738,8 +9731,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=220",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/IxVoyxGevNlO240tGgMq",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=umejHueyiio",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -8760,8 +9757,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=221",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/JCAHsqk8IXIE5ZO2Emvg",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=NxjD8mJOjVk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -8782,12 +9783,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; instructionLevel=easy; t1x_number=222",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/yZddSiZuZ5EsA0XGBppZ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=gff-Nqp3mZU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -8808,12 +9813,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=224",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/IjpWX9T4M6ljd7LCDYeo",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qUz0tbAIvxM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -8834,8 +9843,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=226",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/f3cfwvOQntUvj0s4csMb",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=V2ZngvvJWng",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -8856,12 +9869,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; instructionLevel=medium; t1x_number=227",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/6gqatBcxBfPjN9cRIAsu",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=BTLefPr6FyI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -8882,12 +9899,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=228",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/hzK2o8ZNO27BeQLPpV42",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=OGArD0C0EFY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -8908,12 +9929,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=229",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/oUZoQYESduqOhRYYrSf0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=FAJ_BT-cQ5I",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -8934,12 +9959,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; t1x_number=230",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ga3FoTN49heUk6PTYDWY",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=LC_JC86NOMU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=kXZCibParV8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -8960,12 +9989,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=231",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1dg70xs92xUEd8BKluFD",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=yV3GMthfyRQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=JkyL_FAwBEc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -8986,8 +10019,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=232",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/HPhKc1FJLulD4wSnjAsd",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=jCLiLnPY8XY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -9008,8 +10045,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=233",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2q0joVNtLibsuOaokvaj",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=a3GosFyKEsA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -9030,8 +10071,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=234",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/LE7ZkQVxuSPqKbtXvPI7",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=D_NZpkCurbg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -9052,12 +10097,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=235",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/r6EkxqiMHNWooZYpg807",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=CKsB_yXd_Ow",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9078,12 +10127,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=236",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2YfQYl7hIbrkMktjTOJ4",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YFulT8IQWmI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9104,12 +10157,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=237",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/D87ZU3IVVgSjrtoSQUWc",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=h16HHCggOJI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9130,12 +10187,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=238",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/5RsH3A4QyFNkLRkJKi7w",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=yKKq96_AoPE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9156,12 +10217,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=239",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/nli4QGxsOPBht1UDDYDr",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=BkyFo6GEzFs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9182,12 +10247,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=241",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/QDRWK5PyVvAQjI9TKu1K",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=PhqR5rkOaHc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9208,12 +10277,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=242",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/TTmN5uPplfwKtKjPuQmL",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=yE8MuzJ4jwg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=6smpz9CCaa4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9234,8 +10307,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=243",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/r0GUlUJd33xKWqKVWilB",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=1ycjYVPjZAo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -9256,12 +10333,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; t1x_number=244",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/tnDB3wXdIN0TidAssGqj",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=5kyaeA3d0WU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9282,12 +10363,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=247",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xqVRuwep2a3zOgix1diS",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=KLNBqfuso-M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9308,12 +10393,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=249",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/lR6DG3VBVzhzxWE4eHOU",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=jmK2WF9Cvfk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9334,12 +10423,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=250",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/JkwjeIUZGtC11WitiwXO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qLNerp1dzWE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9360,8 +10453,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=252",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/I1i8g1B92rePjGipgsVZ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=EhDp56J6N7s",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -9382,12 +10479,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=253",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/y4fX4tZLuHn6NjptLKlH",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ZUni_3CYxIc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9408,12 +10509,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=254",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/XJsG89c7tvo5L1xBQPph",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=eR31EwitZyo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9434,8 +10539,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=255",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/iFPK4mU5Kyq4VNr9EISs",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=X0IqpsDMH7A",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -9456,12 +10565,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; t1x_number=257",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/9885I9QfzrMc9mRBWIOn",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Yre87cytWoI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9482,12 +10595,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=258",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/JbUyg58jDdO4PatmRmdQ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=4uz4RL0RLuU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9508,12 +10625,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=259",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jVdOfjoZNpNbosmmGLai",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7jIrzPY-lTs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=-XHifJgTZWc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9534,8 +10655,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=262",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/fiqJnAhDZAI1NXz2yzi1",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=lFUG_lYY7GQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -9556,12 +10681,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=263",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/K8wiZP1tHo6sc8iFIXF9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=gdLEtA63N-s",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9582,12 +10711,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=264",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ICBuevcXEb565NB1iQWX",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Y3josRe7tjU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9608,12 +10741,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=265",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/01hpHgyX5yWFiNa1dQfs",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=a09Tt6c3Ixw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9634,12 +10771,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=266",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/02ejFnK2sdZ3To9MSWVo",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=f6mmvjLEuP8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9660,12 +10801,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=267",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/cnHDc2yTZPb0jS4CF0no",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=6bUjESN_tEo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9686,12 +10831,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=268",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/0mcTW5mOpHJrq0jRb7w3",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=HKyXDsLj9kg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9712,12 +10861,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=269",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jaMTEKwaGJmY8NEjkoV6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=5_SIjyAIJTg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9742,12 +10895,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=easy; instructionLevel=medium; t1x_number=270",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/13s9rcUC8UZS6WqSlXcu",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Qjk2uyHEUCo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9768,12 +10925,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=271",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jXsREhX4sTef3wmqnJAY",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=1nN6iKpRBTI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9794,12 +10955,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=273",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/So7MxgvdfNAtZr0dcj8y",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Cf4uCLzeP0Q",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=p1tmFiawoXI",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9820,8 +10985,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=274",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/vNkW8GlfqnYMolFczUqz",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=I3_Uoa6UA8s",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -9842,8 +11011,12 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=275",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/oCQMonRuf5IC2aq4oVXT",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=GxaZnuWI5xE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -9864,8 +11037,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=277",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/yYQvw50CKPlQHGtD7heM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=3AVsKMPwfLM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -9890,12 +11067,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=278",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8ONQn2y2o79Ahx5HHtOt",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=U_uswocDjwg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9920,12 +11101,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=279",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zTQbfXLOwvkNBYWIaxsw",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Gr57_NDD9bA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9950,12 +11135,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=280",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/CAxAOKlxCX51ojU6vdzp",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=eYEp8ypu05o",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -9980,8 +11169,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=281",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/aa7aLCMAhsFP3xG2rOPu",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=RT_hG-pjRZ4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -10002,12 +11195,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=282",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/R80yhp2nK1zYpY2TvjjL",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=0MtiA-wlMZM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10028,12 +11225,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=283",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2yejnvlKus6k5WZUaasa",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ML42jYZZRpo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10054,12 +11255,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=284",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/3C77rtV0KIVwBXVNWJin",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ENTg-GazTK4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=HtKV9yeWBTw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10084,12 +11289,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=285",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zQyOf01yICnthAC2Pvwm",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=QLMAOepp50c",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10110,12 +11319,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=286",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1rN3CGvj64qo1W1yqJla",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=MKKG8__YHBI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=p1n18ZDITEw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10140,12 +11353,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=287",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/n1QhIIjWT5Mu4BpUV4Wa",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=VdsOnkyZ9EU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=p1n18ZDITEw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10166,12 +11383,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=288",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/kH2GQdK1OKAnH38SU4rk",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=UiZcA40S_KE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=HtKV9yeWBTw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10192,8 +11413,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=289",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Rm90kz94Vy5TkxKMeC7c",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=iTKZYqomQKU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -10214,12 +11439,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=290",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Ig1CMwzi8jmZ3oYXlrVk",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Y3yMtZDJyGM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=HtKV9yeWBTw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10240,8 +11469,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=291",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/oeh8DGVKEGGzLBSQV5N3",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YHzlVbiJ5Fg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -10266,8 +11499,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=293",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/sfmhorcpjYAJLID3uvUB",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=xjpF-s2QvgY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -10292,8 +11529,12 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=294",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/EbM6c3bD9dOgOBB2z06o",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=HZlIK0NeD2w",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -10318,12 +11559,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=295",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/FsLE5ihjmTVHnKcke3gb",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=AsZu6qk9FuQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=zNGG88_nrh0",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10348,8 +11593,12 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=296",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8BeHGD34nmr8whDDJCP6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=rJYtH68_UiQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -10370,12 +11619,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=297",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bw24WuRuM5XfNETm5jHK",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=QWQL-p-PqyU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=SG8HikXZceM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10396,12 +11649,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=298",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/u6uMV96C7Owg0pNMxgt5",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=5DLxvGwX7IY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=fmMFeteNf5k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10426,8 +11683,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=300",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/njlYFbUNs5B8HIBxZ8Uc",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=repWhd-fQNg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -10452,8 +11713,12 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=301",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/vMWrK7pVGhQB6Qf9Rq0W",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=U9_ZA_nWZM4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -10474,12 +11739,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=302",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Fh3C2yjXF8m1DmEVOndW",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=raY4_ak9MFE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10500,12 +11769,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=303",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ROoCmywgnBWqH7vyXhLY",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ouhSOR7KpQY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10526,8 +11799,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=304",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/TmfcyrvIxxWWJtrQP727",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Uy_iu6V-BBA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -10548,8 +11825,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=305",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/KxvI1SlDZaAuCjMmj63r",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=JAdej3z9-7w",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -10574,8 +11855,12 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=307",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/IXnFuNSNuoQ92iOjz6g4",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=4yDJdP_Vyx4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -10596,12 +11881,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=309",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/rzmjHP4TnyLn1d9ADYFD",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qA5li8epyNs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10622,12 +11911,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=311",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/m9mpEy1Zlx6vpSpN4sHq",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=wKufRYUAUps",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=SG8HikXZceM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10648,12 +11941,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=313",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/GwxowIQsnO3Mbh05di1X",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=lzDwASYeTm4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=VxHZkJgZDDw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10674,12 +11971,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=314",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/GsrS589L1mA00s7yl8SS",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=oDuA1NmXpqc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=_OIjYnTgGk0",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10700,8 +12001,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=315",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/R5YSfyTvOq5rZpsYkwGw",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=hTKGgVPqngc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -10726,8 +12031,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=318",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/RtVvssEAmDduS2ZLygE4",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=0tLlqewA_RI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -10748,8 +12057,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=320",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/m8Buz1EE3adHvHFIwhcA",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=vdbaIISKfn8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -10770,12 +12083,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=321",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/EliETsrmDw7aw5qyLida",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=4p-bJEkZoKA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=HtKV9yeWBTw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10796,12 +12113,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=322",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/yIw1stEQN2kHO8xQ57rr",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=QyNjXavDVxM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=9UsVLy640Kg",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10822,12 +12143,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=323",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ufRYbj25A5W2M88HjbmI",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=o6JQdFVo3vs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=8Lzb0NlNbZk",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10848,12 +12173,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=324",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/IO1avEglKBWbmFXVYI6J",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Gf2xOGDyFiU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=FPJYAN2pSqA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10874,12 +12203,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=326",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/wMnNvKvf8XvrRV2aAPBL",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=yt06vJ2n61o",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=jovj1sgUT_Y",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10900,12 +12233,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=327",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/owevV0o4ISWt0hMKjHiJ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=XNH9pFIr6RM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=T_BKXWK9X8o",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10930,12 +12267,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=328",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/eztwBjDa6AGF0ITnnDeC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=4W9dYfkoisg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10956,12 +12297,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=330",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/qrmuDGnosP8uL0e3FaC2",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8UPnsE04p_U",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=jovj1sgUT_Y",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -10982,12 +12327,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=331",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Q2aNgobkEezglQemZuyH",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=RUwXDv_WbbM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=jovj1sgUT_Y",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11012,12 +12361,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=333",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7wlLzQVR2Q7P2uwpIEMq",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Nbu2QThtumg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=jovj1sgUT_Y",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11038,8 +12391,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=334",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/kywlRtjHRmqlWzMzIkWU",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=LrvmhIh3jYI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -11060,12 +12417,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=335",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/XjibF6UAPOxeClzvJhwU",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=uIZhc_NRl5I",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=VxHZkJgZDDw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11086,12 +12447,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=336",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/z073hi62Snf1p0pKv1Gk",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=1STojUnB1dc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=VxHZkJgZDDw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11112,12 +12477,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=337",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zwF427SIeou4Vm1wbWUi",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=a24GDvdQ7-I",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=VxHZkJgZDDw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11142,12 +12511,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=339",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/OpO9UvdwV1AN13xrLB0V",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=W3UQi8VNODc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=jovj1sgUT_Y",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11168,12 +12541,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=340",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/4EVxElzC3Z4Raj2H5knZ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=M6GakMDr4hQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=jovj1sgUT_Y",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11194,12 +12571,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; instructionLevel=hard; t1x_number=344",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/dkABIY7UHCvTEnNfM4Xp",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=tOQnWznAyTU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11220,12 +12601,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=345",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/DVFj536jFe5YcjrEKv7d",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=s7UOwNm2qJY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=jovj1sgUT_Y",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11246,12 +12631,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=346",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1I8wMRqZM05L8HpJR1B9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=AwxuGgrEync",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11272,12 +12661,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=347",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/mYJWjKWDPBRdwQD5I0UL",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=TZ5vq4PhFmM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11298,12 +12691,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=348",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8nG9ow63V8EwoZYkI9ME",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ATSwtLK1X_c",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11324,12 +12721,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=349",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xDSgzse57ifRmJ19vbgG",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=RMznTJichYI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11350,12 +12751,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=350",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/RrZFcAZEOU66GBm2h8Yo",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=aLFzBepguWA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11376,12 +12781,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=351",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7v5gbXnVVATPySEquwc8",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=G2ZFarHSTOM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11402,12 +12811,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=352",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/msVwKc8hD6OqHQMYlMDe",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=XzqLbqtaMjI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11432,12 +12845,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=354",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8bXqtWt54K762KM1FqpK",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=4IXy6ajLra0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11458,8 +12875,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; instructionLevel=hard; t1x_number=355",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/nCScXpmiMdxNj0fV3jKh",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=oqJbRzbPdNc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -11480,8 +12901,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; instructionLevel=hard; t1x_number=356",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/NZloHb2uXOLabEZuTFWc",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8aFT9VzxqOc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -11502,8 +12927,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=357",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/U3qsl8EoEoFXb0gpgThc",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7wjTj_bG8Vw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -11524,8 +12953,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=358",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/qLMnnFWuGT7ozVwHs1q5",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=z1Fw1PTNDyo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -11546,12 +12979,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=359",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/OcFWzIk3rQr3ftCKbneN",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=1NI9Vy7Kbj8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11572,12 +13009,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=360",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/6gaaxtyXa5cM84riTTNg",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=bWgGO6HUh4E",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11598,8 +13039,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=361",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/WqFd2pVzzmPxM6PIHttI",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=EEXBBZ9nqAc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -11620,8 +13065,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=363",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/fKzTp562yBLgVyas32ay",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=60eQEkVXIys",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -11642,12 +13091,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=364",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/U9uvBk2U5QkZP77RCupa",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=DO_zHxfQQcE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=EwZp1tJBIe8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11668,12 +13121,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=368",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2N8VHFdDhwUME8fiebtC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=nHlqhDzCzzo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=EwZp1tJBIe8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11694,8 +13151,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=369",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/KpidpbqKHLvnETw0UqC6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=lxD7gEscz8k",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -11716,12 +13177,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=370",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/u3x4Su9MX9uXcXs3hOwm",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=1aXPvUHKnZE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11742,8 +13207,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=371",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Zq2Y6q6Pxsq06CLZHi2e",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8GG7v0KX6B0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -11764,12 +13233,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=372",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/TlbO48DdgsCh6Z6UBP6B",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=vWOKSq8fWWs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=bhun3_emzSw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11790,12 +13263,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=373",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7liiwHSjQlpZeUadGWvD",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=F3HKYGce85E",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11816,8 +13293,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=374",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/MzGZ86oZ8LRWrlO5Qn8U",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=OvruFbTVMbs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -11838,12 +13319,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=375",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Z69wXpXrkEnUbR0AhxOi",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=46wok88JyoU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11864,12 +13349,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=376",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ovsf8xsX1Wx2BDgzQnFe",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=6o2iJVZAWa0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=FPJYAN2pSqA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11890,8 +13379,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=377",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/6vbqBM7hKaOhB532Lg1Y",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=P6Vo06fY_3A",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -11912,8 +13405,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=378",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/4exjMBmCM3zFC6mo3GHe",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=TUKXdaZvzNc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -11934,12 +13431,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=379",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/XX91LuUiCTNDEbeWa8yT",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=4_t5mz4RfLo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11960,12 +13461,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=380",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/GWKgLKvbECCsu1bnKJT9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=hbe_XnE9CoY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -11986,12 +13491,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=381",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/YzNqrtHYceUkNlHZmaQd",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=S0W3yY72_i4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12012,12 +13521,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=386",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/0JtNEPMgvTAtRxP7UA5j",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ESLifC30MaI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12038,8 +13551,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; instructionLevel=medium; t1x_number=387",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ab0HvenxmKARLEq8bzkf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=2i3nCzrevQs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -12060,12 +13577,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; t1x_number=388",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/tdbCVUBAyzTLT9VFTjY9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=3qHib4UzpdE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=AmoABij8VC8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12086,12 +13607,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; instructionLevel=medium; t1x_number=389",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/OsF2MtmBlyjafjjBvu68",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=IL0aw0JNSrk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12112,12 +13637,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; instructionLevel=medium; t1x_number=390",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/JRqTkRtviBigOqc73EnD",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ahMVynTM1_w",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12138,12 +13667,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=392",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/9meev3bLYO40bDv7bdyu",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=BTgc8NPMWSI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12164,12 +13697,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=393",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/n1unsxzmlZumrdjA9hpJ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=JJgJ3rdotew",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12190,12 +13727,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=394",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/DNIGxrhCfsjBJWm4kZlK",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=nn3tMw4Pv5M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12216,12 +13757,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=395",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ZmZxazl2bt0hiJN0xlPt",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YfWdaNfdkB8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12242,12 +13787,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=396",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/PQpqK6uiYueDdHW2Oz9c",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=g-wR0N4HR-M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=th3BFlk8xrE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12268,12 +13817,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=397",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/qpA50EnNalfMfP5j12Fi",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=1RueyuNa3ig",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12298,12 +13851,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=398",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Qtxa6fMm1NqO7YpBdLTg",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qWMU7iCJ06g",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12324,12 +13881,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=400",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/dgEPUFyPluKwxANKLzLZ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=SyI1BOLt6hE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12350,12 +13911,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=401",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/gBaRlpYhyY5gB9DnClxy",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=g8eYm9vxOlA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12376,12 +13941,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=402",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ff1zBljollDyHJptKsgC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=i4RCTtGP740",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12402,8 +13971,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=403",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/cdtV2uxVkqAZ2eqI2eue",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=yGk4mwlrEsw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -12428,8 +14001,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=404",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2dTpyUfVWQjipUVoGG9c",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=JSvXJH0bhYQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -12454,8 +14031,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=405",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/fXhGoNQfX5caonLdKpqG",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=z096EirTyes",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -12476,8 +14057,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=406",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/fktLdCUfx9a0aUwdUzHr",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=eJ0pY80iPew",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -12498,12 +14083,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=408",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/KUMpy8gaYRCi7kZryXdZ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=PUehEraQfuk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=HH85f81KC5A",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12524,12 +14113,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=409",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/JdVXByLEpssB39aMcQvQ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=15GSsXr1mT8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=J1VgGUaPve0",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12550,12 +14143,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=410",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/YjUSOK5xz29FKUSaBQwB",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=HzwIwvDTOQs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=svMS1PXGESs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12580,8 +14177,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=412",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/TOPi9Ldpeen7TmQZ8jPH",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=lH2_id00UGQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -12602,12 +14203,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=414",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/hPmfZWjfmVq97mTL25pk",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=RWmjetMpyJM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=hXvsYDLNNn0",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12628,8 +14233,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=415",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/wbkiuHQmUPJOccxEQFC7",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=v62crofjKKM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -12658,8 +14267,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=416",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/lZw8H7NWWaretkhowtSp",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=bSVwYQIWJZE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -12680,12 +14293,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=417",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/slzJ90oC1gjflm0I2E1R",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=xfa1LLHwgs8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=0o3a544jkr0",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12714,12 +14331,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=418",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/9xO1y7eEcgbOzv3MGrJV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8EyGhXqokFg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=0o3a544jkr0",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12740,12 +14361,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=419",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2d9fJxDlM2LH6W4DkeBY",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=SMEVF-QOTCg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=0o3a544jkr0",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12766,12 +14391,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=420",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/umqV4pb6ms8gSiXRi7w0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=-p5SEwCfYf0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=0o3a544jkr0",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12796,12 +14425,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=422",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/OAyVnNv5Xn8UK74NnxXL",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=oOK1dxPzMR8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=0o3a544jkr0",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12822,8 +14455,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=423",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/0voZMIk0d8IIjRscVVQ1",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=mN5MiaRrPac",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -12844,8 +14481,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=424",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Wgl00RgT5MEYb9xFbQ7h",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=3JitGwWFSWw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -12866,12 +14507,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=425",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/EE2FP9LuxigINsWYVTud",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=T7FLqno2KAQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XscrhPD6Zhc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12896,12 +14541,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=427",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/tNq9hunDrSaKazReWhmW",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YiuLUPsLiwE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=p1n18ZDITEw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12926,12 +14575,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=428",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/TttU9xMETAzDBRPVW1DC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qCeM9qoPHY4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=0o3a544jkr0",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -12952,8 +14605,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=429",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/9kM7hzleKjxaGsRB4aJ3",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8toDr3WlXjk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -12978,12 +14635,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=432",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Fjvk8lpUKvgqU93Qs7Lv",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=6RhXxDt0vYE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=H4pWpM2swJA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13008,12 +14669,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=433",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/NKVjuDz3fkcEsShuJSNI",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=6UaSS8F62-o",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ka7t6zm_Iy0",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13038,12 +14703,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=434",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/3f4SUwUqULwEZ6ZU7tXR",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=1runnvZzbPE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=1kdnSLa85EU",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13072,12 +14741,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=435",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/W5R6YYJb4wGjITSOKVHO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=OLev7ntWOXI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=T0uXUIkqveE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13106,12 +14779,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=436",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/5P4BqlOREiFy1kY5upH5",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=TApbtVciq8Q",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=T0uXUIkqveE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13140,12 +14817,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=438",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/C1gLSbd8dPNrl68oPHPn",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=lYS8pozEuiw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=xiNJvfTZJUc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13174,12 +14855,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=440",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/VKDryKM4AHJ6VTptx5a5",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=2lDJPD4bsJw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=OGMUZnrWKh4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13208,12 +14893,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=441",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Z0Wt0ZhzZyaF2T4M4kMQ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=DCJLR9VF-XM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pvx93e6fOpI",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13242,12 +14931,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=442",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/rZxvynuOlEJNv5GQNUY1",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=BsnuduVdXBE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=_RrqLAeG2N0",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13268,12 +14961,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=443",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Gq0a0IXH2plyeqPQdlRv",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YFMEYSQqTe0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=WzYuFTtgpo4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13298,12 +14995,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=445",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/IYDN0N0qujbCXKAkqxJK",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ptHMxCdjPgs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13328,12 +15029,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=446",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/lT89U8l06HYFW8JBYwAO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=M3V1K4FiMwE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13358,12 +15063,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=447",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/O45uCHWDHEYtPILstBp3",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=s_mPRAs7ilc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13388,12 +15097,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=448",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/V8pkM0LjW2wuZSGbGUIv",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=DtZggvH3dVA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13418,12 +15131,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=449",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/DSl1yg0eZ5n744GNnhl2",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=2N_1FAxuOFY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13448,12 +15165,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=450",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/iXcPJIs4NvgCIeoVCk2b",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=_JtaeDj8jBE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13478,12 +15199,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=451",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/SEYzyZAmoKRc9YbVmpMe",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=DVMXqbn8UsI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13508,12 +15233,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=453",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/HOhaeBrrRbsC4FdcuqYq",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=_xi0ORADUNM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13538,12 +15267,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=455",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Zs6duW1Hnk8tTKOZkwm0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=p7xLp54skzw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13568,12 +15301,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=456",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/oN7c1c09XHKWmcItjOkg",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Fv8qN6r8qYk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13598,12 +15335,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=457",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Lle3n9cXpOdRwVMQPVlk",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Uh8q_INGhTI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13628,12 +15369,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=458",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Myi5ua5SUSiLRSDNkcqp",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=SWbpqwI4m_M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13658,12 +15403,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=460",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/F3vAec6Zpcw2doWG8cpA",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=xvjOAk4rHrg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13688,12 +15437,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=461",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/oBYlZe9xZB2RRV3eIuif",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=iIJ3E3v1B_c",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13718,12 +15471,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=462",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xCjyolMKiBLpvQPDM5ri",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7dXEjVx4F3c",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13744,12 +15501,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=463",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/tEsZ5rg6eq0szINymIEe",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qU4wpfbUxEk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=JgLQPd84cqc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13770,12 +15531,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=464",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/WfuL1KSitqmynhWe8YId",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=2rm1r12nYz0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=eyrdG0F2BXY",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13796,12 +15561,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=465",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/0p7mkJl76VsiqJ1FYDnk",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=we88cjH3EzQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=J6erH42VFlc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13822,12 +15591,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=466",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xLqs792cOSPn9wD5WPH0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=HeQyK_luGQk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=U_WTIXvRtFE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13848,12 +15621,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=467",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ZjdxPHATiv1zumKxF8GM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7Q-g5sjnB3o",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=J6erH42VFlc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13874,12 +15651,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=468",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2ps8Njh8Qea8HbYOjh3H",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=H5ZnU4guWMw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=eyrdG0F2BXY",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13900,12 +15681,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=469",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/GKLl2XDNIe57ih2gXZ8W",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=KQGQQcLA6Js",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=eyrdG0F2BXY",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13930,8 +15715,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=470",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/V0TLKZpctGTtkj3Mm3bk",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=slVobXTjues",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -13960,12 +15749,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=472",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1HBlsrfVGEwXR6eV9ocd",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=56B7LnQGiQU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=NHzyxASixCw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -13990,12 +15783,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=473",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1447L3lTlDTw2oCnc6Gw",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=4vO-DPY3Ymw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=jvYTqxxGuNE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14020,12 +15817,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; instructionLevel=medium; t1x_number=474",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/FIzrYvlw6ITwq59YhqOi",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=XY5uHcn5Be0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=jvYTqxxGuNE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14050,12 +15851,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=475",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xEQsUoC7CixueBeLQ82W",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=JT9HqEd-Vjo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=BVrWjYWLWK4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14080,12 +15885,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=476",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ASmmCoaTNXSp61XwyNU0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=thVRmTru18U",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=a9sUgB9Zh_g",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14110,12 +15919,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=477",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/R6Gqt1d2MmJb1t49FGBK",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=PreCEjeOWqQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=CUEZt-MWs8Y",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14140,12 +15953,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=478",
     "videos": [
       {
-        "url": "https://www.youtube.com/watch?v=LpGm-Cjs8DA",
-        "label": "Exercise (Landscape)"
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Q3P7oiWoZ4p2aDasMunt",
+        "label": "TYTAX App (Primary)"
       },
       {
-        "url": "https://www.youtube.com/watch?v=YlGuuYtvdJQ",
-        "label": "Instruction (Landscape)"
+        "url": "https://www.youtube.com/watch?v=LpGm-Cjs8DA",
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -14170,12 +15983,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=478",
     "videos": [
       {
-        "url": "https://www.youtube.com/watch?v=LpGm-Cjs8DA",
-        "label": "Exercise (Landscape)"
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Q3P7oiWoZ4p2aDasMunt",
+        "label": "TYTAX App (Primary)"
       },
       {
-        "url": "https://www.youtube.com/watch?v=YlGuuYtvdJQ",
-        "label": "Instruction (Landscape)"
+        "url": "https://www.youtube.com/watch?v=LpGm-Cjs8DA",
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -14200,12 +16013,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=480",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2D6dUUvxL9253HA4DnEa",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ENgtIk4AAik",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=YlGuuYtvdJQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14226,12 +16043,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=481",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ZvnS4c4kXkiY4y2wQMK0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Tg6fguN8Zlg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=U4YdhpIXrgM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14252,12 +16073,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=483",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/vQmnU8XjXegnHxRfxQqG",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=VDdEojVDkXI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=zOE_43a-zmc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14278,12 +16103,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=486",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/A3fqY1o0eKMkvmb0L6Tw",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=6kUHJ_Y9ld0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=HtKV9yeWBTw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14312,12 +16141,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=487",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/6twnJEpGNG72GlLon7TC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=fkKDDFNTf98",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=wVKG2wrokcg",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14338,12 +16171,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=488",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zwYVknxGx1PLji3RbLme",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Riogn-Zsf7g",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14372,8 +16209,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=489",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/87HA7ovpOE5Q2i74wqX9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=FA5pCLkfkS4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -14398,8 +16239,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=490",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/AHIV0yuTUhUASqRJjiEF",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=g-xrFqUOsIA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -14424,8 +16269,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=491",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/iL6JYacapkkjYTsxruBy",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=pdizAAtA2n0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -14450,12 +16299,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=492",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/LWBnkXN7mTirJ7PmdNVn",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=sGeq7eQtLvU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=cZNYMNXLViI",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14480,12 +16333,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=493",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/fc8ZXKG8ST4dnSd5xgIN",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qnDW5hHVggU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=cZNYMNXLViI",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14510,12 +16367,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=494",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/y7J0PSIKE8IKN7YMLHfx",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=nScQ5VzHT3E",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=E0IapxgArCg",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14544,12 +16405,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=495",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/BYQFrP0HUSZByYvwvCyr",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=-LqXlf1Hz30",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=VkBOCdjnU1A",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14574,12 +16439,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=497",
     "videos": [
       {
-        "url": "https://www.youtube.com/watch?v=KfHjGfxElBs",
-        "label": "Exercise (Landscape)"
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/3R9MnyRgq5N3nZColfe9",
+        "label": "TYTAX App (Primary)"
       },
       {
-        "url": "https://www.youtube.com/watch?v=ilRBnbIyCfE",
-        "label": "Instruction (Landscape)"
+        "url": "https://www.youtube.com/watch?v=eNoC0iCMjsU",
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -14604,12 +16469,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=497",
     "videos": [
       {
-        "url": "https://www.youtube.com/watch?v=KfHjGfxElBs",
-        "label": "Exercise (Landscape)"
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/3R9MnyRgq5N3nZColfe9",
+        "label": "TYTAX App (Primary)"
       },
       {
-        "url": "https://www.youtube.com/watch?v=ilRBnbIyCfE",
-        "label": "Instruction (Landscape)"
+        "url": "https://www.youtube.com/watch?v=eNoC0iCMjsU",
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -14634,12 +16499,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=499",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/hl0aK8NjzN0Gf2lCLsib",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=THoJq9pTF2k",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=x1jzvOp3qsg",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14668,12 +16537,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=500",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/DfidMNQ02dkrOqLtgR3h",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=rCj38M8U-VY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Hs5968gT7zw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14702,12 +16575,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=501",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/IkCT0gCgBvKrsoOwHRMQ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=9_m3S66duH0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=sWV_0QqL0d8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14732,8 +16609,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=503",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/6g0grjS8wBSAOEboCI4G",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=DfgkAXXMcx8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -14754,12 +16635,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=504",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2mi0MsiwFjpL7IqTGuel",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ptjLnmI5gf0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=VqQ9JMbJvmw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14780,12 +16665,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=505",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/iLCSeUVyDOrufLniQCwH",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=lp0bm7BI8Pc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=SG8HikXZceM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14810,12 +16699,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=508",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/X9zL9fAHiwbNPy89w53G",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Au235cMd66c",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=sVhAvytMvjY",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14840,12 +16733,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=509",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/QYkFXuET28e7ceixHy82",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=FuRJyVUFA1Q",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=E6g0SYK333k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14866,8 +16763,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=510",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Oejb6Lx4OG6lVvCi2H2b",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qT8zeY-kz6E",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -14896,12 +16797,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=512",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/CpP34LYztcErunY8bEp1",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=bR8GPwyvhKU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Xz4fAw4b4KQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -14926,8 +16831,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=513",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/5BWw8a2kTOMKemNlwIg1",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=-tT5dP_BmfY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -14952,8 +16861,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=514",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2t1fgads87qhIKraXIyN",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=674eZEFkHKs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -14978,8 +16891,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=515",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/PX2MlWMeC941tZLYoTTm",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=SFZBakazDc8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15004,12 +16921,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=516",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/AP8ZSI36Zo5lzyd2Oxg9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7Pcn8MWxO84",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=J2fLmZ8DAi4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -15034,12 +16955,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=517",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/9rxVIUytt1bIKl6qdnmX",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=D6y1ScfjzRY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=f6z_3_NugTM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -15064,12 +16989,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=518",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/id54oLERpz4BHuIlfdXC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ye_B9eaS-3Q",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uzLRa5cvqAw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -15098,12 +17027,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=519",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/SDVjuM1vyguigRwzCdI5",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=PeHoMrLas1Q",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=oXdEg2UuXh4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -15132,8 +17065,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=520",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/hF2IlTy01aGURjrbRNEE",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=SSszLPvrjZM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15154,8 +17091,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=521",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/gYDKTBk0adfa8DHOKPKC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Q0zAXnq-7pg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15176,8 +17117,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=522",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/57FrGJUhYRfaGS31HBdD",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=6C0TAXBIOQs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15198,8 +17143,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=523",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/nys8BJglSrsm0PPFY86y",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=m-Q_oy9NPJM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15220,12 +17169,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=524",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/a4WD4TCpwvB2bkmxRY2y",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=WU5AJLK-tjg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=UHBEMJswidc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -15250,12 +17203,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=525",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/j16BwCZYNDGXprWd5Yzq",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=E54txhQI4cU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=93L_8vqJ2KA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -15280,12 +17237,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=526",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/lAlkCoyaHMxb5B2CtshB",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Qp2rcEPAeY0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=8Zpw7E91xqo",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -15310,12 +17271,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=527",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/YvWaenwguMx4wCLpPDh9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=EJ5s5qGJYW0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=8Zpw7E91xqo",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -15340,12 +17305,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=528",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/lz7E4wIyrdSmu8LwoN68",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=0Ho7XwSPTpU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Q4s4hLiA030",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -15374,12 +17343,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=529",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/qYpsDugNvUiiI8ctdsgv",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=iXh2APwEoW8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=JDk9ygtW72M",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -15400,12 +17373,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=530",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/HnUxHe75N2WgjLCZJcAn",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=1uEugqX623Q",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=BOlXSL3yMqI",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -15426,12 +17403,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=532",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/SRIaJxmaY3E9TKNI3KYe",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=LXsxOvy9qbQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=EO2R1631sPg",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -15456,8 +17437,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=533",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/h2fGqpXp2QzUGYCq92mu",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=00hEE7VFkvI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15478,8 +17463,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=544",
     "videos": [
       {
-        "url": "https://www.youtube.com/watch?v=iQNcDmdy1uQ",
-        "label": "Exercise (Landscape)"
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/0Oavq3LoYgHA8ahH7mB9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=PK89JufSglM",
+        "label": "YouTube (Secondary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=3tk-9NYf6fo",
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -15500,12 +17493,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=535",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/OTE9MLyRjzyjsfU59Zyx",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=HzIXDFrVG-A",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=hSFX7DqTiaY",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -15526,8 +17523,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=536",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/nvlRwuHQCXPbSDjOJJXj",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Ei_xiExgol8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15548,8 +17549,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=537",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Ve2G2VqiDtgw9hsPAkFO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=sci9MvXKFzo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15574,8 +17579,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=538",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/tJHAgYBKCEreKpR6hv2J",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=mtI6KVyH-QA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15600,8 +17609,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=539",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/OaXto4NperaZuB9aJvk5",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=2sV2kk7nauo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15626,8 +17639,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=540",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/UtTh63ayNlFLgYGpIoj9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=TGiFUqsvnQQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15652,8 +17669,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=541",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/N6aL0szu1w23eESk2cUO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=tatHqWl6aMU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15674,8 +17695,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=542",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/WREF1e3t7z46kI3SUqTr",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=LtfiJXEW3rE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15696,8 +17721,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=543",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/VP06xtSVA2AmzNNSxx9f",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=jfdjS2kFubo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15718,8 +17747,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=545",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/p03UPHG7xEgnJb6QttNx",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=P6vPtTnwxv0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15748,8 +17781,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=hard; t1x_number=546",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/LySPVMy8iDp2abKL0YPk",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=vKKFWiOKDrY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15770,8 +17807,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=551",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Ukuk22ZXfUuKV3ZSIyMC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=9gMiEFIPRR0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15796,8 +17837,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=552",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/YdUjRDAKJyLVAKTG0Svf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=AUJwrwS4s78",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15818,8 +17863,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=553",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/PZnsMoS02hgtylXiF6tA",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=KzDbx0GGhg4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15840,12 +17889,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=554",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/rfae2T2yC0DRjxdhCYQE",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=1GiI5BI4kV4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=f_YxRnOS4UA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -15866,8 +17919,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=555",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/VKLWLSoq6zvOJkfsGPtI",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=-6A_Fz_2Ly0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15888,8 +17945,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=556",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/W3pznnM53gLGEW4ha9Lh",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=HOZO3qynOj8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15910,8 +17971,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=558",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Y354V5wtS4e2QgCCwtlu",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Bn0fiSLh0G0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15932,8 +17997,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=559",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/AyRMFfhdgzqJyQO3mj9X",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YiP7Ic_PFFk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15958,8 +18027,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=560",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/HZdftFEGt4rUQ2xhM8yl",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=fsXghv20dnU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -15980,8 +18053,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=561",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/fYknrDvSJTdDwHEp68N3",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=OQ4F1W-Mm0w",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -16006,12 +18083,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=563",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/i8JVBdtAdQfGwxmETy52",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=fmrem_JS5RY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=diBbEkJXXyk",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -16036,8 +18117,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=564",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jX1aA7mo0NH4Yowfyj4y",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=1SMvHnN_c80",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -16066,8 +18151,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=565",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8JGFZkvPjZsujSd2iHsh",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=R9FgDNiZHps",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -16092,8 +18181,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=566",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Ys91TGP4M3zWaa5IfhdT",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=GWcrmlJV2Lw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -16122,8 +18215,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=567",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bTd1NC9aubzfRFNzjEOU",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=KZfIzMi2-PI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -16148,8 +18245,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=569",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/OUlcUd4hTwihxtLhKuKK",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=4R8h3o5OnAM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -16174,8 +18275,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=570",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1hazB5syuba4VG6cstEF",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=WEtVqUr0RUY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -16200,8 +18305,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=571",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/H990cliia8pWvVew1S6Q",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=inpuS75OIm4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -16222,8 +18331,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=572",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bLI3BZVA7KrHQ91MffEy",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=fYtC7DmbjHg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -16248,8 +18361,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=575",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/dgi9wCiATxJHh14wKPJB",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=xRabbEPcn0w",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -16274,12 +18391,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=576",
     "videos": [
       {
-        "url": "https://www.youtube.com/watch?v=PDsiw4_52HE",
-        "label": "Exercise (Landscape)"
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/61eGGlRj7qofgRjRo1hH",
+        "label": "TYTAX App (Primary)"
       },
       {
-        "url": "https://www.youtube.com/watch?v=Lf9hvsCmsTE",
-        "label": "Instruction (Landscape)"
+        "url": "https://www.youtube.com/watch?v=sYQiat4zDRY",
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -16304,12 +18421,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=576",
     "videos": [
       {
-        "url": "https://www.youtube.com/watch?v=PDsiw4_52HE",
-        "label": "Exercise (Landscape)"
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/61eGGlRj7qofgRjRo1hH",
+        "label": "TYTAX App (Primary)"
       },
       {
-        "url": "https://www.youtube.com/watch?v=Lf9hvsCmsTE",
-        "label": "Instruction (Landscape)"
+        "url": "https://www.youtube.com/watch?v=sYQiat4zDRY",
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -16330,12 +18447,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=577",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/JZVEelsWoJPbWUXxCL9Q",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Yqj9zIkGXMo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=L-qtA790Yv4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -16356,12 +18477,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=578",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/05sUJJnz8Ehiz20zZ30Q",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8jBwp5N6EZ4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=f4oPZkuDfYI",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -16382,8 +18507,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=579",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xYrM2sABzSIyqmBKQF6w",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=s7vhvGMfoCA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -16404,12 +18533,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=580",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/cyrZjQ6jT0vfFd0hV93G",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=mA5z6TiM8Uw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=fw4DEF2k0QE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -16430,12 +18563,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=581",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/rfJNNbXWKk8tjFvHwvmh",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=jJx1G00ARVc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=fw4DEF2k0QE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -16464,12 +18601,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=582",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/QpMDC9h8m8jmBKWAgKS9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=50Z7lvZkt_M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XVxiQCqIdLI",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -16498,12 +18639,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=583",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/eoiYxjtayKPsgKWyLfSO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=10Bw_W6exXw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XVxiQCqIdLI",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -16532,12 +18677,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=584",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/XF57EH6jYTp4Sj6hxnOZ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qga2uvgrkhQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XVxiQCqIdLI",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -16562,8 +18711,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=585",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/pfi48wn5XRMCuXyX5eDP",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7-S5HH5GFRo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -16588,12 +18741,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=hard; t1x_number=586",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/LTosKSO5XKupYmomyOcW",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=OPs3F7JFGOw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=vGG2iVKM7bc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -16618,8 +18775,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=587",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/r5Kijw7w3fYBlxgaI1eQ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=IipCdY8p4o8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -16644,8 +18805,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=588",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/mQN2FAPkFvMOwrhPThWK",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=4iLvTHfNP48",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -16670,8 +18835,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=589",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/lU60ghh6AAc5xL3zSlVE",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=D8fsXu7STU0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -16700,12 +18869,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=590",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/QqWRad6k6ZDOKm7iS00c",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=fJXtVZeouKc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -16730,8 +18903,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=591",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/JC2QzXwING03lgUzsjKK",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=pTvve0OFmG8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -16756,12 +18933,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=592",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/DkuMOO2UG4CI1bJ9K33f",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=62Af8nAQy4M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=5hAZnyi50nk",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -16790,12 +18971,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=593",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/JiPVlo5uTMMKsMUGEU2G",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=CgXFumC-r08",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=dfJnV8O-mhs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -16824,8 +19009,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=594",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/XWedLnj5RMMkc8GthXpk",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=WBgDTPQ62K4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -16854,12 +19043,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=595",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/B7fB1Of882uzTPZ5zpmm",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=xwewRMWnb8w",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=D4GXKek-8f0",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -16884,12 +19077,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=596",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/DhvXnHrMsiRGq1Iv7dyJ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=t4WLMX0xtKI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -16918,8 +19115,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=597",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1rABLZy5B6uNzcZI8lRe",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=HfhGc5VMH_I",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -16948,8 +19149,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=598",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/BsiktARYDPuUYbDoPEEh",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=4-_D2f6_frU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -16978,12 +19183,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=599",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/SfzFZAyDOxe9FcHl7E3G",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=lnwKF5gC970",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17012,8 +19221,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=601",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xa8cI33Y2fZeF26FySpB",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Xspfgkdnkw0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -17042,12 +19255,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; t1x_number=602",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/VgUzwMZWi6O6vA7s3jfL",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=-NTmVRIpueg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17076,12 +19293,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=604",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/pUo4utSGz5CEDMmHeEcP",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=XBElTs07eG8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17110,12 +19331,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=605",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/hE81UXIegKAw0vfWzAeb",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=xia5tVcdjMs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17144,12 +19369,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=hard; t1x_number=606",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/TDYDReewEoU8IYQOtrMq",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7HiGP1kPNek",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17170,12 +19399,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=608",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/aOVsMp5p8KMMybw33Zng",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=caqI0jit9GM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17196,12 +19429,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=609",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/uIzrM6Qx4JNkto1rqC2p",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=B4rTF1Q4uII",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17222,12 +19459,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=612",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2DULP4IXR3szOHLzrCti",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ByHgIGrH_6E",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17252,12 +19493,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=614",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jUjlbFLXVQJhxPfTMXnk",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=n6KAZxcdw0I",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17282,12 +19527,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=616",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/RyaXeuuqrNKUVRFl9tfP",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Tjt4fyUc7Ko",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17312,12 +19561,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=617",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/H8E6GkP4hOyx5EHZBPDS",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=l8uhGudKy5g",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17342,12 +19595,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=618",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/wh6H9BKTDmmhvwqzyUUd",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=zhbK6jFMG-M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17376,12 +19633,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=619",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jw9MSxJOT27CpSU7UNLZ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Tcjn8xfHMLw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17410,12 +19671,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=620",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zafrNDXZJma4i2itsrHq",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Jy7Pqdc-0vo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17440,12 +19705,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=621",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8ZAsadch3eHdYMZDnnoD",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=CiJXjv_LEPs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17470,12 +19739,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=622",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/hlDCQDXiMdr2wqbGJa6U",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ltA9nYTZv9U",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17504,12 +19777,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=625",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/lBnp583n0fSBicHsrtGy",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=c0jYXcqvMTg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17534,12 +19811,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=626",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/UJSSrZhOwptYSnq1RCo7",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=iZdcno_UTRY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17564,12 +19845,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=627",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/glhr2XYVb4U2Vso4Vj1s",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=6o0imjgXggA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17594,12 +19879,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=628",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/hZEqoetywQENbdRjn19C",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=xrr8gGfls6o",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17620,12 +19909,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=629",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jrwXcP7RWw6iWeoUKexm",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=0mSyzFEqoZQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17646,12 +19939,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=631",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Oxgz40HTwMA23AWI6DFh",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=NyAe1BAq3eg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=gDFqhcO6DnQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -17676,8 +19973,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=632",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/5H9pnbm6aebYRa6iF9AM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=3Iw_MpkuJUc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -17702,8 +20003,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=633",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xsh5lOGrkfIXEmLK5nXc",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=b70EvokgYxs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -17728,8 +20033,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=634",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/r1igl2YGIEChzbHzF4Xp",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=h92ipOmgLwU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -17750,8 +20059,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=635",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8AadTKbOYp2GFkBamXB8",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=cBORGyVRf3s",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -17772,8 +20085,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=636",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/XfXiepN7lyVbAghbTiuI",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=gk60mIJ2kPw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -17794,8 +20111,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=637",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/znX3mHQ7tbvQphidPdQz",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ak8G_B7e--E",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -17820,8 +20141,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=638",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/P9KNx8LOknhP6f8Gy262",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=4HbH2pNnkNM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -17842,8 +20167,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=639",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/DeVUfe2qtKhyrhu9xQp8",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=taT5UJ2czko",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -17864,8 +20193,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=640",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/BBfIrasFxSgKq8crsg9N",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=VF8cqAnD7WU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -17890,8 +20223,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=641",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/lu3LxI9DrjEwAQ1tHwXV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=lqeZt1qN3q8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -17920,8 +20257,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=642",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Zpo8UlkOvQ6kuJrizsPS",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=fPlXLPmL0xY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -17942,8 +20283,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=643",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/onlbe3JHGpWu9KpSgD4h",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=26AIw9S7RN4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -17972,8 +20317,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=645",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/qMaXspw8iIKGWjhNhExx",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=cX-lIVapLuE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18002,8 +20351,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=647",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/3JKn1f69PAf3Fxjkm3t5",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=33c97hR6iTE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18024,8 +20377,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=648",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/mGQMZgovDXxlpJYZndl9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=pjBT0aCvxJo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18054,8 +20411,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=649",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jnX2Xe5aMOIb5N7tuWkN",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=JuJy85zhrJ0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18084,8 +20445,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=650",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xb2TD4rczlatYNV0vWR9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=CoIlUmoGPtc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18114,8 +20479,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=651",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/77HgiDww8cpArv5F9CDD",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=LznvncnKhPM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18144,8 +20513,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=652",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/tQOyRitFMOtTNT5XCPbO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=r56o3zIGIQI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18174,8 +20547,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=653",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/f6lMrayoNpP6UbZMZTHP",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=p5xfRnz146o",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18204,8 +20581,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=656",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/VphFKfAAoQ6NiWvu2grg",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=QiTaOeFm-Lc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18234,8 +20615,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=657",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/0sgajU3PrP90AFuZ69zf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ELC6aWnF7dM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18264,8 +20649,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=660",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/dZxjjY1pWJrggYeN0srr",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=joeSM1O-YAU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18294,8 +20683,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=662",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/LgtzfM591Mw5E4PfvQgZ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ryGIKKLXCyU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18324,8 +20717,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=663",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/pqLh3bYgmldrkrd82Ed9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=WSTDfieOVEI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18354,8 +20751,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=664",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Gdqq1cfZ0SR3lDZcvaWq",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=e_nE9CkCh_U",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18384,8 +20785,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=665",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/eiyS9UjNorKI8JlpF6OV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=FZdKEnZLi8I",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18414,8 +20819,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=666",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/IRttEHpGZIH1msxhAe7a",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=NjKCkJ-hKik",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18444,8 +20853,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=667",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/UX6kFwfmNmJSqX2uXkNr",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Gj69TsZQvmk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18474,8 +20887,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=668",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/eZKIhwxCdMgH0LrROK0f",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=T-NG8bY9eMs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18504,8 +20921,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=669",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/m9OziQ6Rh8nGp3KQH1MO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=d53cfdei10M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18534,8 +20955,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=6",
     "videos": [
       {
-        "url": "https://www.youtube.com/watch?v=6osaCvzS_gk",
-        "label": "Exercise (Landscape)"
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/sPmGLfrcaKFvQRWIT9UO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=bx9CATKlfp0",
+        "label": "YouTube (Secondary)"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=viupaYYXVbI",
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -18564,8 +20993,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=675",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zZxovljaugoL6H4Y6I9E",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=N5nPhtCp9PE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18594,8 +21027,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=677",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/88iWYnZAJM7x0QeTnZl2",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=wp1FObkZpu4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18624,12 +21061,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=678",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/9rCk6hPbv8PeY7aIiuWd",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=RxqVj-rI63I",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=1lMWRu3c3Hg",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -18658,8 +21099,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=680",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/PZQ7BcftkeVueMNSDnf3",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=BW8Nx6eCTz8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18688,8 +21133,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=681",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/YYmnCYnBzrqmVD7OjV7f",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=RAerMqxL3HQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18718,8 +21167,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=682",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/v66BL0HS0pdG9TNOf8t6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=yAkwF5NJ3os",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18748,8 +21201,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=685",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2uVxuFrgeZsNS2kX0rpU",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=XlXHjpHVPN4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18774,8 +21231,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=686",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ya6Nx1a1aPOQvEvGYDGn",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=rx6fUXBws3Y",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18800,8 +21261,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=687",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/mxIuE5yJLc90MFjUfGbr",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=_v83o_kwuro",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18826,8 +21291,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; instructionLevel=medium; t1x_number=688",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1gvC6you7oCEQL4FRBOC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=1H6HFe16yOI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18852,8 +21321,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=689",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xH5rFmWupxAaWYAnZtvs",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=OtkNrLeSkk0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18882,8 +21355,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; t1x_number=690",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/CVZqyXVRaEjj3SQEOABc",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=oRRZ5J7mm-g",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18912,8 +21389,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=692",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/U1AVXl0MxEE8A3HxJs10",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=uNhnzK2oVq0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18938,8 +21419,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=693",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/lOSr9SUyY077kvBo8Kdk",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8NMxnkrKntE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18968,8 +21453,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=694",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/AiB8ZU8OB4qFuK4u5qbk",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=zdYUvy4i9kM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -18990,12 +21479,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=695",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/KD8g6AtTNcmjT5PaThjf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7E4cpE8oixY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19016,12 +21509,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=697",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/vBimDUgpOBsPo4ncIGAM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=LiqJpYQkIQ8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19042,12 +21539,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=699",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Izwas2HsLNcoCL3Mrk2T",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8e6dO7hOgP4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19068,12 +21569,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=700",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/dD0LFjAHs9dCdEssKTef",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=mOZJywZaIGk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19094,12 +21599,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=701",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/He016fCtfje8SLewrZMz",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=45qyKo_eU3c",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19120,12 +21629,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=702",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zOa6o9qOTaeeJL5y7gQ6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=q-b1UgP2JyU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19146,12 +21659,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=703",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/rDwqWuaMrTKwDOVTyIRe",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=n6Qb0xdbjYI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19172,12 +21689,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=704",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zUykgvBI2VSnNsX5Qp1L",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=UOlEwrcDXH4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19198,12 +21719,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=708",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/XkP5icOqDd8nAdZzShlw",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=nWYFfxxmeOY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19228,12 +21753,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=711",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7YMxB5WggBQ67kLtxqDN",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=T3I-KcKi-fo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19254,12 +21783,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=712",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/i8EwXkm3RHGC9uPsOjlH",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=IWa1AOnkvtc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19284,12 +21817,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=713",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/TGDp0z3qSYmSZ9R8PUhf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=WUfN0MrU-YY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19310,12 +21847,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=714",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/cPnILaGcW828skHMfHNg",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=A_6KHAtnhW0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19340,12 +21881,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; instructionLevel=medium; t1x_number=717",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/tiIvkgVU08aAy0B8A9bh",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Qa1jsbRVkZU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19370,12 +21915,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; instructionLevel=medium; t1x_number=718",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/CzJQJFQLYWMUuoW3qbeD",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YeVU2iPoJzI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19400,12 +21949,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=hard; t1x_number=719",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/aBas7QAKtfC9herc6F4U",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YeVU2iPoJzI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19430,12 +21983,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=722",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/KmQf1BZXo2TA6RQDomze",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=oIW0buEra7U",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19460,12 +22017,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=723",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/WiGiWM8BLhyQtRHArAAv",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=9Xb7a9p8TJQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19490,12 +22051,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=724",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/QVNmhBcrntinj0h8HRIW",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=82muo_0fR88",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19516,12 +22081,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=725",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jma7giSifAgoIwkg4JVQ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Cqn9bXeJnIs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19542,12 +22111,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=726",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/0mpAdOE4nOBVTTa328U2",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=139NBHlPGdc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19568,12 +22141,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=728",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/3UttTZYUHoO77cWYir33",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=TzRPfKWK_YQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19594,12 +22171,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=730",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/M2kETXcNXY3NVHOTJZYt",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=yz115LBxQ0o",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19620,12 +22201,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=731",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/PUdnYNDi72osUSV6xE68",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=67n6lDaPwTg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19650,12 +22235,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=732",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ZVxHdMPp3u49bMZ14vzx",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=EuA7IJNzfRA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19680,12 +22269,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=733",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/DXgWRMm5sADb1lQJ9nuJ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=FkAqLHMlz9I",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19710,12 +22303,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=734",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/4mHwrODL8TVbAGSOGizq",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=yMcEC03-Xds",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19740,12 +22337,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=735",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/tk4wDD4oJecoK575ekUh",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=IbNd5991v-M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19766,12 +22367,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=736",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/FFwjW9RukzdZmiLqVRUs",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=mJ5Pg2LIRyc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19796,12 +22401,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=737",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/gEfM3H79xCg15wZuxfaG",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=flV8td3ZOd8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19826,12 +22435,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=738",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/OWesnvh61gCaBiYFGC9Y",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=erZn3TWlSI0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19852,12 +22465,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=739",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/B76P1kejV69mbM2FqJ9K",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8KKMGqEbBbc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19882,12 +22499,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=740",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/32qnVCyrZTth6wrHq4Xe",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=BET3jBDrtH0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19908,12 +22529,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=741",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/cScPMq5u73jeIkbqzA9y",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=cSIUYFmXMHM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19934,12 +22559,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=742",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bZLqqvuPa4W373fJnTzX",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=cUBLo7Nt9Yw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19960,12 +22589,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=743",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2l4kTbLYnAzBd117l2ys",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=9tN1IaJmuwA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -19986,12 +22619,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=744",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bdn0V1Btx4TIYUhTYVGc",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=mjLUYPCgdWs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -20012,12 +22649,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=746",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/w9Jp2zVVNDpL9HHtRfJ1",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Q2ITW1ZKxX4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XxyHlBSLieM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -20038,12 +22679,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=748",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/9G96L2O81DZy49H4Axs5",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ueeS8bMUMdc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -20064,12 +22709,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=751",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/KZmbFFGnIbTIsmkWsNle",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=lNUlpbqdNqk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -20090,12 +22739,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=752",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/PedPJRob2e7f6TD5jdK8",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=hlcI9ofFAiA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -20116,12 +22769,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=753",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/z7LDLhGxyT7DOOVKGN6x",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=-71A1Y-cm4Y",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -20150,8 +22807,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=755",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ar4BrCNUxQPA1b1Kgqxj",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=gWs3yD0Cgto",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20180,8 +22841,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=756",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/qR2PVcmWTanPQ05WVPpf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8qrZBoqgcIs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20210,8 +22875,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=757",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/CgTtzoblrZJVVsclZrYA",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qlsrMV5o4II",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20232,8 +22901,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=758",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bPvOUl9pFs0fouHdKZ7u",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=kbxl2JZeit8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20254,8 +22927,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=759",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/lpgtph5DA0AtZ7EmHNqQ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=NPSB_VoiAhM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20276,8 +22953,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=760",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/DCwvS3JiOm5KiX8B1GXg",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=-bg71VXiLcU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20302,8 +22983,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=761",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ZjVBHKX6jegKkbkd6pOi",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=SPMYsCNJv0M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20328,8 +23013,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=762",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zodx5fiL96t1rR1YSYXQ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=nYwhsNP5oiw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20358,8 +23047,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=765",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/0JXET5t8DVpBY5xZstR0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=chZNdRPRmgM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20388,8 +23081,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=767",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/OLkd2GOEaQubep1mXcNW",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Q3fRQ6kPH-A",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20418,8 +23115,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=768",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/hVTD43OD7U8mGfkBBWTy",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=it1VuIT2SRY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20448,8 +23149,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=769",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/5qcfDlfnV1PYCrvZQCwG",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=z4BSVIsgN6s",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20478,8 +23183,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=770",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/yiWVNZBrkSsoyyUySFMz",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=rTvXEKh1ZQo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20500,12 +23209,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=772",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/iKX80H4yeHuLceHmTQaS",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=J73b1cnDTG0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d54tsyJo9Es",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -20534,8 +23247,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=775",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/I9E6BB8OQU7Wum30gRyU",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=V_CjQLOowmM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20564,8 +23281,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=776",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/h4VVtsQqdzBpKUe0b0IO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Gl9_Rtod7Bs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20586,8 +23307,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=777",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ovzsKLPGbvG514tkpLiE",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=o-z4a-KYOyQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20612,12 +23337,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=779",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/DW0noQHQahGpgVN3R1lF",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Vr_fe3y-9vo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=SUoj85fr7AA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -20646,8 +23375,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=780",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Wl79aIOsIE5k1wMKa7np",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=dNPRnS3zQaI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20676,8 +23409,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=782",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/b760en5gZwxepliUg0c2",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=reJfuK9n4MA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20706,8 +23443,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=783",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/KSAdgZQ2ES8tpYSCuORm",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=D8YJqMONjDg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20732,8 +23473,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=784",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/MbF5tvtQTrfReq0VwArm",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=W4n-R6q_YxA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20758,8 +23503,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=785",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/aiD6c1T0gFgKVdVeTnjz",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=fox67TgWAoo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20784,8 +23533,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=786",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/FwOaZw8Xk7FLPD43mkLb",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=gW-5cYX6EO0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20814,8 +23567,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=787",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/n6P3ZQzETdbVTvaUEKQS",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=2ui8Y5o2KC8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20844,8 +23601,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=788",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1dzEn3YfRP4K4z0q4rmV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=cxaj_q3lfXw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20874,8 +23635,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=791",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/wXMkSOQ9KJ6k3EnQNtSV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=VBoPSJ5uw94",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20904,8 +23669,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=792",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/TicQgOnp7iVjfRZwUvaJ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=NjSHOxpfeDs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20934,8 +23703,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=793",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1IvmzupSUVwHwxH5arso",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=-1e8ybXkxCU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -20960,12 +23733,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=794",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/VaDuAfJDDMimKPH5pAzv",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=bff2SuNO1Fo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -20994,12 +23771,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=795",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/vrFvxwqeORfhxKFRcpwu",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=mXwqBtIfp_E",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -21028,12 +23809,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=796",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/lW93maGvNcxHB6Hmunix",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=L0g7zJvSvUw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -21062,12 +23847,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=797",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/s1rs6b7xO0AVqOlqBT0l",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7H833KNkrGA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -21092,12 +23881,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=798",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/d7kiuKNZT0c4qk2yrN4L",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=VfROhpzU7dU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -21122,12 +23915,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=799",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/nmPHXzIcUU1Idn6qCIo5",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=eJo5SHWGR-0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -21148,12 +23945,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=800",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/lDavOqlBB5rqYqvlIFOK",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=9X6_FWDS7tA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -21178,12 +23979,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=801",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/FcSmWtpFoLgWz7kWionX",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7rR_oc-K9CA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -21212,12 +24017,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=802",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/5QatmVU9xj9dVsyuykPk",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=b-T2YPud9-w",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -21246,8 +24055,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=804",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/B5FXe0l3FLuVWhNEbdpk",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ctC4bZAxlEQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -21276,12 +24089,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=805",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/FxQbY3maMRGZFdJgXkV5",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=zK9orhWtDEo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -21310,12 +24127,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=806",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zqMmJjeiVDn9Jkd8oZOe",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=sd8gp3ujbDI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -21344,12 +24165,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=807",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/clNMzJdPxyVquMWB4NWn",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=j86RNZccpzM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -21378,12 +24203,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=808",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/oTdR4lmTjb355OmcRNJg",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=zRIl6O8YcPM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -21412,12 +24241,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=809",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/qsBQwqgIdROTaDqs3ieq",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ws-NYc8hocg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -21446,8 +24279,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=812",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/CZnfHwx0vHxvyiPsCdLB",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=sZ4f_uUFGek",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -21476,12 +24313,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=813",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/iHP1KGokrZwkp853mVcM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=bnomRgbSMVE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -21502,12 +24343,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=814",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/9fVNI5F8qmJIAhEfsYQe",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=_9x7pKfe-tc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -21536,12 +24381,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=815",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xib3mcaZ3nJfkuLfANau",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=M5c1ULGvgqo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -21570,12 +24419,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=816",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/gwMwCgLr9PsFlkidBlDS",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=v_1G5CHQZZQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -21596,12 +24449,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=817",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/NlafJBaObqYOe2viWXFt",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=33skXkypQ9s",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -21630,12 +24487,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=818",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/BVKwDhuD5lbwwMtHDA4t",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=HRxePUedKts",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -21664,12 +24525,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=819",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/PHp5JjvvmeQ8j5whnCoK",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=AqJQdx4kloM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -21698,12 +24563,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=820",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/iCQXzEhC2ETx5mGa4NV2",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=RLthPsp7zkY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=pBEVzaX86f8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -21732,8 +24601,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=822",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/YUxAg7y6yohzMLJVaTEW",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=UekBYy_HLdU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -21758,8 +24631,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=823",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/N3QwoPWPvbE41jl3Om9Q",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Yva7RJbvKGU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -21788,8 +24665,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=824",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/knElTS3GsGDsJobmVwhV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=c3v4jiyR7So",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -21814,8 +24695,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=825",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/KUt4s5Mel8kZcV08oAEH",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=zr_gVdzBAUw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -21844,8 +24729,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=826",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/CWMivBWXBcCaCDjPY0gI",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=a-vmnR2Dc-A",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -21874,8 +24763,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=827",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/px4ltABomvYzO5hp57Ld",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Cnp7X3Egzaw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -21904,8 +24797,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=828",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/NTNmQrwZ3xWdhzKewb2P",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=JXOVLsBWNns",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -21930,8 +24827,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=829",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/T95f8LknV8GcXpoCKEL3",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8tzcHbNCVxw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -21960,8 +24861,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=830",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/uOkEdIp6uYnEAnqOsfXZ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=s6W6tXpt0PU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -21986,8 +24891,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=831",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Fo3rneRZWzMIn3LbJiCG",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=LN6J7KaN6T0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22016,8 +24925,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=832",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/HL4UWOAVNfv88QKPrmbH",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7INDKsMs5fY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22046,8 +24959,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=833",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/QWh8PlUdVHEx1Z73h4WK",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=L1b164zFXvc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22076,8 +24993,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=834",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/WF0Nsns9P1CHLOoYASNT",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=NexDeS9yeUc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22106,8 +25027,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=835",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/fWDk5h6R4QxHwChCMJqX",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=rKMnJBD6w3E",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22132,8 +25057,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=841",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/b6hv7SSNiG9cD1Eep5lm",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=X1nf8II2Kd4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22162,8 +25091,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=842",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/toBI5Cj6PE3k4YHLP007",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=UmAYUYPgFIc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22188,8 +25121,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=843",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/H892LzZkxqfhAD72RlFS",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ec3c4yq02uI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22214,8 +25151,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=844",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/MrhhC8lEXyq1brkn1XUj",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=9cY5rMLEZkg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22236,8 +25177,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=845",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2Lh1jryhZE8vfC2ry6M2",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=37wwmP0EYA0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22258,8 +25203,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=846",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/nSFPFaeeamvjNSqgSN8X",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=UZCiIB5wulw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22284,8 +25233,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=847",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/fkSyojBVHovvJY9hmehh",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=FBrd0X9wo_k",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22306,8 +25259,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=848",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bUd2nZqnVjCLKTq8Iwz2",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7pAGrIqMFG0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22328,8 +25285,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=849",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Q03Ge8tY4VR6IoL8Wuuf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=wzR1C1gshsg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22350,8 +25311,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=850",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/MsVjvwXR7mrqTR4G8t54",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qbQR26bmQpQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22372,12 +25337,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=851",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8DLfmPkRpRqYGwTsGBTa",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=zvH5t06Rsso",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=_OIjYnTgGk0",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -22398,8 +25367,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=853",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/XLeCH3vyFF3XeQ8XtGuH",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=bUa-Q_sZFGc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22420,8 +25393,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=855",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Q3zhIwpXDZBNgi9iFJHj",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=hxecVj7ZnLg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22442,8 +25419,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=856",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/yiBLJQ6FsSNdmy1rJVNe",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=AerlAydJlVc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22468,8 +25449,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=857",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/HiDLKc5kG6aHxytTiAuG",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=sAWlNqyGw-0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22494,8 +25479,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=858",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/OsZqd5bFuqCErdtK4Di2",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=_ZHedEElX_k",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22516,8 +25505,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=859",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/J6x8DGwYb1ycZujLONzx",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=xZXnCJ0iXy8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22538,8 +25531,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=860",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/J7LDCtBK6HrFraxL5xQs",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=4P3LVOpmt2k",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22560,12 +25557,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=864",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/DbSz98Ip8MoFwnbhadd7",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=KpHSw0XVZoM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=QaDjFcJAgNA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -22594,8 +25595,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=865",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Wxj7okp5TwxhAramrDtT",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=kxtQlLxMSQk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22624,8 +25629,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=866",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/qSH1ktBadc7fcAZCrVeR",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=C3j-s8MYETY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22654,8 +25663,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=867",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/F1A9K2eQglCSSWLXwXlz",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=BtVFLz8SpuM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22684,8 +25697,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=868",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/QdC8Y9T8SvEtZBRUTI8J",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=QNQPvfT1qCA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22714,8 +25731,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=869",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/qQWulCB6IqqLuen29Z9T",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=_3CkXl5ZZCo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22736,8 +25757,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=870",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Lt0NIPXpHX1sDgoemzvM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=lo5Qv197sX4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22762,8 +25787,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=871",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/K5bwUNxka3vN9l9fnPxO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=bDbHQD5qeoM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22788,8 +25817,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=873",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1Phd9qTkJc6EDrIQaczy",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=1b9VNsbHPmA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22810,8 +25843,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=874",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/qhmnDcQxAnrdp2ql0Kpj",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=zjkM6h6XPLU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22832,8 +25869,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=875",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/oCVvWVStkcYuXPFFll9Z",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=XmRIkOANnbs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22854,8 +25895,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=876",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/GwwgYrxMtwjHZ1ZMKoS6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=x55aUn9_FCE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22876,8 +25921,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=877",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/O7dS106aMBVeRVuMiYvY",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qzfnmb1djvs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22898,8 +25947,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=878",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/uVkqgeTS9wBvuX5PlBlq",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=K710Hkp_eq8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22920,8 +25973,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=879",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/qQytrhUvparUVJ7wkFLG",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=3AZgIGrl7sc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22942,8 +25999,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=880",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/j0xHYQGSsms3ou2OJIEp",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=AYeglzKSTLg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22964,8 +26025,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=881",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/hLOazC0gRarGsmJBuVqM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=3AXarvJvr7A",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -22994,8 +26059,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=882",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/52OXh5VgDbVkqVBj9xla",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=JiPg9FR8NOc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23024,8 +26093,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=883",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/uMfjryNHWx9YtBiSODgq",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=p778js_Fm-g",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23054,8 +26127,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=884",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Glg9998Xmu9Rv5CuAWel",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=UI5lSrN2ysw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23076,8 +26153,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=885",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/09xJk6bMD3kULOzugO3T",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=V2ThhBGWd_c",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23106,8 +26187,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=886",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/SuaMJKPYA640Z1lr51pF",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=2jGjveM0dvY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23128,8 +26213,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=887",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/HvMKMnVN5yzPbpth4sWC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=_L6BatTk3uA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23154,12 +26243,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=888",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/SP2Nb5GIsZjwsak07Yxf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=eCHBqbno1DE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=p7ekT60OLtY",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -23180,12 +26273,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=889",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/H1CFdglW6mwinN0FpZ12",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=9RKIBEBhgPo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=VMPDbiiFyqE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -23214,8 +26311,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=890",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/9QvQnKyyYg8vtAzEVAUH",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=HPZ4You6k2M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23244,8 +26345,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=891",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/c0fXACPkeo12A8DlKMmd",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=mwVHUcpIK0Y",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23274,8 +26379,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=892",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/4Vt0nmKd5Zzvt5WblYw0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=nFpZHYJP-z8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23304,8 +26413,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=893",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/XsS7oBd1WCVue2Uekbs3",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=_2TzSXYjTrU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23334,8 +26447,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=894",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/4IoS6czYNJmw31IWGLut",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=K5XCYcx-tw4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23364,8 +26481,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=895",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2V1OVnT1vZ3TpILoajYS",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=RbZB7nUQ7Kg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23394,8 +26515,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=896",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Sq7vS6lmxioYjCdfmQWF",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=E37j8ssxlmU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23424,8 +26549,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=898",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/hmRrpxvdKgQuQVQkaL5O",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=KBZFsy7F9E8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23454,8 +26583,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=899",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/RH4NnewrjHP1sYqLnbBl",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=5QVrIIMQmdk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23484,8 +26617,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=900",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/fU7lKfSLmeC4dSR7JulT",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=hqITzVgNhHI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23514,8 +26651,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=901",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jGP9Wwu74feJpfgL7DVS",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=9iD9Na1yr6k",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23544,8 +26685,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=902",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/I8uO7cZ9Q0iMrgYn01bZ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=BPBWrzoNITY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23574,8 +26719,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=903",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/M4Hd0ROTH6WwkFvUTaB9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=719X5rhV3UA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23604,8 +26753,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=904",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ZyeQir8HG5KvLaLBU1KC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=FUyaJXvSRSQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23626,12 +26779,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=906",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Qf3BzCiDqiHoiwpqBDDf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=IZNj8GIjTkA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=QIUqzsWLdIE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -23652,8 +26809,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=907",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/UkPtKh6BW0GlSeJuZ81o",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=1yvdBlJWHhE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23678,8 +26839,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=908",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/aOh4LIdi07M2Tx20EkpM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=O3xKh8eERqM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23704,8 +26869,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=910",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/FZX8BLQFQnMI1YqY25cF",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=jbsGvrVgd5M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23726,8 +26895,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=911",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/g19KNPKsNVt78bCr0twz",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=z01Ll3aoJ-8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23752,8 +26925,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=912",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/txGbMo9zAR0y9KhnLPuN",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=238rYy8Bg7w",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23782,8 +26959,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=913",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/pL1rAfPUxmZmEAtzfR1f",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=uYMJ4OxSplQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23812,8 +26993,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=914",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/rgsUnMHKdCQxei9MBkDl",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=GbcVdPZk6IA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23842,8 +27027,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=915",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Bm8b1kipqJXmZCwGsIPI",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=vpPi9sDBiT8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23864,8 +27053,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=916",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7GH4yEKajxRvYDp6fUXs",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=d-5F7DcGpEQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23886,8 +27079,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=917",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/tPM5PcNuJOL0ps56SVOm",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=uS73GRStz4I",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23916,8 +27113,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=918",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/vbMDo80uzBV60KxiwSjD",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=e4BT5GIKjLc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23946,8 +27147,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=919",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8v9GVtUm2KyiKAJSo1dN",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=rE7QWDCt4cM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -23976,8 +27181,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=920",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/5kuoMhXFnCouSekqihnU",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=KL5QfhjYcow",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -24006,8 +27215,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=921",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/tq891mD1EjVYx1j7oKRN",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=mFy6nX5a_Co",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -24036,12 +27249,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=922",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/cvJIsGX4eJatJnwV6J45",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=hfjNTwGto3M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=yAmQ_TJfqoI",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24066,8 +27283,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=923",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/QRP9cJ80ms4jVaSyfxIW",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=PwHPk76SCDI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -24092,8 +27313,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=924",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jT9lYCjydBxo3IsxyeRM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=CC9ePRPDdW8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -24118,8 +27343,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=925",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/LG5tOdgsu4gMOPGDTJx6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=BRg5GuNPxmk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -24144,8 +27373,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=926",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/gOZfqwWETwFjAPu6zNZT",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Et3lTOSri9w",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -24170,8 +27403,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=927",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/oXK94ICqySPvNjsMZxrQ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=vxtdzVUVJgY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -24200,8 +27437,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=928",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1rSvmKzO0yTFuGKbNODE",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=6nbGbWro1jc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -24230,12 +27471,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=929",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/D63ij5iB2fTPxVLc5cmn",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ucbIcmf4NVw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=LVRokocP29w",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24264,8 +27509,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=930",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/PXKB0kfYfNq19B9JITLa",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=NJlPSfSVnlw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -24294,8 +27543,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=931",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/YrbY3hctZpXwlgA1uag5",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=0e9I8MemQrc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -24320,8 +27573,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=932",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/lMpImoa0KpUfd64S43lJ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=FgNVwfyIot0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -24342,12 +27599,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=933",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/14DlWxeet5LhPc1drxWE",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=stWsGu1ulco",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24368,12 +27629,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=934",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/eRxoNF7tKrANZ1JPLZbr",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=efBpz0B9Hj0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24394,12 +27659,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=935",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/gOg8vnCMfw0TL3kZhdxT",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Zm-h6ABqQiU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24420,12 +27689,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=936",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ATieNEiTekvfWADS1urh",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=21cpv8mH5Fc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24446,12 +27719,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=937",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/6xcEhm3eAlSe9C0GLH7Z",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=3HxioApvi0A",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24476,12 +27753,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=938",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/z25xJbbWK0xporPfL2h8",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=BBjyjVfY4ow",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24510,12 +27791,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=939",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/dvqFUkPIFjvxoroWA4Ic",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=PGMejJh1ufU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24544,12 +27829,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=940",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/w9dDVUkz8RrEpjNxy5li",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=AyODU4X97mc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24574,12 +27863,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=941",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/WwFlp1nR0a8QiXFd3G94",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=GY2jNb_TdZM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24604,12 +27897,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=942",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jCzbMq3xwFttQKyzHskb",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=a1ihsZ-lICo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24634,12 +27931,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=943",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/EAkscenTb5aHzjwZPnCl",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=GZRp5mQrMqk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24668,12 +27969,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=944",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/LV6wRXMfxyxMRIgr1q6Y",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=dk7SIevkDPs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24698,12 +28003,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=945",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/yvsAsuk8cd7ag7wAg0WM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=HYq-nnmSyVc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24732,12 +28041,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=946",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/6dlpc71Qcl8BiaBLUsNJ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=xCoLaSEyCX8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24758,12 +28071,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=947",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/tzG0JaFR48ZtxBWdXMNn",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=bn3Uf75r6DQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24784,12 +28101,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=948",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/oK1UzqC8v2AEEH3meHCT",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8Fz9sRpH2NA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24810,12 +28131,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=949",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/eCxrbIjXbcwe8NhFyu0V",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=CMTc5fZ1XcE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24836,12 +28161,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=951",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/d1SZ4Qtd7o6nrCBbzQRB",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=GH3WCM6sz1w",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24862,8 +28191,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=952",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/vJ9RAA77284UaX4AQ1ER",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=T1UGl6ncQNg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -24884,12 +28217,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=953",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/NcRg6UHugSMhyNvH7PX6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=kZBXQXagCVk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24910,12 +28247,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=954",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/sYI3eiuMfKzZJsChO8P0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=hS8M02SLmyQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24940,12 +28281,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=955",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/djrwyNdvpBH5gUNJDsjz",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=_qz1ZmzoPog",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24966,12 +28311,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=956",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/B93VtA0NfeFGlOUpHMoq",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=RDZQExkXZPA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -24992,12 +28341,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=957",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/uTn5y6vfsXan0C5rN7L3",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=tRN5zDzcroo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25018,12 +28371,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=958",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/KyozThXzediP3DmOh90P",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=02MYXjMEA1E",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25044,12 +28401,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=959",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/hEYZmnazSCPQI0NYyq3o",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=BN1ujZl-r_c",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25070,12 +28431,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=960",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7nUq9UPWUG60wuwxFTue",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=KZXP7t_wRiQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25096,12 +28461,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=961",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/51z4HgR0rUEtc3Xira8r",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=0CGBCzhbRTM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25122,12 +28491,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=962",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/aUl3VR1VXgvzJERlKaLg",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=hZwC4K9vEiY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25148,12 +28521,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; t1x_number=963",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/rCtvvS6dsBHOY8Fd7pV8",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=k_hx-ewBuOQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25174,12 +28551,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=964",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/sdu0CxSf3jgA64eD06UX",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=z1DxTcqBvVc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25200,12 +28581,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=965",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/VZucIyli9OENxM0aP8II",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=BmcWZ5scy94",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25230,12 +28615,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=967",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/nW9uxChoFBz8qHydWib6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=mw6yoo5NY6M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25260,12 +28649,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=968",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/z2Lyqv7kiODoyhaQpTKh",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=wvpxhcIyObw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25290,12 +28683,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=970",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/5eQv0gdnkMPCBHpI1QQF",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=T7pNykNWaTA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25324,12 +28721,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=971",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/TN4ltUiuL6kgHDMAgqiR",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=e2LUNJOAnqw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25358,12 +28759,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=972",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/g2QiZPFFScU7kGMuGDAR",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=JMNT8wYyhlU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25388,12 +28793,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=973",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1CwKUUIqmhq1JET09swD",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=T8xLFCzIdG0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25422,12 +28831,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=974",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/HDbJjz86t0gvu0R2YLAd",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Vt5Y_nqmF-U",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25448,12 +28861,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=975",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8TQtyEgMo9Wb8bnJjKeZ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=gCygjtPD32I",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25474,12 +28891,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=976",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zk1dVGGQTyleooggSRZD",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=W_YJR0CEGCg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25500,12 +28921,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=977",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/DP91D7Z8NrVs9gZVRiox",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=EhJ2zY2bFso",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25526,12 +28951,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=978",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/GaLOfeX7CTunrMSYVnZz",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=HRKlN_AZ_xc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25552,12 +28981,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=979",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/gYmr6bhrIwh1bn9Nmx9l",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=1j_VuFPjeco",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25578,12 +29011,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=980",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8UebVNhIag7kuibrMOy7",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=fW5K_mMeeOA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25612,12 +29049,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=981",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/QmP8gZ2UKUH0vGdU3JhX",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=0P0P4tnB7hI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25646,12 +29087,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=982",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/PIb6jfA60q3OVSA8IVRB",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Mr4amixiiQU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25680,12 +29125,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=983",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/A4qOR12Bu0pXF9Q34XDT",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=3e9iaPXwmHc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25714,12 +29163,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=984",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/SwAji4YYB5k86Stytel8",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=pv7lHsV9XwU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25748,12 +29201,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=985",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/C4sHcXYATNknvEQxcSus",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Yv39ABFABa8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25774,12 +29231,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=986",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/KGDglbOAeE4UWCHYd0W8",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=V7gQD-QXOgQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25800,12 +29261,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=987",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/kfUFx2XEEoQaC48wIiIN",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=5Rx8IjrdgoY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25826,8 +29291,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=988",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/sAgnXmGaKz16x04Cc5FS",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=PaFm8Q_5qEE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -25852,12 +29321,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=989",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/JbhUdM8Gs5moXQSHn96o",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qCxGAxQNUno",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25878,12 +29351,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=990",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Korx4pbaLYPzdByB2LdZ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=njH2PwQQja4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25912,12 +29389,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=991",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bMVBetmobRIj842Q9aXQ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=9CedbKmq108",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25938,12 +29419,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=992",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ikOqqxYiUN9A3MX4vlkg",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=UC7mjwqx7co",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25964,12 +29449,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=993",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/y4OLgnarufii8QMPnTBm",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=eaGqo2o1288",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -25990,12 +29479,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=994",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/CEpKrJdlrXdNNkqxjvRY",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=fsHF3l5cEQw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26016,12 +29509,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=995",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/VpjWDMF6brnPPfea27Si",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Jhfmk6WQKmo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26042,12 +29539,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=996",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ChcoiSErb3E6wrr8OP3n",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=yJlpfWn8jv8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uuXFLyw_rtM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26068,12 +29569,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=997",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/5iuFVfqdXH8fmGjrQ8cl",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=bpz1MwpKGkI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26094,12 +29599,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=998",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/XFThf97aR41Pg2jbCVc0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=EABPmPboBbo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26124,12 +29633,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=999",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/wTcdPClL2Xzw0DLF28eJ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Cs1oY_xTqOI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26150,12 +29663,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1000",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/UrZlUcsClGcnOrvq0OL5",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=RflEdS6l1z4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26180,12 +29697,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1001",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Sffx93ZY0Z0zEii4l90C",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=3TkbdPlQu5s",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26206,12 +29727,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1002",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ZCN3xhPG8Blleccb2ftO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=AMDnkdTcqpE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26240,12 +29765,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1003",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bMBhM9LHwVv9rRkgTuKm",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=UqEFyIsGjnI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26266,12 +29795,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1005",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/3VRFfryKvdpz52AEoBvz",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=0oBOF4DFcNo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26292,12 +29825,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1006",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/FbQeZL5xiR6rjndKqQ2I",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=vKNvJTowaec",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26318,12 +29855,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1007",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/gKsb7AGCl3vBvtgyQLQd",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=BKT0E7Ie--0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26344,12 +29885,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1008",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/LFRrcOMyaYzzkVeip1GG",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8bj0EwDQLc0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26370,12 +29915,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1010",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Ivv6zCxUCV4wkM1sD8iP",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=esI_ZH7u4iY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26400,12 +29949,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1011",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/KjYIr1TGlIhhrKJRWYTw",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YubxbNwwg9w",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26430,12 +29983,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1012",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/h3TjiXA4fxzPKdk7eMEx",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=XTlzbc2IzTo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26464,12 +30021,16 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=1013",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/twW9ieligHZsfhwnv2nC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=9Bt9ABYJ1TY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26494,12 +30055,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1014",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/x3mLqAFhHIhRkAeoNFHF",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=5Y2xEKA2B3w",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26524,12 +30089,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1015",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ZmbYWnTVSaubZyMo7HUQ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=yax2QetRcUI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26554,12 +30123,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1016",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8UBOKMwkOmAIZJalDibv",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=JPN2jGW-Ng8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=eq7zxDG4Rhc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26580,12 +30153,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1017",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/sS7a4PPTfeRCYgnhlFwQ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=yfsBpwaBl8s",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26610,12 +30187,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1018",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7NTn7foMi2k5wBZEKJMd",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=fbsRDQB1mU8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26640,12 +30221,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1019",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/YuB6cx4fdjh763eEeYqq",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=JJKrSX5o9Ik",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26674,12 +30259,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1020",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/evD1WQpjx1GipSuuxMDB",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=JgDCtTSrUSA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26700,12 +30289,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1021",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/tKccC42NRbHwFTjnRkGI",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=4cuYxx7oXOI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26726,12 +30319,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1022",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/UpHyIIfSUR6Ft4euFI91",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=PlKiR10glEI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26756,12 +30353,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1023",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/YmqwkPI0b4EXU4WVT0z0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=SanSppEB0ac",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26786,12 +30387,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1024",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ZgtehIleRhmVxscCI6Hm",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=EiB6vDr8EcA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26812,12 +30417,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1025",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/s0qPlUuTUgvleoCzbrIA",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=rN364zHbDQ0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26838,12 +30447,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1026",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/CxatTaUjszC7XktHaScH",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=XrGfF24fyfU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26868,12 +30481,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1027",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/dCePlbHIvFYHvnPyhoc0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=R-AZmGx8tpA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26898,12 +30515,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1028",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/CwZnhax2h91iBnWGVQQ8",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qzRVCKFkJ64",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26932,12 +30553,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1029",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/kPZV31ICQiKFRx10GlYd",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=0nlWPBpgLxU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26966,12 +30591,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1030",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/U5UVKGqOJxFm4IHZnBLx",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=mDc9uTSqHCc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -26996,12 +30625,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1031",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/gjk1dKYtA1ASc6nKRfca",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qMizJ7jyRNg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=msaHH6ix3-k",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -27030,12 +30663,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1032",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/TW7uudlPCtrdYyhWARYA",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=KnnnDexNcdM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=FGFeJr26qBQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -27064,12 +30701,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1033",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zAPKT9F3d8T2BD83kOJR",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=LuvJiu0PEx0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=FGFeJr26qBQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -27090,8 +30731,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1034",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/yntH2NUUr8Phfe2gUgh6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=GFkgteV3OHU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27120,8 +30765,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1035",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/4vxs6KAQ64SSIESajHh2",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YYYbUm6TabA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27142,8 +30791,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1036",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/dRtgmjxmHxeaqGse4NN2",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=22FeRZtR7sY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27168,8 +30821,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1037",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/F0fHpBnlZqoegVQMjKEc",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=SPz2-Ei_Q4Y",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27190,8 +30847,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1038",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/id5MD7N678Dz9NIAf8i9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=_PcvsvVsOno",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27216,8 +30877,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1039",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/lL61tsi7bYVylSyz4w4k",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=KrVq8lNZhzY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27238,8 +30903,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1040",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/PrgVU07zBFucGgDEqyae",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=0M453JL-MXg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27264,8 +30933,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1041",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/q4SpSkbf5buVdsjuTaKq",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=5yxp-RrReJI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27286,12 +30959,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1042",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/MyNh6nZOjDMHlVreCPIf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=wzP6wonMFBg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=LwHKXIUfX3o",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -27320,12 +30997,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1043",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/TUAZ7VKaVrSujh8yYgKC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=wmeGf0gG5hg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=VpKsaZLcW-g",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -27354,12 +31035,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1044",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/EGTzSOk8GV2uXX8C24aM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=NvFUruN7cOE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=4uwshwYvHkI",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -27388,12 +31073,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1045",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/0VIvQM1qWvPhkxMiG3o2",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=c-bib_BFA0o",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=WDygiR2Sn4A",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -27418,12 +31107,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1046",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/MCnF13HSS4X2x6zJ0KsV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=S2vxHJRHzLg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=WDygiR2Sn4A",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -27448,12 +31141,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1047",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7CuorQMJlAM4pzWRlilr",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YsmqWWmFPHw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=WDygiR2Sn4A",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -27478,12 +31175,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1048",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/PjOVg8S5WfYPk5h0trZx",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=AmYgxT04LRI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=WDygiR2Sn4A",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -27508,8 +31209,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1049",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jJRk6dNsoElCH1ZPX8oc",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Jpvim0TUHJc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27534,8 +31239,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1050",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/eRwiTHkXS5kRGRM6jwfz",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=oWJzzrky-5E",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27560,8 +31269,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1051",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/tCFLvgPYiVs6oZh3tqjw",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=_ZO2LnxZwKM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27586,8 +31299,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1052",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/L6ebTkQfqXYM8hwBDTJf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=NghozwSFwaM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27612,8 +31329,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1053",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/5d9KE5XjIAPQzcx6DC0b",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=dLef_S5knMA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27638,8 +31359,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1054",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zqqwQQ7RDNgsan0spisc",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=-28VwydFImc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27664,8 +31389,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1055",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/BGy1wV1ptHHLtjP5iASW",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ufbM2npofiE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27690,8 +31419,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1056",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/rEkI3PjwH1qXLo7MNb16",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ljt2Gp9gInM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27716,8 +31449,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1058",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/6k5n4EqwLxdtMvdefw9b",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=UIYnTYP02Uw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27738,8 +31475,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1059",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/6R5BnJ369qQgxLml36Bw",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=HfFnnQD-A-k",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27768,12 +31509,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1060",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/iOISvUNymWgP6bDis2gf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=IIqmkUHStwA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=GKAEsp-FTNY",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -27802,12 +31547,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1061",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/VbFjCmBgK257HMdARtgp",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=5lMaIG3ncyA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=8hfJSB3NSBo",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -27836,8 +31585,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1063",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/GTbYqCHJI5NP8rXDAc8u",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=MaapqzoodDw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27866,8 +31619,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1064",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/I5ugBY6gpUXm6lYnzzVw",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=LvDlrjgbIL4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27896,8 +31653,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1065",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bpWFyd7xm7LawZEz5rgY",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=bFMw1c9Fijg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27926,8 +31687,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1066",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xaSMLKZ9wNDCABk8t1AX",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=sP6XVxZr_kI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27956,8 +31721,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1067",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/npvEux5Mm0Yx0Lf2JLrq",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=d9sfthfkCXg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -27978,12 +31747,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1069",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Eg8BOk8o0NwkRzkQbvJU",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Soo5ZQLABiI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=8hfJSB3NSBo",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -28004,8 +31777,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1070",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/vTOQbWotscAr7TrNdYg9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=EK8oJIyk_vM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -28034,12 +31811,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1071",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/5EbbJrRfhKopLZufmRC7",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=LHC9GgfJZ08",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uxSS59IJ-is",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -28068,8 +31849,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1075",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/6WvK8H2JpCER1r3xqsJR",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=pkMGmhuf0xU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -28090,8 +31875,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1076",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7HbD5Ohg74elErGwscKm",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=zQY9BOUL1e8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -28112,8 +31901,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1077",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zx6OhjOPmAEWItldzPlH",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=TN0CGQtA0wE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -28142,8 +31935,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1078",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/E3gpnIleS1lVp794DThK",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Nm-Gd2cPPAI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -28164,12 +31961,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1079",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/YhxZygJ4OyAe7EFWxiOL",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=bxB29JCSI5Y",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=kvVz9li8zS0",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -28190,12 +31991,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1080",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/h6T0hDhk20D7q1Te9Z63",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=kjaWGiV2DmU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=HcS3c6Ki5CU",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -28216,12 +32021,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1081",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/GwkQzwp4cjQV4uP04C74",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Rnx2IbnZ-z4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=HcS3c6Ki5CU",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -28250,12 +32059,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1082",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/IlocZFBrLgX6vtciGmTG",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=rgUpYd_eC7Y",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=m121tGEpfgg",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -28276,8 +32089,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1083",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/GzOodKyqXZO9zasGuBEE",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YsDdAfXbcvg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -28306,12 +32123,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1086",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/i0cFLU7zojFOSGCKkQPV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=o-tT7XdzaS0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=m121tGEpfgg",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -28340,12 +32161,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1087",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/PfNlztTYLAMDosnWBdgM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=T-DTKSHrslU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=m121tGEpfgg",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -28374,12 +32199,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1088",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/6E6HP3CQb8GbgyBLlNU0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ojY6UkQaqBE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=6crQXgNPKSc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -28408,12 +32237,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1089",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/4GhbqUPo0RVudedX7TA2",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=W5VicAbiiyo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=m121tGEpfgg",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -28442,12 +32275,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1090",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/I9gOmu9tfV2aAy4TkcTA",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ZQLaJxeVEqw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=HI2be-h40NA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -28476,12 +32313,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1091",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/nnorYVuoFUgJN2EGtFjM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=70gjzprOSV8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=HI2be-h40NA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -28510,12 +32351,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1092",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/SfQLyQH6OqYNS3axsJri",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=0nbb7AfktME",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=fHaECRuFCUg",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -28540,12 +32385,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1093",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/CjaMd4wKnsGp0cuenpqt",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=0Cze_PZGiDE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=HI2be-h40NA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -28566,8 +32415,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1095",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/EEvUiVMZ0x74eQZVC0Xf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=VM_EF8UX5mw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -28588,8 +32441,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1096",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/z3EPYIyD2ctJPuybRoND",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=5zPaM-lGKvk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -28610,12 +32467,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1097",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/d2KUV8mQp0QkuHzJE23N",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Q_TZkxTi-1Q",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=v1y5P958MOs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -28636,8 +32497,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1098",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/nez1vGJggq2sDUDf2r6i",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=-rG2t_721NU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -28658,8 +32523,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1099",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/HimwRJCR9j6hPBd925mD",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8I_ywMo2ZGs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -28688,8 +32557,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1100",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8IFMKX2PeOSdhjD31MuO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=5WM7wr-RfVo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -28710,12 +32583,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1101",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/PP1MmVctjFgTVSm43VBe",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=USgGHhPbO9w",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=-0C6JmLcpC8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -28736,8 +32613,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1102",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bBbxcCqz9zjaXXRfwZsL",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=zKX5OkHEmi0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -28762,8 +32643,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1103",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/hFSvjcy4ZpcPpyEkQvcf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=r28gWGO1tLk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -28788,8 +32673,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1105",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/tvfAu93GJeratzSqJMeB",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=SiB7IxzMThg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -28814,8 +32703,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1106",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/yYLECWOK9CnuRrzcA3KC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=P1wTLy5qmD4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -28840,8 +32733,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1107",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/kxunKnomO9HTuH3jrf8N",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=_lOICt7s9gA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -28862,12 +32759,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1110",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Yl49eRTEcm1zVEe3ncDd",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=iO18b_VDwBY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=d9Km97ozLsw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -28888,12 +32789,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1112",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/0xN39ZybFk506VwH909Y",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=6aURVy9Ven4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=jK3uHpxRP48",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -28914,12 +32819,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1113",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/itS0O1jbcvCruog6vGlf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Vkcxifo-tyY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=jK3uHpxRP48",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -28940,12 +32849,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1114",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7SUYy0H6P1JsSovvlqHS",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=mbJYBiRkw_Q",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=jK3uHpxRP48",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -28966,12 +32879,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1115",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/WqgkCOhiuck1ZJPFOwYa",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ZHy-VZyhfok",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=jK3uHpxRP48",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -28992,12 +32909,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1116",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/lj8YkIgOYdMzZFyBZSrw",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=wonD_NkupkY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=6q2q95xIus4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -29018,12 +32939,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1117",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/rnSZChfBvh0OxxasnuQt",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=iEYWc7KprI8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=VZmMXREhgYQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -29044,12 +32969,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1119",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/mPhpaGeTSaZEV3VlQMO0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=TMVRXUXym5U",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=aKa7hHO9NgA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -29078,12 +33007,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1120",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1K92HdNKR2wXO5aMtKBm",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=DijgOikKclA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=aKa7hHO9NgA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -29108,12 +33041,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1121",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ocN4EJfD92TGJWSyoR8W",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=X5i3BbERm5g",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=aKa7hHO9NgA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -29134,8 +33071,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1122",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/d3RB4215BoFW2gcwmi1x",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=EPHbdxxPA5w",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29156,12 +33097,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1123",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/3AzLDnZrR6fTzqm6UO7s",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=2f3el5DDugk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=aKa7hHO9NgA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -29186,12 +33131,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1126",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/qZMKAys2fgAthln9h6bn",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Ul3r0ugCntg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=aKa7hHO9NgA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -29212,12 +33161,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1128",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/No4Oa1xMkA2SWuIn1lt0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=LWMwJsAIriM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=aKa7hHO9NgA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -29242,12 +33195,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1130",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/stFefg6HNXR7HF4amBsh",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=bFv_YW4owRA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=aKa7hHO9NgA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -29272,12 +33229,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1131",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jTNGViVedCuQsMJyaFWV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=VM3gAmVF0NU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=aKa7hHO9NgA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -29302,12 +33263,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1132",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/i8wvirt0m5QgaTV5o0fY",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=EwYrX_k657U",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=aKa7hHO9NgA",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -29328,8 +33293,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1135",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/0Of0t0m86o5ZdpIiEYlA",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=KuMiOnT-Cng",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29354,8 +33323,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1136",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ngP7UA7PuDVfUYS2c7Uc",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Fmy9aUjfxTY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29384,8 +33357,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1137",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/5WK09YIrVGYhnItwdOaV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ClWWKl2Mijo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29406,8 +33383,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1138",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/wRuAh4hK58JvjhTniZ89",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=a87eJ8aiVok",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29428,8 +33409,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1139",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/5j4IhzrpSvVXna1V1va5",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Sy7UeXmbznI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29454,12 +33439,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1141",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zz0tYw9LEC60FM3JtKeI",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=gx9KdKuFkVg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Mp00MgkTpAk",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -29484,12 +33473,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1143",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/5zISSOx2vfJdliskOh3f",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=_8tZxnUvC-Y",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=uBlq0Hli-AU",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -29514,12 +33507,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1144",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/c5d7KSip6mku0L0MG5OP",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=gcp9iCSHHH0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=RngDg5DVg58",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -29544,8 +33541,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1146",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/MRCd6YrpkLytVgXNB78h",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=o6ol-4JCf-Y",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29574,8 +33575,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1147",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/rpZTGyCseePRdTGAS0YS",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=-KqsVr8QeaE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29596,8 +33601,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1149",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/vk6Q9E4gBsCbeEzIOztn",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Cunb2XmFaR8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29618,12 +33627,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1153",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/mBdlz6kONQF5KtNe7QZC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=jLLGu2Jnkik",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=S0o5cw1IBWY",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -29644,12 +33657,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1154",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/PKhcC6P1sj8g1ETQWnON",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=9rmnzRPnpSc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=FA90te3HpPU",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -29670,8 +33687,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1155",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/5oOeSgCR8dbDPNca78l8",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=z0sq3uE7_nk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29696,8 +33717,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=1156",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/dUvqHWvopfNLmk8vQMkl",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=LG7YqZets74",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29726,8 +33751,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1157",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/LzduOon9oUN00YXwMFeG",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=bkZRTxwbUsA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29748,8 +33777,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1158",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/9FXxhnxinHCF0gNwbZSV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=EAK7rCKbuxk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29770,8 +33803,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1159",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/A8FixrRG2RyzB1d4t9EA",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=VFjqcLjfJSE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29792,8 +33829,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1160",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/TzgSKFLYIXVIYgXR3QZh",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Eb3fboiSjqE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29822,8 +33863,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1161",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/XSBFzxZsoreEzyZv19nh",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=3uBxsTgYKgE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29852,8 +33897,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1162",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/mZ1fOn1Du421UWcm7mOi",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Qq9MisbaCUs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29878,8 +33927,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1163",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/pOqAnZi1mbV8h1dRJgFS",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=OvhoB8TEIbA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29900,8 +33953,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1164",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8munGIfc6j05AWz1KMX6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8s4I43QJPKs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29922,8 +33979,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1165",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/gfksPpXPPLQ3ES1jcxot",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=cB3ua2O-J7E",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29944,8 +34005,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1166",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/JrHVaGUJtbHin8JSnB9W",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=KAb6XHA4z9M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29966,8 +34031,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1167",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/QY67n0TpwhDUpX882EMx",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7eBsnchhU84",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -29988,8 +34057,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=1168",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ojIa4qGBSAnzuBM0hAOL",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=fp3OBpNJmOI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30010,8 +34083,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1170",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/XAOXlE63guu92ybiimcO",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8ItkL_uM_Sg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30032,8 +34109,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1171",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/r6nT29uVrQucnEC4F0mX",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=aw754n8JHhc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30054,8 +34135,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1172",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/EavVqueWSTp3Y9gcox0m",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YGx2rPl-GUc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30076,8 +34161,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1173",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/WmXuKmbSMx7FpdYzCTbF",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=1RBWodFNGX0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30098,8 +34187,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1174",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Xy8uwXuUci6RbHCbx3x9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=o1VQxMe9Ad4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30120,8 +34213,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1175",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ca4lK2ouv39lQGfiZC9B",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Z-h-OO4XT_E",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30150,8 +34247,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1176",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/9C050mRDyiTgXauGfxng",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=f9zdd9X4v6A",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30180,8 +34281,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1177",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7awtQSkQuyJ8EKlBPhUC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=NUsLv-yvoVY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30210,8 +34315,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1178",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/mg2Neve66xLg5nobcvM0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=mch_ICEt9FY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30232,8 +34341,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1179",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8X9Dpt0V6kqTUN4d0wsa",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=J9Q0GTktw58",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30262,8 +34375,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1180",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/6Ji7N1UMKXAe6Bg6OEH6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=sLzwX1wXw7Q",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30288,8 +34405,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1181",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/fjb6TAP2WrmXTeciDboh",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ZztjwHUM0uk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30318,8 +34439,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1182",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7vreOGQL71yhD0yuYAdA",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=n7avFQE4Vok",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30340,8 +34465,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1183",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/3h4RMMkWsaBqXYUGUAnH",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=exIElshrk7Y",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30362,8 +34491,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1184",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/mKWOYcFafwAVKcsYeSmX",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=anYdCr7FWP8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30388,12 +34521,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1185",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/6KiHNtzHU46jPDkIZ2Ad",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=GVmIJjShViE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -30422,12 +34559,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1187",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/WKg1hMm1KdxpKuBMJgQy",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Yq1Ke2-JeG4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -30456,12 +34597,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1188",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8ncW1dbPs5Kb09T8kjkY",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=LoajpcrNkh0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -30490,12 +34635,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1189",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/lzUXvutzXDmFC8Jy170W",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=k8p0Oc83VsQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -30516,8 +34665,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1194",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Im9LZJiPc1Db5G0d422J",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=MCW6iN3XRnU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30538,8 +34691,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1197",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/qBGtjo6xozTKAM6ra2tu",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=vPDzkoo_GiI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30560,8 +34717,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1198",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/CvM3S77Xla0H0RgQTrQa",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Fq-gaXZh8aE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30582,8 +34743,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1199",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/TmjEEvifrAmo8A5BcIAg",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ngAeRChqGl8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30604,8 +34769,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1200",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Bb2RsdQhA2YS9Idx6GWE",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=jHDPLz3qrS0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30626,8 +34795,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1201",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/DTJvZ4895FRy53tzXueD",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=1ouiGpqXNiU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30648,8 +34821,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1202",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/QvcFnZQT6VtHv3Simoxc",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=G9fZ-ZTm0vM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30670,8 +34847,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1203",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/WnXrYn5lHWiA2a9mudcQ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=AfhUnObAhv4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30696,8 +34877,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1204",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8bonIA3ieIgCLjVJpRvJ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qpXFTmRIOk8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30718,8 +34903,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1205",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/TsQ0OZYebUM3F2hDRmu5",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=v1UiX6xCfqI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30744,8 +34933,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1206",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/UrPvCyrIUqzQ8aiBPHvk",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Ofr9K9dzLto",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30766,8 +34959,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1207",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/PB4aOoCByhSpAhiCgDiB",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=84AfkEsl6bM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30796,8 +34993,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1209",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xKRQsINL9Gysn09qxrMY",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=kEPiZLRS9_Q",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30826,8 +35027,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1210",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/edF45AhA3hjpakRJI9S6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=OApto_Xx3Bk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -30856,12 +35061,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1211",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/IDPLDI4oJa2u9QOOvk6D",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=TLR5sI1sDDU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=rz9dMphWja4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -30882,12 +35091,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1213",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/700DBNFcUuqTzlRxtxRF",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=WFK70PKNlDM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -30908,12 +35121,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1214",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/23rs0fT5n4Z39xVPllgX",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=135dAOBnMF8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -30934,12 +35151,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1215",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/K1QIUmXehh4f6YAPCT57",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=pnMawj3BOR0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -30968,12 +35189,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1217",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/dr1DELnUe3qpsHgcy7mE",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=SsGPfBQ1n8I",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31002,12 +35227,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1218",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/k3i46n0veXIB2YlL6y1w",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=4R86un36ssI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31028,12 +35257,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1219",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bqxopZDbv7vHCH3PnL7u",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=nC8uOXCgd84",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31062,12 +35295,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1221",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/gw6uNOaa9MXvKFSo6XoE",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=LZhzTEp9Muk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31096,12 +35333,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1222",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/n5F2oJMm8UK9He5Qnt3E",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=gfKIDHzWJVI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31130,12 +35371,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1225",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/LKjBH822puIolBHbnow7",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=grIifKiV5-8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31164,12 +35409,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1228",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/lElsoGHAWrTxJtQU2sp6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=KNkUes8WZjM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31198,12 +35447,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1229",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/BqSlOmWW8TlEnjW6SuZY",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=RLWAtbKUTAg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31224,8 +35477,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1230",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/wf9ydcV7G1tv0ejqL82Q",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=2I5AsgHSe8k",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -31246,12 +35503,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1231",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/tHEm4BcIZt7kBZSP5UOY",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=j6Hh2W18oko",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31272,12 +35533,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1232",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/PwTC0tuxGVi7hX4L85GD",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=3CjZanIbcz0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31298,12 +35563,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1235",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/T5F5zWMSESXFGspKoy8J",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=lUIzzSLaUvk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31324,12 +35593,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1237",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/JT4wHcHlq6n8SsGtq4Rr",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=njwMm6qHwVQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31350,12 +35623,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1238",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/9ACQPXovU9QTnVPByo2E",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=BZmwgLoAFDI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31376,12 +35653,16 @@ window.TYTAX_MAINFRAME = [
     "note": "instructionLevel=medium; t1x_number=1239",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/uvqSaU4ja7nJ4eB9aAcV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qizPceZGjYs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31402,12 +35683,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1240",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/P6h2Ua5JifUJBYDQP2Hj",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=0T9HPa2oylY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31428,12 +35713,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1243",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/g8HO30JZbpougeHf9C0W",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=5q6E8b8bOMA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31454,12 +35743,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1244",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zu8DoOjpYLe0nbdAN0nr",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=858I8KaBuJs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=5rx_XDI_Odc",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31480,8 +35773,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1245",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/GUfkCdJ2A6sPXMCmI1jj",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=uFAnN_OElLA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -31510,12 +35807,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1246",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/K3Z13gGWR3OGfAoZRubT",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=wbjssKyBhVs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31536,12 +35837,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1248",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/iwyTXpdrOKXDr8WU2lRH",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=UKqYGb3UCw8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=GpAdaGxMb5c",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31562,12 +35867,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1249",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Ixpx8p1r2D7xeNrts6kA",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=C16UH6-5EWM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=nGFGPj3uB6w",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31588,8 +35897,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1250",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ARWTVLiPaba1FXiKFmma",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=UDdKqldfJ9k",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -31618,8 +35931,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1251",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8WWDypiuZbbjhGMUMOZQ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=io-hldbVAYk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -31648,8 +35965,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1252",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/n0BUyJWg6CTvnoggX2Mc",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=xJozzsJbVzc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -31678,8 +35999,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1254",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xFrzqw4w2VCO8gg9fLR7",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=4wH_BU7O0Ho",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -31700,8 +36025,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1255",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/FYQ1Bq4NR7UPkDk2UagF",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=xZv3rCisUEc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -31730,12 +36059,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1256",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/z60PKi3mNYb3nuuywTxk",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=yrogOcpSYd8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=4p-8rbIvP-M",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31760,8 +36093,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1257",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2Gesfa78JMN7WIrxaMci",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=FJAasSExE1I",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -31790,8 +36127,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1258",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/qgMn7KxUusIcwfetvEbz",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=abkrLc9L8Wk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -31812,8 +36153,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1259",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/OHPipUMAf80qLhMSMQD3",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=p4DorjJYgA8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -31838,8 +36183,12 @@ window.TYTAX_MAINFRAME = [
     "note": "t1x_number=1260",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/NivsnbOA4UfUbOtNsJur",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=d2EphRNhP2k",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -31864,8 +36213,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1261",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/cyz2SVR2upEITCaOJLhh",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=mpV5LZIb-R0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -31894,8 +36247,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1262",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/RGgePx70xRLs84tHmkpy",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=03oXWbHZcao",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -31920,8 +36277,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1263",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/j0mGezOzGGbVKfYn4sS9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Et7bEOyxLm4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -31942,12 +36303,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; t1x_number=1266",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/T7uMo08Ojp5AHkgqpTx9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=tgexYpGUTdI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31968,12 +36333,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1267",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/RbZ3RR1y2QZnTXBrIG46",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8kHxNnt6Dlo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -31994,12 +36363,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1268",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/XEeuFIzRR8Bm8pWjqm9g",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=0yxSt0UE7yM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -32024,12 +36397,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1269",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/9RyiucJNgw89sXnIlEep",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=_kznp8UIS1w",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -32054,12 +36431,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1270",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/gyXxWVwGwEFfx60j0e19",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8kHxNnt6Dlo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -32084,12 +36465,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1271",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ySyRpfXBoHDgED2N1Aj8",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8kHxNnt6Dlo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -32110,12 +36495,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1272",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/BbsAckYTmMPC5maOnRRs",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=0uIbLJQeEGc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -32136,12 +36525,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1273",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2l98H0cQnHgNcjRfZCbt",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=yvbCL9adKKQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -32162,12 +36555,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1274",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/PDVhh6QOyucs7ShSoDIL",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=JiBKcTStNPE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -32188,12 +36585,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1276",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/RTvVJjH2zaAdiOddfSBb",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=kkiUv8AJ8vo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -32218,12 +36619,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1277",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/44yw0nU05R2GnH7RUivI",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=K7Id_jPHCFE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -32248,12 +36653,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1278",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/wXNG7k3WOzDawprrRuKy",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=LU5oNWoh3i8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -32282,12 +36691,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1279",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/cI5RW2YVD8oYecJrlaXP",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=5g_HVlX9Sbk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -32312,12 +36725,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1280",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/XWxEPmAFvjCUuXwu0Bk1",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=r1MFmSl1xyw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -32346,12 +36763,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1281",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/azp9K0sUkLTM5gdfhy95",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Yv7p6VjOh3E",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -32376,12 +36797,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1282",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/3JvawQipg4RKLB0CX3r3",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8KaJUizs_Hg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ltr2vzbpZIE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -32402,8 +36827,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1283",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/feq2b9eDSUnJqP85zsqV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=320W03VuBq0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -32428,8 +36857,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1284",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/TsiNvwTXEUsfARlI7wWH",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=hFTgLrRMMy0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -32450,8 +36883,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1286",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/og7Ul9BGRHGSpc6DHmgx",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=1BMcpVmTSLo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -32472,8 +36909,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1287",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/MpHm7UiL8C31j9p2npis",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=goxWkhS2F44",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -32494,8 +36935,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1288",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/BKNOjYE8QNdHFogSTJND",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=nQEOJBipcQo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -32516,8 +36961,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1289",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/V3AR87YpmTOCikr52Tz7",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=J5yvcTWTRnk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -32538,8 +36987,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1290",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/g8NPpRfnOGQxhNviFxjc",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=JkRN6jIsqD0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -32560,12 +37013,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1291",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/gz35RBRpQXEOhkEMyDSa",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=_7NGla8cKgo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=6WTL5yJapLo",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -32586,8 +37043,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1292",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/RemVK6BVIU3X7YYU21y1",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qEePtlX9eS0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -32608,8 +37069,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1293",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/TAsneOKBGXq4LroUvHao",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=DyYZkIn0rOk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -32630,12 +37095,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1295",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/0yLrXcJXcBXmFNJiTuFf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=VWHYB8ZwBzU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XVxiQCqIdLI",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -32656,12 +37125,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1296",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/0pLRFqbnAQtPc5Xhecls",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=gEIj_VvBfk4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XVxiQCqIdLI",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -32682,12 +37155,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1297",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ygnaLaqDip48mRrwcXVK",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=3Zn12MpvHrY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XVxiQCqIdLI",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -32708,12 +37185,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1298",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/EMGwMnaKj3bL98JQ4HNF",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=PhicOAemBxY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=XVxiQCqIdLI",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -32734,8 +37215,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1302",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/cN83ocyl86KistVS7LFj",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=zYW3lpG663I",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -32760,8 +37245,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1303",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/9g7EptapM1YbWLITHGZe",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=SuPZTzu_xfk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -32782,8 +37271,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1306",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zvVzjRTaivE57ZPnXQq7",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=00BiZtQv9Ek",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -32812,8 +37305,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1307",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/H3yzOtRtkXevqFDqlU9z",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ERfWcDb96_E",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -32838,8 +37335,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1308",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/aJPf6SxbrVFKpy0hSvfH",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ltKyNow3kHc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -32868,12 +37369,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1309",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ZzihmiHpToCXimH8B8ZB",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7-qHEdAdEaA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=F3EMBWJGsAE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -32894,8 +37399,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1311",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/hPbgUC98cnOyXU4XMbS9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YU2ed8YSS3U",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -32916,12 +37425,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1312",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/pNf7dAmWSyadnIXevQQC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=LTIT4YtDzgg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=-7AZkDqjio0",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -32942,8 +37455,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1313",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jGI6x9fXbJ5LaY2vN5XI",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=rmWe70tf744",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -32968,8 +37485,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1316",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/DkUQBYicj01u9U0T1bPn",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=gs0M5SF-AbA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -32990,8 +37511,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1320",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/YFZgHXT3kHGoU6e1GaNy",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Be1i-A77EYQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -33012,8 +37537,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=1322",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2c93YsXwiTLGqon4cEbu",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=H5pahFPEDE0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -33034,8 +37563,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=1323",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/vm9TiUY9yskdjfYFaIfT",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Dbxk00fMnK4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -33064,12 +37597,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=1324",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Whb1nh9Pk9vMlcSiR6Iy",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=99pBSnGX4B8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=9O0YNq0jlxs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33090,12 +37627,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=1325",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/98rt5yQIUmugrUAiFECy",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Yiq3gUUAaec",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=HH85f81KC5A",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33124,12 +37665,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=1326",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/oz8dA0JQPk0w2giZvccJ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qrbKtQg3Baw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=WzYuFTtgpo4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33150,12 +37695,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=1329",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ZuSp3GAq0uKEeJu2tXVc",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=aVIAyYQph6Q",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=TYBaSwhr5uw",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33176,8 +37725,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=1330",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/UYYlEoZ0OolwuGRVavot",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Hs-PP-eESQM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -33198,8 +37751,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=1332",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/OK76lK5aDTHMPxIED8NL",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=KqiozayVOmY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -33220,8 +37777,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1333",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/JN5IH8xR1v00wa3qoKFP",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=d50J5ww2t4I",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -33242,8 +37803,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1334",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2vtgtpdXGMTJh2f8DwLg",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=FtVW3sawRbk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -33264,12 +37829,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=easy; t1x_number=1336",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/kTHeqgkAL2xgkneKbnWc",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=lxhX4VKLEsM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=tNoFXfP-d1I",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33298,12 +37867,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1337",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/MDl5raSXXVtQITId0rap",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=kTPqJ6oYxYc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=0-EGMTSc-Zo",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33328,12 +37901,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1339",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/wj1sRK8oskiFgyGQ7oKL",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=OwkSPeCtaJM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=RU3HlOF4m9E",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33354,12 +37931,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1340",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/24o6WUnfstDAX0CdLVHF",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=VCtMy9Gf8Gg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=RU3HlOF4m9E",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33384,12 +37965,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1341",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/sKXLv8ceSbmnfZD597x5",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=MmahoY2hLAw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=RU3HlOF4m9E",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33414,12 +37999,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1342",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/YwFGpHMWNUTcSDoF9fJc",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=R7_yAGjbnO4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=SJZWTsh0BXs",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33444,12 +38033,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1343",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7xK5W77RLkFCaQ9zhnHM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=PKMmw-AC2Ug",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=FgjrNNv3gAE",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33474,8 +38067,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1344",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/cmRP4PR7osk8mKLUqSZ0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=U8_YgZUM8rg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -33500,12 +38097,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1345",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/09TgxXYehv9LQ85urGh5",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=1otq141OBP8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=49z1gVKWSIM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33534,12 +38135,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1346",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/OOIxEk7l8Qg3Qtek1oQP",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=3lAHmafif-M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=tR_8uezxgVM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33568,8 +38173,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1347",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7ZdVhK1qKkePVBuqkzwm",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=u_azSHIivjs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -33590,12 +38199,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1349",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/OP0hlEoHggpNyYduZIXM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=bvDON4gXsyc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Xz4fAw4b4KQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33616,12 +38229,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1351",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/wf7msAVC0iXdYKs9CzgM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=LsrrhNLPygg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=s4EQrriB0SM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33642,8 +38259,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1352",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Vn0gplbFvhIH8m64S7ro",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=FifKu3DRDuc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -33664,8 +38285,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1353",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/U00pE8Ao3eOZtNtiEHcq",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ZiCe6wV2vzk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -33694,12 +38319,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; instructionLevel=medium; t1x_number=1354",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Hv5hioisik3UMpufyUz3",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=jGkNf0yuwuE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=LQ11rBpDd40",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33720,12 +38349,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=hard; instructionLevel=medium; t1x_number=1355",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/UQkjSBtHQbv6uFTf6edj",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qJzKc0jid2M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=CLWExrPCA4Y",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33746,12 +38379,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1356",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/MZe5KpCt3z3VwWH0t2bW",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7P1ZYnn4IgE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Sf_mkLmV4OM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33776,12 +38413,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1357",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Z0CI6pOdBU8tpf9ESsk1",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=QAoj6jeHmEU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=8BQB88GTrrQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33806,12 +38447,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1358",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/5iyUgQMhZHgdxu51wsKS",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=3G32IoVuBd0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=8BQB88GTrrQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33836,12 +38481,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1359",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Cm8TfibwDAm0jEVcUABd",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=quHrg76FKgs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=6njWRXHk9EM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33866,12 +38515,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1360",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/vA4rYZZNaa2dgSu8ICdx",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=gogVTLiPqpM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=sIJuqNFAswk",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33896,8 +38549,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1362",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/RNJ2RkwDF9lPd74PHExT",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=0y9R1zVBTy4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -33922,12 +38579,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1363",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xhjsBdBbnop2mroUdLZ4",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=4YloHlRU23M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=6v2Dsb1H20I",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33952,12 +38613,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1364",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1WEuApevYu5vs2Y0hfOM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=9EydK00BaqU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=8E398RvjC5U",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -33986,8 +38651,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1365",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/iKr9hZRERe8MuoEoY526",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ufHnY2vTwYo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -34012,12 +38681,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1366",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/yMFrwrNLM99P5csBdicb",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=JoxSPOxxrTM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=WV-IvUfrmSg",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34042,12 +38715,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1367",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/RjRy97VzNfU8DOIdRTJ6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=b9enjxd55lE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=2A3RFmnSRBQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34072,12 +38749,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1368",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Csijm4S5YW3UwoAonahM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=rsqPgQgYwBw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=2A3RFmnSRBQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34102,12 +38783,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1369",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/mv63iXJEWiYyKXpfjhI3",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=NA8SmgeHjuc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=2A3RFmnSRBQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34136,12 +38821,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1370",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/fZYy1y0pq9h7JSJ6ys46",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=fhIQIbuLpX8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=2A3RFmnSRBQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34170,12 +38859,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1371",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/nfZ9JhAfvBVND75wyxlW",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=PAUgSx_Gitk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=2A3RFmnSRBQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34196,12 +38889,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1372",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/mCNdBzsGxLdbH6aUzdR1",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YE3gvkXA8hU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Ge--RHSdGuQ",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34222,8 +38919,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1373",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/FxRYQ5WN4lsbjgruDdVf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=64IzLrTbQ6A",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -34244,8 +38945,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1374",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/JBJqvYEzuDFRH7RmvZbz",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=wQygeh-IwiQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -34266,12 +38971,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1375",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/uWX7eZx541Y0kx7FN8Wi",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=bHUpVioGY_g",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=Qgth0ES7TNU",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34292,12 +39001,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1378",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/H5hAmjp1JOrXbgPlJvyd",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=amRbL5l0IDQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=L-vAWAFiZyM",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34322,12 +39035,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1379",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/CzjDnstU3k1al2KlvGZK",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=BuSaXh-hM8M",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=1lMWRu3c3Hg",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34356,12 +39073,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1380",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/54nLImgX4RaojEwqpAig",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=cB7lF3ppG9U",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=1lMWRu3c3Hg",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34386,12 +39107,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1381",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/pGZsKQF1v7xznPrHhlKs",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=oVyj5jjjPUs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=1lMWRu3c3Hg",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34416,12 +39141,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1382",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/DXAdqBsJEEFDgeWBEcOg",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=tyg4QjU5eDc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=1lMWRu3c3Hg",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34446,12 +39175,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1383",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/yqq3l6bIbH1BlnSmi6ga",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=wf3xcBtNDeA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=1lMWRu3c3Hg",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34472,12 +39205,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1384",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/uZGn9MvFZqL7BkROW7am",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=NzTO5JerBUc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=FB0cJG2rYI4",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34498,12 +39235,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1385",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/PewG6a3LZSJiBMs8yJls",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=m8TowNxHZew",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=4gAhhwGdc7o",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34524,12 +39265,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1386",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ed9giUZTsGNjN5rBNHv0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=LI6FedFRaW8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=4gAhhwGdc7o",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34550,12 +39295,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1387",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/FJfcOzdE2s1xZzaducUJ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ZcTT_LmJOJo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=4gAhhwGdc7o",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34576,12 +39325,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1388",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/v0YYfDU2ZsVFhmS2KDy3",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=zIvOIt1xJzg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=4gAhhwGdc7o",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34602,12 +39355,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1389",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/HgK2elXKcL4K6uLytsDu",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=rkXqgR3DHa4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=4gAhhwGdc7o",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34628,12 +39385,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1390",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/SugyS5cYXzURQzDM1m4Z",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=oyD7mT17xVg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=4gAhhwGdc7o",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34654,12 +39415,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1393",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/RBzDehfPyKyE5Yk6L6Au",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=S1WFk4zPPVY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=4gAhhwGdc7o",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34680,12 +39445,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1394",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/SfKdPTnA32HYSm3qtGST",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=q7oRiLdPcmc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=4gAhhwGdc7o",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34714,8 +39483,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1395",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/BWdsPKtHCVZtOHZ8zkVQ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Xl4G4mL2Icw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -34744,12 +39517,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1397",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/D7nJjq89mMYCaKoVQ0ke",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=mWkYXXuf0lw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=8VEXnj_o1Ss",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34778,8 +39555,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1398",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/psqX3YxF5z9HM8vBZQu3",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Dr7BGgGOnFw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -34808,8 +39589,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1400",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/09GEfO2I1vbd4IIDho3Z",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=6ByXD_Pmgp4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -34838,8 +39623,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1401",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/WsKSzQ8W6c47RfXl4Wd6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8seJDNxUT1I",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -34868,8 +39657,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1402",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7S2n37xk2h9VF0pvNP2K",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=gV1lUuNT8xc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -34894,8 +39687,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1404",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/XoMndIOAmcq5nhvlyin3",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Eq9L29Ao3pg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -34920,8 +39717,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1405",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/cOXsvYCwYjCFXs4aaj9C",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=rM7zA6EtaoM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -34942,8 +39743,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1406",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/2cUeqegARYcCndjhr5ts",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=sw0nUzGl718",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -34964,12 +39769,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1409",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/wJV9tYAoP6j2wA2cJXAc",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Wmw8xKNvCZI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=RHrltur8Eik",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -34990,12 +39799,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1410",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bhXiDvkVqW5YL9EgJm5Y",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=lxqdu3hDrXA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=RHrltur8Eik",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -35020,12 +39833,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1411",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/V2lXLbXVXOX12Q3Gfjfg",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=w_A3LHhhxvI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=RHrltur8Eik",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -35046,8 +39863,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1414",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/BFFHhdhhiFSliaOTnbN0",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=wP9grW1epic",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35068,12 +39889,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1415",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/rVd6fllNe7SBKL0Xt0j3",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=HD92tYD5uAw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=8SYua4FQZ6U",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -35094,8 +39919,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1416",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/UHma3bTF21FlNPhy7NPj",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=6Nv-mEiBuQ0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35116,8 +39945,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1417",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/4gRh527nXIjdVui6uyAy",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=q9EwyUh_mIQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35138,8 +39971,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1418",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/mPZyfbk0AMI2Nalal0hS",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=fMhBLnIQHrs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35164,12 +40001,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1421",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/RKecWPv42sPw97bW79EE",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=IHZUOVg1NYk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=sWD6jjr4TRU",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -35194,8 +40035,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1423",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ZLQ6rjdk4s7eOLvdBWqv",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=XwtBaplHTkc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35220,8 +40065,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1424",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Z6H7qpcNZ9o5qW7dZ1Gs",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=4cGFuvLq9BA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35242,12 +40091,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1425",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/90CYRyGMj2CFWmQTET2l",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=PLxCtcWNXMY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=m_xHUyABJpY",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -35268,12 +40121,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1426",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/wZDLoRtiYo707ZCoA0Kf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=QFBF-32GzUY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=m_xHUyABJpY",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -35298,8 +40155,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1427",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/x6CIKJOjjk0wwGTnB24k",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=s1hy23XbmPA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35320,8 +40181,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1429",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/KFMwBoMFgdmg3AZersdF",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=DmpdS_Bv-30",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35342,8 +40207,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1430",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/wGzXDI4dBxZUZuDEdecH",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8hLWQvlJcgs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35364,8 +40233,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1431",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/051hGb1gcSJ8UQySSG4X",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=AcOj_uO6WBs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35386,8 +40259,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=hard; t1x_number=1433",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/cycgLzzwWyI6KaRvN0aW",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=IdXZyvIxyUU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35408,8 +40285,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1434",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/PEIPn3BjwjLZJO0QQKIB",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=x6OQYinl3W8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35430,8 +40311,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1435",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/aSKVZU4nwoejwVYkwI9V",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=zKvxkGPzXGc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35452,8 +40337,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1436",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7yIlQFO2KF9Z62avBCZ8",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=tIa-iBgLBtQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35474,8 +40363,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1437",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/cuIT5njmjxE6SnLxUniG",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=5loCqxkEPDY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35496,12 +40389,16 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1438",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/54MjZsC62JmRUmGlKLFR",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=TVXINRIXSck",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       },
       {
         "url": "https://www.youtube.com/watch?v=xLQB5sSy5V8",
-        "label": "Instruction (Landscape)"
+        "label": "YouTube Instruction"
       }
     ]
   },
@@ -35522,8 +40419,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1439",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/kjIRHcselBRkgREXIVll",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=fqnXo3-kfvs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35544,8 +40445,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1440",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/6lRy2jCfuPaVN4EnOrFF",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=kwuVeaCZGVM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35566,8 +40471,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1441",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/H7zjjIQzSegYAMgLsN3s",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=KlIWnJHn1O8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35588,8 +40497,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1442",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Ra64yxHe9w6pYxP1lJhH",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=gfLoqzo8r9g",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35610,8 +40523,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1443",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/kcZYy8FOCN35JMVpTce2",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=cyQiXsNyMqo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35632,8 +40549,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1444",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/H8v2sekrZLLIASe1Y3XW",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=dCMDu7H9IVo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35654,8 +40575,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1445",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/kcrDi7LVCytLCYGFAvw4",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=pq4oqum1yd4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35676,8 +40601,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1446",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/DauzaobBpWjKb5HktRa9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=G0Pr-WwhEsk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35702,8 +40631,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1447",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/uVbPz7VGdekudybVtYAR",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=wKcHvF9edWM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35728,8 +40661,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1449",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/6ZQo7ImMz3d8U5KWj0Iu",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=52jfIHzUKTU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35758,8 +40695,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1450",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/6wPxxITCr09mjYlGujbR",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=dDAWgKxhNow",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35784,8 +40725,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1451",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Q33ZRxulob3P1usCezTj",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=wd0JuDbMFdk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35806,8 +40751,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1453",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/nsK9JttaHhtrTev7FHXE",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=D4pJaDLJyZw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35828,8 +40777,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1454",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/CZpp6qtjSfNM4IgCCcSY",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=n2imcns0CCw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35850,8 +40803,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1455",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/RWqh42rmoEWpGbqYBuCR",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=jiv6rjOMWTY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35872,8 +40829,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1456",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/kL6X6PeZhW7cg0hLaKmk",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=mvN8F5JXao0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35898,8 +40859,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1457",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/54TYcetXaNvJ9NgMMNdo",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=3YhOhmvad2A",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35924,8 +40889,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1458",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/whOROcxoQguSL3fkfWO5",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=l3-9wH5_dOc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35946,8 +40915,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1459",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ZMMw5dkLWjcmLdEWkuiC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=GMUiG62BJCY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35968,8 +40941,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1460",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/fXQKXbZQ1TCM5J3gLDGI",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=kQxfk-9Dpc4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -35990,8 +40967,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1461",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jwGkEPDyMsCaOZsNOm1B",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=q-bwirkoIpc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36012,8 +40993,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1463",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/yCeKXnlZylv4FyMZhKvZ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=vYeMf0-haeo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36034,8 +41019,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1464",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/KwpZeZCahDOcc44r2mtR",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7mDeMz_kwJA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36060,8 +41049,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1465",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/25HtreSCMbivUIg4wo0y",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=oq5l8lHAsvg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36086,8 +41079,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1466",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xNkIPSntVF9zlOkkoOLe",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=xxS9ggSSfSU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36112,8 +41109,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1467",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/WcVJVaQADAMiBEv0Teeu",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=RDnccJ121GA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36138,8 +41139,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1468",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/X2BNNzv9J6YrHSfz8FpC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=hcotZc4fu2Y",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36160,8 +41165,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1470",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jLPL4ESE0210VFw49Lu2",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=uWTW3NB2pfA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36190,8 +41199,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1471",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/HDVjV4PzAHOuPt7pQR3H",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Vihmsn9RuiI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36216,8 +41229,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1472",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/niksqBE3j8tKLDPaAEXv",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=83e5rHQvwdo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36242,8 +41259,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1473",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7oqUCSnGpQ9BCG1GctCe",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7vkRyoyeCms",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36268,8 +41289,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1474",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ikUh9hxYqBbMoMvJET3e",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=MMfcIIR8Mtk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36294,8 +41319,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1475",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/LsAM6RJK8Z2PERgNBscz",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=bHsyIJ7689E",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36320,8 +41349,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1476",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/dj2YHt07Kd70BWgr49DM",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=8xhlLG74JzY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36346,8 +41379,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1477",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/JsXk2BqrtwPmyiqOm0Qt",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=dNrZhJQKiqA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36372,8 +41409,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1478",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/OJG8krZtx6ZbFGp78JmU",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=nZajmMfLK6g",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36394,8 +41435,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1479",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/wgOUWvtsfzeN9NgoMQKG",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=gsBGwMRviEU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36420,8 +41465,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1480",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/tnaHPlnVjirnDE1NTxKn",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=0CBXyNcAnLE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36450,8 +41499,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1481",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/XjeRGdZv8Y1VFre8nUfy",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=dW5LbjUoX58",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36480,8 +41533,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1482",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ppfiU7iJQNn4HH5DZsh4",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=j_nezjIxB3U",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36506,8 +41563,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1483",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/wsC9xKD9BtwGwWovMMhe",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=UyBLKSs_sZ4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36528,8 +41589,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1486",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/f4gptGnUc3u5Ccttf2w4",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ArG7jCARITc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36554,8 +41619,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1489",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bTMTlyFHogZelirBPOKX",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=C-8HFn9LHDI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36580,8 +41649,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1490",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xEqEt072IdgEXykSo1AL",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=wv0lOKi7LZA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36606,8 +41679,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1491",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/k846MSOZ744a3I93OCjU",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=IFm6DSVTcE4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36632,8 +41709,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1492",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/DVj5O8PCBi4I3HvEyM29",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=2Fsy-CrwIL4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36658,8 +41739,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1493",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/pKhfrrVp2zNfVFC86O16",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=O2lW4dfnMXM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36684,8 +41769,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1494",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/D4DupIQ8FzWc9IZI6sve",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ajDSfnLyzqQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36710,8 +41799,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1495",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1VRVLO34R9ix7bpI5SRV",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7dQ5kNsmMF8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36736,8 +41829,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1496",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xjGor9F9047TnAZQtWir",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=1mwP83NjgXc",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36758,8 +41855,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1499",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/LCuUufD6lMGNmX8XoBfv",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=j-1B8UJub9I",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36780,8 +41881,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1500",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/UoPZ3Xdtur9kAKYeQ9ao",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Vc81WppTAZ8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36802,8 +41907,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1501",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/SPPtVWy1YYrwbSrxTKX1",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=FEDKMJukRUk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36824,8 +41933,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1502",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/5HnpB6kHa64N5pf6HNEN",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=L3z8bC63M78",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36846,8 +41959,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1504",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/1qPasKZLCdigQ5SOpQaY",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=5VM-8s34_vE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36868,8 +41985,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1506",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/QvKJc8dUfevrshlmQbNz",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=81ZgwJ_qZTY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36890,8 +42011,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1507",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/O6wMHPv8dJudZA4xaZhh",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=1YCzYgNxgR0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36916,8 +42041,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1508",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7PrQwccIHJRexhXMDXMj",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=cl7VYYKYGX4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36942,8 +42071,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1509",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/seIQmABYclG4UImrhTdk",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=uLs0fwrnGFo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36964,8 +42097,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1512",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/xnGdQfodOm4Mn1jxDkLg",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=xSzr4Nu154Y",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -36990,8 +42127,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1514",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/LrXsJqnsVuZpOobFImBv",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=dnGmHxbHr38",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37016,8 +42157,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1515",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jVSi1m01UBYvhwnlLE8X",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=cykdkhNqdE8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37042,8 +42187,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1517",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/jXY2aBUI0z0I7ZtllOkv",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=3J8LzZrvFGs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37068,8 +42217,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1519",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/eNiWZxF0KxtlwAs1e9N3",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=SBvWImFzAko",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37098,8 +42251,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1520",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ZxjkKn0SWvtkR0BwvrU1",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=bVwTWjir_so",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37120,8 +42277,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1521",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8dy8EqZpDqwql7BXwhpN",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=mtNb24gHdKg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37142,8 +42303,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1523",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Wa91iaSRmqzWQXG3BikR",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=IioPrDUhnY4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37164,8 +42329,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1525",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/LEnp1YRg4xVCARgDLYFE",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=miJfa2IjC7U",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37186,8 +42355,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1527",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bji4sM2TihTikXjThmNz",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=86bgCzWJG90",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37216,8 +42389,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1532",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/v8eOa8nCKgF54mLF0l5w",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=338g8zQnTeA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37242,8 +42419,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1533",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/SRtgojLAqPG3g5D7NvnT",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=l1ree4u-DJ4",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37272,8 +42453,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1535",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Yj6d5OHPExUqNzXGveIr",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=hmVuPQui2Sk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37302,8 +42487,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1536",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/AEiEOS1fWXzl6Ma04FvA",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=uvLfCCLv_18",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37324,8 +42513,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1537",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/58qeqR4trMi1oFHgVlHb",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=DMTLvz86Gfg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37350,8 +42543,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1538",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/l3KPBZMsGGuCHel4jUED",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=wjJTTivLF_k",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37372,8 +42569,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1539",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/9slLfuqiBOLefi9HeRMA",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=7BMrLRFzVI8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37398,8 +42599,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1540",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/K7WMRknSVswcbaUHO4Tm",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=dFmKgvkoGOM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37420,8 +42625,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1541",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/tqZKh7NQl8GcNTZuq9SC",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=DEB-qTFUjFw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37442,8 +42651,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1545",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/H8Jl22SqSUfgoo5Qmvlw",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Fh70R7DOyyw",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37464,8 +42677,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1547",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/E5syv0gxcHayp41DG2Nf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=LXCR_bXY6GM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37490,8 +42707,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1549",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ffFOCd8lj2XdZRgk8uSn",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=nLt2fI4m0Ig",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37516,8 +42737,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1551",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/yPBF2mhx4fi71moPVmiY",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=gkVq-reTBhk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37542,8 +42767,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; t1x_number=1555",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/w1ERi9mC0d7ASa1HhotK",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=omSS2qW7iaQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37568,8 +42797,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1556",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/y1b1jpIccjVkcwp8U26W",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=nJj_xGGN170",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37594,8 +42827,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1557",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/GpkGcEWwWMKW3oUul4ce",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=u79M6eaczx8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37620,8 +42857,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1558",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/wMFn8dMciYLixqYhgcpm",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=vUERZSwjo0s",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37646,8 +42887,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1559",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8fbxtPLBNK2wsLupKznq",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=FWYfM13RKj0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37672,8 +42917,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1560",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/qajdk87WpXJLTGMaUllb",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=3-OkARe2uP8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37694,8 +42943,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1562",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/cGo1ojIQsHfYCDVspW7A",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=O8WEklF-SvA",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37716,8 +42969,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1565",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Xf2k5TJ5Ctytctlws60H",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=BJfP2HfZX9Q",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37742,8 +42999,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1566",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/8EzE32o8CvxU4gMPpVPE",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YS0SfxRHUDg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37768,8 +43029,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1568",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/QzOWvSM74EwrO7NxgSwL",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=S1Tfd73I7U8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37794,8 +43059,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1569",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/UuaEZlUaC1WMFjFDIxVW",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=QbYVBXy96x0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37824,8 +43093,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1570",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bMTeD0jvVTskhQesH88k",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=xOwkHObPN4A",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37846,8 +43119,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1573",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/KwpL60wOxNHwHIOOBTlA",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=aqya26UNWLo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37872,8 +43149,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1575",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/QgP9RQGFrPgvmYLxVl4b",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Snsb9txn130",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37894,8 +43175,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1576",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/aVxS8m77gmQcrcuRBzKY",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=qAEqVRqP9vo",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37916,8 +43201,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1577",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bR8gvrkNClvcQ0rgbXsn",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=2FF8wb7HMmM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37938,8 +43227,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1578",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Jvtruu5hsONc0BFGQc6B",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=UVSTjVaMthg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37960,8 +43253,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1579",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/fOkCOf98981Uvtt5dVm6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=hK26N5rs8SY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -37986,8 +43283,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1580",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/4DlyiViDLlUOrbi4cRPy",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=h3BI5SQQPU8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -38008,8 +43309,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1582",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/guaaXHdnBTynL9RPUhau",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=FNs8OEZtiFE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -38030,8 +43335,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1584",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/BSn8MBan6uIR42aGpxww",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=fJLTbuDnYHI",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -38052,8 +43361,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1586",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Hi33P6OVHXJQaDGEHghX",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=hIGiwwGzKds",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -38074,8 +43387,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1588",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/Ls3jMZdnAjGNtNP1Fuh3",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=WwIMXGhOoSY",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -38096,8 +43413,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1590",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/TsJHwxLxjIFt7dy38S4x",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=NEvUVCFF8x8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -38118,8 +43439,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1591",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/A81Yrd8okERLLaFFmjGl",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=kzEJBWVR3JU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -38144,8 +43469,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1592",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ZxpN5spitDACq6Wcx4RB",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=eDjJDOl59zU",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -38166,8 +43495,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1594",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/zmurl2ZUKbHvq1Vw95aP",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=cXLk5yN6UW0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -38188,8 +43521,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1595",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/ZCC3EcgXBnkQKG8Bt12l",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=30ApIYaQHeQ",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -38210,8 +43547,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1597",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/7WiDYueIP0ESKy1nCtU8",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=OivoFOVCftg",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -38232,8 +43573,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1598",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/64mrTjHEw8qgd5nWmP5i",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=CQqR7VP-Hdk",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -38254,8 +43599,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1599",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/6urBuhKV4srofQElxpQJ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=gWD2eOK3LRE",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -38284,8 +43633,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1601",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/bAJcZEnNG9z40hHAQIPQ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=HxdigAt02Qs",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -38306,8 +43659,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1602",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/BWYJHfYUGrhszPwPVhB6",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=FvyPw3Ka5O0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -38332,8 +43689,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1603",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/3nJKSlbMhuUn86T1zMjf",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=ZkeP2ZhJQ4U",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -38358,8 +43719,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1604",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/oz7nHvpt6X9t6ocbHtZ9",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=4xMMyRlLS2Y",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -38380,8 +43745,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1605",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/95WuACqfnUTYX4N0ZpHt",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=-WAly_CRjr8",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -38410,8 +43779,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1607",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/cIpRf7sQ3dzXetbA32VQ",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=Yver3xSBFhM",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -38440,8 +43813,12 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1613",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/KyOaMVEuAad8zbh9p3IX",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=PFNQvCUabII",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   },
@@ -38470,9 +43847,13 @@ window.TYTAX_MAINFRAME = [
     "note": "exerciseLevel=medium; instructionLevel=medium; t1x_number=1614",
     "videos": [
       {
+        "url": "https://app.tytax.com/en/exercisesfilter/anonymoususer/t1_x/O1vfAO6gytkqmRvvK4cW",
+        "label": "TYTAX App (Primary)"
+      },
+      {
         "url": "https://www.youtube.com/watch?v=YtBleVdIiE0",
-        "label": "Exercise (Landscape)"
+        "label": "YouTube (Secondary)"
       }
     ]
   }
-];
+]
