@@ -3999,17 +3999,20 @@
         };
 
         // Optimized: Memoized to prevent expensive re-filtering (regex/loops) on global timer ticks
-        const Arsenal = React.memo(({ masterExercises, onOpenMainframe, onDelete, oledMode }) => {
-            // --- VIDEO LOOKUP HELPER (Local scope copy for Arsenal to avoid prop drilling complex functions if possible, or we should pass it)
-            // Actually, we can just access global window.TYTAX_MAINFRAME here since it's a static file resource
-            const getVideoData = (name) => {
-                const mainframe = window.TYTAX_MAINFRAME || [];
-                const ex = mainframe.find(e => e.name === name);
-                return ex?.videos || [];
-            };
-
+        const Arsenal = React.memo(({ masterExercises, onOpenMainframe, onDelete, oledMode, logs }) => {
             const [search, setSearch] = useState('');
             const [filter, setFilter] = useState('ALL');
+
+            const exerciseCounts = useMemo(() => {
+                const counts = {};
+                if (!logs) return counts;
+                logs.forEach(l => {
+                    l.exercises.forEach(e => {
+                        counts[e.name] = (counts[e.name] || 0) + 1;
+                    });
+                });
+                return counts;
+            }, [logs]);
 
             const categories = ['ALL', 'BACK', ...new Set(masterExercises.map(ex => {
                 if (ex.muscle_group) return ex.muscle_group;
@@ -4076,6 +4079,7 @@
                      <div className="space-y-3">
                         {filtered.length > 0 ? filtered.map((ex, i) => {
                             const impact = getImpact(ex);
+                            const count = exerciseCounts[ex.name] || 0;
                             return (
                                 <div key={i} className="p-4 bg-slate-900/50 rounded-2xl border border-white/5 flex flex-col gap-3 group hover:border-indigo-500/30 transition-colors">
                                     <div className="flex justify-between items-start gap-4">
@@ -4086,7 +4090,10 @@
                                             </div>
                                             <h4 className="font-black text-sm text-white leading-tight">{cleanName(ex.name)}</h4>
                                         </div>
-                                        <div className="flex gap-2">
+                                        <div className="flex gap-2 items-center">
+                                            <div className={`px-3 py-2 rounded-xl text-[9px] font-black uppercase tracking-widest whitespace-nowrap ${count > 0 ? 'bg-emerald-900/20 text-emerald-400 border border-emerald-500/20' : 'bg-slate-800 text-slate-600 border border-white/5'}`}>
+                                                {count > 0 ? `Completed: ${count}` : 'Awaiting Deployment'}
+                                            </div>
                                             {/* Video Links Dropdown or List */}
                                             {(() => {
                                                 const videos = ex.videos && ex.videos.length > 0 ? ex.videos : getVideoData(ex.name);
@@ -6937,6 +6944,7 @@
                                     }
                                 }}
                                 oledMode={oledMode}
+                                logs={logs}
                             />
                         )}
 
