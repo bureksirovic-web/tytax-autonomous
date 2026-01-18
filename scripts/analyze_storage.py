@@ -69,4 +69,5 @@ def simulate_growth():
             print(f"Estimated Time to Failure: {estimated_months:.1f} months")
             return
 
-simulate_growth()
+if __name__ == "__main__":
+    simulate_growth()
