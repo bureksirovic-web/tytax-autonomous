@@ -252,7 +252,7 @@
 
         const cleanName = (name) => {
             return name
-                .replace(/TYTAXÂ® T1-X(\-\d+)?\s*\|\s*/g, '')
+                .replace(/TYTAX(Â®|®)?\s*(T1|T1-X|T3-X|T1-M)(\-\d+)?\s*\|\s*/gi, '')
                 .replace(/Instruction\s*\|\s*/g, '')
                 .replace(/\s+/g, ' ').trim();
         };
@@ -414,7 +414,17 @@
 
         const getVideoData = (name) => {
             const mainframe = window.TYTAX_MAINFRAME || [];
-            const ex = mainframe.find(e => e.name === name);
+            // 1. Exact Match
+            let ex = mainframe.find(e => e.name === name);
+            if (ex) return ex.videos || [];
+
+            // 2. Clean Name Match (Strip TYTAX prefix)
+            const clean = cleanName(name);
+            ex = mainframe.find(e => e.name === clean);
+            if (ex) return ex.videos || [];
+
+            // 3. Substring Match (Fallback)
+            ex = mainframe.find(e => name.includes(e.name) && e.name.length > 5);
             return ex?.videos || [];
         };
 
@@ -4122,13 +4132,8 @@
                                                             )}
                                                         </div>
                                                     );
-                                                } else {
-                                                    return (
-                                                        <a href={`https://www.youtube.com/results?search_query=TYTAX+T1+${encodeURIComponent(ex.name)}`} target="_blank" className="p-3 bg-slate-800 rounded-xl text-slate-500 hover:text-red-500 hover:bg-slate-900 transition-colors">
-                                                            <Icon name="play" className="w-4 h-4" />
-                                                        </a>
-                                                    );
                                                 }
+                                                return null;
                                             })()}
 
                                             <button onClick={() => onDelete(ex.name)} className="p-3 bg-red-900/10 rounded-xl text-red-500 hover:bg-red-900/30 transition-colors">
@@ -6705,11 +6710,8 @@
                                                                                         )}
                                                                                     </div>
                                                                                 );
-                                                                            } else {
-                                                                                return (
-                                                                                    <a href={`https://www.youtube.com/results?search_query=TYTAX+T1+${encodeURIComponent(ex.name)}`} target="_blank" className="p-3 bg-slate-900 rounded-xl text-slate-500 border border-white/5 hover:text-indigo-400 transition-colors"><Icon name="play" className="w-4 h-4"/></a>
-                                                                                );
                                                                             }
+                                                                            return null;
                                                                         })()}
                                                                     </div>
                                                                 </div>
