@@ -3832,24 +3832,32 @@
         const MainframeModal = ({ masterExercises, onRequisition, onClose }) => {
             const [search, setSearch] = useState('');
             const [filter, setFilter] = useState('ALL');
+            const [limit, setLimit] = useState(20);
 
             // Access Global Mainframe - Fallback to empty if not loaded
             const mainframe = window.TYTAX_MAINFRAME || [];
 
             const categories = ['ALL', 'CHEST', 'BACK', 'SHOULDERS', 'BICEPS', 'TRICEPS', 'QUADS', 'HAMSTRINGS', 'GLUTES', 'CALVES', 'CORE'];
 
-            const filtered = mainframe.filter(ex => {
-                let matchesCat = filter === 'ALL';
-                if (!matchesCat) {
-                    const imp = getImpact(ex);
-                    matchesCat = imp.some(i => i.muscle.toUpperCase().includes(filter));
-                    if (!matchesCat && ex.muscle_group) matchesCat = ex.muscle_group.toUpperCase() === filter;
-                }
+            // Reset pagination on search/filter change
+            useEffect(() => { setLimit(20); }, [search, filter]);
 
-                const matchesSearch = ex.name.toLowerCase().includes(search.toLowerCase()) ||
-                                      (ex.pattern && ex.pattern.toLowerCase().includes(search.toLowerCase()));
-                return matchesCat && matchesSearch;
-            });
+            const filtered = useMemo(() => {
+                return mainframe.filter(ex => {
+                    let matchesCat = filter === 'ALL';
+                    if (!matchesCat) {
+                        const imp = getImpact(ex);
+                        matchesCat = imp.some(i => i.muscle.toUpperCase().includes(filter));
+                        if (!matchesCat && ex.muscle_group) matchesCat = ex.muscle_group.toUpperCase() === filter;
+                    }
+
+                    const matchesSearch = ex.name.toLowerCase().includes(search.toLowerCase()) ||
+                                          (ex.pattern && ex.pattern.toLowerCase().includes(search.toLowerCase()));
+                    return matchesCat && matchesSearch;
+                });
+            }, [filter, search, mainframe]);
+
+            const paginated = filtered.slice(0, limit);
 
             return (
                 <div className="fixed inset-0 z-[200] bg-black/90 backdrop-blur-md flex flex-col p-4 animate-fade-in">
@@ -3882,48 +3890,60 @@
 
                     {/* List */}
                     <div className="flex-1 overflow-y-auto space-y-3 pr-2">
-                        {filtered.length > 0 ? filtered.map((ex, i) => {
-                            const isOwned = masterExercises.some(e => e.name === ex.name);
-                            const impact = getImpact(ex);
+                        {paginated.length > 0 ? (
+                            <>
+                                {paginated.map((ex, i) => {
+                                    const isOwned = masterExercises.some(e => e.name === ex.name);
+                                    const impact = getImpact(ex);
 
-                            return (
-                                <div key={i} className={`p-4 rounded-2xl border flex flex-col gap-3 transition-all ${isOwned ? 'bg-indigo-900/10 border-indigo-500/30' : 'bg-slate-900/50 border-white/5'}`}>
-                                    <div className="flex justify-between items-start gap-4">
-                                        <div className="space-y-1 flex-1">
-                                            <div className="flex items-center gap-2">
-                                                <span className="px-2 py-1 bg-slate-800 rounded-lg text-[8px] font-black text-slate-400 uppercase tracking-wider">{ex.station || 'Tytax'}</span>
-                                                {ex.unilateral && <span className="text-[8px] font-bold text-purple-400 uppercase">Unilateral</span>}
-                                                {isOwned && <span className="text-[8px] font-black text-emerald-500 uppercase tracking-widest flex items-center gap-1"><Icon name="check" className="w-3 h-3" /> ACQUIRED</span>}
+                                    return (
+                                        <div key={i} className={`p-4 rounded-2xl border flex flex-col gap-3 transition-all ${isOwned ? 'bg-indigo-900/10 border-indigo-500/30' : 'bg-slate-900/50 border-white/5'}`}>
+                                            <div className="flex justify-between items-start gap-4">
+                                                <div className="space-y-1 flex-1">
+                                                    <div className="flex items-center gap-2">
+                                                        <span className="px-2 py-1 bg-slate-800 rounded-lg text-[8px] font-black text-slate-400 uppercase tracking-wider">{ex.station || 'Tytax'}</span>
+                                                        {ex.unilateral && <span className="text-[8px] font-bold text-purple-400 uppercase">Unilateral</span>}
+                                                        {isOwned && <span className="text-[8px] font-black text-emerald-500 uppercase tracking-widest flex items-center gap-1"><Icon name="check" className="w-3 h-3" /> ACQUIRED</span>}
+                                                    </div>
+                                                    <h4 className="font-black text-sm text-white leading-tight">{cleanName(ex.name)}</h4>
+                                                </div>
+                                                <div className="flex flex-col gap-2">
+                                                    <button
+                                                        onClick={() => onRequisition(ex)}
+                                                        className={`px-4 py-3 rounded-xl text-[9px] font-black uppercase tracking-widest transition-all w-full ${isOwned ? 'bg-slate-800 text-slate-400 hover:bg-indigo-900/50 hover:text-indigo-400' : 'bg-indigo-600 text-white shadow-lg hover:scale-105'}`}
+                                                    >
+                                                        {isOwned ? 'Update Intel' : 'Requisition'}
+                                                    </button>
+                                                    <VideoAction
+                                                        videos={ex.videos}
+                                                        className="w-full py-2 bg-slate-800 rounded-xl text-slate-500 hover:text-indigo-400 hover:bg-slate-700 transition-colors flex items-center justify-center gap-2"
+                                                        showLabel={true}
+                                                    />
+                                                </div>
                                             </div>
-                                            <h4 className="font-black text-sm text-white leading-tight">{cleanName(ex.name)}</h4>
-                                        </div>
-                                        <div className="flex flex-col gap-2">
-                                            <button
-                                                onClick={() => onRequisition(ex)}
-                                                className={`px-4 py-3 rounded-xl text-[9px] font-black uppercase tracking-widest transition-all w-full ${isOwned ? 'bg-slate-800 text-slate-400 hover:bg-indigo-900/50 hover:text-indigo-400' : 'bg-indigo-600 text-white shadow-lg hover:scale-105'}`}
-                                            >
-                                                {isOwned ? 'Update Intel' : 'Requisition'}
-                                            </button>
-                                            <VideoAction
-                                                videos={ex.videos}
-                                                className="w-full py-2 bg-slate-800 rounded-xl text-slate-500 hover:text-indigo-400 hover:bg-slate-700 transition-colors flex items-center justify-center gap-2"
-                                                showLabel={true}
-                                            />
-                                        </div>
-                                    </div>
 
-                                    {/* Quick Stats */}
-                                    <div className="flex flex-wrap gap-2">
-                                        {impact.map((imp, idx) => (
-                                            <div key={idx} className="flex items-center gap-1 bg-black/30 px-2 py-1 rounded-lg">
-                                                <div className={`w-1 h-1 rounded-full ${imp.level === 'Primary' ? 'bg-indigo-500' : 'bg-slate-600'}`} />
-                                                <span className={`text-[8px] font-bold uppercase ${imp.level === 'Primary' ? 'text-indigo-300' : 'text-slate-500'}`}>{imp.muscle}</span>
+                                            {/* Quick Stats */}
+                                            <div className="flex flex-wrap gap-2">
+                                                {impact.map((imp, idx) => (
+                                                    <div key={idx} className="flex items-center gap-1 bg-black/30 px-2 py-1 rounded-lg">
+                                                        <div className={`w-1 h-1 rounded-full ${imp.level === 'Primary' ? 'bg-indigo-500' : 'bg-slate-600'}`} />
+                                                        <span className={`text-[8px] font-bold uppercase ${imp.level === 'Primary' ? 'text-indigo-300' : 'text-slate-500'}`}>{imp.muscle}</span>
+                                                    </div>
+                                                ))}
                                             </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            );
-                        }) : (
+                                        </div>
+                                    );
+                                })}
+                                {filtered.length > limit && (
+                                    <button
+                                        onClick={() => setLimit(l => l + 20)}
+                                        className="w-full py-4 bg-slate-900 rounded-2xl border border-white/5 text-xs font-black uppercase tracking-widest hover:bg-indigo-900/20 text-indigo-400 transition-colors"
+                                    >
+                                        Load More ({filtered.length - limit} remaining)
+                                    </button>
+                                )}
+                            </>
+                        ) : (
                             <div className="py-20 text-center opacity-40">
                                 <p className="text-[10px] font-black uppercase tracking-widest">No Intel Found</p>
                             </div>
@@ -4071,6 +4091,7 @@
         const Arsenal = React.memo(({ masterExercises, onOpenMainframe, onDelete, oledMode, logs }) => {
             const [search, setSearch] = useState('');
             const [filter, setFilter] = useState('ALL');
+            const [limit, setLimit] = useState(20);
 
             const exerciseCounts = useMemo(() => {
                 const counts = {};
@@ -4090,20 +4111,27 @@
                 return m.toUpperCase();
             }))];
 
-            const filtered = masterExercises.filter(ex => {
-                 const primaryMuscle = ex.muscle_group || (() => {
-                    const i = getImpact(ex);
-                    return i.length > 0 ? i[0].muscle.toUpperCase() : 'OTHER';
-                })();
+            // Reset pagination on filter change
+            useEffect(() => { setLimit(20); }, [search, filter]);
 
-                let matchesCat = filter === 'ALL' || primaryMuscle === filter;
-                if (filter === 'BACK' && (primaryMuscle === 'BACK_VERTICAL' || primaryMuscle === 'BACK_HORIZONTAL')) {
-                    matchesCat = true;
-                }
-                const matchesSearch = ex.name.toLowerCase().includes(search.toLowerCase()) ||
-                                      (ex.pattern && ex.pattern.toLowerCase().includes(search.toLowerCase()));
-                return matchesCat && matchesSearch;
-            });
+            const filtered = useMemo(() => {
+                return masterExercises.filter(ex => {
+                    const primaryMuscle = ex.muscle_group || (() => {
+                        const i = getImpact(ex);
+                        return i.length > 0 ? i[0].muscle.toUpperCase() : 'OTHER';
+                    })();
+
+                    let matchesCat = filter === 'ALL' || primaryMuscle === filter;
+                    if (filter === 'BACK' && (primaryMuscle === 'BACK_VERTICAL' || primaryMuscle === 'BACK_HORIZONTAL')) {
+                        matchesCat = true;
+                    }
+                    const matchesSearch = ex.name.toLowerCase().includes(search.toLowerCase()) ||
+                                        (ex.pattern && ex.pattern.toLowerCase().includes(search.toLowerCase()));
+                    return matchesCat && matchesSearch;
+                });
+            }, [masterExercises, filter, search]);
+
+            const paginated = filtered.slice(0, limit);
 
             return (
                 <div className="tab-content space-y-6 pb-32">
@@ -4146,45 +4174,57 @@
                      </div>
 
                      <div className="space-y-3">
-                        {filtered.length > 0 ? filtered.map((ex, i) => {
-                            const impact = getImpact(ex);
-                            const count = exerciseCounts[ex.name] || 0;
-                            return (
-                                <div key={i} className="p-4 bg-slate-900/50 rounded-2xl border border-white/5 flex flex-col gap-3 group hover:border-indigo-500/30 transition-colors">
-                                    <div className="flex justify-between items-start gap-4">
-                                        <div className="space-y-1 flex-1">
-                                            <div className="flex items-center gap-2">
-                                                <span className="px-2 py-1 bg-slate-800 rounded-lg text-[8px] font-black text-slate-400 uppercase tracking-wider">{ex.station || 'Free Weight'}</span>
-                                                {ex.unilateral && <span className="text-[8px] font-bold text-purple-400 uppercase">Unilateral</span>}
-                                            </div>
-                                            <h4 className="font-black text-sm text-white leading-tight">{cleanName(ex.name)}</h4>
-                                        </div>
-                                        <div className="flex gap-2 items-center">
-                                            <div className={`px-3 py-2 rounded-xl text-[9px] font-black uppercase tracking-widest whitespace-nowrap ${count > 0 ? 'bg-emerald-900/20 text-emerald-400 border border-emerald-500/20' : 'bg-slate-800 text-slate-600 border border-white/5'}`}>
-                                                {count > 0 ? `Completed: ${count}` : 'Awaiting Deployment'}
-                                            </div>
-                                            {(() => {
-                                                const videos = ex.videos && ex.videos.length > 0 ? ex.videos : getVideoData(ex.name);
-                                                return <VideoAction videos={videos} />;
-                                            })()}
+                        {paginated.length > 0 ? (
+                            <>
+                                {paginated.map((ex, i) => {
+                                    const impact = getImpact(ex);
+                                    const count = exerciseCounts[ex.name] || 0;
+                                    return (
+                                        <div key={i} className="p-4 bg-slate-900/50 rounded-2xl border border-white/5 flex flex-col gap-3 group hover:border-indigo-500/30 transition-colors">
+                                            <div className="flex justify-between items-start gap-4">
+                                                <div className="space-y-1 flex-1">
+                                                    <div className="flex items-center gap-2">
+                                                        <span className="px-2 py-1 bg-slate-800 rounded-lg text-[8px] font-black text-slate-400 uppercase tracking-wider">{ex.station || 'Free Weight'}</span>
+                                                        {ex.unilateral && <span className="text-[8px] font-bold text-purple-400 uppercase">Unilateral</span>}
+                                                    </div>
+                                                    <h4 className="font-black text-sm text-white leading-tight">{cleanName(ex.name)}</h4>
+                                                </div>
+                                                <div className="flex gap-2 items-center">
+                                                    <div className={`px-3 py-2 rounded-xl text-[9px] font-black uppercase tracking-widest whitespace-nowrap ${count > 0 ? 'bg-emerald-900/20 text-emerald-400 border border-emerald-500/20' : 'bg-slate-800 text-slate-600 border border-white/5'}`}>
+                                                        {count > 0 ? `Completed: ${count}` : 'Awaiting Deployment'}
+                                                    </div>
+                                                    {(() => {
+                                                        const videos = ex.videos && ex.videos.length > 0 ? ex.videos : getVideoData(ex.name);
+                                                        return <VideoAction videos={videos} />;
+                                                    })()}
 
-                                            <button onClick={() => onDelete(ex.name)} className="p-3 bg-red-900/10 rounded-xl text-red-500 hover:bg-red-900/30 transition-colors">
-                                                <Icon name="trash" className="w-4 h-4" />
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex flex-wrap gap-2">
-                                        {impact.map((imp, idx) => (
-                                            <div key={idx} className="flex items-center gap-1 bg-slate-950/50 px-2 py-1 rounded-lg border border-white/5">
-                                                <div className={`w-1.5 h-1.5 rounded-full ${imp.level === 'Primary' ? 'bg-indigo-500' : 'bg-slate-600'}`} />
-                                                <span className={`text-[9px] font-bold uppercase ${imp.level === 'Primary' ? 'text-indigo-300' : 'text-slate-500'}`}>{imp.muscle} <span className="opacity-50">{imp.score}</span></span>
+                                                    <button onClick={() => onDelete(ex.name)} className="p-3 bg-red-900/10 rounded-xl text-red-500 hover:bg-red-900/30 transition-colors">
+                                                        <Icon name="trash" className="w-4 h-4" />
+                                                    </button>
+                                                </div>
                                             </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            );
-                        }) : (
+
+                                            <div className="flex flex-wrap gap-2">
+                                                {impact.map((imp, idx) => (
+                                                    <div key={idx} className="flex items-center gap-1 bg-slate-950/50 px-2 py-1 rounded-lg border border-white/5">
+                                                        <div className={`w-1.5 h-1.5 rounded-full ${imp.level === 'Primary' ? 'bg-indigo-500' : 'bg-slate-600'}`} />
+                                                        <span className={`text-[9px] font-bold uppercase ${imp.level === 'Primary' ? 'text-indigo-300' : 'text-slate-500'}`}>{imp.muscle} <span className="opacity-50">{imp.score}</span></span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                                {filtered.length > limit && (
+                                    <button
+                                        onClick={() => setLimit(l => l + 20)}
+                                        className="w-full py-4 bg-slate-900 rounded-2xl border border-white/5 text-xs font-black uppercase tracking-widest hover:bg-indigo-900/20 text-indigo-400 transition-colors"
+                                    >
+                                        Load More ({filtered.length - limit} remaining)
+                                    </button>
+                                )}
+                            </>
+                        ) : (
                             <div className="py-20 text-center opacity-40">
                                 <p className="text-[10px] font-black uppercase tracking-widest">No Intel Found</p>
                             </div>
@@ -4638,7 +4678,7 @@
 
             if (step === 1) {
                 return (
-                    <div className="fixed inset-0 z-[300] bg-black/95 backdrop-blur-xl flex items-center justify-center p-6 animate-fade-in">
+                    <div className="fixed inset-0 z-[400] bg-black/95 backdrop-blur-xl flex items-center justify-center p-6 animate-fade-in">
                         <div className="w-full max-w-sm space-y-8 text-center">
                             <div className="space-y-2">
                                 <h1 className="text-4xl font-black italic uppercase tracking-tighter text-white">{t('modals.welcome').split(' ')[0]}<br/><span className="text-indigo-500">{t('modals.welcome').split(' ').slice(1).join(' ')}</span></h1>
@@ -4655,7 +4695,7 @@
             }
             if (step === 2) {
                  return (
-                    <div className="fixed inset-0 z-[300] bg-black/95 backdrop-blur-xl flex items-center justify-center p-6 animate-fade-in">
+                    <div className="fixed inset-0 z-[400] bg-black/95 backdrop-blur-xl flex items-center justify-center p-6 animate-fade-in">
                         <div className="w-full max-w-sm space-y-8 text-center">
                             <div className="space-y-2">
                                 <h2 className="text-3xl font-black italic uppercase tracking-tighter text-white">System<br/><span className="text-indigo-500">Calibration</span></h2>
@@ -5720,28 +5760,30 @@
 
             const availableExercises = useMemo(() => getAvailableExercises(logs), [logs]);
 
-            const handleRequisition = (mainframeEx) => {
-                const existing = masterExercises.find(e => e.name === mainframeEx.name);
+            const handleRequisition = React.useCallback((mainframeEx) => {
+                setMasterExercises(currentMasterExercises => {
+                    const existing = currentMasterExercises.find(e => e.name === mainframeEx.name);
 
-                // Merge Logic: Overwrite rich data (Impact, Videos, Notes) but PRESERVE user settings (Sets/Reps) if they exist
-                const newEx = {
-                    ...mainframeEx,
-                    sets: existing ? existing.sets : mainframeEx.sets,
-                    reps: existing ? existing.reps : mainframeEx.reps,
-                    // Ensure station is preserved if user customized it, otherwise update from Mainframe
-                    station: existing ? existing.station : mainframeEx.station
-                };
+                    // Merge Logic: Overwrite rich data (Impact, Videos, Notes) but PRESERVE user settings (Sets/Reps) if they exist
+                    const newEx = {
+                        ...mainframeEx,
+                        sets: existing ? existing.sets : mainframeEx.sets,
+                        reps: existing ? existing.reps : mainframeEx.reps,
+                        // Ensure station is preserved if user customized it, otherwise update from Mainframe
+                        station: existing ? existing.station : mainframeEx.station
+                    };
 
-                let updated;
-                if (existing) {
-                    updated = masterExercises.map(e => e.name === mainframeEx.name ? newEx : e);
-                    showToast("Intel Updated");
-                } else {
-                    updated = [...masterExercises, newEx];
-                    showToast("Requisition Approved");
-                }
-                setMasterExercises(updated);
-            };
+                    let updated;
+                    if (existing) {
+                        updated = currentMasterExercises.map(e => e.name === mainframeEx.name ? newEx : e);
+                        showToast("Intel Updated");
+                    } else {
+                        updated = [...currentMasterExercises, newEx];
+                        showToast("Requisition Approved");
+                    }
+                    return updated;
+                });
+            }, []);
 
             const handleBackup = (dataOverride) => {
                 const data = dataOverride || { logs, sessionOrder, trainingPlan, masterExercises, startDate, oledMode, userInventory, userProfile, customProtocols, warmupStrategy };
@@ -6944,20 +6986,20 @@
                             <MainframeModal
                                 masterExercises={masterExercises}
                                 onRequisition={handleRequisition}
-                                onClose={() => setShowMainframe(false)}
+                                onClose={React.useCallback(() => setShowMainframe(false), [])}
                             />
                         )}
 
                         {activeTab === 'arsenal' && (
                             <Arsenal
                                 masterExercises={masterExercises}
-                                onOpenMainframe={() => setShowMainframe(true)}
-                                onDelete={(name) => {
+                                onOpenMainframe={React.useCallback(() => setShowMainframe(true), [])}
+                                onDelete={React.useCallback((name) => {
                                     if(confirm(`Delete ${name} from Arsenal?`)) {
-                                        setMasterExercises(masterExercises.filter(e => e.name !== name));
+                                        setMasterExercises(prev => prev.filter(e => e.name !== name));
                                         showToast("Exercise Removed");
                                     }
-                                }}
+                                }, [])}
                                 oledMode={oledMode}
                                 logs={logs}
                             />
