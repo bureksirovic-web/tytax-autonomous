@@ -5518,11 +5518,11 @@
             });
             const [masterExercises, setMasterExercises] = useState(() => {
                 try {
-                    // Active Arsenal - Starts EMPTY for new users to prompt Mainframe selection
-                    return JSON.parse(localStorage.getItem('tytax_master_exercises') || '[]');
+                    // Active Arsenal - Preload Tytax Elite v3.0 for new users
+                    return JSON.parse(localStorage.getItem('tytax_master_exercises') || JSON.stringify(PRESETS[0].data.MASTER_EXERCISES));
                 } catch (e) {
                     console.error("Error parsing tytax_master_exercises from localStorage", e);
-                    return [];
+                    return PRESETS[0].data.MASTER_EXERCISES;
                 }
             });
             const [startDate, setStartDate] = useState(() => localStorage.getItem('tytax_start_date') || new Date().toISOString().split('T')[0]);
@@ -5597,12 +5597,6 @@
 
             // --- DATA MIGRATION CHECK ---
             useEffect(() => {
-                // Onboarding: If empty library, open Mainframe
-                if (masterExercises.length === 0) {
-                    setShowMainframe(true);
-                    showToast("Welcome Commander. Initialize Arsenal.");
-                }
-
                 // Check if we need to upgrade to Kinetic Impact data
                 const currentPreset = allPresets.find(p => p.id === 'kinetic_impact');
                 if (currentPreset && masterExercises.length > 0) {
@@ -6351,7 +6345,17 @@
                             </header> 
                         )}
                         {activeTab === 'home' && ( 
-                            <div className="tab-content space-y-10 pb-20"> 
+                            <div className="tab-content space-y-10 pb-20">
+                                {/* NEW USER NOTIFICATION */}
+                                {logs.length === 0 && (
+                                    <div className="bg-indigo-900/20 border border-indigo-500/30 p-4 rounded-2xl flex items-center gap-3">
+                                        <Icon name="info" className="text-indigo-400 w-5 h-5 shrink-0" />
+                                        <p className="text-[10px] font-bold text-indigo-200 leading-relaxed uppercase tracking-wide">
+                                            System Status: Arsenal pre-loaded with Elite Protocol. Access Mainframe to customize or delete entries.
+                                        </p>
+                                    </div>
+                                )}
+
                                 {/* SYSTEM STATUS */} 
                                 <div className="glass p-10 rounded-[3rem] space-y-8 border-white/5 relative overflow-hidden glow-indigo"> 
                                     <div className="absolute -top-10 -right-10 w-40 h-40 bg-indigo-600/10 blur-[60px]" /> 
@@ -6469,6 +6473,10 @@
  
                                 {/* QUICK ACTIONS */}
                                 <div className="grid grid-cols-2 gap-4">
+                                    <button onClick={() => setShowMainframe(true)} className="glass p-6 rounded-[2rem] flex items-center justify-center gap-3 hover:bg-indigo-900/20 transition-colors group border-white/5">
+                                        <div className="p-2 bg-slate-900 rounded-xl text-slate-500 group-hover:text-indigo-400 transition-colors"><Icon name="library" className="w-5 h-5" /></div>
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">Requisition Intel</span>
+                                    </button>
                                     <button onClick={() => setShowOneRepMax(true)} className="glass p-6 rounded-[2rem] flex items-center justify-center gap-3 hover:bg-indigo-900/20 transition-colors group border-white/5">
                                         <div className="p-2 bg-slate-900 rounded-xl text-slate-500 group-hover:text-indigo-400 transition-colors"><Icon name="dumbbell" className="w-5 h-5" /></div>
                                         <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white">{t('home.rm_calc')}</span>
