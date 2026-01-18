@@ -5785,6 +5785,15 @@
                 });
             }, []);
 
+            const handleCloseMainframe = React.useCallback(() => setShowMainframe(false), []);
+            const handleOpenMainframe = React.useCallback(() => setShowMainframe(true), []);
+            const handleDeleteExercise = React.useCallback((name) => {
+                if(confirm(`Delete ${name} from Arsenal?`)) {
+                    setMasterExercises(prev => prev.filter(e => e.name !== name));
+                    showToast("Exercise Removed");
+                }
+            }, []);
+
             const handleBackup = (dataOverride) => {
                 const data = dataOverride || { logs, sessionOrder, trainingPlan, masterExercises, startDate, oledMode, userInventory, userProfile, customProtocols, warmupStrategy };
                 const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
@@ -6986,20 +6995,15 @@
                             <MainframeModal
                                 masterExercises={masterExercises}
                                 onRequisition={handleRequisition}
-                                onClose={React.useCallback(() => setShowMainframe(false), [])}
+                                onClose={handleCloseMainframe}
                             />
                         )}
 
                         {activeTab === 'arsenal' && (
                             <Arsenal
                                 masterExercises={masterExercises}
-                                onOpenMainframe={React.useCallback(() => setShowMainframe(true), [])}
-                                onDelete={React.useCallback((name) => {
-                                    if(confirm(`Delete ${name} from Arsenal?`)) {
-                                        setMasterExercises(prev => prev.filter(e => e.name !== name));
-                                        showToast("Exercise Removed");
-                                    }
-                                }, [])}
+                                onOpenMainframe={handleOpenMainframe}
+                                onDelete={handleDeleteExercise}
                                 oledMode={oledMode}
                                 logs={logs}
                             />
