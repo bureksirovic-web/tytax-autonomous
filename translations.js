@@ -34,7 +34,10 @@ const TRANSLATIONS = {
             system_status: "System Status",
             based_on_acute: "Based on acute volume load (48h)",
             protocol_suite: "Protocol Suite",
-            initialize: "Initialize"
+            initialize: "Initialize",
+            disengage: "Disengage Protocol",
+            disengage_confirm: "Disengage current protocol? System will return to Standby.",
+            protocol_disengaged: "Protocol Disengaged"
         },
         home: {
             rm_calc: "1RM Calc",
@@ -251,7 +254,10 @@ const TRANSLATIONS = {
             based_on_acute: "Na temelju akutnog volumena (48h)",
             protocol_suite: "Protokoli",
             initialize: "Pokreni",
-            no_protocol: "Nema Učitanog Protokola"
+            no_protocol: "Nema Učitanog Protokola",
+            disengage: "Isključi Protokol",
+            disengage_confirm: "Isključiti trenutni protokol? Sustav se vraća u pripravnost.",
+            protocol_disengaged: "Protokol Isključen"
         },
         home: {
             rm_calc: "1RM Kalk",

@@ -6447,6 +6447,7 @@
                                                 <p className="text-sm font-black text-white mt-1 italic uppercase tracking-tight">{sessionOrder.join(' • ')}</p>
                                             </div> 
                                             <button onClick={() => setActiveTab('workout')} className="w-full py-5 accent-gradient text-white rounded-[2rem] font-black text-[10px] uppercase tracking-[0.4em] shadow-2xl">{t('status.enter_training_center')}</button>
+                                            <button onClick={() => { if(confirm(t('status.disengage_confirm'))) { setSessionOrder([]); showToast(t('status.protocol_disengaged')); } }} className="w-full py-3 bg-red-900/10 text-red-500 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] border border-red-500/20 hover:bg-red-900/20 transition-all">{t('status.disengage')}</button>
                                         </div> 
                                     )} 
                                 </div> 
