@@ -412,6 +412,12 @@
              return Array.from(set).sort();
         };
 
+        const getVideoData = (name) => {
+            const mainframe = window.TYTAX_MAINFRAME || [];
+            const ex = mainframe.find(e => e.name === name);
+            return ex?.videos || [];
+        };
+
         // --- PRESETS --- 
         const PRESETS = [ 
             { 
@@ -5533,13 +5539,6 @@
         };
 
         const App = () => {
-            // --- VIDEO LOOKUP HELPER ---
-            const getVideoData = (name) => {
-                const mainframe = window.TYTAX_MAINFRAME || [];
-                const ex = mainframe.find(e => e.name === name);
-                return ex?.videos || [];
-            };
-
             // --- PERSISTENCE ---
             const [activeTab, setActiveTab] = useState('home');
             const [logs, setLogs] = useState(() => {
