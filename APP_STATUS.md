@@ -10,10 +10,10 @@ Significant optimizations have been implemented to ensure smooth operation on mo
 | Feature | Status | Notes |
 | :--- | :--- | :--- |
 | **Core Architecture** | 🟢 Stable | Single-file structure maintained. No build step required. |
-| **Mobile Performance** | 🟡 Improved | Large lists are now paginated. Navigation is responsive. |
+| **Mobile Performance** | 🟢 Verified | Large lists are now paginated. Navigation is responsive. Fresh Install flow verified on iPhone 13. |
 | **Offline Capability** | 🟢 Excellent | Full `localStorage` persistence and zero external dependencies (except CDN assets). |
-| **Data Integrity** | 🟢 Good | `safeLocalStorage` wrapper prevents quota crashes. |
-| **UI/UX** | 🟢 Polished | Z-index conflicts resolved. "OLED Mode" verified. |
+| **Data Integrity** | 🟢 Good | `safeLocalStorage` wrapper prevents quota crashes. Data persistence verified across reloads. |
+| **UI/UX** | 🟢 Polished | Z-index conflicts resolved. "OLED Mode" verified. Onboarding flow streamlined (Auto-login verified). |
 
 ## 3. Optimizations Implemented
 
@@ -27,9 +27,10 @@ Significant optimizations have been implemented to ensure smooth operation on mo
 *   **Solution:** Wrapped critical event handlers (`handleRequisition`, `handleDelete`, `onOpenMainframe`) in `useCallback`.
 *   **Impact:** `Arsenal` and other heavy components now strictly only re-render when their data changes, ignoring the global timer ticks. Drastically reduces CPU usage during workouts.
 
-### 🛠️ Stability: Z-Index Hierarchy
-*   **Problem:** The `WelcomeWizard` (z-300) could potentially be obscured or interact poorly with the `MainframeModal` (z-200) or Toast notifications in edge cases.
-*   **Solution:** Elevated `WelcomeWizard` to z-400 to ensure it is always the top-most layer until the user completes onboarding.
+### 🛠️ Stability: Z-Index Hierarchy & Onboarding
+*   **Problem:** The `WelcomeWizard` (z-300) could potentially be obscured or interact poorly with the `MainframeModal` (z-200) or Toast notifications in edge cases. User creation did not auto-login, causing confusion.
+*   **Solution:** Elevated `WelcomeWizard` to z-400. Implemented auto-login after user creation in `FamilyManager`.
+*   **Verified:** Full end-to-end Onboarding flow verified on Mobile and Desktop.
 
 ## 4. Browser Compatibility & Mobile Readiness
 *   **Viewport:** Standard `<meta name="viewport" content="width=device-width, initial-scale=1.0">` is present.
@@ -41,9 +42,8 @@ Significant optimizations have been implemented to ensure smooth operation on mo
 2.  **Image Optimization:** Exercise thumbnails (if added later) should be lazy-loaded. Currently, the app is text/SVG heavy which is excellent for speed.
 3.  **PWA Manifest:** Adding a `manifest.json` would allow users to install the app to their home screen, enabling a true full-screen native feel and offline caching of the HTML file itself.
 
-## 6. Verification Results
+## 6. Verification Results (Latest Run)
 Automated mobile simulation tests (Playwright) confirmed:
-*   ✅ App loads successfully on iPhone/Pixel viewports.
-*   ✅ "System Status" and onboarding flows function correctly.
-*   ✅ Navigation between tabs is functional.
-*   ✅ The massive `Mainframe` database opens without crashing the test runner.
+*   ✅ **Mobile Fresh Install:** User creation, Auto-login, Welcome Wizard, and Dashboard load verified on iPhone 13 viewport.
+*   ✅ **Desktop Core Usage:** Library navigation, Pagination ("Load More"), and Requisition logic verified.
+*   ✅ **Data Persistence:** User profiles and Arsenal data persist across page reloads.
