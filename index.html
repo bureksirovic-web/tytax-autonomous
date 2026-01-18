@@ -5615,12 +5615,14 @@
             );
         };
 
-        const App = () => {
+        const App = ({ currentUser, onLogout }) => {
+            const getKey = (key) => currentUser ? `${key}_${currentUser}` : key;
+
             // --- PERSISTENCE ---
             const [activeTab, setActiveTab] = useState('home');
             const [logs, setLogs] = useState(() => {
                 try {
-                    return JSON.parse(localStorage.getItem('tytax_logs') || '[]');
+                    return JSON.parse(localStorage.getItem(getKey('tytax_logs')) || '[]');
                 } catch (e) {
                     console.error("Error parsing tytax_logs from localStorage", e);
                     return [];
@@ -5628,7 +5630,7 @@
             });
             const [sessionOrder, setSessionOrder] = useState(() => {
                 try {
-                    return JSON.parse(localStorage.getItem('tytax_session_order') || '[]');
+                    return JSON.parse(localStorage.getItem(getKey('tytax_session_order')) || '[]');
                 } catch (e) {
                     console.error("Error parsing tytax_session_order from localStorage", e);
                     return [];
@@ -5636,7 +5638,7 @@
             });
             const [trainingPlan, setTrainingPlan] = useState(() => {
                 try {
-                    return JSON.parse(localStorage.getItem('tytax_training_plan') || '{}');
+                    return JSON.parse(localStorage.getItem(getKey('tytax_training_plan')) || '{}');
                 } catch (e) {
                     console.error("Error parsing tytax_training_plan from localStorage", e);
                     return {};
@@ -5645,18 +5647,18 @@
             const [masterExercises, setMasterExercises] = useState(() => {
                 try {
                     // Active Arsenal - Preload Tytax Elite v3.0 for new users
-                    return JSON.parse(localStorage.getItem('tytax_master_exercises') || JSON.stringify(PRESETS[0].data.MASTER_EXERCISES));
+                    return JSON.parse(localStorage.getItem(getKey('tytax_master_exercises')) || JSON.stringify(PRESETS[0].data.MASTER_EXERCISES));
                 } catch (e) {
                     console.error("Error parsing tytax_master_exercises from localStorage", e);
                     return PRESETS[0].data.MASTER_EXERCISES;
                 }
             });
-            const [startDate, setStartDate] = useState(() => localStorage.getItem('tytax_start_date') || new Date().toISOString().split('T')[0]);
-            const [oledMode, setOledMode] = useState(() => localStorage.getItem('tytax_oled_mode') === 'true');
-            const [warmupStrategy, setWarmupStrategy] = useState(() => localStorage.getItem('tytax_warmup_strategy') || 'Standard');
+            const [startDate, setStartDate] = useState(() => localStorage.getItem(getKey('tytax_start_date')) || new Date().toISOString().split('T')[0]);
+            const [oledMode, setOledMode] = useState(() => localStorage.getItem(getKey('tytax_oled_mode')) === 'true');
+            const [warmupStrategy, setWarmupStrategy] = useState(() => localStorage.getItem(getKey('tytax_warmup_strategy')) || 'Standard');
             const [userInventory, setUserInventory] = useState(() => {
                 try {
-                    return JSON.parse(localStorage.getItem('tytax_inventory') || '[]');
+                    return JSON.parse(localStorage.getItem(getKey('tytax_inventory')) || '[]');
                 } catch (e) {
                     console.error("Error parsing tytax_inventory from localStorage", e);
                     return [];
@@ -5664,7 +5666,7 @@
             });
             const [userProfile, setUserProfile] = useState(() => {
                 try {
-                    return JSON.parse(localStorage.getItem('tytax_user_profile') || 'null');
+                    return JSON.parse(localStorage.getItem(getKey('tytax_user_profile')) || 'null');
                 } catch (e) {
                     console.error("Error parsing tytax_user_profile from localStorage", e);
                     return null;
@@ -5672,7 +5674,7 @@
             });
             const [bodyweightLog, setBodyweightLog] = useState(() => {
                 try {
-                    return JSON.parse(localStorage.getItem('tytax_bodyweight_log') || '[]');
+                    return JSON.parse(localStorage.getItem(getKey('tytax_bodyweight_log')) || '[]');
                 } catch (e) {
                     console.error("Error parsing tytax_bodyweight_log from localStorage", e);
                     return [];
@@ -5680,18 +5682,22 @@
             });
             const [pinnedMetrics, setPinnedMetrics] = useState(() => {
                 try {
-                    return JSON.parse(localStorage.getItem('tytax_pinned_metrics') || '["Squat", "Bench", "Deadlift"]');
+                    return JSON.parse(localStorage.getItem(getKey('tytax_pinned_metrics')) || '["Squat", "Bench", "Deadlift"]');
                 } catch (e) {
                     console.error("Error parsing tytax_pinned_metrics", e);
                     return ["Squat", "Bench", "Deadlift"];
                 }
             });
             const [autoBackup, setAutoBackup] = useState(() => {
-                return localStorage.getItem('tytax_auto_backup') === 'true';
+                return localStorage.getItem(getKey('tytax_auto_backup')) === 'true';
             });
 
-            const [language, setLanguage] = useState(() => localStorage.getItem('tytax_language') || 'en');
-            useEffect(() => localStorage.setItem('tytax_language', language), [language]);
+            const [language, setLanguage] = useState(() => localStorage.getItem(getKey('tytax_language')) || 'en');
+            // Sync both scoped (persistence) and global (for static components in this session)
+            useEffect(() => {
+                localStorage.setItem(getKey('tytax_language'), language);
+                localStorage.setItem('tytax_language', language);
+            }, [language, currentUser]);
 
             const t = (key) => {
                 const keys = key.split('.');
@@ -5703,7 +5709,7 @@
             // --- CUSTOM PROTOCOLS ---
             const [customProtocols, setCustomProtocols] = useState(() => {
                 try {
-                    return JSON.parse(localStorage.getItem('tytax_custom_protocols') || '[]');
+                    return JSON.parse(localStorage.getItem(getKey('tytax_custom_protocols')) || '[]');
                 } catch (e) {
                     console.error("Error parsing tytax_custom_protocols from localStorage", e);
                     return [];
@@ -5830,17 +5836,17 @@
             }, []);
 
             useEffect(() => { 
-                safeLocalStorage.setItem('tytax_logs', JSON.stringify(logs));
-                safeLocalStorage.setItem('tytax_session_order', JSON.stringify(sessionOrder));
-                safeLocalStorage.setItem('tytax_training_plan', JSON.stringify(trainingPlan));
-                safeLocalStorage.setItem('tytax_master_exercises', JSON.stringify(masterExercises));
-                safeLocalStorage.setItem('tytax_start_date', startDate);
-                safeLocalStorage.setItem('tytax_oled_mode', oledMode);
-                safeLocalStorage.setItem('tytax_warmup_strategy', warmupStrategy);
-                safeLocalStorage.setItem('tytax_inventory', JSON.stringify(userInventory));
-                safeLocalStorage.setItem('tytax_user_profile', JSON.stringify(userProfile));
-                safeLocalStorage.setItem('tytax_bodyweight_log', JSON.stringify(bodyweightLog));
-                safeLocalStorage.setItem('tytax_pinned_metrics', JSON.stringify(pinnedMetrics));
+                safeLocalStorage.setItem(getKey('tytax_logs'), JSON.stringify(logs));
+                safeLocalStorage.setItem(getKey('tytax_session_order'), JSON.stringify(sessionOrder));
+                safeLocalStorage.setItem(getKey('tytax_training_plan'), JSON.stringify(trainingPlan));
+                safeLocalStorage.setItem(getKey('tytax_master_exercises'), JSON.stringify(masterExercises));
+                safeLocalStorage.setItem(getKey('tytax_start_date'), startDate);
+                safeLocalStorage.setItem(getKey('tytax_oled_mode'), oledMode);
+                safeLocalStorage.setItem(getKey('tytax_warmup_strategy'), warmupStrategy);
+                safeLocalStorage.setItem(getKey('tytax_inventory'), JSON.stringify(userInventory));
+                safeLocalStorage.setItem(getKey('tytax_user_profile'), JSON.stringify(userProfile));
+                safeLocalStorage.setItem(getKey('tytax_bodyweight_log'), JSON.stringify(bodyweightLog));
+                safeLocalStorage.setItem(getKey('tytax_pinned_metrics'), JSON.stringify(pinnedMetrics));
             }, [logs, sessionOrder, trainingPlan, masterExercises, startDate, oledMode, warmupStrategy, userInventory, userProfile, bodyweightLog, pinnedMetrics]);
  
             useEffect(() => { 
@@ -7122,6 +7128,9 @@
                                             </label> 
                                         </div> 
                                     </div> 
+                                    <button onClick={() => { if(confirm("Log out current user?")) onLogout(); }} className="w-full py-5 bg-indigo-900/20 text-indigo-400 rounded-[2rem] font-black text-xs uppercase tracking-[0.3em] border border-indigo-500/20 hover:bg-indigo-900/40 transition-all flex items-center justify-center gap-3">
+                                        <Icon name="x" className="w-4 h-4" /> Switch User
+                                    </button>
                                     <button onClick={() => { if(confirm(t('settings.purge_confirm'))) { localStorage.clear(); window.location.reload(); } }} className="w-full text-red-900 hover:text-red-500 py-4 font-black text-[10px] uppercase tracking-[0.4em] transition-colors">{t('settings.emergency_purge')}</button>
                                 </div> 
                             </div> 
@@ -7148,10 +7157,132 @@
                     )}
                 </div> 
             ); 
-        }; 
+        };
+
+        const migrateLegacyData = (username) => {
+            const keys = [
+                'tytax_logs', 'tytax_session_order', 'tytax_training_plan', 'tytax_master_exercises',
+                'tytax_start_date', 'tytax_oled_mode', 'tytax_warmup_strategy', 'tytax_inventory',
+                'tytax_user_profile', 'tytax_bodyweight_log', 'tytax_pinned_metrics', 'tytax_language',
+                'tytax_auto_backup', 'tytax_custom_protocols', 'tytax_bar_weight'
+            ];
+            keys.forEach(key => {
+                const val = localStorage.getItem(key);
+                if (val !== null) {
+                    localStorage.setItem(`${key}_${username}`, val);
+                }
+            });
+        };
+
+        const FamilyManager = () => {
+            const [users, setUsers] = useState(() => {
+                try {
+                    return JSON.parse(localStorage.getItem('tytax_users_list') || '[]');
+                } catch(e) { return []; }
+            });
+            const [currentUser, setCurrentUser] = useState(null);
+            const [newUserName, setNewUserName] = useState('');
+            const [isMigrating, setIsMigrating] = useState(false);
+
+            useEffect(() => {
+                // Check for legacy data on first load
+                if (users.length === 0 && localStorage.getItem('tytax_logs')) {
+                    setIsMigrating(true);
+                }
+            }, []);
+
+            const handleAddUser = () => {
+                if (!newUserName.trim()) return;
+                if (users.includes(newUserName.trim())) {
+                    alert("User already exists!");
+                    return;
+                }
+                const updatedUsers = [...users, newUserName.trim()];
+                setUsers(updatedUsers);
+                localStorage.setItem('tytax_users_list', JSON.stringify(updatedUsers));
+
+                if (isMigrating) {
+                    migrateLegacyData(newUserName.trim());
+                    setIsMigrating(false);
+                }
+
+                setNewUserName('');
+            };
+
+            const handleLogin = (user) => {
+                setCurrentUser(user);
+                // Sync global language for static components
+                const userLang = localStorage.getItem(`tytax_language_${user}`) || 'en';
+                localStorage.setItem('tytax_language', userLang);
+            };
+
+            if (currentUser) {
+                return <App key={currentUser} currentUser={currentUser} onLogout={() => setCurrentUser(null)} />;
+            }
+
+            return (
+                <div className="min-h-screen bg-[#020617] text-slate-200 font-inter flex flex-col items-center justify-center p-6">
+                    <div className="w-full max-w-md space-y-10">
+                        <div className="text-center space-y-2">
+                            <Icon name="bolt" className="w-16 h-16 text-indigo-500 mx-auto animate-pulse" />
+                            <h1 className="text-4xl font-black tracking-tighter italic uppercase text-white">TYTAX<span className="text-indigo-500">ELITE</span></h1>
+                            <p className="text-[10px] font-black text-slate-500 uppercase tracking-[0.4em]">Multi-User Terminal</p>
+                        </div>
+
+                        {isMigrating ? (
+                            <div className="glass p-8 rounded-[3rem] space-y-6 border-amber-500/30 bg-amber-900/10">
+                                <div className="text-center space-y-2">
+                                    <h2 className="text-xl font-black uppercase text-amber-400 italic">Legacy Data Detected</h2>
+                                    <p className="text-xs text-slate-400">Existing training logs found. Create a user profile to claim this data.</p>
+                                </div>
+                                <div className="space-y-4">
+                                    <input
+                                        value={newUserName}
+                                        onChange={e => setNewUserName(e.target.value)}
+                                        placeholder="Enter Your Name"
+                                        className="w-full p-4 bg-black/50 rounded-2xl font-bold text-center text-white border border-amber-500/30 focus:ring-2 focus:ring-amber-500 outline-none"
+                                    />
+                                    <button onClick={handleAddUser} className="w-full py-4 bg-amber-500 text-black rounded-2xl font-black uppercase tracking-widest hover:scale-105 transition-transform">
+                                        Migrate & Login
+                                    </button>
+                                </div>
+                            </div>
+                        ) : (
+                            <div className="glass p-8 rounded-[3rem] space-y-8 border-white/5 shadow-2xl">
+                                {users.length > 0 && (
+                                    <div className="grid grid-cols-1 gap-3 max-h-60 overflow-y-auto no-scrollbar">
+                                        {users.map(u => (
+                                            <button key={u} onClick={() => handleLogin(u)} className="w-full p-6 bg-slate-900/50 hover:bg-indigo-900/20 border border-white/5 hover:border-indigo-500/50 rounded-[2rem] flex items-center justify-between group transition-all">
+                                                <span className="font-black text-lg text-white italic">{u}</span>
+                                                <Icon name="play" className="text-slate-600 group-hover:text-indigo-400 w-5 h-5" />
+                                            </button>
+                                        ))}
+                                    </div>
+                                )}
+
+                                <div className="space-y-4 pt-4 border-t border-white/5">
+                                    <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest text-center">New Operator</p>
+                                    <div className="flex gap-2">
+                                        <input
+                                            value={newUserName}
+                                            onChange={e => setNewUserName(e.target.value)}
+                                            placeholder="Codename"
+                                            className="flex-1 p-4 bg-black/50 rounded-2xl font-bold text-sm text-white border border-white/10 focus:ring-2 focus:ring-indigo-500 outline-none"
+                                        />
+                                        <button onClick={handleAddUser} className="p-4 bg-indigo-600 text-white rounded-2xl hover:bg-indigo-500 transition-colors">
+                                            <Icon name="check" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            );
+        };
  
         const root = ReactDOM.createRoot(document.getElementById('root')); 
-        root.render(<ErrorBoundary><App /></ErrorBoundary>); 
+        root.render(<ErrorBoundary><FamilyManager /></ErrorBoundary>);
     </script> 
 </body> 
 </html>
