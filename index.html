@@ -6740,8 +6740,11 @@
 
                                                             {/* HEADER SECTION */}
                                                             <div className="space-y-4">
-                                                                <div className="flex justify-between items-start">
-                                                                    <div className="space-y-1">
+                                                                <div
+                                                                    className="flex justify-between items-start cursor-pointer hover:opacity-80 transition-opacity"
+                                                                    onClick={() => setManualExpanded(prev => { const s = new Set(prev); s.delete(exIdx); return s; })}
+                                                                >
+                                                                    <div className="space-y-1 pointer-events-none">
                                                                         {/* Top Metadata Row */}
                                                                         <div className="flex items-center gap-2">
                                                                             {/* Target Muscle Pill */}
@@ -6763,7 +6766,7 @@
                                                                     </div>
 
                                                                     {/* Action Buttons */}
-                                                                    <div className="flex gap-2">
+                                                                    <div className="flex gap-2" onClick={e => e.stopPropagation()}>
                                                                         {(() => {
                                                                             const videos = ex.videos && ex.videos.length > 0 ? ex.videos : getVideoData(ex.name);
                                                                             return <VideoAction videos={videos} className="p-3 bg-slate-900 rounded-xl text-slate-500 border border-white/5 hover:text-indigo-400 transition-colors flex items-center justify-center" />;
@@ -6826,6 +6829,12 @@
                                                                         </div>
                                                                         <button disabled={!set.kg || !set.reps || set.done} onClick={() => {
                                                                             const up = {...currentWorkout}; up.exercises[exIdx].sets[sIdx].done = true; setCurrentWorkout(up); setTimer(90); setTimerActive(true);
+
+                                                                            // AUTO-COLLAPSE LOGIC
+                                                                            if (up.exercises[exIdx].sets.every(s => s.done)) {
+                                                                                setManualExpanded(prev => { const s = new Set(prev); s.delete(exIdx); return s; });
+                                                                            }
+
                                                                             if (window.navigator.vibrate) window.navigator.vibrate(50);
                                                                             
                                                                             // IMPACT PULSE
