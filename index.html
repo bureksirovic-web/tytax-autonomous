@@ -10,6 +10,7 @@
     <script src="translations.js"></script>
     <script src="https://unpkg.com/@babel/standalone@7.23.10/babel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="mainframe_library.js"></script>
     <style> 
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap'); 
         body { font-family: 'Inter', sans-serif; background-color: #020617; color: #f1f5f9; overflow-x: hidden; -webkit-tap-highlight-color: transparent; } 
@@ -3746,6 +3747,103 @@
             );
         };
  
+        const MainframeModal = ({ masterExercises, onRequisition, onClose }) => {
+            const [search, setSearch] = useState('');
+            const [filter, setFilter] = useState('ALL');
+
+            // Access Global Mainframe - Fallback to empty if not loaded
+            const mainframe = window.TYTAX_MAINFRAME || [];
+
+            const categories = ['ALL', 'CHEST', 'BACK', 'SHOULDERS', 'BICEPS', 'TRICEPS', 'QUADS', 'HAMSTRINGS', 'GLUTES', 'CALVES', 'CORE'];
+
+            const filtered = mainframe.filter(ex => {
+                let matchesCat = filter === 'ALL';
+                if (!matchesCat) {
+                    const imp = getImpact(ex);
+                    matchesCat = imp.some(i => i.muscle.toUpperCase().includes(filter));
+                    if (!matchesCat && ex.muscle_group) matchesCat = ex.muscle_group.toUpperCase() === filter;
+                }
+
+                const matchesSearch = ex.name.toLowerCase().includes(search.toLowerCase()) ||
+                                      (ex.pattern && ex.pattern.toLowerCase().includes(search.toLowerCase()));
+                return matchesCat && matchesSearch;
+            });
+
+            return (
+                <div className="fixed inset-0 z-[200] bg-black/90 backdrop-blur-md flex flex-col p-4 animate-fade-in">
+                    {/* Header */}
+                    <div className="flex justify-between items-center mb-6">
+                        <div>
+                            <h2 className="text-3xl font-black italic uppercase text-white tracking-tighter">TYTAX <span className="text-indigo-500">MAINFRAME</span></h2>
+                            <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Global Operations Database</p>
+                        </div>
+                        <button onClick={onClose} className="p-3 bg-slate-800 rounded-xl text-slate-400 hover:bg-slate-700"><Icon name="x" /></button>
+                    </div>
+
+                    {/* Search & Filter */}
+                    <div className="space-y-4 mb-6">
+                        <input
+                            value={search}
+                            onChange={e => setSearch(e.target.value)}
+                            placeholder="Search Mainframe..."
+                            className="w-full p-4 bg-slate-900 rounded-2xl font-bold text-xs text-white border-none focus:ring-2 focus:ring-indigo-500"
+                            autoFocus
+                        />
+                        <div className="flex gap-2 overflow-x-auto no-scrollbar pb-2">
+                            {categories.map(cat => (
+                                <button key={cat} onClick={() => setFilter(cat)} className={`px-4 py-2 rounded-xl text-[9px] font-black uppercase tracking-widest whitespace-nowrap transition-all ${filter === cat ? 'bg-indigo-600 text-white' : 'bg-slate-900 text-slate-500 border border-white/5'}`}>
+                                    {cat}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* List */}
+                    <div className="flex-1 overflow-y-auto space-y-3 pr-2">
+                        {filtered.length > 0 ? filtered.map((ex, i) => {
+                            const isOwned = masterExercises.some(e => e.name === ex.name);
+                            const impact = getImpact(ex);
+
+                            return (
+                                <div key={i} className={`p-4 rounded-2xl border flex flex-col gap-3 transition-all ${isOwned ? 'bg-indigo-900/10 border-indigo-500/30' : 'bg-slate-900/50 border-white/5'}`}>
+                                    <div className="flex justify-between items-start">
+                                        <div className="space-y-1 flex-1">
+                                            <div className="flex items-center gap-2">
+                                                <span className="px-2 py-1 bg-slate-800 rounded-lg text-[8px] font-black text-slate-400 uppercase tracking-wider">{ex.station || 'Tytax'}</span>
+                                                {ex.unilateral && <span className="text-[8px] font-bold text-purple-400 uppercase">Unilateral</span>}
+                                                {isOwned && <span className="text-[8px] font-black text-emerald-500 uppercase tracking-widest flex items-center gap-1"><Icon name="check" className="w-3 h-3" /> ACQUIRED</span>}
+                                            </div>
+                                            <h4 className="font-black text-sm text-white leading-tight">{cleanName(ex.name)}</h4>
+                                        </div>
+                                        <button
+                                            onClick={() => onRequisition(ex)}
+                                            className={`px-4 py-3 rounded-xl text-[9px] font-black uppercase tracking-widest transition-all ${isOwned ? 'bg-slate-800 text-slate-400 hover:bg-indigo-900/50 hover:text-indigo-400' : 'bg-indigo-600 text-white shadow-lg hover:scale-105'}`}
+                                        >
+                                            {isOwned ? 'Update Intel' : 'Requisition'}
+                                        </button>
+                                    </div>
+
+                                    {/* Quick Stats */}
+                                    <div className="flex flex-wrap gap-2">
+                                        {impact.map((imp, idx) => (
+                                            <div key={idx} className="flex items-center gap-1 bg-black/30 px-2 py-1 rounded-lg">
+                                                <div className={`w-1 h-1 rounded-full ${imp.level === 'Primary' ? 'bg-indigo-500' : 'bg-slate-600'}`} />
+                                                <span className={`text-[8px] font-bold uppercase ${imp.level === 'Primary' ? 'text-indigo-300' : 'text-slate-500'}`}>{imp.muscle}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            );
+                        }) : (
+                            <div className="py-20 text-center opacity-40">
+                                <p className="text-[10px] font-black uppercase tracking-widest">No Intel Found</p>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            );
+        };
+
         const BuilderWizard = ({ onComplete, onCancel }) => {
             const [step, setStep] = useState(1);
             const [config, setConfig] = useState({ days: 3, split: 'FB', session: null });
@@ -3881,7 +3979,7 @@
         };
 
         // Optimized: Memoized to prevent expensive re-filtering (regex/loops) on global timer ticks
-        const Arsenal = React.memo(({ masterExercises, oledMode }) => {
+        const Arsenal = React.memo(({ masterExercises, onOpenMainframe, onDelete, oledMode }) => {
             const [search, setSearch] = useState('');
             const [filter, setFilter] = useState('ALL');
 
@@ -3919,6 +4017,14 @@
                             </div>
                         </div>
 
+                        <button
+                            onClick={onOpenMainframe}
+                            className="w-full py-4 bg-indigo-900/30 border border-indigo-500/30 rounded-2xl flex items-center justify-center gap-3 text-indigo-400 font-black text-[10px] uppercase tracking-widest hover:bg-indigo-900/50 transition-all group shadow-lg"
+                        >
+                            <Icon name="library" className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                            <span>Requisition New Intel</span>
+                        </button>
+
                         <input
                             value={search}
                             onChange={e => setSearch(e.target.value)}
@@ -3952,9 +4058,34 @@
                                             </div>
                                             <h4 className="font-black text-sm text-white leading-tight">{cleanName(ex.name)}</h4>
                                         </div>
-                                        <a href={`https://www.youtube.com/results?search_query=TYTAX+T1+${encodeURIComponent(ex.name)}`} target="_blank" className="p-3 bg-slate-800 rounded-xl text-slate-500 hover:text-red-500 hover:bg-slate-900 transition-colors">
-                                            <Icon name="play" className="w-4 h-4" />
-                                        </a>
+                                        <div className="flex gap-2">
+                                            {/* Video Links Dropdown or List */}
+                                            {ex.videos && ex.videos.length > 0 ? (
+                                                <div className="relative group/video">
+                                                    <a href={ex.videos[0].url} target="_blank" className="p-3 bg-slate-800 rounded-xl text-slate-500 hover:text-indigo-400 hover:bg-slate-900 transition-colors flex items-center justify-center">
+                                                        <Icon name="play" className="w-4 h-4" />
+                                                    </a>
+                                                    {/* Hover Menu for multiple videos */}
+                                                    {ex.videos.length > 1 && (
+                                                        <div className="absolute right-0 top-full mt-2 w-48 bg-slate-900 border border-white/10 rounded-xl shadow-2xl opacity-0 group-hover/video:opacity-100 pointer-events-none group-hover/video:pointer-events-auto z-50 p-1">
+                                                            {ex.videos.map((v, vid) => (
+                                                                <a key={vid} href={v.url} target="_blank" className="block px-3 py-2 rounded-lg text-[9px] font-bold text-slate-400 hover:text-white hover:bg-slate-800 truncate">
+                                                                    {v.label || `Video ${vid+1}`}
+                                                                </a>
+                                                            ))}
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            ) : (
+                                                <a href={`https://www.youtube.com/results?search_query=TYTAX+T1+${encodeURIComponent(ex.name)}`} target="_blank" className="p-3 bg-slate-800 rounded-xl text-slate-500 hover:text-red-500 hover:bg-slate-900 transition-colors">
+                                                    <Icon name="play" className="w-4 h-4" />
+                                                </a>
+                                            )}
+
+                                            <button onClick={() => onDelete(ex.name)} className="p-3 bg-red-900/10 rounded-xl text-red-500 hover:bg-red-900/30 transition-colors">
+                                                <Icon name="trash" className="w-4 h-4" />
+                                            </button>
+                                        </div>
                                     </div>
 
                                     <div className="flex flex-wrap gap-2">
@@ -5387,16 +5518,11 @@
             });
             const [masterExercises, setMasterExercises] = useState(() => {
                 try {
-                    const local = JSON.parse(localStorage.getItem('tytax_master_exercises') || '[]');
-                    if (Array.isArray(local) && local.length > 0) return local;
-
-                    // FALLBACK FOR EMPTY STATE (Fix #4)
-                    const p = PRESETS.find(pr => pr.id === 'kinetic_impact') || PRESETS[0];
-                    return p?.data.MASTER_EXERCISES || [];
+                    // Active Arsenal - Starts EMPTY for new users to prompt Mainframe selection
+                    return JSON.parse(localStorage.getItem('tytax_master_exercises') || '[]');
                 } catch (e) {
                     console.error("Error parsing tytax_master_exercises from localStorage", e);
-                    // Absolute fallback
-                    return PRESETS[0]?.data.MASTER_EXERCISES || [];
+                    return [];
                 }
             });
             const [startDate, setStartDate] = useState(() => localStorage.getItem('tytax_start_date') || new Date().toISOString().split('T')[0]);
@@ -5471,6 +5597,12 @@
 
             // --- DATA MIGRATION CHECK ---
             useEffect(() => {
+                // Onboarding: If empty library, open Mainframe
+                if (masterExercises.length === 0) {
+                    setShowMainframe(true);
+                    showToast("Welcome Commander. Initialize Arsenal.");
+                }
+
                 // Check if we need to upgrade to Kinetic Impact data
                 const currentPreset = allPresets.find(p => p.id === 'kinetic_impact');
                 if (currentPreset && masterExercises.length > 0) {
@@ -5504,8 +5636,32 @@
             const [editingLog, setEditingLog] = useState(null);
             const [manualExpanded, setManualExpanded] = useState(() => new Set());
             const [isAddingExercise, setIsAddingExercise] = useState(false);
+            const [showMainframe, setShowMainframe] = useState(false);
 
             const availableExercises = useMemo(() => getAvailableExercises(logs), [logs]);
+
+            const handleRequisition = (mainframeEx) => {
+                const existing = masterExercises.find(e => e.name === mainframeEx.name);
+
+                // Merge Logic: Overwrite rich data (Impact, Videos, Notes) but PRESERVE user settings (Sets/Reps) if they exist
+                const newEx = {
+                    ...mainframeEx,
+                    sets: existing ? existing.sets : mainframeEx.sets,
+                    reps: existing ? existing.reps : mainframeEx.reps,
+                    // Ensure station is preserved if user customized it, otherwise update from Mainframe
+                    station: existing ? existing.station : mainframeEx.station
+                };
+
+                let updated;
+                if (existing) {
+                    updated = masterExercises.map(e => e.name === mainframeEx.name ? newEx : e);
+                    showToast("Intel Updated");
+                } else {
+                    updated = [...masterExercises, newEx];
+                    showToast("Requisition Approved");
+                }
+                setMasterExercises(updated);
+            };
 
             const handleBackup = (dataOverride) => {
                 const data = dataOverride || { logs, sessionOrder, trainingPlan, masterExercises, startDate, oledMode, userInventory, userProfile, customProtocols, warmupStrategy };
@@ -6685,14 +6841,32 @@
                             </div>
                         )}
 
+                        {showMainframe && (
+                            <MainframeModal
+                                masterExercises={masterExercises}
+                                onRequisition={handleRequisition}
+                                onClose={() => setShowMainframe(false)}
+                            />
+                        )}
+
                         {activeTab === 'arsenal' && (
-                            <Arsenal masterExercises={library} oledMode={oledMode} />
+                            <Arsenal
+                                masterExercises={masterExercises}
+                                onOpenMainframe={() => setShowMainframe(true)}
+                                onDelete={(name) => {
+                                    if(confirm(`Delete ${name} from Arsenal?`)) {
+                                        setMasterExercises(masterExercises.filter(e => e.name !== name));
+                                        showToast("Exercise Removed");
+                                    }
+                                }}
+                                oledMode={oledMode}
+                            />
                         )}
 
                         {/* BUILDER TAB */}
                         {activeTab === 'builder' && (
                             <BuilderTab 
-                                metaLibrary={library}
+                                metaLibrary={masterExercises}
                                 userInventory={userInventory}
                                 oledMode={oledMode}
                                 onSave={(newProtocol) => {
