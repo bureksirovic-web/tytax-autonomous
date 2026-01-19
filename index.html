@@ -484,6 +484,14 @@
 
         const getVideoData = (name) => {
             const mainframe = window.TYTAX_MAINFRAME || [];
+            if (!mainframe.length) return [];
+
+            // Helper: Check if exercise has valid videos
+            const hasVideos = (e) => e && e.videos && e.videos.length > 0;
+
+            // 1. Exact Match
+            let ex = mainframe.find(e => e.name === name);
+            if (hasVideos(ex)) return ex.videos;
 
             if (!VIDEO_CACHE_INIT && mainframe.length > 0) {
                 mainframe.forEach(ex => {
@@ -501,11 +509,54 @@
             if (VIDEO_CACHE.has(name)) return VIDEO_CACHE.get(name);
 
             const clean = cleanName(name);
-            if (VIDEO_CACHE.has(clean)) return VIDEO_CACHE.get(clean);
+            ex = mainframe.find(e => e.name === clean);
+            if (hasVideos(ex)) return ex.videos;
 
-            // 3. Substring Match (Fallback - Keep expensive scan only for misses)
-            const ex = mainframe.find(e => name.includes(e.name) && e.name.length > 5);
-            return ex?.videos || [];
+            // 3. Station Strip Match (Generic Fallback)
+            // Removes specific station prefixes to find the "base" movement
+            const genericName = clean
+                .replace(/Upper Pulley\s*/i, '')
+                .replace(/Lower Pulley\s*/i, '')
+                .replace(/Smith\s*/i, '')
+                .replace(/Lever\s*/i, '')
+                .replace(/Cable\s*/i, '')
+                .trim();
+
+            // Try exact match on generic name
+            ex = mainframe.find(e => e.name === genericName);
+            if (hasVideos(ex)) return ex.videos;
+
+            // 4. Smart Token Match (Fuzzy Search)
+            // Finds the exercise with the most matching words
+            const tokens = genericName.toLowerCase().split(/\s+/).filter(t => t.length > 2);
+            if (tokens.length === 0) return [];
+
+            const candidates = mainframe.filter(e => hasVideos(e));
+            let bestMatch = null;
+            let maxScore = 0;
+
+            for (const candidate of candidates) {
+                const candName = candidate.name.toLowerCase();
+                let score = 0;
+                tokens.forEach(t => {
+                    if (candName.includes(t)) score++;
+                });
+
+                // Boost score if the candidate name includes the full generic string (substring match)
+                if (candName.includes(genericName.toLowerCase())) score += 2;
+
+                if (score > maxScore) {
+                    maxScore = score;
+                    bestMatch = candidate;
+                }
+            }
+
+            // Require significant match confidence
+            if (bestMatch && maxScore >= Math.min(2, tokens.length)) {
+                return bestMatch.videos;
+            }
+
+            return [];
         };
 
         // --- PRESETS --- 
