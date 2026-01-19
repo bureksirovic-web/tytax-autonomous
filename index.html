@@ -478,6 +478,10 @@
              return Array.from(set).sort();
         };
 
+        // Optimization: Cache video lookups to avoid O(N) scan on every render
+        const VIDEO_CACHE = new Map();
+        let VIDEO_CACHE_INIT = false;
+
         const getVideoData = (name) => {
             const mainframe = window.TYTAX_MAINFRAME || [];
             if (!mainframe.length) return [];
@@ -489,7 +493,21 @@
             let ex = mainframe.find(e => e.name === name);
             if (hasVideos(ex)) return ex.videos;
 
-            // 2. Clean Name Match (Strip TYTAX prefix)
+            if (!VIDEO_CACHE_INIT && mainframe.length > 0) {
+                mainframe.forEach(ex => {
+                    if (ex.videos && ex.videos.length > 0) {
+                        VIDEO_CACHE.set(ex.name, ex.videos);
+                        // Also cache by clean name to speed up step 2
+                        const c = cleanName(ex.name);
+                        if (!VIDEO_CACHE.has(c)) VIDEO_CACHE.set(c, ex.videos);
+                    }
+                });
+                VIDEO_CACHE_INIT = true;
+            }
+
+            // 1. & 2. Fast Lookup (Exact or Clean via Cache)
+            if (VIDEO_CACHE.has(name)) return VIDEO_CACHE.get(name);
+
             const clean = cleanName(name);
             ex = mainframe.find(e => e.name === clean);
             if (hasVideos(ex)) return ex.videos;
