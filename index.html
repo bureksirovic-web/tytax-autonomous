@@ -3896,6 +3896,7 @@
  
         const MainframeModal = ({ masterExercises, onRequisition, onClose }) => {
             const [search, setSearch] = useState('');
+            const [debouncedSearch, setDebouncedSearch] = useState('');
             const [filter, setFilter] = useState('ALL');
             const [limit, setLimit] = useState(20);
 
@@ -3904,10 +3905,17 @@
 
             const categories = ['ALL', 'CHEST', 'BACK', 'SHOULDERS', 'BICEPS', 'TRICEPS', 'QUADS', 'HAMSTRINGS', 'GLUTES', 'CALVES', 'CORE'];
 
-            // Reset pagination on search/filter change
-            useEffect(() => { setLimit(20); }, [search, filter]);
+            // Debounce search input
+            useEffect(() => {
+                const timer = setTimeout(() => setDebouncedSearch(search), 300);
+                return () => clearTimeout(timer);
+            }, [search]);
+
+            // Reset pagination on filter change
+            useEffect(() => { setLimit(20); }, [debouncedSearch, filter]);
 
             const filtered = useMemo(() => {
+                const s = debouncedSearch.toLowerCase();
                 return mainframe.filter(ex => {
                     let matchesCat = filter === 'ALL';
                     if (!matchesCat) {
@@ -3916,11 +3924,11 @@
                         if (!matchesCat && ex.muscle_group) matchesCat = ex.muscle_group.toUpperCase() === filter;
                     }
 
-                    const matchesSearch = ex.name.toLowerCase().includes(search.toLowerCase()) ||
-                                          (ex.pattern && ex.pattern.toLowerCase().includes(search.toLowerCase()));
+                    const matchesSearch = ex.name.toLowerCase().includes(s) ||
+                                          (ex.pattern && ex.pattern.toLowerCase().includes(s));
                     return matchesCat && matchesSearch;
                 });
-            }, [filter, search, mainframe]);
+            }, [filter, debouncedSearch, mainframe]);
 
             const paginated = filtered.slice(0, limit);
 
@@ -4155,6 +4163,7 @@
         // Optimized: Memoized to prevent expensive re-filtering (regex/loops) on global timer ticks
         const Arsenal = React.memo(({ masterExercises, onOpenMainframe, onDelete, oledMode, logs }) => {
             const [search, setSearch] = useState('');
+            const [debouncedSearch, setDebouncedSearch] = useState('');
             const [filter, setFilter] = useState('ALL');
             const [limit, setLimit] = useState(20);
 
@@ -4176,10 +4185,17 @@
                 return m.toUpperCase();
             }))];
 
+            // Debounce search input
+            useEffect(() => {
+                const timer = setTimeout(() => setDebouncedSearch(search), 300);
+                return () => clearTimeout(timer);
+            }, [search]);
+
             // Reset pagination on filter change
-            useEffect(() => { setLimit(20); }, [search, filter]);
+            useEffect(() => { setLimit(20); }, [debouncedSearch, filter]);
 
             const filtered = useMemo(() => {
+                const s = debouncedSearch.toLowerCase();
                 return masterExercises.filter(ex => {
                     const primaryMuscle = ex.muscle_group || (() => {
                         const i = getImpact(ex);
@@ -4190,11 +4206,11 @@
                     if (filter === 'BACK' && (primaryMuscle === 'BACK_VERTICAL' || primaryMuscle === 'BACK_HORIZONTAL')) {
                         matchesCat = true;
                     }
-                    const matchesSearch = ex.name.toLowerCase().includes(search.toLowerCase()) ||
-                                        (ex.pattern && ex.pattern.toLowerCase().includes(search.toLowerCase()));
+                    const matchesSearch = ex.name.toLowerCase().includes(s) ||
+                                        (ex.pattern && ex.pattern.toLowerCase().includes(s));
                     return matchesCat && matchesSearch;
                 });
-            }, [masterExercises, filter, search]);
+            }, [masterExercises, filter, debouncedSearch]);
 
             const paginated = filtered.slice(0, limit);
 
