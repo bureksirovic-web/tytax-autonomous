@@ -491,17 +491,14 @@
         let VIDEO_CACHE_INIT = false;
 
         const getVideoData = (name) => {
+            // 1. Fast Cache Lookup (covers Exact Match & Previous Lookups)
+            if (VIDEO_CACHE.has(name)) return VIDEO_CACHE.get(name);
+
             const mainframe = window.TYTAX_MAINFRAME || [];
             if (!mainframe.length) return [];
 
-            // Helper: Check if exercise has valid videos
-            const hasVideos = (e) => e && e.videos && e.videos.length > 0;
-
-            // 1. Exact Match
-            let ex = mainframe.find(e => e.name === name);
-            if (hasVideos(ex)) return ex.videos;
-
-            if (!VIDEO_CACHE_INIT && mainframe.length > 0) {
+            // 0. Initialize Cache Once
+            if (!VIDEO_CACHE_INIT) {
                 mainframe.forEach(ex => {
                     if (ex.videos && ex.videos.length > 0) {
                         VIDEO_CACHE.set(ex.name, ex.videos);
@@ -511,14 +508,23 @@
                     }
                 });
                 VIDEO_CACHE_INIT = true;
+
+                // Re-check cache after init
+                if (VIDEO_CACHE.has(name)) return VIDEO_CACHE.get(name);
             }
 
-            // 1. & 2. Fast Lookup (Exact or Clean via Cache)
-            if (VIDEO_CACHE.has(name)) return VIDEO_CACHE.get(name);
+            // 2. Heavy Lifting (Fuzzy / Fallback)
+
+            // Helper: Check if exercise has valid videos
+            const hasVideos = (e) => e && e.videos && e.videos.length > 0;
 
             const clean = cleanName(name);
-            ex = mainframe.find(e => e.name === clean);
-            if (hasVideos(ex)) return ex.videos;
+            // Check cache for clean name (in case name != cleanName and cleanName is in cache)
+            if (VIDEO_CACHE.has(clean)) {
+                const v = VIDEO_CACHE.get(clean);
+                VIDEO_CACHE.set(name, v); // Cache for original name
+                return v;
+            }
 
             // 3. Station Strip Match (Generic Fallback)
             // Removes specific station prefixes to find the "base" movement
@@ -530,14 +536,20 @@
                 .replace(/Cable\s*/i, '')
                 .trim();
 
-            // Try exact match on generic name
-            ex = mainframe.find(e => e.name === genericName);
-            if (hasVideos(ex)) return ex.videos;
+            // Try exact match on generic name (O(N) search)
+            let ex = mainframe.find(e => e.name === genericName);
+            if (hasVideos(ex)) {
+                VIDEO_CACHE.set(name, ex.videos);
+                return ex.videos;
+            }
 
             // 4. Smart Token Match (Fuzzy Search)
             // Finds the exercise with the most matching words
             const tokens = genericName.toLowerCase().split(/\s+/).filter(t => t.length > 2);
-            if (tokens.length === 0) return [];
+            if (tokens.length === 0) {
+                VIDEO_CACHE.set(name, []);
+                return [];
+            }
 
             const candidates = mainframe.filter(e => hasVideos(e));
             let bestMatch = null;
@@ -561,9 +573,12 @@
 
             // Require significant match confidence
             if (bestMatch && maxScore >= Math.min(2, tokens.length)) {
+                VIDEO_CACHE.set(name, bestMatch.videos);
                 return bestMatch.videos;
             }
 
+            // Cache negative result to prevent future searches
+            VIDEO_CACHE.set(name, []);
             return [];
         };
 
