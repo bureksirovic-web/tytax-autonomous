@@ -65,13 +65,21 @@
         });
 
         // New Component: VideoAction to handle Single vs Multiple Videos
-        const VideoAction = React.memo(({ videos, className, showLabel = false }) => {
+        const VideoAction = React.memo(({ videos, exerciseName, className, showLabel = false }) => {
             const [open, setOpen] = useState(false);
-
-            if (!videos || videos.length === 0) return null;
 
             // Base classes for the button/link
             const baseClass = className || "p-3 bg-slate-800 rounded-xl text-slate-500 hover:text-indigo-400 hover:bg-slate-900 transition-colors flex items-center justify-center gap-2";
+
+            if (!videos || videos.length === 0) {
+                if (!exerciseName) return null;
+                return (
+                    <a href={`https://www.youtube.com/results?search_query=${encodeURIComponent(exerciseName)}`} target="_blank" className={baseClass}>
+                        <Icon name="play" className="w-4 h-4" />
+                        {showLabel && <span className="text-[9px] font-black uppercase tracking-widest">Youtube search</span>}
+                    </a>
+                );
+            }
 
             if (videos.length === 1) {
                 return (
@@ -3989,6 +3997,7 @@
                                                     </button>
                                                     <VideoAction
                                                         videos={ex.videos}
+                                                        exerciseName={ex.name}
                                                         className="w-full py-2 bg-slate-800 rounded-xl text-slate-500 hover:text-indigo-400 hover:bg-slate-700 transition-colors flex items-center justify-center gap-2"
                                                         showLabel={true}
                                                     />
@@ -4276,7 +4285,7 @@
                                                     </div>
                                                     {(() => {
                                                         const videos = ex.videos && ex.videos.length > 0 ? ex.videos : getVideoData(ex.name);
-                                                        return <VideoAction videos={videos} />;
+                                                        return <VideoAction videos={videos} exerciseName={ex.name} />;
                                                     })()}
 
                                                     <button onClick={() => onDelete(ex.name)} className="p-3 bg-red-900/10 rounded-xl text-red-500 hover:bg-red-900/30 transition-colors">
@@ -6865,7 +6874,7 @@
                                                                     <div className="flex gap-2" onClick={e => e.stopPropagation()}>
                                                                         {(() => {
                                                                             const videos = ex.videos && ex.videos.length > 0 ? ex.videos : getVideoData(ex.name);
-                                                                            return <VideoAction videos={videos} className="p-3 bg-slate-900 rounded-xl text-slate-500 border border-white/5 hover:text-indigo-400 transition-colors flex items-center justify-center" />;
+                                                                            return <VideoAction videos={videos} exerciseName={ex.name} className="p-3 bg-slate-900 rounded-xl text-slate-500 border border-white/5 hover:text-indigo-400 transition-colors flex items-center justify-center" />;
                                                                         })()}
                                                                     </div>
                                                                 </div>
