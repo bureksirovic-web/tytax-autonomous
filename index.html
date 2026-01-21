@@ -6272,6 +6272,11 @@
                 return calculateImpactDistribution(masterExercises, false);
             }, [masterExercises]);
 
+            const liveSessionImpact = useMemo(() => {
+                if (!currentWorkout) return [];
+                return calculateImpactDistribution(currentWorkout.exercises, true, userProfile?.bodyweight);
+            }, [currentWorkout, userProfile?.bodyweight]);
+
             const recoveryStatus = useMemo(() => {
                 if (!logs.length) return { status: 'Fresh', pct: 100, color: 'text-emerald-500', barColor: 'bg-emerald-500' };
                 
@@ -6806,7 +6811,7 @@
                                                 </div>
                                                 <div className="space-y-2">
                                                     {(() => {
-                                                        const sorted = calculateImpactDistribution(currentWorkout.exercises, true, userProfile?.bodyweight);
+                                                        const sorted = liveSessionImpact;
                                                         if (sorted.length === 0) return <span className="text-[9px] text-slate-600 font-bold uppercase tracking-widest italic">{t('trends.no_data')}</span>;
                                                         
                                                         return sorted.map((d) => (
@@ -7036,7 +7041,7 @@
 
                                                 <div className="grid grid-cols-10 gap-1 h-16 items-end overflow-x-auto">
                                                      {['Chest', 'Back', 'Shoulders', 'Biceps', 'Triceps', 'Quads', 'Hamstrings', 'Glutes', 'Calves', 'Core'].map(group => {
-                                                         const score = calculateImpactDistribution(currentWorkout.exercises, true, userProfile?.bodyweight).find(d => d.muscle.toUpperCase().includes(group.toUpperCase()))?.score || 0;
+                                                         const score = liveSessionImpact.find(d => d.muscle.toUpperCase().includes(group.toUpperCase()))?.score || 0;
                                                          // Scale factor adjusted for Volume (approx 3000 volume load baseline vs 300 structure baseline)
                                                          const pct = Math.min(100, (score / 30000) * 100);
 
