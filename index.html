@@ -223,26 +223,39 @@
             };
         })();
 
-        const getImpact = (exercise) => {
-            // Check for v2.1 structured impact (Array)
-            if (exercise.impact && Array.isArray(exercise.impact)) {
-                return exercise.impact.map(i => ({ 
-                    muscle: normalizeMuscleName(i.m), 
-                    score: i.s,
-                    level: i.s >= 90 ? 'Primary' : i.s >= 50 ? 'Secondary' : 'Tertiary' 
-                }));
-            }
-            // Check for v3.0 structured impact (Object)
-            if (exercise.impact && typeof exercise.impact === 'object') {
-                 return Object.entries(exercise.impact).map(([k, v]) => ({
-                     muscle: normalizeMuscleName(k),
-                     score: v,
-                     level: v >= 90 ? 'Primary' : v >= 50 ? 'Secondary' : 'Tertiary'
-                 }));
-            }
-            // Fallback to old string-based note parsing
-            return parseImpact(exercise.note); 
-        };
+        // Optimized: Memoized to prevent object churn during filtering/stats
+        const getImpact = (() => {
+            const cache = new WeakMap();
+            return (exercise) => {
+                if (!exercise) return [];
+                if (cache.has(exercise)) return cache.get(exercise);
+
+                let result;
+                // Check for v2.1 structured impact (Array)
+                if (exercise.impact && Array.isArray(exercise.impact)) {
+                    result = exercise.impact.map(i => ({
+                        muscle: normalizeMuscleName(i.m),
+                        score: i.s,
+                        level: i.s >= 90 ? 'Primary' : i.s >= 50 ? 'Secondary' : 'Tertiary'
+                    }));
+                }
+                // Check for v3.0 structured impact (Object)
+                else if (exercise.impact && typeof exercise.impact === 'object') {
+                     result = Object.entries(exercise.impact).map(([k, v]) => ({
+                         muscle: normalizeMuscleName(k),
+                         score: v,
+                         level: v >= 90 ? 'Primary' : v >= 50 ? 'Secondary' : 'Tertiary'
+                     }));
+                }
+                // Fallback to old string-based note parsing
+                else {
+                    result = parseImpact(exercise.note);
+                }
+
+                cache.set(exercise, result);
+                return result;
+            };
+        })();
 
         const getProjectedImpact = (exercises) => {
             const impact = {};
@@ -4202,12 +4215,12 @@
                 return counts;
             }, [logs]);
 
-            const categories = ['ALL', 'BACK', ...new Set(masterExercises.map(ex => {
+            const categories = useMemo(() => ['ALL', 'BACK', ...new Set(masterExercises.map(ex => {
                 if (ex.muscle_group) return ex.muscle_group;
                 const imp = getImpact(ex);
                 let m = imp.length > 0 ? imp[0].muscle : 'OTHER';
                 return m.toUpperCase();
-            }))];
+            }))], [masterExercises]);
 
             // Debounce search input
             useEffect(() => {
