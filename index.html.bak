@@ -1,7 +1,7 @@
-﻿<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tytax T1 Elite Companion - v3.1</title>
     <script src="https://cdn.tailwindcss.com/3.4.1"></script>
@@ -11,44 +11,44 @@
     <script src="https://unpkg.com/@babel/standalone@7.23.10/babel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="full_exercises_final.js"></script>
-    <style> 
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap'); 
-        body { font-family: 'Inter', sans-serif; background-color: #020617; color: #f1f5f9; overflow-x: hidden; -webkit-tap-highlight-color: transparent; } 
-        select { -webkit-appearance: none; appearance: none; cursor: pointer; } 
-        .tab-content { animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1); } 
-        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } } 
-        input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; } 
-        .no-scrollbar::-webkit-scrollbar { display: none; } 
-        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); } 
-        .timer-progress { transition: width 1s linear; } 
-        .accent-gradient { background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); } 
-        .status-pulse { animation: pulse 2s infinite; } 
-        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } } 
-        .glow-indigo { box-shadow: 0 0 20px rgba(99, 102, 241, 0.2); } 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #020617; color: #f1f5f9; overflow-x: hidden; -webkit-tap-highlight-color: transparent; }
+        select { -webkit-appearance: none; appearance: none; cursor: pointer; }
+        .tab-content { animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); }
+        .timer-progress { transition: width 1s linear; }
+        .accent-gradient { background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); }
+        .status-pulse { animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+        .glow-indigo { box-shadow: 0 0 20px rgba(99, 102, 241, 0.2); }
         .glow-yellow { box-shadow: 0 0 20px rgba(234, 179, 8, 0.2); }
-    </style> 
-</head> 
-<body> 
-    <div id="root"></div> 
- 
-    <script type="text/babel"> 
-        const { useState, useEffect, useMemo, useRef } = React; 
- 
-        // --- ICONS --- 
-        const ICONS = { 
-            home: <><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></>, 
-            dumbbell: <path d="M14.4 14.4 9.6 9.6M18.657 21.485l-2.828-2.828M4.172 7l-2.829-2.828M6.343 4.828 3.515 2M22 17.657l-2.828-2.828M6.343 19.172 4.929 17.757M19.172 6.343l-1.415-1.414M17.757 4.929l-1.414-1.415M4.929 6.343l-1.414-1.414M17.657 22l-2.828-2.828M2 6.343l2.828 2.828M21.485 18.657l-2.828-2.828M11.5 15.5l-4-4M16.5 12.5l-4-4" />, 
-            trends: <><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></>, 
-            check: <polyline points="20 6 9 17 4 12" />, 
-            history: <><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /><path d="M3 3v5h5M12 7v5l4 2" /></>, 
-            settings: <><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></>, 
-            x: <><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></>, 
-            timer: <><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></>, 
-            play: <polygon points="5 3 19 12 5 21 5 3" />, 
-            library: <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5v-15z" />, 
-            tool: <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />, 
-            info: <><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></>, 
-            bolt: <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />, 
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect, useMemo, useRef } = React;
+
+        // --- ICONS ---
+        const ICONS = {
+            home: <><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></>,
+            dumbbell: <path d="M14.4 14.4 9.6 9.6M18.657 21.485l-2.828-2.828M4.172 7l-2.829-2.828M6.343 4.828 3.515 2M22 17.657l-2.828-2.828M6.343 19.172 4.929 17.757M19.172 6.343l-1.415-1.414M17.757 4.929l-1.414-1.415M4.929 6.343l-1.414-1.414M17.657 22l-2.828-2.828M2 6.343l2.828 2.828M21.485 18.657l-2.828-2.828M11.5 15.5l-4-4M16.5 12.5l-4-4" />,
+            trends: <><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></>,
+            check: <polyline points="20 6 9 17 4 12" />,
+            history: <><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /><path d="M3 3v5h5M12 7v5l4 2" /></>,
+            settings: <><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></>,
+            x: <><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></>,
+            timer: <><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></>,
+            play: <polygon points="5 3 19 12 5 21 5 3" />,
+            library: <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5v-15z" />,
+            tool: <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />,
+            info: <><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></>,
+            bolt: <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />,
             shield: <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>,
             filter: <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />,
             shuffle: <path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" />,
@@ -57,11 +57,11 @@
 
         // Optimized: Memoized to prevent re-renders on global updates
         const Icon = React.memo(({ name, className = "w-5 h-5" }) => {
-            return ( 
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={className}> 
-                    {ICONS[name] || <circle cx="12" cy="12" r="10" />} 
-                </svg> 
-            ); 
+            return (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+                    {ICONS[name] || <circle cx="12" cy="12" r="10" />}
+                </svg>
+            );
         });
 
         // New Component: VideoAction to handle Single vs Multiple Videos
@@ -121,7 +121,7 @@
                 </div>
             );
         });
- 
+
         // --- HELPER FUNCTIONS ---
         const safeLocalStorage = {
             setItem: (key, value) => {
@@ -223,55 +223,42 @@
             };
         })();
 
-        // Optimized: Memoized parsing to prevent expensive object creation on every render/filter
-        const getImpact = (() => {
-            const cache = new WeakMap();
-            return (exercise) => {
-                if (!exercise) return [];
-                if (cache.has(exercise)) return cache.get(exercise);
-
-                let result;
-                // Check for v2.1 structured impact (Array)
-                if (exercise.impact && Array.isArray(exercise.impact)) {
-                    result = exercise.impact.map(i => ({
-                        muscle: normalizeMuscleName(i.m),
-                        score: i.s,
-                        level: i.s >= 90 ? 'Primary' : i.s >= 50 ? 'Secondary' : 'Tertiary'
-                    }));
-                }
-                // Check for v3.0 structured impact (Object)
-                else if (exercise.impact && typeof exercise.impact === 'object') {
-                     result = Object.entries(exercise.impact).map(([k, v]) => ({
-                         muscle: normalizeMuscleName(k),
-                         score: v,
-                         level: v >= 90 ? 'Primary' : v >= 50 ? 'Secondary' : 'Tertiary'
-                     }));
-                }
-                // Fallback to old string-based note parsing
-                else {
-                    result = parseImpact(exercise.note);
-                }
-
-                cache.set(exercise, result);
-                return result;
-            };
-        })();
+        const getImpact = (exercise) => {
+            // Check for v2.1 structured impact (Array)
+            if (exercise.impact && Array.isArray(exercise.impact)) {
+                return exercise.impact.map(i => ({
+                    muscle: normalizeMuscleName(i.m),
+                    score: i.s,
+                    level: i.s >= 90 ? 'Primary' : i.s >= 50 ? 'Secondary' : 'Tertiary'
+                }));
+            }
+            // Check for v3.0 structured impact (Object)
+            if (exercise.impact && typeof exercise.impact === 'object') {
+                 return Object.entries(exercise.impact).map(([k, v]) => ({
+                     muscle: normalizeMuscleName(k),
+                     score: v,
+                     level: v >= 90 ? 'Primary' : v >= 50 ? 'Secondary' : 'Tertiary'
+                 }));
+            }
+            // Fallback to old string-based note parsing
+            return parseImpact(exercise.note);
+        };
 
         const getProjectedImpact = (exercises) => {
             const impact = {};
             exercises.forEach(ex => {
                 // Use robust helper for all data formats (V2 Array, V3 Object, or Notes)
-                const impactData = getImpact(ex); 
-                
+                const impactData = getImpact(ex);
+
                 const multiplier = ex.unilateral ? 2 : 1; // Double volume for unilateral
-                
+
                 impactData.forEach(i => {
                     const name = normalizeMuscleName(i.muscle);
                     const score = i.score * multiplier;
                     impact[name] = (impact[name] || 0) + score;
                 });
             });
-            
+
             // Normalize to percentage for the bar chart
             const max = Math.max(...Object.values(impact), 1);
             return Object.entries(impact)
@@ -289,7 +276,7 @@
         const parseImpact = (note) => {
             if (!note) return [];
             const impacts = [];
-            
+
             // New logic: Split by semicolon and parse each segment flexibly
             const segments = note.split(';');
             segments.forEach(segment => {
@@ -298,7 +285,7 @@
                 const levelMatch = cleanSeg.match(REGEX_LEVEL);
                 // Regex to find the score (digits)
                 const scoreMatch = cleanSeg.match(REGEX_SCORE);
-                
+
                 if (levelMatch && scoreMatch) {
                     // Extract muscle name: remove level, score, special chars like ~
                     let muscle = cleanSeg
@@ -307,7 +294,7 @@
                         .replace(REGEX_CLEAN_CHARS, '')
                         .replace(REGEX_CLEAN_PHRASE, '') // Specific cleanup for known noisy notes
                         .trim();
-                    
+
                     if (muscle) {
                         impacts.push({
                             level: levelMatch[0],
@@ -317,7 +304,7 @@
                     }
                 }
             });
-            
+
             return impacts;
         };
 
@@ -340,20 +327,20 @@
         const getLastMaxLoad = (exerciseName, logs) => {
             const history = logs.filter(l => l.exercises.some(e => e.name === exerciseName));
             if (!history.length) return 0;
-            
+
             // Find the most recent log for this exercise
             const lastLog = history[0]; // logs are sorted desc in App state
             const exercise = lastLog.exercises.find(e => e.name === exerciseName);
-            
+
             if (!exercise) return 0;
-            
+
             // Calculate max load from working sets
             const maxLoad = Math.max(...exercise.sets.map(s => {
                 // If type is present, exclude warmups. If not (legacy), assume working.
                 if (s.type === 'warmup') return 0;
                 return parseFloat(s.kg) || 0;
             }));
-            
+
             return maxLoad > 0 ? maxLoad : 0;
         };
 
@@ -378,7 +365,7 @@
                     // Fallback to simpler count (for Master Library or Protocol Ideal)
                     load = useRealData ? (ex.sets ? ex.sets.length : 1) : 1;
                 }
-                
+
                 if (ex.unilateral) load *= 2;
 
                 if (load > 0) {
@@ -389,10 +376,10 @@
                     });
                 }
             });
-            
+
             const values = Object.values(impact);
             const max = values.length ? Math.max(...values) : 1;
-            
+
             return Object.entries(impact)
                 .sort((a, b) => b[1] - a[1])
                 .map(([m, s]) => ({ muscle: m, score: s, pct: (s / max) * 100 }));
@@ -400,7 +387,7 @@
 
         const generateWarmups = (lastMax, strategy = 'Standard') => {
             if (!lastMax || lastMax <= 0) return [];
-            
+
             if (strategy === 'Heavy') {
                 return [
                     { kg: (lastMax * 0.50).toFixed(1), reps: 10, rir: '', done: false, type: 'warmup' },
@@ -425,52 +412,52 @@
         const getAttachment = (exerciseName, presets) => {
             const preset = presets.find(p => p.id === 'kinetic_impact');
             if (!preset || !preset.data.RECOMMENDED_ATTACHMENTS) return null;
-            
+
             const attachments = preset.data.RECOMMENDED_ATTACHMENTS;
             const name = exerciseName.toLowerCase();
-            
+
             if (name.includes('rope')) return attachments.find(a => a.name.toLowerCase().includes('rope'));
             if (name.includes('v-bar') || name.includes('v-handle')) return attachments.find(a => a.name.toLowerCase().includes('v-handle'));
             if (name.includes('straight bar')) return attachments.find(a => a.name.toLowerCase().includes('straight bar'));
             if (name.includes('single') || name.includes('one-arm')) return attachments.find(a => a.name.toLowerCase().includes('d-handles'));
             if (name.includes('ankle') || name.includes('kickback')) return attachments.find(a => a.name.toLowerCase().includes('ankle'));
             if (name.includes('belt')) return attachments.find(a => a.name.toLowerCase().includes('belt'));
-            
+
             return null;
         };
 
         const getLaggingMuscle = (logs, masterExercises, userBodyweight) => {
             if (!logs.length) return null;
-        
+
             // 1. Calculate Protocol Ideal (Global) - Structure Based (Count)
             const protocolDist = calculateImpactDistribution(masterExercises, false);
-        
+
             // 2. Calculate Actual (Last 7 Days) - Volume Based
             const now = new Date();
             const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
             const recentLogs = logs.filter(l => new Date(l.date) > sevenDaysAgo);
-        
+
             // Flatten all exercises from recent logs
             const allRecentExercises = recentLogs.flatMap(l => l.exercises);
             const actualDist = calculateImpactDistribution(allRecentExercises, true, userBodyweight);
-        
+
             // 3. Find largest negative delta
             // We compare the rank/presence. If a muscle is high in Protocol but low in Actual.
             // Simplified: Compare pct vs pct.
             let maxGap = 0;
             let laggingMuscle = null;
-        
+
             protocolDist.forEach(proto => {
                 const actual = actualDist.find(a => a.muscle === proto.muscle);
                 const actualPct = actual ? actual.pct : 0;
                 const gap = proto.pct - actualPct;
-        
+
                 if (gap > maxGap && gap > 30) { // Threshold of 30% gap
                     maxGap = gap;
                     laggingMuscle = proto.muscle;
                 }
             });
-        
+
             return laggingMuscle;
         };
 
@@ -595,12 +582,12 @@
             return [];
         };
 
-        // --- PRESETS --- 
-        const PRESETS = [ 
-            { 
-                id: "kinetic_impact", 
-                name: "Tytax Elite v3.0 (Fixed 6/1 Split)", 
-                description: "Official 6/1 Kinetic Load protocol updated for v3.0 library.", 
+        // --- PRESETS ---
+        const PRESETS = [
+            {
+                id: "kinetic_impact",
+                name: "Tytax Elite v3.0 (Fixed 6/1 Split)",
+                description: "Official 6/1 Kinetic Load protocol updated for v3.0 library.",
                 data: {
                   "MUSCLE_GROUPS": [
   {
@@ -3704,9 +3691,9 @@
                         "Upper A", "Lower A", "Upper B", "Lower B", "Upper C", "Lower C", "Rest Day"
                     ]
                 }
-            } 
-        ]; 
- 
+            }
+        ];
+
         // Optimized: Memoized to avoid chart destruction on parent re-renders
         const ProgressGraph = React.memo(({ data, color = "#818cf8", label = "Value" }) => {
             const canvasRef = useRef(null);
@@ -3714,13 +3701,13 @@
 
             useEffect(() => {
                 if (!canvasRef.current || !data || data.length < 2) return;
-                
+
                 if (chartRef.current) chartRef.current.destroy();
 
                 const ctx = canvasRef.current.getContext('2d');
                 const gradient = ctx.createLinearGradient(0, 0, 0, 300);
-                gradient.addColorStop(0, color + '40'); 
-                gradient.addColorStop(1, color + '00'); 
+                gradient.addColorStop(0, color + '40');
+                gradient.addColorStop(1, color + '00');
 
                 chartRef.current = new Chart(ctx, {
                     type: 'line',
@@ -3800,9 +3787,9 @@
         const OneRepMaxCalculator = ({ onClose }) => {
             const [weight, setWeight] = useState('');
             const [reps, setReps] = useState('');
-            
+
             const e1rm = calculateE1RM(weight, reps);
-            
+
             return (
                 <div className="fixed inset-0 z-[150] bg-black/80 backdrop-blur-sm flex items-center justify-center p-6" onClick={onClose}>
                     <div className="bg-slate-900 border border-white/10 rounded-[2rem] p-8 w-full max-w-sm space-y-6" onClick={e => e.stopPropagation()}>
@@ -3810,7 +3797,7 @@
                             <h3 className="text-xl font-black text-white italic uppercase tracking-tighter">{t('modals.one_rm_projector').split(' ')[0]}<br/><span className="text-indigo-500">{t('modals.one_rm_projector').split(' ').slice(1).join(' ')}</span></h3>
                             <button onClick={onClose} className="p-2 bg-slate-800 rounded-xl text-slate-400"><Icon name="x" /></button>
                         </div>
-                        
+
                         <div className="grid grid-cols-2 gap-4">
                             <div className="space-y-2">
                                 <label className="text-[9px] font-black text-slate-500 uppercase tracking-widest">{t('modals.weight_kg')}</label>
@@ -3821,7 +3808,7 @@
                                 <input type="number" value={reps} onChange={e => setReps(e.target.value)} className="w-full p-4 bg-black rounded-2xl font-black text-white border-none focus:ring-2 focus:ring-indigo-500" placeholder="0" />
                             </div>
                         </div>
-                        
+
                         <div className="bg-slate-800/50 p-6 rounded-[2rem] space-y-4">
                             <div className="flex justify-between items-center">
                                 <span className="text-xs font-black text-white uppercase tracking-widest">{t('modals.est_1rm')}</span>
@@ -3848,7 +3835,7 @@
                     <div className="w-full max-w-sm space-y-8 text-center relative">
                         {/* Confetti / Glow Effect */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-amber-500/20 blur-[100px] rounded-full animate-pulse" />
-                        
+
                         <div className="relative z-10 space-y-2">
                             <Icon name="bolt" className="w-16 h-16 text-amber-400 mx-auto animate-bounce" />
                             <h2 className="text-4xl font-black italic uppercase text-white tracking-tighter leading-none">{t('modals.new_record').split(' ')[0]}<br/><span className="text-amber-400">{t('modals.new_record').split(' ').slice(1).join(' ')}</span></h2>
@@ -3873,7 +3860,7 @@
             const [barWeight, setBarWeight] = useState(() => parseInt(localStorage.getItem('tytax_bar_weight') || '20'));
             useEffect(() => { localStorage.setItem('tytax_bar_weight', barWeight); }, [barWeight]);
             const plates = [25, 20, 15, 10, 5, 2.5, 1.25];
-            
+
             const calculate = () => {
                 let weight = (targetKg - barWeight) / 2;
                 if (weight <= 0) return [];
@@ -3886,9 +3873,9 @@
                 });
                 return needed;
             };
-            
+
             const result = calculate();
-            
+
             return (
                 <div className="fixed inset-0 z-[150] bg-black/80 backdrop-blur-sm flex items-center justify-center p-6" onClick={onClose}>
                     <div className="bg-slate-900 border border-white/10 rounded-[2rem] p-8 w-full max-w-sm space-y-6" onClick={e => e.stopPropagation()}>
@@ -3896,12 +3883,12 @@
                             <h3 className="text-xl font-black text-white italic uppercase tracking-tighter">{t('modals.plate_loader').split(' ')[0]}<br/><span className="text-indigo-500">{t('modals.plate_loader').split(' ').slice(1).join(' ')}</span></h3>
                             <button onClick={onClose} className="p-2 bg-slate-800 rounded-xl text-slate-400"><Icon name="x" /></button>
                         </div>
-                        
+
                         <div className="flex justify-between items-center bg-slate-800/50 p-4 rounded-2xl">
                             <span className="text-xs font-black text-slate-400 uppercase tracking-widest">{t('modals.target')}</span>
                             <span className="text-2xl font-black text-white">{targetKg} <span className="text-xs text-slate-500">KG</span></span>
                         </div>
-                        
+
                         <div className="space-y-4">
                             <div className="flex justify-between text-[10px] font-black uppercase tracking-widest text-slate-500">
                                 <span>{t('modals.per_side')}</span>
@@ -3929,7 +3916,7 @@
                 </div>
             );
         };
- 
+
         const MainframeModal = ({ masterExercises, onRequisition, onClose }) => {
             const [search, setSearch] = useState('');
             const [debouncedSearch, setDebouncedSearch] = useState('');
@@ -4095,7 +4082,7 @@
                 // Logic: 5+ days = PPL or UL; 4 days = UL or PPL; <4 days = FB or UL
                 const splits = config.days >= 5 ? ['PPL', 'UL'] : config.days === 4 ? ['UL', 'PPL'] : ['FB', 'UL'];
                 const splitNames = { 'PPL': 'Push / Pull / Legs', 'UL': 'Upper / Lower', 'FB': 'Full Body' };
-                
+
                 return (
                     <div className="absolute inset-0 z-50 glass flex items-center justify-center p-6">
                         <div className="max-w-sm w-full space-y-8">
@@ -4120,7 +4107,7 @@
             // Step 3: Session Focus
             // Logic: Determine valid session types based on the chosen split
             const sessions = config.split === 'PPL' ? ['Push', 'Pull', 'Legs'] : config.split === 'UL' ? ['Upper', 'Lower'] : ['Full Body'];
-            
+
             return (
                 <div className="absolute inset-0 z-50 glass flex items-center justify-center p-6">
                     <div className="max-w-sm w-full space-y-8">
@@ -4155,15 +4142,15 @@
                                  <h2 className="text-3xl font-black tracking-tighter italic uppercase leading-none">{t('builder.program_manager').split(' ')[0]}<br/><span className="text-indigo-500">{t('builder.program_manager').split(' ').slice(1).join(' ')}</span></h2>
                                  <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-2">{config.days}-Day {config.split} Split</p>
                             </div>
-                            <button 
-                                onClick={onPublish} 
+                            <button
+                                onClick={onPublish}
                                 disabled={!isComplete}
                                 className="px-6 py-3 bg-emerald-500 text-black rounded-xl text-[10px] font-black uppercase tracking-widest shadow-lg disabled:opacity-20 disabled:cursor-not-allowed flex items-center gap-2 transition-all"
                             >
                                 <Icon name="check" className="w-4 h-4" /> {t('builder.publish')}
                             </button>
                         </div>
-                        
+
                         {/* Progress Bar */}
                         <div className="h-1 bg-slate-800 rounded-full overflow-hidden">
                             <div className="h-full bg-emerald-500 transition-all duration-500" style={{width: `${(filledSlots / programDraft.length) * 100}%`}} />
@@ -4355,7 +4342,7 @@
         const BuilderTab = ({ metaLibrary, userInventory, onSave, onCancel, oledMode }) => {
             // STATE: Global Program
             const [wizardConfig, setWizardConfig] = useState(null);
-            const [programDraft, setProgramDraft] = useState([]); 
+            const [programDraft, setProgramDraft] = useState([]);
             const [activeSlot, setActiveSlot] = useState(null); // Index of day being edited
             const [view, setView] = useState('WIZARD'); // WIZARD -> MANAGER -> EDITOR
 
@@ -4369,7 +4356,7 @@
             // 1. WIZARD COMPLETION -> GENERATE SLOTS
             const handleWizardComplete = (config) => {
                 setWizardConfig(config);
-                
+
                 // Generate Empty Slots based on Split Type
                 const slots = Array.from({ length: config.days }).map((_, i) => {
                     let name = `Day ${i+1}`;
@@ -4385,7 +4372,7 @@
                     }
                     return { name, exercises: [] };
                 });
-                
+
                 setProgramDraft(slots);
                 setView('MANAGER');
             };
@@ -4424,7 +4411,7 @@
                         INITIAL_ORDER: [...programDraft.map(d => d.name), "Rest Day"]
                     }
                 };
-                
+
                 onSave(newProtocol);
             };
 
@@ -4447,7 +4434,7 @@
                     if (p.includes("press") || p.includes("squat") || p.includes("extension") || p.includes("push")) push++;
                     if (p.includes("pull") || p.includes("row") || p.includes("curl") || p.includes("deadlift")) pull++;
                 });
-                
+
                 // Avoid division by zero
                 const ratioVal = pull === 0 ? push : push / pull;
                 return {
@@ -4469,13 +4456,13 @@
                 // 1. SMART CONTEXT FILTER
                 const currentSlot = programDraft[activeSlot];
                 const isSmartActive = useSmartFilter; // Strict filtering even during search
-                
+
                 if (currentSlot && isSmartActive) {
                     const sessionName = currentSlot.name.toLowerCase();
                     const isUpper = sessionName.includes('upper') || sessionName.includes('push');
                     const isLower = sessionName.includes('lower') || sessionName.includes('legs');
                     const isPull = sessionName.includes('pull');
-                    
+
                     const imp = getImpact(ex);
                     const hits = (mList) => imp.some(i => mList.some(m => i.muscle.toLowerCase().includes(m.toLowerCase()) && i.level === 'Primary'));
                     const isCore = hits(['Abs', 'Obliques', 'Core', 'Serratus']);
@@ -4507,12 +4494,12 @@
                     const i = getImpact(ex);
                     return i.length > 0 ? i[0].muscle.toUpperCase() : 'OTHER';
                 })();
-                
+
                 let matchesCat = filter === 'ALL' || primaryMuscle === filter;
                 if (filter === 'BACK' && (primaryMuscle === 'BACK_VERTICAL' || primaryMuscle === 'BACK_HORIZONTAL')) {
                     matchesCat = true;
                 }
-                const matchesSearch = ex.name.toLowerCase().includes(search.toLowerCase()) || 
+                const matchesSearch = ex.name.toLowerCase().includes(search.toLowerCase()) ||
                                       (ex.pattern && ex.pattern.toLowerCase().includes(search.toLowerCase()));
                 return matchesCat && matchesSearch;
             });
@@ -4552,7 +4539,7 @@
                                     </button>
                                 </div>
                             </div>
-                            
+
                             {/* SEARCH & FILTER */}
                             <div className="flex gap-2">
                                 <input value={search} onChange={e => setSearch(e.target.value)} placeholder={t('builder.search')} className="w-full p-4 bg-slate-900 rounded-2xl font-bold text-xs text-white border-none focus:ring-2 focus:ring-indigo-500" />
@@ -4565,7 +4552,7 @@
                                     // Smart Filter: Hide irrelevant buttons
                                     const currentSlot = programDraft[activeSlot];
                                     const isSmartActive = useSmartFilter;
-                                    
+
                                     if (currentSlot && isSmartActive) {
                                         const sessionName = currentSlot.name.toLowerCase();
                                         const isPull = sessionName.includes('pull');
@@ -4578,8 +4565,8 @@
                                     }
 
                                     return (
-                                        <button 
-                                            key={cat} 
+                                        <button
+                                            key={cat}
                                             onClick={() => setFilter(cat)}
                                             className={`px-4 py-2 rounded-xl text-[9px] font-black uppercase tracking-widest whitespace-nowrap transition-all ${filter === cat ? 'bg-indigo-600 text-white shadow-lg' : 'bg-slate-900 text-slate-500 border border-white/5'}`}
                                         >
@@ -4588,7 +4575,7 @@
                                     );
                                 })}
                             </div>
-                            
+
                         </div>
 
                         {/* EXERCISE GRID */}
@@ -4596,19 +4583,19 @@
                             <div className="grid grid-cols-1 gap-4 pb-32"> {/* Added padding-bottom for the Dock */}
                                 {filteredExercises.map(ex => {
                                     const isSelected = draft.some(e => e.name === ex.name);
-                                    
+
                                     return (
                                         <div key={ex.name} onClick={() => toggleExercise(ex)} className={`p-6 rounded-[2.5rem] border transition-all duration-300 relative overflow-hidden group cursor-pointer ${isSelected ? 'bg-indigo-900/20 border-indigo-500/50' : 'glass border-white/5'}`}>
                                             {isSelected && <div className="absolute top-4 right-4 text-indigo-400"><Icon name="check" /></div>}
-                                            
+
                                             <div className="space-y-3">
                                                 <div className="flex flex-wrap gap-2">
                                                     <span className="px-2 py-1 bg-slate-800 rounded-lg text-[8px] font-black text-slate-400 uppercase tracking-wider">{ex.station || 'Free Weight'}</span>
                                                     {ex.unilateral && <span className="px-2 py-1 bg-purple-900/30 text-purple-400 rounded-lg text-[8px] font-black uppercase tracking-wider border border-purple-500/20">{t('workout.unilateral')}</span>}
                                                 </div>
-                                                
+
                                                 <h4 className={`font-black text-lg italic leading-tight ${isSelected ? 'text-indigo-200' : 'text-white'}`}>{cleanName(ex.name)}</h4>
-                                                
+
                                                 <div className="flex items-center justify-between">
                                                     <p className="text-[9px] font-bold text-slate-500 uppercase">{ex.pattern || 'Isolation'}</p>
                                                     {/* Project the primary muscle impact */}
@@ -4632,14 +4619,14 @@
                                     <p className="text-[10px] text-slate-500 max-w-[200px] mx-auto">Your filter "{t('muscles.' + normalizeMuscleName(filter))}" has no exercises in the current library.</p>
                                 </div>
                                 <div className="flex flex-col gap-2">
-                                    <button 
-                                        onClick={() => setFilter('ALL')} 
+                                    <button
+                                        onClick={() => setFilter('ALL')}
                                         className="px-8 py-4 bg-indigo-600 text-white rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] shadow-lg hover:scale-105 transition-transform"
                                     >
                                         {t('builder.show_all')}
                                     </button>
-                                    <button 
-                                        onClick={() => { setFilter('ALL'); setSearch(''); setUseInventoryFilter(false); }} 
+                                    <button
+                                        onClick={() => { setFilter('ALL'); setSearch(''); setUseInventoryFilter(false); }}
                                         className="px-8 py-4 bg-slate-900 text-slate-500 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] border border-white/5 hover:text-white transition-colors"
                                     >
                                         {t('builder.clear_filters')}
@@ -4672,7 +4659,7 @@
                                              const impact = getImpact(ex);
                                              // Map specific muscles to broad groups
                                              const matchScore = impact.reduce((s, i) => {
-                                                 const m = i.muscle; 
+                                                 const m = i.muscle;
                                                  let match = false;
                                                  if (group === 'Chest' && m.includes('Chest')) match = true;
                                                  if (group === 'Back' && (m === 'Lats' || m === 'Mid Back' || m.includes('Trap') || m.includes('Rhomboids') || m.includes('Erector') || m.includes('Back'))) match = true;
@@ -4692,7 +4679,7 @@
 
                                          // Normalize (Cap visual at 300 points)
                                          const pct = Math.min(100, (score / 300) * 100);
-                                         
+
                                          return (
                                              <div key={group} className="flex flex-col items-center gap-1 h-full justify-end group cursor-pointer" onClick={() => setFilter(group.toUpperCase())}>
                                                  <div className="w-full bg-slate-800/50 rounded-t-md relative h-full overflow-hidden">
@@ -4752,7 +4739,7 @@
                                 </div>
                             </div>
                         </div>
-        
+
                         <div className="space-y-4 relative z-10">
                             <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Perceived Exertion (RPE)</label>
                             <div className="grid grid-cols-5 gap-2">
@@ -4767,12 +4754,12 @@
                                 <span>Max Effort</span>
                             </div>
                         </div>
-        
+
                         <div className="space-y-4">
                             <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Captain's Log</label>
                             <textarea value={notes} onChange={e => setNotes(e.target.value)} className="w-full h-32 bg-slate-900 rounded-3xl p-5 text-xs text-white border-none focus:ring-2 focus:ring-emerald-500" placeholder="Session notes, injuries, or observations..." />
                         </div>
-        
+
                         <button onClick={() => onComplete({ rpe, notes })} className="w-full py-5 bg-emerald-500 text-black rounded-[2rem] font-black uppercase tracking-[0.2em] shadow-xl hover:scale-105 transition-transform">
                             Finalize Log
                         </button>
@@ -4873,7 +4860,7 @@
                         <h2 className="text-2xl font-black italic uppercase tracking-tighter text-white">Edit<br/><span className="text-indigo-500">Record</span></h2>
                         <button onClick={onCancel} className="p-4 bg-slate-900 rounded-2xl text-slate-500"><Icon name="x" /></button>
                     </div>
-                    
+
                     <div className="flex-1 overflow-y-auto space-y-8 pb-32 no-scrollbar">
                         <div className="space-y-4">
                             <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest px-2">Session Notes</label>
@@ -5021,11 +5008,11 @@
         const ExerciseSwapper = ({ targetName, masterExercises, userInventory, onSwap, onCancel }) => {
             const [search, setSearch] = useState('');
             const targetEx = masterExercises.find(e => e.name === targetName);
-            
+
             const candidates = useMemo(() => {
                 return masterExercises.filter(ex => {
                     if (ex.name === targetName) return false;
-                    
+
                     // Inventory Check
                     const att = getAttachment(ex.name, PRESETS);
                     if (att && !userInventory.includes(att.name) && att.priority !== 'Owned') return false;
@@ -5035,10 +5022,10 @@
 
                     const targetMuscle = targetEx ? (targetEx.muscle_group || getImpact(targetEx)[0]?.muscle) : null;
                     const exMuscle = ex.muscle_group || getImpact(ex)[0]?.muscle;
-                    
+
                     const muscleMatch = targetMuscle && exMuscle && normalizeMuscleName(targetMuscle) === normalizeMuscleName(exMuscle);
                     const patternMatch = targetEx ? (targetEx.pattern && ex.pattern && targetEx.pattern === ex.pattern) : false;
-                    
+
                     return muscleMatch || patternMatch;
                 }).sort((a, b) => a.name.localeCompare(b.name));
             }, [search, targetName, masterExercises, userInventory]);
@@ -5864,13 +5851,13 @@
 
             // --- UI STATES ---
             const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
-            const [selectedSession, setSelectedSession] = useState(null); 
-            const [currentWorkout, setCurrentWorkout] = useState(null); 
-            const [libraryInput, setLibraryInput] = useState(""); 
-            const [toast, setToast] = useState(null); 
-            const [stopwatch, setStopwatch] = useState(0); 
-            const [timer, setTimer] = useState(0); 
-            const [timerActive, setTimerActive] = useState(false); 
+            const [selectedSession, setSelectedSession] = useState(null);
+            const [currentWorkout, setCurrentWorkout] = useState(null);
+            const [libraryInput, setLibraryInput] = useState("");
+            const [toast, setToast] = useState(null);
+            const [stopwatch, setStopwatch] = useState(0);
+            const [timer, setTimer] = useState(0);
+            const [timerActive, setTimerActive] = useState(false);
             const [calculatorTarget, setCalculatorTarget] = useState(null);
             const [showOneRepMax, setShowOneRepMax] = useState(false);
             const [prCelebration, setPrCelebration] = useState(null); // Array of PRs or null
@@ -5954,7 +5941,7 @@
                 };
                 reader.readAsText(file);
             };
- 
+
             // --- STORAGE SAFETY & QUOTA WARNING (Fix #2) ---
             useEffect(() => {
                 const handleStorageError = () => showToast("WARNING: Storage Full! Data not saved.");
@@ -5962,7 +5949,7 @@
                 return () => window.removeEventListener('tytax-storage-error', handleStorageError);
             }, []);
 
-            useEffect(() => { 
+            useEffect(() => {
                 safeLocalStorage.setItem(getKey('tytax_logs'), JSON.stringify(logs));
                 safeLocalStorage.setItem(getKey('tytax_session_order'), JSON.stringify(sessionOrder));
                 safeLocalStorage.setItem(getKey('tytax_training_plan'), JSON.stringify(trainingPlan));
@@ -5975,14 +5962,14 @@
                 safeLocalStorage.setItem(getKey('tytax_bodyweight_log'), JSON.stringify(bodyweightLog));
                 safeLocalStorage.setItem(getKey('tytax_pinned_metrics'), JSON.stringify(pinnedMetrics));
             }, [logs, sessionOrder, trainingPlan, masterExercises, startDate, oledMode, warmupStrategy, userInventory, userProfile, bodyweightLog, pinnedMetrics]);
- 
-            useEffect(() => { 
-                let interval; 
+
+            useEffect(() => {
+                let interval;
                 if (timerActive && timer > 0) {
-                    interval = setInterval(() => setTimer(t => t - 1), 1000); 
+                    interval = setInterval(() => setTimer(t => t - 1), 1000);
                 } else if (timer === 0 && timerActive) {
                     setTimerActive(false);
-                    
+
                     // --- ENHANCED FEEDBACK SEQUENCE ---
                     // 1. Haptic Pulse (Double Tap)
                     if (navigator.vibrate) navigator.vibrate([200, 100, 200]);
@@ -5996,14 +5983,14 @@
                             const gain = ctx.createGain();
                             osc.connect(gain);
                             gain.connect(ctx.destination);
-                            
+
                             osc.type = 'sine';
-                            osc.frequency.setValueAtTime(880, ctx.currentTime); 
+                            osc.frequency.setValueAtTime(880, ctx.currentTime);
                             osc.frequency.exponentialRampToValueAtTime(440, ctx.currentTime + 0.2);
-                            
+
                             gain.gain.setValueAtTime(0.1, ctx.currentTime);
                             gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.2);
-                            
+
                             osc.start();
                             osc.stop(ctx.currentTime + 0.2);
                         }
@@ -6017,16 +6004,16 @@
                         u.pitch = 1.0;
                         window.speechSynthesis.speak(u);
                     }
-                } 
-                return () => clearInterval(interval); 
-            }, [timerActive, timer]); 
- 
-            useEffect(() => { 
-                let interval; 
-                if (currentWorkout) interval = setInterval(() => setStopwatch(s => s + 1), 1000); 
-                else setStopwatch(0); 
-                return () => clearInterval(interval); 
-            }, [currentWorkout]); 
+                }
+                return () => clearInterval(interval);
+            }, [timerActive, timer]);
+
+            useEffect(() => {
+                let interval;
+                if (currentWorkout) interval = setInterval(() => setStopwatch(s => s + 1), 1000);
+                else setStopwatch(0);
+                return () => clearInterval(interval);
+            }, [currentWorkout]);
 
             // Scroll Reset on Tab Change
             useEffect(() => window.scrollTo(0,0), [activeTab]);
@@ -6124,8 +6111,8 @@
                 window.addEventListener('keydown', handleNav);
                 return () => window.removeEventListener('keydown', handleNav);
             }, [activeTab, currentWorkout, manualExpanded]);
- 
-            const showToast = (m) => { setToast(m); setTimeout(() => setToast(null), 3000); }; 
+
+            const showToast = (m) => { setToast(m); setTimeout(() => setToast(null), 3000); };
 
             const exportCSV = () => {
                 const headers = ["Date,Session,Exercise,Set,KG,Reps,RIR,e1RM"];
@@ -6136,22 +6123,22 @@
                 const blob = new Blob([headers.concat(rows).join("\n")], { type: "text/csv" });
                 const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "tytax_training_log.csv"; a.click();
             };
- 
-            const applyLibraryData = (data) => { 
-                const cleanExercises = data.MASTER_EXERCISES.map(ex => ({ 
-                    ...ex, name: ex.name.replace(/\n/g, ' ').replace(/\s+/g, ' ').trim() 
-                })); 
-                const cleanPlan = {}; 
-                Object.entries(data.INITIAL_PLAN).forEach(([key, list]) => { 
-                    cleanPlan[key] = list.map(name => name.replace(/\n/g, ' ').replace(/\s+/g, ' ').trim()); 
-                }); 
-                setMasterExercises(cleanExercises); 
+
+            const applyLibraryData = (data) => {
+                const cleanExercises = data.MASTER_EXERCISES.map(ex => ({
+                    ...ex, name: ex.name.replace(/\n/g, ' ').replace(/\s+/g, ' ').trim()
+                }));
+                const cleanPlan = {};
+                Object.entries(data.INITIAL_PLAN).forEach(([key, list]) => {
+                    cleanPlan[key] = list.map(name => name.replace(/\n/g, ' ').replace(/\s+/g, ' ').trim());
+                });
+                setMasterExercises(cleanExercises);
                 setLibrary(cleanExercises); // Populate meta-library for Builder
-                setTrainingPlan(cleanPlan); 
-                setSessionOrder(data.INITIAL_ORDER || Object.keys(cleanPlan)); 
-            }; 
- 
-            const loadPreset = (p) => { applyLibraryData(p.data); showToast(`${p.name} Active`); setActiveTab('workout'); }; 
+                setTrainingPlan(cleanPlan);
+                setSessionOrder(data.INITIAL_ORDER || Object.keys(cleanPlan));
+            };
+
+            const loadPreset = (p) => { applyLibraryData(p.data); showToast(`${p.name} Active`); setActiveTab('workout'); };
             // FIX #1: Strict Type Validation in importJSON
             const importJSON = () => {
                 try {
@@ -6166,14 +6153,14 @@
                     showToast("Invalid Protocol JSON");
                 }
             };
- 
-            const getPredictedSession = (d) => { 
-                if (!sessionOrder.length) return null; 
-                const diff = Math.floor((new Date(d) - new Date(startDate)) / 86400000); 
-                return sessionOrder[((diff % sessionOrder.length) + sessionOrder.length) % sessionOrder.length]; 
-            }; 
- 
-            const startWorkout = () => { 
+
+            const getPredictedSession = (d) => {
+                if (!sessionOrder.length) return null;
+                const diff = Math.floor((new Date(d) - new Date(startDate)) / 86400000);
+                return sessionOrder[((diff % sessionOrder.length) + sessionOrder.length) % sessionOrder.length];
+            };
+
+            const startWorkout = () => {
                 // FATIGUE CHECK
                 let isDeload = false;
                 if (recoveryStatus.status === 'Fried') {
@@ -6185,9 +6172,9 @@
                 // GAP ANALYSIS
                 const laggingMuscle = getLaggingMuscle(logs, masterExercises, userProfile?.bodyweight);
 
-                const sess = selectedSession || getPredictedSession(selectedDate); 
-                const items = trainingPlan[sess] || []; 
-                
+                const sess = selectedSession || getPredictedSession(selectedDate);
+                const items = trainingPlan[sess] || [];
+
                 // VOLUME PARITY FIX: Scan all history for best volume
                 const sessionHistory = logs.filter(l => l.session === sess);
                 const bestVolume = sessionHistory.length ? Math.max(...sessionHistory.map(l => l.volume || 0)) : 0;
@@ -6197,7 +6184,7 @@
                 let extraExercises = [];
                 if (recoveryStatus.status === 'Fresh' && laggingMuscle) {
                     // Find a relevant isolation exercise from library
-                    const suggestion = masterExercises.find(ex => 
+                    const suggestion = masterExercises.find(ex =>
                         getImpact(ex).some(i => i.muscle === laggingMuscle && i.level === 'Primary') &&
                         !items.includes(ex.name) // Don't suggest if already in session
                     );
@@ -6206,18 +6193,18 @@
                         extraExercises.push(suggestion.name);
                     }
                 }
-                
+
                 setManualExpanded(new Set()); // Reset manual expansion state on new workout
 
-                setCurrentWorkout({ 
+                setCurrentWorkout({
                     date: selectedDate, session: sess, lastStats, isDeload, laggingMuscle,
-                    exercises: [...items, ...extraExercises].map(name => { 
-                        const m = masterExercises.find(ex => ex.name === name); 
-                        
+                    exercises: [...items, ...extraExercises].map(name => {
+                        const m = masterExercises.find(ex => ex.name === name);
+
                         // SMART PRE-FILL LOGIC
                         let prefillKg = '';
                         const lastLogForExercise = logs.filter(l => l.exercises.some(e => e.name === name))[0]; // Ensure sorted logs
-                        
+
                         let lastMaxLoad = 0;
 
                         if (lastLogForExercise) {
@@ -6230,12 +6217,12 @@
                                 const lastSet = workingSets[workingSets.length - 1];
                                 const lastKg = parseFloat(lastSet.kg);
                                 const lastRir = parseInt(lastSet.rir || 0);
-                                
+
                                 if (!isNaN(lastKg)) {
                                     let increment = 0;
                                     if (lastRir >= 3) increment = 2.5;
                                     else if (lastRir >= 2) increment = 1.25;
-                                    
+
                                     prefillKg = (lastKg + increment);
                                 }
                             }
@@ -6255,21 +6242,21 @@
                         const workingSets = Array.from({length: targetSetsCount}, () => ({ kg: prefillKg, reps: '', rir: '', done: false, type: 'working' }));
                         const warmupSets = generateWarmups(lastMaxLoad, warmupStrategy);
 
-                        return { 
-                            name, 
-                            station: m?.station || "Tytax", 
+                        return {
+                            name,
+                            station: m?.station || "Tytax",
                             unilateral: m?.unilateral || false,
                             impact: m?.impact || [],
-                            targetReps: m?.reps || "8-12", 
-                            note: m?.note || "", 
+                            targetReps: m?.reps || "8-12",
+                            note: m?.note || "",
                             sets: [...warmupSets, ...workingSets]
                         };
-                    }) 
-                }); 
-            }; 
- 
-            const currentVolume = useMemo(() => { 
-                if (!currentWorkout) return 0; 
+                    })
+                });
+            };
+
+            const currentVolume = useMemo(() => {
+                if (!currentWorkout) return 0;
                 return currentWorkout.exercises.reduce((acc, ex) => {
                     const exerciseVol = ex.sets.reduce((sAcc, s) => {
                         // Exclude warmup sets from "Volume Parity" calculation
@@ -6278,8 +6265,8 @@
                     }, 0);
                     // Double volume for unilateral exercises
                     return acc + (exerciseVol * (ex.unilateral ? 2 : 1));
-                }, 0); 
-            }, [currentWorkout]); 
+                }, 0);
+            }, [currentWorkout]);
 
             const globalImpact = useMemo(() => {
                 return calculateImpactDistribution(masterExercises, false);
@@ -6287,18 +6274,18 @@
 
             const recoveryStatus = useMemo(() => {
                 if (!logs.length) return { status: 'Fresh', pct: 100, color: 'text-emerald-500', barColor: 'bg-emerald-500' };
-                
+
                 const getKineticLoad = (sessionLogs, useDecay = false) => {
                     return sessionLogs.reduce((acc, log) => {
                         const sessionImpact = calculateImpactDistribution(log.exercises, true, userProfile?.bodyweight);
                         const sessionScore = sessionImpact.reduce((sAcc, item) => sAcc + item.score, 0);
-                        
+
                         let weight = 1;
                         if (useDecay) {
                             const hoursSince = (new Date() - new Date(log.date)) / (1000 * 60 * 60);
                             weight = Math.max(0, 1 - (hoursSince / 48)); // Linear decay over 48h
                         }
-                        
+
                         return acc + (sessionScore * weight);
                     }, 0);
                 };
@@ -6306,8 +6293,8 @@
                 // HELPER: Get realistic baseline weight for protocol average
                 const getBaselineWeight = (ex) => {
                     // SAFETY FIX: Prevent crash if exercise mismatch occurs
-                    if (!ex) return 10; 
-                    
+                    if (!ex) return 10;
+
                     const p = (ex.pattern || "").toLowerCase();
                     if (p.includes("squat") || p.includes("deadlift") || p.includes("leg press")) return 60;
                     if (p.includes("chest press") || p.includes("row") || p.includes("pulldown")) return 40;
@@ -6329,13 +6316,13 @@
 
                 // 2. Calculate ACWR (Acute:Chronic Workload Ratio)
                 const now = new Date();
-                
+
                 // Chronic Load (30 Days) - No decay needed for chronic baseline
                 const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
                 const chronicLogs = logs.filter(l => new Date(l.date) > thirtyDaysAgo);
                 const chronicLoadTotal = getKineticLoad(chronicLogs, false);
                 const chronicLoadAvg = chronicLoadTotal / 30;
-                
+
                 // Apply "Cold Start" Floor
                 const adjustedChronicLoad = Math.max(chronicLoadAvg, protocolDailyAverage * 0.8);
 
@@ -6371,10 +6358,10 @@
                 if (score > 40) return { status: 'Recovering', pct: score, color: 'text-yellow-500', barColor: 'bg-yellow-500' };
                 return { status: 'Fried', pct: score, color: 'text-red-500', barColor: 'bg-red-500' };
             }, [logs, trainingPlan, masterExercises]);
- 
-            return ( 
+
+            return (
                 <div className={`min-h-screen ${oledMode ? 'bg-black' : 'bg-[#020617]'} text-slate-200 font-inter selection:bg-indigo-500/30 md:flex`}>
-                    
+
                     {/* DESKTOP SIDEBAR (Visible md+) */}
                     <aside className={`hidden md:flex flex-col w-64 h-screen sticky top-0 border-r border-white/5 ${oledMode ? 'bg-black' : 'bg-[#020617]'} p-6 z-50`}>
                         <div className="flex items-center gap-3 mb-10 px-2">
@@ -6383,9 +6370,9 @@
                             </div>
                             <h1 className="font-black text-2xl tracking-tighter italic leading-none">TYTAX<span className="text-indigo-500">ELITE</span></h1>
                         </div>
-                        
+
                         <nav className="space-y-2 flex-1">
-                            {[ 
+                            {[
                                 { id: 'home', icon: 'home', label: t('nav.home') },
                                 { id: 'workout', icon: 'bolt', label: t('nav.workout') },
                                 { id: 'trends', icon: 'trends', label: t('nav.trends') },
@@ -6418,8 +6405,8 @@
                     {/* MAIN CONTENT AREA */}
                     <main className="flex-1 p-6 md:p-10 pb-48 md:pb-10 overflow-y-auto max-w-7xl mx-auto w-full">
                         {editingLog && (
-                            <HistoryEditor 
-                                log={editingLog} 
+                            <HistoryEditor
+                                log={editingLog}
                                 onSave={(updatedLog) => {
                                     setLogs(logs.map(l => l.id === updatedLog.id ? updatedLog : l));
                                     setEditingLog(null);
@@ -6433,7 +6420,7 @@
                              // PR LOGIC
                              const { workout, duration, volume } = debriefData;
                              const finalWorkout = { ...workout, rpe: data.rpe, notes: data.notes, id: Date.now(), duration, volume };
-                             
+
                              const newPRs = [];
                              finalWorkout.exercises.forEach(ex => {
                                 const currentBest = Math.max(...ex.sets.map(s => calculateE1RM(s.kg, s.reps)));
@@ -6453,16 +6440,16 @@
 
                             const updatedLogs = [finalWorkout, ...logs];
                             setLogs(updatedLogs);
-                            
+
                             setDebriefData(null);
-                            setCurrentWorkout(null); 
-                            setActiveTab('history'); 
+                            setCurrentWorkout(null);
+                            setActiveTab('history');
                             setFocusMode(false);
 
                             if (newPRs.length > 0) {
                                 setPrCelebration(newPRs);
                             } else {
-                                showToast("Protocol Logged"); 
+                                showToast("Protocol Logged");
                             }
 
                             if (autoBackup) {
@@ -6524,21 +6511,21 @@
                         )}
 
                         {swappingIdx !== null && (
-                            <ExerciseSwapper 
+                            <ExerciseSwapper
                                 targetName={currentWorkout.exercises[swappingIdx].name}
                                 masterExercises={masterExercises}
                                 userInventory={userInventory}
                                 onCancel={() => setSwappingIdx(null)}
                                 onSwap={(newMaster) => {
                                     const up = structuredClone(currentWorkout);
-                                    
+
                                     // Smart Prefill Logic
                                     const targetSetsCount = parseInt(newMaster.sets || 3);
                                     const workingSets = Array.from({length: targetSetsCount}, () => ({ kg: '', reps: '', rir: '', done: false, type: 'working' }));
-                                    
+
                                     const lastLog = logs.find(l => l.exercises.some(e => e.name === newMaster.name));
                                     let lastMaxLoad = 0;
-                                    
+
                                     if (lastLog) {
                                         const prevExData = lastLog.exercises.find(e => e.name === newMaster.name);
                                         const prevWorking = prevExData.sets.filter(s => s.done && s.type !== 'warmup');
@@ -6548,7 +6535,7 @@
                                             workingSets.forEach(s => s.kg = lastSet.kg);
                                         }
                                     }
-                                    
+
                                     const warmupSets = generateWarmups(lastMaxLoad, warmupStrategy);
 
                                     up.exercises[swappingIdx] = {
@@ -6560,7 +6547,7 @@
                                         note: newMaster.note || "",
                                         sets: [...warmupSets, ...workingSets]
                                     };
-                                    
+
                                     setCurrentWorkout(up);
                                     setSwappingIdx(null);
                                     showToast("Exercise Swapped");
@@ -6572,10 +6559,10 @@
                             setUserProfile(p);
                             showToast(`${t('modals.welcome')} ${p.name}`);
                         }} />}
-                        
-                        {toast && <div className="fixed top-24 left-1/2 -translate-x-1/2 z-[250] bg-indigo-500 text-white px-8 py-4 rounded-3xl shadow-2xl font-black text-[10px] uppercase tracking-widest animate-pulse">{toast}</div>} 
-    
-                        {timerActive && ( 
+
+                        {toast && <div className="fixed top-24 left-1/2 -translate-x-1/2 z-[250] bg-indigo-500 text-white px-8 py-4 rounded-3xl shadow-2xl font-black text-[10px] uppercase tracking-widest animate-pulse">{toast}</div>}
+
+                        {timerActive && (
                             <div className="fixed bottom-32 left-6 right-6 md:bottom-10 md:left-auto md:right-10 md:w-96 z-[60] bg-indigo-900/90 backdrop-blur-xl rounded-full p-2 shadow-2xl border border-indigo-500/30 flex items-center justify-between pl-4">
                                 <div className="flex items-center gap-3">
                                     <Icon name="timer" className="text-indigo-400 w-4 h-4" />
@@ -6588,24 +6575,24 @@
                                 <div className="absolute bottom-0 left-4 right-4 h-0.5 bg-indigo-500/30">
                                     <div className="h-full bg-indigo-400 timer-progress" style={{width: `${(timer/90)*100}%`}} />
                                 </div>
-                            </div> 
-                        )} 
-    
-                        {!focusMode && (
-                            <header className="md:hidden p-8 flex justify-between items-center sticky top-0 z-40 glass border-none"> 
-                                <div className="flex items-center gap-4"> 
-                                    <div className="p-3 accent-gradient rounded-2xl shadow-xl shadow-indigo-500/20"> 
-                                        <Icon name="bolt" className="text-white w-6 h-6" /> 
-                                    </div> 
-                                    <div> 
-                                        <h1 className="font-black text-2xl tracking-tighter italic leading-none">TYTAX<span className="text-indigo-500">ELITE</span></h1> 
-                                        {currentWorkout && <p className="text-[9px] font-black text-slate-500 mt-1 uppercase tracking-widest italic">Live Session: {Math.floor(stopwatch/60)}m</p>} 
-                                    </div> 
-                                </div> 
-                                <button onClick={() => setActiveTab('settings')} aria-label="Settings" className="p-3 bg-slate-900 rounded-2xl text-slate-500 border border-white/5"><Icon name="settings" /></button> 
-                            </header> 
+                            </div>
                         )}
-                        {activeTab === 'home' && ( 
+
+                        {!focusMode && (
+                            <header className="md:hidden p-8 flex justify-between items-center sticky top-0 z-40 glass border-none">
+                                <div className="flex items-center gap-4">
+                                    <div className="p-3 accent-gradient rounded-2xl shadow-xl shadow-indigo-500/20">
+                                        <Icon name="bolt" className="text-white w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h1 className="font-black text-2xl tracking-tighter italic leading-none">TYTAX<span className="text-indigo-500">ELITE</span></h1>
+                                        {currentWorkout && <p className="text-[9px] font-black text-slate-500 mt-1 uppercase tracking-widest italic">Live Session: {Math.floor(stopwatch/60)}m</p>}
+                                    </div>
+                                </div>
+                                <button onClick={() => setActiveTab('settings')} aria-label="Settings" className="p-3 bg-slate-900 rounded-2xl text-slate-500 border border-white/5"><Icon name="settings" /></button>
+                            </header>
+                        )}
+                        {activeTab === 'home' && (
                             <div className="tab-content space-y-10 pb-20">
                                 {/* NEW USER NOTIFICATION */}
                                 {logs.length === 0 && (
@@ -6617,47 +6604,47 @@
                                     </div>
                                 )}
 
-                                {/* SYSTEM STATUS */} 
-                                <div className="glass p-10 rounded-[3rem] space-y-8 border-white/5 relative overflow-hidden glow-indigo"> 
-                                    <div className="absolute -top-10 -right-10 w-40 h-40 bg-indigo-600/10 blur-[60px]" /> 
+                                {/* SYSTEM STATUS */}
+                                <div className="glass p-10 rounded-[3rem] space-y-8 border-white/5 relative overflow-hidden glow-indigo">
+                                    <div className="absolute -top-10 -right-10 w-40 h-40 bg-indigo-600/10 blur-[60px]" />
                                     <div className="flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between gap-4 md:gap-0">
-                                        <div className="flex items-center gap-3"> 
-                                            <div className={`w-3 h-3 rounded-full ${sessionOrder.length > 0 ? 'bg-emerald-500 status-pulse shadow-[0_0_15px_rgba(16,185,129,0.5)]' : 'bg-red-500 shadow-[0_0_15px_rgba(239,68,68,0.5)]'}`} /> 
+                                        <div className="flex items-center gap-3">
+                                            <div className={`w-3 h-3 rounded-full ${sessionOrder.length > 0 ? 'bg-emerald-500 status-pulse shadow-[0_0_15px_rgba(16,185,129,0.5)]' : 'bg-red-500 shadow-[0_0_15px_rgba(239,68,68,0.5)]'}`} />
                                             <h2 className="text-3xl font-black tracking-tighter italic uppercase leading-none">{t('status.system')}<br/><span className={`${sessionOrder.length > 0 ? 'text-indigo-500' : 'text-red-500'}`}>{sessionOrder.length > 0 ? t('status.online') : t('status.standby')}</span></h2>
-                                        </div> 
-                                        {sessionOrder.length === 0 && ( 
-                                            <div className="bg-red-900/20 border border-red-500/30 px-3 py-1 rounded-xl animate-pulse"> 
+                                        </div>
+                                        {sessionOrder.length === 0 && (
+                                            <div className="bg-red-900/20 border border-red-500/30 px-3 py-1 rounded-xl animate-pulse">
                                                 <span className="text-[8px] font-black text-red-500 uppercase tracking-widest">{t('status.action_required')}</span>
-                                            </div> 
-                                        )} 
-                                    </div> 
-                                     
-                                    {sessionOrder.length === 0 ? ( 
-                                        <div className="space-y-6"> 
-                                            <div className="bg-indigo-900/10 p-4 rounded-2xl border border-indigo-500/10"> 
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    {sessionOrder.length === 0 ? (
+                                        <div className="space-y-6">
+                                            <div className="bg-indigo-900/10 p-4 rounded-2xl border border-indigo-500/10">
                                                 <p className="text-[10px] font-black text-indigo-400 uppercase tracking-widest">{t('status.activation_guide')}</p>
                                                 <p className="text-xs font-bold text-slate-400 mt-2 leading-relaxed italic">{t('status.activation_text')}</p>
-                                            </div> 
-                                            <div className="grid grid-cols-1 gap-3"> 
-                                                {allPresets.map(p => ( 
-                                                    <button key={p.id} onClick={() => loadPreset(p)} className="p-6 bg-slate-900 rounded-[2rem] border border-indigo-500/30 text-left group hover:border-indigo-500 transition-all shadow-xl"> 
+                                            </div>
+                                            <div className="grid grid-cols-1 gap-3">
+                                                {allPresets.map(p => (
+                                                    <button key={p.id} onClick={() => loadPreset(p)} className="p-6 bg-slate-900 rounded-[2rem] border border-indigo-500/30 text-left group hover:border-indigo-500 transition-all shadow-xl">
                                                         <h4 className="font-black text-white text-base group-hover:text-indigo-400 italic">{t('status.initialize')}: {p.name}</h4>
-                                                        <p className="text-[9px] font-bold text-slate-500 mt-2 uppercase">{p.description}</p> 
-                                                    </button> 
-                                                ))} 
-                                            </div> 
-                                        </div> 
-                                    ) : ( 
-                                        <div className="space-y-4"> 
-                                            <div className="p-6 bg-indigo-900/10 rounded-3xl border border-indigo-500/20"> 
+                                                        <p className="text-[9px] font-bold text-slate-500 mt-2 uppercase">{p.description}</p>
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    ) : (
+                                        <div className="space-y-4">
+                                            <div className="p-6 bg-indigo-900/10 rounded-3xl border border-indigo-500/20">
                                                 <p className="text-[10px] font-black text-indigo-400 uppercase tracking-widest">{t('status.active_sequence')}</p>
                                                 <p className="text-sm font-black text-white mt-1 italic uppercase tracking-tight">{sessionOrder.join(' • ')}</p>
-                                            </div> 
+                                            </div>
                                             <button onClick={() => setActiveTab('workout')} className="w-full py-5 accent-gradient text-white rounded-[2rem] font-black text-[10px] uppercase tracking-[0.4em] shadow-2xl">{t('status.enter_training_center')}</button>
                                             <button onClick={() => { if(confirm(t('status.disengage_confirm'))) { setSessionOrder([]); showToast(t('status.protocol_disengaged')); } }} className="w-full py-3 bg-red-900/10 text-red-500 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] border border-red-500/20 hover:bg-red-900/20 transition-all">{t('status.disengage')}</button>
-                                        </div> 
-                                    )} 
-                                </div> 
+                                        </div>
+                                    )}
+                                </div>
 
                                 {/* GAMIFICATION HEADER */}
                                 {logs.length > 0 && (
@@ -6688,7 +6675,7 @@
                                                 <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest">{t('status.level')}</p>
                                                 <p className="text-2xl font-black text-white italic">{(() => {
                                                     const totalVol = logs.reduce((acc, l) => acc + (l.volume || 0), 0);
-                                                    return Math.floor(Math.sqrt(totalVol) / 10) || 1; 
+                                                    return Math.floor(Math.sqrt(totalVol) / 10) || 1;
                                                 })()}</p>
                                             </div>
                                         </div>
@@ -6715,24 +6702,24 @@
 
                                 {/* GLOBAL HEATMAP */}
                                 {sessionOrder.length > 0 && <GlobalHeatmap globalImpact={globalImpact} />}
- 
-                                {/* PROTOCOL SWITCHER (ONLY IF ONLINE) */} 
-                                {sessionOrder.length > 0 && ( 
-                                    <div className="space-y-4 px-2"> 
-                                        <div className="flex items-center gap-2"> 
-                                            <Icon name="library" className="text-indigo-500 w-4 h-4" /> 
+
+                                {/* PROTOCOL SWITCHER (ONLY IF ONLINE) */}
+                                {sessionOrder.length > 0 && (
+                                    <div className="space-y-4 px-2">
+                                        <div className="flex items-center gap-2">
+                                            <Icon name="library" className="text-indigo-500 w-4 h-4" />
                                             <h3 className="text-[10px] font-black uppercase text-white tracking-[0.2em]">{t('status.protocol_suite')}</h3>
-                                        </div> 
-                                        <div className="flex gap-2 overflow-x-auto no-scrollbar pb-2"> 
-                                            {allPresets.map(p => ( 
-                                                <button key={p.id} onClick={() => loadPreset(p)} className="px-6 py-4 bg-slate-900 rounded-2xl border border-white/5 text-[10px] font-black text-slate-400 whitespace-nowrap uppercase tracking-widest hover:text-white transition-colors"> 
-                                                    {p.name} 
-                                                </button> 
-                                            ))} 
-                                        </div> 
-                                    </div> 
-                                )} 
- 
+                                        </div>
+                                        <div className="flex gap-2 overflow-x-auto no-scrollbar pb-2">
+                                            {allPresets.map(p => (
+                                                <button key={p.id} onClick={() => loadPreset(p)} className="px-6 py-4 bg-slate-900 rounded-2xl border border-white/5 text-[10px] font-black text-slate-400 whitespace-nowrap uppercase tracking-widest hover:text-white transition-colors">
+                                                    {p.name}
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
                                 {/* QUICK ACTIONS */}
                                 <div className="grid grid-cols-2 gap-4">
                                     <button onClick={() => setShowMainframe(true)} className="glass p-6 rounded-[2rem] flex items-center justify-center gap-3 hover:bg-indigo-900/20 transition-colors group border-white/5">
@@ -6757,52 +6744,52 @@
                                         <input type="file" onChange={(e) => handleImport(e.target.files[0])} className="hidden" />
                                     </label>
                                 </div>
-                            </div> 
-                        )} 
- 
-                        {activeTab === 'workout' && ( 
-                            <div className="tab-content space-y-8 pb-20"> 
-                                {sessionOrder.length === 0 ? ( 
-                                    <div className="glass p-10 rounded-[3rem] space-y-8 text-center border-red-500/20 bg-red-900/5"> 
-                                        <Icon name="bolt" className="w-12 h-12 mx-auto text-red-900 opacity-50" /> 
-                                        <div className="space-y-2"> 
+                            </div>
+                        )}
+
+                        {activeTab === 'workout' && (
+                            <div className="tab-content space-y-8 pb-20">
+                                {sessionOrder.length === 0 ? (
+                                    <div className="glass p-10 rounded-[3rem] space-y-8 text-center border-red-500/20 bg-red-900/5">
+                                        <Icon name="bolt" className="w-12 h-12 mx-auto text-red-900 opacity-50" />
+                                        <div className="space-y-2">
                                             <h2 className="text-xl font-black uppercase text-white tracking-widest italic">{t('status.offline')}</h2>
                                             <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{t('status.no_protocol')}. {t('status.standby')}.</p>
-                                        </div> 
+                                        </div>
                                         <button onClick={() => setActiveTab('home')} className="w-full py-5 accent-gradient text-white rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] shadow-xl">{t('workout.activate_system')}</button>
-                                    </div> 
-                                ) : !currentWorkout ? ( 
-                                    <div className="glass p-10 rounded-[3rem] space-y-10 border-white/5 shadow-2xl"> 
-                                        <div className="space-y-2"> 
+                                    </div>
+                                ) : !currentWorkout ? (
+                                    <div className="glass p-10 rounded-[3rem] space-y-10 border-white/5 shadow-2xl">
+                                        <div className="space-y-2">
                                             <h2 className="text-4xl font-black tracking-tighter leading-none italic uppercase">{t('workout.training_center').split(' ')[0]}<br/><span className="text-indigo-500">{t('workout.training_center').split(' ').slice(1).join(' ')}</span></h2>
                                             <p className="text-[11px] font-black text-slate-500 uppercase tracking-widest">{t('workout.recommended')}: {getPredictedSession(selectedDate) || "---"}</p>
-                                        </div> 
-                                        <div className="space-y-6"> 
-                                            <input type="date" value={selectedDate} onChange={e => setSelectedDate(e.target.value)} className="w-full p-5 bg-slate-900 rounded-3xl font-black text-indigo-400 border border-white/5" /> 
-                                            <div className="grid grid-cols-2 gap-3"> 
-                                                {sessionOrder.map(s => ( 
-                                                    <button key={s} onClick={() => setSelectedSession(s)} className={`p-5 rounded-3xl text-[10px] font-black uppercase border transition-all ${selectedSession === s ? 'accent-gradient text-white border-transparent shadow-xl scale-105' : 'bg-slate-900 text-slate-600 border-white/5'}`}>{s}</button> 
-                                                ))} 
-                                            </div> 
+                                        </div>
+                                        <div className="space-y-6">
+                                            <input type="date" value={selectedDate} onChange={e => setSelectedDate(e.target.value)} className="w-full p-5 bg-slate-900 rounded-3xl font-black text-indigo-400 border border-white/5" />
+                                            <div className="grid grid-cols-2 gap-3">
+                                                {sessionOrder.map(s => (
+                                                    <button key={s} onClick={() => setSelectedSession(s)} className={`p-5 rounded-3xl text-[10px] font-black uppercase border transition-all ${selectedSession === s ? 'accent-gradient text-white border-transparent shadow-xl scale-105' : 'bg-slate-900 text-slate-600 border-white/5'}`}>{s}</button>
+                                                ))}
+                                            </div>
                                             <button onClick={startWorkout} className="w-full py-8 accent-gradient text-white rounded-[2.5rem] font-black uppercase tracking-[0.4em] text-xs shadow-2xl active:scale-95 transition-all">{t('workout.engage_lift')}</button>
-                                        </div> 
-                                    </div> 
-                                ) : ( 
-                                    <div className="space-y-8"> 
-                                        {/* SESSION METRICS */} 
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div className="space-y-8">
+                                        {/* SESSION METRICS */}
                                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                                            {currentWorkout.lastStats && ( 
-                                                <div className="glass p-6 rounded-[2rem] space-y-3"> 
-                                                    <div className="flex justify-between items-end"> 
+                                            {currentWorkout.lastStats && (
+                                                <div className="glass p-6 rounded-[2rem] space-y-3">
+                                                    <div className="flex justify-between items-end">
                                                         <p className="text-[10px] font-black text-indigo-400 uppercase tracking-widest">{t('workout.volume_parity')}</p>
-                                                        <p className="text-[10px] font-black text-white italic">{currentVolume} / {currentWorkout.lastStats.volume} kg</p> 
-                                                    </div> 
-                                                    <div className="h-2.5 bg-slate-800 rounded-full overflow-hidden shadow-inner"> 
-                                                        <div className="h-full accent-gradient transition-all duration-700 ease-out" style={{width: `${Math.min(100, (currentVolume/currentWorkout.lastStats.volume)*100)}%`}} /> 
-                                                    </div> 
-                                                </div> 
+                                                        <p className="text-[10px] font-black text-white italic">{currentVolume} / {currentWorkout.lastStats.volume} kg</p>
+                                                    </div>
+                                                    <div className="h-2.5 bg-slate-800 rounded-full overflow-hidden shadow-inner">
+                                                        <div className="h-full accent-gradient transition-all duration-700 ease-out" style={{width: `${Math.min(100, (currentVolume/currentWorkout.lastStats.volume)*100)}%`}} />
+                                                    </div>
+                                                </div>
                                             )}
-                                            
+
                                             {/* FOCUS MODE TOGGLE */}
                                             {currentWorkout && (
                                                 <button onClick={() => setFocusMode(!focusMode)} className={`col-span-2 p-4 rounded-2xl border transition-all flex items-center justify-center gap-2 ${focusMode ? 'bg-indigo-600 text-white border-transparent' : 'bg-slate-900 text-slate-500 border-white/5'}`}>
@@ -6821,7 +6808,7 @@
                                                     {(() => {
                                                         const sorted = calculateImpactDistribution(currentWorkout.exercises, true, userProfile?.bodyweight);
                                                         if (sorted.length === 0) return <span className="text-[9px] text-slate-600 font-bold uppercase tracking-widest italic">{t('trends.no_data')}</span>;
-                                                        
+
                                                         return sorted.map((d) => (
                                                             <div key={d.muscle} className="space-y-1">
                                                                 <div className="flex justify-between text-[8px] font-black uppercase tracking-widest text-slate-400">
@@ -6839,8 +6826,8 @@
                                         </div>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        {currentWorkout.exercises.map((ex, exIdx) => { 
-                                            const prev = currentWorkout.exercises[exIdx-1]; 
+                                        {currentWorkout.exercises.map((ex, exIdx) => {
+                                            const prev = currentWorkout.exercises[exIdx-1];
                                             const stationChange = !prev || normalizeStationName(prev.station) !== normalizeStationName(ex.station);
                                             // Collapse if completed AND (not manually expanded) AND (not the active incomplete exercise)
                                             // We want the *first* incomplete exercise to be expanded by default.
@@ -6848,13 +6835,13 @@
                                             const isComplete = ex.sets.every(s => s.done);
                                             const isCollapsed = (isComplete && !manualExpanded.has(exIdx)) || (exIdx !== firstIncompleteIdx && !isComplete && !manualExpanded.has(exIdx));
 
-                                            return ( 
-                                                <div key={exIdx} id={`exercise-card-${exIdx}`} className="space-y-4 scroll-mt-32"> 
-                                                    {stationChange && ( 
+                                            return (
+                                                <div key={exIdx} id={`exercise-card-${exIdx}`} className="space-y-4 scroll-mt-32">
+                                                    {stationChange && (
                                                         <div className="mt-6 mb-2 px-2">
                                                             <span className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em]">{ex.station}</span>
-                                                        </div> 
-                                                    )} 
+                                                        </div>
+                                                    )}
 
                                                     {isCollapsed ? (
                                                         <div
@@ -6931,7 +6918,7 @@
                                                                 </div>
                                                             </div>
 
-                                                            <div className="space-y-3"> 
+                                                            <div className="space-y-3">
                                                                 {ex.sets.map((set, sIdx) => {
                                                                     // GHOST REPS LOGIC
                                                                     const prevSession = logs.find(l => l.exercises.some(e => e.name === ex.name));
@@ -6945,10 +6932,10 @@
                                                                     const beatGhost = ghostReps && set.reps && parseInt(set.reps) > parseInt(ghostReps);
 
                                                                     return (
-                                                                    <div key={sIdx} className={`grid grid-cols-12 gap-2 items-center p-3 rounded-3xl transition-all relative overflow-hidden ${set.done ? 'bg-emerald-900/10' : set.type === 'warmup' ? 'bg-yellow-900/10 border border-yellow-500/10' : 'bg-slate-900/60'}`}> 
+                                                                    <div key={sIdx} className={`grid grid-cols-12 gap-2 items-center p-3 rounded-3xl transition-all relative overflow-hidden ${set.done ? 'bg-emerald-900/10' : set.type === 'warmup' ? 'bg-yellow-900/10 border border-yellow-500/10' : 'bg-slate-900/60'}`}>
                                                                         {set.type === 'warmup' && <div className="absolute top-0 right-0 w-2 h-2 bg-yellow-500 rounded-bl-full" />}
-                                                                        <div className={`col-span-1 text-center font-black text-[10px] ${set.type === 'warmup' ? 'text-yellow-600' : 'text-slate-700'}`}>{sIdx+1}</div> 
-                                                                        <input id={`input-kg-${exIdx}-${sIdx}`} type="number" placeholder="KG" value={set.kg} disabled={set.done} onChange={e => { const up = {...currentWorkout}; up.exercises[exIdx].sets[sIdx].kg = e.target.value; setCurrentWorkout(up); }} className={`col-span-3 p-3 bg-black rounded-2xl font-black text-base text-center border-none text-white focus:ring-2 ${set.type === 'warmup' ? 'focus:ring-yellow-500' : 'focus:ring-indigo-500'}`} /> 
+                                                                        <div className={`col-span-1 text-center font-black text-[10px] ${set.type === 'warmup' ? 'text-yellow-600' : 'text-slate-700'}`}>{sIdx+1}</div>
+                                                                        <input id={`input-kg-${exIdx}-${sIdx}`} type="number" placeholder="KG" value={set.kg} disabled={set.done} onChange={e => { const up = {...currentWorkout}; up.exercises[exIdx].sets[sIdx].kg = e.target.value; setCurrentWorkout(up); }} className={`col-span-3 p-3 bg-black rounded-2xl font-black text-base text-center border-none text-white focus:ring-2 ${set.type === 'warmup' ? 'focus:ring-yellow-500' : 'focus:ring-indigo-500'}`} />
                                                                         <div className="col-span-3 relative">
                                                                             <input id={`input-reps-${exIdx}-${sIdx}`} type="number" placeholder={ghostReps ? `${t('workout.ghost')}: ${ghostReps}` : "R"} value={set.reps} disabled={set.done} onChange={e => { const up = {...currentWorkout}; up.exercises[exIdx].sets[sIdx].reps = e.target.value; setCurrentWorkout(up); }} className={`w-full p-3 bg-black rounded-2xl font-black text-base text-center border-none focus:ring-2 ${set.type === 'warmup' ? 'focus:ring-yellow-500' : 'focus:ring-indigo-500'} ${beatGhost ? 'text-emerald-400 font-bold' : 'text-white'}`} />
                                                                              {ex.unilateral && <span className="absolute right-1 bottom-1 text-[8px] font-bold text-slate-600">/side</span>}
@@ -6969,7 +6956,7 @@
                                                                             }
 
                                                                             if (window.navigator.vibrate) window.navigator.vibrate(50);
-                                                                            
+
                                                                             // IMPACT PULSE
                                                                             const card = document.getElementById(`exercise-card-${exIdx}`);
                                                                             if (card) {
@@ -7068,12 +7055,12 @@
                                     </div>
                                 )}
                             </div>
-                        )} 
- 
-                        {activeTab === 'trends' && ( 
-                            <div className="tab-content space-y-10 pb-20"> 
+                        )}
+
+                        {activeTab === 'trends' && (
+                            <div className="tab-content space-y-10 pb-20">
                                 <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">Force<br/><span className="text-indigo-500">Analytics</span></h2>
-                                
+
                                 <TrendsOverview
                                     logs={logs}
                                     bodyweightLog={bodyweightLog}
@@ -7100,15 +7087,15 @@
                                     }}
                                 />
 
-                                {logs.length === 0 && <div className="py-40 text-center opacity-20"><Icon name="trends" className="w-12 h-12 mx-auto" /><p className="text-[10px] font-black uppercase mt-4 tracking-[0.3em]">No data records</p></div>} 
-                            </div> 
-                        )} 
- 
-                        {activeTab === 'history' && ( 
-                            <div className="tab-content space-y-6 pb-20"> 
-                                <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">Archive<br/><span className="text-indigo-500">Vault</span></h2> 
-                                {logs.length === 0 ? ( 
-                                    <div className="py-40 text-center opacity-20"><Icon name="history" className="w-12 h-12 mx-auto" /><p className="text-[10px] font-black uppercase mt-4 tracking-[0.3em]">Vault is empty</p></div> 
+                                {logs.length === 0 && <div className="py-40 text-center opacity-20"><Icon name="trends" className="w-12 h-12 mx-auto" /><p className="text-[10px] font-black uppercase mt-4 tracking-[0.3em]">No data records</p></div>}
+                            </div>
+                        )}
+
+                        {activeTab === 'history' && (
+                            <div className="tab-content space-y-6 pb-20">
+                                <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">Archive<br/><span className="text-indigo-500">Vault</span></h2>
+                                {logs.length === 0 ? (
+                                    <div className="py-40 text-center opacity-20"><Icon name="history" className="w-12 h-12 mx-auto" /><p className="text-[10px] font-black uppercase mt-4 tracking-[0.3em]">Vault is empty</p></div>
                                 ) : (
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {logs.map(log => (
@@ -7144,7 +7131,7 @@
 
                         {/* BUILDER TAB */}
                         {activeTab === 'builder' && (
-                            <BuilderTab 
+                            <BuilderTab
                                 metaLibrary={masterExercises}
                                 userInventory={userInventory}
                                 oledMode={oledMode}
@@ -7163,17 +7150,17 @@
 
                         {/* FEATURES TAB */}
                         {activeTab === 'features' && <SystemManual />}
- 
-                        {activeTab === 'settings' && ( 
-                            <div className="tab-content space-y-10 pb-20"> 
+
+                        {activeTab === 'settings' && (
+                            <div className="tab-content space-y-10 pb-20">
                                 <h2 className="text-4xl font-black tracking-tighter px-2 italic uppercase leading-[0.9]">{t('settings.master_node').split(' ')[0]}<br/><span className="text-indigo-500">{t('settings.master_node').split(' ').slice(1).join(' ')}</span></h2>
-                                <div className="glass p-10 rounded-[3rem] space-y-10 border-white/5"> 
-                                    <div className="space-y-4"> 
+                                <div className="glass p-10 rounded-[3rem] space-y-10 border-white/5">
+                                    <div className="space-y-4">
                                         <div className="flex items-center gap-3"><Icon name="bolt" className="text-indigo-500 w-5 h-5" /><h3 className="font-black text-white uppercase text-xs tracking-widest">{t('settings.protocol_ingestion')}</h3></div>
                                         <textarea value={libraryInput} onChange={e => setLibraryInput(e.target.value)} placeholder={t('settings.paste_json')} className="w-full h-40 bg-black p-6 rounded-[2rem] text-[10px] font-mono border border-white/5 text-indigo-300 focus:ring-1 focus:ring-indigo-500 no-scrollbar" />
                                         <button onClick={importJSON} className="w-full py-5 accent-gradient text-white rounded-[2rem] font-black text-xs uppercase shadow-2xl tracking-[0.3em]">{t('settings.inject_json')}</button>
-                                    </div> 
-                                    <div className="h-px bg-white/5" /> 
+                                    </div>
+                                    <div className="h-px bg-white/5" />
                                     <div className="grid grid-cols-1 gap-6">
                                         {/* LANGUAGE TOGGLE */}
                                         <div className="flex justify-between items-center px-2">
@@ -7197,11 +7184,11 @@
                                         </div>
                                         <div className="h-px bg-white/5" />
 
-                                        <div className="flex justify-between items-center px-2"> 
+                                        <div className="flex justify-between items-center px-2">
                                             <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{t('settings.rotation_epoch')}</label>
-                                            <input type="date" value={startDate} onChange={e => setStartDate(e.target.value)} className="bg-transparent font-black text-indigo-500 border-none text-right focus:ring-0" /> 
+                                            <input type="date" value={startDate} onChange={e => setStartDate(e.target.value)} className="bg-transparent font-black text-indigo-500 border-none text-right focus:ring-0" />
                                         </div>
-                                        <div className="flex justify-between items-center px-2"> 
+                                        <div className="flex justify-between items-center px-2">
                                             <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{t('settings.warmup_strategy')}</label>
                                             <select value={warmupStrategy} onChange={e => setWarmupStrategy(e.target.value)} className="bg-transparent font-black text-indigo-500 border-none text-right focus:ring-0 uppercase text-[10px]">
                                                 <option value="Standard">Standard</option>
@@ -7209,7 +7196,7 @@
                                                 <option value="Pyramid">Pyramid (Volume)</option>
                                             </select>
                                         </div>
-                                        <div className="flex justify-between items-center px-2"> 
+                                        <div className="flex justify-between items-center px-2">
                                             <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{t('settings.oled_mode')}</label>
                                             <button onClick={() => setOledMode(!oledMode)} className={`w-12 h-6 rounded-full transition-colors relative ${oledMode ? 'bg-indigo-500' : 'bg-slate-800'}`}>
                                                 <div className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform ${oledMode ? 'translate-x-6' : 'translate-x-0'}`} />
@@ -7220,58 +7207,58 @@
                                             <button onClick={() => setAutoBackup(!autoBackup)} className={`w-12 h-6 rounded-full transition-colors relative ${autoBackup ? 'bg-emerald-500' : 'bg-slate-800'}`}>
                                                 <div className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform ${autoBackup ? 'translate-x-6' : 'translate-x-0'}`} />
                                             </button>
-                                        </div> 
+                                        </div>
                                         <div className="flex flex-col md:flex-row gap-4">
                                             <button onClick={exportCSV} className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-emerald-400 border border-white/5 hover:text-white transition-colors">{t('settings.export_csv')}</button>
-                                            <button onClick={() => { 
+                                            <button onClick={() => {
                                                 const blob = new Blob([JSON.stringify({ logs, sessionOrder, trainingPlan, masterExercises, startDate, oledMode, userInventory, userProfile, customProtocols, warmupStrategy })], { type: 'application/json' });
-                                                const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "tytax_backup.json"; a.click(); 
+                                                const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "tytax_backup.json"; a.click();
                                             }} className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-slate-400 border border-white/5 hover:text-white transition-colors"><Icon name="history" /> {t('settings.backup')}</button>
-                                            <label className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-indigo-400 border border-white/5 cursor-pointer hover:bg-indigo-900/10 transition-colors"> 
-                                                <Icon name="library" /> Import <input type="file" onChange={(e) => { 
-                                                    const f = e.target.files[0]; const r = new FileReader(); 
-                                                    r.onload = (ev) => { 
+                                            <label className="flex-grow p-6 bg-slate-900 rounded-[2rem] font-black text-[10px] uppercase flex items-center justify-center gap-3 text-indigo-400 border border-white/5 cursor-pointer hover:bg-indigo-900/10 transition-colors">
+                                                <Icon name="library" /> Import <input type="file" onChange={(e) => {
+                                                    const f = e.target.files[0]; const r = new FileReader();
+                                                    r.onload = (ev) => {
                                                         try {
-                                                            const d = JSON.parse(ev.target.result); 
+                                                            const d = JSON.parse(ev.target.result);
                                                             // FIX #1: Strict Type Validation (DoS Prevention)
                                                             if (!d.logs && !d.sessionOrder) throw new Error("Invalid Format");
-                                                            
+
                                                             if (d.logs && !Array.isArray(d.logs)) throw new Error("Security Violation: Logs must be an array");
                                                             if (d.sessionOrder && !Array.isArray(d.sessionOrder)) throw new Error("Security Violation: Session Order must be an array");
 
-                                                            setLogs(d.logs || []); 
-                                                            setMasterExercises(d.masterExercises || []); 
-                                                            setTrainingPlan(d.trainingPlan || {}); 
-                                                            setSessionOrder(d.sessionOrder || []); 
-                                                            setStartDate(d.startDate || startDate); 
+                                                            setLogs(d.logs || []);
+                                                            setMasterExercises(d.masterExercises || []);
+                                                            setTrainingPlan(d.trainingPlan || {});
+                                                            setSessionOrder(d.sessionOrder || []);
+                                                            setStartDate(d.startDate || startDate);
                                                             if (d.oledMode !== undefined) setOledMode(d.oledMode);
                                                             if (d.userInventory) setUserInventory(d.userInventory);
                                                             if (d.userProfile) setUserProfile(d.userProfile);
                                                             if (d.customProtocols) setCustomProtocols(d.customProtocols);
                                                             if (d.warmupStrategy) setWarmupStrategy(d.warmupStrategy);
-                                                            
-                                                            showToast("Vault Restored"); 
+
+                                                            showToast("Vault Restored");
                                                         } catch(err) {
                                                             alert("Restore Failed: " + err.message);
                                                         }
-                                                    }; r.readAsText(f); 
-                                                }} className="hidden" /> 
-                                            </label> 
-                                        </div> 
-                                    </div> 
+                                                    }; r.readAsText(f);
+                                                }} className="hidden" />
+                                            </label>
+                                        </div>
+                                    </div>
                                     <button onClick={() => { if(confirm("Log out current user?")) onLogout(); }} className="w-full py-5 bg-indigo-900/20 text-indigo-400 rounded-[2rem] font-black text-xs uppercase tracking-[0.3em] border border-indigo-500/20 hover:bg-indigo-900/40 transition-all flex items-center justify-center gap-3">
                                         <Icon name="x" className="w-4 h-4" /> Switch User
                                     </button>
                                     <button onClick={() => { if(confirm(t('settings.purge_confirm'))) { localStorage.clear(); window.location.reload(); } }} className="w-full text-red-900 hover:text-red-500 py-4 font-black text-[10px] uppercase tracking-[0.4em] transition-colors">{t('settings.emergency_purge')}</button>
-                                </div> 
-                            </div> 
-                        )} 
-                    </main> 
- 
-                    {/* MOBILE NAV (Visible < md) */} 
+                                </div>
+                            </div>
+                        )}
+                    </main>
+
+                    {/* MOBILE NAV (Visible < md) */}
                     {!focusMode && (
                         <nav className="md:hidden fixed bottom-4 left-2 right-2 glass text-white rounded-[3rem] flex justify-between p-2 shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-40 border-white/5 overflow-x-auto no-scrollbar">
-                            {[ 
+                            {[
                                 { id: 'home', icon: 'home', label: t('nav.home') },
                                 { id: 'workout', icon: 'bolt', label: t('nav.workout') },
                                 { id: 'trends', icon: 'trends', label: t('nav.trends') },
@@ -7279,15 +7266,15 @@
                                 { id: 'arsenal', icon: 'library', label: t('nav.arsenal') },
                                 { id: 'builder', icon: 'tool', label: t('nav.builder') },
                                 { id: 'features', icon: 'info', label: t('nav.features') }
-                            ].map(tab => ( 
+                            ].map(tab => (
                                 <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex flex-col items-center gap-1 px-3 py-3 rounded-[2.5rem] min-w-[60px] transition-all duration-700 ${activeTab === tab.id ? 'accent-gradient scale-110 shadow-2xl' : 'text-slate-600 hover:text-slate-400'}`}>
                                     <Icon name={tab.icon} className="w-5 h-5" /><span className="text-[6px] font-black uppercase tracking-[0.2em]">{tab.label}</span>
-                                </button> 
-                            ))} 
-                        </nav> 
+                                </button>
+                            ))}
+                        </nav>
                     )}
-                </div> 
-            ); 
+                </div>
+            );
         };
 
         const migrateLegacyData = (username) => {
@@ -7412,9 +7399,9 @@
                 </div>
             );
         };
- 
-        const root = ReactDOM.createRoot(document.getElementById('root')); 
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<ErrorBoundary><FamilyManager /></ErrorBoundary>);
-    </script> 
-</body> 
+    </script>
+</body>
 </html>
