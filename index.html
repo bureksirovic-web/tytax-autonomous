@@ -6919,20 +6919,22 @@
                                                             </div>
 
                                                             <div className="space-y-3"> 
-                                                                {ex.sets.map((set, sIdx) => {
-                                                                    // GHOST REPS LOGIC
+                                                                {(() => {
+                                                                    // Optimization: Hoisted Ghost Reps lookup to run once per exercise instead of per set
                                                                     const prevSession = logs.find(l => l.exercises.some(e => e.name === ex.name));
-                                                                    let ghostReps = null;
-                                                                    if (prevSession) {
-                                                                        const prevEx = prevSession.exercises.find(e => e.name === ex.name);
-                                                                        if (prevEx && prevEx.sets && prevEx.sets[sIdx]) {
-                                                                            ghostReps = prevEx.sets[sIdx].reps;
-                                                                        }
-                                                                    }
-                                                                    const beatGhost = ghostReps && set.reps && parseInt(set.reps) > parseInt(ghostReps);
 
-                                                                    return (
-                                                                    <div key={sIdx} className={`grid grid-cols-12 gap-2 items-center p-3 rounded-3xl transition-all relative overflow-hidden ${set.done ? 'bg-emerald-900/10' : set.type === 'warmup' ? 'bg-yellow-900/10 border border-yellow-500/10' : 'bg-slate-900/60'}`}> 
+                                                                    return ex.sets.map((set, sIdx) => {
+                                                                        let ghostReps = null;
+                                                                        if (prevSession) {
+                                                                            const prevEx = prevSession.exercises.find(e => e.name === ex.name);
+                                                                            if (prevEx && prevEx.sets && prevEx.sets[sIdx]) {
+                                                                                ghostReps = prevEx.sets[sIdx].reps;
+                                                                            }
+                                                                        }
+                                                                        const beatGhost = ghostReps && set.reps && parseInt(set.reps) > parseInt(ghostReps);
+
+                                                                        return (
+                                                                        <div key={sIdx} className={`grid grid-cols-12 gap-2 items-center p-3 rounded-3xl transition-all relative overflow-hidden ${set.done ? 'bg-emerald-900/10' : set.type === 'warmup' ? 'bg-yellow-900/10 border border-yellow-500/10' : 'bg-slate-900/60'}`}>
                                                                         {set.type === 'warmup' && <div className="absolute top-0 right-0 w-2 h-2 bg-yellow-500 rounded-bl-full" />}
                                                                         <div className={`col-span-1 text-center font-black text-[10px] ${set.type === 'warmup' ? 'text-yellow-600' : 'text-slate-700'}`}>{sIdx+1}</div> 
                                                                         <input id={`input-kg-${exIdx}-${sIdx}`} type="number" placeholder="KG" value={set.kg} disabled={set.done} onChange={e => { const up = {...currentWorkout}; up.exercises[exIdx].sets[sIdx].kg = e.target.value; setCurrentWorkout(up); }} className={`col-span-3 p-3 bg-black rounded-2xl font-black text-base text-center border-none text-white focus:ring-2 ${set.type === 'warmup' ? 'focus:ring-yellow-500' : 'focus:ring-indigo-500'}`} /> 
@@ -6999,7 +7001,8 @@
                                                                         }} className="col-span-1 h-12 rounded-2xl flex items-center justify-center transition-all bg-red-900/20 text-red-500 hover:bg-red-500 hover:text-white active:scale-90 border border-red-500/20"><Icon name="trash" className="w-4 h-4" /></button>
                                                                     </div>
                                                                 );
-                                                                })}
+                                                                });
+                                                                })()}
                                                                 <button onClick={() => {
                                                                     const up = {...currentWorkout};
                                                                     const lastKg = up.exercises[exIdx].sets[up.exercises[exIdx].sets.length-1]?.kg || '';
@@ -7035,20 +7038,24 @@
                                                 </div>
 
                                                 <div className="grid grid-cols-10 gap-1 h-16 items-end overflow-x-auto">
-                                                     {['Chest', 'Back', 'Shoulders', 'Biceps', 'Triceps', 'Quads', 'Hamstrings', 'Glutes', 'Calves', 'Core'].map(group => {
-                                                         const score = calculateImpactDistribution(currentWorkout.exercises, true, userProfile?.bodyweight).find(d => d.muscle.toUpperCase().includes(group.toUpperCase()))?.score || 0;
-                                                         // Scale factor adjusted for Volume (approx 3000 volume load baseline vs 300 structure baseline)
-                                                         const pct = Math.min(100, (score / 30000) * 100);
+                                                     {(() => {
+                                                         // Optimization: Calculate impact once per render instead of 10x
+                                                         const liveImpact = calculateImpactDistribution(currentWorkout.exercises, true, userProfile?.bodyweight);
+                                                         return ['Chest', 'Back', 'Shoulders', 'Biceps', 'Triceps', 'Quads', 'Hamstrings', 'Glutes', 'Calves', 'Core'].map(group => {
+                                                             const score = liveImpact.find(d => d.muscle.toUpperCase().includes(group.toUpperCase()))?.score || 0;
+                                                             // Scale factor adjusted for Volume (approx 3000 volume load baseline vs 300 structure baseline)
+                                                             const pct = Math.min(100, (score / 30000) * 100);
 
-                                                         return (
-                                                             <div key={group} className="flex flex-col items-center gap-1 h-full justify-end group">
-                                                                 <div className="w-full bg-slate-800/50 rounded-t-md relative h-full overflow-hidden">
-                                                                     <div className={`absolute bottom-0 left-0 right-0 transition-all duration-500 ${pct >= 100 ? 'bg-emerald-500' : 'bg-indigo-500'}`} style={{height: `${pct}%`}} />
+                                                             return (
+                                                                 <div key={group} className="flex flex-col items-center gap-1 h-full justify-end group">
+                                                                     <div className="w-full bg-slate-800/50 rounded-t-md relative h-full overflow-hidden">
+                                                                         <div className={`absolute bottom-0 left-0 right-0 transition-all duration-500 ${pct >= 100 ? 'bg-emerald-500' : 'bg-indigo-500'}`} style={{height: `${pct}%`}} />
+                                                                     </div>
+                                                                     <span className="text-[6px] font-black text-slate-500 uppercase tracking-tighter group-hover:text-white leading-tight -rotate-45 mb-2 origin-left whitespace-nowrap">{t('muscles.' + group)}</span>
                                                                  </div>
-                                                                 <span className="text-[6px] font-black text-slate-500 uppercase tracking-tighter group-hover:text-white leading-tight -rotate-45 mb-2 origin-left whitespace-nowrap">{t('muscles.' + group)}</span>
-                                                             </div>
-                                                         );
-                                                     })}
+                                                             );
+                                                         });
+                                                     })()}
                                                 </div>
                                             </div>
                                         </div>
