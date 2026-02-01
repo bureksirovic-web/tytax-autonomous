@@ -4202,12 +4202,12 @@
                 return counts;
             }, [logs]);
 
-            const categories = ['ALL', 'BACK', ...new Set(masterExercises.map(ex => {
+            const categories = useMemo(() => ['ALL', 'BACK', ...new Set(masterExercises.map(ex => {
                 if (ex.muscle_group) return ex.muscle_group;
                 const imp = getImpact(ex);
                 let m = imp.length > 0 ? imp[0].muscle : 'OTHER';
                 return m.toUpperCase();
-            }))];
+            }))], [masterExercises]);
 
             // Debounce search input
             useEffect(() => {
