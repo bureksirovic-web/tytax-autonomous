@@ -223,25 +223,36 @@
             };
         })();
 
+        // Optimization: Cache parsed impact data to avoid repeated allocations/regex
+        const IMPACT_CACHE = new WeakMap();
+
         const getImpact = (exercise) => {
+            if (IMPACT_CACHE.has(exercise)) return IMPACT_CACHE.get(exercise);
+
+            let result;
             // Check for v2.1 structured impact (Array)
             if (exercise.impact && Array.isArray(exercise.impact)) {
-                return exercise.impact.map(i => ({ 
+                result = exercise.impact.map(i => ({
                     muscle: normalizeMuscleName(i.m), 
                     score: i.s,
                     level: i.s >= 90 ? 'Primary' : i.s >= 50 ? 'Secondary' : 'Tertiary' 
                 }));
             }
             // Check for v3.0 structured impact (Object)
-            if (exercise.impact && typeof exercise.impact === 'object') {
-                 return Object.entries(exercise.impact).map(([k, v]) => ({
+            else if (exercise.impact && typeof exercise.impact === 'object') {
+                 result = Object.entries(exercise.impact).map(([k, v]) => ({
                      muscle: normalizeMuscleName(k),
                      score: v,
                      level: v >= 90 ? 'Primary' : v >= 50 ? 'Secondary' : 'Tertiary'
                  }));
             }
             // Fallback to old string-based note parsing
-            return parseImpact(exercise.note); 
+            else {
+                result = parseImpact(exercise.note);
+            }
+
+            IMPACT_CACHE.set(exercise, result);
+            return result;
         };
 
         const getProjectedImpact = (exercises) => {
